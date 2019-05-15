@@ -1,0 +1,556 @@
+---
+title: Benutzerspezifische Regeln für Codequalität
+seo-title: Benutzerspezifische Regeln für Codequalität
+description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifischen SonarQube-Regeln, die von Cloud Manager ausgeführt werden.
+seo-description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifischen SonarQube-Regeln, die von Adobe Experience Manager Cloud Manager ausgeführt werden.
+uuid: a7feb465-1982-46be-9e57-e67b59849579
+contentOwner: jsyal
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: Verwenden
+discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
+translation-type: tm+mt
+source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+
+---
+
+
+# Benutzerspezifische Regeln für Codequalität {#custom-code-quality-rules}
+
+Diese Seite beschreibt die benutzerspezifischen SonarQube-Regeln, die von Cloud Manager ausgeführt werden. Diese Regeln ergänzen die standardmäßigen SonarQube-Regeln mit Best-Practice-Empfehlungen des AEM-Entwicklungsteams.
+
+>[!NOTE]
+>
+>Die hier bereitgestellten Codebeispiele dienen nur Veranschaulichungszwecken.
+
+## SonarQube-Regeln {#sonarqube-rules}
+
+Im folgenden Abschnitt werden die SonarQube-Regeln hervorgehoben:
+
+### Verwenden Sie keine potenziell gefährlichen Funktionen. {#do-not-use-potentially-dangerous-functions}
+
+**Schlüssel**: CQRules:CWE-676
+
+**Typ**: Sicherheitslücke
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2018.4.0
+
+Die Methoden ***Thread.stop()*** und ***Thread.interrupt()*** können schwer reproduzierbare Probleme und in einigen Fällen Sicherheitslücken verursachen. Daher sollte deren Verwendung sorgfältig überwacht und validiert werden. Im Allgemeinen ist die Nachrichtenübergabe eine sicherere Möglichkeit, ähnliche Ziele zu erreichen.
+
+#### Nicht konformer Code {#non-compliant-code}
+
+```java
+public class DontDoThis implements Runnable {
+  private Thread thread;
+ 
+  public void start() {
+    thread = new Thread(this);
+    thread.start();
+  }
+ 
+  public void stop() {
+    thread.stop();  // UNSAFE!
+  }
+ 
+  public void run() {
+    while (true) {
+        somethingWhichTakesAWhileToDo();
+    }
+  }
+}
+```
+
+#### Konformer Code {#compliant-code}
+
+```java
+public class DoThis implements Runnable {
+  private Thread thread;
+  private boolean keepGoing = true;
+ 
+  public void start() {
+    thread = new Thread(this);
+    thread.start();
+  }
+ 
+  public void stop() {
+    keepGoing = false;
+  }
+ 
+  public void run() {
+    while (this.keepGoing) {
+        somethingWhichTakesAWhileToDo();
+    }
+  }
+}
+```
+
+### Verwenden Sie keine Formatzeichenfolgen, die extern gesteuert werden können. {#do-not-use-format-strings-which-may-be-externally-controlled}
+
+**Schlüssel**: CQRules:CWE-134
+
+**Typ**: Sicherheitslücke
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2018.4.0
+
+Durch die Verwendung einer Formatzeichenfolge aus einer externen Quelle (z. B. einem Abfrageparameter oder benutzergenerierten Inhalten) kann eine Anwendung für Denial-of-Service-Angriffe anfällig werden. In einigen Situationen wird eine Formatzeichenfolge extern kontrolliert. In diesem Fall darf sie jedoch nur aus vertrauenswürdigen Quellen verwendet werden.
+
+#### Nicht konformer Code {#non-compliant-code-1}
+
+```java
+protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) {
+  String messageFormat = request.getParameter("messageFormat");
+  request.getResource().getValueMap().put("some property", String.format(messageFormat, "some text");
+  response.sendStatus(HttpServletResponse.SC_OK);
+}
+```
+
+### HTTP-Anfragen sollten immer Zeitüberschreitungswerte für Sockets und Verbindungen enthalten. {#http-requests-should-always-have-socket-and-connect-timeouts}
+
+**Schlüssel**: CQRules:ConnectionTimeoutMechanism
+
+**Typ**: Fehler
+
+**Schweregrad**: Kritisch
+
+**Seit**: Version 2018.6.0
+
+Beim Ausführen von HTTP-Anfragen aus einer AEM-Anwendung muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert werden, um unnötige Thread-Nutzung zu vermeiden. Leider sind im Java-Standard-HTTP-Client (java.net.HttpUrlConnection) und dem häufig verwendeten Client für Apache-HTTP-Komponenten standardmäßig keine Zeitüberschreitungen festgelegt, sodass diese explizit festgelegt werden müssen. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
+
+#### Nicht konformer Code {#non-compliant-code-2}
+
+```java
+@Reference
+private HttpClientBuilderFactory httpClientBuilderFactory;
+ 
+public void dontDoThis() {
+  HttpClientBuilder builder = httpClientBuilderFactory.newBuilder();
+  HttpClient httpClient = builder.build();
+
+  // do something with the client
+}
+
+public void dontDoThisEither() {
+  URL url = new URL("http://www.google.com");
+  URLConnection urlConnection = url.openConnection();
+ 
+  BufferedReader in = new BufferedReader(new InputStreamReader(
+    urlConnection.getInputStream()));
+ 
+  String inputLine;
+  while ((inputLine = in.readLine()) != null) {
+    logger.info(inputLine);
+  }
+ 
+  in.close();
+}
+```
+
+#### Konformer Code {#compliant-code-1}
+
+```java
+@Reference
+private HttpClientBuilderFactory httpClientBuilderFactory;
+ 
+public void doThis() {
+  HttpClientBuilder builder = httpClientBuilderFactory.newBuilder();
+  RequestConfig requestConfig = RequestConfig.custom()
+    .setConnectTimeout(5000)
+    .setSocketTimeout(5000)
+    .build();
+  builder.setDefaultRequestConfig(requestConfig);
+ 
+  HttpClient httpClient = builder.build();
+   
+  // do something with the client
+}
+
+public void orDoThis() {
+  URL url = new URL("http://www.google.com");
+  URLConnection urlConnection = url.openConnection();
+  urlConnection.setConnectTimeout(5000);
+  urlConnection.setReadTimeout(5000);
+ 
+  BufferedReader in = new BufferedReader(new InputStreamReader(
+    urlConnection.getInputStream()));
+ 
+  String inputLine;
+  while ((inputLine = in.readLine()) != null) {
+    logger.info(inputLine);
+  }
+ 
+  in.close();
+}
+```
+
+### Produkt-APIs, die mit @ProviderType kommentiert wurden, sollten von Kunden nicht implementiert oder erweitert werden. {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+
+**Schlüssel**: CQBP-84, CQBP-84-dependencies
+
+**Typ**: Fehler
+
+**Schweregrad**: Kritisch
+
+**Seit**: Version 2018.7.0
+
+Die AEM-API enthält Java-Schnittstellen und -Klassen, die durch benutzerdefinierten Code lediglich verwendet, aber nicht implementiert werden sollen. Zum Beispiel ist die Schnittstelle *com.day.cq.wcm.api.Page* nur für die Implementierung durch ***AEM*** ausgelegt.
+
+Wenn zu diesen Schnittstellen neue Methoden hinzugefügt werden, wirken sich diese zusätzlichen Methoden nicht auf den vorhandenen Code aus, der diese Schnittstellen verwendet. Daher wird das Hinzufügen neuer Methoden zu diesen Schnittstellen als abwärtskompatibel betrachtet. Wenn jedoch benutzerdefinierter Code eine dieser Schnittstellen ***implementiert***, führt dieser benutzerspezifische Code ein Abwärtskompatibilitätsrisiko für den Kunden ein.
+
+Schnittstellen (und Klassen), die nur von AEM implementiert werden sollen, werden mit *org.osgi.annotation.versioning.ProviderType* (oder in einigen Fällen mit einer veralteten Anmerkung *aQute.bnd.annotation.ProviderType*) kommentiert. Diese Regel identifiziert die Fälle, in denen eine solche Schnittstelle durch benutzerdefinierten Code implementiert wird (oder eine Klasse erweitert wird).
+
+#### Nicht konformer Code {#non-compliant-code-3}
+
+```java
+import com.day.cq.wcm.api.Page;
+
+public class DontDoThis implements Page {
+// implementation here
+}
+```
+
+### ResourceResolver-Objekte sollten immer geschlossen werden. {#resourceresolver-objects-should-always-be-closed}
+
+**Schlüssel**: CQRules:CQBP-72
+
+**Typ**: Code Smell
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2018.4.0
+
+ResourceResolver-Objekte, die aus ResourceResolverFactory abgerufen werden, verbrauchen Systemressourcen. Obwohl es Möglichkeiten gibt, mit denen diese Ressourcen gelöscht werden, wenn ein ResourceResolver nicht mehr verwendet wird, ist es effizienter, alle offenen ResourceResolver-Objekte explizit durch Aufruf der close()-Methode zu schließen.
+
+Ein verbreiteter Irrtum besagt, dass ResourceResolver-Objekte, die mit einer bestehenden JCR-Sitzung erstellt wurden, nicht explizit geschlossen werden sollten, da dies sonst die zugrunde liegende JCR-Sitzung schließt. Das ist nicht der Fall: Unabhängig davon, wie ein ResourceResolver geöffnet wurde, sollte er geschlossen werden, wenn er nicht mehr verwendet wird. Da ResourceResolver die Closeable-Schnittstelle implementiert, kann auch die Syntax „try-with-resources“ verwendet werden, anstatt explizit „close()“ aufzurufen.
+
+#### Nicht konformer Code {#non-compliant-code-4}
+
+```java
+public void dontDoThis(Session session) throws Exception {
+  ResourceResolver resolver = factory.getResourceResolver(Collections.singletonMap("user.jcr.session", (Object)session));
+  // do some stuff with the resolver
+}
+```
+
+#### Konformer Code {#compliant-code-2}
+
+```java
+public void doThis(Session session) throws Exception {
+  ResourceResolver resolver = null;
+  try {
+    resolver = factory.getResourceResolver(Collections.singletonMap("user.jcr.session", (Object)session));
+    // do something with the resolver
+  } finally {
+    if (resolver != null) {
+      resolver.close();
+    }
+  }
+}
+
+public void orDoThis(Session session) throws Exception {
+  try (ResourceResolver resolver = factory.getResourceResolver(Collections.singletonMap("user.jcr.session", (Object) session))){
+    // do something with the resolver
+  }
+}
+```
+
+### Verwenden Sie keine Sling-Servlet-Pfade zum Registrieren von Servlets. {#do-not-use-sling-servlet-paths-to-register-servlets}
+
+**Schlüssel**: CQRules:CQBP-75
+
+**Typ**: Code Smell
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2018.4.0
+
+Wie in der [Sling-Dokumentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html)beschrieben, werden Bindungsservlets nach Pfaden deaktiviert. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
+
+#### Nicht konformer Code {#non-compliant-code-5}
+
+```java
+@Component(property = {
+  "sling.servlet.paths=/apps/myco/endpoint"
+})
+public class DontDoThis extends SlingAllMethodsServlet {
+ // implementation
+}
+```
+
+### Ausnahmefehler sollten protokolliert oder ausgegeben werden, aber nicht beides. {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
+
+**Schlüssel**: CQRules:CQBP-44---CatchAndEitherLogOrThrow
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Im Allgemeinen sollte eine Ausnahme genau einmal protokolliert werden. Die mehrfache Protokollierung von Ausnahmen kann verwirren, da unklar ist, wie oft eine Ausnahme aufgetreten ist. Dies wird vor allem dadurch verursacht, dass eine erfasste Ausnahme sowohl protokolliert als auch ausgegeben wird.
+
+#### Nicht konformer Code {#non-compliant-code-6}
+
+```java
+public void dontDoThis() throws Exception {
+  try {
+    someOperation();
+  } catch (Exception e) {
+    logger.error("something went wrong", e);
+    throw e;
+  }
+}
+```
+
+#### Konformer Code {#compliant-code-3}
+
+```java
+public void doThis() {
+  try {
+    someOperation();
+  } catch (Exception e) {
+    logger.error("something went wrong", e);
+  }
+}
+
+public void orDoThis() throws MyCustomException {
+  try {
+    someOperation();
+  } catch (Exception e) {
+    throw new MyCustomException(e);
+  }
+}
+```
+
+### Vermeiden Sie Protokollaussagen, die direkt von einer Throw-Anweisung gefolgt werden. {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
+
+**Schlüssel**: CQRules:CQBP-44---ConsecutivelyLogAndThrow
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Ein weiteres gängiges Muster, das vermieden werden sollte, ist die Protokollierung einer Nachricht, direkt gefolgt von der Auslösung einer Ausnahme. Dadurch erscheint die Ausnahmemeldung in Protokolldateien meist doppelt.
+
+#### Nicht konformer Code {#non-compliant-code-7}
+
+```java
+public void dontDoThis() throws Exception {
+  logger.error("something went wrong");
+  throw new RuntimeException("something went wrong");
+}
+```
+
+#### Konformer Code {#compliant-code-4}
+
+```java
+public void doThis() throws Exception {
+  throw new RuntimeException("something went wrong");
+}
+```
+
+### Vermeiden Sie beim Verarbeiten von GET- oder HEAD-Anfragen die Protokollierung bei INFO. {#avoid-logging-at-info-when-handling-get-or-head-requests}
+
+**Schlüssel**: CQRules:CQBP-44---LogInfoInGetOrHeadRequests
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+Im Allgemeinen sollten mit der Protokollierungsstufe INFO wichtige Aktionen abgegrenzt werden. Standardmäßig ist AEM so konfiguriert, dass auf der INFO-Ebene oder höher protokolliert wird. GET- und HEAD-Methoden sollten nur schreibgeschützte Vorgänge sein und stellen daher keine wichtigen Aktionen dar. Die Protokollierung auf INFO-Ebene als Antwort auf GET- oder HEAD-Anfragen füllt das Protokoll wahrscheinlich mit erheblichen Mengen überflüssiger Informationen, sodass es schwieriger wird, nützliche Informationen in Protokolldateien zu finden. Bei der Verarbeitung von GET- oder HEAD-Anfragen sollte die Protokollierung entweder bei einem Fehler auf WARN- oder ERROR-Ebene erfolgen oder auf DEBUG- oder TRACE-Ebene, wenn eine tiefgehendere Fehlerbehebung hilfreich wäre.
+
+>[!CAUTION]
+>
+>Das gilt nicht für die Protokollierung von access.log-type-Ereignissen für jede Anfrage.
+
+#### Nicht konformer Code {#non-compliant-code-8}
+
+```java
+public void doGet() throws Exception {
+  logger.info("handling a request from the user");
+}
+```
+
+#### Konformer Code {#compliant-code-5}
+
+```java
+public void doGet() throws Exception {
+  logger.debug("handling a request from the user.");
+}
+```
+
+### Verwenden Sie nicht Exception.getmessage() als ersten Parameter einer Protokollanweisung. {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
+
+**Schlüssel**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Anwendungsausnahme aufgetreten ist. Während der Kontext auch mit Stacktraces bestimmt werden kann, ist die Protokollmeldung meist besser lesbar und verständlicher. Wenn Sie eine Ausnahme protokollieren, ist es daher nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. Die Ausnahmemeldung enthält Informationen dazu, was nicht funktioniert hat, während die Protokollmeldung dem Protokollleser mitteilt, was die Anwendung getan hat, als die Ausnahme auftrat. Die Ausnahmemeldung wird weiterhin protokolliert. Wenn Sie Ihre eigene Meldung festlegen, werden die Protokolle verständlicher.
+
+#### Nicht konformer Code {#non-compliant-code-9}
+
+```java
+public void dontDoThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    logger.error(e.getMessage(), e);
+  }
+}
+```
+
+#### Konformer Code {#compliant-code-6}
+
+```java
+public void doThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    logger.error("Unable to do something", e);
+  }
+}
+```
+
+### Die Protokollierung in Catch-Blöcken sollte auf WARN- oder ERROR-Ebene erfolgen. {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
+
+**Schlüssel**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Wie der schon Name sagt, sollten Java-Ausnahmen immer in *außergewöhnlichen* Fällen verwendet werden. Wenn eine Ausnahme erfasst wird, muss daher sichergestellt sein, dass Protokollmeldungen auf der entsprechenden Ebene – WARN oder ERROR – protokolliert werden, damit diese Meldungen in den Protokollen korrekt angezeigt werden.
+
+#### Nicht konformer Code {#non-compliant-code-10}
+
+```java
+public void dontDoThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    logger.debug(e.getMessage(), e);
+  }
+}
+```
+
+#### Konformer Code {#compliant-code-7}
+
+```java
+public void doThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    logger.error("Unable to do something", e);
+  }
+}
+```
+
+### Drucken Sie keine Stacktraces in der Konsole. {#do-not-print-stack-traces-to-the-console}
+
+**Schlüssel**: CQRules:CQBP-44---ExceptionPrintStackTrace
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Wie bereits erwähnt, ist Kontext beim Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von Exception.printStackTrace() wird bei der Ausgabe des Standard-Fehlerstroms **nur** der Stacktrace ausgegeben, sodass der gesamte Kontext verloren geht. Bei einer Multi-Thread-Anwendung wie AEM kann es beim parallelen Drucken mehrerer Ausnahmen mit dieser Methode zu einer Überlappung der Stacktraces kommen, was erhebliche Verwirrung verursacht. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
+
+#### Nicht konformer Code {#non-compliant-code-11}
+
+```java
+public void dontDoThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    e.printStackTrace();
+  }
+}
+```
+
+#### Konformer Code {#compliant-code-8}
+
+```java
+public void doThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    logger.error("Unable to do something", e);
+  }
+}
+```
+
+### Verzichten Sie auf Ausgaben als Standardausgabe oder Standardfehler. {#do-not-output-to-standard-output-or-standard-error}
+
+**Schlüssel**: CQRules:CQBP-44—LogLevelConsolePrinters
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Die Anmeldung in AEM sollte immer über das Protokollierungs-Framework (SLF4J) erfolgen. Durch die direkte Ausgabe an Standardausgabe- oder Standardfehler-Ströme gehen strukturelle und kontextbezogene Informationen verloren, die vom Protokollings-Framework bereitgestellt werden. Außerdem kann diese Vorgehensweise in einigen Fällen zu Leistungseinbußen führen.
+
+#### Nicht konformer Code {#non-compliant-code-12}
+
+```java
+public void dontDoThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    System.err.println("Unable to do something");
+  }
+}
+```
+
+#### Konformer Code {#compliant-code-9}
+
+```java
+public void doThis() {
+  try {
+    someMethodThrowingAnException();
+  } catch (Exception e) {
+    logger.error("Unable to do something", e);
+  }
+}
+```
+
+### Vermeiden Sie hartcodierte /apps- und /libs-Pfade. {#avoid-hardcoded-apps-and-libs-paths}
+
+**Schlüssel**: CQRules:CQBP-71
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2018.4.0
+
+Im Allgemeinen sollten Pfade, die mit /libs und /apps beginnen, nicht hartcodiert werden, da die Pfade, auf die sie verweisen, am häufigsten als Pfade relativ zum Sling-Suchpfad gespeichert werden (standardmäßig /libs bzw. /apps). Durch den absoluten Pfad können geringfügige Fehler entstehen, die erst später im Projektlebenszyklus deutlich werden.
+
+#### Nicht konformer Code {#non-compliant-code-13}
+
+```java
+public boolean dontDoThis(Resource resource) {
+  return resource.isResourceType("/libs/foundation/components/text");
+}
+```
+
+#### Konformer Code {#compliant-code-10}
+
+```java
+public void doThis(Resource resource) {
+  return resource.isResourceType("foundation/components/text");
+}
+```
