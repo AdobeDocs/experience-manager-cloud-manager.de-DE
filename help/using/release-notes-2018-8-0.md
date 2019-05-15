@@ -1,0 +1,55 @@
+---
+title: Versionshinweise für 2018.8.0
+seo-title: Versionshinweise für AEM Cloud Manager 2018.8.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.8.0.
+seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2018.8.0.
+uuid: e8aaba32-89b4-4bc5-b295-09b753252612
+contentOwner: jsyal
+products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
+topic-tags: Versionshinweise
+discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
+translation-type: tm+mt
+source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+
+---
+
+
+# Versionshinweise für 2018.8.0 {#release-notes-for}
+
+Die [!UICONTROL Cloud Manager]-Version 2018.8.0 unterstützt nun das automatische Auslösen der CI/CD-Pipeline bei Git-Commits. Außerdem wurde ein neuer Assistent zum Erstellen von Anwendungsprojekten im Git-Format mithilfe des AEM-Projektarchetyps hinzugefügt.
+
+## Veröffentlichungsdatum {#release-date}
+
+Die [!UICONTROL Cloud Manager]-Version 2018.8.0 wurde am 4. Oktober 2018 veröffentlicht.
+
+## Neuigkeiten {#what-s-new}
+
+* **Programmeinrichtung**: Neuer Assistent zum Erstellen eines Anwendungsprojekts im Git-Format mithilfe des AEM-Projektarchetyps. Weitere Informationen finden Sie unter [Erstellen von AEM-Anwendungsprojekten](create-an-application-project.md).
+
+* **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
+
+   * Auslöser „Bei Git-Änderungen“, durch den die CI/CD-Pipeline gestartet wird, wenn der konfigurierten Git-Verzweigung Commits hinzugefügt werden.
+   * Die Karten auf dem Startbildschirm besitzen nun einen Deep-Link zu bestimmten Abschnitten der Pipelineausführungsseite.
+   * Die Seite „Aktivität“ gibt nun die jeweilige für eine Ausführung verwendete Verzweigung an.
+   * Die Seite „Aktivität“ gibt jetzt die Dauer in Stunden und Minuten an.
+   * Die Pipelineausführungsseite zeigt jetzt die Version bzw. den Tag-Namen für die Ausführung an.
+   * Apache Maven wurde auf die Version 3.5.3 aktualisiert.
+
+* **Navigation**: [!UICONTROL Cloud Manager] wird wie folgt beschrieben geändert.
+
+   * Der Link „Ressourcen“ in der globalen Navigation führt zum Runbook in Sharepoint.
+   * Das Hilfemenü wurde neu organisiert, um eine größere Anzahl von [!UICONTROL Cloud Manager]-spezifischen Inhalten einzubeziehen.
+
+## Fehlerbehebungen {#bug-fixes}
+
+* Einige Details im Dialogfeld „Leistungstests“ wurden in Firefox nicht angezeigt.
+* Timeouts zwischen internen Systemen führten mitunter zur Meldung von Bereitstellungsfehlern.
+* Bei einigen erfolgreichen Pipelineausführungen war die Symbolfarbe auf der Seite „Aktivität“ nicht korrekt.
+* In einigen Fällen wurde im Dialogfeld „Leistungstests“ dieselbe Metrik mehrmals aufgeführt.
+* Wenn nach dem Start der CI/CD-Pipeline eine neue Instanz hinzugefügt wurde, wurde die Bereitstellung nicht in der neu erstellten Instanz ausgeführt.
+
+## Bekannte Probleme {#known-issues}
+
+* Mit dem Assistenten für Anwendungsprojekte erstellte Verzweigungen dürfen keine Bindestriche enthalten.
+* In der Seitenleiste für [!UICONTROL Experience Cloud]-Benachrichtigungen werden Benachrichtigungen möglicherweise nicht konsistent geladen. Benachrichtigungen werden jedoch in [!UICONTROL Experience Cloud] angezeigt und, sofern konfiguriert, weiterhin per E-Mail gesendet.
+
