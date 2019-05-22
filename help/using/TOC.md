@@ -5,7 +5,7 @@ archtype: administrator
 user-guide-title: Hilfe zu Experience Manager Cloud Manager
 index: n
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
 
 ---
 
@@ -40,7 +40,8 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
    + [Benachrichtigungen](notifications.md)
    + [Benutzerspezifische Regeln für Codequalität](custom-code-quality-rules.md)
 + Versionshinweise {#release-notes}
-   + [Aktuelle Versionshinweise (2019.4.0)](release-notes-current.md)
+   + [Aktuelle Versionshinweise (2019.5.0)](release-notes-current.md)
+   + [Versionshinweise für 2019.4.0](release-notes-2019-4-0.md)
    + [Versionshinweise für 2019.3.0](release-notes-2019-3-0.md)
    + [Versionshinweise für 2019.2.0](release-notes-2019-2-0.md)
    + [Versionshinweise für 2019.1.0](release-notes-2019-1-0.md)
@@ -49,4 +50,5 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
    + [Versionshinweise für 2018.7.0](release-notes-2018-7-0.md)
    + [Versionshinweise für 2018.6.0](release-notes-2018-6-0.md)
    + [Versionshinweise für 2018.5.0](release-notes-2018-5-0.md)
++ [Zusätzliche Ressourcen](additional-resources.md)
 
