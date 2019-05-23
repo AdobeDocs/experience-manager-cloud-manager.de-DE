@@ -4,12 +4,12 @@ seo-title: Versionshinweise für AEM Cloud Manager 2019.5.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.5.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.5.0.
 translation-type: tm+mt
-source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
+source-git-commit: cab67f6a3358ef2988baaba78e2a41f7edadb323
 
 ---
 
 
-# Versionshinweise für 2019.4.0 {#release-notes-for}
+# Versionshinweise für 2019.5.0 {#release-notes-for}
 
 Die Cloud [!UICONTROL Manager] Release 2019.5.0 enthält keine wesentlichen Funktionsänderungen. Weitere Informationen finden Sie in den folgenden Abschnitten.
 
