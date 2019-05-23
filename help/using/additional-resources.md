@@ -6,7 +6,7 @@ seo-description: Auf dieser Seite erfahren Sie mehr über Adobe AEM Cloud Manage
 uuid: 9aa90a99-f049-422e-9e06-b00b843ed98b
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 translation-type: tm+mt
-source-git-commit: 8031df1c1ce9d7fee4ef33de289c6952370b7589
+source-git-commit: 7236e9d3bf5955509068757b34c81f0021db4270
 
 ---
 
@@ -23,9 +23,9 @@ Folgen [Sie Adobe Experience League](https://expleague.azureedge.net/labs/L722/i
 
 ## Webinar-Reihe {#webinar-series}
 
-Folgen Sie [den Adobe-Foren] (https://forums.adobe.com/message/11061595), um zusätzliche Lernpfade für Cloud Manager als Webinar-Reihe zu erhalten.
+Folgen [Sie den Adobe Foren](https://forums.adobe.com/message/11061595) , um zusätzliche Lernpfade für Cloud Manager als Webinar-Reihe zu erhalten.
 
 ## Demo-Videoserie {#demo-videos}
 
-Folgen Sie [der CI/CD-Pipeline in Cloud Manager für AEM] (https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cloud-manager-cicd-pipeline-feature-video-use.html).
-Hier finden Sie eine Videoserie, die die CI-/CD-Pipeline von Cloud Manager sowohl bei Fehlschlagen als auch bei Erfolgsereignissen unterstützt.
+Folgen Sie [der CI-/CD-Pipeline in Cloud Manager für AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cloud-manager-cicd-pipeline-feature-video-use.html),
+die die Videoleihe enthält, die sich auf die Erforschung konzentriert, indem Sie die CI/CD-Pipeline von Cloud Manager sowohl bei Fehlschlagen als auch bei Erfolgsereignissen aufzeichnen.
