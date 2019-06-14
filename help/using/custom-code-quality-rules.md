@@ -1,22 +1,22 @@
 ---
 title: Benutzerspezifische Regeln für Codequalität
 seo-title: Benutzerspezifische Regeln für Codequalität
-description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifischen SonarQube-Regeln, die von Cloud Manager ausgeführt werden.
-seo-description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifischen SonarQube-Regeln, die von Adobe Experience Manager Cloud Manager ausgeführt werden.
+description: Folgen Sie dieser Seite, um zu erfahren, welche Regeln zur benutzerdefinierten Code-Qualität von Cloud Manager ausgeführt werden.
+seo-description: Auf dieser Seite erfahren Sie, welche Regeln zur benutzerdefinierten Code-Qualität von Adobe Experience Manager Cloud Manager ausgeführt werden.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
 
 ---
 
 
 # Benutzerspezifische Regeln für Codequalität {#custom-code-quality-rules}
 
-Diese Seite beschreibt die benutzerspezifischen SonarQube-Regeln, die von Cloud Manager ausgeführt werden. Diese Regeln ergänzen die standardmäßigen SonarQube-Regeln mit Best-Practice-Empfehlungen des AEM-Entwicklungsteams.
+Diese Seite beschreibt die Regelregeln für die benutzerdefinierte Code, die von Cloud Manager ausgeführt werden, basierend auf bewährten Verfahren aus AEM Engineering.
 
 >[!NOTE]
 >
@@ -383,7 +383,7 @@ public void doGet() throws Exception {
 }
 ```
 
-### Verwenden Sie nicht Exception.getmessage() als ersten Parameter einer Protokollanweisung. {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
+### Verwenden Sie nicht Exception.getMessage() als ersten Parameter einer Protokollanweisung. {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 **Schlüssel**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
 
