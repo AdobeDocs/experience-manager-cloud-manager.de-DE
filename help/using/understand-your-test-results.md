@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
 
 ---
 
@@ -42,8 +42,8 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 |--- |--- |--- |--- |
 | Sicherheitsbewertung | A = 0 Schwachstellen <br/>B = mindestens 1 kleinere Schwachstelle<br/> C = mindestens 1 größere Schwachstelle <br/>D = mindestens 1 kritische Schwachstelle <br/>E = mindestens 1 Schwachstelle der Kategorie „Blocker“ | Kritisch | &lt; B |
 | Zuverlässigkeitsbewertung | A = 0 Fehler <br/>B = mindestens 1 kleinerer Fehler <br/>C = mindestens 1 größerer Fehler <br/>D = mindestens 1 kritischer Fehler E = mindestens 1 Fehler der Kategorie „Blocker“ | Wichtig | &lt; C |
-| Wartbarkeitsbewertung | Wenn die ausstehenden Kosten zur Code-Smell-Behebung …<br/><ul><li>&lt; = 5% der Zeit, die bereits in der Anwendung aufgetreten ist, lautet die Bewertung A </li><li>zwischen 6 und 10 % dieser Zeit ausmachen, lautet die Bewertung B. </li><li>zwischen 11 und 20 % dieser Zeit ausmachen, lautet die Bewertung C. </li><li>zwischen 21 und 50 % dieser Zeit ausmachen, lautet die Bewertung D.</li><li>mehr als 50 % dieser Zeit ausmachen, lautet die Bewertung E.</li></ul> | Wichtig | &lt; A |
-| Abdeckung | Eine Mischung aus Test-Test-Zeilenabdeckung und Bedingungsabdeckung mithilfe dieser Formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`<br/>wobei: CT = Bedingungen, die für &quot;true&quot; mindestens einmal ausgewertet wurden während der Ausführung der Unit-Tests <br/>CF = Bedingungen, die mindestens einmal ausgewertet wurden, während sie während der Ausführung der Unit-Tests <br/>LC = covered lines = lines_ to_ cover - uncovered_ lines <br/><br/> B = Gesamtanzahl von Bedingungen <br/>EL = Gesamtanzahl ausführbarer Zeilen (Zeilen_ zu_ cover) | Wichtig | &lt; 50% |
+| Wartbarkeitsbewertung | Wenn die ausstehenden Kosten zur Code-Smell-Behebung …<br/><ul><li>&lt;= 5 % der Zeit ausmachen, die bereits in die Anwendung investiert wurde, lautet die Bewertung A. </li><li>zwischen 6 und 10 % dieser Zeit ausmachen, lautet die Bewertung B. </li><li>zwischen 11 und 20 % dieser Zeit ausmachen, lautet die Bewertung C. </li><li>zwischen 21 und 50 % dieser Zeit ausmachen, lautet die Bewertung D.</li><li>mehr als 50 % dieser Zeit ausmachen, lautet die Bewertung E.</li></ul> | Wichtig | &lt; A |
+| Abdeckung | Mix aus Zeilen- und Bedingungsabdeckung mit dieser Formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>Dabei gilt Folgendes: CT = Bedingungen, bei denen die Auswertung während der Durchführung von Unit-Tests mindestens einmal „true“ ergeben hat <br/>CF = Bedingungen, bei denen die Auswertung während der Durchführung von Unit-Tests mindestens einmal „false“ ergeben hat <br/>LC = abgedeckte Zeilen = abzudeckende_Zeilen - nicht_abgedeckte_Zeilen <br/><br/> B = Gesamtanzahl der Bedingungen <br/>EL = Gesamtzahl ausführbarer Zeilen (abzudeckende_Zeilen) | Wichtig | &lt; 50% |
 | Übersprungene Unit-Tests | Zahl der übersprungenen Unit-Tests | Info | &gt; 1 |
 | Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | &gt; 1 |
 | Duplizierte Zeilen | Anzahl der Zeilen, die an duplizierten Blöcken beteiligt sind. <br/>Voraussetzungen, damit ein Codeblock als dupliziert gilt: <br/><ul><li>**Nicht-Java-Projekte:**</li><li>Es sollte mindestens 100 aufeinanderfolgende und duplizierte Token geben.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li><li>**Java-Projekte:**</li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul> <br/>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplizierungen ignoriert. | Info | &gt; 1% |
@@ -54,11 +54,11 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 >Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) .
 
 
-Um die Datei „sonarqube-rules.xlsx“ mit einer Liste der Regeln herunterzuladen, [klicken Sie hier](assets/sonarqube-rules.xlsx).
+Sie können die Liste der Regeln hier herunterladen [code-quality-rules.xlsx](assets/code-quality-rules.xlsx)
 
 >[!NOTE]
 >
->Weitere Informationen zu den benutzerdefinierten SonarQube-Regeln, die von [!UICONTROL Cloud Manager]ausgeführt werden, finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
+>Weitere Informationen zu den von [!UICONTROL Cloud Manager]ausgeführten Qualitätsregeln für benutzerdefinierte Codes finden Sie unter Regelregeln für [die benutzerdefinierte Code-Qualität](custom-code-quality-rules.md).
 
 ### Umgang mit falsch positiven Werten {#dealing-with-false-positives}
 
@@ -102,28 +102,28 @@ Wenn eine der **Instanzen** einen Fehler bei einer bestimmten Konsistenzprüfung
 
 In der folgenden Tabelle finden Sie die derzeit verfügbaren Prüfungen:
 
-| **Name** | **Implementierung von Health Check** | **Kategorie** |
+| **Name** | **Implementierung der Konsistenzprüfung** | **Kategorie** |
 |---|---|---|
-| Deserialisierungsfirewall-Anfügen-API-Bereitschaft befindet sich in einem akzeptablen Zustand | Deserialisierungs-Firewall Attach API-fähig | Kritisch |
+| Deserialisierungs-Firewall-Attach-API-Bereitschaft befindet sich in einem akzeptablen Zustand | Deserialisierungs-Firewall-Attach-API-Bereitschaft | Kritisch |
 | Deserialisierungs-Firewall ist funktionsfähig | Deserialisierungs-Firewall funktionsfähig | Kritisch |
 | Deserialisierungs-Firewall wird geladen | Deserialisierungs-Firewall geladen | Kritisch |
-| Die authorizablenodename-Implementierung stellt keine autorisierbare ID im Knotennamen/Pfad offen. | Namenserstellung für autorisierbare Knoten | Kritisch |
-| Standardkennwörter wurden geändert. | Standard-Anmeldekonten | Kritisch |
-| Sling default GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
-| Dispatcher filtert Anforderungen ordnungsgemäß | CQ-Dispatcher-Konfiguration | Kritisch |
-| Der Adobe Granite HTML Library Manager ist entsprechend konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Kritisch |
-| Der Sling Java Script Handler ist entsprechend konfiguriert. | Sling Java Script Handler | Kritisch |
-| Der Sling JSP Script Handler ist entsprechend konfiguriert. | Sling JSP Script Handler | Kritisch |
-| Der Sling Referrer-Filter wird konfiguriert, um CSRF-Angriffe zu verhindern. | Sling Referrer-Filter | Kritisch |
+| Die AuthorizableNodeName-Implementierung stellt keine autorisierbare ID im Knotennamen/Pfad offen. | Namenserstellung für autorisierbare Knoten | Kritisch |
+| Standardkennwörter wurden geändert | Standard-Anmeldekonten | Kritisch |
+| Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
+| Dispatcher filtert Anfragen ordnungsgemäß | CQ-Dispatcher-Konfiguration | Kritisch |
+| Der Adobe Granite HTML Library Manager ist angemessen konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Kritisch |
+| Der Sling Java Script Handler ist angemessen konfiguriert. | Sling Java Script Handler | Kritisch |
+| Der Sling JSP Script Handler ist angemessen konfiguriert. | Sling JSP Script Handler | Kritisch |
+| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | Sling Referrer-Filter | Kritisch |
 | SSL ist richtig konfiguriert | SSL-Konfiguration | Kritisch |
-| Es wurden keine offensichtlich unsicheren Benutzerprofilrichtlinien gefunden. | Standardzugriff auf Benutzerprofil | Kritisch |
-| CRXDE-Support Bundle ist deaktiviert | CRXDE-Support | Wichtig |
-| Sling davex Bundle und Servlet sind deaktiviert | DavEx-Konsistenzprüfung | Wichtig |
+| Keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden | Standardzugriff auf Benutzerprofil | Kritisch |
+| CRXDE-Support  Bundle ist deaktiviert | CRXDE-Support | Wichtig |
+| Sling DavEx Bundle und Servlet sind deaktiviert | DavEx-Konsistenzprüfung | Wichtig |
 | Beispielinhalt ist nicht installiert. | Pakete mit Beispielinhalt | Wichtig |
-| Sowohl der WCM-Anforderungs-Filter als auch der WCM-Debug-Filter sind deaktiviert. | WCM-Filterkonfiguration | Wichtig |
-| Sling webdav Bundle und Servlet werden entsprechend konfiguriert | WebDAV-Konsistenzprüfung | Wichtig |
-| Der Webserver ist so konfiguriert, dass Clickjacking verhindert wird. | Webserver-Konfiguration | Wichtig |
-| Die Replikation verwendet nicht den Benutzer &quot;admin « | Benutzerreplikation und -transport | Info |
+| Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert | WCM-Filterkonfiguration | Wichtig |
+| Sling WebDAV Bundle und Servlet sind angemessen konfiguriert | WebDAV-Konsistenzprüfung | Wichtig |
+| Der Webserver ist so konfiguriert, dass Clickjacking verhindert wird | Webserver-Konfiguration | Wichtig |
+| Die Replikation verwendet nicht den Benutzer „admin“ | Benutzerreplikation und -transport | Info |
 
 ## Leistungstests {#performance-testing}
 
