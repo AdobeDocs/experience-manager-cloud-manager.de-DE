@@ -6,26 +6,14 @@ seo-description: Auf dieser Seite erfahren Sie mehr über Adobe AEM Cloud Manage
 uuid: 9aa90a99-f049-422e-9e06-b00b843ed98b
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 translation-type: tm+mt
-source-git-commit: 7236e9d3bf5955509068757b34c81f0021db4270
+source-git-commit: e3e7fbd9c44c69e5bcdd92e4099c764aa6a99fe4
 
 ---
 
 
-# Zusätzliche Ressourcen für [!UICONTROL Cloud Manager]{#additional-resources-to-cloud-manager}
+# Additional Resources to [!UICONTROL Cloud Manager]{#additional-resources-to-cloud-manager}
 
-## Einführung {#introduction}
+Sie sollten sich zuerst an Ihren Customer Success Engineer für Adobe Managed Services (CSE) wenden, um Unterstützung zu Cloud Manager zu erhalten.
+Ihr CSE teilt Ihnen mit, ob er Ihnen bei Ihrem Problem helfen kann oder ob Sie ein Support-Ticket bei der Kundenunterstützung erstellen müssen.
+You can access [Enterprise Support](https://helpx.adobe.com/contact/enterprise-support.ec.html) to create Support tickets. Weitere Informationen zum Erstellen von Support-Tickets in der Kundenunterstützung finden Sie unter Zugriff auf das AEM-Support-Portal.
 
-In diesem Abschnitt werden zusätzliche nützliche Ressourcen für [!UICONTROL Cloud Manager], Teil der Adobe Managed Cloud Services, hervorgehoben.
-
-## Experience League {#experience-league-resource}
-
-Folgen [Sie Adobe Experience League](https://expleague.azureedge.net/labs/L722/index.html) , um mit Lab-Übersichten und konsolidierten Übungen für Cloud Manager zu beginnen.
-
-## Webinar-Reihe {#webinar-series}
-
-Folgen [Sie den Adobe Foren](https://forums.adobe.com/message/11061595) , um zusätzliche Lernpfade für Cloud Manager als Webinar-Reihe zu erhalten.
-
-## Demo-Videoserie {#demo-videos}
-
-Folgen Sie [der CI-/CD-Pipeline in Cloud Manager für AEM](https://helpx.adobe.com/experience-manager/kt/platform-repository/using/cloud-manager-cicd-pipeline-feature-video-use.html),
-die die Videoleihe enthält, die sich auf die Erforschung konzentriert, indem Sie die CI/CD-Pipeline von Cloud Manager sowohl bei Fehlschlagen als auch bei Erfolgsereignissen aufzeichnen.
