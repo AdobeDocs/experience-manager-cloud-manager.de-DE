@@ -8,7 +8,7 @@ uuid: cef44d35-75ed-44bb-9636-2de2bca5e458
 contentOwner: jsyal
 discoiquuid: c37566d5-0d1b-4c44-abd7-b271ea443c1a
 translation-type: tm+mt
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
 
 ---
 
@@ -183,7 +183,7 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 
 Während der Pipelineeinrichtung kann der Bereitstellungsmanager entscheiden, wie viel Traffic an jeden Bucket weitergeleitet werden soll. Es können ein bis drei Behälter ausgewählt werden. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Buckets. Werden alle drei Buckets ausgewählt, gehen die Seitenaufrufe zu jeweils 33 % an die einzelnen Buckets. Werden zwei Buckets ausgewählt, wird 50 % des Traffics zwischen diesen beiden aufgeteilt. Wird ein Bucket ausgewählt, wird der Traffic zu 100 % an diesen weitergeleitet.
 
-Nehmen wir beispielsweise Folgendes an: Der Traffic ist zu jeweils 50 % auf „Beliebte Live-Seiten“ und „Neue Seiten“ aufgeteilt (in diesem Beispiel wird „Andere Live-Seiten“ nicht verwendet) und der Satz „Neue Seiten“ umfasst 3.000 Seiten. Für Seitenaufrufe pro Minute ist ein Wert von 200 festgelegt. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
+Nehmen wir beispielsweise Folgendes an: Der Traffic ist zu jeweils 50 % auf „Beliebte Live-Seiten“ und „Neue Seiten“ aufgeteilt (in diesem Beispiel wird „Andere Live-Seiten“ nicht verwendet) und der Satz „Neue Seiten“ umfasst 3.000 Seiten. Für die KPI der Seitenansichten pro Minute ist ein Wert von 200 festgelegt. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
 * Jede der 25 Seiten im Satz „Beliebte Live-Seiten“ wird 240-mal aufgerufen – `((200 &#42; 0.5) / 25) &#42; 30 = 120`
 * Jede der 3.000 Seiten im Satz „Neue Seiten“ wird einmal aufgerufen – `((200 &#42; 0.5) / 3000) &#42; 30 = 1`
@@ -230,7 +230,7 @@ Derzeit sind folgende Prüfungen verfügbar:
 
 | **Konsistenzprüfung** | **Kategorie** |
 |---|---|
-| Deserialisierungs-Firewall Attach API-fähig | Kritisch |
+| Deserialisierungs-Firewall-Attach-API-Bereitschaft | Kritisch |
 | Deserialisierungs-Firewall funktionsfähig | Kritisch |
 | Deserialisierungs-Firewall geladen | Kritisch |
 | Namenserstellung für autorisierbare Knoten | Kritisch |
@@ -253,7 +253,7 @@ Derzeit sind folgende Prüfungen verfügbar:
 
 ### Implementierung der Qualitätssicherung durch SonarQube {#quality-check-implementation-by-sonarqube}
 
-Als Rahmen der Pipeline wird der Code, wie oben dargestellt, gescannt. Derzeit wird dies durch SonarQube implementiert. Wir verfügen über 93 Regeln, die eine Kombination aus generischen Java-Regeln und AEM-spezifischen Regeln darstellen (darunter sind einige aus dem vorhandenen Cognifide-Regelsatz). Eine Liste dieser Regeln finden Sie hier: [SonarQube-Regeln](assets/sonarqube-rules.xlsx).
+Als Rahmen der Pipeline wird der Code, wie oben dargestellt, gescannt. Derzeit wird dies durch SonarQube implementiert. Wir verfügen über 93 Regeln, die eine Kombination aus generischen Java-Regeln und AEM-spezifischen Regeln darstellen (darunter sind einige aus dem vorhandenen Cognifide-Regelsatz). A list of these rules can be found here: [code-quality-rules.xlsx](/help/using/assets/code-quality-rules.xlsx)
 
 Anhand dieser Regeln wird eine Vielzahl von Metriken berechnet. Einige fungieren dabei als Qualitätstest, bevor eine Bereitstellung in die Staging-Umgebung zugelassen wird.
 
@@ -263,7 +263,7 @@ Dies sind die aktuellen Schwellenwerte:
 |--- |--- |--- |--- |
 | Sicherheitsbewertung | A = 0 Schwachstellen <br/>B = mindestens 1 kleinere Schwachstelle<br/> C = mindestens 1 größere Schwachstelle <br/>D = mindestens 1 kritische Schwachstelle <br/>E = mindestens 1 Schwachstelle der Kategorie „Blocker“ | Kritisch | &lt; B |
 | Zuverlässigkeitsbewertung | A = 0 Fehler <br/>B = mindestens 1 kleinerer Fehler <br/>C = mindestens 1 größerer Fehler <br/>D = mindestens 1 kritischer Fehler E = mindestens 1 Fehler der Kategorie „Blocker“ | Wichtig | &lt; C |
-| Wartbarkeitsbewertung | Wenn die ausstehenden Kosten zur Code-Smell-Behebung …<br/><ul><li>&lt; = 5% der Zeit, die bereits in der Anwendung aufgetreten ist, lautet die Bewertung A </li><li>zwischen 6 und 10 % dieser Zeit ausmachen, lautet die Bewertung B. </li><li>zwischen 11 und 20 % dieser Zeit ausmachen, lautet die Bewertung C. </li><li>zwischen 21 und 50 % dieser Zeit ausmachen, lautet die Bewertung D.</li><li>mehr als 50 % dieser Zeit ausmachen, lautet die Bewertung E.</li></ul> | Wichtig | &lt; A |
+| Wartbarkeitsbewertung | Wenn die ausstehenden Kosten zur Code-Smell-Behebung …<br/><ul><li>&lt;= 5 % der Zeit ausmachen, die bereits in die Anwendung investiert wurde, lautet die Bewertung A. </li><li>zwischen 6 und 10 % dieser Zeit ausmachen, lautet die Bewertung B. </li><li>zwischen 11 und 20 % dieser Zeit ausmachen, lautet die Bewertung C. </li><li>zwischen 21 und 50 % dieser Zeit ausmachen, lautet die Bewertung D.</li><li>mehr als 50 % dieser Zeit ausmachen, lautet die Bewertung E.</li></ul> | Wichtig | &lt; A |
 | Abdeckung | Mix aus Zeilen- und Bedingungsabdeckung mit dieser Formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>Dabei gilt Folgendes: CT = Bedingungen, bei denen die Auswertung mindestens einmal „true“ ergeben hat <br/>CF = Bedingungen, bei denen die Auswertung mindestens einmal „false“ ergeben hat <br/>LC = abgedeckte Zeilen = abzudeckende_Zeilen - nicht_abgedeckte_Zeilen <br/><br/> B = Gesamtanzahl der Bedingungen <br/>EL = Gesamtzahl ausführbarer Zeilen (abzudeckende_Zeilen) | Wichtig | &lt; 50% |
 | Übersprungene Unit-Tests | Zahl der übersprungenen Unit-Tests | Info | &gt; 1 |
 | Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | &gt; 1 |
