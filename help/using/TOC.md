@@ -5,7 +5,7 @@ archtype: administrator
 user-guide-title: Hilfe zu Experience Manager Cloud Manager
 index: n
 translation-type: tm+mt
-source-git-commit: 1129ea26c51670c51ff9f7b8e492fbaac654019f
+source-git-commit: 75563d3f4b2a27d943c052993c97d830338ead9c
 
 ---
 
@@ -39,8 +39,12 @@ source-git-commit: 1129ea26c51670c51ff9f7b8e492fbaac654019f
    + [Cloud Manager-API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [Benachrichtigungen](notifications.md)
    + [Benutzerspezifische Regeln für Codequalität](custom-code-quality-rules.md)
++ Product Update Wizard {#product-update-wizard}
+   + [Überblick](overview-productupdate-wizard.md)
+   + [Test](evaluation.md)
 + Versionshinweise {#release-notes}
-   + [Aktuelle Versionshinweise (2019.5.0)](release-notes-current.md)
+   + [Aktuelle Versionshinweise (2019.6.0)](release-notes-current.md)
+   + [Versionshinweise für 2019.5.0](release-notes-2019-5-0.md)
    + [Versionshinweise für 2019.4.0](release-notes-2019-4-0.md)
    + [Versionshinweise für 2019.3.0](release-notes-2019-3-0.md)
    + [Versionshinweise für 2019.2.0](release-notes-2019-2-0.md)
