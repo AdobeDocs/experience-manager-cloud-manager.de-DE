@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
+source-git-commit: f76b8e6a036ab920f11fb913d3ad29818f1e153f
 
 ---
 
@@ -266,7 +266,7 @@ public void orDoThis(Session session) throws Exception {
 
 **Seit**: Version 2018.4.0
 
-Wie in der [Sling-Dokumentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html)beschrieben, werden Bindungsservlets nach Pfaden deaktiviert. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
+As described in the [Sling documentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html), bindings servlets by paths is discouraged. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
 
 #### Nicht konformer Code {#non-compliant-code-5}
 
@@ -554,3 +554,78 @@ public void doThis(Resource resource) {
   return resource.isResourceType("foundation/components/text");
 }
 ```
+
+
+## OakPAL Content Rules {#oakpal-rules}
+
+Bitte finden Sie unter den oakpal-Prüfungen, die von Cloud Manager ausgeführt werden.
+
+>[!NOTE]
+>Oakpal ist ein Framework, das von einem AEM-Partner (und dem Gewinner 2019 AEM Rockstar Nordamerika) entwickelt wurde und die Inhaltspakete mithilfe eines eigenständigen Oak-Repositorys überprüft.
+
+### Customer Packages Should Not Create or Modify Nodes Under /libs {#oakpal-customer-package}
+
+**Schlüssel**: Bannedpaths
+
+**Typ**: Fehler
+
+**Schweregrad**: Blocker
+
+**Seit**: Version 2019.6.0
+
+Es ist eine langfristige Best Practice, dass die /libs Inhaltsstruktur im AEM-Inhalts-Repository von Kunden als schreibgeschützt betrachtet werden sollte. Modifying nodes and properties under */libs* creates significant risk for major and minor updates. Modifications to */libs* should only be made by Adobe through official channels.
+
+### Packages Should Not Contain Duplicate OSGi Configurations {#oakpal-package-osgi}
+
+**Schlüssel**: Duplicateosgiconfigurations
+
+**Typ**: Fehler
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2019.6.0
+
+Ein häufig auftretendes Problem bei komplexen Projekten besteht darin, dass dieselbe osgi-Komponente mehrmals konfiguriert ist. Dadurch wird eine Eindeutigkeit erzeugt, in der die Konfiguration operierbar ist. Diese Regel ist &quot;runmode-aware&quot; insofern, als sie nur Probleme erkennt, bei denen dieselbe Komponente mehrmals im gleichen Laufzeitmodus konfiguriert ist (oder eine Kombination aus Laufmodi).
+
+#### Non Compliant Code {#non-compliant-code-osgi}
+
+```+ apps
+  + projectA
+    + config
+      + com.day.cq.commons.impl.ExternalizerImpl
+  + projectB
+    + config
+      + com.day.cq.commons.impl.ExternalizerImpl
+```
+
+#### Konformer Code {#compliant-code-osgi}
+
+```+ apps
+  + shared-config
+    + config
+      + com.day.cq.commons.impl.ExternalizerImpl
+```
+
+### Config and Install Folders Should Only Contain OSGi Nodes {#oakpal-config-install}
+
+**Schlüssel**: Configandinstallshouldonlycontainosginodes
+
+**Typ**: Fehler
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2019.6.0
+
+For security reasons, paths containing */config/ and /install/* are only readable by administrative users in AEM and should be used only for OSGi configuration and OSGi bundles. Das Platzieren anderer Inhaltstypen unter Pfaden, die diese Segmente enthalten, führt zu einem Verhalten der Anwendung, der sich zwischen administrativen und nicht administrativen Benutzern unbewusst unterscheidet.
+
+### Packages Should Not Overlap {#oakpal-no-overlap}
+
+**Schlüssel**: Packageoverlaps
+
+**Typ**: Fehler
+
+**Schweregrad**: Hoch
+
+**Seit**: Version 2019.6.0
+
+Similar to the *Packages Should Not Contain Duplicate OSGi Configurations* this is a common problem on complex projects where the same node path is written to by multiple separate content packages. Während die Abhängigkeiten von Inhaltspaketen verwendet werden können, um ein konsistentes Ergebnis sicherzustellen, ist es besser, Überlappungen zu vermeiden.
