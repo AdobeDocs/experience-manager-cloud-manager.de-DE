@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: f8cea9d52ebb01d7f5291d4dfcd82011da8dacc2
+source-git-commit: 4c1c6786db9b8972f9315bd2f12fc1752881492f
 
 ---
 
@@ -36,7 +36,7 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 
 ## Testen der Codequalität {#code-quality-testing}
 
-Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Bereitstellungen bestimmte Qualitätskriterien erfüllen. Derzeit wird dies durch SonarQube implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. In der folgenden Tabelle finden Sie eine Zusammenfassung der Testkriterienbewertung:
+Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Bereitstellungen bestimmte Qualitätskriterien erfüllen. Derzeit wird dies durch eine Kombination aus sonarqube und der Prüfung auf Package Package mithilfe von oakpal implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. In der folgenden Tabelle finden Sie eine Zusammenfassung der Testkriterienbewertung:
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
 |--- |--- |--- |--- |
@@ -51,14 +51,13 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 
 >[!NOTE]
 >
->Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) .
+>Refer to [Metric Definitions](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) for more detailed definitions.
 
-
-Sie können die Liste der Regeln hier herunterladen [code-quality-rules.xlsx](assets/code-quality-rules.xlsx)
+You can download the list of rules here [code-quality-rules.xlsx](/help/using/assets/code-quality-rules.xlsx)
 
 >[!NOTE]
 >
->Weitere Informationen zu den von [!UICONTROL Cloud Manager]ausgeführten Qualitätsregeln für benutzerdefinierte Codes finden Sie unter Regelregeln für [die benutzerdefinierte Code-Qualität](custom-code-quality-rules.md).
+>To learn more about the custom code quality rules executed by [!UICONTROL Cloud Manager], please refer to [Custom Code Quality Rules](custom-code-quality-rules.md).
 
 ### Umgang mit falsch positiven Werten {#dealing-with-false-positives}
 
