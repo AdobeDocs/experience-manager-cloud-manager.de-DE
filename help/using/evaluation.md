@@ -8,16 +8,16 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 47331787d45fe68144cb90c4b907560fe0079b3c
+source-git-commit: 2fda16bb4826171c993ec07c7ff3e38d1675b9f5
 
 ---
 
 
-# Evaulation Phase {#evaluation}
+# Evaluation Phase {#evaluation}
 
-Wenn Sie auf &quot;Aktualisierung starten&quot; klicken, ist die erste Phase im Produkt-Updateassistenten die Testphase. In dieser Phase können Sie die Komplexität der Aktualisierung mit dem Mustererkennungsprogramm bewerten, auf das Sie direkt über den Assistenten zugreifen können. Am Ende dieses Schrittes haben Sie Zugriff auf den Bewertungsbericht.
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. In dieser Phase können Sie die Komplexität der Aktualisierung mit dem Mustererkennungsprogramm bewerten, auf das Sie direkt über den Assistenten zugreifen können. Am Ende dieses Schrittes haben Sie Zugriff auf den Bewertungsbericht.
 
-Der erstellte Bericht ermöglicht es Ihnen, die Autoreninstanz zu prüfen, indem Sie Muster erkennen, die Folgendes verwenden:
+Der generierte Bericht ermöglicht es Ihnen, die Autoreninstanz zur Upgradbarkeit zu prüfen, indem Muster erkannt werden, die:
 
 * Verletzen Sie bestimmte Regeln und werden sie in Bereichen durchgeführt, die durch die Aktualisierung betroffen oder überschrieben werden.
 
@@ -33,11 +33,15 @@ Dies dient als Beurteilung des Entwicklungsaufwands, der bei der Aktualisierung 
 
 Führen Sie die folgenden Schritte aus, um den Bewertungsfaktor auszuführen:
 
-1. Select [!UICONTROL Run evaluation] to run the pattern detector. Der Musterbildschirm kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass wichtige Geschäftskritische Instanzen auftreten, führt Cloud Manager diese in der Staging-Umgebung auf der Autoreninstanz aus.
+1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector. Der Musterbildschirm kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass wichtige Geschäftskritische Instanzen auftreten, führt Cloud Manager diese in der Staging-Umgebung auf der Autoreninstanz aus.
+
+![](assets/Run-Evaluation.png)
 
 1. Der Assistent informiert Sie über den Status Ihrer Aktion. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
 Once the report is generated, you can select [!UICONTROL Download] to save a copy of the evaluation report.
+
+![](assets/Evaluation-1.png)
 
 >[!NOTE]
 >The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
