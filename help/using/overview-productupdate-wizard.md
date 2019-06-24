@@ -8,30 +8,39 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 47331787d45fe68144cb90c4b907560fe0079b3c
+source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
 
 ---
 
 
 # Einführung {#introduction}
 
-Der Produktaktualisierungsassistent ist ein Assistent für Cloud Manager-Kunden, die auf den neuesten Adobe Experience Manager (AEM) 6.5 aktualisieren. Es optimiert den End-to-End-Prozess, gewährleistet die Einhaltung bewährter Verfahren in AEM, während das CI/CD-Framework von Cloud Manager und die integrierten automatisierten Tests verwendet werden.
+Der Produktaktualisierungsassistent ist ein Assistent für Cloud Manager-Kunden, die auf den neuesten Adobe Experience Manager (AEM) 6.5 aktualisieren. Es optimiert den End-to-End-Prozess, gewährleistet die Einhaltung bewährter Verfahren in AEM mithilfe des CI/CD-Frameworks von Cloud Manager und integrierten automatisierten Tests.
 
-Der Assistent umfasst fünf Phasen, über die der Benutzer während eines AEM-Produktupdates geführt wird, einschließlich Auswertung, Wiederherstellung, Ausführung, Validierung und Beendigung.
+Der Assistent umfasst fünf Phasen, die den Benutzer während eines AEM-Produktupdates anleiten. Die fünf Phasen sind:
+
+* Test
+* Optimierung
+* Ausführung
+* Validierung
+* Abschluss
 
 >[!NOTE]
->The current release of product update feature in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
+>The current release of Product Update feature in Cloud Manager supports the **Evaluation** phase only. The other four phases namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon.
 
 
 ## Using Product Update Wizard {#using-product-update-wizard}
 
 >[!NOTE]
->Kunden, die zu Cloud Manager geleitet wurden und die Berechtigung zum Upgrade auf AEM 6.5 haben, können den Produktaktualisierungsassistenten nutzen. Weitere Informationen erhalten Sie von Ihrem Customer Success Engineer (CSE).
+>Kunden, die zu Cloud Manager geleitet wurden und die Berechtigung zum Aktualisieren auf AEM 6.5 haben, können den Produktaktualisierungsassistenten nutzen. Weitere Informationen erhalten Sie von Ihrem Customer Success Engineer (CSE).
 
 1. Sie erhalten über Cloud Manager eine Pulse-Benachrichtigung, in der Sie darauf hingewiesen werden, dass eine neue Version von AEM 6.5 für Ihr Programm verfügbar ist.
 
-   ![](assets/screen_shot_2018-06-04at120643pm.png)
+1. An **[!UICONTROL AEM 6.5 Update]** card displays on the overview screen of [!UICONTROL Cloud Manager]. Diese Karte hilft Ihnen, die Phase des Aktualisierungsprozesses zu verfolgen, in dem Sie sich gerade befinden, und Sie werden darüber informiert, wie der nächste Schritt ausgeführt werden soll. Select **[!UICONTROL Start Update]** to start the update wizard.
 
-1. You will see an AEM update card on the overview screen of [!UICONTROL Cloud Manager]. Diese Karte hilft Ihnen, die Phase des Aktualisierungsprozesses zu verfolgen, in dem Sie sich gerade befinden, und Sie werden darüber informiert, wie der nächste Schritt ausgeführt werden soll. Select **Start update** to navigate to the update wizard.
+   ![](assets/Start-Update.png)
 
-   ![](assets/screen_shot_2018-06-04at12611pm.png)
+### Die nächsten Schritte {#next-steps}
+
+Once you click the **[!UICONTROL Start Update]** from the **[!UICONTROL AEM 6.5 Update]** card, the **Evaulation** phase starts.
+Navigate to the [Evaluation Phase](evaluation.md) to learn more.
