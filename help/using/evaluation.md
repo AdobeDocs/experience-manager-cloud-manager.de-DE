@@ -8,21 +8,20 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
+source-git-commit: 9a1af88238a232c64d9f0229059c5001f314c736
 
 ---
 
 
 # Evaluation Phase {#evaluation}
 
-Once you click **[!UICONTROL Start Update]**, the first phase in Product Update Wizard is the Evaluation phase. In dieser Phase können Sie die Komplexität der Aktualisierung mit dem Mustererkennungsprogramm bewerten, auf das Sie direkt über den Assistenten zugreifen können. Am Ende dieses Schrittes haben Sie Zugriff auf den Bewertungsbericht.
+Once you click **[!UICONTROL Start Update]**, the first phase in Product Update wizard is the **[!UICONTROL Evaluation]** phase. In dieser Phase können Sie die Komplexität der Aktualisierung mit dem Mustererkennungsprogramm bewerten, auf das Sie direkt über den Assistenten zugreifen können. Am Ende dieses Schrittes haben Sie Zugriff auf den Bewertungsbericht.
 
 Der generierte Bericht ermöglicht es Ihnen, die Autoreninstanz zur Upgradbarkeit zu prüfen, indem Muster erkannt werden, die:
 
 * Verletzen Sie bestimmte Regeln und werden sie in Bereichen durchgeführt, die durch die Aktualisierung betroffen oder überschrieben werden.
 
 * Verwenden Sie eine AEM 6. x-Funktion oder eine API, die nicht auf dem neuen AEM abwärtskompatibel ist und möglicherweise nach der Aktualisierung umgebrochen wird.
-
 
 Dies dient als Beurteilung des Entwicklungsaufwands, der bei der Aktualisierung auf Adobe Experience Manager (AEM) 6.5 beteiligt ist.
 
@@ -33,7 +32,7 @@ Dies dient als Beurteilung des Entwicklungsaufwands, der bei der Aktualisierung 
 
 Führen Sie die folgenden Schritte aus, um den Bewertungsfaktor auszuführen:
 
-1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector.
+1. Click on **[!UICONTROL Run Evaluation]** to run the pattern detector.
 
    >[!NOTE]
    >Der Musterbildschirm kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass wichtige Geschäftskritische Instanzen auftreten, führt Cloud Manager diese in der Staging-Umgebung auf der Autoreninstanz aus.
