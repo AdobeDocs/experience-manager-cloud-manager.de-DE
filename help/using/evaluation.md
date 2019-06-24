@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 2fda16bb4826171c993ec07c7ff3e38d1675b9f5
+source-git-commit: 2ac4a59f1af46cfb1cae8cda3c24e217620cec70
 
 ---
 
@@ -33,15 +33,22 @@ Dies dient als Beurteilung des Entwicklungsaufwands, der bei der Aktualisierung 
 
 Führen Sie die folgenden Schritte aus, um den Bewertungsfaktor auszuführen:
 
-1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector. Der Musterbildschirm kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass wichtige Geschäftskritische Instanzen auftreten, führt Cloud Manager diese in der Staging-Umgebung auf der Autoreninstanz aus.
+1. Select **[!UICONTROL Run Evaluation]** to run the pattern detector.
 
-![](assets/Run-Evaluation.png)
+   >[!NOTE]
+   >Der Musterbildschirm kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass wichtige Geschäftskritische Instanzen auftreten, führt Cloud Manager diese in der Staging-Umgebung auf der Autoreninstanz aus.
+
+   ![](assets/Run-Evaluation.png)
 
 1. Der Assistent informiert Sie über den Status Ihrer Aktion. You will notice **In progress** or **completed** as applicable when the evaluation report is being generated.
 
-Once the report is generated, you can select [!UICONTROL Download] to save a copy of the evaluation report.
+   Once the report is generated, you can click on **[!UICONTROL Download report]** to save a copy of the evaluation report.
 
-![](assets/Evaluation-1.png)
+   ![](assets/Evaluation-1.png)
+
+   Sie können die aktualisierten Pulse-Benachrichtigungen als Statusaktualisierungen anzeigen.
+
+   ![](assets/Evaluation-pulse-notification.png)
 
 >[!NOTE]
 >The other four phases succeeding **Evaluation** namely **Remediation**, **Execution**, **Validation**, and **Completion** are coming soon and are not available in the current release.
