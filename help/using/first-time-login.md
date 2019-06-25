@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -40,4 +40,4 @@ Sobald Sie die allgemeinen Konfigurationen für [!UICONTROL Cloud Manager] einge
 
    >[!NOTE]
    >
-   >Weitere Schritte finden Sie unter [Einrichten des Programms](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html) .
+   >Informationen zum Abschließen der nächsten Schritte finden Sie unter [Einrichten Ihres Programms](https://helpx.adobe.com/experience-manager/cloud-manager/using/setting-up-program.html).
