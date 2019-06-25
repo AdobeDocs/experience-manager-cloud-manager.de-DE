@@ -1,14 +1,14 @@
 ---
 title: Benachrichtigungen
 seo-title: Benachrichtigungen
-description: So erhalten Benutzer Benachrichtigungen in AEM Cloud Manager
+description: Benachrichtigungseingang in AEM Cloud Manager für Anwender
 seo-description: Auf dieser Seite erfahren Sie, wie Anwender Benachrichtigungen empfangen, wenn eine Pipeline in AEM Cloud Manager gestartet und fertiggestellt wird (ob erfolgreich oder nicht).
 uuid: 73e4bb80-36c1-4408-bdbd-1ac5328359d1
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
