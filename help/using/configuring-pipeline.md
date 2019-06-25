@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 content-type: Referenz
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -33,7 +33,7 @@ Der Bereitstellungsmanager ist für die Einrichtung der Pipeline verantwortlich.
 
 >[!CAUTION]
 >
->Die Pipeline kann erst eingerichtet werden, wenn das Git-Repository mindestens eine Verzweigung und [eine Programmeinrichtung](setting-up-program.md) abgeschlossen hat.
+>Die Pipeline kann erst eingerichtet werden, wenn das Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](setting-up-program.md) abgeschlossen ist.
 
 Bevor Sie Code bereitstellen, müssen Sie Ihre Pipelineeinstellungen über [!UICONTROL Cloud Manager] konfigurieren.
 
@@ -51,9 +51,9 @@ Führen Sie folgende Schritte aus, um das Verhalten und die Voreinstellungen fü
 
    ![](assets/Configure_ci-cd-1.png)
 
-1. Der **Anzeigebereich &quot;Pipeline-Pipeline** &quot; wird angezeigt.
+1. Der Bildschirm **Pipeline einrichten** wird angezeigt.
 
-   Mit dem dreistufigen Assistenten können Sie Ihre **Verzweigungen**, **Umgebungen** und **Testumgebung** einrichten.
+   Mit dem dreistufigen Assistenten können Sie Ihre **Verzweigungen**, **Umgebungen** und eine **Test**-Umgebung einrichten.
 Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
 
    >[!NOTE]
@@ -136,9 +136,9 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    **AEM Sites:**
 
-   Cloud Manager führt die Performance-Tests für AEM Site-Programme aus, indem Seiten (als nicht authentifizierter Benutzer) auf dem Stage-Veröffentlichungsserver für einen 30-minütigen Testzeitraum angefordert und die Reaktionszeit für die einzelnen Seiten sowie verschiedene Metriken auf Systemebene gemessen werden. Seiten werden durch drei **Seitensätze ausgewählt**: Sie können eine beliebige Stelle zwischen einer und allen drei Sätzen auswählen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
+   Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten (durch einen nicht authentifizierten Benutzer) auf dem Staging-Veröffentlichungsserver für einen 30-minütigen Testzeitraum abgerufen und die Antwortzeit für die einzelnen Seiten sowie verschiedene Metriken auf Systemebene gemessen werden. Die Seiten werden durch drei **Seitensätze** ausgewählt. Sie können wählen, ob ein, zwei oder alle drei Sätze getestet werden sollen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
 
-   Wenn zum Beispiel zwischen den beliebten Live-Seiten und den neuen Seiten eine 50:50-Aufteilung erfolgt (in diesem Beispiel werden andere Live-Seiten nicht verwendet) und der Satz neuer Seiten 3000 Seiten enthält, liegt die KPI der Seitenansichten pro Minute bei 200. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
+   Wenn zum Beispiel zwischen den beliebten Live-Seiten und den neuen Seiten eine 50:50-Aufteilung erfolgt (in diesem Beispiel werden andere Live-Seiten nicht verwendet) und der Satz neuer Seiten 3000 Seiten enthält, ist für die KPI der Seitenansichten pro Minute ein Wert von 200 festgelegt. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
    * Jede der 25 Seiten der beliebten Live-Seiten wird 240-mal aufgerufen: ((200 * 0,5) / 25) * 30 = 120
 
