@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Anforderungen
 discoiquuid: f90f0f4c-c1ff-47f6-8d97-ff5018561bf2
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -32,5 +32,5 @@ Unter Umständen verfügen Sie über ein vorhandenes Git-Repository, das Sie wei
 
 >[!NOTE]
 >
->Informationen zum Anzeigen der allgemeinen Git-Befehle finden Sie im [Git-Clientblatt](https://education.github.com/git-cheat-sheet-education.pdf).
+>Die gebräuchlichen Git-Befehle finden Sie auf dem [Git-Spickzettel](https://education.github.com/git-cheat-sheet-education.pdf).
 
