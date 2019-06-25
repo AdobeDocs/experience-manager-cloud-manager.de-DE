@@ -7,7 +7,7 @@ uuid: 9aa90a99-f049-422e-9e06-b00b843ed98b
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Anforderungen
 discoiquuid: 072dbc1b-e608-4b1f-b0e8-0e4f88c8ad12
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -17,7 +17,7 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ## Anwenderidentitätstypen {#user-identity-types}
 
-Im Rahmen des Onboardingprozesses erstellt Adobe in seinem Identity-Management-System (IMS) eine **Organisations-ID** für Ihr Unternehmen. Darüber können dann all Ihre Anwender und deren Berechtigungen verwaltet werden. Jeder Anwender, der Mitglied dieser Organisation sein muss und Zugriff auf alle [!UICONTROL Experience Cloud]-Dienste erhält, muss über eine eigene **Adobe ID** verfügen. Um mit einer Adobe ID zu beginnen, besuchen Sie [Adobe ID-Typen,](https://helpx.adobe.com/enterprise/using/identity.html) um detaillierte Anweisungen zum Abrufen einer Adobe ID mit einem der verfügbaren Identitätstypen zu erhalten.
+Im Rahmen des Onboardingprozesses erstellt Adobe in seinem Identity-Management-System (IMS) eine **Organisations-ID** für Ihr Unternehmen. Darüber können dann all Ihre Anwender und deren Berechtigungen verwaltet werden. Jeder Anwender, der Mitglied dieser Organisation sein muss und Zugriff auf alle [!UICONTROL Experience Cloud]-Dienste erhält, muss über eine eigene **Adobe ID** verfügen. Zur Verwendung der Adobe ID rufen Sie zunächst den Artikel [Verwalten von Identitätstypen](https://helpx.adobe.com/de/enterprise/using/identity.html) auf. Dort finden Sie ausführliche Informationen zum Bezug einer Adobe ID mit einem der verfügbaren Identitätstypen.
 
 ### Anwender und Rollen {#users-and-roles}
 
