@@ -3,7 +3,7 @@ title: Versionshinweise für 2019.2.0
 seo-title: Versionshinweise für AEM Cloud Manager 2019.2.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.2.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.2.0.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -24,7 +24,7 @@ Die [!UICONTROL Cloud Manager]-Version 2019.2.0 wurde am 21. Februar 2019 ver
 * Das Dispatchermodul in von Assistenten generierten Projekten enthält jetzt eine README-Datei.
 * Die Sortierreihenfolge von Codescanproblemen wurde verbessert und entspricht nun der Priorität des Problems.
 * Stage-Instanzen werden jetzt auch im Fall eines Bereitstellungsfehlers immer im Load-Balancer wiederhergestellt.
-* In Admin Console ist eine neue API-Entwicklerrolle verfügbar, über die bestimmte Anwender die Berechtigung zum Erstellen von Integrationen in der Adobe I/O-Konsole erhalten können. Weitere Informationen finden Sie unter [Verwalten von Entwicklern](https://www.adobe.com/go/aac_api_prod_learn) .
+* In Admin Console ist eine neue API-Entwicklerrolle verfügbar, über die bestimmte Anwender die Berechtigung zum Erstellen von Integrationen in der Adobe I/O-Konsole erhalten können. Weitere Informationen finden Sie unter [Verwalten von Entwicklern](https://www.adobe.com/go/aac_api_prod_learn_de).
 * Die Version des Maven-Archetyps wurde auf Version 16 aktualisiert.
 * Maven wurde auf Version 3.6.0 aktualisiert.
 
