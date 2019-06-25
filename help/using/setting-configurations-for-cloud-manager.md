@@ -6,7 +6,7 @@ seo-description: Voraussetzungen für die Einrichtung von Adobe AEM Cloud Manage
 uuid: 65d795f9-aa97-4816-b66b-03b5ae961f47
 contentOwner: jsyal
 discoiquuid: 03241b88-8d28-401b-aa42-17ead6183cd8
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -43,7 +43,7 @@ Erstellen Sie die folgenden Rollen für [!UICONTROL Cloud Manager] mithilfe von 
 >
 >Adobe Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation.
 >
->Weitere Informationen über die Adobe Admin-Konsole finden Sie in der Dokumentation zur [Admin-Konsole](https://helpx.adobe.com/enterprise/using/admin-console.html).
+>Weitere Informationen über Adobe Admin Console finden Sie in der Dokumentation zu [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
 | **[!UICONTROL Cloud Manager]-Rollen** | **Beschreibung** |
 |---|---|
@@ -90,13 +90,13 @@ Sie können ein Anwendungsprojekt für [!UICONTROL Cloud Manager] basierend auf 
 
 Bei einem neuen AEM-Projekt wird Ihr vorhandenes Projekt genutzt und zusammen mit [!UICONTROL Cloud Manager]verwendet.
 
-Weitere Informationen finden Sie unter [Erste Schritte mit AEM 6.4](https://chl-author./content/help/en/experience-manager/6-4/sites/deploying/using/deploy.html). Weitere Informationen finden Sie unter [AEM-Ressourcen](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&mv=other) .
+Weitere Informationen finden Sie unter [Erste Schritte mit AEM 6.4](https://chl-author./content/help/de/experience-manager/6-4/sites/deploying/using/deploy.html). Weitere Informationen finden Sie zudem unter [AEM-Ressourcen](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&amp;mv=other).
 
 * **Vorhandenes AEM-Projekt**:
 
 Ein vorhandenes AEM-Projekt muss die Regeln zur Projekteinrichtung einhalten. Sie können Ihre vorhandene AEM-Installation aktualisieren, um die neuen Funktionen und Verbesserungen von AEM 6.4 zu erhalten und [!UICONTROL Cloud Manager] zu nutzen. Diese Kriterien sollten bei minimalen Änderungen funktionieren. Wenden Sie sich an einen Customer Success Engineer (CSE), um Unterstützung zu erhalten.
 
-Weitere Informationen zum Upgrade Ihrer AEM-Instanz auf 6.4 finden Sie unter [Aktualisieren auf AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/upgrade.html).
+Weitere Informationen zum Aktualisieren Ihrer AEM-Instanz auf 6.4 finden Sie unter [Aktualisieren auf AEM 6.4](https://helpx.adobe.com/de/experience-manager/6-4/sites/deploying/using/upgrade.html).
 
 ### Einrichten des Repositorys {#setting-up-repository}
 
@@ -131,7 +131,7 @@ Die eigentliche ZIP-Datei kann mithilfe des maven-assembly-plugin erstellt werde
 
 Damit [!UICONTROL Cloud Manager] Leistungstests ordnungsgemäß durchführen kann, muss der Staging-Dispatcherserver auf dieselben Hostnamen wie der Produktionsdispatcher reagieren (also antworten), und zwar so, dass dies dem Produktionsserver entspricht.
 
-*Wenn ein Kunde z*. B. [www.myco.com](http://www.myco.com/) und [www.myotherco.com](http://www.myotherco.com,/) als Produktions-Hostnamen und stage-myco. adobecqms. net als Host-Hostname hat, muss eine Anforderung wie diese korrekt reagieren:
+*Bespiel:* Wenn ein Kunde [www.myco.com](http://www.myco.com/) und [www.myotherco.com](http://www.myotherco.com,/) als Hostnamen für die Produktion und stage-myco.adobecqms.net als Hostnamen für das Staging verwendet, muss eine Anforderung wie diese entsprechend reagieren:
 
 ```
 curl -H"Host: www.myco.com" http://stage-myco.adobecqms.net/en/home.html
@@ -174,4 +174,4 @@ change as per KT
 
 Sobald Sie die allgemeinen Konfigurationen eingerichtet haben, können Sie [!UICONTROL Cloud Manager] verwenden.
 
-Siehe [Verwenden von [! UICONTROL Cloud Manager]](https://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) , um mit [!UICONTROL Cloud Manager zu beginnen].
+Unter [Verwenden von [!UICONTROL Cloud Manager]](https://helpx.adobe.com/experience-manager/cloud-manager/using/using-cloud-manager.html) finden Sie Informationen zu den ersten Schritten mit [!UICONTROL Cloud Manager].
