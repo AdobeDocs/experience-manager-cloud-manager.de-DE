@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -35,7 +35,7 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    Der Build-Prozess umfasst die folgenden Phasen:
 
    1. Staging-Bereitstellung
-   1. Test-Test
+   1. Staging-Tests
    1. Produktionsbereitstellung
    >[!NOTE]
    >
@@ -48,7 +48,7 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    * Bereitstellung in der Staging-Umgebung
    ![](assets/Stage_Testing.png)
 
-   Das **Stage Testing** umfasst die folgenden Schritte:
+   **Staging-Tests** umfassen die folgenden Schritte:
 
    * Sicherheitstests
    * Leistungstests
@@ -65,7 +65,7 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    >Der **Zeitplan zur Produktionsbereitstellung** wird bei der Konfiguration der Pipeline aktiviert.
    >
    >
-   >Mit dieser Option können Sie entweder den Produktionszustand planen oder auf **Jetzt** klicken, um die Produktionsbereitstellung sofort auszuführen.
+   >Mit dieser Option können Sie die Produktionsbereitstellung planen. Oder klicken Sie auf **Jetzt**, um die Produktionsbereitstellung sofort auszuführen.
    >
    >
    >Datum und Uhrzeit für den Zeitplan beziehen sich auf die Zeitzone des Benutzers.
@@ -77,7 +77,7 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
 
    Sobald Sie den Bereitstellungsplan bestätigt haben, wird die Codebereitstellung abgeschlossen.
 
-   Der folgende Bildschirm wird angezeigt, wenn im obigen Schritt die Option **&quot;Jetzt&quot;** ausgewählt ist.
+   Der folgende Bildschirm wird angezeigt, wenn im obigen Schritt die Option **Jetzt** ausgewählt wurde.
 
    ![](assets/Production_Deployment2.png)
 
