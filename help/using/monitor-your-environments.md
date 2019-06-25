@@ -3,7 +3,7 @@ title: Überwachen von Umgebungen
 seo-title: Überwachen von Umgebungen
 description: 'null'
 seo-description: Auf dieser Seite erfahren Sie mehr über die Systemüberwachung in Cloud Manager. Diese erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -95,29 +95,29 @@ Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kr
 
 ## SLA-Berichte {#sla-reporting}
 
-Kunden können die Leistung ihrer Produktions-AEM-Umgebung im Verhältnis zu ihrem vertraglich vereinbarten Service Level Agreement (SLA) anzeigen. Dies ist über ein Untermenü im Anzeigebereich &quot;Berichte&quot; verfügbar.
+Die Leistungsdaten einer AEM-Umgebung können mit dem vertraglich vereinbarten Service Level Agreement (SLA) verglichen werden. Möglich ist dies über ein Untermenü auf dem Bildschirm „Berichte“.
 Das Diagramm unten zeigt beispielsweise die monatliche SLA-Performance für 2018.
 
 ![](assets/sla-reporting1.png)
 
-Wie bei den Systemüberwachungsdiagrammen zeigt das Rollover über einen Datenpunkt die spezifischen Werte für diesen Monat an.
+Wie bei den Systemüberwachungsdiagrammen werden beim Bewegen der Maus über einen Datenpunkt die spezifischen Werte für diesen Monat angezeigt.
 
 ![](assets/sla-reporting2.png)
 
-Der Abschnitt &quot;Ereignisanalyse&quot; unter diesem Diagramm zeigt die Anzahl von Fällen, die im aktuellen Jahr für das Programm aufgetreten sind. Jeder Vorfall hat einen Zeitraum, eine Ursache und einen Satz von Kommentaren.
+Der Abschnitt „Ereignisanalyse“ unter diesem Diagramm zeigt die Anzahl von Vorfällen, die im aktuell ausgewählten Jahr beim Programm aufgetreten sind. Für jeden Vorfall werden Zeitraum und Ursache mitsamt Kommentaren angegeben.
 
 ![](assets/sla-reporting3.png)
 
 ## SLA-Metriken {#sla-metrics}
 
-* **Autor-Vertrag**: Dies ist die SLA, die in Ihrem Vertrag mit Adobe Managed Services für die Autorenstufe definiert ist.
+* **Autor-Vertrag**: Dies ist der SLA, der in Ihrem Vertrag mit Adobe Managed Services für die Autorenstufe definiert ist.
 
-* **AMS Author SLA**: Dies ist die gemessene Laufzeit der Produktions-Autorenmetrikfälle, die von Adobe oder unseren Anbietern verursacht werden.
+* **AMS-Autor-SLA**: Dies ist die gemessene Produktionszeit im Hinblick auf Factoring-Vorfälle in der Produktions-Autorenstufe, die von Adobe oder unseren Anbietern verursacht wurden.
 
-* **Autor SLA**: Dies ist die gemessene Laufzeit der Autorenstufe, die geplante Ausfallzeiten wie Wartungsfenster ignoriert.
+* **Autor-SLA**: Dies ist die gemessene Produktionszeit der Autorenstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
 
-* **Endbenutzervertrag**: Dies ist die SLA, die in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsstufe definiert ist.
+* **Endbenutzervertrag**: Dies ist der SLA, der in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsstufe definiert ist.
 
-* **AMS Endbenutzer SLA**: Dies ist die gemessene Laufzeit der von Adobe oder unseren Anbietern verursachten Factoringvorgänge zur Produktionsveröffentlichung.
+* **AMS-Endbenutzer-SLA**: Dies ist die gemessene Produktionszeit im Hinblick auf Factoring-Vorfälle in der Produktionsveröffentlichungsstufe, die von Adobe oder unseren Anbietern verursacht wurden.
 
-* **Endbenutzer SLA**: Dies ist die gemessene Laufzeit der Veröffentlichungsstufe, die geplante Ausfallzeiten wie Wartungsfenster ignoriert.
+* **Endbenutzer-SLA**: Dies ist die gemessene Produktionszeit der Veröffentlichungsstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
