@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Einführung
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -22,7 +22,7 @@ source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ### Anwenderrollen {#user-roles}
 
-Die Rollenverwaltung für [!UICONTROL Cloud Manager] erfolgt in der [Adobe Admin-Konsole](https://helpx.adobe.com/enterprise/using/admin-console.html). Jeder Anwender von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender in Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+Die Rollenverwaltung für [!UICONTROL Cloud Manager] erfolgt in [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Jeder Anwender von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender in Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
 Weitere Informationen zum Einrichten von Rollen finden Sie unter [Einrichten von Anwendern und Rollen](setting-up-users-and-roles.md).
 
@@ -46,23 +46,23 @@ Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten 
 | Berechtigung | Beschreibung | Business Owner | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Anwendung lesen | Siehe Details des Programms. | x | x | x | x | x |
-| Anwendung schreiben | Konfigurieren des Programms (einschließlich KPIs). | x |
+| Anwendung schreiben | Konfigurieren des Programms (einschließlich KPIs). | x |  |  |  |  |
 | Umgebung lesen | Siehe Umgebungsdetails. | x | x | x | x | x |
-| Ausführung erstellen | Starten der Pipeline. | x | x | x |
+| Ausführung erstellen | Starten der Pipeline. | x | x | x |  |  |
 | Ausführung lesen | Siehe Ausführungsstatus. | x | x | x | x | x |
-| Ausführung fortsetzen | Kann die Ausführung fortsetzen, wenn sie angehalten wurde. | x | x | x | x |
-| Ausführung, Bereitstellung für die Produktion genehmigen | Bereitstellen der GoLive-Genehmigung. | x | x | x |
-| Ausführung, Bereitstellung für die Produktion planen | Planen der Bereitstellung für die Produktion. | x | x | x | x |
-| Ausführung für die Produktion bereitstellen | Bereitstellen der Anwendung für die Produktion, wenn diese zwecks CSE-Überwachung angehalten wurde. | x |
-| Ausführung abbrechen | Abbrechen der aktuellen Ausführung. | x | x | x |
-| Ausführung, Quality-Gate-Fehler außer Kraft setzen | Genehmigen bedeutender Quality-Gate-Fehler. | x | x | x |
-| Pipeline erstellen | Einrichten/Bearbeiten der Pipeline. | x |
+| Ausführung fortsetzen | Kann die Ausführung fortsetzen, wenn sie angehalten wurde. | x | x | x |  | x |
+| Ausführung, Bereitstellung für die Produktion genehmigen | Bereitstellen der GoLive-Genehmigung. | x | x | x |  |  |
+| Ausführung, Bereitstellung für die Produktion planen | Planen der Bereitstellung für die Produktion. | x | x | x |  | x |
+| Ausführung für die Produktion bereitstellen | Bereitstellen der Anwendung für die Produktion, wenn diese zwecks CSE-Überwachung angehalten wurde. |  |  |  |  | x |
+| Ausführung abbrechen | Abbrechen der aktuellen Ausführung. | x | x | x |  |  |
+| Ausführung, Quality-Gate-Fehler außer Kraft setzen | Genehmigen bedeutender Quality-Gate-Fehler. | x | x | x |  |  |
+| Pipeline erstellen | Einrichten/Bearbeiten der Pipeline. |  | x |  |  |  |
 | Pipeline lesen | Siehe Pipelinedetails. | x | x | x | x | x |
-| Pipeline schreiben | Einrichten/Bearbeiten der Pipeline. | x |
-| Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Business Owner“. | x |
-| Pipeline ändern, Managed Deployment | Berechtigung zum Bearbeiten der Option „CSE-Überwachung“. | x |
+| Pipeline schreiben | Einrichten/Bearbeiten der Pipeline. |  | x |  |  |  |
+| Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Business Owner“. |  | x |  |  |  |
+| Pipeline ändern, Managed Deployment | Berechtigung zum Bearbeiten der Option „CSE-Überwachung“. |  | x |  |  |  |
 | Lösung lesen | Lesen der Programm-KPIs. | x | x | x | x | x |
-| Lösung schreiben | Konfigurieren des Programms (einschließlich KPIs), Einrichten/Bearbeiten der Pipeline. | x |
+| Lösung schreiben | Konfigurieren des Programms (einschließlich KPIs), Einrichten/Bearbeiten der Pipeline. | x |  |  |  |  |
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“. | x | x | x | x | x |
 
 ## Ressourcenisolation {#resource-isolation}
