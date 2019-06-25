@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -38,7 +38,7 @@ Führen Sie die folgenden Schritte aus, um den ersten Prozess bei der Dispatcher
 
 >[!NOTE]
 >
->Das Migrieren von Dispatcher- und Webserverkonfigurationen zum **Git-Repository**  kann während des Cloud Manager durchgeführt werden, kann aber auch zu einem späteren Zeitpunkt durchgeführt werden.
+>Die Migration der Dispatcher- und Webserver-Konfigurationen in das **Git-Repository** kann beim Cloud Manager-Onboarding, aber auch zu einem späteren Zeitpunkt durchgeführt werden.
 
 ### Beispiel {#example}
 
