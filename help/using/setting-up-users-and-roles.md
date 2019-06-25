@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Anforderungen
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
 
 ---
@@ -56,7 +56,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Rollen:
 
 Rollen für [!UICONTROL Cloud Manager] werden über Adobe Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender in Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
-Sie können bestimmte Rollenmitgliedschaften zuweisen, indem Sie den Anwender in Adobe Admin Console einem [!UICONTROL Cloud Manager]**-Produktprofil** hinzufügen. Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen über die Adobe Admin-Konsole finden Sie in der Dokumentation zur [Admin-Konsole](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Sie können bestimmte Rollenmitgliedschaften zuweisen, indem Sie den Anwender in Adobe Admin Console einem [!UICONTROL Cloud Manager]**-Produktprofil** hinzufügen. Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen über Adobe Admin Console finden Sie in der Dokumentation zu [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
 >[!NOTE]
 >
@@ -71,7 +71,7 @@ Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Mana
 * Entwickler
 * Programmmanager
 
-Sie können Benutzer/Gruppen zu diesen Produktprofilen mit der [Admin-Konsole](https://adminconsole.adobe.com/) für [!UICONTROL Cloud Manager erstellen oder hinzufügen], wie in der unten stehenden Abbildung dargestellt:
+Sie können Anwender/Gruppen für diese Produktprofile mit [Admin Console](https://adminconsole.adobe.com/) für [!UICONTROL Cloud Manager] erstellen oder diesen hinzufügen, wie in der folgenden Abbildung gezeigt:
 
 1. Melden Sie sich bei Admin Console an und klicken Sie auf **Neues Profil**, um ein neues Profil hinzuzufügen.
 
