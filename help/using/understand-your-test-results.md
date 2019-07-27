@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: e8db535b09f0b273de2d3908a85176f38d307c80
 
 ---
@@ -36,11 +36,11 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 
 >[!NOTE]
 >
->In einer Pipeline nur für Codequalität können wichtige Fehler im Code-Qualitätstest-Gate nicht überschrieben werden, da der Schritt zur Codequalitätsprüfung der letzte Schritt in der Pipeline ist.
+>In einer Pipeline nur für Code-Qualität können Fehler der Kategorie „Wichtig“ des Code-Qualitätstests nicht überschrieben werden, da dieser Test der letzte Schritt in der Pipeline ist.
 
 ## Testen der Codequalität {#code-quality-testing}
 
-Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Bereitstellungen bestimmte Qualitätskriterien erfüllen. Derzeit wird dies durch eine Kombination aus sonarqube und der Prüfung auf Package Package mithilfe von oakpal implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. In der folgenden Tabelle finden Sie eine Zusammenfassung der Testkriterienbewertung:
+Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Bereitstellungen bestimmte Qualitätskriterien erfüllen. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. In der folgenden Tabelle finden Sie eine Zusammenfassung der Testkriterienbewertung:
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
 |--- |--- |--- |--- |
@@ -55,13 +55,13 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 
 >[!NOTE]
 >
->Refer to [Metric Definitions](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) for more detailed definitions.
+>Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions).
 
-You can download the list of rules here [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx)
+Sie können hier eine Liste der Regeln herunterladen: [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx).
 
 >[!NOTE]
 >
->To learn more about the custom code quality rules executed by [!UICONTROL Cloud Manager], please refer to [Custom Code Quality Rules](custom-code-quality-rules.md).
+>Weitere Informationen zu den benutzerdefinierten Regeln zur Code-Qualität, die von [!UICONTROL Cloud Manager] ausgeführt werden, finden Sie unter [Benutzerspezifische Regeln für Code-Qualität](custom-code-quality-rules.md).
 
 ### Umgang mit falsch positiven Werten {#dealing-with-false-positives}
 
@@ -120,7 +120,7 @@ In der folgenden Tabelle finden Sie die derzeit verfügbaren Prüfungen:
 | Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | Sling Referrer-Filter | Kritisch |
 | SSL ist richtig konfiguriert | SSL-Konfiguration | Kritisch |
 | Keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden | Standardzugriff auf Benutzerprofil | Kritisch |
-| CRXDE-Support  Bundle ist deaktiviert | CRXDE-Support | Wichtig |
+| CRXDE-Support   Bundle ist deaktiviert | CRXDE-Support | Wichtig |
 | Sling DavEx Bundle und Servlet sind deaktiviert | DavEx-Konsistenzprüfung | Wichtig |
 | Beispielinhalt ist nicht installiert. | Pakete mit Beispielinhalt | Wichtig |
 | Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert | WCM-Filterkonfiguration | Wichtig |
