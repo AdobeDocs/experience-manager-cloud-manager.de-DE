@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
 ---
@@ -16,7 +16,7 @@ source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
 
 # Benachrichtigungen {#notifications}
 
-[!UICONTROL Cloud Manager] ermöglicht dem Benutzer das Empfangen von Benachrichtigungen, wenn eine Pipeline gestartet und abgeschlossen (erfolgreich oder nicht erfolgreich) am Anfang einer Produktionsbereitstellung ausgeführt wird sowie wenn die Schritte **"OK «und** " **Geplante** Genehmigung «erreicht werden. Diese Benachrichtigungen werden über das Adobe [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+Über [!UICONTROL Cloud Manager] können Anwender Benachrichtigungen beim Starten oder Fertigstellen einer Pipeline (ob erfolgreich oder nicht), zu Beginn einer Produktionsbereitstellung bzw. beim Erreichen der Schritte **GoLive-Genehmigung verwenden** und **Geplant** empfangen. Diese Benachrichtigungen werden über das Adobe [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >
