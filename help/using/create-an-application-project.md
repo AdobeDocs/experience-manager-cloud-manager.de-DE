@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
-translation-type: ht
-source-git-commit: b39fc865e3c34052fb94b223d9eebc0fce3495d2
+translation-type: tm+mt
+source-git-commit: 81f4e0b3b31a8be1f0620b70442b0268159e4ec0
 
 ---
 
@@ -20,7 +20,7 @@ source-git-commit: b39fc865e3c34052fb94b223d9eebc0fce3495d2
 
 Wenn Kunden Cloud Manager erstmals verwenden, erhalten sie ein leeres Git-Repository. Kunden, die bereits Adobe Managed Services (AMS) verwenden (oder ihre lokale AEM-Lösung zu AMS migrieren), verfügen im Allgemeinen bereits über Projektcode in Git (oder einem anderen Versionskontrollsystem) und importieren ihr Projekt in das Cloud Manager-Repository. Neue Kunden verfügen jedoch nicht über vorhandene Projekte.
 
-Um neuen Kunden die ersten Schritte zu erleichtern, kann Cloud Manager jetzt als Ausgangspunkt ein minimales AEM-Projekt erstellen. Dieser Vorgang basiert auf dem [**AEM-Projektarchetyp**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Um neuen Kunden die ersten Schritte zu erleichtern, kann Cloud Manager jetzt als Ausgangspunkt ein minimales AEM-Projekt erstellen. This process is based on the [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 <!-- 
 
@@ -90,9 +90,9 @@ Last Modified Date: 2018-10-08T09:20:10.106-0400
 
 ## Details der Build-Umgebung {#build-environment-details}
 
-Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Laufzeitumgebung ****. Diese Umgebung weist die folgenden Attribute auf:
+Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Build-Umgebung. Diese Umgebung weist die folgenden Attribute auf:
 
-* Die Build-Umgebung ist Linux-basiert.
+* Die Build-Umgebung ist Linux-basiert, abgeleitet von Ubuntu 18.04.
 * Apache Maven 3.6.0 ist installiert.
 * Die installierte Java-Version ist Oracle JDK 8u202.
 * Es sind einige zusätzliche erforderliche Systempakete installiert:
@@ -102,11 +102,11 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Laufzeitu
    * libpng
    * imagemagick
    * graphicsmagick
-   * Wenn Sie weitere Pakete benötigen, müssen Sie diese über Ihre Customer Success Engineers (CSE) anfordern.
 
+* Andere Pakete können wie unten beschrieben [installiert](#installing-additional-system-packages)werden.
 * Jeder Build wird in einer unberührten Umgebung erstellt, der Build-Container speichert zwischen den Ausführungen keinen Status.
 * Maven wird immer mit folgendem Befehl ausgeführt: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
-* Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Weitere Informationen finden Sie unter [Adobe Public Maven-Repository](https://repo.adobe.com/)).
+* Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Refer to [Adobe Public Maven Repository](https://repo.adobe.com/) for more details).
 
 ## Aktivieren von Maven-Profilen in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
@@ -210,6 +210,67 @@ Nach der Konfiguration sind diese Variablen als Umgebungsvariablen verfügbar. U
 >
 >Namen von Umgebungsvariablen dürfen nur alphanumerische Zeichen und Unterstriche (_) enthalten. Dabei sollten Großbuchstaben verwendet werden.
 
+## Installieren zusätzlicher Systempakete {#installing-additional-system-packages}
+
+Einige Builds erfordern, dass zusätzliche Systempakete für die volle Funktionalität installiert werden. Beispielsweise kann ein Build ein Python oder ruby-Skript aufrufen und daher einen geeigneten Sprachinterpreter installiert haben. Dazu wird das [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) aufgerufen, um APT aufzurufen. Diese Ausführung sollte im Allgemeinen in ein Cloud Manager-spezifisches Maven-Profil eingeschlossen werden. Um beispielsweise python zu installieren:
+
+```xml
+        <profile>
+            <id>install-python</id>
+            <activation>
+                <property>
+                        <name>env.CM_BUILD</name>
+                </property>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <version>1.6.0</version>
+                        <executions>
+                            <execution>
+                                <id>apt-get-update</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>apt-get</executable>
+                                    <arguments>
+                                        <argument>update</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                            <execution>
+                                <id>install-python</id>
+                                <phase>validate</phase>
+                                <goals>
+                                    <goal>exec</goal>
+                                </goals>
+                                <configuration>
+                                    <executable>apt-get</executable>
+                                    <arguments>
+                                        <argument>install</argument>
+                                        <argument>-y</argument>
+                                        <argument>--no-install-recommends</argument>
+                                        <argument>python</argument>
+                                    </arguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+```
+
+Mit dieser Methode können Sie auch sprachspezifische Pakete installieren, z. B. für `gem` rubygems oder `pip` für Python-Pakete.
+
+>[!NOTE]
+>
+>Wenn Sie ein Systempaket auf diese Weise installieren, wird es **nicht** in der Laufzeitumgebung installiert, die für die Ausführung von Adobe Experience Manager verwendet wird. Wenn Sie ein in der AEM-Umgebung installiertes Systempaket benötigen, wenden Sie sich an Ihren Kundenbetreuer (CSE).
+
 ## Entwickeln von Code basierend auf Best Practices {#develop-your-code-based-on-best-practices}
 
-Die Entwicklungs- und Beratungsteams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler zusammengestellt](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
+Adobe Engineering and Consulting teams have developed a [comprehensive set of best practices for AEM developers](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
