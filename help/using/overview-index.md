@@ -3,14 +3,11 @@ title: Übersichtsindex
 seo-title: Übersichtsindex
 description: Übersicht über die AEM Cloud Manager-Hilfe
 seo-description: Übersicht über die Adobe AEM Cloud Manager-Hilfe
-page-status-flag: never-activated
 uuid: d4a23a6e-347e-41c3-9e3b-b7b7469c4754
 contentOwner: jsyal
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: 5ca5a413-639e-43fb-93dd-16ce8935a3fd
-preview: 'true'
-translation-type: ht
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+translation-type: tm+mt
+source-git-commit: 617b04e7465fa41542606b733ded76a32467738d
 
 ---
 
