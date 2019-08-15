@@ -1,30 +1,33 @@
 ---
-title: Versionshinweise für 2019.7.0
-seo-title: Versionshinweise für AEM Cloud Manager 2019.7.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.7.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur Version 2019.7.0 von AEM Cloud Manager.
-translation-type: ht
-source-git-commit: 97a2b172d4513161fa729d9f3693569867c6ed3e
+title: Versionshinweise für 2019.8.0
+seo-title: Versionshinweise für AEM Cloud Manager 2019.8.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.8.0.
+seo-description: Auf dieser Seite erhalten Sie Informationen zur Version 2019.8.0 von AEM Cloud Manager.
+translation-type: tm+mt
+source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
 
 ---
 
-# Versionshinweise für 2019.7.0 {#release-notes-for}
+# Versionshinweise für 2019.8.0 {#release-notes-for}
 
-Die [!UICONTROL Cloud Manager]-Version 2019.7.0 umfasst Aktualisierungen der Experience Cloud-Benachrichtigungen und Verbesserungen in Form von Fehlerbehebungen. Weitere Informationen erhalten Sie im Folgenden.
+Die [!UICONTROL Cloud Manager] 2019.8.0-Version unterstützt die Unterstützung von strukturierten Inhalten, verbessert die Leistung und behebt eine Vielzahl von kleineren Fehlern.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version 2019.7.0 von [!UICONTROL Cloud Manager] wurde am 18. Juli 2019 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2019.8.0 wurde am 19. August 2019 veröffentlicht.
 
 ## Neuigkeiten {#whats-new}
 
-Am Anfang einer Produktionsbereitstellung wird jetzt eine Experience Cloud-Benachrichtigung gesendet.
+* Neue Befehlszeilenschnittstelle zur Cloud Manager-API, powered by [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
+* Bestimmte durch den Build erzeugte Inhaltspakete können als übersprungen deklariert werden und werden nicht bereitgestellt. Weitere Informationen finden Sie unter ***Überspringen von Inhaltspaketen*** in AEM [-Anwendungsprojekt](create-an-application-project.md) erstellen.
+* Der Satz vorab geladener Abhängigkeiten im Build-Container wurde überarbeitet, um einige unbenötigte Netzwerkanforderungen zu vermeiden.
+* Die Meldung auf der Übersichtsseite für bestimmte falsch konfigurierte Programme wurde verbessert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* In einigen Fällen wurde eine statische Code-Analyse für Python- und PHP-Dateien in Cloud Manager durchgeführt.
-* Pakete, die FileVault InstallHooks enthielten, wurden nicht konsistent mit dem Code-Qualitätsschritt ausgeführt.
-* In bestimmten Kombinationen wurden Code-Qualitätsprobleme nicht konsistent sortiert.
-* Auf der Pipeline-Ausführungsseite traten einige visuelle Probleme auf.
-* Leistungstests konnten manchmal aufgrund von Ressourcenbeschränkungen der zugrunde liegenden Cloud-Infrastruktur fehlschlagen.
-* Bestimmte Kunden-Builds schlugen aufgrund von Netzwerkproblemen fehl.
+* Beim Zugriff auf SLA-Berichte war das Standardjahr 2018, nicht 2019.
+* Bei langen Umgebungen wurde die Umgebungsauswahl im Bildschirm "Berichte" nicht ordnungsgemäß vergrößert.
+* Die Codequalitätsregel ***configandinstallshouldonlycontainosginodes*** wurde falsch erzeugt, wenn die Sling-Rewriter-Komponente verwendet wurde.
+* Die Codequalitätsregel ***configandinstallshouldonlycontainosginodes*** wurde falsch für bestimmte ungewöhnliche Pfadstrukturen erzeugt.
+* Nur Assets konnten nicht ständig in ihre AEM-Umgebungen navigieren.
+* Das [!UICONTROL Dialogfeld Verzweigung und Projekt] erstellen wird in verschiedenen Browsern unterschiedlich dargestellt.
