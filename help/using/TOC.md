@@ -1,10 +1,10 @@
 ---
 product: Adobe Experience Manager
-sub-product: Adobe Experience Manager Cloud Manager
+sub-product: Experience Manager Cloud Manager
 archetype: administrator
 user-guide-title: Hilfe zu Experience Manager Cloud Manager
-translation-type: ht
-source-git-commit: 9e30939d319ad1c0db8b640b578567aa105d5e91
+translation-type: tm+mt
+source-git-commit: 5ebc83e089f889da9746828ecc362c2760ff79e9
 
 ---
 
