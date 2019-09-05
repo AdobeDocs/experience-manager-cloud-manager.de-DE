@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 53807ea6-9464-429d-9322-85c9f405dff6
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 9c0df236c1e800802d62dea09996bb8e1e7033f7
 
 ---
@@ -80,4 +80,4 @@ Eine einzelne `master`-Verzweigung kann für sehr einfache Projekte ausreichend 
 
 >[!NOTE]
 >
->To view the common git commands, see the [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Die gebräuchlichen GitBefehle finden Sie im [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
