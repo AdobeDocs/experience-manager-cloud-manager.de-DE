@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: ht
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+translation-type: tm+mt
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -46,13 +46,13 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    * Test- und Unit-Tests
    * Codescans
    * Bereitstellung in der Staging-Umgebung
-   ![](assets/Stage_Testing.png)
+   ![](assets/Stage_Deployment1.png)
 
    **Staging-Tests** umfassen die folgenden Schritte:
 
    * Sicherheitstests
    * Leistungstests
-   ![](assets/Stage_Deployment.png)
+   ![](assets/Stage_Testing1.png)
 
    Die **Produktionsbereitstellung** umfasst die folgenden Schritte:
 
@@ -60,6 +60,8 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    * **Zeitplan zur Produktionsbereitstellung** (sofern aktiviert)
    * **CSE-Unterstützung** (sofern aktiviert)
    * **Bereitstellung für Produktion**
+   ![](assets/Prod_Deployment1.png)
+
    >[!NOTE]
    >
    >Der **Zeitplan zur Produktionsbereitstellung** wird bei der Konfiguration der Pipeline aktiviert.
