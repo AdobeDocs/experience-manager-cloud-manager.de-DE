@@ -3,8 +3,8 @@ product: Adobe Experience Manager
 sub-product: Experience Manager Cloud Manager
 archetype: administrator
 user-guide-title: Hilfe zu Experience Manager Cloud Manager
-translation-type: ht
-source-git-commit: 5ebc83e089f889da9746828ecc362c2760ff79e9
+translation-type: tm+mt
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -43,7 +43,8 @@ source-git-commit: 5ebc83e089f889da9746828ecc362c2760ff79e9
    + [Überblick](overview-productupdate-wizard.md)
    + [Test](evaluation.md)
 + Versionshinweise {#release-notes}
-   + [Aktuelle Versionshinweise (2019.8.0)](release-notes-current.md)
+   + [Aktuelle Versionshinweise (2019.9.0)](release-notes-current.md)
+   + [Versionshinweise für 2019.8.0](release-notes-2019-8-0.md)
    + [Versionshinweise für 2019.7.0](release-notes-2019-7-0.md)
    + [Versionshinweise für 2019.6.0](release-notes-2019-6-0.md)
    + [Versionshinweise für 2019.5.0](release-notes-2019-5-0.md)
