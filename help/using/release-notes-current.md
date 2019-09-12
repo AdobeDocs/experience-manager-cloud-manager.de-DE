@@ -1,33 +1,41 @@
 ---
-title: Versionshinweise für 2019.8.0
-seo-title: Versionshinweise für AEM Cloud Manager 2019.8.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.8.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.8.0.
-translation-type: ht
-source-git-commit: 365cd6dfe65059c0c529f774bbcda946d47b0db5
+title: Versionshinweise für 2019.9.0
+seo-title: Versionshinweise für AEM Cloud Manager 2019.9.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.9.0.
+seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.9.0.
+translation-type: tm+mt
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
-# Versionshinweise für 2019.8.0 {#release-notes-for}
+# Versionshinweise für 2019.9.0 {#release-notes-for}
 
-Die [!UICONTROL Cloud Manager] 2019.8.0-Version enthält die Unterstützung von strukturierten Inhalten, verbessert die Leistung und behebt eine Vielzahl von kleineren Fehlern.
+Die [!UICONTROL Cloud Manager] Release 2019.9.0 enthält Aktualisierungen für Sling Referrer-Filter-Prüfungs- und -überwachungsdiagramme.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2019.8.0 wurde am 19. August 2019 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2019.9.0 wurde am 11. September 2019 veröffentlicht.
 
 ## Neuigkeiten {#whats-new}
 
-* Neue Befehlszeilenschnittstelle zur Cloud Manager-API, mit Unterstützung von [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
-* Bestimmte durch den Build erzeugte Inhaltspakete können als übersprungen deklariert werden und werden nicht bereitgestellt. Weitere Informationen finden Sie unter ***Überspringen von Inhaltspaketen*** in [AEM-Anwendungsprojekt erstellen](create-an-application-project.md) .
-* Der Satz vorab geladener Abhängigkeiten im Build-Container wurde überarbeitet, um einige unnötige Netzwerkanforderungen zu vermeiden.
-* Die Meldung auf der Übersichtsseite für bestimmte falsch konfigurierte Programme wurde verbessert.
+* Die Kategorisierung der Überprüfung der Sling Referrer-Filter wurde von kritischer Bedeutung geändert.
+* Die Kategorisierung der Konfiguration der HTML-Bibliotheksmanager-Konfiguration wurde von kritischer in wichtig geändert.
+* Überwachungsdiagramme können jetzt heruntergeladen werden. Weitere Informationen finden Sie unter [Überwachen Ihrer Umgebungen](monitor-your-environments.md).
+* Wenn ein Programm nicht über eine AEM-Produktions-Produktionsumgebung verfügt, wird durch Klicken auf die Programmkarte von der Einstiegsseite auf der Übersichtsseite Cloud Manager kein Fehler ausgegeben.
+* Die Pipeline-Einstellungskarte auf der Seite Überblick wurde auf **die Produktionspipeline-Einstellungen eingestellt**.
+* Die Optionsfelder "Wichtige Fehler" -Optionsfelder wurden nur aus der Codequalität entfernt.
+* Auf der Aktivitätsseite wird nun der Name der Pipeline für jede Ausführung angezeigt.
+* Auf der Ausführungsseite wird nun der Name der Pipeline angezeigt.
+* Im Dialogfeld zur Codequalität wird nun eine Beschreibung für jede Bewertung angezeigt.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Beim Zugriff auf SLA-Berichte war das Standardjahr 2018, nicht 2019.
-* Bei langen Umgebungsnamen wurde die Umgebungsauswahl im Bildschirm „Berichte“ nicht ordnungsgemäß vergrößert.
-* Die Codequalitätsregel ***ConfigAndInstallShouldOnlyContainOsgiNodes*** erzeugte Fehlalarme, wenn die Sling-Rewriter-Komponente verwendet wurde.
-* Die Codequalitätsregel ***ConfigAndInstallShouldOnlyContainOsgiNodes*** erzeugte Fehlalarme für bestimmte ungewöhnliche Pfadstrukturen.
-* Nur-Assets-Kunden konnten nicht unterbrechungsfrei zu ihren AEM-Umgebungen navigieren.
-* Das Dialogfeld [!UICONTROL Verzweigung und Projekt erstellen] wird in verschiedenen Browsern unterschiedlich dargestellt.
+* Einige Benutzer konnten keine Ausführungsdetails anzeigen, wenn sie auf Genehmigung warten.
+* Auf der Übersichtsseite war der rechte Rand nicht konsistent.
+* Der Build-Container kann in großen Projekten nicht mehr genügend Speicher haben.
+* Unter bestimmten Umständen konnte die oakpal-Regel "bannedpaths" installierte Inhalte unter /libs nicht identifizieren.
+* Wenn ein Qualitätsgate abgelehnt wurde, wird in der Dialogfeldüberschrift immer noch "Teilweise weitergereicht" angezeigt.
+
+## Bekannte Probleme {#known-issues}
+
+Das Herunterladen von Überwachungsdiagrammen ist in Safari nicht möglich.
