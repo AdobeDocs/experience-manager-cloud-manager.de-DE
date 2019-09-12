@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
@@ -114,13 +114,13 @@ In der folgenden Tabelle finden Sie die derzeit verfügbaren Prüfungen:
 | Standardkennwörter wurden geändert | Standard-Anmeldekonten | Kritisch |
 | Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
 | Dispatcher filtert Anfragen ordnungsgemäß | CQ-Dispatcher-Konfiguration | Kritisch |
-| Der Adobe Granite HTML Library Manager ist angemessen konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | Der Sling Java Script Handler ist angemessen konfiguriert. | Sling Java Script Handler | Kritisch |
 | Der Sling JSP Script Handler ist angemessen konfiguriert. | Sling JSP Script Handler | Kritisch |
-| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | Sling Referrer-Filter | Wichtig |
 | SSL ist richtig konfiguriert | SSL-Konfiguration | Kritisch |
 | Keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden | Standardzugriff auf Benutzerprofil | Kritisch |
-| CRXDE-Support   Bundle ist deaktiviert | CRXDE-Support | Wichtig |
+| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | Sling Referrer-Filter | Wichtig |
+| Der Adobe Granite HTML Library Manager ist angemessen konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
+| CRXDE-Support-Bundle ist deaktiviert | CRXDE-Support | Wichtig |
 | Sling DavEx Bundle und Servlet sind deaktiviert | DavEx-Konsistenzprüfung | Wichtig |
 | Beispielinhalt ist nicht installiert. | Pakete mit Beispielinhalt | Wichtig |
 | Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert | WCM-Filterkonfiguration | Wichtig |
