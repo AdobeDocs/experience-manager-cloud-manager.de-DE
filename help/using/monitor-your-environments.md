@@ -3,8 +3,8 @@ title: Überwachen von Umgebungen
 seo-title: Überwachen von Umgebungen
 description: 'null'
 seo-description: Auf dieser Seite erfahren Sie mehr über die Systemüberwachung in Cloud Manager. Diese erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz.
-translation-type: ht
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+translation-type: tm+mt
+source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
 
 ---
 
@@ -61,12 +61,12 @@ Im Navigationsbereich auf der linken Seite finden Sie die verfügbaren Metriken 
 
 In einem einzelnen Diagramm werden der Status und ein Graph der Daten zusammen mit den Schwellenwerten angezeigt. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
 
-![](assets/System-Monitoring3.png)
+![](assets/Monitoring_Graphs1.png)
 
 Einzelne Reihen können in einem Diagramm ausgeblendet werden, indem Sie auf die Reihe in der Legende klicken.
 Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kritische Schwellenwert angezeigt.
 
-![](assets/System_Monitoring4.png)
+![](assets/Monitoring_Graphs2.png)
 
 ### Metrikdefinitionen {#metric-definitions}
 
