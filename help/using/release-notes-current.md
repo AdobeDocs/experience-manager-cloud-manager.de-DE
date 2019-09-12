@@ -4,17 +4,17 @@ seo-title: Versionshinweise für AEM Cloud Manager 2019.9.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.9.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.9.0.
 translation-type: tm+mt
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
 
 # Versionshinweise für 2019.9.0 {#release-notes-for}
 
-Die [!UICONTROL Cloud Manager] Release 2019.9.0 enthält Aktualisierungen für Sling Referrer-Filter-Prüfungs- und -überwachungsdiagramme.
+Die [!UICONTROL Cloud Manager-Version] 2019.9.0 aktualisiert die Sicherheits-Testkriterien, fügt herunterladbare Überwachungsdiagramme hinzu und behebt einige von Kunden gemeldete Nutzbarkeitsprobleme.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2019.9.0 wurde am 11. September 2019 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2019.9.0 wurde am 12. September 2019 veröffentlicht.
 
 ## Neuigkeiten {#whats-new}
 
@@ -38,4 +38,4 @@ Die [!UICONTROL Cloud Manager]-Version 2019.9.0 wurde am 11. September 2019 v
 
 ## Bekannte Probleme {#known-issues}
 
-Das Herunterladen von Überwachungsdiagrammen ist in Safari nicht möglich.
+* Das Herunterladen von Überwachungsdiagrammen ist in Safari nicht möglich.
