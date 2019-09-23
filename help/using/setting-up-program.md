@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
-translation-type: ht
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+translation-type: tm+mt
+source-git-commit: 2c05eb4610e35d5126c6c67e44f4b71f3026c887
 
 ---
 
@@ -97,4 +97,4 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
 Wenn Sie bereits die **Pipeline** eingerichtet haben, werden Ihre aktualisierten Einstellungen bei der nächsten Ausführung berücksichtigt. Wenn Sie noch keine Pipeline eingerichtet haben, führen Sie zunächst die Schritte zum Einrichten der Pipeline aus.
 
-Weitere Informationen zum Einrichten der Pipeline finden Sie unter [Konfigurieren der CI/CD-Pipeline](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Please see [Configure your CI/CD Pipeline](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) for setting up the pipeline.
