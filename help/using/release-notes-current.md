@@ -10,7 +10,7 @@ source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 # Versionshinweise für 2019.9.0 {#release-notes-for}
 
-Die [!UICONTROL Cloud Manager-Version] 2019.9.0 aktualisiert die Sicherheits-Testkriterien, fügt herunterladbare Überwachungsdiagramme hinzu und behebt einige von Kunden gemeldete Nutzbarkeitsprobleme.
+Mit der Version [!UICONTROL Cloud Manager] 2019.9.0 werden die Kriterien für den Sicherheitstest aktualisiert, herunterladbare Überwachungsdiagramme hinzugefügt und einige von Kunden gemeldete Probleme bei der Benutzerfreundlichkeit behoben.
 
 ## Veröffentlichungsdatum {#release-date}
 
@@ -18,24 +18,24 @@ Die [!UICONTROL Cloud Manager]-Version 2019.9.0 wurde am 12. September 2019 v
 
 ## Neuigkeiten {#whats-new}
 
-* Die Kategorisierung der Überprüfung der Sling Referrer-Filter wurde von kritischer Bedeutung geändert.
-* Die Kategorisierung der Konfiguration der HTML-Bibliotheksmanager-Konfiguration wurde von kritischer in wichtig geändert.
+* Die Kategorisierung des Sling Referrer Filter-Gesundheitschecks wurde von "Wichtig"in "Wichtig"geändert.
+* Die Kategorisierung der Überprüfung der Konfigurationsstatus von HTML Library Manager wurde von "Wichtig"in "Wichtig"geändert.
 * Überwachungsdiagramme können jetzt heruntergeladen werden. Weitere Informationen finden Sie unter [Überwachen Ihrer Umgebungen](monitor-your-environments.md).
-* Wenn ein Programm nicht über eine AEM-Produktions-Produktionsumgebung verfügt, wird durch Klicken auf die Programmkarte von der Einstiegsseite auf der Übersichtsseite Cloud Manager kein Fehler ausgegeben.
-* Die **Pipeline-Einstellungskarte** auf der **Seite Überblick** wurde auf **die Produktionspipeline-Einstellungen eingestellt**.
-* Die Optionsfelder "Wichtige Fehler" -Optionsfelder wurden nur aus der Codequalität entfernt.
-* Auf der **Seite "Aktivität** " wird nun der Name der Pipeline für jede Ausführung angezeigt.
-* Auf der Ausführungsseite wird nun der Name der Pipeline angezeigt.
-* Im Dialogfeld zur Codequalität wird nun eine Beschreibung für jede Bewertung angezeigt.
+* If a program does not have a production AEM environment, clicking on the program card from the landing page will navigate to the Cloud Manager overview page, not produce an error dialog.
+* Die **Pipeline-Einstellungskarte** auf der Seite " **Übersicht** "wurde auf **Produktions-Pipeline-Einstellungen** eingestellt.
+* The Important Failure Behavior radio buttons have been removed from code-quality only pipelines.
+* Auf der Seite " **Aktivität** "wird nun der Name der Pipeline für jede Ausführung angezeigt.
+* The execution page now displays the name of the pipeline.
+* The Code Quality summary dialog now shows a description for each rating.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Einige Benutzer konnten keine Ausführungsdetails anzeigen, wenn sie auf Genehmigung warten.
-* Auf **der Übersichtsseite** war der rechte Rand nicht konsistent.
-* Der Build-Container kann in großen Projekten nicht mehr genügend Speicher haben.
-* Unter bestimmten Umständen konnte die oakpal-Regel "bannedpaths" installierte Inhalte unter /libs nicht identifizieren.
-* Wenn ein Qualitätsgate abgelehnt wurde, wurde die Dialogfeldüberschrift weiterhin *Teilweise weitergegeben*.
+* Some users could not view an execution details when it was waiting for approval.
+* On Overview page, the right margin was not consistent.****
+* The build container could run out of memory in large projects.
+* Under certain circumstances, the BannedPaths OakPAL rule did not identify installed content under /libs.
+* When a quality gate was rejected, the dialog heading still showed Partially Passed.**
 
 ## Bekannte Probleme {#known-issues}
 
-* Das Herunterladen von Überwachungsdiagrammen ist in Safari nicht möglich.
+* Downloading of monitoring graphs is not available in Safari.
