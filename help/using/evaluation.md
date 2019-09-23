@@ -7,7 +7,7 @@ uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 9e33b90818c686f0b7aacaf0955c3f2eba05488f
 
 ---
@@ -27,7 +27,7 @@ Im generierten Bericht können Sie die Autoreninstanz auf Upgrade-Fähigkeit pr�
 Dies dient als Bewertungsgrundlage für den erforderlichen Entwicklungsaufwand beim Upgrade auf Adobe Experience Manager AEM 6.5.
 
 >[!NOTE]
->Weitere Informationen zum Musterdetektor finden Sie unter [Bewertung der Komplexität der Aktualisierung mit dem Musterdetektor](https://helpx.adobe.com/de/experience-manager/6-4/sites/deploying/using/pattern-detector.html).
+>To learn more about pattern detector, refer to [Assessing the Upgrade Complexity with the Pattern Detector](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
 
 ## Ausführen des Auswerters {#running-evaluator}
 
