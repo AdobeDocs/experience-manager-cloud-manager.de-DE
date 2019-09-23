@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Anforderungen
 discoiquuid: 7d32ba78-4ded-4656-aac2-c3e7cc0518de
-translation-type: ht
-source-git-commit: 1dfb065c09569f811e5a006d3d74825d3bd7cc8d
+translation-type: tm+mt
+source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
 
 ---
 
