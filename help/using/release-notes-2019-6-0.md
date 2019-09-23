@@ -3,7 +3,7 @@ title: Versionshinweise für 2019.6.0
 seo-title: Versionshinweise für AEM Cloud Manager 2019.6.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.6.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur Version 2019.6.0 von AEM Cloud Manager.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 7cfa0cf66efd5891263bfcc83a5149daec5c8b67
 
 ---
