@@ -44,7 +44,7 @@ Für den Zugriff auf [!UICONTROL Cloud Manager] und Ihre AEM-Umgebungen müssen 
 
 Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. Sobald die erste Codeverzweigung in Ihrer Staging- und Produktionsumgebung bereitgestellt werden kann, können Sie hier alle Möglichkeiten von [!UICONTROL Cloud Manager] erkunden.
 
-Wenn Sie [!UICONTROL Cloud Manager] besser kennenlernen und die ersten Schritte umsetzen möchten, finden Sie weitere Informationen unter [Erste Anmeldung](first-time-login.md). For additional information about AEM, see [Getting Started with AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html). Additionally, refer to AEM Resources for further information.[](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&mv=other)
+Wenn Sie [!UICONTROL Cloud Manager] besser kennenlernen und die ersten Schritte umsetzen möchten, finden Sie weitere Informationen unter [Erste Anmeldung](first-time-login.md). For additional information about AEM, see [Getting Started with AEM 6.4](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/deploy.html). Weitere Informationen finden Sie unter [AEM-Ressourcen](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&mv=other) .
 
 ## Erste Schritte mit [!UICONTROL Cloud Manager]{#getting-started-with-cloud-manager}
 
