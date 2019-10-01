@@ -6,9 +6,9 @@ seo-description: Auf dieser Seite erfahren Sie mehr über dreistufige Akzeptanzt
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Verwenden
+topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
 
 ---
@@ -55,7 +55,7 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 
 >[!NOTE]
 >
->Refer to [Metric Definitions](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) for more detailed definitions.
+>Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions).
 
 Sie können hier eine Liste der Regeln herunterladen: [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx).
 
