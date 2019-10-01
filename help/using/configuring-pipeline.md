@@ -6,10 +6,10 @@ seo-description: 'Bevor Sie mit der Bereitstellung Ihres Codes beginnen können,
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Verwenden
-content-type: Referenz
+topic-tags: using
+content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
 
 ---
@@ -161,7 +161,7 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    >[!NOTE]
    >
-   >Additionally, once you have setup the pipeline, you can still edit settings for the same using **Production Pipeline Settings** tile from the [!UICONTROL Cloud Manager] UI.
+   >Nach der Einrichtung der Pipeline können Sie die Einstellungen weiterhin bearbeiten. Verwenden Sie dazu die Kachel **Einstellungen der Produktions-Pipeline** in der [!UICONTROL Cloud Manager]-Benutzeroberfläche.
 
    ![](assets/Prod-Pipeline-Settings-Dialog.png)
 
