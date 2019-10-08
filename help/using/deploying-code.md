@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -93,6 +93,13 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
 1. Cloud Manager bestimmt für jedes Artefakt, ob es sich um ein AEM- oder Dispatcher-Paket handelt.
 1. Cloud Manager entfernt alle Dispatcher aus dem Lastenausgleich, um die Umgebung während der Bereitstellung zu isolieren.
+
+   Sofern nicht anders konfiguriert, können Sie die Lastenausgleichänderungen in Dev- und Stage-Bereitstellungen überspringen, d. h. die Schritte in beiden Nicht-Produktionsleitungen für Entwicklungsumgebungen und die Produktionsleitung für Stage-Umgebungen trennen und anhängen.
+
+   >[!NOTE]
+   >
+   >Diese Funktion wird voraussichtlich hauptsächlich von 1-1-1-Kunden verwendet.
+
 1. Jedes AEM-Artefakt wird über Package Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
 
    Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie unter „Arbeiten mit Paketen“.
@@ -113,6 +120,10 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    >Cloud Manager geht davon aus, dass das Dispatcher-Artefakt alle Dateien enthält. Alle Dispatcher-Konfigurationsdateien müssen im Git-Repository vorhanden sein. Fehlende Dateien oder Ordner führen zu Bereitstellungsfehlern.
 
 1. Nach der erfolgreichen Bereitstellung aller AEM- und Dispatcher-Pakete auf allen Knoten werden die Dispatcher wieder zum Lastenausgleich hinzugefügt und die Bereitstellung wird abgeschlossen.
+
+   >[!NOTE]
+   >
+   >Sie können Änderungen des Lastenausgleichs in Entwicklungs- und Bereitstellungen überspringen, d. h. Schritte in nicht produktionsfähigen Pipelines, in Entwicklungsumgebungen und in der Produktionspipeline für Bereitstellungsumgebungen lösen und anhängen. Diese Funktion wird voraussichtlich hauptsächlich von 1-1-1-Kunden verwendet.
 
 ### Bereitstellung in der Produktionsphase {#deployment-production-phase}
 
