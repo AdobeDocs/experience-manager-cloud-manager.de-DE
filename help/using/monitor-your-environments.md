@@ -4,7 +4,7 @@ seo-title: Überwachen von Umgebungen
 description: 'null'
 seo-description: Auf dieser Seite erfahren Sie mehr über die Systemüberwachung in Cloud Manager. Diese erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz.
 translation-type: tm+mt
-source-git-commit: 548d18f251cf8c4c827d2208fec04cde235ce731
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -48,6 +48,13 @@ Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn 
 >[!NOTE]
 >
 >Beim Navigieren zu dieser Seite werden die Instanzen der Produktionsumgebung standardmäßig angezeigt, aber es können auch andere Umgebungen geöffnet werden.
+
+## Übersichtsvideo zu Berichten {#video-reports}
+
+Cloud Manager-Berichte bieten einen Überblick über die Programmumgebungen und AEM-Instanzen in Diagrammen, die eine Vielzahl von Metriken für jede AEM-Instanz melden und verfolgen.
+Weitere Informationen finden Sie im folgenden Video.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26315/?captions=ger)
 
 ## Details zur Systemüberwachung {#system-monitoring-detail}
 
