@@ -9,8 +9,8 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: ht
-source-git-commit: 862501f28f5104d0829a6d2d2ad5f5ce9f8ba341
+translation-type: tm+mt
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -168,6 +168,13 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 ## Produktionsfremde Pipelines und Pipelines für Tests der Codequalität
 
 Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Codequalität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
+
+### Video zu Pipelines ohne Produktions- und Codequalität
+
+CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalitäts-Pipelines und Deployment-Pipelines. Codequalität führt den gesamten Code einer Git-Verzweigung aus, um ihn zu erstellen und anhand der Code-Qualitätsprüfung von Cloud Manager zu bewerten.
+Weitere Informationen finden Sie im folgenden Video.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
