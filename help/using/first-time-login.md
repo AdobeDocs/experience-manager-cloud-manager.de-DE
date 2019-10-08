@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 translation-type: tm+mt
-source-git-commit: eea425b9bfa178720cbea0653cf8c8f17702281b
+source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
 
@@ -26,6 +26,7 @@ Sobald Sie die allgemeinen Konfigurationen für [!UICONTROL Cloud Manager] einge
 
 Das folgende Video bietet einen Überblick über Cloud Manager-Programme, die eine Reihe von AEM-Umgebungen darstellen, die logische Gruppen von Geschäftsinitiativen unterstützen, die in der Regel einem erworbenen Service Level Agreement (SLA) entsprechen.
 
+>[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=ger)
 
 ## Anmeldung beim ersten Mal {#logging-in-for-the-first-time}
 
