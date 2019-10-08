@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
 translation-type: tm+mt
-source-git-commit: 2b71bb61e00d462a43519ec0a2dcfe9231fe53ff
+source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
 
 ---
 
@@ -21,6 +21,13 @@ Auf der Seite **Übersicht** von Cloud Manager finden Sie die Kachel **Umgebunge
 Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 ![](assets/Manage_Environments1.png)
+
+## Video über Umgebungen {#environments-video}
+
+Das folgende Video bietet eine Übersicht über Cloud Manager-Umgebungen, die aus AEM Author-, AEM Publish- und Dispatcher-Instanzen bestehen.
+Weitere Informationen finden Sie im folgenden Video.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26318/?captions=ger)
 
 ## Zugreifen auf Umgebungen in Cloud Manager{#accessing-environments-in-cloud-manager}
 
