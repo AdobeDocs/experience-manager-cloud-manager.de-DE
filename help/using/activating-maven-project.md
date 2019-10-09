@@ -4,7 +4,7 @@ seo-title: Handhabung von Maven-Projektversionen
 description: Erfahren Sie mehr über Maven Project Version Handling.
 seo-description: Auf dieser Seite erfahren Sie mehr über Maven Project Version Handling
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -29,4 +29,4 @@ Wenn die Originalversion diese Kriterien erfüllt, wird die generierte Version a
 
 >[!NOTE]
 >
->Unabhängig davon, ob die Originalversion in die mit Cloud Manager initialisierte Version integriert wurde oder nicht, ist die Originalversion als Maven-Eigenschaft mit dem Namen *cloudManagerOriginalVersion* verfügbar.
+>Unabhängig davon, ob die Originalversion in die mit Cloud Manager initialisierte Version integriert wurde oder nicht, ist die Originalversion als Maven-Eigenschaft mit dem Namen *cloudManagerOriginalVersion verfügbar.*
