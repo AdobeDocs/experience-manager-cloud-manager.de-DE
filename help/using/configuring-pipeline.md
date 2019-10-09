@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
@@ -127,6 +127,11 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
    Klicken Sie auf **Speichern**, um diese Konfiguration beizubehalten.
 
    ![](assets/image2018-8-7_15-4-30.png)
+
+   **Nach der Stage-Bereitstellung** genehmigen Es gibt einen optionalen Schritt Nach der Stage-Bereitstellung **genehmigen** , der in der Produktions-Pipeline konfiguriert werden kann.
+   >[!NOTE]
+   >
+   >**Nach der Stage-Bereitstellung** genehmigen funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, tritt aber unmittelbar nach dem Bereitstellungsschritt auf, d. h. bevor Tests durchgeführt werden, im Vergleich zur Genehmigung vor der Bereitstellung der Produktion, die nach Abschluss aller Tests durchgeführt wird.
 
 1. Definieren Sie auf der Registerkarte **Testen** Ihre Testkriterien für Ihr Programm.
 
