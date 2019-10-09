@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
 
 ---
 
@@ -108,11 +108,56 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
 * Maven wird immer mit folgendem Befehl ausgeführt: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Refer to [Adobe Public Maven Repository](https://repo.adobe.com/) for more details).
 
+
+## Umgebungsvariablen {#environment-variables}
+
+### Standard-Umgebungsvariablen {#standard-environ-variables}
+
+In einigen Fällen müssen Kunden den Build-Prozess je nach Informationen zum Programm oder zur Pipeline ändern.
+
+Wenn beispielsweise die JavaScript-Minimierung während des Buildzeitraums mithilfe eines Tools wie gulp durchgeführt wird, besteht möglicherweise der Wunsch, beim Erstellen einer Entwicklungsumgebung eine andere Miniaturstufe zu verwenden, anstatt für die Erstellung von Bühne und Produktion.
+
+Um dies zu unterstützen, fügt Cloud Manager diese standardmäßigen Umgebungsvariablen für jede Ausführung zum Buildbehälter hinzu.
+
+| **Variablenname** | **Definition** |
+|---|---|
+| CM_BUILD | Immer auf "true"eingestellt |
+| VERZWEIGUNG | Die konfigurierte Verzweigung für die Ausführung |
+| CM_PIPELINE_ID | Numerische Pipeline-ID |
+| CM_PIPELINE_NAME | Name der Pipeline |
+| CM_PROGRAM_ID | Die numerische Programm-ID |
+| CM_PROGRAM_NAME | Name des Programms |
+| ARTIFACTS_VERSION | Bei einer Phase oder einer Produktionspipeline wird die synthetische Version von Cloud Manager generiert |
+
+### Benutzerdefinierte Umgebungsvariablen {#custom-environ-variables}
+
+In einigen Fällen kann der Build-Prozess eines Kunden von bestimmten Konfigurationsvariablen abhängen, die nicht im Git-Repository platziert werden sollten. Diese Variablen können von einem Customer Success Engineer (CSE) kundenbasiert konfiguriert werden. Sie werden an einem sicheren Speicherort gespeichert und sind nur im Build-Container für den jeweiligen Kunden sichtbar. Kunden, die diese Funktion verwenden möchten, müssen diese Variablen von ihrem CSE konfigurieren lassen.
+
+Nach der Konfiguration sind diese Variablen als Umgebungsvariablen verfügbar. Um sie als Maven-Eigenschaften zu verwenden, können Sie sie in Ihrer Datei pom.xml referenzieren, ggf. in einem Profil wie oben beschrieben:
+
+```xml
+        <profile>
+            <id>cmBuild</id>
+            <activation>
+                  <property>
+                        <name>env.CM_BUILD</name>
+                  </property>
+            </activation>
+            <properties>
+                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
+            </properties>
+        </profile>
+```
+
+>[!NOTE]
+>
+>Namen von Umgebungsvariablen dürfen nur alphanumerische Zeichen und Unterstriche (_) enthalten. Dabei sollten Großbuchstaben verwendet werden.
+
 ## Aktivieren von Maven-Profilen in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 In einigen wenigen Fällen müssen Sie den Build-Prozess möglicherweise etwas anders gestalten, wenn er in Cloud Manager und auf Entwickler-Workstations ausgeführt wird. In diesen Fällen können Sie mit [Maven-Profilen](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) definieren, wie der Build in verschiedenen Umgebungen (einschließlich Cloud Manager) abweichen soll.
 
-Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung sollte durch die Suche nach einer Umgebungsvariablen mit dem Namen `CM_BUILD` erfolgen. Diese Variable wird immer in der Cloud Manager-Build-Umgebung festgelegt. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
+Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung erfolgt, indem Sie nach der oben beschriebenen CM_BUILD-Umgebungsvariablen suchen. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
 
 Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn der Build innerhalb von Cloud Manager ausgeführt wird, verwenden Sie Folgendes:
 
@@ -186,31 +231,6 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
         </profile>
 ```
 
-## Umgebungsvariablen {#environment-variables}
-
-### Standard-Umgebungsvariablen {#standard-environ-variables}
-
-In einigen Fällen kann der Build-Prozess eines Kunden von bestimmten Konfigurationsvariablen abhängen, die nicht im Git-Repository platziert werden sollten. Diese Variablen können von einem Customer Success Engineer (CSE) kundenbasiert konfiguriert werden. Sie werden an einem sicheren Speicherort gespeichert und sind nur im Build-Container für den jeweiligen Kunden sichtbar. Kunden, die diese Funktion verwenden möchten, müssen diese Variablen von ihrem CSE konfigurieren lassen.
-
-Nach der Konfiguration sind diese Variablen als Umgebungsvariablen verfügbar. Um sie als Maven-Eigenschaften zu verwenden, können Sie sie in Ihrer Datei pom.xml referenzieren, ggf. in einem Profil wie oben beschrieben:
-
-```xml
-        <profile>
-            <id>cmBuild</id>
-            <activation>
-                  <property>
-                        <name>env.CM_BUILD</name>
-                  </property>
-            </activation>
-            <properties>
-                  <my.custom.property>${env.MY_CUSTOM_PROPERTY}</my.custom.property>  
-            </properties>
-        </profile>
-```
-
->[!NOTE]
->
->Namen von Umgebungsvariablen dürfen nur alphanumerische Zeichen und Unterstriche (_) enthalten. Dabei sollten Großbuchstaben verwendet werden.
 
 ## Installieren zusätzlicher Systempakete {#installing-additional-system-packages}
 
