@@ -4,14 +4,14 @@ seo-title: Versionshinweise für AEM Cloud Manager 2019.10.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.10.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.10.0.
 translation-type: tm+mt
-source-git-commit: 1e927076e6bc84e8e1761e33a86cff61a3be0d2f
+source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
 
 ---
 
 # Versionshinweise für 2019.10.0 {#release-notes-for}
 
-Im folgenden Abschnitt werden die allgemeinen Versionshinweise für [!UICONTROL Cloud Manager] Release 2018.10.0 erläutert. Außerdem werden die Schritte zur Bereitstellung und die Handhabung der Projektversion durch Updates ergänzt.
-Folgen Sie der unten stehenden Seite für weitere Details.
+Im folgenden Abschnitt werden die allgemeinen Versionshinweise für [!UICONTROL Cloud Manager] Release 2019.10.0 erläutert. Außerdem werden die Schritte zur Bereitstellung und die Handhabung der Projektversion durch Updates ergänzt.
+Weitere Informationen erhalten Sie im Folgenden.
 
 ## Veröffentlichungsdatum {#release-date}
 
@@ -22,7 +22,7 @@ The Release Date for [!UICONTROL Cloud Manager] Version 2019.10.0 is October 12,
 * Erhebliche Teile der Implementierungsschritte wurden leistungsfähiger gemacht.
 * Gegebenenfalls wird die Version des Maven-Build-Projekts jetzt die Projektversion in git enthalten.
 * Zur Buildzeit sind neue Umgebungsvariablen verfügbar.
-* Nicht-Produktionslinien können sowohl von der Karte auf der Seite Überblick als auch von der API gelöscht werden.
+* Nicht-Produktionslinien können sowohl von der Karte auf der Seite **Übersicht** als auch von der API gelöscht werden.
 * Es gibt einen neuen optionalen Genehmigungsschritt unmittelbar nach dem Bereitstellungsschritt der Stufe, jedoch vor dem Schritt des Sicherheitstests.
 * Beim Konfigurieren einer CI/CD-Pipeline können das Abtrennen und Anfügen von Dispatcher-Instanzen vom Lastenausgleich für Entwicklungs- und Bereitstellungsumgebungen übersprungen werden.
 Weitere Informationen finden Sie unter **[Bereitstellungsprozess](deploying-code.md#deployment-process)** .
