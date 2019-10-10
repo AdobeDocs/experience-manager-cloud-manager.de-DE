@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 ---
 
@@ -95,6 +95,8 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 1. Cloud Manager entfernt alle Dispatcher aus dem Lastenausgleich, um die Umgebung während der Bereitstellung zu isolieren.
 
    Sofern nicht anders konfiguriert, können Sie die Lastenausgleichänderungen in Dev- und Stage-Bereitstellungen überspringen, d. h. die Schritte in beiden Nicht-Produktionsleitungen für Entwicklungsumgebungen und die Produktionsleitung für Stage-Umgebungen trennen und anhängen.
+
+   ![](assets/load_balancer.png)
 
    >[!NOTE]
    >
