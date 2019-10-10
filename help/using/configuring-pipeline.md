@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
 
 ---
 
@@ -193,8 +193,6 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 ## Produktionsfremde Pipelines und Pipelines für Tests der Codequalität
 
 Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Codequalität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
-
-## Video zu Pipelines ohne Produktions- und Codequalität
 
 ## Videoschulung {#video-tutorial-two}
 
