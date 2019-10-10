@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
 
 ---
 
@@ -18,6 +18,15 @@ source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 # Konfigurieren Ihrer CI/CD-Pipeline {#configure-your-ci-cd-pipeline}
 
 Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren. Weitere grundlegende Informationen zur Funktionsweise der Pipeline finden Sie unter [Übersicht zur CI/CD-Pipeline](ci-cd-pipeline.md).
+
+## Videoschulung {#video-tutorial-one}
+
+### Konfigurieren von Pipeline in Cloud Manager {#config-pipeline-video}
+
+Die Konfiguration der CI/CD-Produktionspipeline definiert den Auslöser, der die Pipeline auslöst, Parameter, die die Bereitstellung der Produktion steuern, und Leistungstest-Parameter.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
+
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
 
@@ -100,6 +109,21 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
 >
 >Die Option **CSE-Überwachung nutzen** steht nicht allen Kunden zur Verfügung.
 
+**Nach der Bereitstellung der Phase genehmigen**
+
+Es gibt einen optionalen Schritt **Genehmigen nach der Stage-Bereitstellung** , der in der Produktionspipeline konfiguriert werden kann.
+Dies ist in einer neuen Option im Anzeigebereich " **Pipeline-Bearbeitung** "aktiviert:
+
+![](assets/post_deployment1.png)
+
+Es wird dann während der Ausführung der Pipeline als separater Schritt angezeigt:
+
+![](assets/post_deployment2.png)
+
+>[!NOTE]
+>
+>**Nach der Stage-Bereitstellung** genehmigen funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, tritt aber unmittelbar nach dem Bereitstellungsschritt auf, d. h. bevor Tests durchgeführt werden, im Vergleich zur Genehmigung vor der Bereitstellung der Produktion, die nach Abschluss aller Tests durchgeführt wird.
+
 **Ungültigmachung des Dispatchers**
 
 Als Bereitstellungsmanager haben Sie die Möglichkeit, eine Reihe von Pfaden zu konfigurieren, die entweder **ungültig gemacht** oder aus dem AEM Dispatcher-Cache **entfernt** werden, wenn Sie die Pipeline einrichten oder bearbeiten.
@@ -127,18 +151,6 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
    Klicken Sie auf **Speichern**, um diese Konfiguration beizubehalten.
 
    ![](assets/image2018-8-7_15-4-30.png)
-
-   **Nach der Stage-Bereitstellung** genehmigen Es gibt einen optionalen Schritt Nach der Stage-Bereitstellung **genehmigen** , der in der Produktions-Pipeline konfiguriert werden kann.
-Dies ist in einer neuen Option im Anzeigebereich " **Pipeline-Bearbeitung** "aktiviert:
-
-   ![](assets/post_deployment1.png)
-
-   Es wird dann während der Ausführung der Pipeline als separater Schritt angezeigt:
-   ![](assets/post_deployment2.png)
-
-   >[!NOTE]
-   >
-   >**Nach der Stage-Bereitstellung** genehmigen funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, tritt aber unmittelbar nach dem Bereitstellungsschritt auf, d. h. bevor Tests durchgeführt werden, im Vergleich zur Genehmigung vor der Bereitstellung der Produktion, die nach Abschluss aller Tests durchgeführt wird.
 
 
 1. Definieren Sie auf der Registerkarte **Testen** Ihre Testkriterien für Ihr Programm.
@@ -182,10 +194,13 @@ Dies ist in einer neuen Option im Anzeigebereich " **Pipeline-Bearbeitung** "akt
 
 Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Codequalität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
 
-### Video zu Pipelines ohne Produktions- und Codequalität
+## Video zu Pipelines ohne Produktions- und Codequalität
+
+## Videoschulung {#video-tutorial-two}
+
+### Cloud Manager - Nur Pipelines für Nicht-Produktion und Codequalität {#non-prod-video}
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalitäts-Pipelines und Deployment-Pipelines. Codequalität führt den gesamten Code einer Git-Verzweigung aus, um ihn zu erstellen und anhand der Code-Qualitätsprüfung von Cloud Manager zu bewerten.
-Weitere Informationen finden Sie im folgenden Video.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
