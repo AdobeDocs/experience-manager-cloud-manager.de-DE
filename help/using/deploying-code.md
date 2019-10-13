@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
 
@@ -125,7 +125,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
    >[!NOTE]
    >
-   >Sie können Änderungen des Lastenausgleichs in Entwicklungs- und Bereitstellungen überspringen, d. h. Schritte in nicht produktionsfähigen Pipelines, in Entwicklungsumgebungen und in der Produktionspipeline für Bereitstellungsumgebungen lösen und anhängen. Diese Funktion wird voraussichtlich hauptsächlich von 1-1-1-Kunden verwendet.
+   >Sie können Änderungen des Lastenausgleichs in Entwicklungs- und Bereitstellungen überspringen, d. h. Schritte in nicht produktionsfähigen Pipelines, in Entwicklungsumgebungen und in der Produktionspipeline für Bereitstellungsumgebungen lösen und anhängen.
 
 ### Bereitstellung in der Produktionsphase {#deployment-production-phase}
 
