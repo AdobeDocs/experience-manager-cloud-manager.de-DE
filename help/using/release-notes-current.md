@@ -4,7 +4,7 @@ seo-title: Versionshinweise für AEM Cloud Manager 2019.10.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.10.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.10.0.
 translation-type: tm+mt
-source-git-commit: 2028569406bcaacb27c42879a79832dec7ec91f4
+source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
 
@@ -15,7 +15,7 @@ Weitere Informationen erhalten Sie im Folgenden.
 
 ## Veröffentlichungsdatum {#release-date}
 
-The Release Date for [!UICONTROL Cloud Manager] Version 2019.10.0 is October 12, 2019.
+The Release Date for [!UICONTROL Cloud Manager] Version 2019.10.0 is October 10, 2019.
 
 ## Neuigkeiten {#whats-new}
 
@@ -33,4 +33,4 @@ Weitere Informationen finden Sie unter **[Bereitstellungsprozess](deploying-code
 ## Fehlerbehebungen {#bug-fixes}
 
 * Einige Karten auf der Seite **Überblick** wurden nicht vertikal ausgerichtet.
-* Bestimmte Fehlerbedingungen haben nicht dazu geführt, dass Pipeline-Hinrichtungen ordnungsgemäß markiert wurden und die Ausführung von Teilfolgen verhindert wurde.
+* Bestimmte Fehlerbedingungen führten nicht dazu, dass Pipeline-Hinrichtungen ordnungsgemäß markiert wurden und spätere Hinrichtungen verhindert wurden.
