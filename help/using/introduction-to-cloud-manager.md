@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Einführung
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
 
 ---
@@ -41,7 +41,7 @@ Die [!UICONTROL Cloud Manager]-Benutzeroberfläche ermöglicht Kunden den einfac
 
 Kunden definieren anwendungsspezifische Key Performance Indicators (KPIs) (z. B. maximale Seitenansichten und erwartete Reaktionszeiten für Seitenladevorgänge), die als Grundlage für die Messung einer erfolgreichen Bereitstellung dienen. Rollen und Berechtigungen für verschiedene Teammitglieder können einfach definiert werden. Die neue Self-Service-Benutzeroberfläche gibt Ihnen nicht nur die volle Kontrolle, sondern bietet außerdem Links zu Best Practices und Zugang zu Experten von Adobe, die bei Bedarf die erforderliche Anleitung zur Verfügung stellen.
 
-To explore and get started with [!UICONTROL Cloud Manager]'s UI, see [First Time Login](https://helpx.adobe.com/experience-manager/cloud-manager/using/first-time-login.html).
+Weitere Informationen zur Benutzeroberfläche von [!UICONTROL Cloud Manager] und zu den ersten Schritten finden Sie unter [Erste Anmeldung](https://helpx.adobe.com/de/experience-manager/cloud-manager/using/first-time-login.html).
 
 ### CI/CD-Pipeline {#ci-cd-pipeline}
 
@@ -49,7 +49,7 @@ Eine der Hauptfunktionen von [!UICONTROL Cloud Manager] ist die Möglichkeit, ei
 
 Über die [!UICONTROL Cloud Manager]-Benutzeroberfläche können Kunden ihre CI/CD-Pipeline konfigurieren und starten. Im Rahmen dieser Pipeline wird ein gründlicher Codescan durchgeführt, um sicherzustellen, dass nur hochwertige Anwendungen in die Produktionsumgebung übertragen werden.
 
-To learn more about configuring pipeline from [!UICONTROL Cloud Manager]'s UI, see [Configure your CI/CD Pipeline](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Weitere Informationen zum Konfigurieren der Pipeline über die [!UICONTROL Cloud Manager]-Benutzeroberfläche finden Sie unter [Konfigurieren Ihrer CI/CD-Pipeline](https://helpx.adobe.com/de/experience-manager/cloud-manager/using/configuring-pipeline.html).
 
 ### Flexible Bereitstellungsmodi {#flexible-deployment-modes}
 
