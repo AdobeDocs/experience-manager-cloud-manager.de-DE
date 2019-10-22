@@ -3,7 +3,7 @@ title: Versionshinweise für 2019.9.0
 seo-title: Versionshinweise für AEM Cloud Manager 2019.9.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.9.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.9.0.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: de9d2834ffa6c235e580227bd020fb8a0b94d22c
 
 ---
@@ -21,7 +21,7 @@ Die [!UICONTROL Cloud Manager]-Version 2019.9.0 wurde am 12. September 2019 v
 * Die Kategorisierung der Konsistenzprüfung des Sling Referrer Filters wurde von „Kritisch“ zu „Wichtig“ geändert.
 * Die Kategorisierung der Konsistenzprüfung der Konfiguration des HTML-Bibliotheksmanagers wurde von „Kritisch“ zu „Wichtig“ geändert.
 * Überwachungsdiagramme können jetzt heruntergeladen werden. Weitere Informationen finden Sie unter [Überwachen Ihrer Umgebungen](monitor-your-environments.md).
-* Wenn in einem Programm keine AEM-Produktionsumgebung vorhanden ist, wird durch Klicken auf die Programmkarte auf der Landingpage zur Übersichtsseite von Cloud Manager navigiert, und es wird kein Fehlerdialogfeld angezeigt.
+* Wenn in einem Programm keine AEM-Produktionsumgebung vorhanden ist, können Sie durch Klicken auf die Programmkarte auf der Landingpage zur Übersichtsseite von Cloud Manager navigieren, und es wird kein Fehlerdialogfeld angezeigt.
 * Die Karte **Pipeline-Einstellungen** auf der Seite **Übersicht** wurde in **Einstellungen der Produktions-Pipeline** umbenannt.
 * Die Optionsfelder für „Verhalten bei wichtigen Fehlern“ wurden aus Pipelines mit ausschließlichem Bezug zur Code-Qualität entfernt.
 * Auf der Seite **Aktivität** wird nun der Name der Pipeline für jede Ausführung angezeigt.
