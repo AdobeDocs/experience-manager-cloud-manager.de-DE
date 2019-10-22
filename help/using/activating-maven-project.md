@@ -1,25 +1,25 @@
 ---
-title: Handhabung von Maven-Projektversionen
-seo-title: Handhabung von Maven-Projektversionen
-description: Erfahren Sie mehr über Maven Project Version Handling.
-seo-description: Auf dieser Seite erfahren Sie mehr über Maven Project Version Handling
-translation-type: tm+mt
+title: Umgang mit Maven-Projektversionen
+seo-title: Umgang mit Maven-Projektversionen
+description: Erfahren Sie mehr über den Umgang mit Maven-Projektversionen.
+seo-description: Auf dieser Seite erfahren Sie mehr über den Umgang mit Maven-Projektversionen
+translation-type: ht
 source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
 
 ---
 
 
-# Handhabung von Maven-Projektversionen {#project-version}
+# Umgang mit Maven-Projektversionen {#project-version}
 
 ## Umgang mit Maven-Projektversionen {#understanding-project-version}
 
-Für Bereitstellungen von Stage und Produktion generiert Cloud Manager eine eindeutige, inkrementierte Version.
+Für Staging- und Produktionsumgebungen generiert Cloud Manager eine eindeutige, inkrementierende Version.
 
-Diese Version wird auf der Seite mit Details zur Pipelineausführung sowie auf der Aktivitätsseite angezeigt. Wenn ein Build ausgeführt wird, wird das Maven-Projekt aktualisiert, um diese Version zu verwenden, und im Git-Repository wird ein Tag mit dieser Version als Name erstellt.
+Diese Version wird auf der Seite mit den Details zur Pipelineausführung sowie auf der Aktivitätsseite angezeigt. Wenn ein Build ausgeführt wird, wird das Maven-Projekt aktualisiert, um diese Version zu verwenden. Außerdem wird im Git-Repository ein Tag mit dieser Version als Name erstellt.
 
-Wenn die ursprüngliche Projektversion bestimmte Kriterien erfüllt, führt die aktualisierte Maven-Projektversion sowohl die ursprüngliche Projektversion als auch die von Cloud Manager generierte Version zusammen. Das Tag verwendet jedoch immer die generierte Version. Damit diese Zusammenführung erfolgt, muss die ursprüngliche Projektversion mit genau drei Versionssegmenten wie 1.0.0 oder 1.2.3, nicht jedoch 1.0 oder 1, und die Originalversion darf nicht in -SNAPSHOT enden.
+Wenn die Originalversion des Projekts bestimmte Kriterien erfüllt, führt die aktualisierte Maven-Projektversion sowohl die Originalversion des Projekts als auch die von Cloud Manager generierte Version zusammen. Das Tag verwendet jedoch immer die generierte Version. Für diese Zusammenführung muss die ursprüngliche Projektversion mit genau drei Versionssegmenten erstellt werden (z. B. 1.0.0 oder 1.2.3, nicht jedoch 1.0 oder 1) und darf die Originalversion nicht mit -SNAPSHOT enden.
 
-Wenn die Originalversion diese Kriterien erfüllt, wird die generierte Version als neues Versionssegment an die Originalversion angehängt. Die generierte Version wird auch geringfügig geändert, um eine ordnungsgemäße Sortierung und Versionsverwaltung einzuschließen. Beispiel: Angenommen, eine generierte Version von 2019.926.121356.0000020490
+Wenn die Originalversion diese Kriterien erfüllt, wird die generierte Version als neues Versionssegment an die Originalversion angehängt. Die generierte Version wird außerdem geringfügig geändert, um eine ordnungsgemäße Sortierung und Versionsverwaltung einzuschließen. Nehmen wir als Beispiel eine generierte Version von 2019.926.121356.0000020490:
 
 | **Version** | **Version in pom.xml** | **Kommentar** |
 |---|---|---|
@@ -29,4 +29,4 @@ Wenn die Originalversion diese Kriterien erfüllt, wird die generierte Version a
 
 >[!NOTE]
 >
->Unabhängig davon, ob die Originalversion in die mit Cloud Manager initialisierte Version integriert wurde oder nicht, ist die Originalversion als Maven-Eigenschaft mit dem Namen *cloudManagerOriginalVersion verfügbar.*
+>Unabhängig davon, ob die Originalversion in die mit Cloud Manager initialisierte Version integriert wurde oder nicht, ist die Originalversion als Maven-Eigenschaft mit dem Namen *cloudManagerOriginalVersion* verfügbar.
