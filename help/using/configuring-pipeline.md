@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 581e78ef4163e8e9b2b26613512b82223c214071
+source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
 
 ---
 
@@ -109,9 +109,9 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
 >
 >Die Option **CSE-Überwachung nutzen** steht nicht allen Kunden zur Verfügung.
 
-**Nach der Bereitstellung der Phase genehmigen**
+**Nach Stage-Implementierung genehmigen**
 
-Es gibt einen optionalen Schritt **Genehmigen nach der Stage-Bereitstellung** , der in der Produktionspipeline konfiguriert werden kann.
+There is an optional step **Approve after Stage Deployment** which can be configured in the Production Pipeline.
 Dies ist in einer neuen Option im Anzeigebereich " **Pipeline-Bearbeitung** "aktiviert:
 
 ![](assets/post_deployment1.png)
@@ -122,7 +122,7 @@ Es wird dann während der Ausführung der Pipeline als separater Schritt angezei
 
 >[!NOTE]
 >
->**Nach der Stage-Bereitstellung** genehmigen funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, tritt aber unmittelbar nach dem Bereitstellungsschritt auf, d. h. bevor Tests durchgeführt werden, im Vergleich zur Genehmigung vor der Bereitstellung der Produktion, die nach Abschluss aller Tests durchgeführt wird.
+>**Nach der Staging-Bereitstellung genehmigen** funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, findet aber unmittelbar nach dem Schritt der Staging-Bereitstellung statt (d. h. bevor Tests durchgeführt werden). Das unterscheidet sich von der Genehmigung vor der Produktionsbereitstellung, die nach Abschluss aller Tests erfolgt.
 
 **Ungültigmachung des Dispatchers**
 
@@ -198,13 +198,13 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 ### Cloud Manager - Nur Pipelines für Nicht-Produktion und Codequalität {#non-prod-video}
 
-CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalitäts-Pipelines und Deployment-Pipelines. Codequalität führt den gesamten Code einer Git-Verzweigung aus, um ihn zu erstellen und anhand der Code-Qualitätsprüfung von Cloud Manager zu bewerten.
+CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Implementierungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
-1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Nicht-Produktions-Pipelines** zu.
+1. Access the **Non-Production Pipelines** tile from the Cloud Manager home screen.
 
    ![](assets/Configuring_Pipeline_Add-Production.png)
 
