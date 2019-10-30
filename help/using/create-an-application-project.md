@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Erste Schritte
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
 
 ---
@@ -20,7 +20,7 @@ source-git-commit: 8daee34e6cfaddb31fc447f64de9ce5ca7ed54ba
 
 Wenn Kunden Cloud Manager erstmals verwenden, erhalten sie ein leeres Git-Repository. Kunden, die bereits Adobe Managed Services (AMS) verwenden (oder ihre lokale AEM-Lösung zu AMS migrieren), verfügen im Allgemeinen bereits über Projektcode in Git (oder einem anderen Versionskontrollsystem) und importieren ihr Projekt in das Cloud Manager-Repository. Neue Kunden verfügen jedoch nicht über vorhandene Projekte.
 
-Um neuen Kunden die ersten Schritte zu erleichtern, kann Cloud Manager jetzt als Ausgangspunkt ein minimales AEM-Projekt erstellen. This process is based on the [**AEM Project Archetype**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
+Um neuen Kunden die ersten Schritte zu erleichtern, kann Cloud Manager jetzt als Ausgangspunkt ein minimales AEM-Projekt erstellen. Dieser Vorgang basiert auf dem [**AEM-Projektarchetyp**](https://github.com/Adobe-Marketing-Cloud/aem-project-archetype).
 
 <!-- 
 
@@ -42,14 +42,14 @@ Gehen Sie wie folgt vor, um ein AEM-Anwendungsprojekt in Cloud Manager zu erstel
 
    ![](assets/image2018-10-3_14-30-22.png)
 
-1. Klicken Sie auf **Erstellen**, um ein Dialogfeld zu öffnen, in dem Sie die für den AEM-Projektarchetyp erforderlichen Parameter angeben. Das Dialogfeld fragt standardmäßig zwei Werte ab:
+1. Klicken Sie auf **Erstellen**, um einen Dialogfeld zu öffnen, in dem Sie die für den AEM-Projektarchetyp erforderlichen Parameter angeben. Der Dialogfeld fragt standardmäßig zwei Werte ab:
 
    * **Titel**: Hier ist standardmäßig der *Programmname* angegeben.
 
    * **Neuer Verzweigungsname**: Hier ist standardmäßig *Master* angegeben.
    ![](assets/screen_shot_2018-10-08at55825am.png)
 
-   Sie können das Dialogfeld über einen Ziehpunkt am unteren Rand des Dialogfelds erweitern. Das erweiterte Dialogfeld zeigt alle Konfigurationsparameter für den Archetyp an. Viele dieser Parameter verfügen über Standardwerte, die basierend auf dem **Titel** erstellt werden.
+   Sie können den Dialogfeld über einen Ziehpunkt am unteren Rand des Dialogfelds erweitern. Der erweiterte Dialogfeld zeigt alle Konfigurationsparameter für den Archetyp an. Viele dieser Parameter verfügen über Standardwerte, die basierend auf dem **Titel** erstellt werden.
 
    ![](assets/screen_shot_2018-10-08at60032am.png)
 
@@ -76,7 +76,7 @@ Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitge
 
 * Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach *ZIP*-Dateien (ebenfalls in einem Verzeichnis namens *target*) suchen, die Verzeichnisse mit den Namen *conf* und *conf.d* enthalten.
 
-* Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketbereitstellungen nicht garantiert. Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden. Pakete können aus der Bereitstellung [übersprungen](#skipping-content-packages) werden.
+* Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketbereitstellungen nicht garantiert. Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden. Pakete können bei der Bereitstellung [übersprungen](#skipping-content-packages) werden.
 
 <!-- 
 
@@ -106,28 +106,28 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
 * Andere Pakete können zur Erstellungszeit wie [unten](#installing-additional-system-packages) beschrieben installiert werden.
 * Jeder Build wird in einer unberührten Umgebung erstellt, der Build-Container speichert zwischen den Ausführungen keinen Status.
 * Maven wird immer mit folgendem Befehl ausgeführt: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
-* Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Refer to [Adobe Public Maven Repository](https://repo.adobe.com/) for more details).
+* Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https://repo.adobe.com/)).
 
 
 ## Umgebungsvariablen {#environment-variables}
 
 ### Standard-Umgebungsvariablen {#standard-environ-variables}
 
-In einigen Fällen müssen Kunden den Build-Prozess je nach Informationen zum Programm oder zur Pipeline ändern.
+In einigen Fällen müssen Kunden den Build-Prozess je nach Informationen zum Programm oder zur Pipeline variieren.
 
-Wenn beispielsweise die JavaScript-Minimierung während des Buildzeitraums mithilfe eines Tools wie gulp durchgeführt wird, besteht möglicherweise der Wunsch, beim Erstellen einer Entwicklungsumgebung eine andere Miniaturstufe zu verwenden, anstatt für die Erstellung von Bühne und Produktion.
+Wenn beispielsweise eine JavaScript-Minimierung während der Build-Erstellung mithilfe eines Tools wie gulp durchgeführt wird, soll beim Erstellen für eine Entwicklungsumgebung möglicherweise eine andere Minimierungsstufe verwendet werden als beim Erstellen für eine Staging- oder Produktionsumgebung.
 
-Um dies zu unterstützen, fügt Cloud Manager diese standardmäßigen Umgebungsvariablen für jede Ausführung zum Buildbehälter hinzu.
+Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen bei jeder Ausführung dem Build-Container hinzu.
 
 | **Variablenname** | **Definition** |
 |---|---|
-| CM_BUILD | Immer auf "true"eingestellt |
-| VERZWEIGUNG | Die konfigurierte Verzweigung für die Ausführung |
-| CM_PIPELINE_ID | Numerische Pipeline-ID |
+| CM_BUILD | Immer auf „true“ (wahr) festgelegt |
+| BRANCH | Die konfigurierte Verzweigung für die Ausführung |
+| CM_PIPELINE_ID | Numerische Pipeline-Kennung |
 | CM_PIPELINE_NAME | Name der Pipeline |
-| CM_PROGRAM_ID | Die numerische Programm-ID |
+| CM_PROGRAM_ID | Numerische Programmkennung |
 | CM_PROGRAM_NAME | Name des Programms |
-| ARTIFACTS_VERSION | Bei einer Phase oder einer Produktionspipeline wird die synthetische Version von Cloud Manager generiert |
+| ARTIFACTS_VERSION | Die von Cloud Manager generierte synthetische Version bei einer Staging- oder Produktions-Pipeline |
 
 ### Benutzerdefinierte Umgebungsvariablen {#custom-environ-variables}
 
@@ -157,7 +157,7 @@ Nach der Konfiguration sind diese Variablen als Umgebungsvariablen verfügbar. U
 
 In einigen wenigen Fällen müssen Sie den Build-Prozess möglicherweise etwas anders gestalten, wenn er in Cloud Manager und auf Entwickler-Workstations ausgeführt wird. In diesen Fällen können Sie mit [Maven-Profilen](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) definieren, wie der Build in verschiedenen Umgebungen (einschließlich Cloud Manager) abweichen soll.
 
-Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung erfolgt, indem Sie nach der oben beschriebenen CM_BUILD-Umgebungsvariablen suchen. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
+Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung sollte über die oben beschriebene Umgebungsvariable CM_BUILD erfolgen. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
 
 Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn der Build innerhalb von Cloud Manager ausgeführt wird, verwenden Sie Folgendes:
 
@@ -234,7 +234,7 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
 
 ## Installieren zusätzlicher Systempakete {#installing-additional-system-packages}
 
-Einige Builds erfordern die Installation zusätzlicher Systempakete, damit sie vollumfänglich funktionieren. So ist es z. B. möglich, dass ein Build ein Python- oder Ruby-Skript aufruft, wofür der entsprechende Sprach-Interpreter installiert sein muss. This can be done by calling the [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) to invoke APT. Diese Ausführung sollte im Allgemeinen in einem Cloud Manager-spezifischen Maven-Profil eingeschlossen sein. So installieren Sie beispielsweise Python:
+Einige Builds erfordern die Installation zusätzlicher Systempakete, damit sie vollumfänglich funktionieren. So ist es z. B. möglich, dass ein Build ein Python- oder Ruby-Skript aufruft, wofür der entsprechende Sprach-Interpreter installiert sein muss. Dies kann durch Abfrage von [exec-maven-plugin](https://www.mojohaus.org/exec-maven-plugin/) erfolgen, wodurch APT aufgerufen wird. Diese Ausführung sollte im Allgemeinen in einem Cloud Manager-spezifischen Maven-Profil eingeschlossen sein. So installieren Sie beispielsweise Python:
 
 ```xml
         <profile>
@@ -332,4 +332,4 @@ Mit dem content-package-maven-Plugin ist es ähnlich:
 
 ## Entwickeln von Code basierend auf Best Practices {#develop-your-code-based-on-best-practices}
 
-Adobe Engineering and Consulting teams have developed a [comprehensive set of best practices for AEM developers](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
+Die Entwicklungs- und Beratungsteams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler zusammengestellt](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
