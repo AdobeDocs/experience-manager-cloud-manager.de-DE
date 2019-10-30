@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
 
 ---
@@ -22,11 +22,11 @@ Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 ![](assets/Manage_Environments1.png)
 
-## Videoschulung {#video-tutorial}
+## Video-Tutorial {#video-tutorial}
 
-### Übersicht über die Cloud Manager-Umgebung {#environ-video}
+### Überblick über die Cloud Manager-Umgebung {#environ-video}
 
-Das folgende Video bietet eine Übersicht über Cloud Manager-Umgebungen, die aus AEM Author-, AEM Publish- und Dispatcher-Instanzen bestehen.
+Das folgende Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM Author-, AEM Publish- und Dispatcher-Instanzen bestehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/?captions=ger)
 
