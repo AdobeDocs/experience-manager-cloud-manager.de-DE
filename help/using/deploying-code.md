@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
 
 ---
@@ -94,7 +94,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 1. Cloud Manager bestimmt für jedes Artefakt, ob es sich um ein AEM- oder Dispatcher-Paket handelt.
 1. Cloud Manager entfernt alle Dispatcher aus dem Lastenausgleich, um die Umgebung während der Bereitstellung zu isolieren.
 
-   Sofern nicht anders konfiguriert, können Sie die Lastenausgleichänderungen in Dev- und Stage-Bereitstellungen überspringen, d. h. die Schritte in beiden Nicht-Produktionsleitungen für Entwicklungsumgebungen und die Produktionsleitung für Stage-Umgebungen trennen und anhängen.
+   Sofern nicht anders konfiguriert, können Sie die Load-Balancer-Änderungen in Entwicklungs- und Staging-Umgebungen überspringen, d. h. das Trennen und Anfügen in beiden Nicht-Produktions-Pipelines bei Entwicklungsumgebungen und in der Produktions-Pipeline bei Staging-Umgebungen.
 
    ![](assets/load_balancer.png)
 
@@ -125,7 +125,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
    >[!NOTE]
    >
-   >Sie können Änderungen des Lastenausgleichs in Entwicklungs- und Bereitstellungen überspringen, d. h. Schritte in nicht produktionsfähigen Pipelines, in Entwicklungsumgebungen und in der Produktionspipeline für Bereitstellungsumgebungen lösen und anhängen.
+   >Sie können Änderungen am Load-Balancer in Entwicklungs- und Staging-Bereitstellungen überspringen, d. h. das Trennen und Anfügen in beiden Nicht-Produktions-Pipelines bei Entwicklungsumgebungen und in der Produktions-Pipeline bei Staging-Umgebungen.
 
 ### Bereitstellung in der Produktionsphase {#deployment-production-phase}
 
