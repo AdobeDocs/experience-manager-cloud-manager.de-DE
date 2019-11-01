@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
+source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
 
 ---
 
@@ -51,8 +51,8 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
 
    **Staging-Tests** umfassen die folgenden Schritte:
 
-   * Sicherheitstests - Dieser Schritt bewertet die Auswirkungen Ihres Anwendungscodes auf die Sicherheit in der AEM-Umgebung. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
-   * Leistungstests - Dieser Schritt bewertet die Leistung Ihres Anwendungscodes. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
+   * Sicherheitstests: Dieser Schritt bewertet die Auswirkungen Ihres Anwendungscodes auf die Sicherheit der AEM-Umgebung. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
+   * Leistungstests: Dieser Schritt bewertet die Leistung Ihres Anwendungscodes. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
    ![](assets/Stage_Testing1.png)
 
    Die **Produktionsbereitstellung** umfasst die folgenden Schritte:
