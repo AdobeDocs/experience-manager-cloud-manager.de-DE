@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: ht
-source-git-commit: 5a9d5fc71968741948c519681bcc25bb40d4da45
+translation-type: tm+mt
+source-git-commit: f9df9c05fb708aed3f9ea91780f7a92c24e04673
 
 ---
 
@@ -43,15 +43,16 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
 
    Die **Staging-Bereitstellung** umfasst die folgenden Schritte:
 
-   * Test- und Unit-Tests
-   * Codescans
+   * Validierung: Dieser Schritt stellt sicher, dass die Pipeline so konfiguriert ist, dass die derzeit verfügbaren Ressourcen verwendet werden, z. B. dass die konfigurierte Verzweigung vorhanden ist und die Umgebungen verfügbar sind.
+   * Build &amp; Unit Testing: Dieser Schritt führt einen Containerized Build-Prozess aus. Weitere Informationen zur Buildumgebung finden Sie unter AEM-Anwendungsprojekt [erstellen](create-an-application-project.md) .
+   * Code-Prüfung: Dieser Schritt bewertet die Qualität Ihres Anwendungscodes. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
    * Bereitstellung in der Staging-Umgebung
    ![](assets/Stage_Deployment1.png)
 
    **Staging-Tests** umfassen die folgenden Schritte:
 
-   * Sicherheitstests
-   * Leistungstests
+   * Sicherheitstests - Dieser Schritt bewertet die Auswirkungen Ihres Anwendungscodes auf die Sicherheit in der AEM-Umgebung. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
+   * Leistungstests - Dieser Schritt bewertet die Leistung Ihres Anwendungscodes. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
    ![](assets/Stage_Testing1.png)
 
    Die **Produktionsbereitstellung** umfasst die folgenden Schritte:
