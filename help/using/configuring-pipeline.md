@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
 
 ---
@@ -19,11 +19,11 @@ source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
 
 Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren. Weitere grundlegende Informationen zur Funktionsweise der Pipeline finden Sie unter [Übersicht zur CI/CD-Pipeline](ci-cd-pipeline.md).
 
-## Videoschulung {#video-tutorial-one}
+## Video-Tutorial {#video-tutorial-one}
 
-### Konfigurieren von Pipeline in Cloud Manager {#config-pipeline-video}
+### Konfigurieren von Pipelines in Cloud Manager {#config-pipeline-video}
 
-Die Konfiguration der CI/CD-Produktionspipeline definiert den Auslöser, der die Pipeline auslöst, Parameter, die die Bereitstellung der Produktion steuern, und Leistungstest-Parameter.
+Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
 
@@ -109,14 +109,14 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
 >
 >Die Option **CSE-Überwachung nutzen** steht nicht allen Kunden zur Verfügung.
 
-**Nach Stage-Implementierung genehmigen**
+**Nach der Staging-Bereitstellung genehmigen**
 
-There is an optional step **Approve after Stage Deployment** which can be configured in the Production Pipeline.
-Dies ist in einer neuen Option im Anzeigebereich " **Pipeline-Bearbeitung** "aktiviert:
+Es gibt einen optionalen Schritt **Nach der Staging-Bereitstellung genehmigen**, der in der Produktions-Pipeline konfiguriert werden kann.
+Dieser wird in einer neuen Option auf dem Bildschirm **Pipeline bearbeiten** aktiviert:
 
 ![](assets/post_deployment1.png)
 
-Es wird dann während der Ausführung der Pipeline als separater Schritt angezeigt:
+Er wird dann während der Ausführung der Pipeline als separater Schritt angezeigt:
 
 ![](assets/post_deployment2.png)
 
@@ -194,17 +194,17 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
 Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Codequalität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
 
-## Videoschulung {#video-tutorial-two}
+## Video-Tutorial {#video-tutorial-two}
 
-### Cloud Manager - Nur Pipelines für Nicht-Produktion und Codequalität {#non-prod-video}
+### Nicht-Produktions- und Codequalität-Pipelines in Cloud Manager {#non-prod-video}
 
-CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Implementierungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
+CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
-1. Access the **Non-Production Pipelines** tile from the Cloud Manager home screen.
+1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Nicht-Produktions-Pipelines** zu.
 
    ![](assets/Configuring_Pipeline_Add-Production.png)
 
