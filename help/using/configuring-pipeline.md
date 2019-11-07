@@ -10,7 +10,7 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 06154ad565168d25e18de49c10e5944f39a293c2
+source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
 
 ---
 
@@ -219,7 +219,7 @@ Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
    * **Bearbeiten**: Ermöglicht die Bearbeitung der Pipeline-Einstellungen.
    * **Detail**: Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden).
    * **Build**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann.
-   ![](assets/Configuring_Pipeline_Add-Production3.png)
+   ![](assets/Non-prod-2.png)
 
    >[!NOTE]
    >
