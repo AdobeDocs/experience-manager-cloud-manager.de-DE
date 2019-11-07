@@ -9,8 +9,8 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: ht
-source-git-commit: bc419b96554a40b84878140f8f532c9f4e10c9f3
+translation-type: tm+mt
+source-git-commit: 06154ad565168d25e18de49c10e5944f39a293c2
 
 ---
 
@@ -58,7 +58,7 @@ Führen Sie folgende Schritte aus, um das Verhalten und die Voreinstellungen fü
 
 1. Klicken Sie auf **Pipeline einrichten**, um Ihre Pipeline einzurichten und zu konfigurieren.
 
-   ![](assets/Configure_ci-cd-1.png)
+   ![](assets/Setup-Pipeline.png)
 
 1. Der Bildschirm **Pipeline einrichten** wird angezeigt.
 
@@ -188,7 +188,7 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
    >
    >Nach der Einrichtung der Pipeline können Sie die Einstellungen weiterhin bearbeiten. Verwenden Sie dazu die Kachel **Einstellungen der Produktions-Pipeline** in der [!UICONTROL Cloud Manager]-Benutzeroberfläche.
 
-   ![](assets/Prod-Pipeline-Settings-Dialog.png)
+   ![](assets/Production-Pipeline.png)
 
 ## Produktionsfremde Pipelines und Pipelines für Tests der Codequalität
 
@@ -206,7 +206,7 @@ Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
 1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Nicht-Produktions-Pipelines** zu.
 
-   ![](assets/Configuring_Pipeline_Add-Production.png)
+   ![](assets/Non-Production-Pipeline.png)
 
 1. Klicken Sie auf die Schaltfläche „Hinzufügen“, um den Pipeline-Namen, den Pipelinetyp und die Git-Verzweigung anzugeben.
 
