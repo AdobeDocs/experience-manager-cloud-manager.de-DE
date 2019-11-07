@@ -3,8 +3,8 @@ title: Überwachen von Umgebungen
 seo-title: Überwachen von Umgebungen
 description: 'null'
 seo-description: Auf dieser Seite erfahren Sie mehr über die Systemüberwachung in Cloud Manager. Diese erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz.
-translation-type: ht
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+translation-type: tm+mt
+source-git-commit: 1edfbc0adb04026cd29ba93b4ba155d3b61439dc
 
 ---
 
@@ -43,7 +43,7 @@ Auf der Seite „Übersicht“ der Systemüberwachung werden die überwachten Um
 
 Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn eine Metrik in einer Kategorie einen kritischen Status aufweist, hat die gesamte Kategorie einen kritischen Status auf der Seite „Übersicht“. Dieselbe Zusammenfassung kann auf Umgebungs- und Instanzebene angezeigt werden.
 
-![](assets/Reports.png)
+![](assets/System-Monitoring-Reports.png)
 
 >[!NOTE]
 >
@@ -107,11 +107,11 @@ Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kr
 Die Leistungsdaten einer AEM-Umgebung können mit dem vertraglich vereinbarten Service Level Agreement (SLA) verglichen werden. Möglich ist dies über ein Untermenü auf dem Bildschirm „Berichte“.
 Das Diagramm unten zeigt beispielsweise die monatliche SLA-Performance für 2018.
 
-![](assets/sla-reporting1.png)
+![](assets/SLA-Reports-one.png)
 
 Wie bei den Systemüberwachungsdiagrammen werden beim Bewegen der Maus über einen Datenpunkt die spezifischen Werte für diesen Monat angezeigt.
 
-![](assets/sla-reporting2.png)
+![](assets/SLA-Reports-two.png)
 
 Der Abschnitt „Ereignisanalyse“ unter diesem Diagramm zeigt die Anzahl von Vorfällen, die im aktuell ausgewählten Jahr beim Programm aufgetreten sind. Für jeden Vorfall werden Zeitraum und Ursache mitsamt Kommentaren angegeben.
 
