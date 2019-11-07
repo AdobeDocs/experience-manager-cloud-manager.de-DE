@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-translation-type: ht
-source-git-commit: dd23fc2277c2e2c51e3ab9b071d6336d2e0d6488
+translation-type: tm+mt
+source-git-commit: 72daabd54cd6216743dfbf4d843f685b3b12b3aa
 
 ---
 
@@ -20,7 +20,7 @@ Auf der Seite **Übersicht** von Cloud Manager finden Sie die Kachel **Umgebunge
 
 Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
-![](assets/Manage_Environments1.png)
+![](assets/Manage-Environments1.png)
 
 ## Video-Tutorial {#video-tutorial}
 
@@ -36,7 +36,7 @@ Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Prod
 
 Der Status entspricht dem aggregierten Leistungsstatus für alle Knoten in der Umgebung. Der Status leuchtet grün, wenn alle Knoten ausgeführt werden, rot, wenn auch nur ein Knoten angehalten wurde, blau, wenn auch nur ein Knoten aktiv wird, und gelb, wenn auch nur für ein Knoten kein Leistungsstatus verfügbar ist (in dieser Prioritätsreihenfolge).
 
-![](assets/manage_environments-screen2.png)
+![](assets/Environments-card-new.png)
 
 ### Umgebungen {#environments}
 
@@ -48,4 +48,4 @@ Auf dem Bildschirm **Umgebungen** wird jeweils eine Karte für *Produktions-* un
 >
 >Der **STATUS** des Knotens stellt den Leistungsstatus der VM dar und spiegelt nicht den Status von AEM auf dem Server wider. Der Status kann wie folgt lauten: **Aktiv** (grüner Kreis), **Angehalten** (roter Kreis), **Demnächst aktiv** (blauer Kreis) oder **Nicht verfügbar** (gelber Kreis).
 
-![](assets/Manage_Environments2.png)
+![](assets/Environments-tab.png)
