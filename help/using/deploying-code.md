@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: Verwenden
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
 
 ---
@@ -43,16 +43,16 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
 
    Die **Staging-Bereitstellung** umfasst die folgenden Schritte:
 
-   * Validierung: Dieser Schritt stellt sicher, dass die Pipeline so konfiguriert ist, dass die derzeit verfügbaren Ressourcen verwendet werden, z. B. dass die konfigurierte Verzweigung vorhanden ist und die Umgebungen verfügbar sind.
-   * Build &amp; Unit Testing: Dieser Schritt führt einen Containerized Build-Prozess aus. Weitere Informationen zur Buildumgebung finden Sie unter AEM-Anwendungsprojekt [erstellen](create-an-application-project.md) .
-   * Code-Prüfung: Dieser Schritt bewertet die Qualität Ihres Anwendungscodes. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
+   * Validierung: Dieser Schritt stellt sicher, dass die Pipeline so konfiguriert ist, dass die derzeit verfügbaren Ressourcen verwendet werden. So wird z. B. überprüft, ob die konfigurierte Verzweigung vorhanden ist und die Umgebungen verfügbar sind.
+   * Build- und Komponententests: Dieser Schritt führt einen containerisierten Build-Prozess aus. Weitere Informationen zur Build-Umgebung finden Sie unter [AEM-Anwendungsprojekt erstellen](create-an-application-project.md).
+   * Code-Scan: Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md).
    * Bereitstellung in der Staging-Umgebung
    ![](assets/Stage_Deployment1.png)
 
    **Staging-Tests** umfassen die folgenden Schritte:
 
-   * Sicherheitstests: Dieser Schritt bewertet die Auswirkungen Ihres Anwendungscodes auf die Sicherheit der AEM-Umgebung. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
-   * Leistungstests: Dieser Schritt bewertet die Leistung Ihres Anwendungscodes. Weitere Informationen zum Testprozess finden Sie unter Testergebnisse [verstehen](understand-your-test-results.md) .
+   * Sicherheitstests: Dieser Schritt bewertet die Auswirkungen Ihres Anwendungs-Codes auf die Sicherheit der AEM-Umgebung. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md) .
+   * Leistungstests: Dieser Schritt bewertet die Leistung Ihres Anwendungs-Codes. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md) .
    ![](assets/Stage_Testing1.png)
 
    Die **Produktionsbereitstellung** umfasst die folgenden Schritte:
