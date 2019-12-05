@@ -6,17 +6,17 @@ seo-description: Auf dieser Seite erfahren Sie, wie Anwender Benachrichtigungen 
 uuid: 73e4bb80-36c1-4408-bdbd-1ac5328359d1
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Verwenden
+topic-tags: using
 discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
 translation-type: tm+mt
-source-git-commit: 1d4bb0b24cdcd6dc0ed9db58f1e14b6714bb96d6
+source-git-commit: be0350b98c19b3b84519947c04a7e362b46bba21
 
 ---
 
 
 # Benachrichtigungen {#notifications}
 
-Über [!UICONTROL Cloud Manager] können Anwender Benachrichtigungen beim Starten oder Fertigstellen einer Pipeline (ob erfolgreich oder nicht), zu Beginn einer Produktionsbereitstellung bzw. beim Erreichen der Schritte **GoLive-Genehmigung verwenden** und **Geplant** empfangen. Diese Benachrichtigungen werden über das Adobe [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+[!UICONTROL Mit Cloud Manager] können Benutzer Benachrichtigungen erhalten, wenn die Produktionspipeline beginnt und (erfolgreich oder nicht erfolgreich) abgeschlossen wird, zu Beginn einer Produktionsimplementierung und wann die **Go-Live-Genehmigung** - und **geplanten** Schritte erreicht werden. Diese Benachrichtigungen werden über das Adobe [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >
