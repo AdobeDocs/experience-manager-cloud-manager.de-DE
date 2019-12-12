@@ -8,8 +8,8 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: ht
-source-git-commit: 26014cfabfee6226033ba2fc1167d8f5509e17c6
+translation-type: tm+mt
+source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
 
 ---
 
@@ -55,7 +55,7 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 
 >[!NOTE]
 >
->Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions).
+>Refer to [Metric Definitions](https://docs.sonarqube.org/display/SONAR/Metric+Definitions) for more detailed definitions.
 
 Sie können hier eine Liste der Regeln herunterladen: [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx).
 
@@ -113,7 +113,6 @@ In der folgenden Tabelle finden Sie die derzeit verfügbaren Prüfungen:
 | Die AuthorizableNodeName-Implementierung stellt keine autorisierbare ID im Knotennamen/Pfad offen. | Namenserstellung für autorisierbare Knoten | Kritisch |
 | Standardkennwörter wurden geändert | Standard-Anmeldekonten | Kritisch |
 | Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
-| Dispatcher filtert Anfragen ordnungsgemäß | CQ-Dispatcher-Konfiguration | Kritisch |
 | Der Sling Java Script Handler ist angemessen konfiguriert. | Sling Java Script Handler | Kritisch |
 | Der Sling JSP Script Handler ist angemessen konfiguriert. | Sling JSP Script Handler | Kritisch |
 | SSL ist richtig konfiguriert | SSL-Konfiguration | Kritisch |
