@@ -6,15 +6,15 @@ seo-description: Sie können bestimmte Rollenmitgliedschaften zuweisen, indem de
 uuid: fa204c28-83df-48bb-8360-e158f080dee7
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Anforderungen
+topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
 translation-type: tm+mt
-source-git-commit: 73203dca7b20570103af429cf933610941b787be
+source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
 
 ---
 
 
-# Hinzufügen von Anwendern und Rollen{#add-users-and-roles}
+# Hinzufügen von Anwendern und Rollen {#add-users-and-roles}
 
 Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigungen erforderlich. Beispielsweise dürfen nur bestimmte Anwender die KPIs (Key Performance Indicators) für ein Programm festlegen. Diese Berechtigungen werden logisch in Rollen gruppiert.
 
@@ -41,16 +41,10 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Rollen:
 |--- |--- |
 | Business Owner | Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
 | Programmmanager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
-| Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging-/Produktionsbereitstellungen ausführen. Kann CI/CD Pipelines bearbeiten. Kann bedeutende 3-Tier-Fehler genehmigen. Kann Zugriff auf das Git-Repository erhalten. Wenden Sie sich zwecks Anforderung an den für Sie zuständigen CSE/AMS-Mitarbeiter. |
-| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Sollte Zugriff auf das Git-Repository für Codecommits erhalten. Wenden Sie sich an den für Sie zuständigen CSE/AMS-Mitarbeiter, wenn Sie einen Anwender mit dieser Rolle hinzufügen, um Zugriff auf das Git-Repository zu gewähren. |
+| Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging-/Produktionsbereitstellungen ausführen. Kann CI/CD Pipelines bearbeiten. Kann bedeutende 3-Tier-Fehler genehmigen. Kann Zugriff auf das Git-Repository erhalten. |
+| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Kann Zugriff auf das Git-Repository für die Code-Übertragung erhalten. |
 | Customer Success Engineer | Unterstützt im Allgemeinen den Erfolg von AMS-Kunden. Interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen auszuführen, die von einem CSE überwacht werden müssen. |
 | Inhaltsautor | Interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager]. Kann über den [!UICONTROL Cloud Manager]-Programmumschalter (nach Navigation über [!UICONTROL Experience Cloud]) auf AEM zugreifen. |
-
->[!NOTE]
->
->Der Zugriff auf das [!UICONTROL Cloud Manager]-Git-Repository wird von Ihrem CSE verwaltet. Wenden Sie sich an diesen, um Anwender hinzuzufügen und zu entfernen.
->
->Wenn ein neu hinzugefügter Anwender Zugriff auf das Git-Repository benötigt, müssen Sie sich an den für Sie zuständigen CSE/AMS-Mitarbeiter wenden, damit der Zugriff gewährt wird. Diese Rollen bieten keinen automatischen Zugriff auf das Git-Repository. Maximal sind 3 Anwender mit Zugriff auf das Git-Repository möglich.
 
 ## Erstellen von Profilen mit Admin Console {#using-admin-console-to-create-a-profile}
 
