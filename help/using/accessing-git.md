@@ -4,7 +4,7 @@ seo-title: Zugriff auf Git
 description: Auf dieser Seite wird beschrieben, wie Sie auf das Git-Repository zugreifen und es verwalten können.
 seo-description: Auf dieser Seite erfahren Sie, wie Sie auf Ihr Git-Repository zugreifen und es verwalten.
 translation-type: tm+mt
-source-git-commit: f0d11c07ddbde1550e038abfce3bb081f24b6f3c
+source-git-commit: 027408326960153963d2e8604dc0ed33d921df66
 
 ---
 
@@ -25,7 +25,7 @@ Verwenden Sie die Schaltfläche Git **** verwalten, die in der Benutzeroberfläc
 
    Wenn Sie außerdem die Registerkarte &quot;Pipeline **ohne Produktion** &quot;auswählen, wird auch dort die Option &quot;Git **verwalten&quot;angezeigt** .
 
-   ![](assets/manage-git2.png)
+   ![](assets/manage-git-new2.png)
 
 >[!NOTE]
 >Die Option &quot;Git **** verwalten&quot;ist für Benutzer in der Rolle &quot;Entwickler&quot;oder &quot;Deployment Manager&quot;sichtbar. Wenn Sie auf diese Schaltfläche klicken, wird ein Dialogfeld geöffnet, in dem der Benutzer die URL zum Cloud Manager-Git-Repository sowie den Benutzernamen und das Kennwort finden kann.
