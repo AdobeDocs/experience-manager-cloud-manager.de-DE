@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
 
 ---
@@ -42,7 +42,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Rollen:
 | Business Owner | Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
 | Programmmanager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
 | Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging-/Produktionsbereitstellungen ausführen. Kann CI/CD Pipelines bearbeiten. Kann bedeutende 3-Tier-Fehler genehmigen. Kann Zugriff auf das Git-Repository erhalten. |
-| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Kann Zugriff auf das Git-Repository für die Code-Übertragung erhalten. |
+| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Kann Zugriff auf das Git-Repository für Codecommits erhalten. |
 | Customer Success Engineer | Unterstützt im Allgemeinen den Erfolg von AMS-Kunden. Interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen auszuführen, die von einem CSE überwacht werden müssen. |
 | Inhaltsautor | Interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager]. Kann über den [!UICONTROL Cloud Manager]-Programmumschalter (nach Navigation über [!UICONTROL Experience Cloud]) auf AEM zugreifen. |
 
@@ -50,7 +50,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Rollen:
 
 Rollen für [!UICONTROL Cloud Manager] werden über Adobe Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender in Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
-Sie können bestimmte Rollenmitgliedschaften zuweisen, indem Sie den Anwender in Adobe Admin Console einem [!UICONTROL Cloud Manager]**-Produktprofil** hinzufügen. Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin-Konsole finden Sie in der Dokumentation zur [Admin-Konsole](https://helpx.adobe.com/enterprise/using/admin-console.html).
+Sie können bestimmte Rollenmitgliedschaften zuweisen, indem Sie den Anwender in Adobe Admin Console einem [!UICONTROL Cloud Manager]**-Produktprofil** hinzufügen. Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zu Adobe Admin Console finden Sie in der Dokumentation zur [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
 >[!NOTE]
 >
@@ -65,7 +65,7 @@ Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Mana
 * Entwickler
 * Programmmanager
 
-You can create, or add, users/groups to these Product Profiles with the [Admin Console](https://adminconsole.adobe.com/) for [!UICONTROL Cloud Manager], as shown in the figure below:
+Sie können Anwender/Gruppen für diese Produktprofile mit [Admin Console](https://adminconsole.adobe.com/) für [!UICONTROL Cloud Manager] erstellen oder hinzufügen, wie in der folgenden Abbildung gezeigt:
 
 1. Melden Sie sich bei Admin Console an und klicken Sie auf **Neues Profil**, um ein neues Profil hinzuzufügen.
 
