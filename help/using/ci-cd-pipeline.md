@@ -4,14 +4,14 @@ seo-title: CI/CD-Pipeline
 description: 'null'
 seo-description: In diesem Abschnitt erfahren Sie mehr über die CI/CD-Pipeline, die Bereitstellungen für die Staging- und Produktionsumgebung in Cloud Manager verarbeitet.
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
-topic-tags: Einführung
+topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 949d3cf0239a02875ba4ad1888e081f104dec2e2
+source-git-commit: 2d7b18ea55e2bd5879cf8bd896cafed4d46c0011
 
 ---
 
-
+SHANKARI_TEST_CHANGE
 # CI/CD-Pipeline {#ci-cd-pipeline}
 
 ## Pipelineübersicht {#pipeline-overview}
