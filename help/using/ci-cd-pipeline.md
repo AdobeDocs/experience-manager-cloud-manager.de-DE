@@ -7,11 +7,11 @@ uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 2d7b18ea55e2bd5879cf8bd896cafed4d46c0011
+source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
 
 ---
 
-SHANKARI_TEST_CHANGE
+
 # CI/CD-Pipeline {#ci-cd-pipeline}
 
 ## Pipelineübersicht {#pipeline-overview}
@@ -38,7 +38,7 @@ In der folgenden Tabelle finden Sie Details zu den Vorgängen in jedem Schritt d
 | 6. Automatische Bereitstellung von Artefakten für AMS AEM-Staging-Umgebung | Das Release-Artefakt wird in der Staging-Umgebung bereitgestellt. |
 | 7. Auslösung automatisierter Tests | [!UICONTROL Cloud Manager] führt die Leistungs- und Sicherheitstests für das Artefakt aus. |
 | 8. Bereitstellung für Produktionsauslöser | Sobald die automatisierten Tests abgeschlossen sind, startet [!UICONTROL Cloud Manager] die Bereitstellung in der Produktionsumgebung. |
-| 9. Abruf der Artefakte durch [!UICONTROL Cloud Manager] für die Bereitstellung | [!UICONTROL Cloud Manager] ruft die gespeicherten Release-Artefakte ab. |
+| 9. [!UICONTROL Cloud Manager] gets Artifacts(s) to Deploy | [!UICONTROL Cloud Manager] ruft die gespeicherten Versionshinweise ab. |
 | 10. Bereitstellung der Artefakte in der Produktionsumgebung | Die Release-Artefakte werden in der Produktionsumgebung bereitgestellt. |
 
 ### Einrichten einer CI/CD-Pipeline {#how-to-setup-a-ci-cd-pipeline}
