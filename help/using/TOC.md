@@ -4,7 +4,7 @@ sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Experience Manager Cloud Manager Help
 translation-type: tm+mt
-source-git-commit: 9a8ca97c614d14efc68f2ee163daec044412c4da
+source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 
 ---
 
@@ -47,7 +47,8 @@ source-git-commit: 9a8ca97c614d14efc68f2ee163daec044412c4da
    + [Überblick](overview-productupdate-wizard.md)
    + [Test](evaluation.md)
 + Versionshinweise {#release-notes}
-   + [Aktuelle Versionshinweise (2020.1.0)](release-notes-current.md)
+   + [Aktuelle Versionshinweise (2020.2.0)](release-notes-current.md)
+   + [Versionshinweise für 2020.1.0](release-notes-2020-1-0.md)
    + [Versionshinweise für 2019.12.0](release-notes-2019-12-0.md)
    + [Versionshinweise für 2019.11.0](release-notes-2019-11-0.md)
    + [Versionshinweise für 2019.10.0](release-notes-2019-10-0.md)
