@@ -21,8 +21,8 @@ source-git-commit: 6b6fa995e156fe928c88f55e89a9202c22ec18bc
 + Was ist erforderlich? {#requirements}
    + [Gewährte Zugriffsrechte](access-rights-granted.md)
    + [Quellcode-Repository](source-code-repository.md)
-   + [Hinzufügen von Anwendern und Rollen](setting-up-users-and-roles.md)
    + [Rollenbasierte Berechtigungen](role-based-permissions.md)
+   + [Hinzufügen von Anwendern und Rollen](setting-up-users-and-roles.md)
    + [Bereitgestellte Umgebungen](environments-provisioned.md)
 + Erste Schritte {#getting-started}
    + [Erste Anmeldung](first-time-login.md)
