@@ -8,7 +8,7 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: dd892ddb2ac2d003229f5a9e2c8e0013b0f11e1b
 
 ---
@@ -38,7 +38,7 @@ Gehen Sie wie folgt vor, um ein AEM-Anwendungsprojekt in Cloud Manager zu erstel
 
    ![](assets/image2018-10-3_14-29-44.png)
 
-[Shankari] der zweite Schritt unten beschrieben ist nicht korrekt. löschen.
+[Shankari]: Der zweite im Folgenden beschriebene Schritt ist falsch und sollte gelöscht werden.
 1. Klicken Sie auf **Erstellen**, um zum Bildschirm **Pipeline-Einrichtung** zu gelangen.
 
    ![](assets/image2018-10-3_14-30-22.png)
@@ -299,7 +299,7 @@ Mit derselben Methode können Sie auch sprachspezifische Pakete installieren, d.
 In Cloud Manager können Builds eine beliebige Anzahl von Inhaltspaketen generieren.
 Aus vielerlei Gründen kann es sinnvoll sein, ein Inhaltspaket zu erstellen, es jedoch nicht bereitzustellen. Dies kann nützlich sein, etwa für Inhaltspakete, die nur zum Testen erstellt wurden, oder für Pakete, die in einem anderen Schritt im Build-Prozess (also als Unterpaket eines anderen Pakets) neu verpackt werden.
 
-Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschaften integrierter Inhaltspakete nach einer Eigenschaft namens ***cloudManagerTarget***. Wenn diese Eigenschaft auf „Ohne“ festgelegt ist, wird das Paket übersprungen und nicht bereitgestellt. Der Mechanismus zum Festlegen dieser Eigenschaft hängt davon ab, wie der Build das Inhaltspaket erzeugt. Mit dem filevault-maven-Plugin würden Sie beispielsweise das Plugin wie folgt konfigurieren:
+Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschaften erstellter Inhaltspakete nach einer Eigenschaft namens ***cloudManagerTarget***. Wenn diese Eigenschaft auf „Ohne“ festgelegt ist, wird das Paket übersprungen und nicht bereitgestellt. Der Mechanismus zum Festlegen dieser Eigenschaft hängt davon ab, wie der Build das Inhaltspaket erzeugt. Mit dem filevault-maven-Plugin würden Sie beispielsweise das Plugin wie folgt konfigurieren:
 
 ```xml
         <plugin>
