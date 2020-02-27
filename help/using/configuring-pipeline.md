@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: fb84c2d41c76c64fc0be1e9f86356ee0cb5bcf9c
 
 ---
@@ -25,7 +25,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -50,7 +50,7 @@ Bevor Sie Code bereitstellen, müssen Sie Ihre Pipelineeinstellungen über [!UIC
 >
 >Sie können die Pipelineeinstellungen nach der Ersteinrichtung ändern.
 
-### Configuring the Pipeline Settings from [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
+### Konfigurieren der Pipeline-Einstellungen in [!UICONTROL Cloud Manager] {#configuring-the-pipeline-settings-from-cloud-manager}
 
 Sobald Sie Ihr Programm auf der [!UICONTROL Cloud Manager]-Benutzeroberfläche eingerichtet haben, können Sie Ihre Pipeline einrichten.
 
@@ -199,7 +199,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
