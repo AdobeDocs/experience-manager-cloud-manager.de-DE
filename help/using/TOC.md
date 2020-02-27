@@ -3,8 +3,8 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Experience Manager Cloud Manager Help
-translation-type: ht
-source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
+translation-type: tm+mt
+source-git-commit: 6b6fa995e156fe928c88f55e89a9202c22ec18bc
 
 ---
 
@@ -21,6 +21,7 @@ source-git-commit: 854c09878a633bd46e4d7e9d604a8335c225a1c4
 + Was ist erforderlich? {#requirements}
    + [Gewährte Zugriffsrechte](access-rights-granted.md)
    + [Quellcode-Repository](source-code-repository.md)
+   + [Rollenbasierte Berechtigungen](role-based-permissions.md)
    + [Hinzufügen von Anwendern und Rollen](setting-up-users-and-roles.md)
    + [Bereitgestellte Umgebungen](environments-provisioned.md)
 + Erste Schritte {#getting-started}
