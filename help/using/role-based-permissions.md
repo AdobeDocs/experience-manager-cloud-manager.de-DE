@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: a038a3d6e35ff28190441e9d11d9c539641a85af
+source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
 
 ---
 
@@ -17,7 +17,7 @@ source-git-commit: a038a3d6e35ff28190441e9d11d9c539641a85af
 
 ## Anwenderrollen {#user-roles}
 
-Role management for [!UICONTROL Cloud Manager] is done inside the [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Jeder Anwender von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender in Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+Die Rollenverwaltung für [!UICONTROL Cloud Manager] erfolgt in [Adobe Admin Console](https://helpx.adobe.com/enterprise/using/admin-console.html). Jeder Anwender von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender in Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
 Weitere Informationen zum Einrichten von Rollen finden Sie unter [Einrichten von Anwendern und Rollen](setting-up-users-and-roles.md).
 
@@ -40,8 +40,9 @@ Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten 
 
 | Berechtigung | Beschreibung | Business Owner | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
-| Anwendung lesen | Lesen Sie die Programm-KPIs. | x | x | x | x | x |
+| Anwendung lesen | Lesen der Programm-KPIs. | x | x | x | x | x |
 | Anwendung schreiben | Programmeinrichtung oder -bearbeitung. | x |  |  |  |  |
+| Programm hinzufügen | Neues Programm hinzufügen. | x |  |  |  |  |
 | Umgebung lesen | Siehe Umgebungsdetails. | x | x | x | x | x |
 | Ausführung erstellen | Starten der Pipeline. | x | x | x |  |  |
 | Ausführung lesen | Siehe Ausführungsstatus. | x | x | x | x | x |
