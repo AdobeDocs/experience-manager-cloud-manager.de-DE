@@ -6,7 +6,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
 translation-type: tm+mt
-source-git-commit: 45548c965b57d53ce931a3c740b0b72ff0496815
+source-git-commit: 157370b193c104915be063d1a4375f81839b88a2
 
 ---
 
@@ -58,3 +58,5 @@ Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten 
 | Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Business Owner“. |  | x |  |  |  |
 | Pipeline ändern, Managed Deployment | Berechtigung zum Bearbeiten der Option „CSE-Überwachung“. |  | x |  |  |  |
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“. | x | x | x | x | x |
+| Persönliches Zugriffstoken erstellen | Zugriff auf Git. |  | x |  | x |  |
+
