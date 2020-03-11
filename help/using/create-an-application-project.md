@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: b093f1712d9ca9e91b87e925a43e2992a4f11cc0
+source-git-commit: 25edab26146d7d98ef5a38a45b4fe67b0d5e564e
 
 ---
 
@@ -28,10 +28,6 @@ Gehen Sie wie folgt vor, um ein AEM-Anwendungsprojekt in Cloud Manager zu erstel
 1. Wenn Sie sich bei Cloud Manager anmelden und die grundlegende Programmeinrichtung abgeschlossen haben und das Repository zu diesem Zeitpunkt leer ist, wird im Bildschirm **Überblick** eine spezielle Aktionskarte angezeigt.
 
    ![](assets/image2018-10-3_14-29-44.png)
-
-1. Klicken Sie auf **Erstellen**, um zum Bildschirm **Pipeline-Einrichtung** zu gelangen.
-
-   ![](assets/image2018-10-3_14-30-22.png)
 
 1. Klicken Sie auf **Erstellen**, um einen Dialogfeld zu öffnen, in dem Sie die für den AEM-Projektarchetyp erforderlichen Parameter angeben. Der Dialogfeld fragt standardmäßig zwei Werte ab:
 
