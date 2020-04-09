@@ -6,10 +6,10 @@ seo-description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die al
 uuid: 7c8458a6-6de8-4946-ac0c-fb10bce17a15
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Erste Schritte
+topic-tags: getting-started
 discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
-translation-type: ht
-source-git-commit: 316ec3ec088271a6524d4c8fd4c84fd36e2ac4db
+translation-type: tm+mt
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
@@ -28,19 +28,19 @@ Sobald Sie die allgemeinen Konfigurationen für [!UICONTROL Cloud Manager] einge
 
 Das folgende Video bietet einen Überblick über Cloud Manager-Programme, die eine Reihe von AEM-Umgebungen repräsentieren, die logische Gruppen von Geschäftsinitiativen unterstützen. Diese entsprechen in der Regel einem erworbenen Service Level Agreement (SLA).
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
 
 ## Anmeldung beim ersten Mal {#logging-in-for-the-first-time}
 
-1. Melden Sie sich bei **Adobe[!UICONTROL Experience Cloud]** an und sehen Sie sich die Liste der **Programme** an.
+1. Melden Sie sich bei **Adobe[!UICONTROL Experience Cloud]**an und sehen Sie sich die Liste der** Programme **an.
 
    ![](assets/screen_shot_2018-06-04at120643pm.png)
 
 1. Wählen Sie das Programm (z. B. **We.Retail Global**) aus und klicken Sie oben links auf das Symbol, um [!UICONTROL Cloud Manager] zu öffnen.
 
-   ![](assets/screen_shot_2018-06-04at12611pm.png)
+   ![](assets/first-timea1.png)
 
-1. Das Dashboard für [!UICONTROL Cloud Manager] wird angezeigt.
+1. The dashboard for [!UICONTROL Cloud Manager] displays.
 
    ![](assets/FirstLogin1.png)
 
@@ -56,4 +56,4 @@ Das folgende Video bietet einen Überblick über Cloud Manager-Programme, die ei
 
 Cloud Manager bietet einen Überblick über die Aktivitäten eines Programms, in dem alle CI/CD-Pipeline-Ausführungen aufgelistet werden (Produktion und Nicht-Produktion), sodass Sie die vergangene und aktuelle Aktivität einsehen können. Zu jeder Aktivität lassen sich Details anzeigen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)
