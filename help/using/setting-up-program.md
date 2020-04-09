@@ -6,10 +6,10 @@ seo-description: 'Nach dem Onboarding muss der Business Owner verschiedene Erste
 uuid: 9ecf8743-1f5a-4744-86af-e2256567642f
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Erste Schritte
+topic-tags: getting-started
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
 translation-type: tm+mt
-source-git-commit: 2c05eb4610e35d5126c6c67e44f4b71f3026c887
+source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
 
@@ -28,13 +28,19 @@ Die definierten KPIs dienen als Grundlage für Leistungstests, die bei jeder Aus
 >
 >Darüber hinaus verfügen viele Anwender über ein CDN (Content Delivery Network) wie Akamai oder CloudFront, das ihrer Produktionsumgebung vorgeschaltet ist. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, sollten die KPIs nur den erwarteten Traffic wiedergeben, der durch das CDN weitergeleitet wird, d. h. ohne Cache. In der Regel handelt es sich dabei um eine relativ kleine Teilmenge des gesamten Produktionstraffics.
 
-## Einrichten des Programms mit [!UICONTROL Cloud Manager] {#using-cloud-manager-to-setup-your-program}
+## Using [!UICONTROL Cloud Manager] to Setup your Program {#using-cloud-manager-to-setup-your-program}
 
 Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu definieren:
 
 1. Klicken Sie auf **Programm einrichten**, um den Einrichtungsprozess in [!UICONTROL Cloud Manager] zu starten.
 
-   ![](assets/SetUpProgram1.png)
+   ![image1](assets/set-up-program/setup1.png)
+
+   >[!NOTE]
+   > Sie können jederzeit in der Aktionsleiste wechseln, bearbeiten oder ein neues Programm hinzufügen, wie in der Abbildung unten dargestellt.
+
+   ![image1](assets/set-up-program/setup2.png)
+
 
 1. Auf dem Bildschirm **Programm einrichten** wird „Programminformationen bearbeiten“ angezeigt.
 
@@ -97,4 +103,4 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
 Wenn Sie bereits die **Pipeline** eingerichtet haben, werden Ihre aktualisierten Einstellungen bei der nächsten Ausführung berücksichtigt. Wenn Sie noch keine Pipeline eingerichtet haben, führen Sie zunächst die Schritte zum Einrichten der Pipeline aus.
 
-Please see [Configure your CI/CD Pipeline](https://helpx.adobe.com/experience-manager/cloud-manager/using/configuring-pipeline.html) for setting up the pipeline.
+Please see [Configure your CI/CD Pipeline](https://helpx.adobe.com/de/experience-manager/cloud-manager/using/configuring-pipeline.html) for setting up the pipeline.
