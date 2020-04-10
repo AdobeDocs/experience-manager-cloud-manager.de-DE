@@ -1,6 +1,6 @@
 ---
 source-git-commit: a80615b7ed7dcf8c1743f7f12ecf0fd8c76d4cc5
-translation-type: tm+mt
+translation-type: ht
 
 ---
 # Dokumentation zu Adobe Experience Manager Cloud Manager
