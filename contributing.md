@@ -1,6 +1,6 @@
 ---
 source-git-commit: a70b04bd5bb6ac6465a5da4b276e9faf1dc470ae
-translation-type: tm+mt
+translation-type: ht
 
 ---
 # Beiträge zur Adobe Experience Manager Cloud Service-Dokumentation
@@ -47,7 +47,7 @@ Für Pull-Anforderungen muss eine [Lizenzvereinbarung für Mitwirkende (CLA) unt
 
 Im folgenden Video erhalten Sie einen schnellen Überblick darüber, wie Probleme erstellt und Anforderungen abgerufen werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/27069)
+>[!VIDEO](https://video.tv.adobe.com/v/27069?captions=ger)
 
 ### Beiträge von Adobe-Mitarbeitern
 
