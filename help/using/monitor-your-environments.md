@@ -3,7 +3,7 @@ title: Überwachen von Umgebungen
 seo-title: Überwachen von Umgebungen
 description: 'null'
 seo-description: Auf dieser Seite erfahren Sie mehr über die Systemüberwachung in Cloud Manager. Diese erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
 
 ---
@@ -23,13 +23,13 @@ Um zur Systemüberwachungsfunktion zu navigieren, gibt es zwei Möglichkeiten.
 
    ![](assets/ProgramLanding.png)
 
-1. Klicken Sie auf das vierte Symbol auf der Programm-Karte.
+1. Klicken Sie auf das vierte Symbol auf der Programmkarte.
 
    ![](assets/first-timea1.png)
 
    *Oder*
 
-* Navigieren Sie in **über das globale Navigationsmenüelement** Berichte **zur Landingpage** Systemüberwachung[!UICONTROL Cloud Manager].
+* Navigieren Sie in [!UICONTROL Cloud Manager] über das globale Navigationsmenüelement **Berichte** zur Landingpage **Systemüberwachung**.
 
 
 ## Seite „Übersicht“ der Systemüberwachung {#system-monitoring-overview-page}
@@ -56,7 +56,7 @@ Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn 
 Cloud Manager-Berichte bieten einen Überblick über die Umgebungen und AEM-Instanzen des Programms in Form von Diagrammen, die eine Vielzahl von Metriken für jede AEM-Instanz melden und verfolgen.
 Weitere Informationen finden Sie im folgenden Video.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/)
+>[!VIDEO](https://video.tv.adobe.com/v/26315/?captions=ger)
 
 ## Details zur Systemüberwachung {#system-monitoring-detail}
 
