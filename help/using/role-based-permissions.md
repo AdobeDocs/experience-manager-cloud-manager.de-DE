@@ -5,15 +5,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
-translation-type: ht
-source-git-commit: 157370b193c104915be063d1a4375f81839b88a2
+translation-type: tm+mt
+source-git-commit: 9cbe8f58cf04001ba9851ba321f03c7687e58014
 
 ---
 
 
 # Rollenbasierte Berechtigungen {#role-based-permissions}
 
-[!UICONTROL Cloud Manager] verfügt über vorkonfigurierte Rollen mit entsprechenden Berechtigungen. Beispielsweise schreibt ein Entwickler Code und ist berechtigt, den Code per Push an das **Git-Repository** zu übertragen. Ein Business Owner verfügt wiederum über verschiedene Berechtigungen, um KPIs (Key Performance Indicators) zu definieren und Bereitstellungen zu genehmigen.
+[!UICONTROL Cloud Manager] hat vorkonfigurierte Rollen mit entsprechenden Berechtigungen. Beispielsweise schreibt ein Entwickler Code und ist berechtigt, den Code per Push an das **Git-Repository** zu übertragen. Ein Business Owner verfügt wiederum über verschiedene Berechtigungen, um KPIs (Key Performance Indicators) zu definieren und Bereitstellungen zu genehmigen.
 
 ## Anwenderrollen {#user-roles}
 
@@ -23,14 +23,14 @@ Weitere Informationen zum Einrichten von Rollen finden Sie unter [Einrichten von
 
 In der folgenden Tabelle sind die Rollen definiert, die Sie in Admin Console zuweisen können.
 
-| **[!UICONTROL Cloud Manager]-Rolle ** | **Beschreibung** |
+| **[!UICONTROL Cloud Manager]Rolle ** | **Beschreibung** |
 |---|---|
-| Business Owner | Hauptanwender, der die [!UICONTROL Cloud Manager]-Ersteinrichtung abschließt. Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
+| Business Owner | Primary user who completes the initial [!UICONTROL Cloud Manager] setup. Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
 | Programmmanager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
-| Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging- und Produktionsbereitstellungen ausführen. Kann bedeutende 3-Tier-Fehler genehmigen. Hat Zugriff auf das Git-Repository. |
-| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Hat Commitzugriff auf das Git-Repository. |
+| Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Uses [!UICONTROL Cloud Manager] to execute stage and production deployments. Kann bedeutende 3-Tier-Fehler genehmigen. Hat Zugriff auf das Git-Repository. |
+| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Primarily uses [!UICONTROL Cloud Manager] to view status. Hat Commitzugriff auf das Git-Repository. |
 | Customer Success Engineer | Unterstützt im Allgemeinen den Erfolg von AMS-Kunden. Interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen auszuführen, die von einem CSE (Customer Success Engineer) überwacht werden müssen. |
-| Inhaltsautor | Interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager]. Dieser Anwender kann über den [!UICONTROL Cloud Manager]-Programmumschalter (nach Navigation über [!UICONTROL Experience Cloud]) auf Adobe Experience Manager (AEM) zugreifen. |
+| Inhaltsautor | Generally does not interact with [!UICONTROL Cloud Manager]. This user may use the [!UICONTROL Cloud Manager] Program Switcher (having navigated from [!UICONTROL Experience Cloud]) to access Adobe Experience Manager (AEM). |
 
 ## Anwenderberechtigungen {#user-permissions}
 
@@ -50,13 +50,14 @@ Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten 
 | Ausführung, Bereitstellung für die Produktion genehmigen | Bereitstellen der GoLive-Genehmigung. | x | x | x |  |  |
 | Ausführung, Bereitstellung für die Produktion planen | Planen der Bereitstellung für die Produktion. | x | x | x |  | x |
 | Ausführung für die Produktion bereitstellen | Bereitstellen der Anwendung für die Produktion, wenn diese zwecks CSE-Überwachung angehalten wurde. |  |  |  |  | x |
-| Ausführung abbrechen | Abbrechen der aktuellen Ausführung. | x | x | x |  |  |
+| Ausführung abbrechen | Abbrechen der aktuellen Ausführung. |  |  | x |  |  |
 | Ausführung, Quality-Gate-Fehler außer Kraft setzen | Genehmigen bedeutender Quality-Gate-Fehler. | x | x | x |  |  |
 | Pipeline erstellen | Einrichten/Bearbeiten der Pipeline. |  | x |  |  |  |
 | Pipeline lesen | Siehe Pipelinedetails. | x | x | x | x | x |
 | Pipeline schreiben | Einrichten/Bearbeiten der Pipeline. |  | x |  |  |  |
 | Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Business Owner“. |  | x |  |  |  |
 | Pipeline ändern, Managed Deployment | Berechtigung zum Bearbeiten der Option „CSE-Überwachung“. |  | x |  |  |  |
+| Pipeline löschen | Ermöglicht das Löschen einer Pipeline. |  | x |  |  |  |
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“. | x | x | x | x | x |
 | Persönliches Zugriffs-Token erstellen | Zugriff auf Git. |  | x |  | x |  |
 
