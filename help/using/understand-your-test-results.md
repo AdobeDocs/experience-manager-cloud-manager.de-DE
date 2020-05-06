@@ -8,8 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: ht
-source-git-commit: 1f31e654272afa60cac3376ce4dc3bc76f0d9dda
+translation-type: tm+mt
+source-git-commit: 278858465592482449080fedc3c0165805db223d
+workflow-type: tm+mt
+source-wordcount: '1469'
+ht-degree: 99%
 
 ---
 
@@ -47,17 +50,18 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 | Sicherheitsbewertung | A = 0 Schwachstellen <br/>B = mindestens 1 kleinere Schwachstelle<br/> C = mindestens 1 größere Schwachstelle <br/>D = mindestens 1 kritische Schwachstelle <br/>E = mindestens 1 Schwachstelle der Kategorie „Blocker“ | Kritisch | &lt; B |
 | Zuverlässigkeitsbewertung | A = 0 Fehler <br/>B = mindestens 1 kleinerer Fehler <br/>C = mindestens 1 größerer Fehler <br/>D = mindestens 1 kritischer Fehler E = mindestens 1 Fehler der Kategorie „Blocker“ | Wichtig | &lt; C |
 | Wartbarkeitsbewertung | Wenn die ausstehenden Kosten zur Code-Smell-Behebung …<br/><ul><li>&lt;= 5 % der Zeit ausmachen, die bereits in die Anwendung investiert wurde, lautet die Bewertung A. </li><li>zwischen 6 und 10 % dieser Zeit ausmachen, lautet die Bewertung B. </li><li>zwischen 11 und 20 % dieser Zeit ausmachen, lautet die Bewertung C. </li><li>zwischen 21 und 50 % dieser Zeit ausmachen, lautet die Bewertung D.</li><li>mehr als 50 % dieser Zeit ausmachen, lautet die Bewertung E.</li></ul> | Wichtig | &lt; A |
-| Abdeckung | Mix aus Zeilen- und Bedingungsabdeckung mit dieser Formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`  <br/>Dabei gilt Folgendes: CT = Bedingungen, bei denen die Auswertung während der Durchführung von Unit-Tests mindestens einmal „true“ ergeben hat <br/>CF = Bedingungen, bei denen die Auswertung während der Durchführung von Unit-Tests mindestens einmal „false“ ergeben hat <br/>LC = abgedeckte Zeilen = abzudeckende_Zeilen - nicht_abgedeckte_Zeilen <br/><br/> B = Gesamtanzahl der Bedingungen <br/>EL = Gesamtzahl ausführbarer Zeilen (abzudeckende_Zeilen) | Wichtig | &lt; 50% |
-| Übersprungene Unit-Tests | Zahl der übersprungenen Unit-Tests | Info | &gt; 1 |
-| Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | &gt; 1 |
-| Duplizierte Zeilen | Anzahl der Zeilen, die an duplizierten Blöcken beteiligt sind. <br/>Voraussetzungen, damit ein Codeblock als dupliziert gilt: <br/><ul><li>**Nicht-Java-Projekte:**</li><li>Es sollte mindestens 100 aufeinanderfolgende und duplizierte Token geben.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li><li>**Java-Projekte:**</li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul> <br/>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplizierungen ignoriert. | Info | &gt; 1% |
+| Abdeckung | Mix aus Zeilen- und Bedingungsabdeckung mit dieser Formel: <br/>`Coverage = (CT + CF + LC)/(2*B + EL)`<br/> Dabei gilt Folgendes: CT = Bedingungen, bei denen die Auswertung während der Durchführung von Unit-Tests mindestens einmal „true“ ergeben hat <br/>CF = Bedingungen, bei denen die Auswertung während der Durchführung von Unit-Tests mindestens einmal „false“ ergeben hat <br/>LC = abgedeckte Zeilen = abzudeckende_Zeilen - nicht_abgedeckte_Zeilen <br/><br/> B = Gesamtanzahl der Bedingungen <br/>EL = Gesamtzahl ausführbarer Zeilen (abzudeckende_Zeilen) | Wichtig | &lt; 50% |
+| Übersprungene Unit-Tests | Zahl der übersprungenen Unit-Tests | Info | > 1 |
+| Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | > 1 |
+| Duplizierte Zeilen | Anzahl der Zeilen, die an duplizierten Blöcken beteiligt sind. <br/>Voraussetzungen, damit ein Codeblock als dupliziert gilt: <br/><ul><li>**Nicht-Java-Projekte:**</li><li>Es sollte mindestens 100 aufeinanderfolgende und duplizierte Token geben.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li><li>**Java-Projekte:**</li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul> <br/>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplizierungen ignoriert. | Info | > 1% |
+| Kompatibilität mit Cloud-Diensten | Anzahl der festgestellten Probleme mit der Kompatibilität mit Cloud-Diensten. | Info | >0 |
 
 
 >[!NOTE]
 >
 >Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions).
 
-Sie können hier eine Liste der Regeln herunterladen: [code-quality-rules.xlsx](/help/using/assets/CodeQuality-Rules-new.xlsx).
+Sie können hier eine Liste der Regeln herunterladen: [code-quality-rules.xlsx](/help/using/assets/CodeQuality-rules-latest.xlsx).
 
 >[!NOTE]
 >
@@ -143,14 +147,14 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix
 
 | **Metrik** | **Kategorie** | **Fehlerschwellenwert** |
 |---|---|---|
-| Seitenanforderungsfehlerrate % | Kritisch | &gt;= 2% |
-| CPU-Auslastungsrate | Kritisch | &gt;= 80% |
-| Festplatten-I/O-Wartezeit | Kritisch | &gt;= 50% |
-| 95. Perzentil der Reaktionszeit | Wichtig | &gt;= KPI auf Programmebene |
-| Spitzenreaktionszeit | Wichtig | &gt;= 18 Sekunden |
+| Seitenanforderungsfehlerrate % | Kritisch | >= 2% |
+| CPU-Auslastungsrate | Kritisch | >= 80% |
+| Festplatten-I/O-Wartezeit | Kritisch | >= 50% |
+| 95. Perzentil der Reaktionszeit | Wichtig | >= KPI auf Programmebene |
+| Spitzenreaktionszeit | Wichtig | >= 18 Sekunden |
 | Seitenaufrufe pro Minute | Wichtig | &lt; KPI auf Programmebene |
-| Festplatten-Bandbreitenauslastung | Wichtig | &gt;= 90% |
-| Netzwerk-Bandbreitenauslastung | Wichtig | &gt;= 90% |
+| Festplatten-Bandbreitenauslastung | Wichtig | >= 90% |
+| Netzwerk-Bandbreitenauslastung | Wichtig | >= 90% |
 | Anforderungen pro Minute | Info | &lt; 6.000 |
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
