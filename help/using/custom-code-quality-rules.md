@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: cd6272bfd1ffdbf1802c30217e0c615392076109
 workflow-type: tm+mt
-source-wordcount: '2289'
+source-wordcount: '2282'
 ht-degree: 78%
 
 ---
@@ -558,6 +558,35 @@ public void doThis(Resource resource) {
 }
 ```
 
+### Die Sling-Planung sollte nicht verwendet werden {#sonarqube-sling-scheduler}
+
+**Schlüssel**: CQRules:AMSCORE-554
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+Die Sling-Planung darf nicht für Aufgaben verwendet werden, für die eine garantierte Ausführung erforderlich ist. Sling Scheduled-Aufträge garantieren die Ausführung und eignen sich besser für Umgebung mit und ohne Cluster.
+
+Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Clusterbildung finden Sie unter [Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) .
+
+### AEM nicht mehr unterstützte APIs sollten nicht verwendet werden {#sonarqube-aem-deprecated}
+
+**Schlüssel**: AMSCORE-553
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, für die keine Verwendung empfohlen wird und die daher als nicht mehr unterstützt gelten.
+
+In vielen Fällen werden diese APIs mit der standardmäßigen Anmerkung Java *@nicht mehr unterstützt* und als solche mit `squid:CallToDeprecatedMethod`.
+
+Es gibt jedoch Fälle, in denen eine API im Kontext von AEM nicht mehr unterstützt wird, in anderen Kontexten jedoch nicht mehr unterstützt wird. Diese Regel identifiziert diese zweite Klasse.
 
 ## OakPAL-Inhaltsregeln {#oakpal-rules}
 
@@ -642,7 +671,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
       + rtePlugins [nt:unstructured]
 ```
 
-#### Pakete sollten nicht überlappen {#oakpal-no-overlap}
+### Pakete sollten nicht überlappen {#oakpal-no-overlap}
 
 **Schlüssel**: PackageOverlaps
 
@@ -654,7 +683,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 
 Ähnlich wie bei *Pakete dürfen keine doppelten OSGi-Konfigurationen enthalten* ist dies ein häufiges Problem bei komplexen Projekten, bei denen mehrere separate Inhaltspakete in denselben Knotenpfad schreiben. Mit Inhaltspaketabhängigkeiten kann zwar ein konsistentes Ergebnis sichergestellt werden, Überlappungen sollten aber dennoch von vorneherein vermieden werden.
 
-#### OakPAL - Standard-Authoring-Modus sollte keine klassische Benutzeroberfläche sein {#oakpal-default-authoring}
+### Standard-Authoring-Modus sollte keine klassische Benutzeroberfläche sein {#oakpal-default-authoring}
 
 **Schlüssel**: ClassicUIAuthoringMode
 
@@ -666,7 +695,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 
 Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definiert den Standard-Authoring-Modus in AEM. Da die klassische Benutzeroberfläche seit AEM 6.4 nicht mehr unterstützt wird, wird jetzt ein Problem angezeigt, wenn der Standard-Authoring-Modus auf die klassische Benutzeroberfläche konfiguriert ist.
 
-#### OakPal - Komponenten mit Dialogen sollten Touch-UI-Dialoge haben {#oakpal-components-dialogs}
+### Komponenten mit Dialogen sollten Touch-UI-Dialoge haben {#oakpal-components-dialogs}
 
 **Schlüssel**: ComponentWithOnlyClassicUIDialog
 
@@ -684,7 +713,7 @@ AEM-Komponenten mit einem Dialogfeld für die klassische Benutzeroberfläche sol
 
 Die Dokumentation zu den AEM-Moderationstools enthält Dokumentation und Werkzeuge zum Konvertieren von Komponenten aus der klassischen Benutzeroberfläche in die Touch-Benutzeroberfläche. Weitere Informationen finden Sie in [den AEM-Modernisierungstools](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) .
 
-#### OakPal - Pakete sollten keinen veränderlichen und unveränderlichen Inhalt mischen {#oakpal-packages-immutable}
+### Pakete sollten keinen veränderlichen und nicht veränderlichen Inhalt mischen {#oakpal-packages-immutable}
 
 **Schlüssel**: ImmutableMutableMixedPackage
 
@@ -698,7 +727,7 @@ Um mit dem Bereitstellungsmodell für den Cloud-Dienst kompatibel zu sein, müss
 
 Weitere Informationen finden Sie unter [AEM-Projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) .
 
-### OakPal - Rückwärtsreplikationsagenten sollten nicht verwendet werden {#oakpal-reverse-replication}
+### Rückwärtsreplikationsagenten sollten nicht verwendet werden {#oakpal-reverse-replication}
 
 **Schlüssel**: ReverseReplication
 
@@ -712,35 +741,7 @@ In Cloud-Dienstbereitstellungen ist keine Unterstützung für die umgekehrte Rep
 
 Kunden, die die umgekehrte Replizierung verwenden, sollten sich für alternative Lösungen an Adobe wenden.
 
-### SonarQube - Sling-Planung sollte nicht verwendet werden {#sonarqube-sling-scheduler}
 
-**Schlüssel**: CQRules:AMSCORE-554
-
-**Typ**: Code Smell
-
-**Schweregrad**: Gering
-
-**Seit**: Version 2020.5.0
-
-Die Sling-Planung darf nicht für Aufgaben verwendet werden, für die eine garantierte Ausführung erforderlich ist. Sling Scheduled-Aufträge garantieren die Ausführung und eignen sich besser für Umgebung mit und ohne Cluster.
-
-Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Clusterbildung finden Sie unter [Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) .
-
-### SonarQube - SonarQube - AEM nicht mehr unterstützte APIs sollten nicht verwendet werden {#sonarqube-aem-deprecated}
-
-**Schlüssel**: AMSCORE-553
-
-**Typ**: Code Smell
-
-**Schweregrad**: Gering
-
-**Seit**: Version 2020.5.0
-
-Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, für die keine Verwendung empfohlen wird und die daher als nicht mehr unterstützt gelten.
-
-In vielen Fällen werden diese APIs mit der standardmäßigen Anmerkung Java *@nicht mehr unterstützt* und als solche mit `squid:CallToDeprecatedMethod`.
-
-Es gibt jedoch Fälle, in denen eine API im Kontext von AEM nicht mehr unterstützt wird, in anderen Kontexten jedoch nicht mehr unterstützt wird. Diese Regel identifiziert diese zweite Klasse.
 
 
 
