@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifisch
 uuid: a7feb465-1982-46be-9e57-e67b59849579
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Verwenden
+topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: 4881ff8be97451aa90c3430259ce13faef182e4f
+source-git-commit: 278858465592482449080fedc3c0165805db223d
+workflow-type: tm+mt
+source-wordcount: '2289'
+ht-degree: 78%
 
 ---
 
@@ -266,7 +269,7 @@ public void orDoThis(Session session) throws Exception {
 
 **Seit**: Version 2018.4.0
 
-As described in the [Sling documentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html), bindings servlets by paths is discouraged. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
+Wie in der [Sling-Dokumentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html) beschrieben, sollten Servlets nicht über Pfade verknüpft werden. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
 
 #### Nicht konformer Code {#non-compliant-code-5}
 
@@ -639,7 +642,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
       + rtePlugins [nt:unstructured]
 ```
 
-### Pakete sollten nicht überlappen {#oakpal-no-overlap}
+#### Pakete sollten nicht überlappen {#oakpal-no-overlap}
 
 **Schlüssel**: PackageOverlaps
 
@@ -650,3 +653,94 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 **Seit**: Version 2019.6.0
 
 Ähnlich wie bei *Pakete dürfen keine doppelten OSGi-Konfigurationen enthalten* ist dies ein häufiges Problem bei komplexen Projekten, bei denen mehrere separate Inhaltspakete in denselben Knotenpfad schreiben. Mit Inhaltspaketabhängigkeiten kann zwar ein konsistentes Ergebnis sichergestellt werden, Überlappungen sollten aber dennoch von vorneherein vermieden werden.
+
+#### OakPAL - Standard-Authoring-Modus sollte keine klassische Benutzeroberfläche sein {#oakpal-default-authoring}
+
+**Schlüssel**: ClassicUIAuthoringMode
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definiert den Standard-Authoring-Modus in AEM. Da die klassische Benutzeroberfläche seit AEM 6.4 nicht mehr unterstützt wird, wird jetzt ein Problem angezeigt, wenn der Standard-Authoring-Modus auf die klassische Benutzeroberfläche konfiguriert ist.
+
+#### OakPal - Komponenten mit Dialogen sollten Touch-UI-Dialoge haben {#oakpal-components-dialogs}
+
+**Schlüssel**: ComponentWithOnlyClassicUIDialog
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+AEM-Komponenten mit einem Dialogfeld für die klassische Benutzeroberfläche sollten immer über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche verfügen, um eine optimale Authoring-Funktion zu bieten und mit dem Cloud-Dienstbereitstellungsmodell kompatibel zu sein, bei dem die klassische Benutzeroberfläche nicht unterstützt wird. Diese Regel überprüft die folgenden Szenarien:
+
+* Eine Komponente mit einem Dialogfeld für die klassische Benutzeroberfläche (d. h. ein untergeordneter Knoten im Dialogfeld) muss über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche verfügen (d. h. über einen `cq:dialog` untergeordneten Knoten).
+* Eine Komponente mit einem Dialogfeld für das Design der klassischen Benutzeroberfläche (d. h. ein Knoten &quot;design_dialog&quot;) muss über ein entsprechendes Dialogfeld für das Design der Touch-Benutzeroberfläche verfügen (d. h. einen `cq:design_dialog` untergeordneten Knoten).
+* Eine Komponente mit einem Dialogfeld für die klassische Benutzeroberfläche und einem Dialogfeld für die klassische Benutzeroberfläche muss sowohl über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche als auch über ein entsprechendes Dialogfeld für das Touch-UI-Design verfügen.
+
+Die Dokumentation zu den AEM-Moderationstools enthält Dokumentation und Werkzeuge zum Konvertieren von Komponenten aus der klassischen Benutzeroberfläche in die Touch-Benutzeroberfläche. Weitere Informationen finden Sie in [den AEM-Modernisierungstools](https://opensource.adobe.com/aem-modernize-tools/pages/tools.html) .
+
+#### OakPal - Pakete sollten keinen veränderlichen und unveränderlichen Inhalt mischen {#oakpal-packages-immutable}
+
+**Schlüssel**: ImmutableMutableMixedPackage
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+Um mit dem Bereitstellungsmodell für den Cloud-Dienst kompatibel zu sein, müssen einzelne Inhaltspakete entweder Inhalte für die unveränderlichen Bereiche des Repositorys enthalten (d. h., sie `/apps and /libs, although /libs` sollten nicht durch Kundencode geändert werden und verursachen eine separate Verletzung) oder den veränderlichen Bereich (d. h. alles andere), jedoch nicht beide. Beispielsweise `/apps/myco/components/text and /etc/clientlibs/myco` ist ein Paket, das beide enthält, nicht mit dem Cloud-Dienst kompatibel und führt dazu, dass ein Problem gemeldet wird.
+
+Weitere Informationen finden Sie unter [AEM-Projektstruktur](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/implementing/developing/aem-project-content-package-structure.html) .
+
+### OakPal - Rückwärtsreplikationsagenten sollten nicht verwendet werden {#oakpal-reverse-replication}
+
+**Schlüssel**: ReverseReplication
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+In Cloud-Dienstbereitstellungen ist keine Unterstützung für die umgekehrte Replizierung verfügbar, wie in den [Versionshinweisen beschrieben: Entfernung von Replizierungsagenten](https://docs.adobe.com/content/help/en/experience-manager-cloud-service/release-notes/aem-cloud-changes.html#replication-agents).
+
+Kunden, die die umgekehrte Replizierung verwenden, sollten sich für alternative Lösungen an Adobe wenden.
+
+### SonarQube - Sling-Planung sollte nicht verwendet werden {#sonarqube-sling-scheduler}
+
+**Schlüssel**: CQRules:AMSCORE-554
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+Die Sling-Planung darf nicht für Aufgaben verwendet werden, für die eine garantierte Ausführung erforderlich ist. Sling Scheduled-Aufträge garantieren die Ausführung und eignen sich besser für Umgebung mit und ohne Cluster.
+
+Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Clusterbildung finden Sie unter [Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) .
+
+### SonarQube - SonarQube - AEM nicht mehr unterstützte APIs sollten nicht verwendet werden {#sonarqube-aem-deprecated}
+
+**Schlüssel**: AMSCORE-553
+
+**Typ**: Code Smell
+
+**Schweregrad**: Gering
+
+**Seit**: Version 2020.5.0
+
+Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, für die keine Verwendung empfohlen wird und die daher als nicht mehr unterstützt gelten.
+
+In vielen Fällen werden diese APIs mit der standardmäßigen Anmerkung Java *@nicht mehr unterstützt* und als solche mit `squid:CallToDeprecatedMethod`.
+
+Es gibt jedoch Fälle, in denen eine API im Kontext von AEM nicht mehr unterstützt wird, in anderen Kontexten jedoch nicht mehr unterstützt wird. Diese Regel identifiziert diese zweite Klasse.
+
+
+
