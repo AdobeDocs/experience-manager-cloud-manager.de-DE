@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 278858465592482449080fedc3c0165805db223d
+source-git-commit: 4edbbff4e519a1403c3140cc742def35f9516eff
 workflow-type: tm+mt
 source-wordcount: '1469'
 ht-degree: 99%
@@ -54,7 +54,7 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 | Übersprungene Unit-Tests | Zahl der übersprungenen Unit-Tests | Info | > 1 |
 | Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | > 1 |
 | Duplizierte Zeilen | Anzahl der Zeilen, die an duplizierten Blöcken beteiligt sind. <br/>Voraussetzungen, damit ein Codeblock als dupliziert gilt: <br/><ul><li>**Nicht-Java-Projekte:**</li><li>Es sollte mindestens 100 aufeinanderfolgende und duplizierte Token geben.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li><li>**Java-Projekte:**</li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul> <br/>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplizierungen ignoriert. | Info | > 1% |
-| Kompatibilität mit Cloud-Diensten | Anzahl der festgestellten Probleme mit der Kompatibilität mit Cloud-Diensten. | Info | >0 |
+| Kompatibilität mit Cloud-Diensten | Anzahl der festgestellten Probleme mit der Kompatibilität mit Cloud-Diensten. | Info | > 0 |
 
 
 >[!NOTE]
