@@ -9,8 +9,11 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: ht
-source-git-commit: fb84c2d41c76c64fc0be1e9f86356ee0cb5bcf9c
+translation-type: tm+mt
+source-git-commit: 18b539951e286cb14d5c10404b42ba80682bbef0
+workflow-type: tm+mt
+source-wordcount: '1575'
+ht-degree: 97%
 
 ---
 
@@ -25,7 +28,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -125,7 +128,7 @@ Er wird dann während der Ausführung der Pipeline als separater Schritt angezei
 
 **Ungültigmachung des Dispatchers**
 
-Als Bereitstellungsmanager haben Sie die Möglichkeit, eine Reihe von Pfaden zu konfigurieren, die entweder **ungültig gemacht** oder aus dem AEM Dispatcher-Cache **entfernt** werden, wenn Sie die Pipeline einrichten oder bearbeiten.
+As a Deployment Manager, you have the opportunity to configure a set of content paths which will either be **invalidated** or **flushed** from the AEM Dispatcher cache, while setting up or editing pipeline.
 
 Sie können verschiedene Pfade für die Bereitstellung in der Staging- und Produktionsumgebung konfigurieren. Wenn diese Cache-Aktionen konfiguriert sind, werden sie im Rahmen der Einrichtung der Bereitstellungspipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden standardmäßiges AEM Dispatcher-Verhalten: Ungültiges Verhalten führt zu einer Ungültigmachung des Caches, vergleichbar mit einer Aktivierung von Autoreninhalten zur Veröffentlichung. Beim „Leeren“ wird der Cache-Inhalt gelöscht.
 
@@ -199,7 +202,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
