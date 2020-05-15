@@ -2,9 +2,12 @@
 title: Umgang mit Maven-Projektversionen
 seo-title: Umgang mit Maven-Projektversionen
 description: Erfahren Sie mehr über den Umgang mit Maven-Projektversionen.
-seo-description: Auf dieser Seite erfahren Sie mehr über den Umgang mit Maven-Projektversionen
-translation-type: ht
-source-git-commit: f5ff89820eb843b35b617d300dbbc07f19ca2c17
+seo-description: Auf dieser Seite erfahren Sie mehr über den Umgang mit Maven-Projektversionen.
+translation-type: tm+mt
+source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 100%
 
 ---
 
