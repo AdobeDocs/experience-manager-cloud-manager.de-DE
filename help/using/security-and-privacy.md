@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: e2187565e7f06d64841eb2af9b4b1a56feb5ebe4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '249'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -30,7 +30,7 @@ Kunden, die [!UICONTROL Cloud Manager] verwenden, benötigen ihre IMS-Anmeldeinf
 
 ## Datensicherheit {#data-security}
 
-Code in [!UICONTROL Cloud Manager] wird während der Übertragung verschlüsselt. Von Cloud Manager erstellte Binärdateien werden beim Speichern auch verschlüsselt und verschlüsselt.
+Code in [!UICONTROL Cloud Manager] wird während der Übertragung verschlüsselt. Von Cloud Manager erstellte Binärdateien werden ebenfalls während der Übertragung und beim Speichern verschlüsselt.
 
 Alle Kunden erhalten ein eigenes **Git-Repository**. Ihr Code ist sicher und wird nicht an andere **Organisationen** weitergegeben.
 
