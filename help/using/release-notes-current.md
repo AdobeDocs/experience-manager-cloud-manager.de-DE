@@ -2,12 +2,12 @@
 title: Versionshinweise für 2020.6.0
 seo-title: Versionshinweise für AEM Cloud Manager 2020.6.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.6.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.6.0.
-translation-type: tm+mt
+seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.6.0.
+translation-type: ht
 source-git-commit: 0652436ec0c1c95d270a06a600424dbfd0140b27
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '181'
-ht-degree: 33%
+ht-degree: 100%
 
 ---
 
@@ -21,21 +21,21 @@ Die [!UICONTROL Cloud Manager]-Version 2020.6.0 wurde am Donnerstag, 04. Juni�
 
 ## Neuerungen {#whats-new}
 
-* Coach Markierungen auf der Landingpage, um den Benutzer über die grundlegende Navigation zu informieren und zu informieren.
+* Coachmarks auf der Landingpage, die dem Benutzer grundlegende Informationen zur Navigation liefern.
 
-* In Cloud Manager steht jetzt eine **LEARN** -Seite zur Verfügung, die über die Navigation oben aufgerufen werden kann. Diese Seite enthält Ressourcen, die Benutzern dabei helfen, sich über die am häufigsten verwendeten Arbeitsabläufe zu informieren, je nachdem, welche Rollen ihnen in Cloud Manager zugewiesen wurden.
+* In Cloud Manager ist jetzt eine Seite mit **LERNMATERIALIEN** verfügbar, auf die Sie über die obere Navigationsleiste zugreifen können. Die Seite enthält Ressourcen, die Benutzer über die häufigsten Workflows für ihre entsprechende Rolle in Cloud Manager informieren.
 
-* Der Höchstwert für die Verarbeitungszeit von Assets 95. Perzentil wurde auf 500 Sekunden erhöht.
+* Der Höchstwert für das 95. Perzentil der Verarbeitungszeit in Assets wurde auf 500 Sekunden erhöht.
 
-* Das Build-Protokoll enthält jetzt die Liste der entdeckten Artefakte, einschließlich übersprungener Inhaltspakete.
+* Das Erstellungsprotokoll enthält jetzt eine Liste der gefundenen Artefakte einschließlich übersprungener Inhaltspakete.
 
-* Der Schritt Erstellen überprüft jetzt, ob alle erstellten Inhaltspakete alle obligatorischen Eigenschaften enthalten - Name, Gruppe und Version.
+* Der Schritt „Erstellen“ überprüft jetzt, ob alle erstellten Inhaltspakete alle obligatorischen Eigenschaften enthalten: Name, Gruppe und Version.
 
 ## Fehlerbehebungen {#bug-fixes}
 
 
-* Bei der Konfiguration der Produktions-Pipeline war die Option &quot;Geplante Bereitstellung&quot;für einige Kunden nicht sichtbar.
+* Bei der Konfiguration der Produktions-Pipeline war die Option „Geplante Bereitstellung“ für einige Kunden nicht sichtbar.
 
-* Bestimmte Bereitstellungsmeldungen wurden abgeschnitten.
+* Bestimmte Bereitstellungsmeldungen waren abgeschnitten.
 
 
