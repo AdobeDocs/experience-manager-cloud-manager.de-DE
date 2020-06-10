@@ -10,6 +10,9 @@ topic-tags: getting-started
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
 translation-type: ht
 source-git-commit: 16893b8bcd2b2d681a14bb6be3786e358e1952fb
+workflow-type: ht
+source-wordcount: '697'
+ht-degree: 100%
 
 ---
 
@@ -60,6 +63,7 @@ Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu
    1. Wie viele Seitenaufrufe pro Minute bei Spitzenlast?
 
       * Empfohlener Wert: 200 Seitenaufrufe pro Minute
+
    **AEM Assets**
 
    Von Anfang an waren in Cloud Manager Leistungstests für AEM Sites-Programme möglich. In dieser Version ist eine Funktion hinzugekommen, mit der auch Leistungstests für AEM Assets-Programme durchgeführt werden können. Assets-Leistungstests erfolgen, indem Assets während eines 30-minütigen Testzeitraums wiederholt hochgeladen und die Verarbeitungszeit für jedes Asset sowie verschiedene Metriken auf Systemebene gemessen werden.
@@ -67,6 +71,7 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
    * 95. Perzentil der Verarbeitungszeit
    * Pro Minute hochgeladene Assets
+
    ![](assets/Setup_Program-KPIs.png)
 
 1. Unter **Bereitstellung** können Sie die Bereitstellungskonfiguration für Produktions- und Nicht-Produktionsumgebungen in Ihrem Programm anzeigen oder bearbeiten. **Automatische Skalierung aktiviert** wird angezeigt, wenn die automatische Skalierung für das Programm aktiviert wurde.
