@@ -8,7 +8,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 072dbc1b-e608-4b1f-b0e8-0e4f88c8ad12
 translation-type: tm+mt
-source-git-commit: e8484052124c23d4849c59f6c76262a3284ef2ac
+source-git-commit: e48f9121423f46f4cf858c4951ad412582020bdb
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 85%
@@ -26,6 +26,6 @@ To get started with an Adobe ID, please visit [Manage Adobe Identity Types](http
 
 ### Anwender und Rollen {#users-and-roles}
 
-Sobald Adobe eine Organisation für Ihr Unternehmen erstellt hat, wird Ihr Administrator als erstes Mitglied dieser Organisation hinzugefügt. Dem Administrator werden standardmäßig die Administratorberechtigungen erteilt und das [!UICONTROL AEM Managed Services]-**Produkt** sowie mindestens ein [!UICONTROL Cloud Manager] **Produktprofil** zugewiesen. Weitere Informationen zum Konfigurieren und Verwalten Ihrer Teamanwender mit Admin Console finden Sie unter [Hinzufügen von Anwendern und Rollen](setting-up-users-and-roles.md).
+Sobald Adobe eine Organisation für Ihr Unternehmen erstellt hat, wird Ihr Administrator als erstes Mitglied dieser Organisation hinzugefügt. Dem Administrator werden standardmäßig Administratorberechtigungen gewährt und das Produkt [!UICONTROL AEM Managed Services] sowie mindestens ein [!UICONTROL Cloud Manager]-Produktprofil zugewiesen. Weitere Informationen zum Konfigurieren und Verwalten Ihrer Teamanwender mit Admin Console finden Sie unter [Hinzufügen von Anwendern und Rollen](setting-up-users-and-roles.md).
 
 Mit diesen Rechten kann Ihr Administrator nun per Single Sign-on (mit der Adobe ID) auf [!UICONTROL Experience Cloud]-Dienste zugreifen, sich bei Ihren AEM-Cloud-Umgebungen anmelden und [!UICONTROL Cloud Manager] verwenden.
