@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 6851884b08c0c0a971242a958f72a7673a1a1196
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '695'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -74,7 +74,7 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
    ![](assets/Setup_Program-KPIs.png)
 
-1. Under **Provisioning**, you can view or edit the provisioning configuration for production and non-production environments in your program. **Automatische Skalierung aktiviert** wird angezeigt, wenn die automatische Skalierung für das Programm aktiviert wurde.
+1. Unter **Bereitstellung** können Sie die Bereitstellungskonfiguration für Produktions- und Nicht-Produktionsumgebungen in Ihrem Programm anzeigen oder bearbeiten. **Automatische Skalierung aktiviert** wird angezeigt, wenn die automatische Skalierung für das Programm aktiviert wurde.
 
    >[!NOTE]
    >
