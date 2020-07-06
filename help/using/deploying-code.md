@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+source-git-commit: 509a74b2e85d5880bafa56cd0ab3bae9c57b0683
 workflow-type: tm+mt
-source-wordcount: '953'
-ht-degree: 96%
+source-wordcount: '952'
+ht-degree: 90%
 
 ---
 
@@ -110,19 +110,19 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    >
    >Diese Funktion wird voraussichtlich hauptsächlich von 1-1-1-Kunden verwendet.
 
-1. Jedes AEM-Artefakt wird über Package Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
+1. Jedes AEM-Artefakt wird über Package Manager-APIs für jede AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
 
    Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie unter „Arbeiten mit Paketen“.
 
    >[!NOTE]
    >
-   >Alle AEM-Artefakte werden für Autor und Publisher bereitgestellt. Wenn knotenspezifische Konfigurationen erforderlich sind, sollten Ausführungsmodi genutzt werden. Weitere Informationen dazu, wie Sie mit Ausführungsmodi die AEM-Instanz für einen bestimmten Zweck anpassen können, finden Sie unter „Ausführungsmodi“.
+   >Alle AEM-Artefakte werden für Autor und Publisher bereitgestellt. Die Ausführungsmodi sollten genutzt werden, wenn knotenspezifische Konfigurationen erforderlich sind. Weitere Informationen dazu, wie Sie mit den Ausführungsmodi Ihre AEM-Instanz für einen bestimmten Zweck anpassen können, finden Sie unter Ausführungsmodi.
 
 1. Das Dispatcher-Artefakt wird wie folgt für jeden Dispatcher bereitgestellt:
 
    1. Aktuelle Konfigurationen werden gesichert und in einen temporären Speicherort kopiert.
    1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Informationen finden Sie unter „Verwalten von Dispatcher-Konfigurationen“. Mit diesem Schritt werden die Verzeichnisse gelöscht, damit keine verwaisten Dateien übrig bleiben.
-   1. Das Artefakt wird in das HTTPD-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
+   1. The artifact is extracted to the `httpd` directory.  Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
    1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Dienst neu geladen. Falls ein Fehler auftritt, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Dienst wird neu geladen und der Fehler wird an Cloud Manager gemeldet.
    1. Jeder in der Pipelinekonfiguration angegebene Pfad wird ungültig oder aus dem Dispatcher-Cache entfernt.
 
