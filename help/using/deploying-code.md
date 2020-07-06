@@ -6,10 +6,13 @@ seo-description: Sobald Sie Ihre Pipeline (Repository, Umgebung und Testumgebung
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Verwenden
+topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: ht
-source-git-commit: bc9454120c92181503efbf8270ce621af26801d9
+translation-type: tm+mt
+source-git-commit: ce3ed17e74a5cb7e798bb583ddd75b18518a59bd
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 96%
 
 ---
 
@@ -37,6 +40,7 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    1. Staging-Bereitstellung
    1. Staging-Tests
    1. Produktionsbereitstellung
+
    >[!NOTE]
    >
    >Außerdem können Sie die Schritte der verschiedenen Bereitstellungsprozesse überprüfen, indem Sie die Protokolle anzeigen oder die Ergebnisse anhand der Testkriterien überprüfen.
@@ -47,12 +51,14 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    * Build- und Komponententests: Dieser Schritt führt einen containerisierten Build-Prozess aus. Weitere Informationen zur Build-Umgebung finden Sie unter [AEM-Anwendungsprojekt erstellen](create-an-application-project.md).
    * Code-Scan: Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md).
    * Bereitstellung in der Staging-Umgebung
+
    ![](assets/Stage_Deployment1.png)
 
    **Staging-Tests** umfassen die folgenden Schritte:
 
    * Sicherheitstests: Dieser Schritt bewertet die Auswirkungen Ihres Anwendungs-Codes auf die Sicherheit der AEM-Umgebung. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md) .
    * Leistungstests: Dieser Schritt bewertet die Leistung Ihres Anwendungs-Codes. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md) .
+
    ![](assets/Stage_Testing1.png)
 
    Die **Produktionsbereitstellung** umfasst die folgenden Schritte:
@@ -61,6 +67,7 @@ Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfigurier
    * **Zeitplan zur Produktionsbereitstellung** (sofern aktiviert)
    * **CSE-Unterstützung** (sofern aktiviert)
    * **Bereitstellung für Produktion**
+
    ![](assets/Prod_Deployment1.png)
 
    >[!NOTE]
@@ -118,6 +125,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    1. Das Artefakt wird in das HTTPD-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
    1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Dienst neu geladen. Falls ein Fehler auftritt, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Dienst wird neu geladen und der Fehler wird an Cloud Manager gemeldet.
    1. Jeder in der Pipelinekonfiguration angegebene Pfad wird ungültig oder aus dem Dispatcher-Cache entfernt.
+
    >[!NOTE]
    >
    >Cloud Manager geht davon aus, dass das Dispatcher-Artefakt alle Dateien enthält. Alle Dispatcher-Konfigurationsdateien müssen im Git-Repository vorhanden sein. Fehlende Dateien oder Ordner führen zu Bereitstellungsfehlern.
@@ -126,7 +134,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
    >[!NOTE]
    >
-   >Sie können Änderungen am Load-Balancer in Entwicklungs- und Staging-Bereitstellungen überspringen, d. h. das Trennen und Anfügen in beiden Nicht-Produktions-Pipelines bei Entwicklungsumgebungen und in der Produktions-Pipeline bei Staging-Umgebungen.
+   >Sie können die Lastenausgleichsänderungen in Entwicklungs- und Bereitstellungen überspringen, d. h. die Schritte in beiden Nicht-Produktionslinien für Entwickler-Umgebung und die Produktionsleitung für Stage-Umgebung lösen und anhängen.
 
 ### Bereitstellung in der Produktionsphase {#deployment-production-phase}
 
