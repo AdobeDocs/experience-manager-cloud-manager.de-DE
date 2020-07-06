@@ -8,9 +8,9 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
-translation-type: ht
-source-git-commit: 3663bd773c0043282359d690621de5023fa2974c
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 8c651bcb187d911448475f6031c93bf956277e9f
+workflow-type: tm+mt
 source-wordcount: '2282'
 ht-degree: 100%
 
@@ -558,7 +558,7 @@ public void doThis(Resource resource) {
 }
 ```
 
-### Der Sling Scheduler sollte nicht verwendet werden {#sonarqube-sling-scheduler}
+### Sling-Planung sollte nicht verwendet werden {#sonarqube-sling-scheduler}
 
 **Schlüssel**: CQRules:AMSCORE-554
 
@@ -568,11 +568,11 @@ public void doThis(Resource resource) {
 
 **Seit**: Version 2020.5.0
 
-Der Sling Scheduler darf nicht für Aufgaben verwendet werden, deren Ausführung zwingend erforderlich ist. Sling Scheduler-Aufträge garantieren die Ausführung und sind bessere für geclusterte und nicht geclusterte Umgebungen geeignet.
+Die Sling-Planung darf nicht für Aufgaben verwendet werden, die eine garantierte Ausführung erfordern. Über Sling geplante Aufträge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
 
-Weitere Informationen zu Sling-Aufträgen in geclusterten Umgebungen finden Sie unter [Apache Sling-Ereignisse und Auftragsverarbeitung](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
+Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Umgebung mit Clustern finden Sie unter [Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
-### In AEM nicht mehr unterstützte APIs sollten nicht verwendet werden {#sonarqube-aem-deprecated}
+### Veraltete AEM-APIs sollten nicht verwendet werden {#sonarqube-aem-deprecated}
 
 **Schlüssel**: AMSCORE-553
 
@@ -582,11 +582,11 @@ Weitere Informationen zu Sling-Aufträgen in geclusterten Umgebungen finden Sie 
 
 **Seit**: Version 2020.5.0
 
-Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, deren Verwendung nicht mehr empfohlen wird und die entsprechend als nicht mehr unterstützt gelten.
+Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, von deren Verwendung abgeraten wird und die daher als veraltet gelten.
 
-In vielen Fällen werden diese APIs mit der standardmäßigen Java-Annotation *@Deprecated* gekennzeichnet und entsprechend von `squid:CallToDeprecatedMethod` identifiziert.
+In vielen Fällen sind diese APIs unter Verwendung der Standard-Java-Annotation *@Deprecated* abgekündigt und als solche durch `squid:CallToDeprecatedMethod` gekennzeichnet.
 
-Es gibt jedoch Fälle, in denen eine API im Kontext von AEM als nicht mehr unterstützt gilt, in anderen Kontexten jedoch weiterhin unterstützt wird. Diese Regel identifiziert diese zweite Klasse.
+Es gibt jedoch Fälle, in denen eine API im Kontext von AEM veraltet ist, in anderen Kontexten jedoch nicht. Diese Regel identifiziert diese zweite Klasse.
 
 ## OakPAL-Inhaltsregeln {#oakpal-rules}
 
@@ -621,7 +621,8 @@ Ein häufig auftretendes Problem bei komplexen Projekten besteht darin, dass die
 
 #### Nicht konformer Code {#non-compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + projectA
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
@@ -632,7 +633,8 @@ Ein häufig auftretendes Problem bei komplexen Projekten besteht darin, dass die
 
 #### Konformer Code {#compliant-code-osgi}
 
-```+ apps
+```
++ apps
   + shared-config
     + config
       + com.day.cq.commons.impl.ExternalizerImpl
