@@ -8,7 +8,10 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 7769911253c149f4b1f7d9dec5d94888ccdbcb59
+source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
+workflow-type: tm+mt
+source-wordcount: '210'
+ht-degree: 100%
 
 ---
 
@@ -29,11 +32,12 @@ Der Assistent deckt folgende fünf Phasen der AEM-Produktaktualisierung ab:
 ## Verwenden des Assistenten für Produktaktualisierungen {#using-product-update-wizard}
 
 >[!NOTE]
+>
 >Cloud Manager-Kunden, die eine Berechtigung zum Upgrade auf AEM 6.5 haben, können den Assistenten für Produktaktualisierungen nutzen. Weitere Informationen erhalten Sie bei Ihrem Customer Success Engineer (CSE).
 
 1. Wenn AEM 6.5 für Ihr Programm verfügbar ist, erhalten Sie eine Pulse-Benachrichtigung über Cloud Manager.
 
-1. Auf dem Übersichtsbildschirm von [!UICONTROL Cloud Manager] wird dann die Karte **[!UICONTROL AEM 6.5-Aktualisierung]** angezeigt. Anhand dieser Karte können Sie sehen, in welcher Phase des Aktualisierungsprozesses Sie sich gerade befinden und welcher der nächste Schritt ist. Wählen Sie **[!UICONTROL Aktualisierung starten]**, um den Assistenten zu starten.
+1. Auf dem Übersichtsbildschirm von **[!UICONTROL Cloud Manager]** wird dann die Karte [!UICONTROL AEM 6.5-Aktualisierung] angezeigt. Anhand dieser Karte können Sie sehen, in welcher Phase des Aktualisierungsprozesses Sie sich gerade befinden und welcher der nächste Schritt ist. Wählen Sie **[!UICONTROL Aktualisierung starten]**, um den Assistenten zu starten.
 
    ![](assets/Start-Update.png)
 
