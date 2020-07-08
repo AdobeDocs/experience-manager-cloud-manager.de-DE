@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite erhalten Sie Informationen zum Konfigurieren d
 uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Erste Schritte
+topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
-translation-type: ht
-source-git-commit: e0a280efddb1e31f5aef65f0f52fc5b4e71de3da
+translation-type: tm+mt
+source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+workflow-type: tm+mt
+source-wordcount: '603'
+ht-degree: 100%
 
 ---
 
@@ -20,7 +23,7 @@ source-git-commit: e0a280efddb1e31f5aef65f0f52fc5b4e71de3da
 
 Cloud Manager kann Webserver- und Dispatcher-Konfigurationsdateien bereitstellen, sofern diese nicht nur in den normalen AEM-Inhaltspaketen, sondern auch im **Git-Repository** gespeichert sind.
 
-Um diese Funktion nutzen zu können, sollte der Maven-Build eine ZIP-Datei erstellen, die mindestens zwei Verzeichnisse enthält – ***conf*** und ***conf.d***. Diese ZIP-Datei kann mit dem Maven-Assembly-Plug-in erstellt werden. Projekte, die von Cloud Manager mithilfe des integrierten [Assistenten](create-an-application-project.md) erstellt wurden, haben die korrekte Maven-Projektstruktur, da diese bei der Projekterstellung erstellt wurde. Dies ist der empfohlene Pfad für neue Managed Services-Kunden.
+Um diese Funktion nutzen zu können, sollte der Maven-Build eine ZIP-Datei erstellen, die mindestens zwei Verzeichnisse enthält – ***conf*** und ***conf.d***. Diese ZIP-Datei kann mit dem Maven-Assembly-Plug-in erstellt werden. Projekte, die von Cloud Manager mithilfe des integrierten [Assistenten](/help/using/create-an-application-project.md) erstellt wurden, haben die korrekte Maven-Projektstruktur, da diese bei der Projekterstellung erstellt wurde. Dies ist der empfohlene Pfad für neue Managed Services-Kunden.
 
 Beim Bereitstellen einer **Dispatcher-Instanz** ersetzt der Inhalt dieser Verzeichnisse den Inhalt der entsprechenden Verzeichnisse in der Dispatcher-Instanz. Da Webserver- und Dispatcher-Konfigurationsdateien häufig umgebungsspezifische Informationen benötigen, müssen Sie zur korrekten Nutzung dieser Funktion zunächst diese Umgebungsvariablen in ***/etc/sysconfig/httpd*** mithilfe Ihrer Customer Success Engineers (CSE) festlegen.
 
