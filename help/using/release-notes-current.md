@@ -1,38 +1,40 @@
 ---
-title: Versionshinweise für 2020.6.0
-seo-title: Versionshinweise für AEM Cloud Manager 2020.6.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.6.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.6.0.
+title: Versionshinweise für 2020.7.0
+seo-title: Versionshinweise für AEM Cloud Manager 2020.7.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.7.0.
+seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.7.0.
 translation-type: tm+mt
-source-git-commit: fddfc8cef28bc07fb32d7f8ca6a815e888beefef
+source-git-commit: 26492dc02371d21670778f3cd60d26146439548e
 workflow-type: tm+mt
-source-wordcount: '181'
-ht-degree: 100%
+source-wordcount: '170'
+ht-degree: 36%
 
 ---
 
-# Versionshinweise für 2020.6.0 {#release-notes-for}
+# Versionshinweise für 2020.7.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.6.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.7.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2020.6.0 wurde am Donnerstag, 04. Juni 2020 veröffentlicht.
+Die Version 2020.6.0 von [!UICONTROL Cloud Manager] wurde am 09. Juli 2020 veröffentlicht.
 
 ## Neuerungen {#whats-new}
 
-* Coachmarks auf der Landingpage, die dem Benutzer grundlegende Informationen zur Navigation liefern.
+* Das Trennen und Anhängen von Dispatcher-Instanzen von den Lastenausgleichsmodulen während der Produktionsimplementierung funktioniert jetzt konsistenter.
 
-* In Cloud Manager ist jetzt eine Seite mit **LERNMATERIALIEN** verfügbar, auf die Sie über die obere Navigationsleiste zugreifen können. Die Seite enthält Ressourcen, die Benutzer über die häufigsten Workflows für ihre entsprechende Rolle in Cloud Manager informieren.
+* Der Cloud Manager Build Container unterstützt jetzt sowohl Java 8 als auch Java 11.
 
-* Der Höchstwert für das 95. Perzentil der Verarbeitungszeit in Assets wurde auf 500 Sekunden erhöht.
-
-* Das Erstellungsprotokoll enthält jetzt eine Liste der gefundenen Artefakte einschließlich übersprungener Inhaltspakete.
-
-* Der Schritt „Erstellen“ überprüft jetzt, ob alle erstellten Inhaltspakete alle obligatorischen Eigenschaften enthalten: Name, Gruppe und Version.
+* Cloud Manager-Pipeline unterstützen jetzt kundenspezifische Variablen und Geheimnisse.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Bei der Konfiguration der Produktions-Pipeline war die Option „Geplante Bereitstellung“ für einige Kunden nicht sichtbar.
+* Die **Optionen &quot;Abbrechen** &quot;und &quot; **Speichern** &quot;auf der Seite &quot;Bearbeiten in der Nicht-Produktion-Pipeline&quot;waren nicht immer sichtbar.
 
-* Bestimmte Bereitstellungsmeldungen waren abgeschnitten.
+* Bestimmte Fehler im Code-Qualitätsprozess können dazu führen, dass die Protokolldatei nicht korrekt generiert wird.
+
+* Einige große Pipeline-Step-Protokolle konnten nicht konsistent über die Benutzeroberfläche heruntergeladen werden.
+
+## Bekannte Probleme {#known-issues}
+
+* Wenn eine AMS-Umgebung eine Standby-Instanz enthält, wird in der protokollierten Meldung angegeben, dass die Instanz im Gegensatz zum Standby-Modus ausfällt.
