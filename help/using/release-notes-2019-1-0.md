@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manag
 uuid: 3af5808f-828f-4846-bee4-1e62194b48ad
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Versionshinweise
+topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 translation-type: tm+mt
-source-git-commit: 12d787ef2f9b2dd229b8ed0f8c602fbf5c06aa80
+source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
+workflow-type: tm+mt
+source-wordcount: '349'
+ht-degree: 97%
 
 ---
 
@@ -26,7 +29,7 @@ Die [!UICONTROL Cloud Manager]-Version 2019.1.0 wurde am 17. Januar 2019 ver�
 
 * AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
 * Pipelines, die ausschließlich Build- und Codequalitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md) im Abschnitt **Reine Nicht-Produktions- und Codequalitätspipelines**.
-* Benutzerdefinierte Umgebungsvariablen in der Buildumgebung werden nun unterstützt. Weitere Informationen finden Sie unter [Erstellen von AEM-Anwendungsprojekten](create-an-application-project.md).
+* Benutzerdefinierte Umgebungsvariablen in der Buildumgebung werden nun unterstützt. Refer to [Create an AEM Application Project](/help/using/create-an-application-project.md) for more details.
 * Kunden mit mehreren Staging- oder Produktionsumgebungen können auf der Seite [CI/CD-Pipeline konfigurieren](configuring-pipeline.md) festlegen, welche Umgebung als Teil der Produktionspipeline bereitgestellt wird.
 * httxt2dbm wurde dem Buildcontainer hinzugefügt.
 * Sie können über alle Elemente des Hilfemenüs eine neue Registerkarte öffnen.
