@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
+source-git-commit: 02515ac6e3ac54909e23a276a78f571ea5c249c4
 workflow-type: tm+mt
-source-wordcount: '1514'
-ht-degree: 85%
+source-wordcount: '1518'
+ht-degree: 83%
 
 ---
 
@@ -153,13 +153,15 @@ Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen 
 
 ### Pipeline-Variablen {#pipeline-variables}
 
-In einigen Fällen kann der Build-Prozess eines Kunden von bestimmten Konfigurationsvariablen abhängen, die nicht im Git-Repository platziert werden sollten. Cloud Manager ermöglicht die Konfiguration dieser Variablen über die Cloud Manager-API oder die Cloud Manager-CLI pro Pipeline. Variablen können entweder als Nur-Text oder in Ruhe verschlüsselt gespeichert werden. In beiden Fällen werden Variablen innerhalb der Build-Umgebung als Variable für Umgebung bereitgestellt, auf die dann in der Datei &quot;pom.xml&quot;oder anderen Buildskripten verwiesen werden kann.
+In einigen Fällen kann der Build-Prozess eines Kunden von bestimmten Konfigurationsvariablen abhängen, die nicht in das Git-Repository platziert werden sollten. Cloud Manager ermöglicht die Konfiguration dieser Variablen über die Cloud Manager-API oder die Cloud Manager-CLI pro Pipeline.
 
-Um eine Variable mithilfe der CLI festzulegen, führen Sie einen Befehl wie den folgenden aus:
+Variablen können entweder als Nur-Text oder in Ruhe verschlüsselt gespeichert werden. In beiden Fällen werden Variablen innerhalb der Build-Umgebung als Variable für Umgebung bereitgestellt, auf die dann in der Datei &quot;pom.xml&quot;oder anderen Buildskripten verwiesen werden kann.
+
+Verwenden Sie den folgenden Befehl, um eine Variable mithilfe der CLI festzulegen:
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --variable MY_CUSTOM_VARIABLE test`
 
-Aktuelle Variablen können aufgelistet werden:
+Sie können die aktuellen Variablen wie folgt Liste haben:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
