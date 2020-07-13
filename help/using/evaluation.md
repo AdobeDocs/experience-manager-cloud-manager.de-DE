@@ -7,11 +7,11 @@ uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '294'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -31,7 +31,7 @@ Dies dient als Bewertungsgrundlage für den erforderlichen Entwicklungsaufwand b
 
 >[!NOTE]
 >
->To learn more about pattern detector, refer to [Assessing the Upgrade Complexity with the Pattern Detector](https://helpx.adobe.com/experience-manager/6-4/sites/deploying/using/pattern-detector.html)
+>Weitere Informationen zum Musterdetektor finden Sie unter [Bewertung der Komplexität der Aktualisierung mit dem Musterdetektor](https://helpx.adobe.com/de/experience-manager/6-4/sites/deploying/using/pattern-detector.html).
 
 ## Ausführen des Auswerters {#running-evaluator}
 
