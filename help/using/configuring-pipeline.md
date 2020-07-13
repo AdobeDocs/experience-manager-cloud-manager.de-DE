@@ -9,11 +9,11 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: ht
-source-git-commit: 18b539951e286cb14d5c10404b42ba80682bbef0
-workflow-type: ht
-source-wordcount: '1575'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
+workflow-type: tm+mt
+source-wordcount: '1646'
+ht-degree: 92%
 
 ---
 
@@ -28,7 +28,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -81,6 +81,7 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
 
    * **Zu Git-Änderungen**: Startet die CI/CD-Pipeline, wenn zur konfigurierten Git-Verzweigung Commits hinzugefügt werden. Wenn Sie diese Option auswählen, können Sie die Pipeline weiterhin manuell starten.
    * **Manuell**: Die Pipeline wird über die Benutzeroberfläche manuell gestartet.
+
    Bei der Einrichtung oder Bearbeitung der Pipeline kann der Bereitstellungsmanager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates (Test der Codequalität, Sicherheitstest und Leistungstest) ein wichtiger Fehler auftritt.
 
    Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
@@ -163,13 +164,18 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    **AEM Sites:**
 
-   Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten (durch einen nicht authentifizierten Benutzer) auf dem Staging-Veröffentlichungsserver für einen 30-minütigen Testzeitraum abgerufen und die Antwortzeit für die einzelnen Seiten sowie verschiedene Metriken auf Systemebene gemessen werden. Die Seiten werden durch drei **Seitensätze** ausgewählt. Sie können wählen, ob ein, zwei oder alle drei Sätze getestet werden sollen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
+   Cloud Manager führt Leistungstests für AEM Sites-Programm durch, indem Seiten (als nicht authentifizierter Benutzer) für einen 30-minütigen Testzeitraum auf dem Bereitstellungsserver angefordert und die Antwortzeit für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden.
+
+   Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Stage-Umgebung anhand eines oder mehrerer vom Customer Success Engineer konfigurierter *Seed* -URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden in breit gefächerter Weise durchsucht. Dieser Crawling-Vorgang ist auf maximal 5000 Seiten beschränkt. Anforderungen des Crawlers haben eine feste Zeitüberschreitung von 10 Sekunden.
+
+   Die Seiten werden nach drei **Seitensätzen** ausgewählt. Sie können zwischen einem und allen drei Sets wählen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
 
    Wenn zum Beispiel zwischen den beliebten Live-Seiten und den neuen Seiten eine 50:50-Aufteilung erfolgt (in diesem Beispiel werden andere Live-Seiten nicht verwendet) und der Satz neuer Seiten 3000 Seiten enthält, ist für die KPI der Seitenansichten pro Minute ein Wert von 200 festgelegt. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
    * Jede der 25 Seiten der beliebten Live-Seiten wird 240-mal aufgerufen: ((200 * 0,5) / 25) * 30 = 120
 
    * Jede der 3000 Seiten der neuen Seiten wird einmal aufgerufen: ((200 * 0,5) / 3000) * 30 = 1
+
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
    **AEM Assets:**
@@ -202,7 +208,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
@@ -221,6 +227,7 @@ Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
    * **Bearbeiten**: Ermöglicht die Bearbeitung der Pipeline-Einstellungen.
    * **Detail**: Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden).
    * **Build**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann.
+
    ![](assets/Non-prod-2.png)
 
    >[!NOTE]
