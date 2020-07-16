@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: ae22e0641111096c19d5413f3e78f339010bf512
+source-git-commit: a4ea83c0b64515915871956c1cd3e53606f1c26b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1494'
+ht-degree: 98%
 
 ---
 
@@ -99,11 +99,14 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
 * Maven wird immer mit folgendem Befehl ausgeführt: *mvn --batch-mode clean org.jacoco:jacoco-maven-plugin:prepare-agent package*
 * Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https://repo.adobe.com/)).
 
-### Using Java 11 {#using-java-11}
+>[!NOTE]
+>Obwohl Cloud Manager keine bestimmte Version des Programms definiert, muss die verwendete Version mindestens `jacoco-maven-plugin`verwendet werden `0.7.5.201505241946`.
 
-Cloud Manager unterstützt jetzt das Erstellen von Kundenprojekten mit Java 8 und Java 11. Standardmäßig werden Projekte mit Java 8 erstellt. Kunden, die Java 11 in ihren Projekten verwenden möchten, können dies mit dem [Apache Maven Toolchain Plugin](https://maven.apache.org/plugins/maven-toolchains-plugin/)tun.
+### Verwendung von Java 11 {#using-java-11}
 
-Fügen Sie dazu in der Datei &quot;pom.xml&quot;einen `<plugin>` Eintrag hinzu, der wie folgt aussieht:
+Cloud Manager unterstützt jetzt das Erstellen von Kundenprojekten mit Java 8 und Java 11. Standardmäßig werden Projekte mit Java 8 erstellt. Kunden, die Java 11 in ihren Projekten verwenden möchten, können dies mit dem [Apache Maven Toolchain-Plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) tun.
+
+Fügen Sie dazu der Datei „pom.xml“ einen `<plugin>`-Eintrag hinzu, der wie folgt aussieht:
 
 ```xml
         <plugin>
@@ -129,7 +132,7 @@ Fügen Sie dazu in der Datei &quot;pom.xml&quot;einen `<plugin>` Eintrag hinzu, 
 ```
 
 >[!NOTE]
->Die unterstützten `vendor` Werte sind `oracle` und `sun` die unterstützten `version` Werte sind `1.8`, `1.11`und `11`.
+>Die unterstützten `vendor`-Werte sind `oracle` und `sun`, die unterstützten `version`-Werte sind `1.8`, `1.11` und `11`.
 
 ## Umgebungsvariablen {#environment-variables}
 
@@ -137,7 +140,7 @@ Fügen Sie dazu in der Datei &quot;pom.xml&quot;einen `<plugin>` Eintrag hinzu, 
 
 In einigen Fällen müssen Kunden den Build-Prozess je nach Informationen zum Programm oder zur Pipeline variieren.
 
-Wenn beispielsweise die JavaScript-Minimierung während der Buildzeit mithilfe eines Tools wie gulp durchgeführt wird, besteht möglicherweise der Wunsch, beim Erstellen einer dev-Umgebung eine andere Minimierungsstufe zu verwenden als beim Erstellen für die Erstellung von Stage- und Produktionsfunktionen.
+Wenn beispielsweise eine JavaScript-Minimierung während der Build-Erstellung mithilfe eines Tools wie gulp durchgeführt wird, soll beim Erstellen für eine Entwicklungsumgebung möglicherweise eine andere Minimierungsstufe verwendet werden als beim Erstellen für eine Staging- oder Produktionsumgebung.
 
 Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen bei jeder Ausführung dem Build-Container hinzu.
 
