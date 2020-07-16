@@ -4,10 +4,10 @@ seo-title: Versionshinweise für AEM Cloud Manager 2020.7.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.7.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.7.0.
 translation-type: tm+mt
-source-git-commit: a0917f5cecbe552807d9147cd20316e02c2dd1a0
+source-git-commit: a4ea83c0b64515915871956c1cd3e53606f1c26b
 workflow-type: tm+mt
-source-wordcount: '161'
-ht-degree: 38%
+source-wordcount: '198'
+ht-degree: 81%
 
 ---
 
@@ -21,18 +21,20 @@ Die Version 2020.7.0 von [!UICONTROL Cloud Manager] wurde am 09. Juli 2020 ve
 
 ## Neuerungen {#whats-new}
 
-* Das Trennen und Anhängen von Dispatcher-Instanzen von den Lastenausgleichsmodulen während der Produktionsimplementierung funktioniert jetzt konsistenter.
+* Das Trennen und Anhängen von Dispatcher-Instanzen von den Load Balancern während der Produktionsimplementierung funktioniert jetzt konsistenter.
 
-* Der Cloud Manager Build Container unterstützt jetzt sowohl Java 8 als auch Java 11.
+* Der Cloud Manager-Build-Container unterstützt jetzt sowohl Java 8 als auch Java 11.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Die **Optionen &quot;Abbrechen** &quot;und &quot; **Speichern** &quot;auf der Seite &quot;Bearbeiten in der Nicht-Produktion-Pipeline&quot;waren nicht immer sichtbar.
+* Die Optionen **Abbrechen** und **Speichern** auf der Seite „Bearbeiten“ für produktionsfremde Pipelines waren nicht immer sichtbar.
 
-* Bestimmte Fehler im Code-Qualitätsprozess können dazu führen, dass die Protokolldatei nicht korrekt generiert wird.
+* Bestimmte Fehler im Code-Qualitätsprozess konnten dazu führen, dass die Protokolldatei nicht korrekt erzeugt wurde.
 
-* Einige große Pipeline-Step-Protokolle konnten nicht konsistent über die Benutzeroberfläche heruntergeladen werden.
+* Protokolle für bestimmte größere Pipeline-Schritte konnten nicht über die gesamte Benutzeroberfläche konsistent heruntergeladen werden.
 
 ## Bekannte Probleme {#known-issues}
 
-* Wenn eine AMS-Umgebung eine Standby-Instanz enthält, wird in der protokollierten Meldung angegeben, dass die Instanz im Gegensatz zum Standby-Modus ausfällt.
+* Wenn eine AMS-Umgebung eine Standby-Instanz enthält, wird in der protokollierten Meldung angegeben, dass die Instanz deaktiviert und nicht im Standby-Modus ist.
+
+* Aufgrund einer Änderung bei der Berechnung der Codeabdeckung ist die _Mindestversion_ des Jacoco-Plugins jetzt 0.7.5.201505241946 (veröffentlicht im Mai 2015). Kunden, die explizit auf eine ältere Version verweisen, erhalten eine Fehlermeldung im Code-Qualitätsprozess.
