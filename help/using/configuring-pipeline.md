@@ -9,11 +9,11 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: afbb9a9f9f227309946f0d1891172a89d15de7a7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1646'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -164,11 +164,11 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    **AEM Sites:**
 
-   Cloud Manager führt Leistungstests für AEM Sites-Programm durch, indem Seiten (als nicht authentifizierter Benutzer) für einen 30-minütigen Testzeitraum auf dem Bereitstellungsserver angefordert und die Antwortzeit für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden.
+   Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem für einen 30-minütigen Testzeitraum Seiten (als nicht authentifizierter Benutzer) vom Staging-Veröffentlichungs-Server abgerufen und die Reaktionszeiten für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden.
 
-   Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Stage-Umgebung anhand eines oder mehrerer vom Customer Success Engineer konfigurierter *Seed* -URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden in breit gefächerter Weise durchsucht. Dieser Crawling-Vorgang ist auf maximal 5000 Seiten beschränkt. Anforderungen des Crawlers haben eine feste Zeitüberschreitung von 10 Sekunden.
+   Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten *Seed*-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht. Dieser Crawling-Vorgang ist auf maximal 5.000 Seiten beschränkt. Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
 
-   Die Seiten werden nach drei **Seitensätzen** ausgewählt. Sie können zwischen einem und allen drei Sets wählen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
+   Die Seiten werden anhand von drei **Seiten-Sets** ausgewählt. Sie können ein bis drei Sets wählen Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
 
    Wenn zum Beispiel zwischen den beliebten Live-Seiten und den neuen Seiten eine 50:50-Aufteilung erfolgt (in diesem Beispiel werden andere Live-Seiten nicht verwendet) und der Satz neuer Seiten 3000 Seiten enthält, ist für die KPI der Seitenansichten pro Minute ein Wert von 200 festgelegt. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
@@ -208,7 +208,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
