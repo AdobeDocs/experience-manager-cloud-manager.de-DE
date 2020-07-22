@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: 0d46abc386460ccbaf7ba10b93286bc8e4af2395
 workflow-type: tm+mt
 source-wordcount: '214'
-ht-degree: 75%
+ht-degree: 92%
 
 ---
 
@@ -40,4 +40,4 @@ Weitere Informationen finden Sie unter [Pipeline-Variablen](/help/using/create-a
 
 * Wenn eine AMS-Umgebung eine Standby-Instanz enthält, wird in der protokollierten Meldung angegeben, dass die Instanz deaktiviert und nicht im Standby-Modus ist.
 
-* Aufgrund einer Änderung bei der Berechnung der Codeabdeckung ist die _Mindestversion_ des Jacoco-Plugins jetzt 0.7.5.201505241946 (veröffentlicht im Mai 2015). Kunden, die explizit auf eine ältere Version verweisen, erhalten eine Fehlermeldung im Code-Qualitätsprozess.
+* Aufgrund einer Änderung bei der Berechnung der Code-Abdeckung ist die erforderliche _Mindestversion_ des Jacoco-Plugins jetzt 0.7.5.201505241946 (veröffentlicht im Mai 2015). Kunden, die eine ältere Version verwenden, erhalten eine Fehlermeldung im Code-Qualitätsprozess.
