@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 76c1a8e4-d66f-4a3b-8c0c-b80c9e17700e
 translation-type: tm+mt
-source-git-commit: 0d46abc386460ccbaf7ba10b93286bc8e4af2395
+source-git-commit: 0fda91c2fe319fb58b3a6dd09f75eac7a60d9038
 workflow-type: tm+mt
-source-wordcount: '1537'
-ht-degree: 87%
+source-wordcount: '1705'
+ht-degree: 79%
 
 ---
 
@@ -62,7 +62,7 @@ Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitge
 * Projekte müssen mit Apache Maven erstellt werden.
 * Im Stammverzeichnis des Git-Repositorys muss eine Datei *pom.xml* vorhanden sein. Diese *pom.xml*-Datei kann ggf. auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.) wie nötig.
 
-* Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren *pom.xml*-Dateien hinzufügen. Allerdings wird der Zugriff auf kennwortgeschützte oder netzwerkgeschützte Artefakte nicht unterstützt.
+* Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren *pom.xml*-Dateien hinzufügen. Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei der Konfiguration unterstützt. Der Zugriff auf netzwerkgeschützte Artefakt-Repositorys wird jedoch nicht unterstützt.
 * Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im *ZIP*-Format suchen, die in einem Verzeichnis mit dem Namen *target* enthalten sind. Eine beliebige Anzahl von Untermodulen kann Inhaltspakete produzieren.
 
 * Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach *ZIP*-Dateien (ebenfalls in einem Verzeichnis namens *target*) suchen, die Verzeichnisse mit den Namen *conf* und *conf.d* enthalten.
@@ -100,7 +100,7 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
 * Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository enthält. (Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https://repo.adobe.com/)).
 
 >[!NOTE]
->Obwohl Cloud Manager keine bestimmte Version des Programms definiert, muss die verwendete Version mindestens `jacoco-maven-plugin`verwendet werden `0.7.5.201505241946`.
+>Obwohl Cloud Manager keine bestimmte Version des Programms des `jacoco-maven-plugin` definiert, muss mindestens die Version `0.7.5.201505241946` verwendet werden.
 
 ### Verwendung von Java 11 {#using-java-11}
 
@@ -262,6 +262,75 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
                 </plugins>
             </build>
         </profile>
+```
+
+## Unterstützung für kennwortgeschütztes Maven-Repository {#password-protected-maven-repositories}
+
+Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](#pipeline-variables) an und verweisen Sie dann auf dieses Geheimnis in einer Datei mit dem Namen `.cloudmanager/maven/settings.xml` im git-Repository. Diese Datei folgt dem Schema [Maven Settings File](https://maven.apache.org/settings.html) . Wenn der Cloud Manager-Build-Beginn ausgeführt wird, wird das `<servers>` Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml` Standarddatei zusammengeführt. Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>` und/oder `<pluginRepository>` -Elements in der `pom.xml` Datei aus referenziert. Im Allgemeinen würden diese `<repository>` und/oder `<pluginRepository>` Elemente in einem [Cloud Manager-spezifischen Profil]{#activating-maven-profiles-in-cloud-manager}enthalten sein, auch wenn dies nicht unbedingt erforderlich ist.
+
+Beispiel: Das Repository befindet sich unter https://repository.myco.com/maven2, der Benutzername Cloud Manager sollte verwendet werden `cloudmanager` und das Kennwort lautet `secretword`.
+
+Legen Sie zunächst das Kennwort als geheim auf der Pipeline fest:
+
+`$ aio cloudmanager:set-pipeline-variables PIPELINEID --secret CUSTOM_MYCO_REPOSITORY_PASSWORD secretword`
+
+Verweisen Sie anschließend auf diese `.cloudmanager/maven/settings.xml` Datei:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+        <server>
+            <id>myco-repository</id>
+            <username>cloudmanager</username>
+            <password>${env.CUSTOM_MYCO_REPOSITORY_PASSWORD}</password>
+        </server>
+    </servers>
+</settings>
+```
+
+Verweisen Sie schließlich auf die Server-ID in der `pom.xml` Datei:
+
+```xml
+<profiles>
+    <profile>
+        <id>cmBuild</id>
+        <activation>
+                <property>
+                    <name>env.CM_BUILD</name>
+                </property>
+        </activation>
+        <build>
+            <repositories>
+                <repository>
+                    <id>myco-repository</id>
+                    <name>MyCo Releases</name>
+                    <url>https://repository.myco.com/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>myco-repository</id>
+                    <name>MyCo Releases</name>
+                    <url>https://repository.myco.com/maven2</url>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+        </build>
+    </profile>
+</profiles>
 ```
 
 ## Installieren zusätzlicher Systempakete {#installing-additional-system-packages}
