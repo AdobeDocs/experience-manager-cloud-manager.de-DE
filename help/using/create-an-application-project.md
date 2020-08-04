@@ -12,7 +12,7 @@ translation-type: tm+mt
 source-git-commit: 0fda91c2fe319fb58b3a6dd09f75eac7a60d9038
 workflow-type: tm+mt
 source-wordcount: '1705'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -62,7 +62,7 @@ Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitge
 * Projekte müssen mit Apache Maven erstellt werden.
 * Im Stammverzeichnis des Git-Repositorys muss eine Datei *pom.xml* vorhanden sein. Diese *pom.xml*-Datei kann ggf. auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.) wie nötig.
 
-* Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren *pom.xml*-Dateien hinzufügen. Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei der Konfiguration unterstützt. Der Zugriff auf netzwerkgeschützte Artefakt-Repositorys wird jedoch nicht unterstützt.
+* Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren *pom.xml*-Dateien hinzufügen. Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
 * Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im *ZIP*-Format suchen, die in einem Verzeichnis mit dem Namen *target* enthalten sind. Eine beliebige Anzahl von Untermodulen kann Inhaltspakete produzieren.
 
 * Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach *ZIP*-Dateien (ebenfalls in einem Verzeichnis namens *target*) suchen, die Verzeichnisse mit den Namen *conf* und *conf.d* enthalten.
@@ -266,15 +266,15 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
 
 ## Unterstützung für kennwortgeschütztes Maven-Repository {#password-protected-maven-repositories}
 
-Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](#pipeline-variables) an und verweisen Sie dann auf dieses Geheimnis in einer Datei mit dem Namen `.cloudmanager/maven/settings.xml` im git-Repository. Diese Datei folgt dem Schema [Maven Settings File](https://maven.apache.org/settings.html) . Wenn der Cloud Manager-Build-Beginn ausgeführt wird, wird das `<servers>` Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml` Standarddatei zusammengeführt. Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>` und/oder `<pluginRepository>` -Elements in der `pom.xml` Datei aus referenziert. Im Allgemeinen würden diese `<repository>` und/oder `<pluginRepository>` Elemente in einem [Cloud Manager-spezifischen Profil]{#activating-maven-profiles-in-cloud-manager}enthalten sein, auch wenn dies nicht unbedingt erforderlich ist.
+Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](#pipeline-variables) an und verweisen Sie dann in einer Datei im git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html). Wenn der Build-Vorgang von Cloud Manager gestartet wird, wird das `<servers>`-Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml`-Standarddatei zusammengeführt. Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>`- und/oder `<pluginRepository>`-Elements in der `pom.xml`-Datei referenziert. Im Allgemeinen wären diese `<repository>`- und/oder `<pluginRepository>`-Elemente in einem [Cloud Manager-spezifischen Profil]{#activating-maven-profiles-in-cloud-manager} enthalten, auch wenn dies nicht unbedingt erforderlich ist.
 
-Beispiel: Das Repository befindet sich unter https://repository.myco.com/maven2, der Benutzername Cloud Manager sollte verwendet werden `cloudmanager` und das Kennwort lautet `secretword`.
+Beispiel: Das Repository befindet sich unter https://repository.myco.com/maven2, der von Cloud Manager zu verwendende Benutzername lautet `cloudmanager` und das Kennwort lautet `secretword`.
 
-Legen Sie zunächst das Kennwort als geheim auf der Pipeline fest:
+Legen Sie zunächst in der Pipeline das Kennwort als geheim fest:
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --secret CUSTOM_MYCO_REPOSITORY_PASSWORD secretword`
 
-Verweisen Sie anschließend auf diese `.cloudmanager/maven/settings.xml` Datei:
+Verweisen Sie anschließend aus der `.cloudmanager/maven/settings.xml`-Datei darauf:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -290,7 +290,7 @@ Verweisen Sie anschließend auf diese `.cloudmanager/maven/settings.xml` Datei:
 </settings>
 ```
 
-Verweisen Sie schließlich auf die Server-ID in der `pom.xml` Datei:
+Verweisen Sie schließlich auf die Server-ID in der `pom.xml`-Datei:
 
 ```xml
 <profiles>
