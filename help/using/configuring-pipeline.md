@@ -10,9 +10,9 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 3be958aa21d5423ddf371c286825d01afd554c4b
+source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
 workflow-type: tm+mt
-source-wordcount: '1767'
+source-wordcount: '1771'
 ht-degree: 90%
 
 ---
@@ -205,17 +205,14 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
 Adobe Managed Services (AMS)-Kunden mit authentifizierten Sites können einen Benutzernamen und ein Kennwort angeben, mit denen Cloud Manager während des Site-Performance-Tests auf die Website zugreift.
 
-Benutzername und Kennwort werden als Pipeline-Variablen mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
+Benutzername und Kennwort werden als [Pipeline-Variablen](create-an-application-project.md#pipeline-variables) mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
 
 >[!NOTE]
 > Obwohl dies nicht unbedingt erforderlich ist, wird empfohlen, den Variablentyp String für den Benutzernamen und den Variablentyp secretString für das Kennwort zu verwenden. Wenn beide angegeben sind, enthält jede Anforderung des Leistungstest-Crawlers und der virtuellen Testbenutzer diese Anmeldeinformationen als HTTP Basic-Authentifizierung.
 
-Um diese Variablen mithilfe der Cloud Manager-Befehlszeilenschnittstelle festzulegen, führen Sie Folgendes aus:
+Führen Sie folgende Schritte aus, um diese Variablen mithilfe der [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)festzulegen:
 
 `$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
-
-
-
 
 ## Produktionsfremde Pipelines und Pipelines für Tests der Codequalität
 
