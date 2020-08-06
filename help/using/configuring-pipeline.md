@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 68330a3a6d9e1f95782418dbd72cbc0e6ee7362c
+source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
 workflow-type: tm+mt
-source-wordcount: '1771'
-ht-degree: 90%
+source-wordcount: '1648'
+ht-degree: 97%
 
 ---
 
@@ -178,9 +178,6 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
-
-   Informationen zum Authentifizieren von AEM Sites-Leistungstests finden Sie unter [Authentifizierte Sites - Leistungstests](configuring-pipeline.md#authenticated-sites-performance) .
-
    **AEM Assets:**
 
    Cloud Manager führt die Leistungstests für AEM Assets-Programme durch, indem Assets wiederholt für einen 30-minütigen Testzeitraum hochgeladen und die Verarbeitungszeit für jedes Asset sowie verschiedene Metriken auf Systemebene gemessen werden. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden. Die Verteilung der Anzahl der Assets jedes Typs, die pro Minute hochgeladen werden, wird bei der Pipeline-Einrichtung oder auf dem Bildschirm „Bearbeiten“ festgelegt.
@@ -201,18 +198,6 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    ![](assets/Production-Pipeline.png)
 
-### Leistungstests authentifizierter Sites {#authenticated-sites-performance}
-
-Adobe Managed Services (AMS)-Kunden mit authentifizierten Sites können einen Benutzernamen und ein Kennwort angeben, mit denen Cloud Manager während des Site-Performance-Tests auf die Website zugreift.
-
-Benutzername und Kennwort werden als [Pipeline-Variablen](create-an-application-project.md#pipeline-variables) mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
-
->[!NOTE]
-> Obwohl dies nicht unbedingt erforderlich ist, wird empfohlen, den Variablentyp String für den Benutzernamen und den Variablentyp secretString für das Kennwort zu verwenden. Wenn beide angegeben sind, enthält jede Anforderung des Leistungstest-Crawlers und der virtuellen Testbenutzer diese Anmeldeinformationen als HTTP Basic-Authentifizierung.
-
-Führen Sie folgende Schritte aus, um diese Variablen mithilfe der [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager)festzulegen:
-
-`$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
 ## Produktionsfremde Pipelines und Pipelines für Tests der Codequalität
 
