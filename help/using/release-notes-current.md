@@ -7,7 +7,7 @@ translation-type: tm+mt
 source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
 workflow-type: tm+mt
 source-wordcount: '170'
-ht-degree: 35%
+ht-degree: 100%
 
 ---
 
@@ -21,21 +21,21 @@ Die [!UICONTROL Cloud Manager]-Version 2020.8.0 wurde am 06. August 2020 ver�
 
 ## Neuerungen {#whats-new}
 
-Authentifizierungsgebundene private Maven-Repositorys werden jetzt unterstützt.
+Authentifizierungsgebundene Private Maven-Repositorys werden jetzt unterstützt.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Einige unnötige und unerwünschte SonarQube-Plugins wurden im Rahmen der Überprüfung der Codequalität ausgeführt.
+* Einige unnötige und unerwünschte SonarQube-Plug-ins wurden im Rahmen der Überprüfung der Codequalität ausgeführt.
 
-* Auf der Seite zur Ausführung der Pipeline wurde der Zweigname falsch formatiert.
+* Auf der Seite zur Ausführung der Pipeline wurde der Verzweigungsname falsch formatiert.
 
-* Bei der Bereitstellung auf Topologien mit einer einzigen Veröffentlichung, einem einzelnen Dispatcher und einem kalten Standby-Autor wurde der Dispatcher fälschlicherweise aus dem Lastenausgleich entfernt.
+* Bei der Bereitstellung in Topologien mit einer einzigen Veröffentlichung, einem einzigen Dispatcher und einem Cold-Standby-Autor wurde der Dispatcher fälschlicherweise aus dem Load Balancer entfernt.
 
-* In einigen Fällen wurden abgeschlossene Pipeline-Hinrichtungen nicht erfolgreich als abgeschlossen aufgezeichnet, wodurch neue Hinrichtungen der Pipeline verhindert wurden.
+* In einigen Fällen wurden abgeschlossene Pipeline-Ausführungen nicht erfolgreich als abgeschlossen aufgezeichnet, wodurch neue Ausführungen der Pipeline verhindert wurden.
 
-* Hinrichtungen von Pipeline würden gelegentlich aufgrund interner Kommunikationsprobleme *feststecken* .
+* Pipeline-Ausführungen blieben gelegentlich aufgrund interner Kommunikationsprobleme *stecken*.
 
-* Die QuickInfo auf den Programm-Karten waren nicht einheitlich korrekt.
+* Die QuickInfo auf den Programmkarten war nicht immer korrekt.
 
 * Auf der Übersichtsseite wurden Farbabweichungen festgestellt.
 
