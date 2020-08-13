@@ -13,7 +13,7 @@ translation-type: tm+mt
 source-git-commit: cff6f23a674fda2f57ea481d89644de9be3f5722
 workflow-type: tm+mt
 source-wordcount: '1648'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -164,7 +164,7 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    **AEM Sites:**
 
-   Cloud Manager führt Leistungstests für AEM Sites-Programm durch, indem Seiten (standardmäßig als nicht authentifizierter Benutzer) für einen 30-minütigen Testzeitraum auf dem Bereitstellungsserver angefordert und die Antwortzeit für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden.
+   Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem für einen 30-minütigen Testzeitraum Seiten (standardmäßig als nicht authentifizierter Benutzer) vom Staging-Veröffentlichungs-Server abgerufen und die Reaktionszeiten für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden.
 
    Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten *Seed*-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht. Dieser Crawling-Vorgang ist auf maximal 5.000 Seiten beschränkt. Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
 
