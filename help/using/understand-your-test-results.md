@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: ht
-source-git-commit: f062ee126ad12d164c36b2e1535ee709f43b6900
-workflow-type: ht
-source-wordcount: '1469'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+workflow-type: tm+mt
+source-wordcount: '1552'
+ht-degree: 92%
 
 ---
 
@@ -43,7 +43,15 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 
 ## Testen der Codequalität {#code-quality-testing}
 
-Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Bereitstellungen bestimmte Qualitätskriterien erfüllen. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. In der folgenden Tabelle finden Sie eine Zusammenfassung der Testkriterienbewertung:
+Dieser Schritt bewertet die Qualität Ihres Anwendungscodes. Es ist das Kernziel einer reinen Code-Quality-Pipeline und wird unmittelbar nach dem Bauschritt in allen Nicht-Produktions- und Produktionsleitungen ausgeführt. Weitere Informationen zu den verschiedenen Pipelines finden Sie unter [Konfigurieren der CI-CD-Pipeline](/help/using/configuring-pipeline.md) .
+
+### Understanding Code Quality Testing {#understanding-code-quality-testing}
+
+Bei der Codequalitätsprüfung wird der Quellcode gescannt, um sicherzustellen, dass seine Bereitstellung bestimmte Qualitätskriterien erfüllt. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md)bezeichnet.
+
+You can download the list of rules [here](/help/using/assets/CodeQuality-rules-latest.xlsx).
+
+Die Ergebnisse dieses Schritts werden als *Bewertung* bereitgestellt. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Prüfkriterien zusammen:
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
 |--- |--- |--- |--- |
@@ -54,14 +62,12 @@ Im Rahmen der Pipeline wird der Quellcode gescannt, um sicherzustellen, dass Ber
 | Übersprungene Unit-Tests | Zahl der übersprungenen Unit-Tests | Info | > 1 |
 | Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | > 0 |
 | Duplizierte Zeilen | Anzahl der Zeilen, die an duplizierten Blöcken beteiligt sind. <br/>Voraussetzungen, damit ein Codeblock als dupliziert gilt: <br/><ul><li>**Nicht-Java-Projekte:**</li><li>Es sollte mindestens 100 aufeinanderfolgende und duplizierte Token geben.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li><li>**Java-Projekte:**</li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul> <br/>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplizierungen ignoriert. | Info | > 1% |
-| Cloud Service-Kompatibilität | Anzahl der festgestellten Cloud Service-Kompatibilitätsprobleme. | Info | > 0 |
+| Kompatibilität mit Cloud Service | Anzahl der festgestellten Kompatibilitätsprobleme mit Cloud Service. | Info | > 0 |
 
 
 >[!NOTE]
 >
 >Genauere Definitionen finden Sie unter [Metrikdefinitionen](https://docs.sonarqube.org/display/SONAR/Metric+Definitions).
-
-Sie können hier eine Liste der Regeln herunterladen: [code-quality-rules.xlsx](/help/using/assets/CodeQuality-rules-latest.xlsx).
 
 >[!NOTE]
 >
