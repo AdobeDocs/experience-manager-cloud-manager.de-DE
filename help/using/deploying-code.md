@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-translation-type: ht
-source-git-commit: 509a74b2e85d5880bafa56cd0ab3bae9c57b0683
-workflow-type: ht
-source-wordcount: '952'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+workflow-type: tm+mt
+source-wordcount: '953'
+ht-degree: 98%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 100%
 
 ## Bereitstellen von Code mit Cloud Manager {#deploying-code-with-cloud-manager}
 
-Sobald Sie Ihre **Pipeline** (Repository, Umgebung und Testumgebung) konfiguriert haben, können Sie Ihren Code bereitstellen.
+Once you have configured your Production **Pipeline** (repository, environment, and testing environment), you are ready to deploy your code.
 
 1. Klicken Sie in Cloud Manager auf **Bereitstellen**, um den Bereitstellungsprozess zu starten.
 
