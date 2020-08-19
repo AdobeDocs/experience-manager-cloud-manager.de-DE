@@ -9,17 +9,17 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 1143e58d4c3a02d85676f94fc1a30cc1c2856222
+source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
 workflow-type: tm+mt
 source-wordcount: '1552'
-ht-degree: 92%
+ht-degree: 90%
 
 ---
 
 
 # Wissenswertes zu Testergebnissen {#understand-your-test-results}
 
-Während des **Pipelineprozesses** werden verschiedene Metriken erfasst und entweder mit den vom Business Owner definierten KPIs (Key Performance Indicators) oder mit den von Adobe Managed Services festgelegten Standards verglichen.
+Während der Pipeline-Ausführung werden eine Reihe von Metriken erfasst und mit den vom Geschäftsinhaber definierten Key Performance Indicators (KPIs) oder den von Adobe Managed Services festgelegten Standards verglichen.
 
 Die entsprechende Berichterstattung erfolgt über ein dreistufiges Gatingsystem, so wie in diesem Abschnitt definiert.
 
@@ -47,9 +47,10 @@ Dieser Schritt bewertet die Qualität Ihres Anwendungscodes. Es ist das Kernziel
 
 ### Understanding Code Quality Testing {#understanding-code-quality-testing}
 
-Bei der Codequalitätsprüfung wird der Quellcode gescannt, um sicherzustellen, dass seine Bereitstellung bestimmte Qualitätskriterien erfüllt. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md)bezeichnet.
+Bei der Codequalitätsprüfung wird der Quellcode gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md)bezeichnet.
 
-You can download the list of rules [here](/help/using/assets/CodeQuality-rules-latest.xlsx).
+>[!NOTE]
+>You can download the complete list of rules [here](/help/using/assets/CodeQuality-rules-latest.xlsx).
 
 Die Ergebnisse dieses Schritts werden als *Bewertung* bereitgestellt. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Prüfkriterien zusammen:
 
