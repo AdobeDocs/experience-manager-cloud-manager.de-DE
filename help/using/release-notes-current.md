@@ -3,11 +3,11 @@ title: Versionshinweise für 2020.8.0
 seo-title: Versionshinweise für AEM Cloud Manager 2020.8.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.8.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.8.0.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '196'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -37,7 +37,7 @@ Authentifizierungsgebundene Private Maven-Repositorys werden jetzt unterstützt.
 
 * Die QuickInfo auf den Programmkarten war nicht immer korrekt.
 
-* There was a color mismatch on the **Overview** page.
+* Auf der **Übersichtsseite** wurden Farbabweichungen festgestellt.
 
 * Die Sites-Leistungstests unterstützen jetzt die optionale Verwendung der Authentifizierung.
 
