@@ -9,11 +9,11 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1763'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -129,7 +129,7 @@ Er wird dann während der Ausführung der Pipeline als separater Schritt angezei
 
 **Ungültigmachung des Dispatchers**
 
-As a Deployment Manager, you have the opportunity to configure a set of content paths which will either be **invalidated** or **flushed** from the AEM Dispatcher cache for publish instances, while setting up or editing pipeline.
+Als Bereitstellungs-Manager haben Sie die Möglichkeit, eine Reihe von Inhaltspfaden zu konfigurieren, die entweder **ungültig gemacht** oder aus dem AEM Dispatcher-Cache für Veröffentlichungsinstanzen **entfernt** werden, wenn Sie die Pipeline einrichten oder bearbeiten.
 
 Sie können verschiedene Pfade für die Bereitstellung in der Staging- und Produktionsumgebung konfigurieren. Wenn diese Cache-Aktionen konfiguriert sind, werden sie im Rahmen der Einrichtung der Bereitstellungspipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden standardmäßiges AEM Dispatcher-Verhalten: Ungültiges Verhalten führt zu einer Ungültigmachung des Caches, vergleichbar mit einer Aktivierung von Autoreninhalten zur Veröffentlichung. Beim „Leeren“ wird der Cache-Inhalt gelöscht.
 
@@ -178,7 +178,7 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    ![](assets/Configuring_Pipeline_AEM-Sites.png)
 
-   Weitere Informationen finden Sie unter [Authentifizierte Leistungstests](#authenticated-performance-testing) .
+   Weitere Informationen finden Sie unter [Authentifizierte Leistungstests](#authenticated-performance-testing).
 
    **AEM Assets:**
 
@@ -200,15 +200,15 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    ![](assets/Production-Pipeline.png)
 
-### Authenticated Performance Testing {#authenticated-performance-testing}
+### Authentifizierte Leistungstests {#authenticated-performance-testing}
 
-AMS-Kunden mit authentifizierten Sites können einen Benutzernamen und ein Kennwort angeben, mit denen Cloud Manager während der Site-Leistungsüberprüfung auf die Website zugreifen kann.
+AMS-Kunden mit authentifizierten Websites können einen Benutzernamen und ein Kennwort angeben, mit denen Cloud Manager während des Sites-Leistungstests auf die Website zugreift.
 
-The username and password are specified as [Pipeline Variables](/help/using/create-an-application-project.md#pipeline-variables) with the names `CM_PERF_TEST_BASIC_USERNAME` and `CM_PERF_TEST_BASIC_PASSWORD`.
+Benutzername und Kennwort werden als [Pipeline-Variablen](/help/using/create-an-application-project.md#pipeline-variables) mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
 
 Obwohl dies nicht unbedingt erforderlich ist, wird empfohlen, den Variablentyp String für den Benutzernamen und den Variablentyp secretString für das Kennwort zu verwenden. Wenn beide angegeben sind, enthält jede Anfrage des Leistungstest-Crawlers und der virtuellen Testbenutzer diese Anmeldedaten als einfache HTTP-Standardauthentifizierung.
 
-To set these variables using the [Cloud Manager CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager), run:
+Um diese Variablen mithilfe der [Cloud Manager-Befehlszeilenschnittstelle festzulegen](https://github.com/adobe/aio-cli-plugin-cloudmanager), führen Sie Folgendes aus:
 
 `$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>`
 
@@ -222,7 +222,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
