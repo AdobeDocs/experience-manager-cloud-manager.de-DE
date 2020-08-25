@@ -8,18 +8,18 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1552'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
 
 # Wissenswertes zu Testergebnissen {#understand-your-test-results}
 
-Während der Pipeline-Ausführung werden eine Reihe von Metriken erfasst und mit den vom Geschäftsinhaber definierten Key Performance Indicators (KPIs) oder den von Adobe Managed Services festgelegten Standards verglichen.
+Während der Pipeline-Ausführung werden verschiedene Metriken erfasst und entweder mit den vom Business Owner definierten KPIs (Key Performance Indicators) oder mit den von Adobe Managed Services festgelegten Standards verglichen.
 
 Die entsprechende Berichterstattung erfolgt über ein dreistufiges Gatingsystem, so wie in diesem Abschnitt definiert.
 
@@ -41,16 +41,16 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 >
 >In einer Pipeline nur für Code-Qualität können Fehler der Kategorie „Wichtig“ des Code-Qualitätstests nicht überschrieben werden, da dieser Test der letzte Schritt in der Pipeline ist.
 
-## Testen der Codequalität {#code-quality-testing}
+## Testen der Code-Qualität {#code-quality-testing}
 
-Dieser Schritt bewertet die Qualität Ihres Anwendungscodes. Es ist das Kernziel einer reinen Code-Quality-Pipeline und wird unmittelbar nach dem Bauschritt in allen Nicht-Produktions- und Produktionsleitungen ausgeführt. Weitere Informationen zu den verschiedenen Pipelines finden Sie unter [Konfigurieren der CI-CD-Pipeline](/help/using/configuring-pipeline.md) .
+Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Dabei handelt es sich um das Kernziel einer reinen Code-Qualitäts-Pipeline, die unmittelbar nach dem Erstellungsschritt in allen Nichtproduktions- und Produktions-Pipelines ausgeführt wird. Weitere Informationen zu den verschiedenen Pipelines finden Sie unter [Konfigurieren Ihrer CI/CD-Pipeline](/help/using/configuring-pipeline.md).
 
-### Understanding Code Quality Testing {#understanding-code-quality-testing}
+### Wissenswertes zum Testen der Code-Qualität {#understanding-code-quality-testing}
 
-Bei der Codequalitätsprüfung wird der Quellcode gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md)bezeichnet.
+Beim Testen der Code-Qualität wird der Quellcode gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
 >[!NOTE]
->You can download the complete list of rules [here](/help/using/assets/CodeQuality-rules-latest.xlsx).
+>Sie können die vollständige Liste der Regeln [hier](/help/using/assets/CodeQuality-rules-latest.xlsx) herunterladen.
 
 Die Ergebnisse dieses Schritts werden als *Bewertung* bereitgestellt. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Prüfkriterien zusammen:
 
