@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite werden die wichtigsten Begriffe im Zusammenhan
 uuid: 2a37810b-98f8-4f01-90de-1e52c754ad16
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Einführung
+topic-tags: introduction
 discoiquuid: b702dfc0-3534-4d90-af19-8559d8baf6a6
 translation-type: tm+mt
-source-git-commit: aa4ff4eb2f3292fe4cb0baf8087b4d0213443cf4
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '347'
+ht-degree: 89%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: aa4ff4eb2f3292fe4cb0baf8087b4d0213443cf4
 
 Auf dieser Seite werden verschiedene grundlegende Cloud Manager-Begriffe beschrieben. Wir empfehlen dringend, diese Seite zu lesen, bevor Sie sich die übrige Cloud Manager-Dokumentation ansehen.
 
-**Anwendung** Die von einem Kunden (oder seinem Customizer) erstellten Individualisierungen und Konfigurationen, um die zugrunde liegende Lösung gemäß seinen Anwendungsfällen und Anforderungen anzupassen. Eine Anwendung ist eine logische Einheit, die aus mehreren Artefakten bestehen kann.
+**Anwendung** Der Satz von Anpassungen und Konfigurationen, die von einem Kunden erstellt werden, um die zugrunde liegende Lösung an die spezifischen Anwendungsfälle und Anforderungen anzupassen. Eine Anwendung ist eine logische Einheit, die aus mehreren Artefakten bestehen kann.
 
 Beispiel: *We.Retail*
 
@@ -36,7 +39,7 @@ Beispiel: *We.Retail*
 
 **Pipeline** Ein Satz von Bereitstellungsschritten, die nacheinander ausgeführt werden.
 
-**Produkt** Ein bestimmter Funktionssatz innerhalb einer von einer Organisation lizenzierten Lösung. Verschiedene Programme innerhalb einer Organisation können Anspruch auf verschiedene Produkte haben, z. B. Sites, Assets oder Forms.
+**Produkt** Ein bestimmter Funktionssatz innerhalb einer von einer Organisation lizenzierten Lösung. Verschiedene Programme innerhalb einer Organisation haben möglicherweise Anspruch auf unterschiedliche Produktgruppen. z. B. Sites, Assets oder Forms.
 
 **Programm** Ein Satz von Umgebungen, die eine logische Gruppierung von Kundeninitiativen unterstützen. Im Normalfall erfolgt dies gemäß dem erworbenen Service-Level-Agreement (SLA). Jedes Programm hat genau eine Produktionsumgebung und kann zahlreiche Nicht-Produktionsumgebungen aufweisen.
 
