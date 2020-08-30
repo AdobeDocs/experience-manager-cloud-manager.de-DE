@@ -5,11 +5,14 @@ description: 'null'
 seo-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.7.0.
 uuid: d7b49e32-01dc-48ce-b744-e6a806fbdd8a
 contentOwner: jsyal
-topic-tags: Versionshinweise
+topic-tags: release-notes
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: b64bf9ab-27ed-4f33-adc8-d73d34094f1b
 translation-type: tm+mt
-source-git-commit: b78c29520414726ad2bbf86e5b7f8e65710c7f75
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '360'
+ht-degree: 93%
 
 ---
 
@@ -32,9 +35,9 @@ Die [!UICONTROL Cloud Manager]-Version 2018.7.0 wurde am 10. September 2018 v
 
 * **Analyse der Codequalität**: Neue Regel zur Erkennung einer fehlerhaften API-Nutzung. Weitere Informationen finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
 
-* **Leistungstests**: Bei der Anzeige von Leistungstestergebnissen werden CPU-Auslastung, Festplatten-I/O-Wartezeit, Seitenfehlerrate, Festplatten-Bandbreitenauslastung, Netzwerk-Bandbreitenauslastung, maximale Seitenreaktionszeit und 95. Perzentil der Seitenreaktionszeit grafisch dargestellt. Weitere Informationen finden Sie auf der Seite [Wissenswertes zu Testergebnissen](understand-your-test-results.md) im Abschnitt „Leistungstests“.
+* **Leistungstests**: Bei der Anzeige von Leistungstestergebnissen werden CPU-Auslastung, Festplatten-I/O-Wartezeit, Seitenfehlerrate, Festplatten-Bandbreitenauslastung, Netzwerk-Bandbreitenauslastung, maximale Seitenreaktionszeit und 95. Perzentil der Seitenreaktionszeit grafisch dargestellt. Please refer to *Performance Testing* section on [Understand your Test Results](understand-your-test-results.md) page.
 
-* **Leistungstests**: Beim Anzeigen der Leistungstestergebnisse können Sie eine Liste der Seitenfehler und langsamen Anforderungen herunterladen. Weitere Informationen finden Sie auf der Seite [Wissenswertes zu Testergebnissen](understand-your-test-results.md) im Abschnitt „Leistungstests“.
+* **Leistungstests**: Beim Anzeigen der Leistungstestergebnisse können Sie eine Liste der Seitenfehler und langsamen Anforderungen herunterladen. Please refer to *Performance Testing* section on [Understand your Test Results](understand-your-test-results.md) page.
 
 ## Fehlerbehebungen {#bug-fixes}
 
