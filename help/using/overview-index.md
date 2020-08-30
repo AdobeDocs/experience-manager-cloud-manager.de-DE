@@ -7,7 +7,10 @@ uuid: d4a23a6e-347e-41c3-9e3b-b7b7469c4754
 contentOwner: jsyal
 discoiquuid: 5ca5a413-639e-43fb-93dd-16ce8935a3fd
 translation-type: tm+mt
-source-git-commit: 617b04e7465fa41542606b733ded76a32467738d
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '126'
+ht-degree: 73%
 
 ---
 
@@ -18,7 +21,7 @@ source-git-commit: 617b04e7465fa41542606b733ded76a32467738d
 
 In diesem Abschnitt finden Sie eine allgemeine Übersicht der Ressourcen für Ihre ersten Schritten mit [!UICONTROL Cloud Manager].
 
-Machen Sie sich zur Vorbereitung auf [!UICONTROL Cloud Manager] mit den unten stehenden Ressourcen vertraut, von den Erläuterungen der Schlüsselkonzepte und Begriffe bis hin zur Einrichtung von Konfigurationen (Voraussetzungen), die Ihnen schließlich die ersten Schritte mit [!UICONTROL Cloud Manager] ermöglichen.
+Follow the resources below to begin your journey for using [!UICONTROL Cloud Manager], from understanding the key concepts and terminologies to setting up configurations (pre-requisites), that finally lets you get started with [!UICONTROL Cloud Manager].
 
 Die folgende Abbildung zeigt Ihren Lernpfad für [!UICONTROL Cloud Manager]:
 
@@ -26,7 +29,7 @@ Die folgende Abbildung zeigt Ihren Lernpfad für [!UICONTROL Cloud Manager]:
 
 Machen Sie sich mit den Ressourcen im Abschnitt „Übersicht“ vertraut, um eine Einführung in [!UICONTROL Cloud Manager] zu erhalten:
 
-* **[Einführung in [!UICONTROL Cloud Manager]](introduction-to-cloud-manager.md)**
+* **[[!UICONTROL Einführung in Cloud Manager]](introduction-to-cloud-manager.md)**
 * **[Schlüsselkonzepte](key-concepts.md)**
 * **[[!UICONTROL Customer Journey]](customer-journey.md)**
 
