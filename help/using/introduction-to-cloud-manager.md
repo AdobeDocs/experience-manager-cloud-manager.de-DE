@@ -6,19 +6,22 @@ seo-description: 'Diese Seite dient als Ausgangspunkt für Informationen zu Adob
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Einführung
+topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: ht
-source-git-commit: d7c9ab3795fb3df02ab7dffd1328760ccd914a18
+translation-type: tm+mt
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '688'
+ht-degree: 100%
 
 ---
 
 
-# Einführung in [!UICONTROL Cloud Manager ]{#introduction-to-cloud-manager}
+# [!UICONTROL Einführung in Cloud Manager]{#introduction-to-cloud-manager}
 
 ## Einführung {#introduction}
 
-[!UICONTROL Cloud Manager], Teil von Adobe Managed Cloud Services, bietet Unternehmen die Möglichkeit, Experience Manager in der Cloud selbst zu verwalten. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen.
+[!UICONTROL  Manager], Teil von Adobe Managed Cloud Services, bietet Unternehmen die Möglichkeit, Experience Manager in der Cloud selbst zu verwalten. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen.
 
 Das Self-Service-Kundenportal von [!UICONTROL Cloud Manager] bietet **Unternehmen** folgende Möglichkeiten:
 
