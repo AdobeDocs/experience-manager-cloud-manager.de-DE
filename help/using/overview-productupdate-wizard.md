@@ -7,11 +7,11 @@ uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: ht
-source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 100%
+ht-degree: 90%
 
 ---
 
@@ -33,7 +33,7 @@ Der Assistent deckt folgende fünf Phasen der AEM-Produktaktualisierung ab:
 
 >[!NOTE]
 >
->Cloud Manager-Kunden, die eine Berechtigung zum Upgrade auf AEM 6.5 haben, können den Assistenten für Produktaktualisierungen nutzen. Weitere Informationen erhalten Sie bei Ihrem Customer Success Engineer (CSE).
+>Kunden, die an Bord von Cloud Manager sind und zu einem Upgrade auf AEM 6.5 berechtigt sind, können den Produktaktualisierungsassistenten nutzen. Weitere Informationen erhalten Sie bei Ihrem Customer Success Engineer (CSE).
 
 1. Wenn AEM 6.5 für Ihr Programm verfügbar ist, erhalten Sie eine Pulse-Benachrichtigung über Cloud Manager.
 
