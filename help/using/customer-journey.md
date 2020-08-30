@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: bc9a0d63-ae6b-4fe9-81e5-bf9844f04e54
-translation-type: ht
-source-git-commit: 77b7e2fc81880a7f1878fa9553ce2ae8078d1b78
-workflow-type: ht
-source-wordcount: '586'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '585'
+ht-degree: 74%
 
 ---
 
@@ -29,13 +29,13 @@ Möglicherweise sind Sie neuer Kunde von Adobe Experience Manager (AEM) und verw
 
 1. **Neue AEM-Kunden bei Adobe Managed Services**
 
-   Bei neuen Kunden erfolgt das [!UICONTROL Cloud Manager]-Onboarding im Rahmen des Onboarding-Prozesses für den Adobe Managed Cloud-Dienst.
+   As a new customer, you will be on-boarded to [!UICONTROL Cloud Manager] as part of the on-boarding process to the Adobe Managed Services.
 
-   Sie erhalten die URL für den Zugriff auf [!UICONTROL Cloud Manager] in der Begrüßungs-E-Mail zusammen mit Anweisungen zum Anmelden bei [!UICONTROL Experience Cloud]. Diese E-Mail enthält auch Informationen zum Verwenden der Adobe Admin Console für die Verwaltung Ihrer Benutzer und der entsprechenden Zugriffsrechte für die Benutzer, die auf [!UICONTROL Cloud Manager] zugreifen müssen.
+   The URL to access [!UICONTROL Cloud Manager] will be included in the welcome email, along with the instructions to login to [!UICONTROL Experience Cloud], and use the Adobe Admin Console for managing your users and their respective permissions, for those users who need to access [!UICONTROL Cloud Manager].
 
 1. **Bestehende AEM-Kunden bei Adobe Managed Services**
 
-   Als bestehender Kunde müssen Sie zunächst Ihre vorhandenen Produktions- und Nicht-Produktionsumgebungen auf Version AEM 6.4 aktualisieren. Während der Aktualisierung wird das Onboarding durchgeführt und Sie erhalten die URL für den Zugriff auf [!UICONTROL Cloud Manager]. Darüber hinaus müssen Sie in der Adobe Admin Console Ihre Benutzer und die entsprechenden Zugriffsrechte für die Benutzer verwalten, die auf [!UICONTROL Cloud Manager] zugreifen müssen.
+   Als bestehender Kunde müssen Sie zunächst Ihre vorhandenen Produktions- und Nicht-Produktionsumgebungen auf Version AEM 6.4 aktualisieren. Während der Aktualisierung wird das Onboarding durchgeführt und Sie erhalten die URL für den Zugriff auf [!UICONTROL Cloud Manager]. Additionally, you will need to start using the Adobe Admin Console for managing your users and their respective permissions, for those users who need to access [!UICONTROL Cloud Manager].
 
    Auch vorhandene AEM-Projekte müssen Best-Practice-Verfahren entsprechen, wenn Sie mit [!UICONTROL Cloud Manager] neue Code-Änderungen in Ihren AEM-Umgebungen bereitstellen.
 
@@ -43,7 +43,7 @@ Möglicherweise sind Sie neuer Kunde von Adobe Experience Manager (AEM) und verw
 
 ## Zugriff auf [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
-Für den Zugriff auf [!UICONTROL Cloud Manager] und Ihre AEM-Umgebungen müssen Sie sich lediglich auf der [!UICONTROL Experience Cloud]-Landingpage mit Ihren Adobe Identity Management-Anmeldeinformationen anmelden und im Solution Switcher „AEM“ auswählen.
+You will get access to [!UICONTROL Cloud Manager] and your AEM environments by simply logging in to the [!UICONTROL Experience Cloud] landing page, using your Adobe Identity Management credentials, and selecting AEM from the solution switcher interface.
 
 Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. Sobald die erste Codeverzweigung in Ihrer Staging- und Produktionsumgebung bereitgestellt werden kann, können Sie hier alle Möglichkeiten von [!UICONTROL Cloud Manager] erkunden.
 
@@ -51,7 +51,7 @@ Wenn Sie [!UICONTROL Cloud Manager] besser kennenlernen und die ersten Schritte 
 
 ## Erste Schritte mit [!UICONTROL Cloud Manager]{#getting-started-with-cloud-manager}
 
-Nach der Anmeldung bei [!UICONTROL Cloud Manager] sollten Sie zunächst Ihre Code-Repository-Umgebung und anschließend Ihr Team und die Rollen einrichten. Für die Zuweisung der Rollenmitgliedschaften werden die Benutzer über die Admin Console-Benutzeroberfläche zu einem [!UICONTROL Cloud Manager]-Profil hinzugefügt.
+Nach der Anmeldung bei [!UICONTROL Cloud Manager] sollten Sie zunächst Ihre Code-Repository-Umgebung und anschließend Ihr Team und die Rollen einrichten. Specifically, the role memberships are assigned by adding the user to a [!UICONTROL Cloud Manager] profile using the Admin Console UI.
 
 Anschließend müssen Sie Ihre Quellcodeverzweigungen im **Git-Repository** einrichten, Ihre Ziele in Bezug auf Lasten- und Leistungs-KPIs definieren und Szenarien testen, damit Sie Ihren Code nach erfolgreichem Abschluss aller Qualitätsprüfungen erfolgreich in Ihrer Staging- und Produktionsumgebung bereitstellen können.
 
