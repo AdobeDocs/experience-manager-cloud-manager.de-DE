@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manag
 uuid: 3af5808f-828f-4846-bee4-1e62194b48ad
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Versionshinweise
+topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 translation-type: tm+mt
-source-git-commit: 949d3cf0239a02875ba4ad1888e081f104dec2e2
+source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 96%
 
 ---
 
@@ -26,7 +29,7 @@ Die [!UICONTROL Cloud Manager]-Version 2018.9.0 wurde am 1. November 2018 ver
 
 * **CI/CD-Pipeline**: Neue API und neues Ereignissystem zur Integration der CI/CD-Pipeline von [!UICONTROL Cloud Manager] mit anderen Systeme. Weitere Informationen finden Sie in der [!UICONTROL Cloud Manager]-API-Dokumentation (https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html).
 
-* **UI**: Einführung einer neuen schnelleren und leistungsfähigeren UI-Schicht.
+* **Benutzeroberfläche** - Einführung einer neuen UI-Ebene, die responsiver ist.
 
 ## Fehlerbehebungen {#bug-fixes}
 
