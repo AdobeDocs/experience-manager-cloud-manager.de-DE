@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
-translation-type: ht
-source-git-commit: cdf2c82192c2e9c375316ae6e28646594ba2a462
-workflow-type: ht
-source-wordcount: '352'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+workflow-type: tm+mt
+source-wordcount: '341'
+ht-degree: 95%
 
 ---
 
@@ -27,7 +27,7 @@ Die [!UICONTROL Cloud Manager]-Version 2018.8.0 wurde am 4. Oktober 2018 ver�
 
 ## Neuigkeiten {#what-s-new}
 
-* **Programmeinrichtung**: Neuer Assistent zum Erstellen eines Anwendungsprojekts im Git-Format mithilfe des AEM-Projektarchetyps. Weitere Informationen finden Sie unter [Erstellen von AEM-Anwendungsprojekten](/help/using/create-an-application-project.md).
+* **Programm-Setup** - Neuer Assistent zum Erstellen eines Anwendungsprojekts in Git mithilfe des AEM Projektarchetyps
 
 * **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
 
