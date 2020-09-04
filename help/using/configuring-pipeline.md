@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: ht
-source-git-commit: c2f5caf50f2e20c07807369aee7914c17fded4de
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
+workflow-type: tm+mt
 source-wordcount: '1763'
 ht-degree: 100%
 
@@ -28,7 +28,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -204,7 +204,7 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
 AMS-Kunden mit authentifizierten Websites können einen Benutzernamen und ein Kennwort angeben, mit denen Cloud Manager während des Sites-Leistungstests auf die Website zugreift.
 
-Benutzername und Kennwort werden als [Pipeline-Variablen](/help/using/create-an-application-project.md#pipeline-variables) mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
+Benutzername und Kennwort werden als [Pipeline-Variablen](/help/using/build-environment-details.md#pipeline-variables) mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
 
 Obwohl dies nicht unbedingt erforderlich ist, wird empfohlen, den Variablentyp String für den Benutzernamen und den Variablentyp secretString für das Kennwort zu verwenden. Wenn beide angegeben sind, enthält jede Anfrage des Leistungstest-Crawlers und der virtuellen Testbenutzer diese Anmeldedaten als einfache HTTP-Standardauthentifizierung.
 
@@ -222,7 +222,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
