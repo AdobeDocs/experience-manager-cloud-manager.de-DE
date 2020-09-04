@@ -8,11 +8,11 @@ contentOwner: jsyal
 topic-tags: release-notes
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: b64bf9ab-27ed-4f33-adc8-d73d34094f1b
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '360'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -35,9 +35,9 @@ Die [!UICONTROL Cloud Manager]-Version 2018.7.0 wurde am 10. September 2018 v
 
 * **Analyse der Codequalität**: Neue Regel zur Erkennung einer fehlerhaften API-Nutzung. Weitere Informationen finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
 
-* **Leistungstests**: Bei der Anzeige von Leistungstestergebnissen werden CPU-Auslastung, Festplatten-I/O-Wartezeit, Seitenfehlerrate, Festplatten-Bandbreitenauslastung, Netzwerk-Bandbreitenauslastung, maximale Seitenreaktionszeit und 95. Perzentil der Seitenreaktionszeit grafisch dargestellt. Please refer to *Performance Testing* section on [Understand your Test Results](understand-your-test-results.md) page.
+* **Leistungstests**: Bei der Anzeige von Leistungstestergebnissen werden CPU-Auslastung, Festplatten-I/O-Wartezeit, Seitenfehlerrate, Festplatten-Bandbreitenauslastung, Netzwerk-Bandbreitenauslastung, maximale Seitenreaktionszeit und 95. Perzentil der Seitenreaktionszeit grafisch dargestellt. Weitere Informationen finden Sie im Abschnitt *Leistungstests* auf der Seite [Wissenswertes zu Testergebnissen](understand-your-test-results.md).
 
-* **Leistungstests**: Beim Anzeigen der Leistungstestergebnisse können Sie eine Liste der Seitenfehler und langsamen Anforderungen herunterladen. Please refer to *Performance Testing* section on [Understand your Test Results](understand-your-test-results.md) page.
+* **Leistungstests**: Beim Anzeigen der Leistungstestergebnisse können Sie eine Liste der Seitenfehler und langsamen Anforderungen herunterladen. Weitere Informationen finden Sie im Abschnitt *Leistungstests* auf der Seite [Wissenswertes zu Testergebnissen](understand-your-test-results.md).
 
 ## Fehlerbehebungen {#bug-fixes}
 
