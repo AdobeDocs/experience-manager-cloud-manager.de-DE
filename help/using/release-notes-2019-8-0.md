@@ -3,11 +3,11 @@ title: Versionshinweise für 2019.8.0
 seo-title: Versionshinweise für AEM Cloud Manager 2019.8.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.8.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.8.0.
-translation-type: ht
-source-git-commit: c07e88564dc1419bd0305c9d25173a8e0e1f47cf
-workflow-type: ht
-source-wordcount: '234'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
+workflow-type: tm+mt
+source-wordcount: '227'
+ht-degree: 88%
 
 ---
 
@@ -22,7 +22,7 @@ Die [!UICONTROL Cloud Manager]-Version 2019.8.0 wurde am 19. August 2019 ver�
 ## Neuigkeiten {#whats-new}
 
 * Neue Befehlszeilenschnittstelle zur Cloud Manager-API, mit Unterstützung von [Adobe I/O CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager).
-* Bestimmte durch den Build erzeugte Inhaltspakete können als übersprungen deklariert werden und werden nicht bereitgestellt. Weitere Informationen finden Sie unter ***Überspringen von Inhaltspaketen*** in [Erstellen eines AEM-Anwendungsprojekts](/help/using/create-an-application-project.md).
+* Spezifische Inhaltspakete, die vom Build erstellt wurden, können als übersprungen deklariert werden und werden nicht bereitgestellt. Weitere Informationen finden Sie unter Inhaltspakete [überspringen](/help/using/setting-up-project.md#skipping-content-packages) .
 * Der Satz vorab geladener Abhängigkeiten im Build-Container wurde überarbeitet, um einige unnötige Netzwerkanforderungen zu vermeiden.
 * Die Meldung auf der Übersichtsseite für bestimmte falsch konfigurierte Programme wurde verbessert.
 
