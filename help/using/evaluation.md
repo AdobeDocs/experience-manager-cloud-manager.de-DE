@@ -7,11 +7,11 @@ uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '294'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 94%
 Die erste Phase im Assistenten für Produktaktualisierungen ist die **[!UICONTROL Testphase]**.
 Hier können Sie die Komplexität des Upgrades beurteilen, und zwar mithilfe des Musterdetektors, den Sie direkt über den Assistenten aufrufen können. Nach diesem Schritt haben Sie Zugriff auf den Testbericht.
 
-Der generierte Bericht ermöglicht Ihnen, die Autoreninstanz auf eine Aktualisierung zu prüfen, indem Sie Muster erkennen, die:
+Im generierten Bericht können Sie die Autoreninstanz auf ein Uggrade überprüfen. Suchen Sie nach Mustern, die:
 
 * gegen bestimmte Regeln verstoßen und Bereiche betreffen, die durch das Upgrade überschrieben werden.
 
