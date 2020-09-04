@@ -9,9 +9,9 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '952'
 ht-degree: 98%
 
 ---
@@ -48,7 +48,7 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
    Die **Staging-Bereitstellung** umfasst die folgenden Schritte:
 
    * Validierung: Dieser Schritt stellt sicher, dass die Pipeline so konfiguriert ist, dass die derzeit verfügbaren Ressourcen verwendet werden. So wird z. B. überprüft, ob die konfigurierte Verzweigung vorhanden ist und die Umgebungen verfügbar sind.
-   * Build- und Komponententests: Dieser Schritt führt einen containerisierten Build-Prozess aus. Weitere Informationen zur Build-Umgebung finden Sie unter [AEM-Anwendungsprojekt erstellen](create-an-application-project.md).
+   * Build- und Komponententests: Dieser Schritt führt einen containerisierten Build-Prozess aus. Weitere Informationen zur Build-Umgebung finden Sie unter [Grundlegendes zur Build-Umgebung](/help/using/build-environment-details.md) .
    * Code-Scan: Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md).
    * Bereitstellung in der Staging-Umgebung
 
@@ -75,7 +75,7 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
    >Der **Zeitplan zur Produktionsbereitstellung** wird bei der Konfiguration der Pipeline aktiviert.
    >
    >
-   >Using this option, you can either schedule your production deployment or click **Now** to execute the production deployment immediately.
+   >Mit dieser Option können Sie die Produktionsbereitstellung planen. Oder klicken Sie auf **Jetzt**, um die Produktionsbereitstellung sofort auszuführen.
    >
    >
    >Datum und Uhrzeit für den Zeitplan beziehen sich auf die Zeitzone des Benutzers.
