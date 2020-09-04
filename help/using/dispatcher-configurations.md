@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
+source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
 workflow-type: tm+mt
 source-wordcount: '597'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 90%
 
 Cloud Manager kann Webserver- und Dispatcher-Konfigurationsdateien bereitstellen, sofern diese nicht nur in den normalen AEM-Inhaltspaketen, sondern auch im **Git-Repository** gespeichert sind.
 
-Um diese Funktion nutzen zu können, sollte der Maven-Build eine ZIP-Datei erstellen, die mindestens zwei Verzeichnisse enthält – ***conf*** und ***conf.d***. Diese ZIP-Datei kann mit dem Maven-Assembly-Plug-in erstellt werden. Projekte, die von Cloud Manager mithilfe des integrierten [Assistenten](/help/using/create-an-application-project.md) erstellt wurden, haben die korrekte Maven-Projektstruktur, da diese bei der Projekterstellung erstellt wurde. Dies ist der empfohlene Pfad für neue Managed Services-Kunden.
+Um diese Funktion nutzen zu können, sollte der Maven-Build eine ZIP-Datei erstellen, die mindestens zwei Verzeichnisse enthält – ***conf*** und ***conf.d***. Diese ZIP-Datei kann mit dem Maven-Assembly-Plug-in erstellt werden. Projekte, die von Cloud Manager mithilfe des integrierten [Assistenten](/help/using/using-the-wizard.md) erstellt wurden, haben die korrekte Maven-Projektstruktur, da diese bei der Projekterstellung erstellt wurde. Dies ist der empfohlene Pfad für neue Managed Services-Kunden.
 
-Beim Bereitstellen einer **Dispatcher-Instanz** ersetzt der Inhalt dieser Verzeichnisse den Inhalt der entsprechenden Verzeichnisse in der Dispatcher-Instanz. Since web server and Dispatcher configuration files frequently require environment-specific information, in order for this capability to be used correctly, you will first need to work with your Customer Success Engineers (CSE) to set these environment variables in `/etc/sysconfig/httpd`.
+Beim Bereitstellen einer **Dispatcher-Instanz** ersetzt der Inhalt dieser Verzeichnisse den Inhalt der entsprechenden Verzeichnisse in der Dispatcher-Instanz. Da Webserver- und Dispatcher-Konfigurationsdateien häufig umgebungsspezifische Informationen benötigen, müssen Sie zur korrekten Nutzung dieser Funktion zunächst diese Umgebungsvariablen in `/etc/sysconfig/httpd` mithilfe Ihrer Customer Success Engineers (CSE) festlegen.
 
 ### Schritte zur Dispatcher-Konfiguration für bestehende Managed Services-Kunden {#steps-for-configuring-dispatcher}
 
@@ -33,7 +33,7 @@ Führen Sie die folgenden Schritte aus, um den ersten Prozess bei der Dispatcher
 
 1. Beziehen Sie die aktuellen Produktionskonfigurationsdateien von Ihrem CSE.
 1. Entfernen Sie hartcodierte umgebungsspezifische Daten (z. B. Publish-Renderer-IP-Adresse) und ersetzen Sie sie durch Variablen.
-1. Define required variables in key-value pairs for each target Dispatcher and request your CSE to add to `/etc/sysconfig/httpd` on each instance.
+1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jeden Ziel-Dispatcher und bitten Sie Ihren CSE, diese in jeder Instanz zu `/etc/sysconfig/httpd` hinzuzufügen.
 1. Testen Sie die aktualisierten Konfigurationen in Ihrer Staging-Umgebung und lassen Sie sie dann von Ihrem CSE in der Produktion bereitstellen.
 1. Übertragen Sie die Dateien in das **Git-Repository**.
 
