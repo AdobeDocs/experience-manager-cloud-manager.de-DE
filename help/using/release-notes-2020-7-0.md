@@ -3,9 +3,9 @@ title: Versionshinweise für 2020.7.0
 seo-title: Versionshinweise für AEM Cloud Manager 2020.7.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.7.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.7.0.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '214'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL C
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version 2020.7.0 von [!UICONTROL Cloud Manager] wurde am 09. Juli 2020 veröffentlicht.
+Die Version 2020.7.0 von [!UICONTROL Cloud Manager] wurde am Donnerstag, 9. Juli 2020 veröffentlicht.
 
 ## Neuerungen {#whats-new}
 
