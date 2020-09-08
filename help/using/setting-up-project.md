@@ -1,11 +1,11 @@
 ---
 title: Einrichten des Projekts
 description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '873'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
@@ -17,10 +17,10 @@ ht-degree: 78%
 Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitgestellt werden können, müssen einige grundlegende Regeln berücksichtigt werden:
 
 * Projekte müssen mit Apache Maven erstellt werden.
-* Im Stammverzeichnis des Git-Repositorys muss eine Datei *pom.xml* vorhanden sein. This *pom.xml* file can refer to as many sub-modules (which in turn may have other sub-modules, etc.) wie nötig.
+* Im Stammverzeichnis des Git-Repositorys muss eine Datei *pom.xml* vorhanden sein. Diese *pom.xml*-Datei kann ggf. auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.) wie nötig.
 
 * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren *pom.xml*-Dateien hinzufügen. Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
-* Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im *ZIP*-Format suchen, die in einem Verzeichnis mit dem Namen *target* enthalten sind. Eine beliebige Anzahl von Untermodulen kann Inhaltspakete erzeugen.
+* Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im *ZIP*-Format suchen, die in einem Verzeichnis mit dem Namen *target* enthalten sind. Eine beliebige Anzahl von Untermodulen kann Inhaltspakete produzieren.
 
 * Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach *ZIP*-Dateien (ebenfalls in einem Verzeichnis namens *target*) suchen, die Verzeichnisse mit den Namen *conf* und *conf.d* enthalten.
 
@@ -31,7 +31,7 @@ Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitge
 
 In einigen wenigen Fällen müssen Sie den Build-Prozess möglicherweise etwas anders gestalten, wenn er in Cloud Manager und auf Entwickler-Workstations ausgeführt wird. In diesen Fällen können Sie mit [Maven-Profilen](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) definieren, wie der Build in verschiedenen Umgebungen (einschließlich Cloud Manager) abweichen soll.
 
-Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung sollte über die oben beschriebene Umgebungsvariable CM_BUILD erfolgen. Umgekehrt sollte ein Profil, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, ausgeführt werden, indem nach dem Fehlen dieser Variablen gesucht wird.
+Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung sollte über die oben beschriebene Umgebungsvariable CM_BUILD erfolgen. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
 
 Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn der Build innerhalb von Cloud Manager ausgeführt wird, verwenden Sie Folgendes:
 
@@ -108,7 +108,7 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
 ## Unterstützung für kennwortgeschütztes Maven-Repository {#password-protected-maven-repositories}
 
 >[!NOTE]
->Artefakte aus einem kennwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht über die Qualitätsdaten von Cloud Manager ausgeführt wird. Daher sollte es nur in seltenen Fällen und für Code, der nicht an AEM gebunden ist, verwendet werden. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquellcode bereitzustellen.
+>Artefakte aus einem kennwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht die Quality Gates von Cloud Manager durchläuft. Daher sollten sie nur in seltenen Fällen und nur für Code verwendet werden, der nicht an AEM gebunden ist. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquell-Code bereitzustellen.
 
 Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/using/build-environment-details.md#pipeline-variables) an und verweisen Sie dann in einer Datei im git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html). Wenn der Build-Vorgang von Cloud Manager gestartet wird, wird das `<servers>`-Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml`-Standarddatei zusammengeführt. Server-IDs, die mit `adobe` und `cloud-manager` beginnen, gelten als reserviert und sollten nicht von kundenspezifischen Servern verwendet werden. Server-IDs, die **nicht** mit eine, dieser Praefice oder der Standard-ID `central` übereinstimmen, werden vom Cloud Manager niemals gespiegelt. Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>`- und/oder `<pluginRepository>`-Elements in der `pom.xml`-Datei referenziert. Im Allgemeinen wären diese `<repository>`- und/oder `<pluginRepository>`-Elemente in einem [Cloud Manager-spezifischen Profil](#activating-maven-profiles-in-cloud-manager) enthalten, auch wenn dies nicht unbedingt erforderlich ist.
 
@@ -181,7 +181,7 @@ Verweisen Sie schließlich auf die Server-ID in der `pom.xml`-Datei:
 
 Es empfiehlt sich, die Java-Quellen zusammen mit der Binärdatei in einem Maven-Repository bereitzustellen.
 
-Konfigurieren Sie das maven-source-Plugin in Ihrem Projekt:
+Konfigurieren Sie das Maven-Quell-Plug-in in Ihrem Projekt:
 
 ```xml
         <plugin>
@@ -200,9 +200,9 @@ Konfigurieren Sie das maven-source-Plugin in Ihrem Projekt:
 
 ### Bereitstellen von Projektquellen {#deploying-project-sources}
 
-Es ist eine gute Praxis, die gesamte Projektquelle zusammen mit der Binärdatei in einem Maven-Repository bereitzustellen - dies ermöglicht es, das genaue Artefakt neu zu erstellen.
+Es empfiehlt sich, die gesamte Projektquelle zusammen mit den Binärdaten in einem Maven-Respository bereitzustellen. Dies erlaubt die Neuerstellung des exakten Artefakts.
 
-Konfigurieren Sie das Plugin maven-assembly in Ihrem Projekt:
+Konfigurieren das Maven-Zusammenführungs-Plug-in in Ihrem Projekt:
 
 ```xml
         <plugin>
@@ -264,4 +264,4 @@ Mit dem content-package-maven-Plugin ist es ähnlich:
 
 ## Entwickeln von Code basierend auf Best Practices {#develop-your-code-based-on-best-practices}
 
-Die Entwicklungs- und Beratungsteams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler zusammengestellt](https://helpx.adobe.com/experience-manager/6-4/sites/developing/using/best-practices.html).
+Die Entwicklungs- und Beratungsteams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler zusammengestellt](https://helpx.adobe.com/de/experience-manager/6-4/sites/developing/using/best-practices.html).
