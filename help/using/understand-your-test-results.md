@@ -8,9 +8,9 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-translation-type: ht
-source-git-commit: d38b6da61c552a3e9ad03dac49a64553f0cb00b4
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
+workflow-type: tm+mt
 source-wordcount: '1552'
 ht-degree: 100%
 
@@ -162,7 +162,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix
 | Seitenaufrufe pro Minute | Wichtig | &lt; KPI auf Programmebene |
 | Festplatten-Bandbreitenauslastung | Wichtig | >= 90% |
 | Netzwerk-Bandbreitenauslastung | Wichtig | >= 90% |
-| Anforderungen pro Minute | Info | &lt; 6.000 |
+| Anforderungen pro Minute | Info | >= 6.000 |
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
