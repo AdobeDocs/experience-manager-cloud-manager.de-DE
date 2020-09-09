@@ -1,11 +1,11 @@
 ---
 title: Verwenden des Assistenten
-description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM Application Project erstellen
-translation-type: tm+mt
+description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM-Anwendungsprojekt erstellen
+translation-type: ht
 source-git-commit: 7146a41d64365c9de03d32f4fc4c33f9e366c244
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '332'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
