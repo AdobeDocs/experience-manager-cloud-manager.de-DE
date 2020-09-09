@@ -1,16 +1,16 @@
 ---
-title: Die Build-Umgebung
-description: Auf dieser Seite erfahren Sie mehr über Umgebung
-translation-type: tm+mt
+title: Grundlagen zur Build-Umgebung
+description: Auf dieser Seite erfahren Sie mehr über Umgebungen
+translation-type: ht
 source-git-commit: f73ea3db4bc50891518bebbe5da2d69dd2890a81
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '663'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
-# Die Build-Umgebung {#build-environment-details}
+# Grundlagen zur Build-Umgebung {#build-environment-details}
 
 Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellungsumgebung. Diese Umgebung weist die folgenden Attribute auf:
 
