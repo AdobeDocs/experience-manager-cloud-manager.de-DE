@@ -8,9 +8,9 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '339'
 ht-degree: 100%
 
@@ -23,13 +23,13 @@ Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun das Testen von
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2019.1.0 wurde am 17. Januar 2019 veröffentlicht.
+Die Version 2019.1.0 von [!UICONTROL Cloud Manager] wurde am Donnerstag, 17. Januar 2019 veröffentlicht.
 
-## Neuigkeiten {#whats-new}
+## Neuerungen {#whats-new}
 
 * AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
 * Pipelines, die ausschließlich Build- und Codequalitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md) im Abschnitt **Reine Nicht-Produktions- und Codequalitätspipelines**.
-* Benutzerdefinierte Umgebungsvariablen in der Buildumgebung werden nun unterstützt.
+* Benutzerdefinierte Umgebungsvariablen in der Build-Umgebung werden nun unterstützt.
 * Kunden mit mehreren Staging- oder Produktionsumgebungen können auf der Seite [CI/CD-Pipeline konfigurieren](configuring-pipeline.md) festlegen, welche Umgebung als Teil der Produktionspipeline bereitgestellt wird.
 * httxt2dbm wurde dem Buildcontainer hinzugefügt.
 * Sie können über alle Elemente des Hilfemenüs eine neue Registerkarte öffnen.
