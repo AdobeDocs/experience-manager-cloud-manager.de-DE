@@ -2,19 +2,19 @@
 product: adobe experience manager
 sub-product: Experience Manager Cloud Manager
 archetype: administrator
-user-guide-title: Experience Manager Cloud Manager-Handbuch
+user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
 breadcrumb-title: Cloud Manager Guide
 user-guide-description: Learn to use Adobe Managed Services to self-manage Experience Manager in the cloud.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 0f8d208484044db66aa94d7505b9fdaa2a206a09
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '221'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
-# Cloud Manager-Handbuch {#using}
+# Benutzerhandbuch zu Cloud Manager {#using}
 
 + [Einführung in Cloud Manager](introduction-to-cloud-manager.md)
 + Überblick {#overview}
