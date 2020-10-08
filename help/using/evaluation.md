@@ -7,9 +7,9 @@ uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: ht
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
-workflow-type: ht
+translation-type: tm+mt
+source-git-commit: 8d1a100420129d234fe21911f165621405a04a9b
+workflow-type: tm+mt
 source-wordcount: '294'
 ht-degree: 100%
 
@@ -40,6 +40,7 @@ Gehen Sie wie folgt vor, um Testberichte zu erstellen:
 1. Klicken Sie auf **[!UICONTROL Test ausführen]**.
 
    >[!NOTE]
+   >
    >Der Musterdetektor kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass in geschäftskritischen Instanzen Verzögerungen auftreten, wird er von Cloud Manager auf der Autoreninstanz in der Staging-Umgebung ausgeführt.
 
    ![](assets/Run-Evaluation.png)
