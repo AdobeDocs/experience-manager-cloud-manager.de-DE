@@ -1,11 +1,11 @@
 ---
 title: Grundlagen zur Build-Umgebung
 description: Auf dieser Seite erfahren Sie mehr über Umgebungen
-translation-type: ht
-source-git-commit: 57a99792e151bd5fe69c8372b6a9d3b100036a51
-workflow-type: ht
-source-wordcount: '709'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 000843f902a180181981de2b1307fd2777d32994
+workflow-type: tm+mt
+source-wordcount: '723'
+ht-degree: 92%
 
 ---
 
@@ -107,7 +107,7 @@ Aktuelle Variablen können aufgelistet werden:
 
 `$ aio cloudmanager:list-pipeline-variables PIPELINEID`
 
-Variablennamen dürfen nur alphanumerische Zeichen und Unterstriche (_) enthalten. Dabei sollten Großbuchstaben verwendet werden. Pro Pipeline sind maximal 200 Variablen zulässig. Jeder Name darf maximal 100 Zeichen und jeder Wert maximal 2048 Zeichen lang sein.
+Variablennamen dürfen nur alphanumerische Zeichen und Unterstriche (_) enthalten. Dabei sollten Großbuchstaben verwendet werden. Pro Pipeline sind maximal 200 Variablen zulässig. Jeder Name muss weniger als 100 Zeichen und jeder Wert muss bei Variablen des Typs String weniger als 2048 Zeichen und bei Variablen des Typs &quot;secretString&quot;500 Zeichen umfassen.
 
 Bei Verwendung in einer `Maven pom.xml`-Datei ist es in der Regel hilfreich, diese Variablen Maven-Eigenschaften mit einer ähnlichen Syntax zuzuordnen:
 
@@ -183,5 +183,4 @@ Einige Builds erfordern die Installation zusätzlicher Systempakete, damit sie v
 Mit derselben Methode können Sie auch sprachspezifische Pakete installieren, d. h. mit `gem` für RubyGems oder mit `pip` für Python-Pakete.
 
 >[!NOTE]
->
->Wenn Sie ein Systempaket auf diese Weise installieren, wird es **nicht** in der Laufzeitumgebung installiert, die für die Ausführung von Adobe Experience Manager verwendet wird. Wenn Sie ein Systempaket in der AEM-Umgebung installieren möchten, wenden Sie sich an Ihre Customer Success Engineers (CSE).
+>Wenn Sie ein Systempaket auf diese Weise installieren, wird es **nicht** in der Laufzeitumgebung installiert, die für die Ausführung von Adobe Experience Manager verwendet wird. Wenn Sie ein auf der AEM Umgebung installiertes Systempaket benötigen, wenden Sie sich an Ihren Kundenbetreuer für Adobe.
