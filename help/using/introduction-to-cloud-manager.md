@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-translation-type: ht
-source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
-workflow-type: ht
-source-wordcount: '688'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+workflow-type: tm+mt
+source-wordcount: '708'
+ht-degree: 97%
 
 ---
 
@@ -71,3 +71,6 @@ Weitere Informationen zum Bereitstellen von Code und zu Qualitätsprüfungen fin
 Während die automatische Skalierung durchgeführt wird, löst [!UICONTROL Cloud Manager] automatisch die Skalierung aus, sendet eine Benachrichtigung über die automatische Skalierung und schaltet die zusätzliche Kapazität innerhalb von Minuten aktiv. Die zusätzliche Kapazität wird in der Produktionsumgebung bereitgestellt, und zwar in denselben Regionen und mit denselben Systemspezifikationen wie in laufenden Dispatcher-/Veröffentlichungsknoten.
 
 Die Funktion zur automatischen Skalierung gilt nur für die Dispatcher-/Veröffentlichungsstufe und wird immer mit einer horizontalen Skalierungsmethode durchgeführt, wobei mindestens ein zusätzliches Segment aus Dispatcher-/Veröffentlichungspaar hinzugefügt wird und maximal zehn Segmente verwendet werden. Jede zusätzlich bereitgestellte Kapazität wird innerhalb von zehn Arbeitstagen, wie vom CSE (Customer Success Engineer) bestimmt, manuell zurückgenommen.
+
+>[!NOTE]
+>Kunden, die prüfen möchten, ob Autoscaling für ihre Anwendung geeignet ist, müssen sich an ihren CSE- oder Adobe-Kundenbetreuer wenden.
