@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
 translation-type: tm+mt
-source-git-commit: 2005b7e7689d3bc0656f92ecdbe368519f0d52a9
+source-git-commit: d3f17b1fd4fcc1c75836c9dd67d54e22422db120
 workflow-type: tm+mt
 source-wordcount: '708'
 ht-degree: 97%
@@ -73,4 +73,4 @@ Während die automatische Skalierung durchgeführt wird, löst [!UICONTROL Cloud
 Die Funktion zur automatischen Skalierung gilt nur für die Dispatcher-/Veröffentlichungsstufe und wird immer mit einer horizontalen Skalierungsmethode durchgeführt, wobei mindestens ein zusätzliches Segment aus Dispatcher-/Veröffentlichungspaar hinzugefügt wird und maximal zehn Segmente verwendet werden. Jede zusätzlich bereitgestellte Kapazität wird innerhalb von zehn Arbeitstagen, wie vom CSE (Customer Success Engineer) bestimmt, manuell zurückgenommen.
 
 >[!NOTE]
->Kunden, die prüfen möchten, ob Autoscaling für ihre Anwendung geeignet ist, müssen sich an ihren CSE- oder Adobe-Kundenbetreuer wenden.
+>Kunden, die prüfen möchten, ob die automatische Skalierung für ihre Anwendung geeignet ist, müssen sich an ihren CSE- oder Adobe-Kundenbetreuer wenden.
