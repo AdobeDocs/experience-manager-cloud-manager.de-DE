@@ -3,11 +3,11 @@ title: Versionshinweise für 2020.10.0
 seo-title: Versionshinweise für AEM Cloud Manager 2020.10.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.10.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.10.0.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: aad2da58e5934999884553619dd97d42cc725d88
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '106'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ Die Version 2020.10.0 von [!UICONTROL Cloud Manager] wurde am 01. Oktober 2020 
 
 * In einigen Fällen wurde der Abschluss des Leistungstests nicht korrekt behandelt und führte zu langwierigen Schritten.
 
-* Beim Konfigurieren der Dispatcher-Cache-Ungültigmachung für Produktionsimplementierungen wurde die Ungültigmachung manchmal zweimal ausgeführt.
+* Beim Konfigurieren der Dispatcher-Cache-Annullierung für Produktionsimplementierungen wurde die Annullierung manchmal zweimal ausgeführt.
