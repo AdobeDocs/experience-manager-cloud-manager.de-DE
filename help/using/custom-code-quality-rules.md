@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 translation-type: tm+mt
-source-git-commit: a8cd1ac2448b9f875c1d925c62e7fe42c8ceec2a
+source-git-commit: 71a760997ec2a0873a7f39d206086a8b4fd6854e
 workflow-type: tm+mt
-source-wordcount: '2296'
-ht-degree: 99%
+source-wordcount: '2314'
+ht-degree: 97%
 
 ---
 
@@ -561,7 +561,7 @@ public void doThis(Resource resource) {
 
 **Schlüssel**: CQRules:AMSCORE-554
 
-**Typ**: Code Smell
+**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
 
 **Schweregrad**: Gering
 
@@ -575,7 +575,7 @@ Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Umgebung mit Clus
 
 **Schlüssel**: AMSCORE-553
 
-**Typ**: Code Smell
+**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
 
 **Schweregrad**: Gering
 
@@ -689,7 +689,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 
 **Schlüssel**: ClassicUIAuthoringMode
 
-**Typ**: Code Smell
+**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
 
 **Schweregrad**: Gering
 
@@ -701,7 +701,7 @@ Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` def
 
 **Schlüssel**: ComponentWithOnlyClassicUIDialog
 
-**Typ**: Code Smell
+**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
 
 **Schweregrad**: Gering
 
@@ -719,7 +719,7 @@ Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Dokumentation und To
 
 **Schlüssel**: ImmutableMutableMixedPackage
 
-**Typ**: Code Smell
+**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
 
 **Schweregrad**: Gering
 
@@ -733,7 +733,7 @@ Weitere Informationen finden Sie unter [AEM-Projektstruktur](https://docs.adobe.
 
 **Schlüssel**: ReverseReplication
 
-**Typ**: Code Smell
+**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
 
 **Schweregrad**: Gering
 
