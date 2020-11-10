@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 71a760997ec2a0873a7f39d206086a8b4fd6854e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2314'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -22,13 +22,13 @@ ht-degree: 97%
 Auf dieser Seite werden die benutzerspezifischen Regeln für die Code-Qualität beschrieben, die von Cloud Manager ausgeführt werden und auf bewährten Verfahren des AEM Engineering basieren.
 
 >[!NOTE]
->Die hier bereitgestellten Codebeispiele dienen nur Veranschaulichungszwecken. Weitere Informationen zu SonarQube-Konzepten und -Qualitätsregeln finden Sie unter [Konzepte](https://docs.sonarqube.org/7.4/user-guide/concepts/) .
+>Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. Weitere Informationen zu SonarQube-Konzepten und -Qualitätsregeln finden Sie unter [Konzepte](https://docs.sonarqube.org/7.4/user-guide/concepts/).
 
 ## SonarQube-Regeln {#sonarqube-rules}
 
 Im folgenden Abschnitt werden die SonarQube-Regeln hervorgehoben:
 
-### Verwenden Sie keine potenziell gefährlichen Funktionen. {#do-not-use-potentially-dangerous-functions}
+### Verwenden Sie keine potenziell gefährlichen Funktionen {#do-not-use-potentially-dangerous-functions}
 
 **Schlüssel**: CQRules:CWE-676
 
@@ -87,7 +87,7 @@ public class DoThis implements Runnable {
 }
 ```
 
-### Verwenden Sie keine Formatzeichenfolgen, die extern gesteuert werden können. {#do-not-use-format-strings-which-may-be-externally-controlled}
+### Verwenden Sie keine Formatzeichenfolgen, die extern gesteuert werden können {#do-not-use-format-strings-which-may-be-externally-controlled}
 
 **Schlüssel**: CQRules:CWE-134
 
@@ -109,7 +109,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 }
 ```
 
-### HTTP-Anfragen sollten immer Zeitüberschreitungswerte für Sockets und Verbindungen enthalten. {#http-requests-should-always-have-socket-and-connect-timeouts}
+### HTTP-Anfragen sollten immer Zeitüberschreitungswerte für Sockets und Verbindungen enthalten {#http-requests-should-always-have-socket-and-connect-timeouts}
 
 **Schlüssel**: CQRules:ConnectionTimeoutMechanism
 
@@ -187,7 +187,7 @@ public void orDoThis() {
 }
 ```
 
-### Produkt-APIs, die mit @ProviderType kommentiert wurden, sollten von Kunden nicht implementiert oder erweitert werden. {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+### Produkt-APIs, die mit @ProviderType kommentiert wurden, sollten von Kunden nicht implementiert oder erweitert werden {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
 **Schlüssel**: CQBP-84, CQBP-84-dependencies
 
@@ -213,7 +213,7 @@ public class DontDoThis implements Page {
 }
 ```
 
-### ResourceResolver-Objekte sollten immer geschlossen werden. {#resourceresolver-objects-should-always-be-closed}
+### ResourceResolver-Objekte sollten immer geschlossen werden {#resourceresolver-objects-should-always-be-closed}
 
 **Schlüssel**: CQRules:CQBP-72
 
@@ -258,7 +258,7 @@ public void orDoThis(Session session) throws Exception {
 }
 ```
 
-### Verwenden Sie keine Sling-Servlet-Pfade zum Registrieren von Servlets. {#do-not-use-sling-servlet-paths-to-register-servlets}
+### Verwenden Sie keine Sling-Servlet-Pfade zum Registrieren von Servlets {#do-not-use-sling-servlet-paths-to-register-servlets}
 
 **Schlüssel**: CQRules:CQBP-75
 
@@ -281,7 +281,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 }
 ```
 
-### Ausnahmefehler sollten protokolliert oder ausgegeben werden, aber nicht beides. {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
+### Ausnahmefehler sollten protokolliert oder ausgegeben werden, aber nicht beides {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
 **Schlüssel**: CQRules:CQBP-44---CatchAndEitherLogOrThrow
 
@@ -326,7 +326,7 @@ public void orDoThis() throws MyCustomException {
 }
 ```
 
-### Vermeiden Sie Protokollaussagen, die direkt von einer Throw-Anweisung gefolgt werden. {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
+### Vermeiden Sie Protokollaussagen, die direkt von einer Throw-Anweisung gefolgt werden {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
 **Schlüssel**: CQRules:CQBP-44---ConsecutivelyLogAndThrow
 
@@ -355,7 +355,7 @@ public void doThis() throws Exception {
 }
 ```
 
-### Vermeiden Sie beim Verarbeiten von GET- oder HEAD-Anfragen die Protokollierung bei INFO. {#avoid-logging-at-info-when-handling-get-or-head-requests}
+### Vermeiden Sie beim Verarbeiten von GET- oder HEAD-Anfragen die Protokollierung bei INFO {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
 **Schlüssel**: CQRules:CQBP-44---LogInfoInGetOrHeadRequests
 
@@ -385,7 +385,7 @@ public void doGet() throws Exception {
 }
 ```
 
-### Verwenden Sie nicht Exception.getMessage() als ersten Parameter einer Protokollanweisung. {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
+### Verwenden Sie nicht Exception.getMessage() als ersten Parameter einer Protokollanweisung {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
 **Schlüssel**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
 
@@ -421,7 +421,7 @@ public void doThis() {
 }
 ```
 
-### Die Protokollierung in Catch-Blöcken sollte auf WARN- oder ERROR-Ebene erfolgen. {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
+### Die Protokollierung in Catch-Blöcken sollte auf WARN- oder ERROR-Ebene erfolgen {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 **Schlüssel**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
 
@@ -457,7 +457,7 @@ public void doThis() {
 }
 ```
 
-### Drucken Sie keine Stacktraces in der Konsole. {#do-not-print-stack-traces-to-the-console}
+### Drucken Sie keine Stacktraces in der Konsole {#do-not-print-stack-traces-to-the-console}
 
 **Schlüssel**: CQRules:CQBP-44---ExceptionPrintStackTrace
 
@@ -493,7 +493,7 @@ public void doThis() {
 }
 ```
 
-### Verzichten Sie auf Ausgaben als Standardausgabe oder Standardfehler. {#do-not-output-to-standard-output-or-standard-error}
+### Verzichten Sie auf Ausgaben als Standardausgabe oder Standardfehler {#do-not-output-to-standard-output-or-standard-error}
 
 **Schlüssel**: CQRules:CQBP-44—LogLevelConsolePrinters
 
@@ -529,7 +529,7 @@ public void doThis() {
 }
 ```
 
-### Vermeiden Sie hartcodierte /apps- und /libs-Pfade. {#avoid-hardcoded-apps-and-libs-paths}
+### Vermeiden Sie hartcodierte /apps- und /libs-Pfade {#avoid-hardcoded-apps-and-libs-paths}
 
 **Schlüssel**: CQRules:CQBP-71
 
@@ -561,7 +561,7 @@ public void doThis(Resource resource) {
 
 **Schlüssel**: CQRules:AMSCORE-554
 
-**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
+**Typ**: Code Smell/Cloud Service-Kompatibilität
 
 **Schweregrad**: Gering
 
@@ -575,7 +575,7 @@ Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Umgebung mit Clus
 
 **Schlüssel**: AMSCORE-553
 
-**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
+**Typ**: Code Smell/Cloud Service-Kompatibilität
 
 **Schweregrad**: Gering
 
@@ -689,7 +689,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 
 **Schlüssel**: ClassicUIAuthoringMode
 
-**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
+**Typ**: Code Smell/Cloud Service-Kompatibilität
 
 **Schweregrad**: Gering
 
@@ -701,7 +701,7 @@ Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` def
 
 **Schlüssel**: ComponentWithOnlyClassicUIDialog
 
-**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
+**Typ**: Code Smell/Cloud Service-Kompatibilität
 
 **Schweregrad**: Gering
 
@@ -719,7 +719,7 @@ Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Dokumentation und To
 
 **Schlüssel**: ImmutableMutableMixedPackage
 
-**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
+**Typ**: Code Smell/Cloud Service-Kompatibilität
 
 **Schweregrad**: Gering
 
@@ -733,7 +733,7 @@ Weitere Informationen finden Sie unter [AEM-Projektstruktur](https://docs.adobe.
 
 **Schlüssel**: ReverseReplication
 
-**Typ**: Kompatibilität von Code-Riech-/Cloud Service-Zeichen
+**Typ**: Code Smell/Cloud Service-Kompatibilität
 
 **Schweregrad**: Gering
 
