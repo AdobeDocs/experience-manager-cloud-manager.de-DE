@@ -9,11 +9,11 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-translation-type: ht
-source-git-commit: c35398110e9d8311bf58f217efdd082cf0cfd90a
-workflow-type: ht
-source-wordcount: '1763'
-ht-degree: 100%
+translation-type: tm+mt
+source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
+workflow-type: tm+mt
+source-wordcount: '1788'
+ht-degree: 98%
 
 ---
 
@@ -28,7 +28,7 @@ Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren
 
 Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
@@ -164,7 +164,7 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    **AEM Sites:**
 
-   Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem für einen 30-minütigen Testzeitraum Seiten (standardmäßig als nicht authentifizierter Benutzer) vom Staging-Veröffentlichungs-Server abgerufen und die Reaktionszeiten für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden.
+   Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem für einen 30-minütigen Testzeitraum Seiten (standardmäßig als nicht authentifizierter Benutzer) vom Staging-Veröffentlichungs-Server abgerufen und die Reaktionszeiten für jede Seite sowie verschiedene Metriken auf Systemebene gemessen werden. Diese Anfragen werden aus einer Reihe bekannter, dedizierter Adressen gemacht. Die Adressbereiche können Sie von Ihrem Kundenbetreuer oder Kundenbetreuer beziehen.
 
    Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten *Seed*-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht. Dieser Crawling-Vorgang ist auf maximal 5.000 Seiten beschränkt. Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
 
@@ -222,7 +222,7 @@ Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung be
 
 CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Codequalität-Pipelines und Bereitstellungs-Pipelines. Codequalität-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
