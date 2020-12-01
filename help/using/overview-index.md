@@ -6,11 +6,11 @@ seo-description: Übersicht über die Adobe AEM Cloud Manager-Hilfe
 uuid: d4a23a6e-347e-41c3-9e3b-b7b7469c4754
 contentOwner: jsyal
 discoiquuid: 5ca5a413-639e-43fb-93dd-16ce8935a3fd
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: ace032fbb26235d87d61552a11996ec2bb42abce
-workflow-type: ht
-source-wordcount: '126'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,7 +29,7 @@ Die folgende Abbildung zeigt Ihren Lernpfad für [!UICONTROL Cloud Manager]:
 
 Machen Sie sich mit den Ressourcen im Abschnitt „Übersicht“ vertraut, um eine Einführung in [!UICONTROL Cloud Manager] zu erhalten:
 
-* **[Einführung in[!UICONTROL Cloud Manager]](introduction-to-cloud-manager.md)**
+* **[Einführung in [!UICONTROL Cloud Manager]](introduction-to-cloud-manager.md)**
 * **[Schlüsselkonzepte](key-concepts.md)**
 * **[[!UICONTROL Customer Journey]](customer-journey.md)**
 
