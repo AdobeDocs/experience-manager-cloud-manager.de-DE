@@ -1,11 +1,11 @@
 ---
 title: Einrichten des Projekts
 description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
-workflow-type: ht
-source-wordcount: '873'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -24,7 +24,7 @@ Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitge
 
 * Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach *ZIP*-Dateien (ebenfalls in einem Verzeichnis namens *target*) suchen, die Verzeichnisse mit den Namen *conf* und *conf.d* enthalten.
 
-* Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketbereitstellungen nicht garantiert. Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden. Pakete können bei der Bereitstellung [übersprungen](#skipping-content-packages) werden.
+* Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketimplementierungen nicht garantiert. Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden. Pakete können bei der Implementierung [übersprungen](#skipping-content-packages) werden.
 
 
 ## Aktivieren von Maven-Profilen in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
