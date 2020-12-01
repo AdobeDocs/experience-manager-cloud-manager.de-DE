@@ -3,11 +3,11 @@ title: Zugriff auf Git
 seo-title: Zugriff auf Git
 description: Auf dieser Seite wird beschrieben, wie Sie auf das Git-Repository zugreifen und es verwalten können.
 seo-description: Auf dieser Seite erfahren Sie, wie Sie auf Ihr Git-Repository zugreifen und es verwalten.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 3bb435aae932b9446867c30b7dd6b0a8e0839ee2
-workflow-type: ht
-source-wordcount: '152'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
