@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manag
 uuid: 211b6e1b-10fb-46b0-b591-44d5e44abd77
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Versionshinweise
+topic-tags: release-notes
 discoiquuid: 8584f467-3e61-41ea-98e4-f79e68c86469
 translation-type: tm+mt
 source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
