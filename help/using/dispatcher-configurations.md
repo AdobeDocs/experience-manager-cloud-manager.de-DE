@@ -8,11 +8,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
-workflow-type: ht
-source-wordcount: '597'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -50,8 +50,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
 1. Erstellen Sie ein Unterverzeichnis mit dem Namen `dispatcher`.
 
    >[!NOTE]
-   >
-   >Sie können hier beliebige Namen verwenden, aber der in diesem Schritt erstellte Verzeichnisname muss mit dem in Schritt 6 verwendeten Namen übereinstimmen.
+   Sie können hier beliebige Namen verwenden, aber der in diesem Schritt erstellte Verzeichnisname muss mit dem in Schritt 6 verwendeten Namen übereinstimmen.
 
 1. Dieses Unterverzeichnis enthält ein Maven-Modul, das die Dispatcher-ZIP-Datei mit dem Maven-Assembly-Plugin erstellt. Erstellen Sie hierzu zunächst im Verzeichnis `dispatcher` eine Datei `pom.xml` mit diesem Inhalt, indem Sie den übergeordneten Verweis, die artifactId und den Namen nach Bedarf ändern.
 
@@ -94,8 +93,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
    ```
 
    >[!NOTE]
-   >
-   >Wie in Schritt 1 können Sie hier für die artifactId und den Namen beliebige Werte verwenden. `dispatcher` dient hier nur zur Vereinfachung als Beispiel.
+   Wie in Schritt 1 können Sie hier für die artifactId und den Namen beliebige Werte verwenden. `dispatcher` dient hier nur zur Vereinfachung als Beispiel.
 
 1. Für das Maven-Assembly-Plug-in ist ein *Deskriptor* erforderlich, mit dem definiert wird, wie die ZIP-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei (erneut im Unterverzeichnis `dispatcher`) mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
 
@@ -220,8 +218,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
    ```
 
    >[!NOTE]
-   >
-   >Wie in Schritt 1 erwähnt, **muss** der Wert des Elements `<module>` mit dem erstellten Verzeichnisnamen übereinstimmen.
+   Wie in Schritt 1 erwähnt, **muss** der Wert des Elements `<module>` mit dem erstellten Verzeichnisnamen übereinstimmen.
 
 1. Führen Sie abschließend das Paket „mvn clean“ im Projektstammverzeichnis aus. In der Ausgabe sollten Zeilen wie die folgende angezeigt werden.
 
