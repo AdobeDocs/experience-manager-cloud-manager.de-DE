@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite können Sie eine Liste der Produktions- und Ni
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Verwenden
+topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: c81243708d938a8bffdec8a35f32a2cf552c1c95
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +31,7 @@ Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 Das folgende Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM Author-, AEM Publish- und Dispatcher-Instanzen bestehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/)
 
 ## Zugreifen auf Umgebungen in Cloud Manager{#accessing-environments-in-cloud-manager}
 
