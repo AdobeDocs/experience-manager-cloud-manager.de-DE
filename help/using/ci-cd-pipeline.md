@@ -6,8 +6,11 @@ seo-description: In diesem Abschnitt erfahren Sie mehr über die CI/CD-Pipeline,
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
