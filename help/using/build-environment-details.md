@@ -1,11 +1,11 @@
 ---
 title: Grundlagen zur Build-Umgebung
 description: Auf dieser Seite erfahren Sie mehr über Umgebungen
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 000843f902a180181981de2b1307fd2777d32994
-workflow-type: ht
-source-wordcount: '723'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -183,4 +183,4 @@ Einige Builds erfordern die Installation zusätzlicher Systempakete, damit sie v
 Mit derselben Methode können Sie auch sprachspezifische Pakete installieren, d. h. mit `gem` für RubyGems oder mit `pip` für Python-Pakete.
 
 >[!NOTE]
->Wenn Sie ein Systempaket auf diese Weise installieren, wird es **nicht** in der Laufzeitumgebung installiert, die für die Ausführung von Adobe Experience Manager verwendet wird. Wenn Sie ein Systempaket in der AEM-Umgebung installieren möchten, kontaktieren Sie Ihren Adobe-Support-Mitarbeiter.
+>Wenn Sie ein Systempaket auf diese Weise installieren, wird es **nicht** in der Laufzeitumgebung installiert, die für die Ausführung von Adobe Experience Manager verwendet wird. Wenn Sie ein Systempaket in der AEM-Umgebung installieren möchten, wenden Sie sich an Ihre Adobe-Support-Mitarbeiter.
