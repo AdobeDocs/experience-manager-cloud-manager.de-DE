@@ -3,8 +3,11 @@ title: Git-Integration mit Adobe Cloud Manager
 description: Eine Videoreihe, in der die Einrichtung und Integration eines kundenverwalteten (On-Premise) Git-Repository mit Adobe Cloud Manager beschrieben werden.
 seo-title: Git-Integration mit Adobe Cloud Manager
 seo-description: Eine Videoreihe, in der die Einrichtung und Integration eines kundenverwalteten (On-Premise) Git-Repository mit Adobe Cloud Manager beschrieben werden.
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 519f43ff16e0474951f97798a8e070141e5c124b
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +18,7 @@ Adobe Cloud Manager verfügt über ein einzelnes Git-Repository, das der Bereits
 
 ## Übersicht über die Git-Integration
 
->[!VIDEO](https://video.tv.adobe.com/v/28710/?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28710/)
 
 In dieser Videoreihe werden verschiedene Anwendungsfälle bei der Integration eines kundenverwalteten Git-Repository mit Cloud Manager untersucht, darunter:
 
@@ -35,35 +38,35 @@ Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](htt
 
 Erste Schritte zum Synchronisieren eines kundenverwalteten Git-Repository mit dem Git-Repository von Cloud Manager.
 
->[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28711/?quality=12)
 
 ## Standard-Verzweigungsstrategie {#branching-strategy}
 
 Richten Sie eine Standard-Verzweigungsstrategie ein, um die [Produktions- und Nicht-Produktions-Pipelines](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) von Cloud Manager zu nutzen.
 
->[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
 ## Entwicklung von Funktionsverzweigungen {#feature-development}
 
 Verwenden Sie eine Funktionsverzweigung, um Codeänderungen in einem kundenverwalteten Git-Repository zu isolieren und mit dem Git-Repository von Cloud Manager zu synchronisieren; so können Sie eine Nicht-Produktions-Pipeline für Codequalität- und Validierungstests verwenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12)
 
 ## Produktionsbereitstellung {#production-deployment}
 
 Bereiten Sie Code für die Produktionsfreigabe in einem kundenverwalteten Git-Repository vor und synchronisieren Sie mit dem Git-Repository von Cloud Manager, um eine Bereitstellung in Staging- und Produktionsumgebungen vorzunehmen.
 
->[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12)
 
 ## Synchronisieren von Release-Tags {#sync-tags}
 
 Synchronisieren Sie Release-Tags aus einem Cloud Manager-Git-Repository in einem kundenverwalteten Git-Repository, um für Sichtbarkeit des in Staging- und Produktionsumgebungen bereitgestellten Codes zu sorgen.
 
->[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12&captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/28725/?quality=12)
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
 * [Dokumentation für Cloud Manager](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
 * [GitHub-Ressourcen](https://try.github.io)
 * [Git-Tutorials von Atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)
-* [Git-Spickzettel](https://education.github.com/git-cheat-sheet-education.pdf)
+* [Git-Schnellübersicht](https://education.github.com/git-cheat-sheet-education.pdf)
