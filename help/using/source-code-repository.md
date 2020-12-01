@@ -6,10 +6,13 @@ seo-description: Auf dieser Seite erfahren Sie mehr über das Git-Repository, da
 uuid: 2c42775f-8703-43f7-bad2-7dc086ea9dd7
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: Anforderungen
+topic-tags: requirements
 discoiquuid: f90f0f4c-c1ff-47f6-8d97-ff5018561bf2
 translation-type: tm+mt
 source-git-commit: 697311cd00ef96568f6befd2fe76febafc27961e
+workflow-type: tm+mt
+source-wordcount: '282'
+ht-degree: 96%
 
 ---
 
@@ -32,5 +35,5 @@ Unter Umständen verfügen Sie über ein vorhandenes Git-Repository, das Sie wei
 
 >[!NOTE]
 >
->To view the common Git commands, see the [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf).
+>Informationen zur Ansicht der gängigen Git-Befehle finden Sie im [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf).
 
