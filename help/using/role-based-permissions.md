@@ -5,8 +5,11 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
-translation-type: ht
+translation-type: tm+mt
 source-git-commit: 9cbe8f58cf04001ba9851ba321f03c7687e58014
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +26,7 @@ Weitere Informationen zum Einrichten von Rollen finden Sie unter [Einrichten von
 
 In der folgenden Tabelle sind die Rollen definiert, die Sie in Admin Console zuweisen können.
 
-| **[!UICONTROL Cloud Manager]-Rolle ** | **Beschreibung** |
+| **[!UICONTROL Cloud Manager]-Rolle** | **Beschreibung** |
 |---|---|
 | Business Owner | Hauptanwender, der die [!UICONTROL Cloud Manager]-Ersteinrichtung abschließt. Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
 | Programmmanager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
@@ -38,7 +41,7 @@ Jede Rolle verfügt über bestimmte Berechtigungen, vorkonfigurierte Aufgaben od
 
 Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten von Anwendern und Rollen](setting-up-users-and-roles.md).
 
-| Berechtigung | Beschreibung | Business Owner | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
+| Berechtigung | Beschreibung | Geschäftsinhaber | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Anwendung lesen | Lesen der Programm-KPIs. | x | x | x | x | x |
 | Anwendung schreiben | Programmeinrichtung oder -bearbeitung. | x |  |  |  |  |
