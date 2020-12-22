@@ -1,15 +1,15 @@
 ---
 product: adobe experience manager
-sub-product: Experience Manager Cloud Manager
+sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
 breadcrumb-title: Benutzerhandbuch zu Cloud Manager
 user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung des Experience Managers in der Cloud nutzen können.
-translation-type: tm+mt
+translation-type: ht
 source-git-commit: 5688e956c4c21968ce691b560a6ce519496f7563
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '252'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 97%
 + Überblick {#overview}
    + [Schlüsselkonzepte](key-concepts.md)
    + [Customer Journey](customer-journey.md)
-   + [CI/CD-Pipeline](ci-cd-pipeline.md)
+   + [CI/CD Pipeline](ci-cd-pipeline.md)
    + [Sicherheit und Datenschutz](security-and-privacy.md)
    + [Hilfe-Ressourcen](help-resources.md)
 + Was ist erforderlich? {#requirements}
@@ -31,7 +31,7 @@ ht-degree: 97%
    + [Bereitgestellte Umgebungen](environments-provisioned.md)
 + Erste Schritte {#getting-started}
    + [Erste Anmeldung](first-time-login.md)
-   + [Einrichten des Programms ](setting-up-program.md)
+   + [Einrichten des Programms](setting-up-program.md)
    + Erstellen eines AEM-Anwendungsprojekts {#create-application-project}
       + [Verwenden des Assistenten](using-the-wizard.md)
       + [Einrichten des Projekts](setting-up-project.md)
@@ -39,7 +39,7 @@ ht-degree: 97%
    + [Konfigurieren von Release-Verzweigungen](configure-your-release-branches.md)
    + [Verwalten von Dispatcher-Konfigurationen](dispatcher-configurations.md)
 + Verwendung {#how-to-use}
-   + [Konfigurieren Ihrer CI/CD-Pipeline](configuring-pipeline.md)
+   + [Konfigurieren Ihrer CI/CD Pipeline](configuring-pipeline.md)
    + [Bereitstellen Ihres Codes](deploying-code.md)
    + [Wissenswertes zu Testergebnissen](understand-your-test-results.md)
    + [Verwalten von Umgebungen](manage-your-environment.md)
