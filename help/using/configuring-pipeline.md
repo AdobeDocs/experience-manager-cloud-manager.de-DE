@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: 30d782f5a095b1b07ec4f2039def9ba30a559325
+source-git-commit: d02292e4f6369e0e0bf8fcf60cb8fe299854b3cc
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1788'
+ht-degree: 100%
 
 ---
 
@@ -71,8 +71,6 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
    >[!NOTE]
    >
    >Verzweigungen im Git-Repository sind mit Ihrem Programm verknüpft.
-
-   ![](assets/Configure_ci-cd-2.png)
 
 
 1. Wählen Sie auf der Registerkarte **Umgebungen** die Optionen **Phase** und **Produktion** aus.
