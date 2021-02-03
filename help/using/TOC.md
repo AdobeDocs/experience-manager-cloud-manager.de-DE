@@ -4,12 +4,12 @@ sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
 breadcrumb-title: Benutzerhandbuch zu Cloud Manager
-user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung des Experience Managers in der Cloud nutzen können.
-translation-type: ht
-source-git-commit: 5688e956c4c21968ce691b560a6ce519496f7563
-workflow-type: ht
+user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung von Experience Manager in der Cloud nutzen können.
+translation-type: tm+mt
+source-git-commit: f3e5e4be7ac4ba7eef158cea3c1c19ea83ec4d75
+workflow-type: tm+mt
 source-wordcount: '252'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -45,7 +45,7 @@ ht-degree: 100%
    + [Verwalten von Umgebungen](manage-your-environment.md)
    + [Überwachen von Umgebungen](monitor-your-environments.md)
    + [Cloud Manager-API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
-   + [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/master/README.md)
+   + [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Benachrichtigungen](notifications.md)
    + [Benutzerspezifische Regeln für Codequalität](custom-code-quality-rules.md)
 + Code verwalten {#managing-code}
