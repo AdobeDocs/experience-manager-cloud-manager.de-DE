@@ -2,10 +2,10 @@
 title: Grundlagen zur Build-Umgebung
 description: Auf dieser Seite erfahren Sie mehr über Umgebungen
 translation-type: tm+mt
-source-git-commit: 000843f902a180181981de2b1307fd2777d32994
+source-git-commit: 60270a7adb612355ff6d6928adcff8e94cabe092
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '768'
+ht-degree: 95%
 
 ---
 
@@ -37,6 +37,14 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
 
 >[!NOTE]
 >Obwohl Cloud Manager keine bestimmte Version des Programms des `jacoco-maven-plugin` definiert, muss mindestens die Version `0.7.5.201505241946` verwendet werden.
+
+
+>[!NOTE]
+>In den folgenden zusätzlichen Ressourcen erfahren Sie, wie Sie Cloud Manager-APIs verwenden:
+> * [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
+>* [Erstellen einer API-Integration](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/create-api-integration.md)
+>* [API-Berechtigungen](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md)
+
 
 ## Verwendung von Java 11 {#using-java-11}
 
@@ -124,6 +132,7 @@ Bei Verwendung in einer `Maven pom.xml`-Datei ist es in der Regel hilfreich, die
             </properties>
         </profile>
 ```
+
 
 ## Installieren zusätzlicher Systempakete {#installing-additional-system-packages}
 
