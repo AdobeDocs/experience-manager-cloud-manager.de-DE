@@ -1,7 +1,7 @@
 ---
 title: Hinzufügen von Anwendern und Rollen
 seo-title: Hinzufügen von Anwendern und Rollen
-description: 'null'
+description: Erfahren Sie mehr über Benutzer und Rollen und wie Sie mit Admin Console ein Profil erstellen
 seo-description: Sie können bestimmte Rollenmitgliedschaften zuweisen, indem der Anwender in Admin Console einem Cloud Manager-Produktprofil hinzugefügt wird. Weitere Informationen finden Sie in diesem Abschnitt.
 uuid: fa204c28-83df-48bb-8360-e158f080dee7
 contentOwner: jsyal
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
 translation-type: tm+mt
-source-git-commit: a96500b57c980d31d3a70341d8be7b92ae73a1c5
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '686'
+ht-degree: 97%
 
 ---
 
