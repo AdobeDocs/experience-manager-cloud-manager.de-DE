@@ -1,7 +1,7 @@
 ---
 title: Verwalten von Dispatcher-Konfigurationen
 seo-title: Verwalten von Dispatcher-Konfigurationen
-description: 'null'
+description: Erfahren Sie, wie Sie Dispatcher-Konfigurationsdateien mit Cloud Manager bereitstellen
 seo-description: Auf dieser Seite erhalten Sie Informationen zum Konfigurieren des Dispatchers.
 uuid: 3ecd8ca3-5241-4811-87fd-3284a8012eda
 contentOwner: jsyal
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: getting-started
 discoiquuid: 8888dd80-d908-464e-927d-779db1a832a4
 translation-type: tm+mt
-source-git-commit: 2ada697ca21acd0c73dbce2bce3e9481ac50272c
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '606'
+ht-degree: 98%
 
 ---
 
