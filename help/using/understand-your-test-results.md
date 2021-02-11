@@ -1,7 +1,7 @@
 ---
 title: Wissenswertes zu Testergebnissen
 seo-title: Wissenswertes zu Testergebnissen
-description: 'null'
+description: Erfahren Sie mehr über drei Stufen beim Ausführen einer Pipeline in Cloud Manager
 seo-description: Auf dieser Seite erfahren Sie mehr über dreistufige Akzeptanztests beim Ausführen von Pipelines, Codescans sowie Leistungs- und Sicherheitstests zur Validierung Ihres Programms in Cloud Manager.
 uuid: 93caa01f-0df2-4a6f-81dc-23dfee24dc93
 contentOwner: jsyal
@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: 39e6af753cdd43da96746c7609a8f502b3ac9e77
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1564'
+ht-degree: 99%
 
 ---
 
@@ -50,7 +50,7 @@ Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Dabei handelt es s
 Beim Testen der Code-Qualität wird der Quellcode gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt. Derzeit ist dies durch eine Kombination aus SonarQube und der Prüfung auf Inhaltspaketebene mithilfe von OakPAL implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
 >[!NOTE]
->Sie können die vollständige Liste der Regeln [hier](/help/using/assets/CodeQuality-rules-latest.xlsx) herunterladen.
+>Sie können die vollständige Liste der Regeln [hier](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
 Die Ergebnisse dieses Schritts werden als *Bewertung* bereitgestellt. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Prüfkriterien zusammen:
 
