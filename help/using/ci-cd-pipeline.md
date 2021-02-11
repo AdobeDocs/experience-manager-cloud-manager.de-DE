@@ -1,16 +1,16 @@
 ---
 title: CI/CD-Pipeline
 seo-title: CI/CD-Pipeline
-description: 'null'
-seo-description: In diesem Abschnitt erfahren Sie mehr über die CI/CD-Pipeline, die Bereitstellungen für die Staging- und Produktionsumgebung in Cloud Manager verarbeitet.
+description: Übersicht über die CI/CD-Pipeline, die Bereitstellungen für die Bühne und Produktion in Cloud Manager verwaltet
+seo-description: In diesem Abschnitt erfahren Sie mehr über die CI/CD-Pipeline, die Bereitstellungen für die Staging- und Produktionsumgebung in Cloud Manager verarbeitet
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 translation-type: tm+mt
-source-git-commit: 8580cec50ac5dafb4e2525371a39d58c82f1cbc9
+source-git-commit: 2dda85baa5e7ed9bfd8933df3580ec6fc3c210fd
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '564'
+ht-degree: 97%
 
 ---
 
