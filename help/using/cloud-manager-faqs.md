@@ -4,9 +4,9 @@ seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
 translation-type: tm+mt
-source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
+source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Die Ergebnisse finden Sie unter [Testergebnisse verstehen](https://experiencelea
 Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
 
 * Der *Leistungsschritt* ist ein Webleistungsschritt, d. h. der Zeitpunkt, zu dem die Seite mit einem Webbrowser geladen wird.
-* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einen Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
+* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einem Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig vorkommende Metrik, die fehlschlägt, ist die *Fehlerquote*. Damit eine URL übergeben wird, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die länger als `20` Sekunden sind, werden als `504`-Fehler gekennzeichnet.
 * Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, lesen Sie [Authentifizierter Leistungstest](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) für die Konfiguration des Tests zur Authentifizierung für Ihre Site.
 
