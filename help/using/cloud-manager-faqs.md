@@ -4,9 +4,9 @@ seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
 translation-type: tm+mt
-source-git-commit: d901fd27626640e71d367d3f138d7ba2e907fa9a
+source-git-commit: 31627bf11a46b2e6f1d0aa196bc4a9cf9648e775
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '882'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ AEM Cloud Manager-Build schlägt fehl, wenn versucht wird, den Build von Java 8 
 
 * hinzufügen Sie das maven-toolchain-plugin mit den richtigen Einstellungen für Java 11, wie hier beschrieben [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started).  Beispiel: Siehe [Arbeits-Beispielprojektcode](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-* Wenn der unten stehende Fehler auftritt, müssen Sie die Verwendung des maven-scr-plugins entfernen und alle OSGi-Anmerkungen in OSGi R6-Anmerkungen konvertieren. Anweisungen finden Sie unter [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+* Wenn der unten stehende Fehler auftritt, müssen Sie die Verwendung von `maven-scr-plugin` entfernen und alle OSGi-Anmerkungen in OSGi R6-Anmerkungen konvertieren. Anweisungen finden Sie unter [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
    `[main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]`
 
@@ -47,11 +47,11 @@ Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
 
 ## Können wir SNAPSHOT in der Version des Maven Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der Bundle-JAR-Dateien für die Bereitstellung von Stage und Produktion? {#snapshot-version}
 
-1. Bei dev-Bereitstellungen müssen die Git-Zweig-Dateien `pom.xml` -SNAPSHOT am Ende des Werts `<version>` enthalten. Dies ermöglicht eine spätere Bereitstellung, bei der die Version nicht geändert wird und weiterhin installiert wird. In dev-Bereitstellungen wird keine automatische Version für den mMven-Build hinzugefügt oder generiert.
+1. Bei dev-Bereitstellungen müssen die Git-Zweig-Dateien `pom.xml` `-SNAPSHOT` am Ende des `<version>`-Werts enthalten. Dies ermöglicht eine spätere Bereitstellung, bei der die Version nicht geändert wird und weiterhin installiert wird. In dev-Bereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
 1. Bei der Bereitstellung von Stage und Produktion wird eine automatische Version generiert, wie beschrieben [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Legen Sie für benutzerdefinierte Versionen in Bereitstellungs- und Produktionseinstellungen eine 3-teilige Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
+1. Legen Sie für die benutzerdefinierte Versionierung in der Bereitstellungs- und Produktionsbereitstellung eine 3-teilige Masterversion wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
 
 1. Cloud Manager fügt seine Version automatisch den Stage- und Production-Builds hinzu und erstellt sogar eine Git-Verzweigung. Es ist keine spezielle Konfiguration erforderlich. Wenn Schritt 3 oben übersprungen wird, funktioniert die Bereitstellung weiterhin einwandfrei und eine Version wird automatisch eingestellt.
 
