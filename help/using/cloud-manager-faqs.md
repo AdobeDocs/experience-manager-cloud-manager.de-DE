@@ -4,9 +4,9 @@ seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
 translation-type: tm+mt
-source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
+source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '880'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ Die Ergebnisse finden Sie unter [Testergebnisse verstehen](https://experiencelea
 Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
 
 * Der *Leistungsschritt* ist ein Webleistungsschritt, d. h. der Zeitpunkt, zu dem die Seite mit einem Webbrowser geladen wird.
-* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einem Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
+* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einen Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig vorkommende Metrik, die fehlschlägt, ist die *Fehlerquote*. Damit eine URL übergeben wird, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die länger als `20` Sekunden sind, werden als `504`-Fehler gekennzeichnet.
 * Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, lesen Sie [Authentifizierter Leistungstest](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) für die Konfiguration des Tests zur Authentifizierung für Ihre Site.
 
@@ -55,9 +55,9 @@ Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
 
 1. Cloud Manager fügt seine Version automatisch den Stage- und Production-Builds hinzu und erstellt sogar eine Git-Verzweigung. Es ist keine spezielle Konfiguration erforderlich. Wenn Schritt 3 oben übersprungen wird, funktioniert die Bereitstellung weiterhin einwandfrei und eine Version wird automatisch eingestellt.
 
-1. Wenn Sie die Version bei der Erstellung von Stage- und Produktions-Builds oder -Bereitstellungen mit `-SNAPSHOT` belassen, dann ist auch das in Ordnung. Cloud Manager legt automatisch eine korrekte Versionsnummer fest und erstellt ein Tag für Sie in Git. Falls erforderlich, kann auf dieses Tag später verwiesen werden.
+1. Es gibt keine Probleme, wenn Sie die Version für Stage- und Production-Builds oder Bereitstellungen mit `-SNAPSHOT` belassen. Cloud Manager legt automatisch eine korrekte Versionsnummer fest und erstellt ein Tag für Sie in Git. Falls erforderlich, kann auf dieses Tag später verwiesen werden.
 
-1. Wenn Sie einen experimentellen Code für die Entwicklungs-Umgebung ausprobieren möchten, können Sie eine neue Git-Verzweigung erstellen und die Pipeline so einrichten, dass sie diese andere Verzweigung verwendet. Dies ist nützlich, wenn Bereitstellungs-Beginn fehlschlagen und Sie mit älteren Versionen des Codes testen möchten, um zu sehen, wann der Fehler auftritt.
+1. Wenn Sie einen experimentellen Code für die Entwicklungs-Umgebung ausprobieren möchten, können Sie eine neue Git-Verzweigung erstellen und die Pipeline so einrichten, dass diese andere Verzweigung verwendet wird. Dies ist nützlich, wenn Bereitstellungs-Beginn fehlschlagen und Sie mit älteren Versionen des Codes testen möchten, um zu sehen, wann der Fehler auftritt.
 
    Der unten stehende Befehl &quot;Git&quot;erstellt eine Remote-Verzweigung mit dem Namen *testbranch1* gegen eine bestimmte bereits vorhandene Bindung `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Diese spezielle Verzweigung kann in Cloud Manager verwendet werden, ohne dass sich dies auf andere Verzweigungen auswirkt:
 
