@@ -4,9 +4,9 @@ seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
 translation-type: tm+mt
-source-git-commit: cb63a8bbe30b28668313dc851f17aa34fc166474
+source-git-commit: 1d4f07ba0aa4630585ccbb35f2d48f0c7e1f3df2
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '881'
 ht-degree: 2%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 2%
 
 # Häufig gestellte Fragen zu Cloud Manager {#cloud-manager-faqs}
 
-Im folgenden Abschnitt finden Sie Antworten auf einige häufig gestellte Fragen zu Cloud Manager.
+Im folgenden Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu Cloud Manager.
 
 ## 1. Kann Java 11 mit Cloud Manager-Builds verwendet werden? {#java-11-cloud-manager}
 
-AEM Cloud Manager-Build schlägt fehl, wenn versucht wird, den Build von Java 8 auf Java 11 umzuschalten. Das Problem kann viele Ursachen haben, und die häufigsten Ursachen werden nachfolgend beschrieben:
+AEM Cloud Manager-Build schlägt fehl, wenn versucht wird, den Build von Java 8 auf 11 umzuschalten. Das Problem kann viele Ursachen haben, und die häufigsten Ursachen werden nachfolgend beschrieben:
 
 * hinzufügen Sie das maven-toolchain-plugin mit den richtigen Einstellungen für Java 11, wie hier beschrieben [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started).  Beispiel: Siehe [Arbeits-Beispielprojektcode](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
@@ -43,7 +43,7 @@ Einige Hinweise zum Schritt des Leistungstests:
 * Der *Leistungsschritt* ist ein Webleistungsschritt - d. h. es ist an der Zeit, die Seite mit einem Webbrowser zu laden.
 * Die in der CSV-Ergebnisdatei aufgelisteten URLs werden während des Tests in einen Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig vorkommende Metrik, die fehlschlägt, ist die *Fehlerquote*. Damit eine URL übergeben wird, muss die Haupt-URL mit dem Status 200 und in weniger als 20 Sekunden geladen werden. Seitenladevorgänge, die länger als 20 Sekunden dauern, werden als 504-Fehler gekennzeichnet.
-* Wenn für Ihre Site eine Benutzerauthentifizierung erforderlich ist, lesen Sie diese Dokumentation zum Konfigurieren des Tests zur Authentifizierung für Ihre Site.
+* Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, lesen Sie [Authentifizierter Leistungstest](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) für die Konfiguration des Tests zur Authentifizierung für Ihre Site.
 
 ## 4. Können wir SNAPSHOT in der Version des Maven Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der Bundle-JAR-Dateien für die Bereitstellung von Stage und Produktion? {#snapshot-version}
 
@@ -75,7 +75,7 @@ Weitere Informationen finden Sie unter [Git-Ressource](https://github.com/cqsupp
 
 ## 6. Es ist nicht möglich, eine Variable über AEM Cloud Manager Pipeline-Variablen festzulegen. Wie können diese Probleme behoben werden? {#set-variable}
 
-Wenn Sie beim Versuch, Pipelinevariablen über ähnliche Befehle wie die unten aufgeführten Liste oder festzulegen, einen 403-Fehler erhalten, müssen Sie in der Admin-Konsole als *Deployment Manager* Cloud Manager-Produktrolle hinzugefügt werden.\
+Wenn Sie beim Versuch, Pipelinevariablen über ähnliche Befehle wie die unten aufgeführten Liste oder festzulegen, einen 403-Fehler erhalten, müssen Sie als *Deployment Manager* Cloud Manager-Produktrolle in der Admin Console hinzugefügt werden.\
 Weitere Informationen finden Sie unter [API-Berechtigungen](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md).
 
 Weitere Befehle und Fehler:
