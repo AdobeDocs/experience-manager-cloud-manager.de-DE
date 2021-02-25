@@ -4,7 +4,7 @@ seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
 translation-type: tm+mt
-source-git-commit: fbf91ad0d200a9f1cbde4e87cf6b78a8479d0614
+source-git-commit: 0db6a6a4e430cd2619db1739fd322224e4e129e7
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 2%
@@ -47,11 +47,11 @@ Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
 
 ## Können wir SNAPSHOT in der Version des Maven Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der Bundle-JAR-Dateien für die Bereitstellung von Stage und Produktion? {#snapshot-version}
 
-1. Bei dev-Bereitstellungen müssen die Git-Zweig-Dateien `pom.xml` `-SNAPSHOT` am Ende des `<version>`-Werts enthalten. Dies ermöglicht eine spätere Bereitstellung, bei der die Version nicht geändert wird und weiterhin installiert wird. In dev-Bereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
+1. Bei Entwicklerbereitstellungen müssen die Git-Zweig-Dateien `pom.xml` `-SNAPSHOT` am Ende des `<version>`-Werts enthalten. Dies ermöglicht eine spätere Bereitstellung, bei der die Version nicht geändert wird und weiterhin installiert wird. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
-1. Bei der Bereitstellung von Stage und Produktion wird eine automatische Version generiert, wie beschrieben [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
+1. In der Bereitstellung für Stage und Produktion wird eine automatische Version generiert, wie beschrieben [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
 
-1. Legen Sie für die benutzerdefinierte Versionierung in der Bereitstellungs- und Produktionsbereitstellung eine 3-teilige Masterversion wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
+1. Legen Sie für benutzerdefinierte Versionen in Bereitstellungen von Stage und Produktion eine 3-teilige Masterversion wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
 
 1. Cloud Manager fügt seine Version automatisch den Stage- und Production-Builds hinzu und erstellt sogar eine Git-Verzweigung. Es ist keine spezielle Konfiguration erforderlich. Wenn Schritt 3 oben übersprungen wird, funktioniert die Bereitstellung weiterhin einwandfrei und eine Version wird automatisch eingestellt.
 
@@ -82,8 +82,8 @@ Weitere Befehle und Fehler:
 
 `$ aio cloudmanager:list-pipeline-variables 222`
 
-Fehler: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Fehler*: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
 
 `$ aio cloudmanager:set-pipeline-variables 222 --variable TEST 1`
 
-Fehler: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
+*Fehler*: `Cannot get variables: https://cloudmanager.adobe.io/api/program/111/pipeline/222/variables (403 Forbidden)`
