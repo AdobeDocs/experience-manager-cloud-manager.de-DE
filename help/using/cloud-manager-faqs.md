@@ -4,9 +4,9 @@ seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
 translation-type: tm+mt
-source-git-commit: da3346852df4e421a69321830d7efee81d58e20c
+source-git-commit: cf5c02c8c594015b6baa00e1a8aaa2d898aa60a9
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '901'
 ht-degree: 2%
 
 ---
@@ -41,11 +41,13 @@ Die Ergebnisse finden Sie unter [Testergebnisse verstehen](https://experiencelea
 Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
 
 * Der *Leistungsschritt* ist ein Webleistungsschritt, d. h. der Zeitpunkt, zu dem die Seite mit einem Webbrowser geladen wird.
-* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einen Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
+* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einem Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig vorkommende Metrik, die fehlschlägt, ist die *Fehlerquote*. Damit eine URL übergeben wird, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die länger als `20` Sekunden sind, werden als `504`-Fehler gekennzeichnet.
 * Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, lesen Sie [Authentifizierter Leistungstest](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) für die Konfiguration des Tests zur Authentifizierung für Ihre Site.
 
-## Können wir SNAPSHOT in der Version des Maven Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der Bundle-JAR-Dateien für die Bereitstellung von Stage und Produktion? {#snapshot-version}
+## Können wir SNAPSHOT in der Version des Maven Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der Bundle-JAR-Dateien für Bereitstellungen von Stage und Produktion? {#snapshot-version}
+
+In den folgenden Szenarien erfahren Sie mehr über die Versionierung der Pakete und Bundle-JAR-Dateien für Bereitstellungen von Stage und Produktion:
 
 1. Bei Entwicklerbereitstellungen müssen die Git-Zweig-Dateien `pom.xml` `-SNAPSHOT` am Ende des `<version>`-Werts enthalten. Dies ermöglicht eine spätere Bereitstellung, bei der die Version nicht geändert wird und weiterhin installiert wird. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
