@@ -1,44 +1,40 @@
 ---
-title: Versionshinweise für 2021.2.0
-seo-title: Versionshinweise für AEM Cloud Manager 2021.2.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.2.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2021.2.0.
+title: Versionshinweise für 2021.3.0
+seo-title: Versionshinweise für AEM Cloud Manager 2021.3.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.3.0.
+seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2021.3.0.
 translation-type: tm+mt
-source-git-commit: d956c7a2d3833e357920a9602e4f5a5b37f2c98a
+source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 24%
+source-wordcount: '225'
+ht-degree: 26%
 
 ---
 
-# Versionshinweise für 2021.2.0 {#release-notes-for}
+# Versionshinweise für 2021.3.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.2.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.3.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2021.2.0 wurde am 11. Februar 2021 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröffentlicht.
 
 ## Neue Funktionen {#whats-new}
 
-* Der AEM Projektarchiv, der in Project und Sandbox Creation verwendet wird, wurde auf Version 25 aktualisiert.
+* Ein neues Tool zur Codequalität wurde eingeführt, um die Konfiguration des Kundendienstanbieters zu überprüfen (Dispatcher Optimization Tool).
 
-* Die Liste veralteter APIs, die während der Codeprüfung identifiziert wurden, wurde optimiert und enthält nun weitere Klassen und Methoden, die in den neuesten Cloud Service SDK-Versionen nicht mehr unterstützt werden.
+* Die Benutzer können nun ihre Cloud Manager-Rolle(en) anzeigen, indem sie nach dem Navigieren zum Symbol &quot;User Profil&quot;(oben rechts) von Unified Shell die Option **Ansicht Cloud Manager-Rolle(en)** auswählen.
 
-* Produktionsimplementierungen werden jetzt parallel für die paarweise Instanz im Veröffentlichungs- und Dispatcher bereitgestellt.
+* Die Beschriftung **Antrag auf Genehmigung** wurde zur besseren Klarheit in **Produktionsgenehmigung** umbenannt.
 
-* SonarQube-Profil für Cloud Manager wurde aktualisiert, um die Sonar-Regel `squid:S2142` zu entfernen. Dies steht nicht mehr im Konflikt mit den Thread-Unterbrechungsüberprüfungen.
+* Die Beschriftung **Version** wurde im Bildschirm &quot;Produktions-Pipeline-Ausführung&quot;in **Git-Tag** umbenannt.
 
-* Eigenschaften, die in benutzerdefinierten Dateien mit dem Präfix &quot;sonar&quot;festgelegt wurden, werden nun dynamisch entfernt, um Fehler beim Erstellen und Überprüfen von Qualität zu vermeiden.`pom.xml`
+* Die Beschriftungen, die das Verhalten definieren, wenn wichtige Metriken den definierten Schwellenwert nicht erreichen, wurden umbenannt, um ihr wahres Verhalten widerzuspiegeln - Sofort abbrechen und Sofort genehmigen.
 
-* Es wurden zusätzliche Regeln zur Codequalität hinzugefügt, um Probleme mit der Kompatibilität von Cloud Services zu behandeln.
+* Die Listen zum Entfernen von Klassen und Methoden wurden auf der Grundlage der Version `2021.3.4997.20210303T022849Z-210225` des AEM Cloud Service SDK aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Gelegentlich schlug die CI/CD-Pipeline (Bereitstellung) während eines Leistungstests fehl, da ein Container beim Ausführen des Lasttests einen Fehler aufwies.
+* Einige Qualitätsprobleme wurden nicht richtig erkannt, wenn Pakete in andere Pakete eingebettet wurden.
 
-* Gelegentlich meldet der Container für Lastentests die Ausführung als fehlgeschlagen, selbst wenn nur eine Ausnahme auftritt. Der Fehler wird nur gemeldet, wenn der Testprozess nicht wiederhergestellt werden kann.
-
-* Bestimmte Groß- und Kleinschreibung-Diskrepanzen zwischen der Art und Weise, wie Umgebung gespeichert wurden, führen zu Leistungstestfehlern.
-
-* Einige Pipeline-Fehler wurden fälschlicherweise als Pipeline-Fehler gemeldet.
+* Wenn der Benutzer unmittelbar nach dem Start einer Pipeline von der Seite für die Ausführung der Pipeline wegnavigiert, wird gelegentlich eine Fehlermeldung angezeigt, die besagt, dass die Aktion fehlgeschlagen ist, obwohl die Ausführung tatsächlich Beginn ist.
