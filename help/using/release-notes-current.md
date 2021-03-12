@@ -4,10 +4,10 @@ seo-title: Versionshinweise für AEM Cloud Manager 2021.3.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.3.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2021.3.0.
 translation-type: tm+mt
-source-git-commit: e12adf3549af6ecd5e7487ef27f25abc44eaa794
+source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 21%
+source-wordcount: '293'
+ht-degree: 20%
 
 ---
 
@@ -27,7 +27,7 @@ Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröff
    * Entfernen Sie Sites (oder Assets) aus einem vorhandenen Programm mit sowohl Sites als auch Assets.
    * Das Hinzufügen (Zurück) einer Lösung kann dem vorhandenen Programm oder als neues Programm vorgenommen werden.
 
-* Ein neues Tool zur Codequalität wurde eingeführt, um die Konfiguration des Kundendienstanbieters zu überprüfen (Dispatcher Optimization Tool).
+* Zur Validierung der Kundendienstkonfiguration wurde ein neues Code-Qualitätstool [Dispatcher-Optimierungstool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) eingeführt.
 
 * Die Benutzer können nun ihre Cloud Manager-Rolle(en) anzeigen, indem sie nach dem Navigieren zum Symbol &quot;User Profil&quot;(oben rechts) von Unified Shell die Option **Ansicht Cloud Manager-Rolle(en)** auswählen.
 
@@ -35,7 +35,7 @@ Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröff
 
 * Die Beschriftung **Version** wurde im Bildschirm &quot;Produktions-Pipeline-Ausführung&quot;in **Git-Tag** umbenannt.
 
-* Die Beschriftungen, die das Verhalten definieren, wenn wichtige Metriken den definierten Schwellenwert nicht erreichen, wurden umbenannt, um ihr wahres Verhalten widerzuspiegeln - *Sofort abbrechen* und *Sofort* genehmigen.
+* Die Beschriftungen, die das Verhalten definieren, wenn wichtige Metriken den definierten Schwellenwert nicht erreichen, wurden umbenannt, um ihr wahres Verhalten widerzuspiegeln - **Sofort abbrechen** und **Sofort genehmigen**.
 
 * Die Listen zum Entfernen von Klassen und Methoden wurden auf der Grundlage der Version `2021.3.4997.20210303T022849Z-210225` des AEM Cloud Service SDK aktualisiert.
 
