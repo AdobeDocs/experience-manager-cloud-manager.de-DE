@@ -10,10 +10,10 @@ topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 translation-type: tm+mt
-source-git-commit: bbcd5e59a9f9e8cb83cefb8af79d3ce7987bf388
+source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
 workflow-type: tm+mt
 source-wordcount: '1788'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -85,8 +85,8 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
    Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
 
 * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-* **Fehler sofort**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
-* **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
+* **Sofort**  abbrechen: Wenn diese Option aktiviert ist, wird die Pipeline bei Auftreten eines wichtigen Fehlers abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+* **Sofort**  genehmigen: Wenn diese Option aktiviert ist, wird die Pipeline automatisch fortgesetzt, sobald ein wichtiger Fehler auftritt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
 
    Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung. Die drei verfügbaren Optionen sind:
 
@@ -104,7 +104,7 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
 >
 >Unter [**Bereitstellen Ihres Codes**](deploying-code.md) erfahren Sie, wie Sie den Bereitstellungsplan festlegen oder den Code sofort in der Produktionsumgebung ausführen.
 
-![](assets/configure-pipeline3.png)
+![](assets/configure-pipeline-new.png)
 
 >[!NOTE]
 >
