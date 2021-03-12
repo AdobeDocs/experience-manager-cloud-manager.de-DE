@@ -4,10 +4,10 @@ seo-title: Versionshinweise für AEM Cloud Manager 2021.3.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.3.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2021.3.0.
 translation-type: tm+mt
-source-git-commit: 5542942da33efc2926e62cce00ea39e3c65b3e16
+source-git-commit: 090505e737b8cb224d87f117a9b5e786a4f99851
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 20%
+source-wordcount: '315'
+ht-degree: 19%
 
 ---
 
@@ -35,7 +35,7 @@ Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröff
 
 * Die Beschriftung **Version** wurde im Bildschirm &quot;Produktions-Pipeline-Ausführung&quot;in **Git-Tag** umbenannt.
 
-* Die Beschriftungen, die das Verhalten definieren, wenn wichtige Metriken den definierten Schwellenwert nicht erreichen, wurden umbenannt, um ihr wahres Verhalten widerzuspiegeln - **Sofort abbrechen** und **Sofort genehmigen**.
+* Die Beschriftungen, die das Verhalten definieren, wenn wichtige Metriken den definierten Schwellenwert nicht erreichen, wurden umbenannt, um ihr wahres Verhalten widerzuspiegeln - **Sofort abbrechen** und **Sofort genehmigen**. Weitere Informationen finden Sie unter [Konfigurieren der Pipeline-Einstellungen aus Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager).
 
 * Die Listen zum Entfernen von Klassen und Methoden wurden auf der Grundlage der Version `2021.3.4997.20210303T022849Z-210225` des AEM Cloud Service SDK aktualisiert.
 
