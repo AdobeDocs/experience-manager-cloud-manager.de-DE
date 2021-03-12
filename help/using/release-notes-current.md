@@ -4,7 +4,7 @@ seo-title: Versionshinweise für AEM Cloud Manager 2021.3.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.3.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2021.3.0.
 translation-type: tm+mt
-source-git-commit: b0c29ed6712abd556458aea6d49f6382f183cdae
+source-git-commit: e12adf3549af6ecd5e7487ef27f25abc44eaa794
 workflow-type: tm+mt
 source-wordcount: '283'
 ht-degree: 21%
@@ -23,7 +23,7 @@ Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröff
 
 * Benutzer mit entsprechender Berechtigung können jetzt Programm bearbeiten, sodass sie Folgendes selbstständig erledigen können:
 
-   *Hinzufügen Sites-Lösung zu einem bestehenden Programm mit Assets (oder umgekehrt).
+   * hinzufügen Sites-Lösung für ein vorhandenes Programm mit Assets (oder umgekehrt).
    * Entfernen Sie Sites (oder Assets) aus einem vorhandenen Programm mit sowohl Sites als auch Assets.
    * Das Hinzufügen (Zurück) einer Lösung kann dem vorhandenen Programm oder als neues Programm vorgenommen werden.
 
