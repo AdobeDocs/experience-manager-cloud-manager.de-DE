@@ -8,11 +8,12 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 8ef574c8-47d9-404b-8e9c-9c6716c1f49a
+feature: Erste Schritte
 translation-type: tm+mt
-source-git-commit: be0350b98c19b3b84519947c04a7e362b46bba21
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '274'
+ht-degree: 100%
 
 ---
 
@@ -23,7 +24,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Die Genehmigung und geplanten Benachrichtigungen werden nur an Anwender mit den Rollen „Business Owner“, „Programmmanager“ und „Bereitstellungsmanager“ gesendet.
+>Die Genehmigung und geplanten Benachrichtigungen werden nur an Anwender mit den Rollen „Business Owner“, „Programm-Manager“ und „Implementierungs-Manager“ gesendet.
 
 Die Benachrichtigungen werden in einer Seitenleiste der [!UICONTROL Cloud Manager]-UI (User Interface, Benutzeroberfläche) und überall in Adobe [!UICONTROL Experience Cloud] angezeigt.
 
