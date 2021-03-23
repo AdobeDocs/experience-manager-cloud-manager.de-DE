@@ -3,10 +3,11 @@ title: Versionshinweise für 2020.11.0
 seo-title: Versionshinweise für AEM Cloud Manager 2020.11.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.11.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.11.0.
-translation-type: ht
-source-git-commit: 5688e956c4c21968ce691b560a6ce519496f7563
-workflow-type: ht
-source-wordcount: '164'
+feature: Versionshinweise
+translation-type: tm+mt
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+workflow-type: tm+mt
+source-wordcount: '166'
 ht-degree: 100%
 
 ---
