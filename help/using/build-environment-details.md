@@ -1,10 +1,11 @@
 ---
 title: Grundlagen zur Build-Umgebung
 description: Auf dieser Seite erfahren Sie mehr über Umgebungen
+feature: Umgebungen
 translation-type: tm+mt
-source-git-commit: 5a6148fd7750544def87147c5f012c09077b2b60
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '769'
 ht-degree: 95%
 
 ---
