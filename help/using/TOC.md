@@ -5,10 +5,13 @@ archetype: administrator
 user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
 breadcrumb-title: Benutzerhandbuch zu Cloud Manager
 user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung von Experience Manager in der Cloud nutzen können.
+feature-set: Experience Manager Cloud Manager
+role: 'Administrator  '
+level: Zwischenschaltung
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '263'
 ht-degree: 97%
 
 ---
