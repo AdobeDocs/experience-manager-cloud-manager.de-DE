@@ -9,10 +9,10 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 translation-type: tm+mt
-source-git-commit: b5233e1932888b515d8dc26a6493cbd26686bc3c
+source-git-commit: f62c967feec3960499de93443548422167fedfa7
 workflow-type: tm+mt
-source-wordcount: '1571'
-ht-degree: 97%
+source-wordcount: '2687'
+ht-degree: 68%
 
 ---
 
@@ -112,43 +112,72 @@ Dann bestünde die richtige Lösung darin, das hartcodierte Kennwort zu entferne
 
 [!UICONTROL Cloud Manager] führt die vorhandenen ***AEM-Sicherheits-Konsistenzprüfungen*** beim Staging nach der Bereitstellung aus und meldet den Status über die UI. Die Ergebnisse werden aus allen AEM-Instanzen in der Umgebung aggregiert.
 
+Diese gleichen Health Checks können jederzeit über die Web-Konsole oder das Operations-Dashboard ausgeführt werden.
+
 Wenn eine der **Instanzen** einen Fehler bei einer bestimmten Konsistenzprüfung meldet, schlägt die Konsistenzprüfung für die gesamte **Umgebung** fehl. Wie Codequalitäts- und Leistungstests sind diese Konsistenzprüfungen in Kategorien unterteilt und die zugehörigen Berichte werden über das dreistufige Gatingsystem erstellt. Der einzige Unterschied besteht darin, dass im Falle von Sicherheitstests keine Schwellenwerte vorhanden sind. Alle Konsistenzprüfungen werden entweder bestanden oder schlagen fehl.
 
 In der folgenden Tabelle finden Sie die derzeit verfügbaren Prüfungen:
 
 | **Name** | **Implementierung der Konsistenzprüfung** | **Kategorie** |
 |---|---|---|
-| Deserialisierungs-Firewall-Attach-API-Bereitschaft befindet sich in einem akzeptablen Zustand | Deserialisierungs-Firewall-Attach-API-Bereitschaft | Kritisch |
-| Deserialisierungs-Firewall ist funktionsfähig | Deserialisierungs-Firewall funktionsfähig | Kritisch |
-| Deserialisierungs-Firewall wird geladen | Deserialisierungs-Firewall geladen | Kritisch |
-| Die AuthorizableNodeName-Implementierung stellt keine autorisierbare ID im Knotennamen/Pfad offen. | Namenserstellung für autorisierbare Knoten | Kritisch |
-| Standardkennwörter wurden geändert | Standard-Anmeldekonten | Kritisch |
+| Deserialisierungs-Firewall-Attach-API-Bereitschaft befindet sich in einem akzeptablen Zustand | [Deserialisierungs-Firewall-Attach-API-Bereitschaft](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Kritisch |
+| Deserialisierungs-Firewall ist funktionsfähig | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Kritisch |
+| Deserialisierungs-Firewall wird geladen | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=en#security) | Kritisch |
+| Die AuthorizableNodeName-Implementierung stellt keine autorisierbare ID im Knotennamen/Pfad offen. | [Namenserstellung für autorisierbare Knoten](https://experienceleague.adobe.com/docs/experience-manager-64/administering/security/security-checklist.html?lang=en#security) | Kritisch |
+| Standardkennwörter wurden geändert | [Standard-Anmeldekonten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=en#users-and-groups-in-aem) | Kritisch |
 | Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
 | Der Sling Java Script Handler ist angemessen konfiguriert. | Sling Java Script Handler | Kritisch |
 | Der Sling JSP Script Handler ist angemessen konfiguriert. | Sling JSP Script Handler | Kritisch |
 | SSL ist richtig konfiguriert | SSL-Konfiguration | Kritisch |
 | Keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden | Standardzugriff auf Benutzerprofil | Kritisch |
-| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | Sling Referrer-Filter | Wichtig |
+| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=en#security) | Wichtig |
 | Der Adobe Granite HTML Library Manager ist angemessen konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Bundle ist deaktiviert | CRXDE-Support | Wichtig |
 | Sling DavEx Bundle und Servlet sind deaktiviert | DavEx-Konsistenzprüfung | Wichtig |
 | Beispielinhalt ist nicht installiert. | Pakete mit Beispielinhalt | Wichtig |
-| Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert | WCM-Filterkonfiguration | Wichtig |
+| Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert | [WCM-Filterkonfiguration](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=en#configuring) | Wichtig |
 | Sling WebDAV Bundle und Servlet sind angemessen konfiguriert | WebDAV-Konsistenzprüfung | Wichtig |
 | Der Webserver ist so konfiguriert, dass Clickjacking verhindert wird | Webserver-Konfiguration | Wichtig |
 | Die Replikation verwendet nicht den Benutzer „admin“ | Benutzerreplikation und -transport | Info |
 
 ## Leistungstests {#performance-testing}
 
-*Leistungstests* in [!UICONTROL Cloud Manager] werden mit einem 30-minütigen Test implementiert.
+### AEM Sites {#aem-sites}
 
-Während der Pipelineeinrichtung kann der Bereitstellungsmanager entscheiden, wie viel Traffic an jeden Bucket weitergeleitet werden soll.
+Cloud Manager führt Leistungstests für AEM Sites-Programm aus. Der Leistungstest wird für ca. 30 Minuten ausgeführt, indem virtuelle Benutzer (Container) hochgeklappt werden, die den tatsächlichen Benutzern den Zugriff auf Seiten auf der Stage-Umgebung simulieren und Traffic simulieren. Diese Seiten werden mit einem Crawler gefunden.
 
-Weitere Informationen zu Bucketsteuerelementen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
+1. **Virtuelle Benutzer**
 
->[!NOTE]
->
->Weitere Informationen zum Einrichten des Programms und Definieren von KPIs finden Sie unter [Einrichten des Programms](setting-up-program.md).
+   Die Anzahl der virtuellen Benutzer oder Container, die von Cloud Manager hochgeladen werden, wird von den KPIs (Antwortzeit und Seitenansichten/min) gesteuert, die der Benutzer in der Rolle &quot;Geschäftsinhaber&quot;beim Erstellen oder Bearbeiten des Programms [definiert. ](setting-up-program.md) Je nach definierten KPIs werden bis zu 10 Container, die die tatsächlichen Benutzer simulieren, hochgespielt. Die für Tests ausgewählten Seiten werden aufgeteilt und jeder virtuellen Seite zugewiesen.
+
+1. **Crawler**
+
+   Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten Seed-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht. Dieser Crawling-Vorgang ist auf maximal 5.000 Seiten beschränkt. Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
+
+1. **Seitensätze zum Testen**
+
+   Die Seiten werden nach drei Seitensätzen ausgewählt. Cloud Manager verwendet die Zugriffsprotokolle der AEM Instanzen in Produktion und Phase, um die folgenden drei Behälter zu ermitteln:
+
+   * *Beliebte Live-Seiten*: Diese Option wird ausgewählt, um sicherzustellen, dass die bevorzugten Seiten, auf die Live-Kunden zugreifen, getestet werden. Cloud Manager liest das Zugriffsprotokoll und ermittelt die 25 am häufigsten aufgerufenen Seiten von Live-Kunden, um eine Liste von top `Popular Live Pages` zu generieren. Die Schnittmenge dieser ebenfalls in Stage vorhandenen Elemente wird dann auf der Umgebung der Bühne durchsucht.
+
+   * *Andere Live-Seiten*: Diese Option wird ausgewählt, um sicherzustellen, dass die Seiten, die nicht zu den 25 beliebtesten Live-Seiten gehören, die möglicherweise nicht bevorzugt, aber zum Testen wichtig sind, getestet werden. Ähnlich wie populäre Live-Seiten werden diese aus dem Zugriffsprotokoll extrahiert und müssen auch auf der Bühne vorhanden sein.
+
+   * *Neue Seiten*: Diese Option ist aktiviert, um neue Seiten zu testen, die möglicherweise nur auf der Bühne bereitgestellt wurden und noch nicht zur Produktion gehören, aber getestet werden müssen.
+
+      **Verteilung des Traffics auf die ausgewählten Seitensätze**
+
+      Sie können zwischen einem und allen drei Sätzen auf der Registerkarte &quot;Testen&quot;Ihrer Pipeline-Konfiguration wählen (Link &quot;Einfügen&quot;). Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sätze, d. h. wenn alle drei Sätze ausgewählt sind, entfallen je 33 % aller Seitenansichten auf jeden Satz, bei zwei Sätzen sind es 50 % und bei einem ausgewählten Satz entfallen 100 % des Traffics auf diesen Satz.
+
+      Nehmen wir beispielsweise an, es gibt eine Aufteilung von 50 % - 50 % zwischen dem Satz &quot;Beliebte Live-Seiten&quot;und &quot;Neue Seiten&quot;(in diesem Beispiel werden keine anderen Live-Seiten verwendet) und der Satz &quot;Neue Seiten&quot;enthält 3000 Seiten. ist für die KPI der Seitenansichten pro Minute ein Wert von 200 festgelegt. Für den 30-minütigen Testzeitraum gilt in diesem Fall:
+
+      * Jede der 25 Seiten der beliebten Live-Seiten wird 120-mal aufgerufen: ((200 * 0,5) / 25) * 30 = 120
+
+      * Jede der 3000 Seiten der neuen Seiten wird einmal aufgerufen: ((200 * 0,5) / 3000) * 30 = 1
+
+#### Test und Berichte {#testing-reporting}
+
+Cloud Manager führt Leistungstests für AEM Sites-Programm durch, indem Seiten (standardmäßig als nicht authentifizierter Benutzer) für einen 30-minütigen Testzeitraum auf dem Bereitstellungsserver angefordert und die (virtuellen) benutzergenerierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) gemessen werden. für jede Seite sowie verschiedene Metriken auf Systemebene (CPU, Arbeitsspeicher, Netzwerkdaten) für alle Instanzen.\
+Die folgende Tabelle fasst die Leistungstestmetriken mit dem dreistufigen Messsystem in Bezug auf a vis zusammen:
 
 In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix anhand des dreistufigen Gatingsystems:
 
@@ -163,6 +192,50 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix
 | Festplatten-Bandbreitenauslastung | Wichtig | >= 90% |
 | Netzwerk-Bandbreitenauslastung | Wichtig | >= 90% |
 | Anforderungen pro Minute | Info | >= 6.000 |
+
+Weitere Informationen zur Verwendung der einfachen Authentifizierung für Leistungstests für Sites und Assets finden Sie im folgenden Abschnitt **Authentifizierte Leistungstests**.
+
+>[!NOTE]
+>Jede Instanz wird während des Testzeitraums sowohl für die Veröffentlichung als auch für den Autor überwacht. Wenn keine Metrik für eine Instanz abgerufen wird, wird diese Metrik als unbekannt gemeldet und der entsprechende Schritt schlägt fehl.
+
+#### Authentifizierte Leistungstests {#authenticated-performance-testing}
+
+Diese Funktion ist optional.
+AMS-Kunden mit authentifizierten Websites können einen Benutzernamen und ein Kennwort angeben, mit denen Cloud Manager während des Sites-Leistungstests auf die Website zugreift.
+Benutzername und Kennwort werden als Pipeline-Variablen mit den Namen `CM_PERF_TEST_BASIC_USERNAME` und `CM_PERF_TEST_BASIC_PASSWORD` angegeben.
+Obwohl dies nicht unbedingt erforderlich ist, wird empfohlen, den Variablentyp String für den Benutzernamen und den Variablentyp secretString für das Kennwort zu verwenden. Wenn beide angegeben sind, enthält jede Anfrage des Leistungstest-Crawlers und der virtuellen Testbenutzer diese Anmeldedaten als einfache HTTP-Standardauthentifizierung.
+
+Um diese Variablen mithilfe der Cloud Manager-Befehlszeilenschnittstelle festzulegen, führen Sie Folgendes aus:
+
+```shell
+$ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
+```
+
+Informationen zur Verwendung der API finden Sie unter [Variablen](https://www.adobe.io/apis/experiencecloud/cloud-manager/api-reference.html#/Variables/patchPipelineVariables).
+
+### AEM Assets {#aem-assets}
+
+Cloud Manager führt Leistungstests für AEM Assets-Programm durch, indem Assets für einen 30-minütigen Testzeitraum wiederholt hochgeladen werden.
+
+1. **Onboarding-Anforderung**
+
+   Bei Assets-Leistungstests erstellt Ihr Customer Success Engineer während des Einstiegs der Author to Stage-Umgebung einen `cloudmanager`-Benutzer (und -Kennwort). Für die Leistungstestschritte muss der Benutzer `cloudmanager` und das zugehörige Kennwort von Ihrer CSE eingerichtet werden. Dies sollte weder aus dem Autor entfernt noch in Berechtigungen geändert werden. Dies führt wahrscheinlich zu einem Fehler beim Assets-Leistungstest.
+
+1. **Bilder und Assets zum Testen**
+
+   Kunden können ihre eigenen Assets zum Testen hochladen. Dies kann bei der Pipeline-Einrichtung oder auf dem Bildschirm „Bearbeiten“ festgelegt werden. Dabei werden typische Bildformate wie JPEG, PNG, GIF und BMP sowie Photoshop-, Illustrator- und Postscript-Dateien unterstützt. Wenn jedoch keine Bilder hochgeladen werden, verwendet Cloud Manager zum Testen ein Standardbild und ein PDF-Dokument.
+
+1. **Verteilung von Assets für Tests**
+
+   Die Verteilung der Anzahl der Assets jedes Typs, die pro Minute hochgeladen werden, wird bei der Pipeline-Einrichtung oder auf dem Bildschirm „Bearbeiten“ festgelegt.
+Die unten stehende Abbildung zeigt beispielsweise eine Aufteilung von 70:30. Pro Minute werden 10 Assets hochgeladen, davon 7 Bilder und 3 Dokumente.
+
+1. **Tests und Berichte**
+
+   Cloud Manager erstellt einen Ordner auf der Autoreninstanz, wobei der Benutzername und das Kennwort vom CSE aus Schritt 1 (Onboarding Requirements) wie oben erwähnt festgelegt werden, und lädt Assets mithilfe einer Open-Source-Bibliothek in den Ordner hoch. Die vom Testschritt Assets ausgeführten Tests werden mit dieser [Open Source Library](https://github.com/adobe/toughday2) geschrieben. Sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene werden über die 30-Minuten-Testdauer hinweg gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
+
+   >[!NOTE]
+   >Weitere Informationen zum Konfigurieren von Leistungstests finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Einrichten des Programms](setting-up-program.md).
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
