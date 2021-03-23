@@ -1,18 +1,19 @@
 ---
 title: Versionshinweise für 2018.6.0
 seo-title: Versionshinweise für AEM Cloud Manager 2018.6.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.6.0.
+description: Auf dieser Seite finden Sie Informationen zu Cloud Manager Release 2018.6.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2018.6.0.
 uuid: 211b6e1b-10fb-46b0-b591-44d5e44abd77
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 8584f467-3e61-41ea-98e4-f79e68c86469
+feature: Versionshinweise
 translation-type: tm+mt
-source-git-commit: 15f75ca67c3d52ae511357c5b564daaa3d9def6b
+source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '340'
+ht-degree: 97%
 
 ---
 
