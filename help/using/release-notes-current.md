@@ -4,7 +4,7 @@ description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Vers
 feature: Versionshinweise
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
+source-git-commit: 1f7f87a4b944d1fadc708958a96a1bda7d41da5d
 workflow-type: tm+mt
 source-wordcount: '196'
 ht-degree: 22%
@@ -32,11 +32,11 @@ Die nächste Version ist für den 06. Mai 2021 geplant.
 
 * Die Fehlermeldung beim Starten einer Pipeline beim Löschen einer Umgebung wurde geklärt.
 
-* OSGi-Pakete, die von Eclipse-Projekten bereitgestellt werden, sind jetzt von der Regel ausgeschlossen.
+* OSGi-Pakete, die von Eclipse-Projekten bereitgestellt werden, sind nun von der Regel `CQBP-84--dependencies` ausgeschlossen.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Seltene, vorübergehende Fehler, die beim Assets Test-Schritt in der Produktionsleitung auftreten können.
+* Seltene, vorübergehende Fehler, die beim *Assets Test*-Schritt in der Produktions-Pipeline auftreten können.
 
 * Ein nachfolgender Schrägstrich in der Produktionsleitung Lasttest verursachte einen 404-Fehler.
 
