@@ -1,41 +1,43 @@
 ---
-title: Versionshinweise für 2021.3.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.3.0.
+title: Versionshinweise für 2021.4.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.4.0.
 feature: Versionshinweise
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 0c33fd9f1af4c98564c9fd14a468fc3bf27744ee
 workflow-type: tm+mt
-source-wordcount: '246'
-ht-degree: 18%
+source-wordcount: '196'
+ht-degree: 22%
 
 ---
 
+# Versionshinweise für 2021.4.0 {#release-notes-for}
 
-# Versionshinweise für 2021.3.0 {#release-notes-for}
-
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.3.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.4.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröffentlicht.
-Die nächste Version ist für den 08. April 2021 geplant.
+Die [!UICONTROL Cloud Manager]-Version 2021.4.0 wurde am 08. April 2021 veröffentlicht.
+Die nächste Version ist für den 06. Mai 2021 geplant.
 
 ## Neue Funktionen {#whats-new}
 
-* Zur Validierung der Kundendienstkonfiguration wurde ein neues Code-Qualitätstool [Dispatcher-Optimierungstool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=en#dispatcher-optimization-tool-rules) eingeführt.
+* Die Zeitüberschreitung bei Anfragen für den Leistungstest für virtuelle Benutzer wurde von 20 auf 60 Sekunden erhöht.
 
-* Die Benutzer können nun ihre Cloud Manager-Rolle(en) anzeigen, indem sie nach dem Navigieren zum Symbol &quot;User Profil&quot;(oben rechts) von Unified Shell die Option **Ansicht Cloud Manager-Rolle(en)** auswählen.
+* Die Schaltfläche &quot;Git verwalten&quot;wird auf der Pipelines-Karte angezeigt, auch wenn keine Pipelines konfiguriert wurden.
 
-* Die Beschriftung **Antrag auf Genehmigung** wurde zur besseren Klarheit in **Produktionsgenehmigung** umbenannt.
+* Während des Bereitstellungsschritts auf der Seite &quot;Pipeline-Ausführung&quot;können die Benutzer die abgeschlossenen und zukünftigen Implementierungsschritte zusätzlich zum aktuellen Schritt in der Benutzeroberfläche für den Status *In Bearbeitung* sehen.
 
-* Die Beschriftung **Version** wurde im Bildschirm &quot;Produktions-Pipeline-Ausführung&quot;in **Git-Tag** umbenannt.
+* Die Version des von Cloud Manager verwendeten AEM Projektarchivs wurde auf Version 27 aktualisiert.
 
-* Die Beschriftungen, die das Verhalten definieren, wenn wichtige Metriken den definierten Schwellenwert nicht erreichen, wurden umbenannt, um ihr wahres Verhalten widerzuspiegeln - **Sofort abbrechen** und **Sofort genehmigen**. Weitere Informationen finden Sie unter [Konfigurieren der Pipeline-Einstellungen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#configuring-the-pipeline-settings-from-cloud-manager).
+* Die Fehlermeldung beim Starten einer Pipeline beim Löschen einer Umgebung wurde geklärt.
 
-* Die Listen zum Entfernen von Klassen und Methoden wurden auf der Grundlage der Version `2021.3.4997.20210303T022849Z-210225` des AEM Cloud Service SDK aktualisiert.
+* OSGi-Pakete, die von Eclipse-Projekten bereitgestellt werden, sind jetzt von der Regel ausgeschlossen.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Einige Qualitätsprobleme wurden nicht richtig erkannt, wenn Pakete in andere Pakete eingebettet wurden.
+* Seltene, vorübergehende Fehler, die beim Assets Test-Schritt in der Produktionsleitung auftreten können.
 
-* Wenn der Benutzer unmittelbar nach dem Start einer Pipeline von der Seite für die Ausführung der Pipeline wegnavigiert, wird gelegentlich eine Fehlermeldung angezeigt, die besagt, dass die Aktion fehlgeschlagen ist, obwohl die Ausführung tatsächlich Beginn ist.
+* Ein nachfolgender Schrägstrich in der Produktionsleitung Lasttest verursachte einen 404-Fehler.
+
+* Die `Runmode`-Prüfung ergab Falsch-Positiv-Werte für Nicht-Ordner-Knoten.
