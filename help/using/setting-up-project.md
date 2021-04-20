@@ -1,7 +1,7 @@
 ---
 title: Einrichten des Projekts
 description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
-feature: Erste Schritte, Produktion
+feature: Getting Started, Production
 translation-type: tm+mt
 source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
 workflow-type: tm+mt

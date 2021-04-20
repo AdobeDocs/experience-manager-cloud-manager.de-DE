@@ -3,7 +3,7 @@ title: Häufig gestellte Fragen zu Cloud Manager
 seo-title: Häufig gestellte Fragen zu Cloud Manager
 description: Unter Häufig gestellte Fragen zu Cloud Manager erhalten Sie Tipps zur Fehlerbehebung
 seo-description: Auf dieser Seite finden Sie Antworten zu den häufig gestellten Fragen zu Cloud Manager
-feature: Erste Schritte
+feature: Getting Started
 translation-type: tm+mt
 source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
 workflow-type: tm+mt
