@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
-feature: CI-CD Pipeline, Test Results
+feature: CI-CD-Pipeline, Testergebnisse
+exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 translation-type: tm+mt
-source-git-commit: 12a7d6199983e2d19ef401051f60e3f24bb6d4f8
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '2691'
-ht-degree: 68%
+source-wordcount: '2700'
+ht-degree: 67%
 
 ---
-
 
 # Wissenswertes zu Testergebnissen {#understand-your-test-results}
 
@@ -35,7 +35,7 @@ Die Pipeline muss drei Akzeptanztests bestehen:
 Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test identifizierte Probleme.
 
 * **Kritisch**: Hierbei handelt es sich um vom Test identifizierte Probleme, die zu einem sofortigen Pipelinefehler führen.
-* **Wichtig**: Hierbei handelt es sich um vom Test identifizierte Probleme, durch die die Pipeline angehalten wird. Bereitstellungsmanager, Projektmanager oder Business Owner können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.
+* **Wichtig**: Hierbei handelt es sich um vom Test identifizierte Probleme, durch die die Pipeline angehalten wird. Implementierungs-Manager, Projekt-Manager oder Business Owner können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler. Die Außerkraftsetzung wichtiger Fehler unterliegt einem [Timeout](deploying-code.md#timeouts).
 * **Info**: Hierbei handelt es sich um vom Test identifizierte Probleme, die ausschließlich zu Informationszwecken bereitgestellt werden und keine Auswirkungen auf die Pipelineausführung haben.
 
 >[!NOTE]
@@ -274,4 +274,3 @@ Die folgenden Abbildungen zeigen Leistungstestdiagramme:
 ![](assets/understand_test-results-screen1.png)
 
 ![](assets/screen_shot_2018-09-05at83933pm.png)
-
