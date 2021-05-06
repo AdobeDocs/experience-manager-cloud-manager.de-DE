@@ -3,10 +3,10 @@ title: Versionshinweise für 2021.5.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.5.0.
 feature: Versionshinweise
 translation-type: tm+mt
-source-git-commit: 3d6f9a760a1e5bafdae6ece5627358524467a0d2
+source-git-commit: 849a2df2f272973740c1dd8580daaa518f2c9ec4
 workflow-type: tm+mt
-source-wordcount: '206'
-ht-degree: 21%
+source-wordcount: '185'
+ht-degree: 24%
 
 ---
 
@@ -32,8 +32,6 @@ Die nächste Version ist für den 03. Juni 2021 geplant.
 * Das Erlebnis &quot;Programm bearbeiten&quot;wurde aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
-
-* Gelegentlich wird dem Benutzer der Status &quot;*aktiv*&quot;neben einer IP-Zulassungsliste auch dann grün angezeigt, wenn diese Konfiguration nicht bereitgestellt wurde.
 
 * Statt &#39;gelöschte&#39; Variablen zu entfernen, markiert die API der Pipelines-Variablen sie nur mit dem Status &#39;DELETED&#39;.
 
