@@ -8,15 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code Deployment
+feature: Code-Bereitstellung
+exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+source-git-commit: 9e7c6f7241900432155a1a32abfb440fb3f93172
 workflow-type: tm+mt
-source-wordcount: '959'
-ht-degree: 93%
+source-wordcount: '994'
+ht-degree: 92%
 
 ---
-
 
 # Bereitstellen Ihres Codes {#deploy-your-code}
 
@@ -92,6 +92,19 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
 
    ![](assets/Production_Deployment2.png)
 
+## Timeouts {#timeouts}
+
+Die folgenden Schritte führen zu einem Timeout, wenn auf Benutzerfeedback gewartet wird:
+
+| Schritt | Zeitüberschreitung |
+|--- |--- |
+| Testen der Code-Qualität | 7 Tage |
+| Sicherheitstests | 7 Tage |
+| Leistungstests | 7 Tage |
+| Genehmigungsantrag | 7 Tage |
+| Planen der Bereitstellung für die Produktion | 7 Tage |
+| CSE-Unterstützung | 7 Tage |
+
 ## Implementierungsprozess {#deployment-process}
 
 Im folgenden Abschnitt wird beschrieben, wie AEM- und Dispatcher-Pakete in der Staging- und Produktionsphase bereitgestellt werden.
@@ -149,5 +162,3 @@ Produktionsimplementierungen nutzen im Allgemeinen die oben beschriebenen Schrit
 1. Stellen Sie AEM Pakete für publish2 und das Dispatcher-Paket parallel zum Dispatcher2 bereit, um den Dispatcher-Cache zu leeren.
 1. dispatcher2 wird in den Lastenausgleich zurückgesetzt
 Dieser Vorgang wird fortgesetzt, bis die Implementierung alle Publisher und Dispatcher in der Topologie erreicht hat.
-
-
