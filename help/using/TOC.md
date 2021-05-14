@@ -3,16 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
-breadcrumb-title: Benutzerhandbuch zu Cloud Manager
+breadcrumb-title: Benutzerhandbuch zu Cloud Manager für AEM 6.x
 user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung von Experience Manager in der Cloud nutzen können.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Administrator
 level: Intermediate
-translation-type: tm+mt
-source-git-commit: 5f81fdb86b1dfa6c748bb7784ef00dc062c9f8ef
+source-git-commit: 9cca6fd7d4ef3351fa024bac0f95f5592105dbae
 workflow-type: tm+mt
-source-wordcount: '267'
-ht-degree: 97%
+source-wordcount: '270'
+ht-degree: 96%
 
 ---
 
@@ -23,7 +22,7 @@ ht-degree: 97%
 + Überblick {#overview}
    + [Schlüsselkonzepte](key-concepts.md)
    + [Customer Journey](customer-journey.md)
-   + [CI/CD Pipeline](ci-cd-pipeline.md)
+   + [CI/CD-Pipeline](ci-cd-pipeline.md)
    + [Sicherheit und Datenschutz](security-and-privacy.md)
    + [Hilfe-Ressourcen](help-resources.md)
    + [Häufig gestellte Fragen zu Cloud Manager](cloud-manager-faqs.md)
@@ -43,7 +42,7 @@ ht-degree: 97%
    + [Konfigurieren von Release-Verzweigungen](configure-your-release-branches.md)
    + [Verwalten von Dispatcher-Konfigurationen](dispatcher-configurations.md)
 + Verwendung {#how-to-use}
-   + [Konfigurieren Ihrer CI/CD Pipeline](configuring-pipeline.md)
+   + [Konfigurieren Ihrer CI/CD-Pipeline](configuring-pipeline.md)
    + [Bereitstellen Ihres Codes](deploying-code.md)
    + [Wissenswertes zu Testergebnissen](understand-your-test-results.md)
    + [Verwalten von Umgebungen](manage-your-environment.md)
@@ -53,10 +52,10 @@ ht-degree: 97%
    + [Benachrichtigungen](notifications.md)
    + [Benutzerspezifische Regeln für Codequalität](custom-code-quality-rules.md)
 + Code verwalten {#managing-code}
-   + [Umgang mit Maven-Projektversionen](activating-maven-project.md)
+   + [Umgang mit Maven-Projektversionen ](activating-maven-project.md)
    + [Zugriff auf Git](accessing-git.md)
    + [Integrieren mit Git](setup-cloud-manager-git-integration.md)
-   + [Arbeiten mit mehreren Quell-Git-Repositorys](/help/using/working-with-multiple-source-git-repos.md)
+   + [Arbeiten mit Git-Repositorys aus mehreren Quellen](/help/using/working-with-multiple-source-git-repos.md)
 + Assistent für Produktaktualisierungen {#product-update-wizard}
    + [Überblick](overview-productupdate-wizard.md)
    + [Test](evaluation.md)
