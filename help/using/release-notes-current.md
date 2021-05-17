@@ -2,16 +2,19 @@
 title: Versionshinweise für 2021.5.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.5.0.
 feature: Versionshinweise
-source-git-commit: b9adcc700edb7ba54a92037e86e86df812c93c83
+source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
 workflow-type: tm+mt
-source-wordcount: '208'
-ht-degree: 21%
+source-wordcount: '239'
+ht-degree: 18%
 
 ---
 
 # Versionshinweise für 2021.5.0 {#release-notes-for}
 
 Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.5.0.
+
+>[!NOTE]
+>Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) finden Sie die neuesten Versionshinweise für Cloud Manager in AEM als Cloud Service.
 
 ## Veröffentlichungsdatum {#release-date}
 
