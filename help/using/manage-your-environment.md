@@ -8,17 +8,19 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-feature: Environments
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: Umgebungen
+exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
+source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 98%
+source-wordcount: '296'
+ht-degree: 92%
 
 ---
 
-
 # Verwalten von Umgebungen {#manage-your-environments}
+
+>[!NOTE]
+>Informationen zum Verwalten von Umgebung für Cloud Manager in AEM als Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de#using-cloud-manager).
 
 Auf der Seite **Übersicht** von Cloud Manager finden Sie die Kachel **Umgebungen** mit allen verwalteten AEM-Umgebungen.
 
