@@ -8,15 +8,14 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 1b421993-22c3-4de0-ba64-c1080d07ad5e
-feature: User Roles
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: Anwenderrollen
+exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '688'
 ht-degree: 97%
 
 ---
-
 
 # Hinzufügen von Anwendern und Rollen {#add-users-and-roles}
 
@@ -43,7 +42,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Rollen:
 
 | [!UICONTROL Cloud Manager]-Rollen | Beschreibung |
 |--- |--- |
-| Geschäftsinhaber | Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
+| Business Owner | Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
 | Programmmanager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
 | Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging-/Produktionsbereitstellungen ausführen. Kann CI/CD Pipelines bearbeiten. Kann bedeutende 3-Tier-Fehler genehmigen. Kann Zugriff auf das Git-Repository erhalten. |
 | Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Kann Zugriff auf das Git-Repository für Codecommits erhalten. |
@@ -64,7 +63,7 @@ Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Mana
 
 Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Manager]-Anwender bereitzustellen, müssen Sie als Administrator vier neue Produktprofile im [!UICONTROL AEM Managed Services]-Produktkontext erstellen, die jeweils den vier [!UICONTROL Cloud Manager]-Rollen entsprechen:
 
-* Geschäftsinhaber
+* Business Owner
 * Bereitstellungsmanager
 * Entwickler
 * Programmmanager
@@ -87,7 +86,7 @@ Sie können Anwender/Gruppen für diese Produktprofile mit [Admin Console](https
 
    | **Rolle** | **Anzeigename (erforderlich)** | **Empfohlener Profilname** |
    |---|---|---|
-   | Geschäftsinhaber | CM_BUSINESS_OWNER_ROLE_PROFILE | [!UICONTROL Cloud Manager] – Rolle „Business Owner“ |
+   | Business Owner | CM_BUSINESS_OWNER_ROLE_PROFILE | [!UICONTROL Cloud Manager] – Rolle „Business Owner“ |
    | Bereitstellungsmanager | CM_DEPLOYMENT_MANAGER_ROLE_PROFILE | [!UICONTROL Cloud Manager] – Rolle „Bereitstellungsmanager“ |
    | Entwickler | CM_DEVELOPER_ROLE_PROFILE | [!UICONTROL Cloud Manager] – Rolle „Entwickler“ |
    | Programmmanager | CM_PROGRAM_MANAGER_ROLE_PROFILE | [!UICONTROL Cloud Manager] – Rolle „Programmmanager“ |
@@ -99,4 +98,3 @@ Sie können Anwender/Gruppen für diese Produktprofile mit [Admin Console](https
    ![](assets/image2018-4-9_15-19-26.png)
 
    ![](assets/image2018-4-9_15-16-47.png)
-
