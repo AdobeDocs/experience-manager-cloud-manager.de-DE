@@ -9,7 +9,7 @@ products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-feature: CI-CD-Pipeline
+feature: CI/CD-Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
 workflow-type: tm+mt
@@ -21,7 +21,7 @@ ht-degree: 95%
 # Konfigurieren Ihrer CI/CD-Pipeline {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
->Informationen zum Konfigurieren der CI/CD-Pipeline für Cloud Manager in AEM als Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=de#using-cloud-manager).
+>Informationen zum Konfigurieren der CI/CD-Pipeline für Cloud Manager in AEM as a Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=de#using-cloud-manager).
 
 Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren. Weitere grundlegende Informationen zur Funktionsweise der Pipeline finden Sie unter [Übersicht zur CI/CD-Pipeline](ci-cd-pipeline.md).
 
@@ -88,8 +88,8 @@ Wählen Sie Ihre Git-Verzweigung aus und klicken Sie auf **Weiter**.
    Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
 
 * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-* **Sofort**  abbrechen: Wenn diese Option aktiviert ist, wird die Pipeline bei Auftreten eines wichtigen Fehlers abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
-* **Sofort**  genehmigen: Wenn diese Option aktiviert ist, wird die Pipeline automatisch fortgesetzt, sobald ein wichtiger Fehler auftritt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
+* **Sofort**  abbrechen - Wenn diese Option aktiviert ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+* **Sofort genehmigen**  - Wenn diese Option aktiviert ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
 
    Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung. Die drei verfügbaren Optionen sind:
 
@@ -155,9 +155,9 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
    ![](assets/image2018-8-7_15-4-30.png)
 
-1. Definieren Sie auf der Registerkarte **Testen** Ihre Testkriterien für Ihr Programm. Sie können jetzt die Leistungstest-Parameter konfigurieren.
+1. Definieren Sie auf der Registerkarte **Testen** Ihre Testkriterien für Ihr Programm. Jetzt können Sie die Leistungstestparameter konfigurieren.
 
-   Je nachdem, welche Produkte Sie lizenziert haben, können Sie Leistungstests für *AEM Sites* und *AEM Assets* konfigurieren. Weitere Informationen finden Sie unter [Leistungstests](understand-your-test-results.md#performance-testing).
+   Je nachdem, welche Produkte Sie lizenziert haben, können Sie Leistungstests für *AEM Sites* und *AEM Assets* konfigurieren. Weitere Informationen finden Sie unter [Leistungstests](understand-your-test-results.md#performance-testing) .
 
 1. Klicken Sie auf **Speichern**, um die Einrichtung des Pipelineprozesses abzuschließen.
 
