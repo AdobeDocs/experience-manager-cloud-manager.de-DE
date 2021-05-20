@@ -1,17 +1,16 @@
 ---
 title: Überwachen von Umgebungen
 seo-title: Überwachen von Umgebungen
-description: Erfahren Sie, wie Sie Ihre Umgebung in Cloud Manager überwachen.
+description: Erfahren Sie, wie Sie Ihre Umgebungen in Cloud Manager überwachen.
 seo-description: Auf dieser Seite erfahren Sie mehr über die Systemüberwachung in Cloud Manager. Diese erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz.
-feature: Environments
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Umgebungen
+exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '973'
 ht-degree: 99%
 
 ---
-
 
 # Systemüberwachung {#system-monitoring}
 
