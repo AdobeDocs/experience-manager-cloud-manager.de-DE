@@ -5,15 +5,14 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: 67a54bae-99a9-4405-91e3-9a0a8b3ccc98
-feature: User Roles
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Anwenderrollen
+exl-id: b66533fb-db93-40e8-919d-581261fdbf24
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '545'
 ht-degree: 100%
 
 ---
-
 
 # Rollenbasierte Berechtigungen {#role-based-permissions}
 
@@ -42,7 +41,7 @@ Jede Rolle verfügt über bestimmte Berechtigungen, vorkonfigurierte Aufgaben od
 
 Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten von Anwendern und Rollen](setting-up-users-and-roles.md).
 
-| Berechtigung | Beschreibung | Geschäftsinhaber | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
+| Berechtigung | Beschreibung | Business Owner | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Anwendung lesen | Lesen der Programm-KPIs. | x | x | x | x | x |
 | Anwendung schreiben | Programmeinrichtung oder -bearbeitung. | x |  |  |  |  |
@@ -64,4 +63,3 @@ Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten 
 | Pipeline löschen | Ermöglicht das Löschen einer Pipeline. |  | x |  |  |  |
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“. | x | x | x | x | x |
 | Persönliches Zugriffs-Token erstellen | Zugriff auf Git. |  | x |  | x |  |
-
