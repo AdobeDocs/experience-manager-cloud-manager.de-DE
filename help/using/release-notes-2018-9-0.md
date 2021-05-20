@@ -8,15 +8,14 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
-feature: Release Information
-translation-type: tm+mt
-source-git-commit: c5d32d49782c899d013fcc60b9c4d2b67e9350ae
+feature: Versionshinweise
+exl-id: bf611743-ded2-4503-97c8-12b12454c7b7
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 100%
 
 ---
-
 
 # Versionshinweise für 2018.9.0 {#release-notes-for}
 
@@ -47,4 +46,3 @@ Die [!UICONTROL Cloud Manager]-Version 2018.9.0 wurde am 1. November 2018 ver
 
 * Mit dem Assistenten für Anwendungsprojekte erstellte Verzweigungen dürfen keine Bindestriche enthalten.
 * In der Seitenleiste für Adobe [!UICONTROL Experience Cloud]-Benachrichtigung werden Benachrichtigungen möglicherweise nicht konsistent geladen. Benachrichtigungen werden jedoch in Adobe [!UICONTROL Experience Cloud] angezeigt und, sofern konfiguriert, weiterhin per E-Mail gesendet.
-
