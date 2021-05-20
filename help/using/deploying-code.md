@@ -1,14 +1,14 @@
 ---
 title: Bereitstellen Ihres Codes
 seo-title: Bereitstellen Ihres Codes
-description: Bietet eine Übersicht über den Bereitstellungsprozess in Cloud Manager
-seo-description: Erfahren Sie, wie Sie den Code nach der Konfiguration der Pipeline (Repository, Umgebung und Testing-Umgebung) bereitstellen.
+description: Bietet einen Überblick über den Implementierungsprozess in Cloud Manager
+seo-description: Erfahren Sie, wie Sie Ihren Code bereitstellen, nachdem Sie Ihre Pipeline (Repository, Umgebung und Testumgebung) konfiguriert haben.
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code-Bereitstellung
+feature: Codebereitstellung
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
@@ -22,7 +22,7 @@ ht-degree: 91%
 ## Bereitstellen von Code mit Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Weitere Informationen zum Bereitstellen von Code für Cloud Manager in AEM als Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=de#using-cloud-manager).
+>Weitere Informationen zur Bereitstellung von Code für Cloud Manager in AEM als Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=de#using-cloud-manager).
 
 Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) konfiguriert haben, können Sie Ihren Code bereitstellen.
 
@@ -96,7 +96,7 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
 
 ## Timeouts {#timeouts}
 
-Die folgenden Schritte führen zu einem Timeout, wenn auf Benutzerfeedback gewartet wird:
+Bei den folgenden Schritten wird eine Zeitüberschreitung ausgelöst, wenn der Benutzer auf Feedback wartet:
 
 | Schritt | Zeitüberschreitung |
 |--- |--- |
@@ -158,9 +158,9 @@ Produktionsimplementierungen nutzen im Allgemeinen die oben beschriebenen Schrit
 
 1. AEM-Pakete werden für den Autor bereitgestellt
 1. dispatcher1 wird aus dem Lastenausgleich gelöst
-1. Stellen Sie AEM Pakete für publish1 und das Dispatcher-Paket parallel zum Dispatcher1 bereit, um den Dispatcher-Cache zu leeren.
+1. Stellen Sie AEM Pakete parallel in publish1 und das Dispatcher-Paket in dispatcher1 bereit und leeren Sie den Dispatcher-Cache.
 1. dispatcher1 wird in den Lastenausgleich zurückgesetzt
 1. Sobald dispatcher1 wieder aktiv ist, wird dispatcher2 aus dem Lastenausgleich entfernt
-1. Stellen Sie AEM Pakete für publish2 und das Dispatcher-Paket parallel zum Dispatcher2 bereit, um den Dispatcher-Cache zu leeren.
+1. Stellen Sie AEM Pakete parallel in publish2 und das Dispatcher-Paket in dispatcher2 bereit und leeren Sie den Dispatcher-Cache.
 1. dispatcher2 wird in den Lastenausgleich zurückgesetzt
 Dieser Vorgang wird fortgesetzt, bis die Implementierung alle Publisher und Dispatcher in der Topologie erreicht hat.
