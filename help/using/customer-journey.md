@@ -8,16 +8,15 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: bc9a0d63-ae6b-4fe9-81e5-bf9844f04e54
-feature: Getting Started
+feature: Erste Schritte
 level: Beginner
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '588'
-ht-degree: 99%
+source-wordcount: '587'
+ht-degree: 100%
 
 ---
-
 
 # Customer Journey {#customer-journey}
 
@@ -62,4 +61,3 @@ Anschließend müssen Sie Ihre Quellcodeverzweigungen im **Git-Repository** einr
 Das folgende Diagramm zeigt die allgemeine Customer Journey auf, wenn Sie die CI-/CD-Pipeline von [!UICONTROL Cloud Manager] für die Bereitstellung Ihrer Code-Änderungen in Ihrer Staging- und Produktionsumgebung verwenden.
 
 ![](assets/screen_shot_2018-05-15at124004pm.png)
-
