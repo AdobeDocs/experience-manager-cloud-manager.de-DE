@@ -1,22 +1,21 @@
 ---
 title: Versionshinweise für 2018.7.0
 seo-title: Versionshinweise für 2018.7.0
-description: Informationen zu Cloud Manager Release 2018.7.0
+description: Informationen zur Cloud Manager-Version 2018.7.0
 seo-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.7.0.
 uuid: d7b49e32-01dc-48ce-b744-e6a806fbdd8a
 contentOwner: jsyal
 topic-tags: release-notes
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 discoiquuid: b64bf9ab-27ed-4f33-adc8-d73d34094f1b
-feature: Release Information
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Versionshinweise
+exl-id: fc0214b4-d138-470a-9b04-191224927f7b
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '366'
 ht-degree: 98%
 
 ---
-
 
 # Versionshinweise für 2018.7.0 {#release-notes-for}
 
@@ -50,4 +49,3 @@ Die [!UICONTROL Cloud Manager]-Version 2018.7.0 wurde am 10. September 2018 v
 
 * Obwohl Kunden den Commitauslöser auswählen können, wird die Pipeline möglicherweise nicht auf Grundlage neuer Commits gestartet.
 * In der Seitenleiste für [!UICONTROL Experience Cloud]-Benachrichtigungen werden Benachrichtigungen möglicherweise nicht konsistent geladen. Benachrichtigungen werden jedoch in [!UICONTROL Experience Cloud] angezeigt und, sofern konfiguriert, weiterhin per E-Mail gesendet.
-
