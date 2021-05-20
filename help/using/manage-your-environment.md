@@ -20,7 +20,7 @@ ht-degree: 92%
 # Verwalten von Umgebungen {#manage-your-environments}
 
 >[!NOTE]
->Informationen zum Verwalten von Umgebung für Cloud Manager in AEM als Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de#using-cloud-manager).
+>Weitere Informationen zum Verwalten von Umgebungen für Cloud Manager in AEM as a Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de#using-cloud-manager).
 
 Auf der Seite **Übersicht** von Cloud Manager finden Sie die Kachel **Umgebungen** mit allen verwalteten AEM-Umgebungen.
 
