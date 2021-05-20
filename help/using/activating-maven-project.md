@@ -3,15 +3,14 @@ title: Umgang mit Maven-Projektversionen
 seo-title: Umgang mit Maven-Projektversionen
 description: Erfahren Sie mehr über den Umgang mit Maven-Projektversionen.
 seo-description: Auf dieser Seite erfahren Sie mehr über den Umgang mit Maven-Projektversionen.
-feature: Getting Started
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Erste Schritte
+exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '255'
 ht-degree: 100%
 
 ---
-
 
 # Umgang mit Maven-Projektversionen {#project-version}
 
@@ -29,7 +28,7 @@ Wenn die Originalversion diese Kriterien erfüllt, wird die generierte Version a
 |---|---|---|
 | 1.0.0 | 1.0.0.2019_0926_121356_0000020490 | Richtig geformte Originalversion |
 | 1.0.0-SNAPSHOT | 2019.926.121356.0000020490 | Snapshot-Version, überschrieben |
-| 1 | 2019.926.121356.0000020490 | Unvollständige Version, überschrieben |
+| 1 | 2019.926.121356.000020490 | Unvollständige Version, überschrieben |
 
 >[!NOTE]
 >
