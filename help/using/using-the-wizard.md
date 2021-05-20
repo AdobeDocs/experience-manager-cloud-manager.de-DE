@@ -1,15 +1,14 @@
 ---
 title: Verwenden des Assistenten
 description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM-Anwendungsprojekt erstellen
-feature: Getting Started
-translation-type: tm+mt
-source-git-commit: fb10d775c930b5bb475b497aac2fd59b053a9a00
+feature: Erste Schritte
+exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
+source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 100%
 
 ---
-
 
 # Verwenden des Assistenten {#using-wizard-to-create-an-aem-application-project}
 
