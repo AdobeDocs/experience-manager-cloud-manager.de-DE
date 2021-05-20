@@ -14,31 +14,31 @@ ht-degree: 18%
 Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.5.0.
 
 >[!NOTE]
->Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) finden Sie die neuesten Versionshinweise für Cloud Manager in AEM als Cloud Service.
+>Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) finden Sie die neuesten Versionshinweise für Cloud Manager in AEM as a Cloud Service.
 
 ## Veröffentlichungsdatum {#release-date}
 
 Die [!UICONTROL Cloud Manager]-Version 2021.5.0 wurde am 06. Mai 2021 veröffentlicht.
-Die nächste Version ist für den 03. Juni 2021 geplant.
+Die nächste Version ist für den 3. Juni 2021 geplant.
 
 ## Neue Funktionen {#whats-new}
 
-* Die PackageOverlaps-Qualitätsregel erkennt jetzt Fälle, in denen dasselbe Paket mehrmals bereitgestellt wurde, d. h. an mehreren eingebetteten Speicherorten, und zwar in demselben bereitgestellten Paketsatz.
+* Die Qualitätsregel PackageOverlaps erkennt jetzt Fälle, in denen dasselbe Paket mehrmals bereitgestellt wurde, d. h. an mehreren eingebetteten Speicherorten, in demselben bereitgestellten Paketsatz.
 
 * Der Repository-Endpunkt in der öffentlichen API enthält jetzt die Git-URL.
 
-* Im Arbeitsablauf &quot;Programm bearbeiten&quot;kann der Benutzer nur Nicht-Dezimalzahl-KPI-Werte festlegen.
+* Im Workflow Programm bearbeiten darf der Benutzer nur nicht-Dezimalwerte für KPIs festlegen.
 
-* Zwischenweise auftretende Fehler beim Senden von Code an Adobe Git wurden nun behoben.
+* Beim Pushen von Code an Adobe Git wurden zeitweise auftretende Fehler behoben.
 
-* Das Erlebnis &quot;Programm bearbeiten&quot;wurde aktualisiert.
+* Das Erlebnis Bearbeiten des Programms wurde aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Statt &#39;gelöschte&#39; Variablen zu entfernen, markiert die API der Pipelines-Variablen sie nur mit dem Status &#39;DELETED&#39;.
+* Anstatt &quot;gelöschte&quot;Variablen zu entfernen, markiert die Pipeline-Variablen-API sie nur mit dem Status &quot;DELETED&quot;.
 
-* Einige Qualitätsprobleme mit Code-Geruch haben die Zuverlässigkeitsbewertung fälschlicherweise beeinflusst.
+* Einige Qualitätsprobleme vom Typ Code Smell wirkten sich fälschlicherweise auf die Zuverlässigkeitsbewertung aus.
 
-* Wenn eine Pipeline-Ausführung zwischen Mitternacht und 1am UTC gestartet wurde, war nicht garantiert, dass die von Cloud Manager generierte Artefaktversion größer ist als eine Version, die am Vortag erstellt wurde.
+* Wenn die Pipelineausführung zwischen Mitternacht und 1 Uhr UTC gestartet wurde, war nicht garantiert, dass die von Cloud Manager generierte Artefaktversion größer ist als die am Vortag erstellte Version.
 
-* Einige Adobe Managed Services-Kunden (AMS) konnten mit der Cloud Manager-API keine neuen Projekte in der Adobe I/O Developer Console erstellen.
+* Manche Adobe Managed Services (AMS)-Kunden konnten keine neuen Projekte in der Adobe I/O Developer Console mithilfe der Cloud Manager-API erstellen.
