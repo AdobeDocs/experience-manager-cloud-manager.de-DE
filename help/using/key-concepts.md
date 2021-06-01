@@ -11,10 +11,10 @@ discoiquuid: b702dfc0-3534-4d90-af19-8559d8baf6a6
 feature: Erste Schritte
 level: Beginner
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: f9b33de0f1f2203175f66f261c8ee553f47e0c3b
 workflow-type: tm+mt
 source-wordcount: '349'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -40,7 +40,7 @@ Beispiel: *We.Retail*
 
 **Pipeline** Ein Satz von Bereitstellungsschritten, die nacheinander ausgeführt werden.
 
-**Produkt** Ein bestimmter Funktionssatz innerhalb einer von einer Organisation lizenzierten Lösung. Verschiedene Programme innerhalb einer Organisation können Anspruch auf verschiedene Produkte haben, z. B. Sites, Assets oder Forms.
+**Produkt** Ein bestimmter Funktionssatz innerhalb einer von einer Organisation lizenzierten Lösung. Verschiedene Programme innerhalb einer Organisation können Anspruch auf verschiedene Produkte haben, Zum Beispiel Sites, Assets oder Forms.
 
 **Programm** Ein Satz von Umgebungen, die eine logische Gruppierung von Kundeninitiativen unterstützen. Im Normalfall erfolgt dies gemäß dem erworbenen Service-Level-Agreement (SLA). Jedes Programm hat genau eine Produktionsumgebung und kann zahlreiche Nicht-Produktionsumgebungen aufweisen.
 
