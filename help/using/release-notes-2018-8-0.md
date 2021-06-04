@@ -12,8 +12,8 @@ feature: Versionshinweise
 exl-id: 20f87048-30f7-4869-aad0-13ca383a404b
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,11 +23,11 @@ Die [!UICONTROL Cloud Manager]-Version 2018.8.0 unterstützt nun das automatisc
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2018.8.0 wurde am 4. Oktober 2018 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2018.8.0 wurde am 4. Oktober 2018 veröffentlicht.
 
-## Neuerungen {#what-s-new}
+## Neuigkeiten {#what-s-new}
 
-* **Programm-Setup** - Neuer Assistent zum Erstellen eines Anwendungsprojekts in Git mithilfe des AEM-Projekt-Archetyps
+* **Programm-Setup**: Neuer Assistent zum Erstellen eines Anwendungsprojekts in Git mithilfe des AEM-Projekt-Archetyps
 
 * **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
 
