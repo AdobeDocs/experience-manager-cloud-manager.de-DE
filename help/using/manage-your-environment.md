@@ -12,15 +12,15 @@ feature: Umgebungen
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '296'
-ht-degree: 92%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Verwalten von Umgebungen {#manage-your-environments}
 
 >[!NOTE]
->Weitere Informationen zum Verwalten von Umgebungen für Cloud Manager in AEM as a Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de#using-cloud-manager).
+>Informationen zum Verwalten von Umgebungen für Cloud Manager in AEM as a Cloud Service finden Sie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/manage-environments.html?lang=de#using-cloud-manager).
 
 Auf der Seite **Übersicht** von Cloud Manager finden Sie die Kachel **Umgebungen** mit allen verwalteten AEM-Umgebungen.
 
@@ -36,7 +36,7 @@ Das folgende Video bietet einen Überblick über Cloud Manager-Umgebungen, die a
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/)
 
-## Zugreifen auf Umgebungen in Cloud Manager{#accessing-environments-in-cloud-manager}
+## Zugreifen auf Umgebungen in Cloud Manager {#accessing-environments-in-cloud-manager}
 
 Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Produktions- und Staging-Umgebungen zusammen mit dem Status angezeigt.
 
