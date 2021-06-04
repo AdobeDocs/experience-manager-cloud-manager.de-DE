@@ -1,14 +1,14 @@
 ---
 title: Häufig gestellte Fragen zu Cloud Manager
 seo-title: Häufig gestellte Fragen zu Cloud Manager
-description: Tipps zur Fehlerbehebung finden Sie in den häufig gestellten Fragen zu Cloud Manager .
-seo-description: Auf dieser Seite erhalten Sie Antworten auf häufig gestellte Fragen zu Cloud Manager
+description: Unter „Häufig gestellte Fragen zu Cloud Manager“ erhalten Sie Tipps zur Fehlerbehebung
+seo-description: Auf dieser Seite finden Sie Antworten auf häufig gestellte Fragen zu Cloud Manager
 feature: Erste Schritte
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '903'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,71 +16,71 @@ ht-degree: 2%
 
 Im folgenden Abschnitt finden Sie Antworten auf häufig gestellte Fragen zu Cloud Manager.
 
-## Ist die Verwendung von Java 11 mit Cloud Manager-Builds möglich? {#java-11-cloud-manager}
+## Kann Java 11 mit Cloud Manager-Builds verwendet werden? {#java-11-cloud-manager}
 
-Der Build von AEM Cloud Manager schlägt beim Versuch fehl, den Build von Java 8 auf 11 zu wechseln. Das Problem kann viele Ursachen haben. Die häufigsten Ursachen sind nachfolgend beschrieben:
+AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 auf 11 umzuschalten. Das Problem kann viele Ursachen haben. Die häufigsten Ursachen werden nachfolgend beschrieben:
 
-* Fügen Sie das maven-toolchain-plugin mit den richtigen Einstellungen für Java 11 hinzu, wie in [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=en#getting-started) beschrieben.  Siehe beispielsweise den Beispielcode für das Projekt [wknd](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* Fügen Sie das maven-toolchain-plugin mit den richtigen Einstellungen für Java 11 hinzu, wie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/getting-started/create-application-project/using-the-wizard.html?lang=de#getting-started) beschrieben.  Ein Beispiel finden Sie unter [wknd-Beispielprojekt-Code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
-* Wenn der folgende Fehler auftritt, müssen Sie die Verwendung von `maven-scr-plugin` entfernen und alle OSGi-Anmerkungen in OSGi R6-Anmerkungen konvertieren. Anweisungen finden Sie unter [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+* Wenn der unten stehende Fehler auftritt, müssen Sie die Verwendung von `maven-scr-plugin` entfernen und alle OSGi-Anmerkungen in OSGi R6-Anmerkungen konvertieren. Anweisungen finden Sie [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
    `[main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]`
 
-* Bei Cloud Manager-Builds schlägt das Maven-Enforcer-Plug-in mit dem Fehler `"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion"` fehl. Dies ist ein bekanntes Problem, da Cloud Manager eine andere Version von Java verwendet, um den Maven-Befehl im Vergleich zum Kompilierungscode auszuführen. Lassen Sie zunächst `requireJavaVersion` aus Ihren Maven-Enforcer-Plug-in-Konfigurationen weg.
+* Bei Cloud Manager-Builds schlägt das Maven-Enforcer-Plug-in mit dem Fehler `"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion"` fehl. Dies ist ein bekanntes Problem, da Cloud Manager eine andere Version von Java verwendet, um den maven-Befehl auszuführen, anstatt Code zu kompilieren. Verwenden Sie `requireJavaVersion` vorerst nicht in Ihren maven-enforcer-plugin-Konfigurationen.
 
-## Unsere Implementierung hängt davon ab, dass die Überprüfung der Code-Qualität fehlgeschlagen ist. Gibt es eine Möglichkeit, diese Prüfung zu umgehen? {#deployment-stuck}
+## Unsere Bereitstellung ist blockiert, da die Überprüfung der Code-Qualität fehlgeschlagen ist. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
 
-Alle Fehler bei der Code-Qualität mit Ausnahme von *Sicherheitsbewertung* sind nicht kritische Metriken, sodass sie umgangen werden können, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
+Alle Fehler in der Code-Qualität mit Ausnahme der *Sicherheitsbewertung* sind nicht kritische Metriken, sodass sie umgangen werden können, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
 
-Benutzer mit der Rolle [Bereitstellungsmanager, Projektmanager oder Business Owner](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=en#requirements) können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt oder sie können die Probleme akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.  Weitere Informationen finden Sie unter [Dreistufige Akzeptanztests beim Ausführen einer Pipeline](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=de#how-to-use).
+Benutzer mit der Rolle [Implementierungs-Manager, Projekt-Manager oder Geschäftsinhaber](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=de#requirements) können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.  Weitere Informationen finden Sie unter [Dreistufige Akzeptanztests bei der Pipeline-Ausführung](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=de#how-to-use).
 
-## Cloud Manager-Implementierungen schlagen beim Leistungstestschritt in Adobe Managed Services-Umgebungen fehl. Wie können wir dies debuggen, um die kritischen Metriken zu übergeben? {#debug-critical-metrics}
+## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie können wir dies debuggen, um kritische Metriken zu erfüllen? {#debug-critical-metrics}
 
-Weitere Informationen zu den Ergebnissen finden Sie unter [Grundlegendes zu Ihren Testergebnissen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use) .
+Informationen zur Auswertung der Ergebnisse finden Sie unter [Wissenswertes zu Testergebnissen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use).
 
-Einige Hinweise zum Schritt &quot;Leistungstest&quot;:
+Einige Hinweise zum Leistungstest:
 
-* Der *Leistungsschritt* ist ein Webleistungsschritt, d. h. der Zeitpunkt, zu dem die Seite mit einem Webbrowser geladen wird.
-* Die in der Ergebnisdatei *CSV* aufgelisteten URLs werden während des Tests in einen Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
-* Eine gängige Metrik, die fehlschlägt, ist die *Fehlerrate*. Damit eine URL übergeben werden kann, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die `20` Sekunden überschreiten, werden als `504` Fehler markiert.
-* Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, finden Sie unter [Authentifizierte Leistungstests](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=en#how-to-use) Informationen zum Konfigurieren des Tests für die Authentifizierung bei Ihrer Site.
+* Der *Leistungstest* ist ein Web-Leistungsschritt, d. h. der Zeitaufwand, bis die Seite in einem Webbrowser geladen ist.
+* Die in der *CSV*-Ergebnisdatei aufgelisteten URLs werden während des Tests im Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
+* Eine häufig fehlgeschlagene Metrik ist die *Fehlerquote*. Damit eine URL den Test besteht, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die länger als `20` Sekunden dauern, werden als `504`-Fehler gekennzeichnet.
+* Wenn für Ihre Site eine Benutzerauthentifizierung erforderlich ist, finden Sie unter [Authentifizierte Leistungstests](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=de#how-to-use) Informationen zur Konfiguration des Tests zur Authentifizierung für Ihre Site.
 
-## Können wir SNAPSHOT in der Version des Maven-Projekts verwenden? Wie funktioniert die Versionierung der Pakete und Bundle-JAR-Dateien für Staging- und Produktionsimplementierungen? {#snapshot-version}
+## Können wir SNAPSHOT in der Version des Maven-Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der JAR-Paketdateien für Staging- und Produktionsbereitstellungen? {#snapshot-version}
 
-In den folgenden Szenarien erfahren Sie mehr über die Versionierung der Pakete und Bundle-JAR-Dateien für Staging- und Produktionsimplementierungen:
+In den folgenden Szenarien erfahren Sie mehr über die Versionierung der Pakete und JAR-Paketdateien für Staging- und Produktionsbereitstellungen:
 
-1. Bei Entwicklerbereitstellungen muss die Git-Verzweigung `pom.xml` -Dateien `-SNAPSHOT` am Ende des Wertes `<version>` enthalten. Dies ermöglicht eine nachfolgende Bereitstellung, bei der die Version nicht geändert wird, um weiterhin installiert zu werden. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
+1. Bei Entwicklerbereitstellungen müssen die `pom.xml`-Dateien der Git-Verzweigung `-SNAPSHOT` am Ende des `<version>`-Werts enthalten. Dies ermöglicht nachfolgend eine Bereitstellung, bei der die Version nicht geändert und dennoch installiert wird. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
-1. In der Staging- und Produktionsimplementierung wird eine automatische Version generiert, wie dokumentiert [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=en#managing-code).
+1. Bei der Staging- und Produktionsbereitstellung wird wie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=de#managing-code) beschrieben eine automatische Version generiert.
 
-1. Legen Sie für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstellungen eine 3-teilige geeignete Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
+1. Legen Sie für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstellungen eine geeignete dreiteilige Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
 
-1. Cloud Manager fügt seine Version automatisch zu Staging- und Produktions-Builds hinzu und erstellt sogar eine Git-Verzweigung. Es ist keine spezielle Konfiguration erforderlich. Wenn Schritt 3 oben übersprungen wird, funktioniert die Bereitstellung weiterhin einwandfrei und eine Version wird automatisch festgelegt.
+1. Cloud Manager fügt Staging- und Produktions-Builds automatisch eine eigene Version hinzu und erstellt sogar eine Git-Verzweigung. Es ist keine spezielle Konfiguration notwendig. Wenn Schritt 3 oben übersprungen wird, funktioniert die Bereitstellung dennoch einwandfrei und es wird automatisch eine Version festgelegt.
 
-1. Es gibt keine Probleme, wenn Sie die Version für Staging- und Produktions-Builds oder -Bereitstellungen mit `-SNAPSHOT` belassen. Cloud Manager legt automatisch eine ordnungsgemäße Versionsnummer fest und erstellt ein Tag für Sie in Git. Auf dieses Tag kann bei Bedarf später verwiesen werden.
+1. Es gibt keine Probleme, wenn Sie die Version für Staging- und Produktions-Builds oder -Bereitstellungen `-SNAPSHOT` überlassen. Cloud Manager legt automatisch eine geeignete Versionsnummer fest und erstellt ein Tag für Sie in Git. Falls erforderlich, kann auf dieses Tag später verwiesen werden.
 
-1. Wenn Sie einen experimentellen Code in der Entwicklungsumgebung ausprobieren möchten, können Sie eine neue Git-Verzweigung erstellen und die Pipeline so einrichten, dass sie diese andere Verzweigung verwendet. Dies ist nützlich, wenn Bereitstellungen fehlschlagen und Sie mit älteren Versionen des Codes testen möchten, um zu sehen, wann er fehlschlug.
+1. Wenn Sie einen experimentellen Code für die Entwicklungsumgebung ausprobieren möchten, können Sie eine neue Git-Verzweigung erstellen und die Pipeline so einrichten, dass diese andere Verzweigung verwendet wird. Dies ist nützlich, wenn Bereitstellungen fehlschlagen und Sie ältere Versionen des Codes testen möchten, um zu sehen, wann der Fehler erstmals aufgetreten ist.
 
-   Der folgende Git-Befehl erstellt eine Remote-Verzweigung mit dem Namen *testbranch1* für einen bestimmten bereits vorhandenen Commit `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Diese spezielle Verzweigung kann in Cloud Manager verwendet werden, ohne dass andere Verzweigungen betroffen sind:
+   Der unten stehende Git-Befehl erstellt eine Remote-Verzweigung mit dem Namen *testbranch1* gegen einen bestimmten bereits vorhandenen Commit `485548e4fbafbc83b11c3cb12b035c9d26b6532b`.  Diese spezielle Verzweigung kann in Cloud Manager verwendet werden, ohne dass sich dies auf andere Verzweigungen auswirkt:
 
    `git push origin 485548e4fbafbc83b11c3cb12b035c9d26b6532b:refs/heads/testbranch1`
 
-   Weitere Informationen finden Sie in der [Git-Dokumentation](https://git-scm.com/book/en/v2/Git-Internals-Git-References) .
+   Weitere Informationen finden Sie in der [Git-Dokumentation](https://git-scm.com/book/en/v2/Git-Internals-Git-References).
 
-   Wenn Sie die Testverzweigung später löschen möchten, verwenden Sie den Befehl zum Löschen :
+   Wenn Sie die Testverzweigung später löschen möchten, verwenden Sie den Befehl „delete“:
 
    `git push origin --delete testbranch1`
 
-## Maven-Build schlägt in Cloud Manager fehl, wird jedoch fehlerfrei lokal erstellt. Debugging? {#maven-build-fail}
+## Der Maven-Build schlägt in Cloud Manager-Bereitstellungen fehl, wird jedoch ohne Fehler lokal erstellt. Wie lässt sich dies debuggen? {#maven-build-fail}
 
-Weitere Informationen finden Sie unter [Git-Ressource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md) .
+Weitere Informationen finden Sie unter [Git-Ressource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
-## Pipeline-Variablen können nicht über aio Cloud Manager festgelegt werden. Wie können diese Probleme behoben werden? {#set-variable}
+## Es ist nicht möglich, eine Variable über „aio cloud manager set pipeline“-Variablen festzulegen. Wie können diese Probleme behoben werden? {#set-variable}
 
-Wenn Sie beim Versuch, Pipeline-Variablen über ähnliche Befehle wie die folgenden aufzulisten oder festzulegen, den Fehler `403` erhalten, müssen Sie in der Admin Console als *Bereitstellungsmanager* Cloud Manager -Produktrolle hinzugefügt werden.\
-Weitere Informationen finden Sie unter [API-Berechtigungen](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md) .
+Wenn beim Versuch, Pipeline-Variablen über Befehle wie die folgenden aufzulisten oder festzulegen, der Fehler `403` auftritt, müssen Sie in der Admin Console in der Cloud Manager-Produktrolle *Bereitstellungs-Manager* hinzugefügt werden.\
+Weitere Informationen finden Sie unter [API-Berechtigungen](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html#!AdobeDocs/cloudmanager-api-docs/master/permissions.md).
 
-Verwandte Befehle und Fehler:
+Weitere Befehle und Fehler:
 
 `$ aio cloudmanager:list-pipeline-variables 222`
 
