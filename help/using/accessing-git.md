@@ -7,8 +7,8 @@ feature: Git-Repositorys
 exl-id: 403fc93d-60fc-4439-8c9d-0a512ca34458
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '154'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
