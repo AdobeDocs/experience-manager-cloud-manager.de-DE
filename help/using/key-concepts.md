@@ -13,8 +13,8 @@ level: Beginner
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
 source-git-commit: f9b33de0f1f2203175f66f261c8ee553f47e0c3b
 workflow-type: tm+mt
-source-wordcount: '349'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -26,13 +26,13 @@ Auf dieser Seite werden verschiedene grundlegende Cloud Manager-Begriffe beschr
 
 Beispiel: *We.Retail*
 
-**Artefakt** Eine bereitstellbare Einheit. Das Ergebnis einiger Buildprozesse, bei denen Quellcode in eine Einheit umgewandelt wird, z. B. eine ZIP-Datei mit dem Quellcode.
+**Artefakt** Eine bereitstellbare Einheit. Das Ergebnis einiger Build-Prozesse, bei denen Quell-Code in eine Einheit umgewandelt wird, z. B. eine ZIP-Datei mit dem Quell-Code.
 
 **Artefakt-Repository** Ein Speicherort, an dem kundenspezifische Artefakte gespeichert und gesichert werden.
 
 **Umgebung** Ein einzelnes Cluster virtueller Maschinen innerhalb eines Programms. Bei AEM besteht dieses aus einer Autoreninstanz (optional mit einer zusätzlichen Cold-Standby-Autoreninstanz), keiner oder mehreren Veröffentlichungsinstanzen, einer oder mehreren Dispatcherinstanzen sowie einem Load-Balancer.
 
-**Git-Repository** Ein Speicherort, an dem kundenspezifischer Quellcode gespeichert wird. Zugriff ist über das Git-Protokoll möglich.
+**Git-Repository** Ein Speicherort, an dem kundenspezifischer Quell-Code gespeichert wird. Zugriff ist über das Git-Protokoll möglich.
 
 **Instanz** Ein bestimmter virtueller Server, auf der die AEM-Lösung ausgeführt wird. Instanzen stehen für eine einzige logische Einheit aus der Bereitstellungsperspektive.
 
