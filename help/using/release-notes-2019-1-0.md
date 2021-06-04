@@ -12,23 +12,23 @@ feature: Versionshinweise
 exl-id: 383ca5a0-4b0b-48e9-aa48-1d1388875329
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '341'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2019.1.0 {#release-notes-for}
 
-Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun das Testen von AEM Assets-Programmen und zusätzlichen Pipelinetypen, über die die Build- und Codequalitätsschritte ausgeführt werden. Optional ist die Bereitstellung in einer Nicht-Produktionsumgebung möglich.
+Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun das Testen von AEM Assets-Programmen und zusätzlichen Pipelinetypen, über die die Build- und Code-Qualitätsschritte ausgeführt werden. Optional ist die Bereitstellung in einer Nicht-Produktionsumgebung möglich.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version 2019.1.0 von [!UICONTROL Cloud Manager] wurde am Donnerstag, 17. Januar 2019 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2019.1.0 wurde am 17. Januar 2019 veröffentlicht.
 
-## Neuerungen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 * AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
-* Pipelines, die ausschließlich Build- und Codequalitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md) im Abschnitt **Reine Nicht-Produktions- und Codequalitätspipelines**.
+* Pipelines, die ausschließlich Build- und Code-Qualitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md) im Abschnitt **Reine Nicht-Produktions- und Code-Qualitäts-Pipelines**.
 * Benutzerdefinierte Umgebungsvariablen in der Build-Umgebung werden nun unterstützt.
 * Kunden mit mehreren Staging- oder Produktionsumgebungen können auf der Seite [CI/CD-Pipeline konfigurieren](configuring-pipeline.md) festlegen, welche Umgebung als Teil der Produktionspipeline bereitgestellt wird.
 * httxt2dbm wurde dem Buildcontainer hinzugefügt.
