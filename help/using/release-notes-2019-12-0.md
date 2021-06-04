@@ -7,8 +7,8 @@ feature: Versionshinweise
 exl-id: e173962f-587d-439e-a499-81ea98c52cc9
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '235'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -19,9 +19,9 @@ Weitere Informationen erhalten Sie im Folgenden.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2019.12.0 wurde am Donnerstag, 12. Dezember 2019 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2019.12.0 wurde am 12. Dezember 2019 veröffentlicht.
 
-## Neuerungen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 * Die Schritte in der Pipeline-Ausführung enthalten jetzt einen Zeitstempel für die Fertigstellung jedes Schritts.
 * Code-Qualitäts-Scans für Projekte, die keinen Java-Code enthalten, melden jetzt eine Abdeckungsquote von 100 %.
