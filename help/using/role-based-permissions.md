@@ -9,8 +9,8 @@ feature: Anwenderrollen
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '545'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,9 +29,9 @@ In der folgenden Tabelle sind die Rollen definiert, die Sie in Admin Console zu
 | **[!UICONTROL Cloud Manager]-Rolle** | **Beschreibung** |
 |---|---|
 | Business Owner | Hauptanwender, der die [!UICONTROL Cloud Manager]-Ersteinrichtung abschließt. Verantwortlich für die Definition von KPIs, Genehmigung von Produktionsbereitstellungen und Außerkraftsetzung bedeutender 3-Tier-Fehler. |
-| Programmmanager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
-| Bereitstellungsmanager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging- und Produktionsbereitstellungen ausführen. Kann bedeutende 3-Tier-Fehler genehmigen. Hat Zugriff auf das Git-Repository. |
-| Entwickler | Entwickelt und testet anwenderspezifischen Anwendungscode. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Hat Commitzugriff auf das Git-Repository. |
+| Programm-Manager | Verwendet [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen und KPIs anzuzeigen. Kann bedeutende 3-Tier-Fehler genehmigen. |
+| Implementierungs-Manager | Verwaltet Bereitstellungsvorgänge. Kann mit [!UICONTROL Cloud Manager] Staging- und Produktionsbereitstellungen ausführen. Kann bedeutende 3-Tier-Fehler genehmigen. Hat Zugriff auf das Git-Repository. |
+| Entwickler | Entwickelt und testet anwenderspezifischen Programm-Code. Nutzt [!UICONTROL Cloud Manager] hauptsächlich, um den Status anzuzeigen. Hat Commitzugriff auf das Git-Repository. |
 | Customer Success Engineer | Unterstützt im Allgemeinen den Erfolg von AMS-Kunden. Interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen auszuführen, die von einem CSE (Customer Success Engineer) überwacht werden müssen. |
 | Inhaltsautor | Interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager]. Dieser Anwender kann über den [!UICONTROL Cloud Manager]-Programmumschalter (nach Navigation über [!UICONTROL Experience Cloud]) auf Adobe Experience Manager (AEM) zugreifen. |
 
@@ -41,7 +41,7 @@ Jede Rolle verfügt über bestimmte Berechtigungen, vorkonfigurierte Aufgaben od
 
 Weitere Informationen zum Einrichten von Anwendern finden Sie unter [Einrichten von Anwendern und Rollen](setting-up-users-and-roles.md).
 
-| Berechtigung | Beschreibung | Business Owner | Bereitstellungsmanager | Programmmanager | Entwickler | CSE |
+| Berechtigung | Beschreibung | Business Owner | Implementierungs-Manager | Programmmanager | Entwickler | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Anwendung lesen | Lesen der Programm-KPIs. | x | x | x | x | x |
 | Anwendung schreiben | Programmeinrichtung oder -bearbeitung. | x |  |  |  |  |
