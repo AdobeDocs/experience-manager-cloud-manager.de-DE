@@ -1,19 +1,19 @@
 ---
 title: Bereitstellen Ihres Codes
 seo-title: Bereitstellen Ihres Codes
-description: Bietet einen Überblick über den Implementierungsprozess in Cloud Manager
-seo-description: Erfahren Sie, wie Sie Ihren Code bereitstellen, nachdem Sie Ihre Pipeline (Repository, Umgebung und Testumgebung) konfiguriert haben.
+description: Bietet eine Übersicht über den Bereitstellungsprozess in Cloud Manager
+seo-description: Weitere Informationen zur Bereitstellung von Code nach der Konfiguration der Pipeline (Repository, Umgebung und Testing-Umgebung)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Codebereitstellung
+feature: Code-Bereitstellung
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '1020'
-ht-degree: 91%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 91%
 ## Bereitstellen von Code mit Cloud Manager {#deploying-code-with-cloud-manager}
 
 >[!NOTE]
->Weitere Informationen zur Bereitstellung von Code für Cloud Manager in AEM als Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=de#using-cloud-manager).
+>Weitere Informationen zum Bereitstellen von Code für Cloud Manager in AEM as a Cloud Service finden Sie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/deploy-code.html?lang=de#using-cloud-manager).
 
 Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) konfiguriert haben, können Sie Ihren Code bereitstellen.
 
@@ -96,7 +96,7 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
 
 ## Timeouts {#timeouts}
 
-Bei den folgenden Schritten wird eine Zeitüberschreitung ausgelöst, wenn der Benutzer auf Feedback wartet:
+Die folgenden Schritte führen zu einem Timeout, wenn auf Benutzer-Feedback gewartet wird:
 
 | Schritt | Zeitüberschreitung |
 |--- |--- |
@@ -111,14 +111,14 @@ Bei den folgenden Schritten wird eine Zeitüberschreitung ausgelöst, wenn der B
 
 Im folgenden Abschnitt wird beschrieben, wie AEM- und Dispatcher-Pakete in der Staging- und Produktionsphase bereitgestellt werden.
 
-Cloud Manager lädt alle beim Build-Prozess generierten target/*.zip-Dateien in einen Speicherort hoch. Diese Artefakte werden in der Pipeline-Bereitstellungsphase von diesem Speicherort abgerufen.
+Cloud Manager lädt alle beim Build-Prozess generierten target/*.zip-Dateien in einen Speicherort hoch.  Diese Artefakte werden in der Pipeline-Bereitstellungsphase von diesem Speicherort abgerufen.
 
 Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht das Ziel darin, die Implementierung so schnell wie möglich abzuschließen. Daher werden die Artefakte wie folgt auf allen Knoten gleichzeitig bereitgestellt:
 
 1. Cloud Manager bestimmt für jedes Artefakt, ob es sich um ein AEM- oder Dispatcher-Paket handelt.
 1. Cloud Manager entfernt alle Dispatcher aus dem Lastenausgleich, um die Umgebung während der Implementierung zu isolieren.
 
-   Sofern nicht anders konfiguriert, können Sie die Load-Balancer-Änderungen in Entwicklungs- und Staging-Umgebungen überspringen, d. h. das Trennen und Anfügen in beiden Nicht-Produktions-Pipelines bei Entwicklungsumgebungen und in der Produktions-Pipeline bei Staging-Umgebungen.
+   Sofern nicht anders konfiguriert, können Sie die Load-Balancer-Änderungen in Entwicklungs- und Staging-Umgebungen überspringen, d. h. das Trennen und Anfügen in beiden produktionsfremden Pipelines bei Entwicklungsumgebungen und in der Produktions-Pipeline bei Staging-Umgebungen.
 
    ![](assets/load_balancer.png)
 
@@ -138,12 +138,12 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
    1. Aktuelle Konfigurationen werden gesichert und in einen temporären Speicherort kopiert.
    1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Informationen finden Sie unter „Verwalten von Dispatcher-Konfigurationen“. Mit diesem Schritt werden die Verzeichnisse gelöscht, damit keine verwaisten Dateien übrig bleiben.
-   1. Das Artefakt wird in das `httpd`-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Implementierung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
+   1. Das Artefakt wird in das `httpd`-Verzeichnis extrahiert.  Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Implementierung ignoriert.  Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
    1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Service neu geladen. Falls ein Fehler auftritt, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Service wird neu geladen und der Fehler wird an Cloud Manager gemeldet.
    1. Jeder in der Pipelinekonfiguration angegebene Pfad wird ungültig oder aus dem Dispatcher-Cache entfernt.
 
    >[!NOTE]
-   >Cloud Manager geht davon aus, dass das Dispatcher-Artefakt alle Dateien enthält. Alle Dispatcher-Konfigurationsdateien müssen im Git-Repository vorhanden sein. Fehlende Dateien oder Ordner führen zu Implementierungsfehlern.
+   >Cloud Manager geht davon aus, dass das Dispatcher-Artefakt alle Dateien enthält.  Alle Dispatcher-Konfigurationsdateien müssen im Git-Repository vorhanden sein. Fehlende Dateien oder Ordner führen zu Implementierungsfehlern.
 
 1. Nach der erfolgreichen Implementierung aller AEM- und Dispatcher-Pakete auf allen Knoten werden die Dispatcher wieder zum Lastenausgleich hinzugefügt und die Implementierung wird abgeschlossen.
 
@@ -158,9 +158,9 @@ Produktionsimplementierungen nutzen im Allgemeinen die oben beschriebenen Schrit
 
 1. AEM-Pakete werden für den Autor bereitgestellt
 1. dispatcher1 wird aus dem Lastenausgleich gelöst
-1. Stellen Sie AEM Pakete parallel in publish1 und das Dispatcher-Paket in dispatcher1 bereit und leeren Sie den Dispatcher-Cache.
+1. AEM-Pakete werden in publish1 und das Dispatcher-Paket parallel in dispatcher1 bereitgestellt, der Dispatcher-Cache wird geleert
 1. dispatcher1 wird in den Lastenausgleich zurückgesetzt
 1. Sobald dispatcher1 wieder aktiv ist, wird dispatcher2 aus dem Lastenausgleich entfernt
-1. Stellen Sie AEM Pakete parallel in publish2 und das Dispatcher-Paket in dispatcher2 bereit und leeren Sie den Dispatcher-Cache.
+1. AEM-Pakete werden in publish2 und das Dispatcher-Paket parallel in dispatcher2 bereitgestellt, der Dispatcher-Cache wird geleert
 1. dispatcher2 wird in den Lastenausgleich zurückgesetzt
 Dieser Vorgang wird fortgesetzt, bis die Implementierung alle Publisher und Dispatcher in der Topologie erreicht hat.
