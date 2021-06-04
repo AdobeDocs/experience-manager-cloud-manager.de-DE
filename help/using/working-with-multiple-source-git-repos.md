@@ -1,12 +1,12 @@
 ---
-title: Arbeiten mit mehreren Quell-Git-Repositorys
-description: Arbeiten mit mehreren Quell-Git-Repositorys – Cloud Manager
+title: Arbeiten mit Git-Repositorys aus mehreren Quellen
+description: Arbeiten mit Git-Repositorys aus mehreren Quellen – Cloud Manager
 feature: Git-Repositorys
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
