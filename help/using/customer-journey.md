@@ -13,8 +13,8 @@ level: Beginner
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '587'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -48,13 +48,13 @@ Für den Zugriff auf [!UICONTROL Cloud Manager] und Ihre AEM-Umgebungen müssen 
 
 Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. Sobald die erste Codeverzweigung in Ihrer Staging- und Produktionsumgebung bereitgestellt werden kann, können Sie hier alle Möglichkeiten von [!UICONTROL Cloud Manager] erkunden.
 
-Wenn Sie [!UICONTROL Cloud Manager] besser kennenlernen und die ersten Schritte umsetzen möchten, finden Sie weitere Informationen unter [Erste Anmeldung](first-time-login.md). Weitere Informationen zu AEM finden Sie unter [Erste Schritte mit AEM 6.4](https://helpx.adobe.com/de/experience-manager/6-4/sites/deploying/using/deploy.html). Weitere Informationen finden Sie unter [AEM-Ressourcen](https://www.adobe.com/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&amp;mv=other).
+Wenn Sie [!UICONTROL Cloud Manager] besser kennenlernen und die ersten Schritte umsetzen möchten, finden Sie weitere Informationen unter [Erste Anmeldung](first-time-login.md). Weitere Informationen zu AEM finden Sie unter [Erste Schritte mit AEM 6.4](https://helpx.adobe.com/de/experience-manager/6-4/sites/deploying/using/deploy.html). Weitere Informationen finden Sie unter [AEM-Ressourcen](https://www.adobe.com/de/marketing-cloud/experience-manager/resources.html?promoid=759X6WV8&amp;mv=other).
 
-## Erste Schritte mit [!UICONTROL Cloud Manager]{#getting-started-with-cloud-manager}
+## Erste Schritte mit [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 
 Nach der Anmeldung bei [!UICONTROL Cloud Manager] sollten Sie zunächst Ihre Code-Repository-Umgebung und anschließend Ihr Team und die Rollen einrichten. Für die Zuweisung der Rollenmitgliedschaften werden die Benutzer über die Admin Console-Benutzeroberfläche zu einem [!UICONTROL Cloud Manager]-Profil hinzugefügt.
 
-Anschließend müssen Sie Ihre Quellcodeverzweigungen im **Git-Repository** einrichten, Ihre Ziele in Bezug auf Lasten- und Leistungs-KPIs definieren und Szenarien testen, damit Sie Ihren Code nach erfolgreichem Abschluss aller Qualitätsprüfungen erfolgreich in Ihrer Staging- und Produktionsumgebung bereitstellen können.
+Anschließend müssen Sie Ihre Quell-Code-Verzweigungen im **Git-Repository** einrichten, Ihre Ziele in Bezug auf Lasten- und Leistungs-KPIs definieren und Szenarien testen, damit Sie Ihren Code nach erfolgreichem Abschluss aller Qualitätsprüfungen erfolgreich in Ihrer Staging- und Produktionsumgebung bereitstellen können.
 
 ## Durchgängige Customer Journey {#end-to-end-journey}
 
