@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für 2018.7.0
 seo-title: Versionshinweise für 2018.7.0
-description: Informationen zur Cloud Manager-Version 2018.7.0
+description: Weitere Informationen zu Cloud Manager 2018.7.0
 seo-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.7.0.
 uuid: d7b49e32-01dc-48ce-b744-e6a806fbdd8a
 contentOwner: jsyal
@@ -12,8 +12,8 @@ feature: Versionshinweise
 exl-id: fc0214b4-d138-470a-9b04-191224927f7b
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 98%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -25,7 +25,7 @@ Die **automatische Skalierung** wird über eine horizontale Ausskalierung`Dispat
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2018.7.0 wurde am 10. September 2018 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2018.7.0 wurde am 10. September 2018 veröffentlicht.
 
 ## Neuigkeiten {#what-s-new}
 
@@ -33,7 +33,7 @@ Die [!UICONTROL Cloud Manager]-Version 2018.7.0 wurde am 10. September 2018 v
 
 * **Umgebungen**: Es ist nun möglich, eine detaillierte Ansicht der Produktions- und Staging-Umgebung zusammen mit der Größe, dem Speicher, der Region und dem Status der mit den einzelnen Umgebungen verknüpften Knoten anzuzeigen. Weitere Informationen finden Sie unter [Verwalten von Umgebungen](manage-your-environment.md).
 
-* **Analyse der Codequalität**: Neue Regel zur Erkennung einer fehlerhaften API-Nutzung. Weitere Informationen finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
+* **Analyse der Code-Qualität**: Neue Regel zur Erkennung einer fehlerhaften API-Nutzung. Weitere Informationen finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
 
 * **Leistungstests**: Bei der Anzeige von Leistungstestergebnissen werden CPU-Auslastung, Festplatten-I/O-Wartezeit, Seitenfehlerrate, Festplatten-Bandbreitenauslastung, Netzwerk-Bandbreitenauslastung, maximale Seitenreaktionszeit und 95. Perzentil der Seitenreaktionszeit grafisch dargestellt. Weitere Informationen finden Sie im Abschnitt *Leistungstests* auf der Seite [Wissenswertes zu Testergebnissen](understand-your-test-results.md).
 
