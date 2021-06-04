@@ -7,20 +7,20 @@ feature: Versionshinweise
 exl-id: f8a80419-e480-450a-8768-6d9ab690a425
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '193'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2020.5.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.5.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2020.5.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2020.5.0 wurde am 07. Mai 2020 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2020.5.0 wurde am 7. Mai 2020 veröffentlicht.
 
-## Neuerungen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 * Sechs zusätzliche Regeln zur Code-Qualität wurden hinzugefügt, die Kunden bei der Planung einer Migration auf Cloud Service bei der Ermittlung potenzieller Probleme unterstützen.
 
