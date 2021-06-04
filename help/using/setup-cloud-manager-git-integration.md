@@ -7,8 +7,8 @@ feature: Git-Repositorys
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '405'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ In dieser Videoreihe werden verschiedene Anwendungsfälle bei der Integration ei
 * [Produktionsimplementierung](#production-deployment)
 * [Synchronisieren von Release-Tags](#sync-tags)
 
-Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html). Die Videoreihe setzt grundlegende Kenntnisse der Git- und Quellcodeverwaltung voraus. Weitere Informationen zu Git finden Sie in den [folgenden zusätzlichen Ressourcen](#additional-resources).
+Eine vollständige Übersicht finden Sie im [Cloud Manager-Benutzerhandbuch](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html). Die Videoreihe setzt grundlegende Kenntnisse der Git- und Quell-Codeverwaltung voraus. Weitere Informationen zu Git finden Sie in den [folgenden zusätzlichen Ressourcen](#additional-resources).
 
 >[!NOTE]
 >
@@ -42,17 +42,17 @@ Erste Schritte zum Synchronisieren eines kundenverwalteten Git-Repository mit de
 
 ## Standard-Verzweigungsstrategie {#branching-strategy}
 
-Richten Sie eine Standard-Verzweigungsstrategie ein, um die [Produktions- und Nicht-Produktions-Pipelines](https://docs.adobe.com/content/help/en/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) von Cloud Manager zu nutzen.
+Richten Sie eine Standard-Verzweigungsstrategie ein, um die [Produktions- und Nicht-Produktions-Pipelines](https://docs.adobe.com/content/help/de/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html) von Cloud Manager zu nutzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
 ## Entwicklung von Funktionsverzweigungen {#feature-development}
 
-Verwenden Sie eine Funktionsverzweigung, um Codeänderungen in einem kundenverwalteten Git-Repository zu isolieren und mit dem Git-Repository von Cloud Manager zu synchronisieren; so können Sie eine Nicht-Produktions-Pipeline für Codequalität- und Validierungstests verwenden.
+Verwenden Sie eine Funktionsverzweigung, um Code-Änderungen in einem kundenverwalteten Git-Repository zu isolieren und mit dem Git-Repository von Cloud Manager zu synchronisieren; so können Sie eine Nicht-Produktions-Pipeline für Code-Qualität- und Validierungstests verwenden.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28723/?quality=12)
 
-## Produktionsbereitstellung {#production-deployment}
+## Produktionsimplementierung {#production-deployment}
 
 Bereiten Sie Code für die Produktionsfreigabe in einem kundenverwalteten Git-Repository vor und synchronisieren Sie mit dem Git-Repository von Cloud Manager, um eine Bereitstellung in Staging- und Produktionsumgebungen vorzunehmen.
 
