@@ -5,8 +5,8 @@ feature: Erste Schritte, Produktionsprogramme
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: cf19c7dfd593810779c03c51e08081954f8fc11e
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
