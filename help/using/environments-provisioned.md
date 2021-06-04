@@ -8,12 +8,12 @@ contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: 7d32ba78-4ded-4656-aac2-c3e7cc0518de
-feature: Umgebungen, Bereitstellung
+feature: Umgebung, Bereitstellung
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 99%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
