@@ -7,20 +7,20 @@ feature: Versionshinweise
 exl-id: c283c55d-156f-4540-9353-e6337d185842
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '166'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2020.11.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.11.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2020.11.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version 2020.11.0 von [!UICONTROL Cloud Manager] wurde am 12. November 2020 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2020.11.0 wurde am 12. November 2020 veröffentlicht.
 
-## Neue Funktionen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 * Die Registerkarte **Lernen** in Cloud Manager wurde mit neuen Bildern in der Benutzeroberfläche aktualisiert.
 
