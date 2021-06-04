@@ -13,8 +13,8 @@ level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 81c14382821de6b2d249000a79799747a6d9cb19
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 89%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,9 +23,9 @@ ht-degree: 89%
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
 >title="Einführung in Cloud Manager"
->abstract="Ermöglicht es Unternehmen, Experience Manager in der Cloud selbst zu verwalten. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen."
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=en#cloud-manager" text="Programme erstellen"
->additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=en#cloud-manager" text="Erstellen von Umgebungen"
+>abstract="Ermöglicht Unternehmen die Selbstverwaltung von Experience Manager in der Cloud. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen."
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/programs.html?lang=de#cloud-manager" text="Programme erstellen"
+>additional-url="https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/cloud-manager/environments.html?lang=de#cloud-manager" text="Umgebungen erstellen"
 
 ## Einführung {#introduction}
 
