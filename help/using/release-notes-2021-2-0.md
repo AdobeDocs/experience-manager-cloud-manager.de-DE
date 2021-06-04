@@ -6,39 +6,39 @@ seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manag
 exl-id: 4f3c3a63-141b-414f-a24e-1870e985873a
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '248'
-ht-degree: 24%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2021.2.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.2.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2021.2.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2021.2.0 wurde am 11. Februar 2021 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2021.2.0 wurde am 11. Februar 2021 veröffentlicht.
 
-## Neue Funktionen {#whats-new}
+## Neuigkeiten {#whats-new}
 
-* Der AEM Projektarchetyp, der bei der Projekt- und Sandbox-Erstellung verwendet wird, wurde auf Version 25 aktualisiert.
+* Der AEM-Projektarchetyp, der bei der Projekt- und Sandbox-Erstellung verwendet wird, wurde auf Version 25 aktualisiert.
 
-* Die Liste veralteter APIs, die beim Codescan identifiziert werden, wurde verfeinert und enthält jetzt zusätzliche Klassen und Methoden, die in den neuesten Cloud Service SDK-Versionen nicht mehr unterstützt werden.
+* Die Liste veralteter APIs, die während der Code-Prüfung identifiziert wurden, wurde verfeinert und enthält nun weitere Klassen und Methoden, die in den neuesten Cloud Service SDK-Versionen nicht mehr unterstützt werden.
 
-* Produktionsbereitstellungen werden jetzt parallel für die paarweise Veröffentlichungs- und Dispatcher-Instanzen bereitgestellt.
+* Produktionsimplementierungen werden jetzt parallel für die paarweise Veröffentlichungs- und Dispatcher-Instanz bereitgestellt.
 
-* Das SonarQube-Profil für Cloud Manager wurde aktualisiert, um die Sonar-Regel `squid:S2142` zu entfernen. Dies steht nicht mehr in Konflikt mit den Prüfungen zur Thread-Unterbrechung.
+* SonarQube-Profil für Cloud Manager wurde aktualisiert und die Sonar-Regel `squid:S2142` entfernt. So werden Konflikte mit Thread-Unterbrechungsüberprüfungen unterbunden.
 
-* Eigenschaften, die in kundenspezifischen `pom.xml` -Dateien mit dem Präfix sonar festgelegt sind, werden jetzt dynamisch entfernt, um Fehler bei der Build- und Qualitätsprüfung zu vermeiden.
+* Eigenschaften, die in `pom.xml`-Kundendateien mit dem Präfix „sonar“ festgelegt wurden, werden nun dynamisch entfernt, um Build- und Qualitätsprüfungsfehler zu vermeiden.
 
-* Es wurden zusätzliche Regeln für die Codequalität hinzugefügt, um Probleme mit der Kompatibilität von Cloud Services abzudecken.
+* Es wurden zusätzliche Code-Qualitätsregeln hinzugefügt, um Probleme mit der Kompatibilität von Cloud Services zu behandeln.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Gelegentlich schlug die CI/CD-Pipeline (Bereitstellung) während eines Leistungstestschritts aufgrund eines Containers, der den Belastungstest durchführte, fehl und es trat ein Fehler auf.
+* Gelegentlich schlug die CI/CD-Pipeline (Bereitstellung) während eines Leistungstests fehl, da ein Container beim Ausführen des Lasttests einen Fehler aufwies.
 
-* Gelegentlich kann der Ladetest-Container die Ausführung als fehlgeschlagen melden, selbst wenn nur eine Ausnahme auftritt. Der Fehler wird nur gemeldet, wenn der Testprozess nicht wiederhergestellt werden kann.
+* Gelegentlich meldet der Lasttest-Container die Ausführung als fehlgeschlagen, obwohl nur eine Ausnahme auftritt. Der Fehler wird nur gemeldet, wenn der Testprozess nicht wiederhergestellt werden kann.
 
-* Bestimmte Groß-/Kleinschreibung-Abweichungen zwischen der Art und Weise, wie Umgebungsnamen gespeichert wurden, führten zu Leistungstestfehlern.
+* Bestimmte Diskrepanzen bei der Groß- und Kleinschreibung gespeicherter Umgebungsnamen führen zu Leistungstestfehlern.
 
 * Einige Pipeline-Fehler wurden fälschlicherweise als Pipeline-Fehler gemeldet.
