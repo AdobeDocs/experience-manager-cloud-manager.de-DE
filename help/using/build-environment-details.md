@@ -5,8 +5,8 @@ feature: Umgebungen
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 0a5556729e64c9e8736d13b357db001dd57bc03a
 workflow-type: tm+mt
-source-wordcount: '773'
-ht-degree: 93%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -33,8 +33,8 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
-* Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Repository **Artifact** mit einem Profil namens `adobe-public` enthält.
-Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository.](https://repo.adobe.com/)
+* Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository mit einem Profil namens `adobe-public` enthält.
+Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https://repo.adobe.com/).
 
 >[!NOTE]
 >Obwohl Cloud Manager keine bestimmte Version des Programms des `jacoco-maven-plugin` definiert, muss mindestens die Version `0.7.5.201505241946` verwendet werden.
