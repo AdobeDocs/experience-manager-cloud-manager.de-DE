@@ -7,8 +7,8 @@ feature: Versionshinweise
 exl-id: 105e526f-b3c6-49d2-bb4d-d19a5afad6cc
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '157'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Im folgenden Abschnitt finden Sie die allgemeinen Versionshinweise für die [!UI
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2020.1.0 wurde am 16. Januar 2020 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2020.1.0 wurde am 16. Januar 2020 veröffentlicht.
 
 ## Neuerungen {#whats-new}
 
