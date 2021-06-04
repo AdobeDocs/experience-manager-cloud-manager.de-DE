@@ -7,20 +7,20 @@ feature: Versionshinweise
 exl-id: 1bebb051-0936-445e-a5de-8bb9063f3fb8
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '168'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2020.3.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.3.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2020.3.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2020.3.0 wurde am 05. März 2020 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2020.3.0 wurde am 5. März 2020 veröffentlicht.
 
-## Neuerungen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 * Das Protokoll für den Build-Schritt ist jetzt verfügbar, während der Build-Schritt ausgeführt wird.
 * Einige der Meldungen auf der Seite mit Details zur Pipelineausführung wurden für bessere Übersichtlichkeit geändert.
