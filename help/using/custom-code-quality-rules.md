@@ -1,6 +1,6 @@
 ---
-title: Benutzerspezifische Regeln für Codequalität
-seo-title: Benutzerspezifische Regeln für Codequalität
+title: Benutzerspezifische Regeln für Code-Qualität
+seo-title: Benutzerspezifische Regeln für Code-Qualität
 description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifischen Regeln für die Code-Qualität, die von Cloud Manager ausgeführt werden.
 seo-description: Auf dieser Seite erfahren Sie mehr über die benutzerspezifischen Regeln für die Code-Qualität, die von Adobe Experience Manager Cloud Manager ausgeführt werden.
 uuid: a7feb465-1982-46be-9e57-e67b59849579
@@ -12,17 +12,17 @@ feature: Code-Qualitätsregeln
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
 workflow-type: tm+mt
-source-wordcount: '3654'
-ht-degree: 67%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Benutzerspezifische Regeln für Codequalität {#custom-code-quality-rules}
+# Benutzerspezifische Regeln für Code-Qualität {#custom-code-quality-rules}
 
 >[!NOTE]
->Weitere Informationen zu benutzerspezifischen Regeln für die Codequalität für Cloud Manager in AEM as a Cloud Service finden Sie unter [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=en#using-cloud-manager).
+>Weitere Informationen zu benutzerspezifischen Code-Qualitätsregeln für Cloud Manager in AEM as a Cloud Service finden Sie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/test-results/custom-code-quality-rules.html?lang=de#using-cloud-manager).
 
-Auf dieser Seite werden die benutzerspezifischen Regeln für die Code-Qualität beschrieben, die von Cloud Manager ausgeführt werden und auf bewährten Verfahren des AEM Engineering basieren.
+Auf dieser Seite werden die benutzerspezifischen Regeln für die Code-Qualität beschrieben, die von Cloud Manager ausgeführt werden und auf Best Practices von AEM Engineering basieren.
 
 >[!NOTE]
 >Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. Weitere Informationen zu SonarQube-Konzepten und -Qualitätsregeln finden Sie unter [Konzepte](https://docs.sonarqube.org/7.4/user-guide/concepts/).
@@ -100,7 +100,7 @@ public class DoThis implements Runnable {
 
 **Seit**: Version 2018.4.0
 
-Durch die Verwendung einer Formatzeichenfolge aus einer externen Quelle (z. B. einem Anbfrageparameter oder benutzergenerierten Inhalten) kann eine Anwendung für Denial-of-Service-Angriffe anfällig werden. In einigen Situationen wird eine Formatzeichenfolge extern kontrolliert. In diesem Fall darf sie jedoch nur aus vertrauenswürdigen Quellen verwendet werden.
+Durch die Verwendung einer Formatzeichenfolge aus einer externen Quelle (z. B. einem Anbfrageparameter oder benutzergenerierten Inhalten) kann ein Programm für Denial-of-Service-Angriffe anfällig werden. In einigen Situationen wird eine Formatzeichenfolge extern kontrolliert. In diesem Fall darf sie jedoch nur aus vertrauenswürdigen Quellen verwendet werden.
 
 #### Nicht konformer Code {#non-compliant-code-1}
 
@@ -122,7 +122,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 **Seit**: Version 2018.6.0
 
-Beim Ausführen von HTTP-Anfragen aus einer AEM-Anwendung muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert werden, um unnötige Thread-Nutzung zu vermeiden. Leider sind im Java-Standard-HTTP-Client (java.net.HttpUrlConnection) und dem häufig verwendeten Client für Apache-HTTP-Komponenten standardmäßig keine Zeitüberschreitungen festgelegt, sodass diese explizit festgelegt werden müssen. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
+Beim Ausführen von HTTP-Anfragen aus einem AEM-Programm muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert werden, um unnötige Thread-Nutzung zu vermeiden. Leider sind im Java-Standard-HTTP-Client (java.net.HttpUrlConnection) und dem häufig verwendeten Client für Apache-HTTP-Komponenten standardmäßig keine Zeitüberschreitungen festgelegt, sodass diese explizit festgelegt werden müssen. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
 
 #### Nicht konformer Code {#non-compliant-code-2}
 
@@ -398,7 +398,7 @@ public void doGet() throws Exception {
 
 **Seit**: Version 2018.4.0
 
-Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Anwendungsausnahme aufgetreten ist. Während der Kontext auch mit Stacktraces bestimmt werden kann, ist die Protokollmeldung meist besser lesbar und verständlicher. Wenn Sie eine Ausnahme protokollieren, ist es daher nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. Die Ausnahmemeldung enthält Informationen dazu, was nicht funktioniert hat, während die Protokollmeldung dem Protokollleser mitteilt, was die Anwendung getan hat, als die Ausnahme auftrat. Die Ausnahmemeldung wird weiterhin protokolliert. Wenn Sie Ihre eigene Meldung festlegen, werden die Protokolle verständlicher.
+Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Programmausnahme aufgetreten ist. Während der Kontext auch mit Stacktraces bestimmt werden kann, ist die Protokollmeldung meist besser lesbar und verständlicher. Wenn Sie eine Ausnahme protokollieren, ist es daher nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. Die Ausnahmemeldung enthält Informationen dazu, was nicht funktioniert hat, während die Protokollmeldung dem Protokollleser mitteilt, was das Programm getan hat, als die Ausnahme auftrat. Die Ausnahmemeldung wird weiterhin protokolliert. Wenn Sie Ihre eigene Meldung festlegen, werden die Protokolle verständlicher.
 
 #### Nicht konformer Code {#non-compliant-code-9}
 
@@ -470,7 +470,7 @@ public void doThis() {
 
 **Seit**: Version 2018.4.0
 
-Wie bereits erwähnt, ist Kontext beim Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von Exception.printStackTrace() wird bei der Ausgabe des Standard-Fehlerstroms **nur** der Stacktrace ausgegeben, sodass der gesamte Kontext verloren geht. Bei einer Multi-Thread-Anwendung wie AEM kann es beim parallelen Drucken mehrerer Ausnahmen mit dieser Methode zu einer Überlappung der Stacktraces kommen, was erhebliche Verwirrung verursacht. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
+Wie bereits erwähnt, ist Kontext beim Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von Exception.printStackTrace() wird bei der Ausgabe des Standard-Fehlerstroms **nur** der Stacktrace ausgegeben, sodass der gesamte Kontext verloren geht. Bei einem Multi-Thread-Programm wie AEM kann es beim parallelen Drucken mehrerer Ausnahmen mit dieser Methode zu einer Überlappung der Stacktraces kommen, was erhebliche Verwirrung verursacht. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
 
 #### Nicht konformer Code {#non-compliant-code-11}
 
@@ -653,7 +653,7 @@ Ein häufig auftretendes Problem bei komplexen Projekten besteht darin, dass die
 
 **Seit**: Version 2019.6.0
 
-Aus Sicherheitsgründen sind Pfade, die */config/ und /install/* enthalten, nur von Administratoranwendern in AEM lesbar und sollten nur für OSGi-Konfigurationen und OSGi-Bundles verwendet werden. Das Platzieren anderer Inhaltstypen in Pfade mit diesen Segmenten führt dazu, dass sich die Anwendung abhängig davon anders verhält, ob sie von Administratoren- oder Nicht-Administratoren verwendet wird.
+Aus Sicherheitsgründen sind Pfade, die */config/ und /install/* enthalten, nur von Administratoranwendern in AEM lesbar und sollten nur für OSGi-Konfigurationen und OSGi-Bundles verwendet werden. Das Platzieren anderer Inhaltstypen in Pfade mit diesen Segmenten führt dazu, dass sich das Programm abhängig davon anders verhält, ob sie von Administratoren- oder Nicht-Administratoren verwendet wird.
 
 Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnung `config` in Komponentendialogfeldern oder beim Angeben der Rich-Text-Editor-Konfiguration für die Inline-Bearbeitung. Um dies zu beheben, sollte der fehlerhafte Knoten in einen kompatiblen Namen umbenannt werden. Nutzen Sie bei der Rich-Text-Editor-Konfiguration die Eigenschaft `configPath` im Knoten `cq:inplaceEditing`, um den neuen Speicherort anzugeben.
 
@@ -746,7 +746,7 @@ Cloud Service-Implementierungen unterstützen keine Rückwärtsreplikation. Weit
 
 Kunden, die die Rückwärtsreplikation verwenden, sollten sich für alternative Lösungen an Adobe wenden.
 
-### OakPAL - In Proxy-aktivierten Client-Bibliotheken enthaltene Ressourcen sollten sich in einem Ordner mit dem Namen Ressourcen befinden {#oakpal-resources-proxy}
+### OakPAL: In Proxy-fähigen Client-Bibliotheken enthaltene Ressourcen sollten sich in einem Ordner mit dem Namen „resources“ befinden {#oakpal-resources-proxy}
 
 **Schlüssel**: ClientlibProxyResource
 
@@ -756,7 +756,7 @@ Kunden, die die Rückwärtsreplikation verwenden, sollten sich für alternative 
 
 **Seit**: Version 2021.2.0
 
-AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten enthalten. Wie unter [Verwenden von Präprozessoren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=en#using-preprocessors) beschrieben, müssen diese statischen Ressourcen bei der Verwendung von geproxidierten Client-Bibliotheken in einem untergeordneten Ordner namens Ressourcen enthalten sein, damit sie effektiv auf den Veröffentlichungsinstanzen referenziert werden können.
+AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten enthalten. Wie unter [Verwenden von Präprozessoren](https://experienceleague.adobe.com/docs/experience-manager-65/developing/introduction/clientlibs.html?lang=de#using-preprocessors) beschrieben, müssen diese statischen Ressourcen bei der Verwendung von Proxy-fähigen Client-Bibliotheken in einem untergeordneten Ordner namens „resources“ enthalten sein, damit sie in den Veröffentlichungsinstanzen effektiv referenziert werden können.
 
 #### Nicht konformer Code {#non-compliant-proxy-enabled}
 
@@ -780,9 +780,9 @@ AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten
         + myimage.jpg
 ```
 
-### OakPAL - Verwendung von Cloud Service Inkompatible Workflow-Prozesse {#oakpal-usage-cloud-service}
+### OakPAL: Verwenden von nicht mit Cloud Service kompatiblen Workflow-Prozessen {#oakpal-usage-cloud-service}
 
-**Schlüssel**: CloudServiceInkompatibleWorkflowProcess
+**Schlüssel**: CloudServiceIncompatibleWorkflowProcess
 
 **Typ**: Code Smell
 
@@ -790,9 +790,9 @@ AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten
 
 **Seit**: Version 2021.2.0
 
-Mit der Umstellung auf Asset-Microservices für die Asset-Verarbeitung auf AEM Cloud Service wurden mehrere Workflow-Prozesse, die in On-Premise- und AMS-Versionen von AEM verwendet wurden, entweder nicht unterstützt oder nicht mehr erforderlich. Das Migrationstool unter [aem-cloud-migration](https://github.com/adobe/aem-cloud-migration) kann verwendet werden, um Workflow-Modelle während der Migration AEM Cloud Service zu aktualisieren.
+Mit der Umstellung auf Asset-Microservices für die Asset-Verarbeitung auf AEM Cloud Service werden verschiedene Workflow-Prozesse, die in lokalen und AMS-Versionen von AEM verwendet wurden, entweder nicht länger unterstützt oder sind nicht mehr erforderlich. Mit dem Migrationswerkzeug unter [aem-cloud-migration](https://github.com/adobe/aem-cloud-migration) können Workflow-Modelle während der Migration von AEM Cloud Service aktualisiert werden.
 
-### OakPAL - Von der Verwendung statischer Vorlagen wird abgeraten, bearbeitbare Vorlagen {#oakpal-static-template} zu verwenden.
+### OakPAL: Von der Verwendung von statischen Vorlagen wird zugunsten bearbeitbarer Vorlagen abgeraten {#oakpal-static-template}
 
 **Schlüssel**: StaticTemplateUsage
 
@@ -802,9 +802,9 @@ Mit der Umstellung auf Asset-Microservices für die Asset-Verarbeitung auf AEM C
 
 **Seit**: Version 2021.2.0
 
-Die Verwendung statischer Vorlagen war in AEM Projekten zwar seit jeher sehr üblich, doch wird dringend empfohlen, bearbeitbare Vorlagen zu verwenden, da sie die größte Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie unter [Seitenvorlagen - Bearbeitbar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=en). Die Migration von statischen zu bearbeitbaren Vorlagen kann weitgehend mithilfe der [AEM Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) automatisiert werden.
+Die Verwendung von statischen Vorlagen war in AEM-Projekten stets weit verbreitet. Editierbare Vorlagen werden jedoch dringend empfohlen, da sie die größte Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie unter [Seitenvorlagen – Bearbeitbar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=de). Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) weitgehend automatisiert werden.
 
-### OakPAL - Die Verwendung älterer Foundation-Komponenten wird nicht empfohlen {#oakpal-usage-legacy}
+### OakPAL: Die Verwendung älterer Foundation-Komponenten wird nicht empfohlen {#oakpal-usage-legacy}
 
 **Schlüssel**: LegacyFoundationComponentUsage
 
@@ -814,9 +814,9 @@ Die Verwendung statischer Vorlagen war in AEM Projekten zwar seit jeher sehr üb
 
 **Seit**: Version 2021.2.0
 
-Die veralteten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) werden seit mehreren AEM Versionen zugunsten der WCM-Kernkomponenten nicht mehr unterstützt. Die Verwendung der Legacy-Foundation-Komponenten als Grundlage für benutzerdefinierte Komponenten - ob durch Überlagerung oder Vererbung - wird empfohlen und sollte in die entsprechende Kernkomponente konvertiert werden. Diese Konvertierung kann durch die [AEM Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) erleichtert werden.
+Die alten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) werden seit mehreren AEM-Versionen zugunsten der WCM-Kernkomponenten nicht mehr verwendet. Die Verwendung der alten Foundation-Komponenten als Grundlage für benutzerdefinierte Komponenten – sei es durch Überlagerung oder Vererbung – wird nicht empfohlen und sollte in die entsprechende Kernkomponente konvertiert werden. Diese Konvertierung kann mit den [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) erleichtert werden.
 
-### OakPAL - Nur unterstützte Runmode-Namen und -Reihenfolge sollten verwendet werden {#oakpal-supported-runmodes}
+### OakPAL: Nur unterstützte Runmode-Namen und -Reihenfolgen sollten verwendet werden {#oakpal-supported-runmodes}
 
 **Schlüssel**: SupportedRunmode
 
@@ -826,9 +826,9 @@ Die veralteten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service erzwingt eine strikte Benennungsrichtlinie für Ausführungsmodusnamen und eine strikte Reihenfolge für diese Ausführungsmodi. Die Liste der unterstützten Ausführungsmodi finden Sie unter [Runmodes](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=de#runmodes) und jede Abweichung davon wird als Problem identifiziert.
+AEM Cloud Service erzwingt eine strikte Benennungsrichtlinie für Runmode-Namen und eine strikte Reihenfolge für diese Laufzeitmodi. Die Liste der unterstützten Laufzeitmodi finden Sie unter [Laufzeitmodi](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/deploying/overview.html?lang=de#runmodes). Jede Abweichung davon wird als Problem identifiziert.
 
-### OakPAL - Definitionsknoten für benutzerdefinierte Suchindex müssen direkte untergeordnete Elemente von /oak:index {#oakpal-custom-search} sein.
+### OakPAL: Knoten einer benutzerdefinierten Suchindex-Definition müssen /oak:index direkt untergeordnet sein {#oakpal-custom-search}
 
 **Schlüssel**: OakIndexLocation
 
@@ -838,9 +838,9 @@ AEM Cloud Service erzwingt eine strikte Benennungsrichtlinie für Ausführungsmo
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs oak:QueryIndexDefinition) direkt untergeordnete Knoten von `/oak:index` sind. Indizes an anderen Orten müssen verschoben werden, um mit AEM Cloud Service kompatibel zu sein. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=de).
+AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ oak:QueryIndexDefinition) direkt untergeordnete Knoten von `/oak:index` sind. Indizes an anderen Orten müssen verschoben werden, um mit AEM Cloud Service kompatibel zu sein. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=de).
 
-### OakPAL - Definitionsknoten des benutzerdefinierten Suchindex müssen eine compatVersion von 2 {#oakpal-custom-search-compatVersion} aufweisen.
+### OakPAL: Knoten einer benutzerdefinierten Suchindex-Definition müssen die compatVersion 2 haben {#oakpal-custom-search-compatVersion}
 
 **Schlüssel**: IndexCompatVersion
 
@@ -850,9 +850,9 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. 
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass die Eigenschaft compatVersion für benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs oak:QueryIndexDefinition) auf 2 gesetzt ist. Andere Werte werden von AEM Cloud Service nicht unterstützt. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
+AEM Cloud Service erfordert, dass die compatVersion-Eigenschaft für benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ oak:QueryIndexDefinition) auf 2 gesetzt werden. Andere Werte werden von AEM Cloud Service nicht unterstützt. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en).
 
-### OakPAL - Nachstehende Knoten von benutzerdefinierten Suchindex-Definitionsknoten müssen vom Typ nt:unstructured sein {#oakpal-descendent-nodes}
+### OakPAL: Absteigende Knoten einer benutzerdefinierten Suchindex-Definition müssen vom Typ nt:unstructured sein {#oakpal-descendent-nodes}
 
 **Schlüssel**: IndexDescendantNodeType
 
@@ -862,9 +862,9 @@ AEM Cloud Service erfordert, dass die Eigenschaft compatVersion für benutzerdef
 
 **Seit**: Version 2021.2.0
 
-Die Problembehebung kann schwierig sein, wenn ein benutzerdefinierter Suchindex-Definitionsknoten ungeordnete untergeordnete Knoten aufweist. Um dies zu vermeiden, wird empfohlen, dass alle untergeordneten Knoten eines `oak:QueryIndexDefinition`-Knotens vom Typ nt:unstructured sind.
+Schwer behebbare Probleme können auftreten, wenn ein Knoten mit einer benutzerdefinierten Suchindex-Definition ungeordnete untergeordnete Knoten enthält. Um dies zu vermeiden, wird empfohlen, dass alle untergeordneten Knoten eines `oak:QueryIndexDefinition`-Knotens vom Typ nt:unstructured sein sollten.
 
-### OakPAL - Definitionsknoten des benutzerdefinierten Suchindex müssen einen untergeordneten Knoten namens indexRules enthalten, der untergeordnete Elemente enthält {#oakpal-custom-search-index}
+### OakPAL: Benutzerdefinierte Knoten einer Suchindex-Definition müssen einen untergeordneten Knoten mit dem Namen „indexRules“ enthalten, der wiederum untergeordnete Knoten enthält {#oakpal-custom-search-index}
 
 **Schlüssel**: IndexRulesNode
 
@@ -874,9 +874,9 @@ Die Problembehebung kann schwierig sein, wenn ein benutzerdefinierter Suchindex-
 
 **Seit**: Version 2021.2.0
 
-Ein ordnungsgemäß definierter benutzerdefinierter Suchindex-Definitionsknoten muss einen untergeordneten Knoten namens indexRules enthalten, der wiederum mindestens ein untergeordnetes Element aufweisen muss. Weitere Informationen finden Sie in der [Oak-Dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
+Ein ordnungsgemäß definierter Knoten einer benutzerdefinierten Suchindex-Definition muss einen untergeordneten Knoten mit dem Namen „indexRules“ enthalten, der wiederum mindestens ein untergeordnetes Element aufweisen muss. Weitere Informationen finden Sie in der [Oak-Dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
-### OakPAL - Definitionsknoten des benutzerdefinierten Suchindex müssen Benennungskonventionen folgen {#oakpal-custom-search-definitions}
+### OakPAL: Knoten einer benutzerdefinierten Suchindex-Definition müssen Benennungskonventionen folgen {#oakpal-custom-search-definitions}
 
 **Schlüssel**: IndexName
 
@@ -886,9 +886,9 @@ Ein ordnungsgemäß definierter benutzerdefinierter Suchindex-Definitionsknoten 
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs `oak:QueryIndexDefinition`) nach einem bestimmten Muster benannt werden, das unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) beschrieben wird.
+AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) nach einem bestimmten Muster benannt werden, das unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=de#how-to-use) beschrieben wird.
 
-### OakPAL - Definitionsknoten des benutzerdefinierten Suchindex müssen den Indextyp lucene {#oakpal-index-type-lucene} verwenden
+### OakPAL: Knoten einer benutzerdefinierten Suchindex-Definition müssen den Indextyp lucene verwenden {#oakpal-index-type-lucene}
 
 **Schlüssel**: IndexType
 
@@ -898,9 +898,9 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. 
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs oak:QueryIndexDefinition) eine type-Eigenschaft mit dem Wert **lucene** aufweisen. Die Indizierung mit älteren Indextypen muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) .
+AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ oak:QueryIndexDefinition) eine Typeigenschaft mit dem Wert **lucene** aufweisen. Die Indizierung mit älteren Indextypen muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
 
-### OakPAL - Definitionsknoten des benutzerdefinierten Suchindex dürfen keine Eigenschaft mit dem Namen seed {#oakpal-property-name-seed} enthalten.
+### OakPAL: Knoten einer benutzerdefinierten Suchindex-Definition dürfen keine Eigenschaft namens seed enthalten {#oakpal-property-name-seed}
 
 **Schlüssel**: IndexSeedProperty
 
@@ -910,9 +910,9 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. 
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service untersagt benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs `oak:QueryIndexDefinition`), eine Eigenschaft namens Seed zu enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) .
+AEM Cloud Service verbietet, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) eine Eigenschaft mit dem Namen „seed“ enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
 
-### OakPAL - Definitionsknoten des benutzerdefinierten Suchindex dürfen keine Eigenschaft mit dem Namen reindex {#oakpal-reindex-property} enthalten.
+### OakPAL: Knoten einer benutzerdefinierten Suchindex-Definition dürfen keine Eigenschaft namens reindex enthalten {#oakpal-reindex-property}
 
 **Schlüssel**: IndexReindexProperty
 
@@ -922,44 +922,44 @@ AEM Cloud Service untersagt benutzerdefinierte Suchindex-Definitionen (d. h. Kno
 
 **Seit**: Version 2021.2.0
 
-AEM Cloud Service untersagt benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs `oak:QueryIndexDefinition`), eine Eigenschaft namens reindex zu enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use) .
+AEM Cloud Service verbietet, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) eine Eigenschaft mit dem Namen „reindex“ enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/operations/indexing.html?lang=en#how-to-use).
 
-## Dispatcher-Optimierungstool {#dispatcher-optimization-tool-rules}
+## Dispatcher-Optimierungs-Tool {#dispatcher-optimization-tool-rules}
 
-Im folgenden Abschnitt werden die von Cloud Manager ausgeführten DOT-Prüfungen beschrieben:
+Im folgenden Abschnitt werden die von Cloud Manager durchgeführten DOT-Prüfungen vorgestellt:
 
-* [DOT - Parsing Violation - Unerwartete Token für die Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unexpected-tokens)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Unerwartete Tokens](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unexpected-tokens)
 
-* [DOT - Parsing Violation - Dispatcher-Konfiguration unpassendes Zitat](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unmatched-quote)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Nicht übereinstimmende Klammer](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unmatched-quote)
 
-* [DOT - Parsing Violation - Dispatcher Configuration Missing Brace](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-brace)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Fehlende geschweifte Klammer](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-brace)
 
-* [DOT - Parsing Violation - Dispatcher-Konfiguration - Extra Brace](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Zusätzliche geschweifte Klammer](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
 
-* [DOT - Parsing Violation - Dispatcher-Konfiguration Fehlt obligatorische Eigenschaft](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Fehlende obligatorische Eigenschaft](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
 
-* [DOT - Parsing Violation - Veraltete Eigenschaft der Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-deprecated-property)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Veraltete Eigenschaft](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-deprecated-property)
 
-* [DOT - Parsing Violation - Dispatcher-Konfiguration nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-not-found)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-not-found)
 
-* [DOT - Parsing Violation - HTTP-Konfiguration Include-Datei nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---httpd-configuration-include-file-not-found)
+* [DOT – Parser-Verstoß – Httpd-Konfiguration: Include-Datei nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---httpd-configuration-include-file-not-found)
 
-* [DOT - Parsing Violation - Dispatcher-Konfiguration Allgemein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
+* [DOT – Parser-Verstoß – Dispatcher-Konfiguration: Allgemein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
 
-* [DOT - Im Cache der Veröffentlichungsfarm des Dispatchers sollte serveStaleOnError aktiviert sein.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
+* [DOT – Für den Cache der Dispatcher-Veröffentlichungs-Farm sollte serveStaleOnError aktiviert sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
 
-* [DOT - Die Dispatcher-Filter für Veröffentlichungsfarm sollten die standardmäßigen Ablehnungsregeln aus der 6.x.x-Version des AEM-Archetyps enthalten.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
+* [DOT – Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die standardmäßigen Ablehnungsregeln aus Version 6.x.x des AEM-Archetyps enthalten](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
 
-* [DOT - Die Eigenschaft des Dispatcher-Cache der Veröffentlichungsfarm statfileslevel sollte >= 2 sein.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
+* [DOT – Die statfileslevel-Eigenschaft des Dispatcher-Caches muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
 
-* [DOT - Die Eigenschaft &quot;gracePeriod&quot;der Dispatcher-Veröffentlichungsfarm sollte >= 2 sein.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
+* [DOT – Die gracePeriod-Eigenschaft der Dispatcher-Veröffentlichungs-Farm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
 
-* [DOT - Jede Dispatcher-Farm sollte einen eindeutigen Namen haben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
+* [DOT – Jede Dispatcher-Farm sollte einen eindeutigen Namen haben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [DOT - Die ignoreUrlParams-Regeln des Dispatcher-Veröffentlichungsfarm-Caches sollten auf Zulassungsliste konfiguriert werden.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [DOT – Die ignoreUrlParams-Regeln für den Cache der Dispatcher Veröffentlichungs-Farm sollten als Zulassungsliste konfiguriert werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [DOT - Die Dispatcher-Veröffentlichungs-Farm-Filter sollten die zulässigen Sling-Selektoren auf Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [DOT – Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Selektoren als Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [DOT - Die Veröffentlichungsfarm-Filter des Dispatchers sollten die zulässigen Sling-Suffix-Muster auf Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [DOT – Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Suffix-Muster als Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [DOT - Die Anweisung &quot;Alle gewährt werden erforderlich&quot;sollte nicht in einem VirtualHost-Ordnerabschnitt mit einem Stammverzeichnis-Pfad verwendet werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [DOT – Die Direktive „Require all granted“ sollte nicht in einem VirtualHost Directory-Abschnitt mit einem Stammverzeichnis-Pfad verwendet werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
