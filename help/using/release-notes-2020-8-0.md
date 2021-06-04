@@ -7,26 +7,26 @@ feature: Versionshinweise
 exl-id: 94163e28-5c29-4a00-9a2b-e45bf6f71098
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '198'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2020.8.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.8.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2020.8.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version 2020.8.0 von [!UICONTROL Cloud Manager] wurde am 6. August 2020 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2020.8.0 wurde am 6. August 2020 veröffentlicht.
 
-## Neue Funktionen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 Authentifizierungsgebundene Private Maven-Repositorys werden jetzt unterstützt.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Einige unnötige und unerwünschte SonarQube-Plug-ins wurden im Rahmen der Überprüfung der Codequalität ausgeführt.
+* Einige unnötige und unerwünschte SonarQube-Plug-ins wurden im Rahmen der Überprüfung der Code-Qualität ausgeführt.
 
 * Auf der Seite zur Ausführung der Pipeline wurde der Verzweigungsname falsch formatiert.
 
