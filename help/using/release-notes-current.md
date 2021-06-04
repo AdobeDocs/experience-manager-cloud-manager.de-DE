@@ -4,41 +4,41 @@ description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Vers
 feature: Versionshinweise
 source-git-commit: 3f17f252d89a1753c9cb121461b048f619d28415
 workflow-type: tm+mt
-source-wordcount: '239'
-ht-degree: 18%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2021.5.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2021.5.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2021.5.0.
 
 >[!NOTE]
->Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=en#getting-access) finden Sie die neuesten Versionshinweise für Cloud Manager in AEM as a Cloud Service.
+>Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=de#getting-access) finden Sie die neuesten Versionshinweise zu Cloud Manager in AEM as a Cloud Service.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2021.5.0 wurde am 06. Mai 2021 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2021.5.0 wurde am 6. Mai 2021 veröffentlicht.
 Die nächste Version ist für den 10. Juni 2021 geplant.
 
-## Neue Funktionen {#whats-new}
+## Neuigkeiten {#whats-new}
 
-* Die Qualitätsregel PackageOverlaps erkennt jetzt Fälle, in denen dasselbe Paket mehrmals bereitgestellt wurde, d. h. an mehreren eingebetteten Speicherorten, in demselben bereitgestellten Paketsatz.
+* Die PackageOverlaps-Qualitätsregel erkennt jetzt, wenn dasselbe Paket mehrmals bereitgestellt wurde, d. h. an mehreren eingebetteten Speicherorten, und zwar in demselben bereitgestellten Paketsatz.
 
-* Der Repository-Endpunkt in der öffentlichen API enthält jetzt die Git-URL.
+* Der Repository-Endpunkt in der Public API enthält jetzt die Git-URL.
 
-* Im Workflow Programm bearbeiten darf der Benutzer nur nicht-Dezimalwerte für KPIs festlegen.
+* Im Programmbearbeitungs-Workflow kann der Benutzer nur Nicht-Dezimalzahlwerte für KPIs festlegen.
 
-* Beim Pushen von Code an Adobe Git wurden zeitweise auftretende Fehler behoben.
+* Periodisch auftretende Fehler beim Übertragen von Code an Adobe Git wurden nun behoben.
 
-* Das Erlebnis Bearbeiten des Programms wurde aktualisiert.
+* Programmbearbeitung wurde modernisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Anstatt &quot;gelöschte&quot;Variablen zu entfernen, markiert die Pipeline-Variablen-API sie nur mit dem Status &quot;DELETED&quot;.
+* Statt „gelöschte“ Variablen zu entfernen, markiert die API der Pipeline-Variablen sie nur mit dem Status „DELETED“.
 
-* Einige Qualitätsprobleme vom Typ Code Smell wirkten sich fälschlicherweise auf die Zuverlässigkeitsbewertung aus.
+* Einige Code-Smell-Qualitätsprobleme haben die Zuverlässigkeitsbewertung fälschlicherweise beeinflusst.
 
-* Wenn die Pipelineausführung zwischen Mitternacht und 1 Uhr UTC gestartet wurde, war nicht garantiert, dass die von Cloud Manager generierte Artefaktversion größer ist als die am Vortag erstellte Version.
+* Wenn eine Pipeline-Ausführung zwischen Mitternacht und 1:00 Uhr UTC gestartet wurde, war nicht garantiert, dass die von Cloud Manager generierte Artefaktversion größer war als eine Version, die am Vortag erstellt wurde.
 
-* Manche Adobe Managed Services (AMS)-Kunden konnten keine neuen Projekte in der Adobe I/O Developer Console mithilfe der Cloud Manager-API erstellen.
+* Einige Adobe Managed Services-Kunden (AMS) konnten mit der Cloud Manager-API keine neuen Projekte in der Adobe I/O Developer Console erstellen.
