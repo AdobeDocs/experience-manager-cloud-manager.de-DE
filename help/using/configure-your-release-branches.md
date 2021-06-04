@@ -12,8 +12,8 @@ feature: Git-Repositorys
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '315'
-ht-degree: 94%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -83,4 +83,4 @@ Eine einzelne `master`-Verzweigung kann für sehr einfache Projekte ausreichend 
 
 >[!NOTE]
 >
->Die gebräuchlichen Git-Befehle finden Sie im [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Die gebräuchlichen Git-Befehle finden Sie in der [Git-Schnellübersicht](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
