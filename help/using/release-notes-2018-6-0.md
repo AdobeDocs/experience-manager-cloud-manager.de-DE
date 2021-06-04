@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für 2018.6.0
 seo-title: Versionshinweise für AEM Cloud Manager 2018.6.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.6.0.
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.6.0.
 seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2018.6.0.
 uuid: 211b6e1b-10fb-46b0-b591-44d5e44abd77
 contentOwner: jsyal
@@ -12,8 +12,8 @@ feature: Versionshinweise
 exl-id: 456f7892-c64c-4b3f-b845-15682d034aaa
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 97%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL C
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2018.6.0 wurde am 9. August 2018 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2018.6.0 wurde am 9. August 2018 veröffentlicht.
 
 ## Neuigkeiten {#what-s-new}
 
@@ -37,7 +37,7 @@ Die [!UICONTROL Cloud Manager]-Version 2018.6.0 wurde am 9. August 2018 verö
 
 * **CI/CD-Pipeline**: Wenn die CI/CD-Pipeline den Schritt „Zeitplan“ erreicht, wird eine Benachrichtigung an die Anwender gesendet, die zum Festlegen des Zeitplans berechtigt sind. Weitere Informationen finden Sie unter [Benachrichtigungen](notifications.md).
 
-* **Analyse der Codequalität**: Neue Regeln zur Erkennung falsch konfigurierter ausgehender HTTP/HTTPS-Anforderungen. Weitere Informationen finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
+* **Analyse der Code-Qualität**: Neue Regeln zur Erkennung falsch konfigurierter ausgehender HTTP/HTTPS-Anforderungen. Weitere Informationen finden Sie unter [Qualitätsregeln für benutzerdefinierten Code](custom-code-quality-rules.md).
 
 ## Fehlerbehebungen {#bug-fixes}
 
