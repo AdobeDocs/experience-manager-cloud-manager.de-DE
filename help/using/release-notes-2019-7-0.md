@@ -7,8 +7,8 @@ feature: Versionshinweise
 exl-id: 7e53bd97-5aa7-45bc-83c6-49e40266e1b1
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -18,7 +18,7 @@ Die [!UICONTROL Cloud Manager]-Version 2019.7.0 umfasst Aktualisierungen der Exp
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version 2019.7.0 von [!UICONTROL Cloud Manager] wurde am 18. Juli 2019 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2019.7.0 wurde am 18. Juli 2019 veröffentlicht.
 
 ## Neuigkeiten {#whats-new}
 
