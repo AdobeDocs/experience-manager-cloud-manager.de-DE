@@ -7,20 +7,20 @@ feature: Versionshinweise
 exl-id: 92eda9ea-f916-429e-97e3-be3a1ecef7cb
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '183'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 # Versionshinweise für 2020.6.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2020.6.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2020.6.0.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2020.6.0 wurde am Donnerstag, 04. Juni 2020 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2020.6.0 wurde am 4. Juni 2020 veröffentlicht.
 
-## Neuerungen {#whats-new}
+## Neuigkeiten {#whats-new}
 
 * Coachmarks auf der Landingpage, die dem Benutzer grundlegende Informationen zur Navigation liefern.
 
