@@ -12,8 +12,8 @@ feature: Versionshinweise
 exl-id: bf611743-ded2-4503-97c8-12b12454c7b7
 source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun eine Adobe I/
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2018.9.0 wurde am 1. November 2018 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2018.9.0 wurde am 1. November 2018 veröffentlicht.
 
 ## Neuigkeiten {#whats-new}
 
