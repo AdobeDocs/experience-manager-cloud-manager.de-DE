@@ -7,8 +7,8 @@ feature: Erste Schritte
 exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
 source-git-commit: aa2d7cb3d0fa3d6038d364659ce8d5eacb6825c5
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 92%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
