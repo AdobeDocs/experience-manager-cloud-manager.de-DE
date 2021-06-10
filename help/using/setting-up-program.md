@@ -2,18 +2,13 @@
 title: Einrichten des Programms
 seo-title: Einrichten des Programms
 description: Nach dem Onboarding muss der Business Owner verschiedene Ersteinstellungen am Programm vornehmen.
-seo-description: 'Nach dem Onboarding muss der Business Owner verschiedene Ersteinstellungen an Adobe AEM Cloud Manager vornehmen. Hierzu gehören das Festlegen der Programmbeschreibung und das Definieren der für Leistungstests verwendeten KPIs. '
-uuid: 9ecf8743-1f5a-4744-86af-e2256567642f
-contentOwner: jsyal
-products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
-topic-tags: getting-started
-discoiquuid: c2393540-e852-4f7c-aafd-1427209065d2
+seo-description: 'Nach dem Onboarding muss der Business Owner einige Ersteinstellungen für Adobe AEM Cloud Manager vornehmen. Hierzu gehören das Festlegen der Programmbeschreibung und das Definieren der für Leistungstests verwendeten KPIs. '
 feature: Erste Schritte
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: a65c413e9ffa96f950cf1c59771b45ce0f810bc0
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '734'
+ht-degree: 86%
 
 ---
 
@@ -24,11 +19,8 @@ Nach dem Onboarding muss der Business Owner verschiedene Ersteinstellungen am Pr
 Die definierten KPIs dienen als Grundlage für Leistungstests, die bei jeder Ausführung der Pipeline durchgeführt werden.
 
 >[!NOTE]
->
 >Die definierten KPIs werden durch Tests gemessen, die in der **Staging**-Umgebung ausgeführt werden. Normalerweise werden diese KPIs entsprechend den Funktionen der Staging-Umgebung herunterskaliert.
->
 >Beispiel: Ein Anwender, der von durchschnittlich 1.000 Seitenaufrufen pro Minute in seiner **Produktionsumgebung** ausgeht und über vier Dispatcher-/Veröffentlichungsserver in der Produktion verfügt, sollte eine Skalierung auf 250 Seitenaufrufe pro Minute vornehmen (sofern seine Staging-Umgebung aus nur einem einzigen Dispatcher-/Veröffentlichungsserver-Paar besteht).
->
 >Darüber hinaus verfügen viele Anwender über ein CDN (Content Delivery Network) wie Akamai oder CloudFront, das ihrer Produktionsumgebung vorgeschaltet ist. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, sollten die KPIs nur den erwarteten Traffic wiedergeben, der durch das CDN weitergeleitet wird, d. h. ohne Cache. In der Regel handelt es sich dabei um eine relativ kleine Teilmenge des gesamten Produktionstraffics.
 
 ## Einrichten des Programms mit [!UICONTROL Cloud Manager] {#using-cloud-manager-to-setup-your-program}
@@ -77,17 +69,13 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 1. Unter **Bereitstellung** können Sie die Bereitstellungskonfiguration für Produktions- und Nicht-Produktionsumgebungen in Ihrem Programm anzeigen oder bearbeiten. **Automatische Skalierung aktiviert** wird angezeigt, wenn die automatische Skalierung für das Programm aktiviert wurde.
 
    >[!NOTE]
-   >
-   >* Die Funktion zur automatischen Skalierung ist nur auf die Produktionsumgebung anwendbar und steht ggf. nicht für alle Kundenprogramme zur Verfügung.
-   >* Die Funktion zur On-Demand-Skalierung ist für diese [!UICONTROL Cloud Manager]-Version nicht verfügbar.
-
+   >Die Funktion zur automatischen Skalierung ist nur auf die Produktionsumgebung anwendbar und steht ggf. nicht für alle Kundenprogramme zur Verfügung.
 
    ![](assets/Setup_Program-Provisioning.png)
 
 1. Klicken Sie auf **Speichern**, um den Einrichtungsassistenten abzuschließen.
 
    >[!NOTE]
-   >
    >Sie können das Programm jederzeit bearbeiten, wenn das Startprogramm bereits eingerichtet wurde. Führen Sie die folgenden Schritte aus, um weitere Details zu erhalten.
 
 ## Bearbeiten von Programmen
@@ -98,14 +86,26 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
 1. Wählen Sie die Lösung aus und klicken Sie auf **Bearbeiten**, um das Programm zu aktualisieren oder zu ändern, wie in der folgenden Abbildung gezeigt.
 
-   ![](assets/SetUpProgram6.png)
+   ![](assets/set-up-program/edit-program1.png)
 
 1. Der Bildschirm **Programm bearbeiten** wird angezeigt, mit dem Sie das Programm aktualisieren oder ändern können.
 
-   ![](assets/Editing_Program-screen3.png)
+   Sie können Ihren Programmnamen und Ihre Beschreibung im Tab **Allgemein** aktualisieren.
+
+   ![](assets/set-up-program/edit-program-general.png)
+
+   Navigieren Sie zur Registerkarte **KPI** , um Informationen zu AEM Sites und Assets zu aktualisieren.
+
+   ![](assets/set-up-program/edit-program-kpi.png)
+
+   Darüber hinaus können Sie zur Registerkarte **Bereitstellung** navigieren, um die Bereitstellungskonfiguration für Produktions- und Nicht-Produktionsumgebungen in Ihrem Programm zu bearbeiten.
+
+   ![](assets/set-up-program/edit-program-provision.png)
+
+1. Klicken Sie auf **Update** , um Ihre Änderungen zu speichern.
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Wenn Sie bereits die **Pipeline** eingerichtet haben, werden Ihre aktualisierten Einstellungen bei der nächsten Ausführung berücksichtigt. Wenn Sie noch keine Pipeline eingerichtet haben, führen Sie zunächst die Schritte zum Einrichten der Pipeline aus.
+Wenn Sie die Pipeline bereits eingerichtet haben, werden bei der nächsten Ausführung Ihre aktualisierten Einstellungen berücksichtigt. Wenn Sie die Pipeline noch nicht eingerichtet haben, führen Sie zuerst die Schritte aus, um Ihre Pipeline einzurichten.
 
 Weitere Informationen zum Einrichten der Pipeline finden Sie unter [Konfigurieren der CI/CD-Pipeline](https://helpx.adobe.com/de/experience-manager/cloud-manager/using/configuring-pipeline.html).
