@@ -3,15 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
-breadcrumb-title: Benutzerhandbuch zu Cloud Manager für AEM 6.x
+breadcrumb-title: Benutzerhandbuch zu Cloud Manager für AEM 6.x
 user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung von Experience Manager in der Cloud nutzen können.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Administrator
 level: Intermediate
-source-git-commit: 9cca6fd7d4ef3351fa024bac0f95f5592105dbae
+source-git-commit: 0c082c7d24a50cfeaa8f452655e5abb609dc6915
 workflow-type: tm+mt
-source-wordcount: '270'
-ht-degree: 96%
+source-wordcount: '273'
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 96%
    + [Häufig gestellte Fragen zu Cloud Manager](cloud-manager-faqs.md)
 + Was ist erforderlich? {#requirements}
    + [Gewährte Zugriffsrechte](access-rights-granted.md)
-   + [Quellcode-Repository](source-code-repository.md)
+   + [Quell-Code-Repository](source-code-repository.md)
    + [Rollenbasierte Berechtigungen](role-based-permissions.md)
    + [Hinzufügen von Anwendern und Rollen](setting-up-users-and-roles.md)
    + [Bereitgestellte Umgebungen](environments-provisioned.md)
@@ -50,9 +50,9 @@ ht-degree: 96%
    + [Cloud Manager-API](https://www.adobe.io/apis/experiencecloud/cloud-manager/docs.html)
    + [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Benachrichtigungen](notifications.md)
-   + [Benutzerspezifische Regeln für Codequalität](custom-code-quality-rules.md)
+   + [Benutzerspezifische Regeln für Code-Qualität](custom-code-quality-rules.md)
 + Code verwalten {#managing-code}
-   + [Umgang mit Maven-Projektversionen ](activating-maven-project.md)
+   + [Umgang mit Maven-Projektversionen](activating-maven-project.md)
    + [Zugriff auf Git](accessing-git.md)
    + [Integrieren mit Git](setup-cloud-manager-git-integration.md)
    + [Arbeiten mit Git-Repositorys aus mehreren Quellen](/help/using/working-with-multiple-source-git-repos.md)
@@ -60,7 +60,8 @@ ht-degree: 96%
    + [Überblick](overview-productupdate-wizard.md)
    + [Test](evaluation.md)
 + Versionshinweise {#release-notes}
-   + [Aktuelle Versionshinweise (2021.5.0)](release-notes-current.md)
+   + [Aktuelle Versionshinweise (2021.6.0)](release-notes-current.md)
+   + [Versionshinweise für 2021.5.0](release-notes-2021-5-0.md)
    + [Versionshinweise für 2021.4.0](release-notes-2021-4-0.md)
    + [Versionshinweise für 2021.3.0](release-notes-2021-3-0.md)
    + [Versionshinweise für 2021.2.0](release-notes-2021-2-0.md)
