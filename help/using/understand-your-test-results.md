@@ -10,10 +10,10 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD-Pipeline, Testergebnisse
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '2728'
+ht-degree: 100%
 
 ---
 
@@ -53,7 +53,7 @@ Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Dabei handelt es s
 Beim Testen der Code-Qualität wird der Quell-Code gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt. Derzeit wird dies durch eine Kombination aus SonarQube, Prüfung auf Inhaltspaket-Ebene mit OakPAL und Dispatcher-Validierung mit dem Dispatcher-Optimierungs-Tool implementiert. Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
 >[!NOTE]
->Sie können die vollständige Liste der Regeln [hier](/help/using/assets/CodeQuality-rules-AMS.xlsx) herunterladen.
+>Sie können die vollständige Liste der Regeln [hier](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
 Die Ergebnisse dieses Schritts werden als *Bewertung* bereitgestellt. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Prüfkriterien zusammen:
 
