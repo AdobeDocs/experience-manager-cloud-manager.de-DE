@@ -10,10 +10,10 @@ topic-tags: using
 discoiquuid: d2338c74-3278-49e6-a186-6ef62362509f
 feature: Code-Qualitätsregeln
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '3652'
+ht-degree: 99%
 
 ---
 
@@ -187,32 +187,6 @@ public void orDoThis() {
   }
  
   in.close();
-}
-```
-
-### Produkt-APIs, die mit @ProviderType kommentiert wurden, sollten von Kunden nicht implementiert oder erweitert werden {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
-
-**Schlüssel**: CQBP-84, CQBP-84-dependencies
-
-**Typ**: Fehler
-
-**Schweregrad**: Kritisch
-
-**Seit**: Version 2018.7.0
-
-Die AEM-API enthält Java-Schnittstellen und -Klassen, die durch benutzerdefinierten Code lediglich verwendet, aber nicht implementiert werden sollen. Zum Beispiel ist die Schnittstelle *com.day.cq.wcm.api.Page* nur für die Implementierung durch ***AEM*** ausgelegt.
-
-Wenn zu diesen Schnittstellen neue Methoden hinzugefügt werden, wirken sich diese zusätzlichen Methoden nicht auf den vorhandenen Code aus, der diese Schnittstellen verwendet. Daher wird das Hinzufügen neuer Methoden zu diesen Schnittstellen als abwärtskompatibel betrachtet. Wenn jedoch benutzerdefinierter Code eine dieser Schnittstellen ***implementiert***, führt dieser benutzerspezifische Code ein Abwärtskompatibilitätsrisiko für den Kunden ein.
-
-Schnittstellen (und Klassen), die nur von AEM implementiert werden sollen, werden mit *org.osgi.annotation.versioning.ProviderType* (oder in einigen Fällen mit einer veralteten Anmerkung *aQute.bnd.annotation.ProviderType*) kommentiert. Diese Regel identifiziert die Fälle, in denen eine solche Schnittstelle durch benutzerdefinierten Code implementiert wird (oder eine Klasse erweitert wird).
-
-#### Nicht konformer Code {#non-compliant-code-3}
-
-```java
-import com.day.cq.wcm.api.Page;
-
-public class DontDoThis implements Page {
-// implementation here
 }
 ```
 
@@ -597,6 +571,32 @@ Unten finden Sie die OakPAL-Prüfungen, die von Cloud Manager ausgeführt werden
 >[!NOTE]
 >
 >OakPAL ist ein Framework, das von einem AEM-Partner (und Gewinner der Auszeichnung „AEM Rockstar North America“ von 2019) entwickelt wurde und Inhaltspakete mithilfe eines eigenständigen Oak-Repositorys überprüft.
+
+### Produkt-APIs, die mit @ProviderType kommentiert wurden, sollten von Kunden nicht implementiert oder erweitert werden {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+
+**Schlüssel**: CQBP-84
+
+**Typ**: Fehler
+
+**Schweregrad**: Kritisch
+
+**Seit**: Version 2018.7.0
+
+Die AEM-API enthält Java-Schnittstellen und -Klassen, die durch benutzerdefinierten Code lediglich verwendet, aber nicht implementiert werden sollen. Zum Beispiel ist die Schnittstelle *com.day.cq.wcm.api.Page* nur für die Implementierung durch ***AEM*** ausgelegt.
+
+Wenn zu diesen Schnittstellen neue Methoden hinzugefügt werden, wirken sich diese zusätzlichen Methoden nicht auf den vorhandenen Code aus, der diese Schnittstellen verwendet. Daher wird das Hinzufügen neuer Methoden zu diesen Schnittstellen als abwärtskompatibel betrachtet. Wenn jedoch benutzerdefinierter Code eine dieser Schnittstellen ***implementiert***, führt dieser benutzerspezifische Code ein Abwärtskompatibilitätsrisiko für den Kunden ein.
+
+Schnittstellen (und Klassen), die nur von AEM implementiert werden sollen, werden mit *org.osgi.annotation.versioning.ProviderType* (oder in einigen Fällen mit einer veralteten Anmerkung *aQute.bnd.annotation.ProviderType*) kommentiert. Diese Regel identifiziert die Fälle, in denen eine solche Schnittstelle durch benutzerdefinierten Code implementiert wird (oder eine Klasse erweitert wird).
+
+#### Nicht konformer Code {#non-compliant-code-3}
+
+```java
+import com.day.cq.wcm.api.Page;
+
+public class DontDoThis implements Page {
+// implementation here
+}
+```
 
 ### Kundenpakete sollten keine Knoten unter /libs erstellen oder ändern {#oakpal-customer-package}
 
