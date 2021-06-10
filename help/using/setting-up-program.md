@@ -5,7 +5,7 @@ description: Nach dem Onboarding muss der Business Owner verschiedene Ersteinste
 seo-description: 'Nach dem Onboarding muss der Business Owner einige Ersteinstellungen für Adobe AEM Cloud Manager vornehmen. Hierzu gehören das Festlegen der Programmbeschreibung und das Definieren der für Leistungstests verwendeten KPIs. '
 feature: Erste Schritte
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f14725f87d5c4c3afe63d4bfc924962a92705c7c
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
 source-wordcount: '735'
 ht-degree: 82%
@@ -78,7 +78,7 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
    >[!NOTE]
    >Sie können das Programm jederzeit bearbeiten, wenn das Startprogramm bereits eingerichtet wurde. Führen Sie die folgenden Schritte aus, um weitere Details zu erhalten.
 
-## Bearbeiten von Programmen
+## Bearbeiten von Programmen {#editing-program}
 
 1. Navigieren Sie auf der Startseite von **Cloud Manager** zum Programm.
 
