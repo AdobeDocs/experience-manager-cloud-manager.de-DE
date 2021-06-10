@@ -2,10 +2,10 @@
 title: Versionshinweise für 2021.6.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.6.0.
 feature: Versionshinweise
-source-git-commit: 5111a918b8063ab576ef587dc3c8d66ad976fc1a
+source-git-commit: c39390f34cf4ab6c9b2d5957b169c3c2cb43e6d3
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 27%
+source-wordcount: '289'
+ht-degree: 26%
 
 ---
 
@@ -29,7 +29,7 @@ Die nächste Version ist für den 15. Juli 2021 geplant.
 
 * Der standardmäßige Zweigname, der sowohl bei der Projekterstellung als auch im Standard-Push-Befehl über Git-Workflows verwalten verwendet wird, wurde in `main` geändert.
 
-* Die Bearbeitung des Programmerlebnisses in der Benutzeroberfläche wurde aktualisiert.
+* Die Bearbeitung des Programmerlebnisses in der Benutzeroberfläche wurde aktualisiert. Weitere Informationen finden Sie unter [Bearbeiten eines Programms](/help/using/setting-up-program.md#editing-program) .
 
 * Die Qualitätsregel `ImmutableMutableMixCheck` wurde aktualisiert, um `/oak:index` -Knoten als unveränderlich zu klassifizieren.
 
