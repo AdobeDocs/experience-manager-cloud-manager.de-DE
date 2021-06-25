@@ -1,14 +1,14 @@
 ---
 title: Einrichten des Programms
 seo-title: Einrichten des Programms
-description: Nach dem Onboarding muss der Business Owner verschiedene Ersteinstellungen am Programm vornehmen.
-seo-description: 'Nach dem Onboarding muss der Business Owner einige Ersteinstellungen für Adobe AEM Cloud Manager vornehmen. Hierzu gehören das Festlegen der Programmbeschreibung und das Definieren der für Leistungstests verwendeten KPIs. '
+description: Nach dem Onbarding muss der Business Owner verschiedene Ersteinstellungen am Programm vornehmen.
+seo-description: 'Nach dem Onboarding muss der Business Owner verschiedene Ersteinstellungen an Adobe AEM Cloud Manager vornehmen. Hierzu gehören das Festlegen der Programmbeschreibung und das Definieren der für Leistungstests verwendeten KPIs. '
 feature: Erste Schritte
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 71a6f2709efb9c4c3831deaa1ce89d93e30b775c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '733'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
@@ -80,30 +80,30 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
 ## Bearbeiten von Programmen {#editing-program}
 
-1. Navigieren Sie auf der Startseite von **Cloud Manager** zum Programm.
+1. Gehen Sie zum Programm auf dem **Cloud Manager**-Startbildschirm.
 
-1. Klicken Sie auf **Programm bearbeiten** , um Ihr Programm auf der Seite **Übersicht** zu aktualisieren oder zu ändern, wie in der folgenden Abbildung dargestellt.
+1. Klicken Sie auf **Programm bearbeiten**, um Ihr Programm auf der Seite **Überblick** zu aktualisieren oder zu ändern, wie in der folgenden Abbildung dargestellt.
 
    ![](assets/set-up-program/edit-program1.png)
 
 1. Der Bildschirm **Programm bearbeiten** wird angezeigt, mit dem Sie das Programm aktualisieren oder ändern können.
 
-   Sie können Ihre Programmbeschreibung über den Tab **Allgemein** aktualisieren.
+   Sie können Ihre Programmbeschreibung über die Registerkarte **Allgemein** aktualisieren.
 
    ![](assets/set-up-program/edit-program-general.png)
 
-   Navigieren Sie zur Registerkarte **KPI** , um Informationen zu AEM Sites und Assets zu aktualisieren.
+   Gehen Sie zur Registerkarte **KPI**, um Informationen zu AEM Sites und Assets zu aktualisieren.
 
    ![](assets/set-up-program/edit-program-kpi.png)
 
-   Darüber hinaus können Sie zur Registerkarte **Bereitstellung** navigieren, um die Bereitstellungskonfiguration für Produktions- und Nicht-Produktionsumgebungen in Ihrem Programm zu bearbeiten.
+   Darüber hinaus können Sie zur Registerkarte **Bereitstellung** gehen, um die Bereitstellungskonfiguration für Produktions- und Nicht-Produktionsumgebungen in Ihrem Programm zu bearbeiten.
 
    ![](assets/set-up-program/edit-program-provision.png)
 
-1. Klicken Sie auf **Update** , um Ihre Änderungen zu speichern.
+1. Klicken Sie auf **Aktualisieren**, um Ihre Änderungen zu speichern.
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Wenn Sie die Pipeline bereits eingerichtet haben, werden bei der nächsten Ausführung Ihre aktualisierten Einstellungen berücksichtigt. Wenn Sie die Pipeline noch nicht eingerichtet haben, führen Sie zuerst die Schritte aus, um Ihre Pipeline einzurichten.
+Wenn Sie die Pipeline bereits eingerichtet haben, werden Ihre aktualisierten Einstellungen bei der nächsten Ausführung berücksichtigt. Wenn Sie die Pipeline noch nicht eingerichtet haben, führen Sie zunächst die Schritte zum Einrichten der Pipeline aus.
 
 Weitere Informationen zum Einrichten der Pipeline finden Sie unter [Konfigurieren der CI/CD-Pipeline](https://helpx.adobe.com/de/experience-manager/cloud-manager/using/configuring-pipeline.html).
