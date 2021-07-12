@@ -3,9 +3,9 @@ title: Versionshinweise für 2021.6.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.6.0.
 feature: Versionshinweise
 source-git-commit: 5ddbf718ad01b11dcba5dc2c5d1ab5d3cff2e9a9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -33,16 +33,16 @@ Die nächste Version ist für den 15. Juli 2021 geplant.
 
 * Die Qualitätsregel `ImmutableMutableMixCheck` wurde aktualisiert, um `/oak:index`-Knoten als unveränderlich zu klassifizieren.
 
-* Die Qualitätsregeln `CQBP-84` und `CQBP-84--dependencies` wurden in einer einzigen Regel zusammengefasst. Im Rahmen dieser Konsolidierung werden beim Überprüfen von Abhängigkeiten Probleme in Abhängigkeiten von Drittanbietern, die zur AEM Laufzeit bereitgestellt werden, genauer identifiziert.
+* Die Qualitätsregeln `CQBP-84` und `CQBP-84--dependencies` wurden in einer einzigen Regel zusammengefasst. Im Rahmen dieser Konsolidierung werden beim Überprüfen von Abhängigkeiten Probleme in Abhängigkeiten von Drittanbietern genauer identifiziert, die zur AEM-Laufzeit bereitgestellt werden.
 
 * Ein Fehler bei der Berechnung der Metrik „Übersprungene Tests“ führt nicht mehr dazu, dass Pipeline-Ausführungen fehlschlagen.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Fehlerkorrektur – JCR-Knoten-Definitionen, die einen Zeilenumbruch nach dem Namen des Stammelements enthielten, werden jetzt korrekt geparst.
+* JCR-Knoten-Definitionen, die einen Zeilenumbruch nach dem Namen des Stammelements enthielten, werden jetzt korrekt geparst.
 
-* Fehlerkorrektur – Die List-Repositorys-API filtert jetzt auch gelöschte Repositorys.
+* Die List-Repositorys-API filtert jetzt auch gelöschte Repositorys.
 
-* Fehlerkorrektur – Wenn für den Zeitplanschritt ein ungültiger Wert angegeben wurde, wird jetzt die richtige Fehlermeldung angezeigt.
+* Wenn für den Zeitplanschritt ein ungültiger Wert angegeben wurde, wird jetzt die richtige Fehlermeldung angezeigt.
 
-* Fehlerkorrektur – In den Fällen, in denen die Pipeline-Ausführung die Bereitstellung im Produktionsschritt erreichte und der Benutzer die Ausführung stoppte, spiegelt die Bereitstellungsstatusmeldung in der Benutzeroberfläche jetzt korrekt wider, was tatsächlich vor sich ging.
+* In den Fällen, in denen die Pipeline-Ausführung die Bereitstellung im Produktionsschritt erreichte und der Benutzer die Ausführung stoppte, spiegelt die Bereitstellungsstatusmeldung in der Benutzeroberfläche jetzt korrekt wider, was tatsächlich vor sich ging.
