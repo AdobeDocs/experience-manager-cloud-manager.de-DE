@@ -11,14 +11,14 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD-Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 83fcc49c7e3e3742930a7179b27f899bff3c4ae1
+source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1320'
+ht-degree: 94%
 
 ---
 
-# Konfigurieren Ihre CI/CD-Pipeline {#configure-your-ci-cd-pipeline}
+# Konfigurieren Ihrer CI/CD-Pipeline {#configure-your-ci-cd-pipeline}
 
 >[!NOTE]
 >Informationen zum Konfigurieren der CI/CD-Pipeline für Cloud Manager in AEM as a Cloud Service finden Sie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/using-cloud-manager/configure-pipeline.html?lang=de#using-cloud-manager).
@@ -183,22 +183,23 @@ Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
 1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Nicht-Produktions-Pipelines** zu.
 
-   ![](assets/Non-Production-Pipeline.png)
+   ![](/help/using/assets/non-prod-add.png)
 
-1. Klicken Sie auf die Schaltfläche „Hinzufügen“, um den Pipeline-Namen, den Pipelinetyp und die Git-Verzweigung anzugeben.
+1. Klicken Sie auf die Schaltfläche **Hinzufügen**, um den Pipeline-Namen, den Pipeline-Typ und die Git-Verzweigung anzugeben.
 
-   Außerdem können Sie in den Pipeline-Optionen Bereitstellungsauslöser und das Verhalten bei wichtigen Fehlern festlegen.
+   Außerdem können Sie in den Pipeline-Optionen Implementierungsauslöser und das Verhalten bei wichtigen Fehlern festlegen.
 
    ![](assets/non-prod-pipe.png)
 
-1. Klicken Sie auf **Speichern**, damit die Pipeline auf der Karte auf dem Startbildschirm mit drei Aktionen angezeigt wird:
+1. Klicken Sie auf **Save** und die Pipeline wird auf der Karte auf dem Startbildschirm mit fünf Aktionen angezeigt:
 
    * **Bearbeiten**: Ermöglicht die Bearbeitung der Pipeline-Einstellungen.
-   * **Detail**: Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden).
-   * **Build**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann.
+   * **Details** : Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden).
+   * **Erstellen**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann.
+   * **Zugriff auf Repo Info** : Ermöglicht dem Benutzer, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlichen Informationen abzurufen
+   * **Weitere Informationen** : Navigiert zum Verständnis der Dokumentation zur CI/CD-Pipeline.
 
-   ![](assets/Non-prod-2.png)
-
+      ![](assets/prod-one.png)
    >[!NOTE]
    >
    >Während die Pipeline ausgeführt wird, wird der aktuelle Schritt angezeigt und nur die Aktion **Details** ist verfügbar.
