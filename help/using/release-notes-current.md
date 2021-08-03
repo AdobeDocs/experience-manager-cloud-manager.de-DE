@@ -3,15 +3,15 @@ title: Versionshinweise für 2021.7.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.7.0.
 feature: Versionshinweise
 source-git-commit: fec742eb023e9811ee80951bd25fc2023df52d66
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 29%
+ht-degree: 100%
 
 ---
 
 # Versionshinweise für 2021.7.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] 2021.7.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] Version 2021.7.0.
 
 >[!NOTE]
 >Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=de#getting-access) finden Sie die neuesten Versionshinweise zu Cloud Manager in AEM as a Cloud Service.
@@ -19,26 +19,26 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Clo
 ## Veröffentlichungsdatum {#release-date}
 
 Die [!UICONTROL Cloud Manager]-Version 2021.7.0 wurde am 15. Juli 2021 veröffentlicht.
-Die nächste Version ist für den 12. August 2021 geplant.
+Die nächste Version wird am 12. August 2021 veröffentlicht.
 
 ## Neue Funktionen {#whats-new}
 
-* Kunden können jetzt Azul 8- und 11-JDKs für ihre Cloud Manager-Build-Prozesse verwenden und entweder festlegen, eines dieser JDKs für toolchain-kompatible Maven-Plug-ins *oder* für die gesamte Maven-Prozessausführung zu verwenden.
+* Kunden können jetzt Azul 8- und 11-JDKs für ihre Cloud Manager-Build-Prozesse verwenden und entweder festlegen, eines dieser JDKs für Toolchain-kompatible Maven-Plug-ins *oder* für die gesamte Maven-Prozessausführung zu verwenden.
 
-* Die ausgehende Ausgangs-IP wird jetzt in der Protokolldatei des Buildschritts protokolliert.
+* Die ausgehende Austritts-IP wird jetzt in der Protokolldatei des Build-Schritts protokolliert.
 
-* Die Schaltflächen **Git** verwalten wurden in **Git Info** öffnen umbenannt und das Dialogfeld wurde visuell aktualisiert.
+* Die Schaltfläche **Git verwalten** wurde in **Git-Info öffnen** umbenannt und das Dialogfeld wurde visuell überarbeitet.
 
-* Die Version des AEM Projektarchetyps, der von Cloud Manager verwendet wird, wurde auf Version 28 aktualisiert.
+* Der von Cloud Manager verwendete AEM-Projektarchetyp wurde auf Version 28 aktualisiert.
 
-* Einige unerwartete Topologiekonfigurationen konnten dazu führen, dass detaillierte Testberichte nicht mehr auf der Seite mit den Pipelineausführungsdetails verfügbar sind.
+* Einige unerwartete Topologie-Rekonfigurationen konnten dazu führen, dass detaillierte Testberichte nicht mehr auf der Seite mit den Pipeline-Ausführungsdetails verfügbar waren.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Beim manuellen Navigieren zur Seite mit den Ausführungsdetails für eine nicht vorhandene Ausführung wurde kein Fehler angezeigt, sondern nur ein Bildschirm mit endlosen Ladevorgängen.
+* Beim manuellen Navigieren zur Seite mit den Ausführungsdetails für eine nicht vorhandene Ausführung wird nicht mehr ein Bildschirm mit endlosen Ladevorgängen, sondern ein Fehler angezeigt.
 
-* In einigen Fällen würde der automatische Neuversuch für fehlgeschlagene Container, die in der Sites-Leistung verwendet werden, 2 Stunden lang nicht wirksam, was zu einem Testfehler führte.
+* In einigen Fällen wurde der automatische Neuversuch für fehlgeschlagene Container, die in der Sites-Leistung verwendet werden, 2 Stunden lang nicht wirksam, was zu einem Testfehler führte.
 
 ## Bekannte Probleme {#known-issues}
 
-Kunden, die zur Verwendung der Azul JDKs wechseln, sollten beachten, dass nicht alle vorhandenen Anwendungen ohne Fehler auf Azul JDK kompiliert werden. Es wird dringend empfohlen, vor dem Wechsel lokal zu testen.
+Kunden, die zur Verwendung der Azul-JDKs wechseln, sollten beachten, dass nicht alle vorhandenen Anwendungen ohne Fehler auf Azul-JDK kompiliert werden. Es wird dringend empfohlen, vor dem Wechsel lokal zu testen.
