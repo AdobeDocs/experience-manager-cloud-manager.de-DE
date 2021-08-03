@@ -3,7 +3,7 @@ title: Versionshinweise für 2021.6.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.6.0.
 feature: Versionshinweise
 source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '314'
 ht-degree: 100%
 
