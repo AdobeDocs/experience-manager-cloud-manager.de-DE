@@ -4,9 +4,9 @@ description: Auf dieser Seite erfahren Sie mehr über Umgebungen
 feature: Umgebungen
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: ee701dd2d0c3921455a0960cbb6ca9a3ec4793e7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '999'
-ht-degree: 66%
+ht-degree: 100%
 
 ---
 
@@ -49,11 +49,11 @@ Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https:/
 
 ## Verwenden einer bestimmten Java-Version {#using-java-version}
 
-Standardmäßig werden Projekte vom Cloud Manager-Build-Prozess mit dem Oracle 8 JDK erstellt. Kunden, die ein alternatives JDK verwenden möchten, haben zwei Optionen: Maven Toolchain und Auswahl einer alternativen JDK-Version für den gesamten Maven-Ausführungsprozess.
+Standardmäßig werden Projekte vom Cloud Manager-Build-Prozess mit dem Oracle 8 JDK erstellt. Kunden, die ein anderes JDK verwenden möchten, haben zwei Optionen: Maven Toolchains und Auswahl einer alternativen JDK-Version für den gesamten Maven-Ausführungsprozess.
 
-### Maven Toolchain {#maven-toolchains}
+### Maven Toolchains {#maven-toolchains}
 
-Das [Maven Toolchain-Plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) ermöglicht es Projekten, ein bestimmtes JDK (oder *toolchain*) auszuwählen, das im Kontext von Toolchain-fähigen Maven-Plug-ins verwendet werden soll. Dies geschieht in der `pom.xml`-Datei des Projekts, indem ein Anbieter und ein Versionswert angegeben werden. Ein Beispielabschnitt in der Datei `pom.xml` ist:
+Das [Maven Toolchain-Plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) ermöglicht es Projekten, ein bestimmtes JDK (oder *Toolchain*) auszuwählen, das im Kontext von Toolchain-fähigen Maven-Plug-ins verwendet werden soll. Dies geschieht in der `pom.xml`-Datei des Projekts, indem ein Anbieter und ein Versionswert angegeben werden. Ein Beispielabschnitt in der Datei `pom.xml` ist:
 
 ```xml
         <plugin>
@@ -80,28 +80,28 @@ Das [Maven Toolchain-Plug-in](https://maven.apache.org/plugins/maven-toolchains-
 
 Dies führt dazu, dass alle Toolchain-fähigen Maven-Plug-ins das Oracle JDK, Version 11 verwenden.
 
-Bei Verwendung dieser Methode wird Maven selbst weiterhin mit dem standardmäßigen JDK (Oracle 8) ausgeführt. Daher funktioniert das Überprüfen oder Erzwingen der Java-Version über Plug-ins wie das [Apache Maven Enforcer-Plugin](https://maven.apache.org/enforcer/maven-enforcer-plugin/) nicht und solche Plug-ins dürfen nicht verwendet werden.
+Bei Verwendung dieser Methode wird Maven selbst weiterhin mit dem standardmäßigen JDK (Oracle 8) ausgeführt. Daher funktioniert das Überprüfen oder Erzwingen der Java-Version über Plug-ins wie das [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/) nicht und solche Plug-ins dürfen nicht verwendet werden.
 
 Die derzeit verfügbaren Anbieter-/Versionskombinationen sind:
 
-* oracle 1.8
-* oracle 1.11
-* oracle 11
-* sun 1.8
-* sun 1.11
-* sun 11
-* azul 1.8
-* azul 1.11
-* azul 8
+* Oracle 1.8
+* Oracle 1.11
+* Oracle 11
+* Sun 1.8
+* Sun 1.11
+* Sun 11
+* Azul 1.8
+* Azul 1.11
+* Azul 8
 
-### JDK-Version der alternativen Maven-Ausführung {#alternate-maven}
+### Version des alternativen Maven-Ausführungs-JDK {#alternate-maven}
 
-Es ist auch möglich, Azul 8 oder Azul 11 als JDK für die gesamte Maven-Ausführung auszuwählen. Im Gegensatz zu den Toolchain-Optionen ändert dies das für alle Plug-ins verwendete JDK, es sei denn, die Toolchain-Konfiguration ist ebenfalls festgelegt. In diesem Fall wird die Toolchain-Konfiguration weiterhin für Toolchain-fähige Maven-Plug-ins angewendet. Daher funktioniert das Überprüfen und Erzwingen der Java-Version mit dem [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
+Es ist auch möglich, Azul 8 oder Azul 11 als JDK für die gesamte Maven-Ausführung auszuwählen. Im Gegensatz zu den Toolchain-Optionen ändert dies das für alle Plug-ins verwendete JDK, es sei denn, die Toolchain-Konfiguration ist ebenfalls festgelegt. In diesem Fall wird die Toolchain-Konfiguration weiterhin für Toolchain-fähige Maven-Plug-ins angewendet. Daher funktioniert in diesem Fall das Überprüfen und Erzwingen der Java-Version mit dem [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
 
 Erstellen Sie dazu eine Datei mit dem Namen `.cloudmanager/java-version` in der von der Pipeline verwendeten Git-Repository-Verzweigung. Diese Datei kann entweder den Inhalt 11 oder 8 enthalten. Alle anderen Werte werden ignoriert. Wenn 11 angegeben ist, wird Azul 11 verwendet. Wenn 8 angegeben ist, wird Azul 8 verwendet.
 
 >[!NOTE]
->In einer zukünftigen Version von Cloud Manager, die derzeit auf Oktober 2021 geschätzt wird, wird das standardmäßige JDK geändert und der Standardwert ist Azul 11. Projekte, die nicht mit Java 11 kompatibel sind, sollten diese Datei mit dem Inhalt 8 so bald wie möglich erstellen, um sicherzustellen, dass sie von diesem Wechsel nicht betroffen sind.
+>In einer zukünftigen Version von Cloud Manager, die derzeit für Oktober 2021 vorgesehen ist, wird das standardmäßige JDK geändert und das Standard-JDK wird Azul 11 sein. Projekte, die nicht mit Java 11 kompatibel sind, sollten diese Datei mit dem Inhalt 8 so bald wie möglich erstellen, um sicherzustellen, dass sie von diesem Wechsel nicht betroffen sind.
 
 
 ## Umgebungsvariablen {#environment-variables}
