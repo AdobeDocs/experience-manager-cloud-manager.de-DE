@@ -12,9 +12,9 @@ discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD-Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1320'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -169,19 +169,19 @@ Gehen Sie wie folgt vor, um Dispatcher-Ungültigmachungen zu konfigurieren:
 
 ## Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität
 
-Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Code-Qualität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
+Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **Produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Code-Qualität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
 
 ## Video-Tutorial {#video-tutorial-two}
 
-### Nicht-Produktions- und Code-Qualität-Pipelines in Cloud Manager {#non-prod-video}
+### Nicht-Produktions- und Nur-Code-Qualität-Pipelines in Cloud Manager {#non-prod-video}
 
-CI/CD-Nicht-Produktions-Pipelines sind in zwei Kategorien unterteilt: Code-Qualitäts-Pipelines und Bereitstellungs-Pipelines. Code-Qualitäts-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
+CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Code-Qualitäts-Pipelines und Bereitstellungs-Pipelines. Code-Qualitäts-Pipelines leiten den gesamten Code aus einer Git-Verzweigung, der erstellt und anhand der Code-Qualitätsprüfung von Cloud Manager geprüft werden soll.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
-1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Nicht-Produktions-Pipelines** zu.
+1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Produktionsfremde Pipelines** zu.
 
    ![](/help/using/assets/non-prod-add.png)
 
@@ -191,13 +191,13 @@ Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
    ![](assets/non-prod-pipe.png)
 
-1. Klicken Sie auf **Save** und die Pipeline wird auf der Karte auf dem Startbildschirm mit fünf Aktionen angezeigt:
+1. Klicken Sie auf **Speichern**, damit die Pipeline auf der Karte auf dem Startbildschirm mit fünf Aktionen angezeigt wird:
 
-   * **Bearbeiten**: Ermöglicht die Bearbeitung der Pipeline-Einstellungen.
-   * **Details** : Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden).
-   * **Erstellen**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann.
-   * **Zugriff auf Repo Info** : Ermöglicht dem Benutzer, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlichen Informationen abzurufen
-   * **Weitere Informationen** : Navigiert zum Verständnis der Dokumentation zur CI/CD-Pipeline.
+   * **Bearbeiten**: Ermöglicht die Bearbeitung der Pipeline-Einstellungen
+   * **Details**: Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden)
+   * **Erstellen**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann
+   * **Auf Repository-Informationen zugreifen**: Ermöglicht es dem Benutzer, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlichen Informationen abzurufen
+   * **Weitere Informationen**: Führt zu weiteren Informationen über die Dokumentation zur CI/CD-Pipeline.
 
       ![](assets/prod-one.png)
    >[!NOTE]
