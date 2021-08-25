@@ -1,11 +1,11 @@
 ---
 title: Versionshinweise für 2021.8.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.8.0.
-feature: Versionshinweise
+feature: Release Information
 source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
 workflow-type: tm+mt
-source-wordcount: '173'
-ht-degree: 53%
+source-wordcount: '171'
+ht-degree: 100%
 
 ---
 
@@ -19,18 +19,18 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Clo
 ## Veröffentlichungsdatum {#release-date}
 
 Die [!UICONTROL Cloud Manager]-Version 2021.8.0 wurde am 12. August 2021 veröffentlicht.
-Die nächste Version ist für den 9. September 2021 geplant.
+Die nächste Version wird am 9. September 2021 veröffentlicht.
 
 ## Neue Funktionen {#whats-new}
 
 * Self-Service-Funktion, mit der Benutzer über die Cloud Manager-Benutzeroberfläche mehrere Repositorys erstellen und verwalten können.
 
-* SonarQube liest unnötigerweise Git-Verlaufsdaten. Auf großen Code-Basis könnte dies zu einer unnötigen Build-Leistungsbeeinträchtigung führen.
+* SonarQube hat unnötigerweise Git-Verlaufsdaten gelesen. Auf großen Code-Basien konnte dies zu einer unnötigen Build-Leistungsbeeinträchtigung führen.
 
-* Es ist jetzt eine API verfügbar, um den Maven-Abhängigkeitscache pro Pipeline ungültig zu machen.
+* Es ist jetzt eine API verfügbar, um den Maven-Abhängigkeits-Cache pro Pipeline zu invalidieren.
 
 * Der von Cloud Manager verwendete AEM-Projektarchetyp wurde auf Version 29 aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Wenn eine Pipeline gelegentlich aus irgendeinem Grund zweimal ausgelöst wird, führt dies dazu, dass eine der Ausführungen fehlschlägt, wobei der Fehler *Pipeline-Ausführungsstatus* nicht aktualisiert werden kann.
+* Fehlerkorrektur – Wenn eine Pipeline gelegentlich aus irgendeinem Grund zweimal ausgelöst wird, führt dies nicht mehr dazu, dass eine der Ausführungen mit dem Fehler *Pipeline-Ausführungsstatus konnte nicht aktualisiert werden* fehlschlägt.
