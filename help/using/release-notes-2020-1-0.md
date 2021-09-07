@@ -1,20 +1,20 @@
 ---
 title: Versionshinweise für 2020.1.0
-seo-title: Versionshinweise für AEM Cloud Manager 2020.1.0
+seo-title: AEM Cloud Manager Release Notes for 2020.1.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2020.1.0
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2020.1.0
-feature: Versionshinweise
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2020.1.0
+feature: Release Information
 exl-id: 105e526f-b3c6-49d2-bb4d-d19a5afad6cc
 source-git-commit: f4b0957ce2dda55ad9b0d7a736263bece54d2139
-workflow-type: tm+mt
-source-wordcount: '157'
+workflow-type: ht
+source-wordcount: '138'
 ht-degree: 100%
 
 ---
 
 # Versionshinweise für 2020.1.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie die allgemeinen Versionshinweise für die [!UICONTROL Cloud Manager]-Version 2020.1.0 sowie Aktualisierungen für den Zugriff auf Git-Anmeldeinformationen und die Anmeldung hinzugefügt.
+Im folgenden Abschnitt finden Sie die allgemeinen Versionshinweise für die [!UICONTROL Cloud Manager]-Version 2020.1.0 sowie Aktualisierungen für den Zugriff auf Git-Anmeldeinformationen und die Anmeldung.
 
 ## Veröffentlichungsdatum {#release-date}
 
