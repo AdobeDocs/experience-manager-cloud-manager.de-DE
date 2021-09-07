@@ -9,9 +9,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
 source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '280'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -51,10 +51,10 @@ ht-degree: 97%
    + [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Benachrichtigungen](notifications.md)
    + [Benutzerspezifische Regeln für Code-Qualität](custom-code-quality-rules.md)
-+ Code verwalten {#managing-code}
++ Verwalten von Code {#managing-code}
    + [Umgang mit Maven-Projektversionen](activating-maven-project.md)
    + [Repositorys in Cloud Manager](cloud-manager-repositories.md)
-   + [Zugreifen auf Repositorys](accessing-repos.md)
+   + [Zugriff auf Repositorys](accessing-repos.md)
    + [Integrieren mit Git](setup-cloud-manager-git-integration.md)
    + [Arbeiten mit Git-Repositorys aus mehreren Quellen](/help/using/working-with-multiple-source-git-repos.md)
 + Assistent für Produktaktualisierungen {#product-update-wizard}
