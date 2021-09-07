@@ -1,12 +1,12 @@
 ---
 title: Einrichten des Projekts
 description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
-feature: Erste Schritte, Produktionsprogramme
+feature: Getting Started, Production Programs
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 2a253abb98fa096f9f1c07bac94804849fad2ebb
-workflow-type: tm+mt
-source-wordcount: '884'
-ht-degree: 96%
+workflow-type: ht
+source-wordcount: '880'
+ht-degree: 100%
 
 ---
 
@@ -17,7 +17,7 @@ ht-degree: 96%
 Damit vorhandene AEM-Projekte erfolgreich in Cloud Manager erstellt und bereitgestellt werden können, müssen einige grundlegende Regeln berücksichtigt werden:
 
 * Projekte müssen mit Apache Maven erstellt werden.
-* Im Stammverzeichnis des Git-Repositorys muss eine Datei *pom.xml* vorhanden sein. Diese *pom.xml*-Datei kann ggf. auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.) wie nötig.
+* Im Stammverzeichnis des Git-Repositorys muss eine *pom.xml*-Datei vorhanden sein. Diese *pom.xml*-Datei kann ggf. auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.) wie nötig.
 
 * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren *pom.xml*-Dateien hinzufügen. Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
 * Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im *ZIP*-Format suchen, die in einem Verzeichnis mit dem Namen *target* enthalten sind. Eine beliebige Anzahl von Untermodulen kann Inhaltspakete produzieren.
@@ -108,13 +108,13 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
 ## Unterstützung für kennwortgeschütztes Maven-Repository {#password-protected-maven-repositories}
 
 >[!NOTE]
->Artefakte aus einem kennwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht alle Qualitätsregeln durchläuft, die in den Quality Gates von Cloud Manager implementiert sind. Daher sollten sie nur in seltenen Fällen und nur für Code verwendet werden, der nicht an AEM gebunden ist. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquell-Code bereitzustellen.
+>Artefakte aus einem passwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht die in den Quality Gates von Cloud Manager implementierenten Qualitätsregeln durchläuft. Daher sollten sie nur in seltenen Fällen und nur für Code verwendet werden, der nicht an AEM gebunden ist. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquell-Code bereitzustellen.
 
-Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/using/build-environment-details.md#pipeline-variables) an und verweisen Sie dann in einer Datei im git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html). Wenn der Build-Vorgang von Cloud Manager gestartet wird, wird das `<servers>`-Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml`-Standarddatei zusammengeführt. Server-IDs, die mit `adobe` und `cloud-manager` beginnen, gelten als reserviert und sollten nicht von kundenspezifischen Servern verwendet werden. Server-IDs, die **nicht** mit eine, dieser Praefice oder der Standard-ID `central` übereinstimmen, werden vom Cloud Manager niemals gespiegelt. Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>`- und/oder `<pluginRepository>`-Elements in der `pom.xml`-Datei referenziert. Im Allgemeinen wären diese `<repository>`- und/oder `<pluginRepository>`-Elemente in einem [Cloud Manager-spezifischen Profil](#activating-maven-profiles-in-cloud-manager) enthalten, auch wenn dies nicht unbedingt erforderlich ist.
+Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/using/build-environment-details.md#pipeline-variables) an und verweisen Sie dann in einer Datei im git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html). Wenn der Build-Vorgang von Cloud Manager gestartet wird, wird das `<servers>`-Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml`-Standarddatei zusammengeführt. Server-IDs, die mit `adobe` und `cloud-manager` beginnen, gelten als reserviert und sollten nicht von kundenspezifischen Servern verwendet werden. Server-IDs, die **nicht** mit einem dieser Präfixe oder der Standard-ID `central` übereinstimmen, werden von Cloud Manager niemals gespiegelt. Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>`- und/oder `<pluginRepository>`-Elements in der `pom.xml`-Datei referenziert. Im Allgemeinen wären diese `<repository>`- und/oder `<pluginRepository>`-Elemente in einem [Cloud Manager-spezifischen Profil](#activating-maven-profiles-in-cloud-manager) enthalten, auch wenn dies nicht unbedingt erforderlich ist.
 
 Beispiel: Das Repository befindet sich unter https://repository.myco.com/maven2, der von Cloud Manager zu verwendende Benutzername lautet `cloudmanager` und das Kennwort lautet `secretword`.
 
-Legen Sie zunächst in der Pipeline das Kennwort als geheim fest:
+Legen Sie zunächst in der Pipeline das Kennwort als Geheimnis fest:
 
 `$ aio cloudmanager:set-pipeline-variables PIPELINEID --secret CUSTOM_MYCO_REPOSITORY_PASSWORD secretword`
 
@@ -181,7 +181,7 @@ Verweisen Sie schließlich auf die Server-ID in der `pom.xml`-Datei:
 
 Es empfiehlt sich, die Java-Quellen zusammen mit der Binärdatei in einem Maven-Repository bereitzustellen.
 
-Konfigurieren Sie das Maven-Quell-Plug-in in Ihrem Projekt:
+Konfigurieren Sie das maven-source-plugin in Ihrem Projekt:
 
 ```xml
         <plugin>
@@ -202,7 +202,7 @@ Konfigurieren Sie das Maven-Quell-Plug-in in Ihrem Projekt:
 
 Es empfiehlt sich, die gesamte Projektquelle zusammen mit den Binärdaten in einem Maven-Respository bereitzustellen. Dies erlaubt die Neuerstellung des exakten Artefakts.
 
-Konfigurieren das Maven-Zusammenführungs-Plug-in in Ihrem Projekt:
+Konfigurieren Sie das maven-assembly-plugin in Ihrem Projekt:
 
 ```xml
         <plugin>
@@ -230,7 +230,7 @@ Konfigurieren das Maven-Zusammenführungs-Plug-in in Ihrem Projekt:
 In Cloud Manager können Builds eine beliebige Anzahl von Inhaltspaketen generieren.
 Aus vielerlei Gründen kann es sinnvoll sein, ein Inhaltspaket zu erstellen, es jedoch nicht bereitzustellen. Dies kann nützlich sein, etwa für Inhaltspakete, die nur zum Testen erstellt wurden, oder für Pakete, die in einem anderen Schritt im Build-Prozess (also als Unterpaket eines anderen Pakets) neu verpackt werden.
 
-Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschaften erstellter Inhaltspakete nach einer Eigenschaft namens ***cloudManagerTarget***. Wenn diese Eigenschaft auf „Ohne“ festgelegt ist, wird das Paket übersprungen und nicht bereitgestellt. Der Mechanismus zum Festlegen dieser Eigenschaft hängt davon ab, wie der Build das Inhaltspaket erzeugt. Mit dem filevault-maven-Plugin würden Sie beispielsweise das Plugin wie folgt konfigurieren:
+Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschaften erstellter Inhaltspakete nach einer Eigenschaft namens ***cloudManagerTarget***. Wenn diese Eigenschaft auf „Ohne“ festgelegt ist, wird das Paket übersprungen und nicht bereitgestellt. Der Mechanismus zum Festlegen dieser Eigenschaft hängt davon ab, wie der Build das Inhaltspaket erzeugt. Mit dem filevault-maven-plugin würden Sie beispielsweise das Plug-in wie folgt konfigurieren:
 
 ```xml
         <plugin>
@@ -246,7 +246,7 @@ Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschafte
         </plugin>
 ```
 
-Mit dem content-package-maven-Plugin ist es ähnlich:
+Mit dem content-package-maven-plugin ist es ähnlich:
 
 ```xml
         <plugin>
@@ -264,4 +264,4 @@ Mit dem content-package-maven-Plugin ist es ähnlich:
 
 ## Entwickeln von Code basierend auf Best Practices {#develop-your-code-based-on-best-practices}
 
-Die Entwicklungs- und Beratungsteams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler zusammengestellt](https://helpx.adobe.com/de/experience-manager/6-4/sites/developing/using/best-practices.html).
+Die Entwicklungs- und Beratungs-Teams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler](https://helpx.adobe.com/de/experience-manager/6-4/sites/developing/using/best-practices.html) zusammengestellt.
