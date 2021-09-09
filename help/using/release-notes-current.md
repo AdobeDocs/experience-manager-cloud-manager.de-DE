@@ -1,36 +1,39 @@
 ---
-title: Versionshinweise für 2021.8.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.8.0.
+title: Versionshinweise für 2021.9.0
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.9.0
 feature: Release Information
-source-git-commit: c4deb06615652736ff7584566507a2b42a88bfb1
-workflow-type: ht
-source-wordcount: '171'
-ht-degree: 100%
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
-# Versionshinweise für 2021.8.0 {#release-notes-for}
+# Versionshinweise für 2021.9.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] Version 2021.8.0.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] Version 2021.9.0.
 
 >[!NOTE]
 >Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=de#getting-access) finden Sie die neuesten Versionshinweise zu Cloud Manager in AEM as a Cloud Service.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2021.8.0 wurde am 12. August 2021 veröffentlicht.
-Die nächste Version wird am 9. September 2021 veröffentlicht.
+Die [!UICONTROL Cloud Manager]-Version 2021.8.0 wurde am 09. September 2021 veröffentlicht.
+Die nächste Version ist für den 7. Oktober 2021 geplant.
 
 ## Neue Funktionen {#whats-new}
 
-* Self-Service-Funktion, mit der Benutzer über die Cloud Manager-Benutzeroberfläche mehrere Repositorys erstellen und verwalten können.
+* Die Programmkarten auf der Landingpage von Cloud Manager und das zugehörige Erlebnis wurden aktualisiert.
 
-* SonarQube hat unnötigerweise Git-Verlaufsdaten gelesen. Auf großen Code-Basen konnte dies zu einer unnötigen Build-Leistungsbeeinträchtigung führen.
+* Das Protokoll &quot;Codequalitätsschritt&quot;enthält jetzt ausführliche Protokollierungsinformationen zum OakPal-Scanprozess.
 
-* Es ist jetzt eine API verfügbar, um den Maven-Abhängigkeits-Cache pro Pipeline zu invalidieren.
+* Die Menüoptionen der Aktivitätsseite enthalten jetzt eine Option zum Herunterladen von Protokollen für abgeschlossene Code-Generator-Ausführungen. Wenn Sie diese Option auswählen, wird das Protokoll des Build-Schritts heruntergeladen.
 
-* Der von Cloud Manager verwendete AEM-Projektarchetyp wurde auf Version 29 aktualisiert.
+* Wenn Sie direkt auf die Programmkarte klicken, navigieren Sie jetzt zur Übersichtsseite von Cloud Manager.
+
+* Der von Cloud Manager verwendete AEM-Projektarchetyp wurde auf Version 30 aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Wenn eine Pipeline gelegentlich aus irgendeinem Grund zweimal ausgelöst wird, führt dies nicht mehr dazu, dass eine der Ausführungen mit dem Fehler *Pipeline-Ausführungsstatus konnte nicht aktualisiert werden* fehlschlägt.
+* Falsche URL wurde kopiert, wenn die Menüoption URL kopieren auf dem Bildschirm Repositorys ausgewählt wurde.
