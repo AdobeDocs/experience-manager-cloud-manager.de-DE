@@ -3,9 +3,9 @@ title: Versionshinweise für 2021.8.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.8.0.
 feature: Release Information
 source-git-commit: 3fccb0b577662ebc12b65777cbf9624e06d4259d
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '164'
+ht-degree: 100%
 
 ---
 
