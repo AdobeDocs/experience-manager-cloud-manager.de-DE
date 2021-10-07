@@ -1,10 +1,11 @@
 ---
 title: Cloud Manager-Repositorys
 description: Cloud Manager-Repositorys
-source-git-commit: 7bda34be143d2d7587e61c09dab642f3419dfad9
-workflow-type: ht
-source-wordcount: '420'
-ht-degree: 100%
+exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
+source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
+workflow-type: tm+mt
+source-wordcount: '425'
+ht-degree: 89%
 
 ---
 
@@ -51,7 +52,7 @@ Git-Untermodule können verwendet werden, um den Inhalt mehrerer Verzweigungen z
 $ git submodule update --init
 ```
 
-Dadurch wird jedes Untermodul in das entsprechende Verzeichnis eingecheckt. Diese Technik ist eine potenzielle Alternative zu https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html?lang=de für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
+Dadurch wird jedes Untermodul in das entsprechende Verzeichnis eingecheckt. Diese Technik ist eine potenzielle Alternative zum [Arbeiten mit mehreren Quell-Git-Repositorys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html) für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
 
 Angenommen, es gibt drei Repositorys, die jeweils eine einzige Verzweigung mit dem Namen „main“ enthalten. Im „primären“ Repository, d. h. dem in den Pipelines konfigurierten, verfügt die Hauptverzweigung über eine „pom.xml“-Datei, in der die in den beiden anderen Repositorys enthaltenen Projekte deklariert werden:
 
@@ -101,4 +102,3 @@ Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 * Die Git-URL muss sich genau an die oben beschriebene Syntax halten. Betten Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
 * Es werden nur Untermodule im Stammverzeichnis der Verzweigung unterstützt.
 * Für bestimmte Git-Commits werden Git-Untermodulverweise gespeichert. Wenn also Änderungen am Untermodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden, z. B. mithilfe von `git submodule update --remote`.
-
