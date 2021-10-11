@@ -11,9 +11,9 @@ discoiquuid: 2221d1d5-dbc2-4175-8371-60344f932a82
 feature: Getting Started
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d582f3681cc1b14fddee8decc9229adb5f75a6d7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '211'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Sobald Sie die allgemeinen Konfigurationen für [!UICONTROL Cloud Manager] einge
 
 1. Melden Sie sich bei **Adobe [!UICONTROL Experience Cloud]** an und sehen Sie sich die Liste der **Programme** an.
 
-1. Wählen Sie das Programm aus (z. B. **We.Retail Global**). Sobald Ihre Programmkarte auf der Landingpage angezeigt wird, wählen Sie die **...** , um die für Sie verfügbaren Menüoptionen anzuzeigen.   Wählen Sie **Cloud Manager** aus, um zur Seite **Übersicht** von Cloud Manager zu navigieren.
+1. Wählen Sie das Programm aus (z. B. **We.Retail Global**). Sobald Ihre Programmkarte auf der Landingpage angezeigt wird, wählen Sie **...**, um die für Sie verfügbaren Menüoptionen anzuzeigen.   Wählen Sie **Cloud Manager** aus, um zur Seite **Übersicht** von Cloud Manager zu navigieren.
 
    ![](assets/navigate-cm1.png)
 
