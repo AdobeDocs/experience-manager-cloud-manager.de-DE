@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+source-git-commit: e748383fb627ac6ecf69f1b6e313bb5710fbf444
 workflow-type: tm+mt
-source-wordcount: '1390'
+source-wordcount: '1391'
 ht-degree: 85%
 
 ---
@@ -215,13 +215,14 @@ Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bear
 
 1. Wählen Sie die produktionsfremde Pipeline aus und klicken Sie auf **...**. Klicken Sie auf **Bearbeiten**, wie in der folgenden Abbildung dargestellt.
 
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit1.png)
 
-1. Das Dialogfeld **Produktions-Pipeline bearbeiten** wird angezeigt.
+1. Das Dialogfeld **Produktions-Pipeline bearbeiten** wird angezeigt, in dem Sie den **Pipeline-Namen**, **Repository**, **Git-Verzweigung**, **Bereitstellungs-Trigger** und **Verhalten bei wichtigen Metriken ändern&lt;a 11/>.**
 
-   1. Auf der Registerkarte **Configuration** können Sie den **Pipeline-Namen**, **Deployment Trigger** und **Wichtiges Verhalten bei Metrikfehlern** aktualisieren.
+   ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit2.png)
 
-      >[!NOTE]
-      >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+   >[!NOTE]
+   >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
 
 
 1. Klicken Sie auf **Aktualisieren** , sobald Sie die Bearbeitung der produktionsfremden Pipeline abgeschlossen haben.
