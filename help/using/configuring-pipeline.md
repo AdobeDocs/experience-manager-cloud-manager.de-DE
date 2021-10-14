@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: bdbee51ff0a61c2a72ff7ae3a742e2dd817c671a
+source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
 workflow-type: tm+mt
-source-wordcount: '1459'
-ht-degree: 63%
+source-wordcount: '1499'
+ht-degree: 62%
 
 ---
 
@@ -98,7 +98,9 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
       * **Nach Staging-Implementierung genehmigen** funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, findet aber unmittelbar nach dem Schritt der Staging-Bereitstellung statt (d. h. bevor Tests durchgeführt werden). Das unterscheidet sich von der Genehmigung vor der Produktionsbereitstellung, die nach Abschluss aller Tests erfolgt.
 
       * **Lastenausgleich überspringen**
-   1. Wählen Sie die **Dispatcher-Konfigurationen** für die Staging-Umgebung aus.
+   1. Wählen Sie die **Dispatcher-Konfigurationen** für die Staging-Umgebung aus. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
    1. Wählen Sie die **Bereitstellungsoptionen** für die Produktion aus. Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung. Die drei verfügbaren Optionen sind:
 
@@ -114,7 +116,9 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
          >Wenn die Option **Geplant** ausgewählt ist, können Sie Ihre Produktionsbereitstellung für die Pipeline **nach** der Staging-Bereitstellung (und nach der **GoLive-Genehmigung verwenden**, sofern diese Option aktiviert ist) planen, um auf einen Zeitplan zu warten. Der Benutzer kann die Produktionsbereitstellung aber auch sofort ausführen.
          >
          >Unter [Bereitstellen Ihres Codes](deploying-code.md) erfahren Sie, wie Sie den Bereitstellungsplan festlegen oder den Code sofort in der Produktionsumgebung ausführen.
-   1. Richten Sie die **Dispatcher-Konfigurationen** für die Produktion ein.
+   1. Richten Sie die **Dispatcher-Konfigurationen** für die Produktion ein. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
+
+      ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
 
       Als Bereitstellungs-Manager haben Sie die Möglichkeit, eine Reihe von Inhaltspfaden zu konfigurieren, die entweder **ungültig gemacht** oder aus dem AEM Dispatcher-Cache für Veröffentlichungsinstanzen **entfernt** werden, wenn Sie die Pipeline einrichten oder bearbeiten.
 
