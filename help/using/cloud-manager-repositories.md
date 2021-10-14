@@ -2,10 +2,10 @@
 title: Cloud Manager-Repositorys
 description: Cloud Manager-Repositorys
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 2a1f471f2e4148a424688ab9858c534935c3fe69
+source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 89%
+source-wordcount: '443'
+ht-degree: 86%
 
 ---
 
@@ -102,3 +102,4 @@ Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 * Die Git-URL muss sich genau an die oben beschriebene Syntax halten. Betten Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
 * Es werden nur Untermodule im Stammverzeichnis der Verzweigung unterstützt.
 * Für bestimmte Git-Commits werden Git-Untermodulverweise gespeichert. Wenn also Änderungen am Untermodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden, z. B. mithilfe von `git submodule update --remote`.
+* Sofern nicht anders erforderlich, wird dringend empfohlen, &quot;flache&quot;Untermodule zu verwenden. Führen Sie dazu `git config -f .gitmodules submodule.<submodule path>.shallow true` für jedes Untermodul aus.

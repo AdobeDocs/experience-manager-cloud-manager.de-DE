@@ -1,19 +1,19 @@
 ---
 title: Bereitstellen Ihres Codes
-seo-title: Bereitstellen Ihres Codes
+seo-title: Deploy your Code
 description: Bietet eine Übersicht über den Bereitstellungsprozess in Cloud Manager
-seo-description: Weitere Informationen zur Bereitstellung von Code nach der Konfiguration der Pipeline (Repository, Umgebung und Testing-Umgebung)
+seo-description: Learn how to deploy your code once you have configured your pipeline (repository, environment, and testing environment)
 uuid: 4e3807e1-437e-4922-ba48-0bcadf293a99
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
-feature: Code-Bereitstellung
+feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1220'
+ht-degree: 81%
 
 ---
 
@@ -164,3 +164,32 @@ Produktionsimplementierungen nutzen im Allgemeinen die oben beschriebenen Schrit
 1. AEM-Pakete werden in publish2 und das Dispatcher-Paket parallel in dispatcher2 bereitgestellt, der Dispatcher-Cache wird geleert
 1. dispatcher2 wird in den Lastenausgleich zurückgesetzt
 Dieser Vorgang wird fortgesetzt, bis die Implementierung alle Publisher und Dispatcher in der Topologie erreicht hat.
+
+## Ausführungsmodus der Notfallpipeline {#emergency-pipeline}
+
+In kritischen Situationen müssen Adobe Managed Services-Kunden möglicherweise Codeänderungen in ihrer Staging- und Produktionsumgebung bereitstellen, ohne auf die Ausführung eines vollständigen Cloud Manager-Testzyklus zu warten.
+
+Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline im Modus *Emergency* ausgeführt werden. Wenn dieser Modus verwendet wird, werden die Sicherheits- und Leistungstestschritte nicht ausgeführt. alle anderen Schritte, einschließlich aller konfigurierten Validierungsschritte, wie im normalen Pipeline-Ausführungsmodus ausgeführt werden.
+
+>[!NOTE]
+>Die Notfallfunktion des Pipeline-Ausführungsmodus wird vom Customer Success Engineer auf Programmbasis aktiviert.
+
+### Verwenden des Ausführungsmodus der Notfallpipeline {#using-emergency-pipeline}
+
+Wenn Sie eine Produktions-Pipeline ausführen und diese Funktion aktiviert wurde, können Sie die Ausführung im normalen oder im Notfall über das Dialogfeld starten, wie in der folgenden Abbildung dargestellt.
+
+![](assets/execution-emergency1.png)
+
+Darüber hinaus zeigen die Breadcrumbs oben im Bildschirm auf der Seite mit Details zur Pipeline-Ausführung für einen Ausführungsablauf im Notfallmodus an, dass der Notfallmodus für diese bestimmte Ausführung verwendet wurde.
+
+![](assets/execution-emergency2.png)
+
+
+Die Erstellung einer Pipeline-Ausführung in diesem Notmodus kann auch über die Cloud Manager-API oder die CLI erfolgen. Um eine Ausführung im Notfallmodus zu starten, senden Sie mit dem Abfrageparameter `?pipelineExecutionMode=EMERGENCY` eine PUT-Anfrage an den Ausführungsendpunkt der Pipeline oder bei Verwendung der CLI:
+
+```
+$ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
+```
+
+>[!IMPORTANT]
+>Die Verwendung des Flags `--emergency` erfordert möglicherweise eine Aktualisierung auf die neueste `aio-cli-plugin-cloudmanager`-Version.
