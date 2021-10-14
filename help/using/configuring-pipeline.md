@@ -1,20 +1,20 @@
 ---
 title: Konfigurieren Ihrer CI/CD-Pipeline
-seo-title: Konfigurieren Ihrer CI/CD-Pipeline
+seo-title: Configure your CI/CD Pipeline
 description: Auf dieser Seite erfahren Sie, wie Sie Ihre Pipeline-Einstellungen in Cloud Manager konfigurieren.
-seo-description: 'Bevor Sie mit der Bereitstellung Ihres Codes beginnen können, müssen Sie Ihre Pipeline-Einstellungen in AEM Cloud Manager konfigurieren. '
+seo-description: Before you start to deploy your code, you must configure your pipeline settings from the AEM Cloud Manager.
 uuid: 35fd56ac-dc9c-4aca-8ad6-36c29c4ec497
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
-feature: CI-CD-Pipeline
+feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1c103b1c43a1e5fe7a6fa27110fc692bba6fb8b2
-workflow-type: ht
-source-wordcount: '1320'
-ht-degree: 100%
+source-git-commit: dde991d2dbd02f4b4145f79d67b6d2f1244e5648
+workflow-type: tm+mt
+source-wordcount: '1390'
+ht-degree: 85%
 
 ---
 
@@ -179,30 +179,53 @@ CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Code-Quali
 
 >[!VIDEO](https://video.tv.adobe.com/v/26316/)
 
+### Hinzufügen einer produktionsfremden Pipeline {#add-non-production-pipeline}
+
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
-1. Greifen Sie im Cloud Manager-Startbildschirm auf die Kachel **Produktionsfremde Pipelines** zu.
+1. Greifen Sie über den Cloud Manager-Startbildschirm auf die Karte **Pipelines** zu. Klicken Sie auf **+Add** und wählen Sie **Add Non-Production Pipeline** aus.
 
-   ![](/help/using/assets/non-prod-add.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. Klicken Sie auf die Schaltfläche **Hinzufügen**, um den Pipeline-Namen, den Pipeline-Typ und die Git-Verzweigung anzugeben.
+1. **Das Dialogfeld Nicht-Produktions-**  Pipelineprojekt hinzufügen wird angezeigt. Wählen Sie den Pipeline-Typ aus, den Sie erstellen möchten, entweder **Code Quality Pipeline** oder **Deployment Pipeline**.
 
-   Außerdem können Sie in den Pipeline-Optionen Implementierungsauslöser und das Verhalten bei wichtigen Fehlern festlegen.
+   Darüber hinaus können Sie **Deployment Trigger** und **Wichtiges Fehlerverhalten** unter **Bereitstellungsoptionen** einrichten. Klicken Sie auf **Weiter**.
 
-   ![](assets/non-prod-pipe.png)
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
-1. Klicken Sie auf **Speichern**, damit die Pipeline auf der Karte auf dem Startbildschirm mit fünf Aktionen angezeigt wird:
 
-   * **Bearbeiten**: Ermöglicht die Bearbeitung der Pipeline-Einstellungen
-   * **Details**: Zeigt die letzte Pipeline-Ausführung an (sofern vorhanden)
-   * **Erstellen**: Wechselt zur Ausführungsseite, von der die Pipeline ausgeführt werden kann
-   * **Auf Repository-Informationen zugreifen**: Ermöglicht es dem Benutzer, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlichen Informationen abzurufen
+1. Die neu erstellte Nicht-Produktions-Pipeline wird jetzt auf der Karte **Pipelines** angezeigt.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add4.png)
+
+
+   Die Pipeline wird auf der Karte auf dem Startbildschirm mit drei Aktionen angezeigt, wie unten dargestellt:
+
+   * **Hinzufügen**  - ermöglicht das Hinzufügen einer neuen Pipeline.
+   * **Auf Repository-Informationen zugreifen**: Ermöglicht es dem Benutzer, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlichen Informationen abzurufen.
    * **Weitere Informationen**: Führt zu weiteren Informationen über die Dokumentation zur CI/CD-Pipeline.
 
-      ![](assets/prod-one.png)
-   >[!NOTE]
-   >
-   >Während die Pipeline ausgeführt wird, wird der aktuelle Schritt angezeigt und nur die Aktion **Details** ist verfügbar.
+### Bearbeiten einer produktionsfremden Pipeline {#editing-nonprod-pipeline}
+
+Sie können die Pipeline-Konfigurationen auf der Seite **Pipelines-Karte** von **Programmübersicht** bearbeiten.
+
+Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bearbeiten:
+
+1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+
+1. Wählen Sie die produktionsfremde Pipeline aus und klicken Sie auf **...**. Klicken Sie auf **Bearbeiten**, wie in der folgenden Abbildung dargestellt.
+
+
+1. Das Dialogfeld **Produktions-Pipeline bearbeiten** wird angezeigt.
+
+   1. Auf der Registerkarte **Configuration** können Sie den **Pipeline-Namen**, **Deployment Trigger** und **Wichtiges Verhalten bei Metrikfehlern** aktualisieren.
+
+      >[!NOTE]
+      >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+
+
+1. Klicken Sie auf **Aktualisieren** , sobald Sie die Bearbeitung der produktionsfremden Pipeline abgeschlossen haben.
+
 
 ## Die nächsten Schritte {#the-next-steps}
 
