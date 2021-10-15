@@ -11,9 +11,9 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: fd172a7168074630e85f3b110e032f783d39ddca
+source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
 workflow-type: tm+mt
-source-wordcount: '1499'
+source-wordcount: '1486'
 ht-degree: 62%
 
 ---
@@ -158,29 +158,19 @@ Gehen Sie wie folgt vor, um die konfigurierte Pipeline zu bearbeiten:
 
 1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Bearbeiten**, wie in der folgenden Abbildung dargestellt.
 
+   ![](/help/using/assets/configure-pipelines/edit-prod1.png)
 
 1. Das Dialogfeld **Produktions-Pipeline bearbeiten** wird angezeigt.
 
-   1. Auf der Registerkarte **Configuration** können Sie den **Pipeline-Namen**, **Deployment Trigger** und **Wichtiges Verhalten bei Metrikfehlern** aktualisieren.
+   1. Auf der Registerkarte **Configuration** können Sie den **Pipeline-Namen**, **Repository**, **Git-Verzweigung**, **Deployment-Trigger**, **Wichtiges Fehlerverhalten bei Metriken** aktualisieren. a12/>Bereitstellungsoptionen **und** Dispatcher-Konfigurationen **.**
 
       >[!NOTE]
       >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
 
 
-   1. Auf der Registerkarte **Quelle** können Sie die Option **Pause vor der Bereitstellung in der Produktion** und die Option **Geplant** unter **Produktionsbereitstellungsoptionen** aktivieren oder deaktivieren.
-
-
-   1. Mit der Option **Erlebnisprüfung** können Sie neue Seiten aktualisieren oder hinzufügen.
-
+   1. Der Tab **Staging-Tests** bietet Ihnen eine Option, Ihre Optionen aus **Sites-Inhaltsbereitstellung/dezentrales Lastgewicht** und **Asset-Leistungstestverteilung** erneut auszuwählen.
 
 1. Klicken Sie auf **Aktualisieren** , sobald Sie die Pipeline bearbeitet haben.
-
-1. Klicken Sie auf **Pipeline einrichten**, um Ihre Pipeline einzurichten und zu konfigurieren.
-
-   ![](assets/Setup-Pipeline.png)
-
-
-
 
 ## Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität
 
