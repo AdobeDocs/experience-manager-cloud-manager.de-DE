@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
+source-git-commit: 9509f83f3cecbeaa81543e3c1f8ec33028009e6a
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 56%
@@ -25,14 +25,6 @@ ht-degree: 56%
 
 Auf der folgenden Seite wird beschrieben, wie Sie die **Pipeline** konfigurieren. Weitere grundlegende Informationen zur Funktionsweise der Pipeline finden Sie unter [Übersicht zur CI/CD-Pipeline](ci-cd-pipeline.md).
 
-## Video-Tutorial {#video-tutorial-one}
-
-### Konfigurieren von Pipelines in Cloud Manager {#config-pipeline-video}
-
-Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
-
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
-
 
 ## Wissenswertes zum Ablauf {#understanding-the-flow}
 
@@ -43,6 +35,14 @@ Der Implementierungs-Manager ist für die Einrichtung der Pipeline verantwortlic
 * Definition des Auslösers, der die Pipeline startet
 * Definition der Parameter zur Steuerung der Produktionsbereitstellung
 * Konfiguration der Leistungstestparameter
+
+## Video-Tutorial {#video-tutorial-one}
+
+### Konfigurieren von Pipelines in Cloud Manager {#config-pipeline-video}
+
+Die Konfiguration der CI/CD-Produktions-Pipeline definiert den Auslöser, der die Pipeline initiiert, sowie Parameter zur Steuerung der Produktionsbereitstellung und Leistungstestparameter.
+
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
 
 ## Einrichten der Pipeline {#setting-up-the-pipeline}
 
@@ -56,7 +56,7 @@ Bevor Sie Code bereitstellen, müssen Sie Ihre Pipelineeinstellungen über [!UIC
 >
 >Sie können die Pipelineeinstellungen nach der Ersteinrichtung ändern.
 
-## Hinzufügen einer neuen Produktions-Pipeline über die Pipelines-Karte {#adding-production-pipeline}
+### Hinzufügen einer neuen Produktions-Pipeline über die Pipelines-Karte {#adding-production-pipeline}
 
 Sobald Sie Ihr Programm eingerichtet haben und über mindestens eine Umgebung mit der [!UICONTROL Cloud Manager] -Benutzeroberfläche verfügen, können Sie eine Produktions-Pipeline hinzufügen.
 
