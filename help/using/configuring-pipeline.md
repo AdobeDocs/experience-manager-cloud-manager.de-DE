@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
+source-git-commit: 1e3dc17d28ab69dcd6b2337280bb38ba07352beb
 workflow-type: tm+mt
-source-wordcount: '1737'
-ht-degree: 59%
+source-wordcount: '1842'
+ht-degree: 56%
 
 ---
 
@@ -199,6 +199,9 @@ Sie können die Produktions-Pipeline aus der Pipelines-Karte löschen:
 
    ![](/help/using/assets/configure-pipelines/prod-delete.png)
 
+   >[!NOTE]
+   >Ein Benutzer mit der Rolle &quot;Bereitstellungsmanager&quot;kann die Produktions-Pipeline jetzt über die Option **Löschen** auf der Pipeline-Karte selbstständig löschen.
+
 ## Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität
 
 Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **Produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Code-Qualität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
@@ -269,6 +272,28 @@ Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bear
 
 
 1. Klicken Sie auf **Aktualisieren** , sobald Sie die Bearbeitung der produktionsfremden Pipeline abgeschlossen haben.
+
+### Zusätzliche produktionsfremde Pipelineaktionen {#additional-nonprod-actions}
+
+#### Ausführen einer produktionsfremden Pipeline {#run-nonprod}
+
+Sie können die Produktions-Pipeline über die Pipelines-Karte ausführen:
+
+1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+
+1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Ausführen**, wie in der folgenden Abbildung dargestellt.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-run1.png)
+
+#### Löschen einer produktionsfremden Pipeline {#delete-nonprod}
+
+Sie können die Produktions-Pipeline aus der Pipelines-Karte löschen:
+
+1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+
+1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Löschen**, wie in der folgenden Abbildung dargestellt.
+
+   ![](/help/using/assets/configure-pipelines/nonprod-delete.png)
 
 
 ## Die nächsten Schritte {#the-next-steps}
