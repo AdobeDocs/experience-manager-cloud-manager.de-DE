@@ -11,10 +11,10 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 973fec504cd5f35435b10e3d1d28f3ba20ff4ab9
+source-git-commit: 78a6c939cdb7c4335891e27209b221fc3e6efec2
 workflow-type: tm+mt
-source-wordcount: '1486'
-ht-degree: 62%
+source-wordcount: '1737'
+ht-degree: 59%
 
 ---
 
@@ -70,45 +70,45 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
 
 1. **Das Dialogfeld &quot;** Produktions-Pipelineform hinzufügen&quot;wird angezeigt.
 
-   1. Geben Sie den Pipeline-Namen ein. Sie können **Repository** und die **Git-Verzweigung** auswählen.
+   1. Geben Sie den **Pipeline-Namen** ein. Sie können **Repository** und die **Git-Verzweigung** auswählen.
 
       ![](/help/using/assets/configure-pipelines/add-prod2.png)
 
-   1. Sie können **Deployment Trigger** und **Wichtiges Fehlerverhalten** unter **Bereitstellungsoptionen** einrichten.
+   1. Sie können **Bereitstellungs-Trigger** und **Verhalten bei wichtigen Metrikfehlern** unter **Bereitstellungsoptionen** einrichten.
 
       ![](/help/using/assets/configure-pipelines/add-prod3.png)
 
 
-      Sie können den Auslöser definieren, mit dem die Pipeline gestartet wird:
+      Sie können die folgenden Bereitstellungs-Trigger zuweisen, um die Pipeline zu starten:
 
       * **Manuell**: Die Pipeline wird über die Benutzeroberfläche manuell gestartet.
       * **Bei Git-Änderungen**: Startet die CI/CD-Pipeline, wenn zur konfigurierten Git-Verzweigung Commits hinzugefügt werden. Wenn Sie diese Option auswählen, können Sie die Pipeline weiterhin manuell starten.
 
-         >[!NOTE]
-         >Bei der Einrichtung oder Bearbeitung der Pipeline kann der Implementierungsmanager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates (Test der Code-Qualität, Sicherheitstest und Leistungstest) ein wichtiger Fehler auftritt.
+      Bei der Einrichtung oder Bearbeitung der Pipeline kann der Implementierungsmanager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates (Test der Code-Qualität, Sicherheitstest und Leistungstest) ein wichtiger Fehler auftritt.
+
       Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
 
       * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-      * **Sofort abbrechen**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
-      * **Sofort genehmigen**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler genehmigt.
+      * **Sofort**  fehlschlagen - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+      * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
    1. Wählen Sie die **Bereitstellungsoptionen** aus.
 
       ![](/help/using/assets/configure-pipelines/add-prod4.png)
 
       * **Nach Staging-Implementierung genehmigen** funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, findet aber unmittelbar nach dem Schritt der Staging-Bereitstellung statt (d. h. bevor Tests durchgeführt werden). Das unterscheidet sich von der Genehmigung vor der Produktionsbereitstellung, die nach Abschluss aller Tests erfolgt.
 
-      * **Lastenausgleich überspringen**
-   1. Wählen Sie die **Dispatcher-Konfigurationen** für die Staging-Umgebung aus. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
+      * **Überspringen Sie die Lastenausgleichsänderungen** in die Änderungen.
+   1. Wählen Sie die **Dispatcher-Konfiguration** für die Staging-Umgebung aus. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
-   1. Wählen Sie die **Bereitstellungsoptionen** für die Produktion aus. Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung. Die drei verfügbaren Optionen sind:
+   1. Wählen Sie die **Bereitstellungsoptionen** für die Produktion aus. Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung.
+
+      ![](/help/using/assets/configure-pipelines/prod-deploymentoptions.png)
+
+      Die drei verfügbaren Optionen sind:
 
       * **GoLive-Genehmigung verwenden**: Für die Bereitstellung ist eine manuelle Genehmigung durch einen Business Owner, einen Projektmanager oder Implementierungs-Manager über die [!UICONTROL Cloud Manager]-Benutzeroberfläche erforderlich.
-      * **CSE-Überwachung nutzen**: Ein CSE ist involviert, der die eigentliche Bereitstellung startet. Während der Einrichtung oder Bearbeitung der Pipeline wurde die CSE-Überwachung aktiviert. In diesem Fall kann der Implementierungs-Manager Folgendes auswählen:
-
-      * **Beliebiger CSE**: Schließt alle verfügbaren CSE ein.
-      * **Mein CSE**: Bezieht sich auf einen bestimmten CSE, der dem Kunden zugewiesen wurde, bzw. auf dessen Backup, falls der zugewiesene CSE nicht im Hause ist.
 
       * **Geplant**: Mit dieser Option kann der Benutzer die geplante Bereitstellung in der Produktionsumgebung aktivieren.
 
@@ -116,6 +116,11 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
          >Wenn die Option **Geplant** ausgewählt ist, können Sie Ihre Produktionsbereitstellung für die Pipeline **nach** der Staging-Bereitstellung (und nach der **GoLive-Genehmigung verwenden**, sofern diese Option aktiviert ist) planen, um auf einen Zeitplan zu warten. Der Benutzer kann die Produktionsbereitstellung aber auch sofort ausführen.
          >
          >Unter [Bereitstellen Ihres Codes](deploying-code.md) erfahren Sie, wie Sie den Bereitstellungsplan festlegen oder den Code sofort in der Produktionsumgebung ausführen.
+
+         * **CSE-Überwachung nutzen**: Ein CSE ist involviert, der die eigentliche Bereitstellung startet. Während der Einrichtung oder Bearbeitung der Pipeline wurde die CSE-Überwachung aktiviert. In diesem Fall kann der Implementierungs-Manager Folgendes auswählen:
+
+            * **Beliebiger CSE**: Schließt alle verfügbaren CSE ein.
+            * **Mein CSE**: Bezieht sich auf einen bestimmten CSE, der dem Kunden zugewiesen wurde, bzw. auf dessen Backup, falls der zugewiesene CSE nicht im Hause ist.
    1. Richten Sie die **Dispatcher-Konfigurationen** für die Produktion ein. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
@@ -172,6 +177,28 @@ Gehen Sie wie folgt vor, um die konfigurierte Pipeline zu bearbeiten:
 
 1. Klicken Sie auf **Aktualisieren** , sobald Sie die Pipeline bearbeitet haben.
 
+### Zusätzliche Produktions-Pipeline-Aktionen {#additional-prod-actions}
+
+#### Ausführen einer Produktions-Pipeline {#run-prod}
+
+Sie können die Produktions-Pipeline über die Pipelines-Karte ausführen:
+
+1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+
+1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Ausführen**, wie in der folgenden Abbildung dargestellt.
+
+   ![](/help/using/assets/configure-pipelines/prod-run.png)
+
+#### Löschen einer Produktions-Pipeline {#delete-prod}
+
+Sie können die Produktions-Pipeline aus der Pipelines-Karte löschen:
+
+1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+
+1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Löschen**, wie in der folgenden Abbildung dargestellt.
+
+   ![](/help/using/assets/configure-pipelines/prod-delete.png)
+
 ## Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität
 
 Zusätzlich zur Haupt-Pipeline, die für die Staging- und Produktionsumgebung bereitgestellt wird, können Kunden weitere Pipelines einrichten, die als **Produktionsfremde Pipelines** bezeichnet werden. Diese Pipelines führen immer die Schritte Build-Erstellung und Tests der Code-Qualität aus. Sie können optional auch für die Adobe Managed Services-Umgebung bereitgestellt werden.
@@ -194,7 +221,7 @@ Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
 1. **Das Dialogfeld Nicht-Produktions-**  Pipelineprojekt hinzufügen wird angezeigt. Wählen Sie den Pipeline-Typ aus, den Sie erstellen möchten, entweder **Code Quality Pipeline** oder **Deployment Pipeline**.
 
-   Darüber hinaus können Sie **Deployment Trigger** und **Wichtiges Fehlerverhalten** unter **Bereitstellungsoptionen** einrichten. Klicken Sie auf **Weiter**.
+   Darüber hinaus können Sie **Deployment Trigger** und **Verhalten bei wichtigen Metrikfehlern** unter **Bereitstellungsoptionen** einrichten. Klicken Sie auf **Weiter**.
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
@@ -228,6 +255,17 @@ Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bear
 
    >[!NOTE]
    >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+
+   Sie können die folgenden Bereitstellungs-Trigger zuweisen, um die Pipeline zu starten:
+
+   * **Manuell**: Die Pipeline wird über die Benutzeroberfläche manuell gestartet.
+   * **Bei Git-Änderungen**: Startet die CI/CD-Pipeline, wenn zur konfigurierten Git-Verzweigung Commits hinzugefügt werden. Wenn Sie diese Option auswählen, können Sie die Pipeline weiterhin manuell starten.
+
+   Bei der Einrichtung oder Bearbeitung der Pipeline kann der Implementierungsmanager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates (Test der Code-Qualität, Sicherheitstest und Leistungstest) ein wichtiger Fehler auftritt. Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
+
+   * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
+   * **Sofort**  fehlschlagen - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+   * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
 
 
 1. Klicken Sie auf **Aktualisieren** , sobald Sie die Bearbeitung der produktionsfremden Pipeline abgeschlossen haben.
