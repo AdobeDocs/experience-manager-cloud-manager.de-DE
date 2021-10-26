@@ -5,7 +5,7 @@ exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
 workflow-type: tm+mt
 source-wordcount: '443'
-ht-degree: 86%
+ht-degree: 95%
 
 ---
 
@@ -52,7 +52,7 @@ Git-Untermodule können verwendet werden, um den Inhalt mehrerer Verzweigungen z
 $ git submodule update --init
 ```
 
-Dadurch wird jedes Untermodul in das entsprechende Verzeichnis eingecheckt. Diese Technik ist eine potenzielle Alternative zum [Arbeiten mit mehreren Quell-Git-Repositorys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html) für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
+Dadurch wird jedes Untermodul in das entsprechende Verzeichnis eingecheckt. Diese Technik ist eine potenzielle Alternative zur [Arbeit mit mehreren Quell-Git-Repositorys](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/managing-code/working-with-multiple-source-git-repositories.html?lang=de) für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
 
 Angenommen, es gibt drei Repositorys, die jeweils eine einzige Verzweigung mit dem Namen „main“ enthalten. Im „primären“ Repository, d. h. dem in den Pipelines konfigurierten, verfügt die Hauptverzweigung über eine „pom.xml“-Datei, in der die in den beiden anderen Repositorys enthaltenen Projekte deklariert werden:
 
@@ -102,4 +102,4 @@ Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 * Die Git-URL muss sich genau an die oben beschriebene Syntax halten. Betten Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
 * Es werden nur Untermodule im Stammverzeichnis der Verzweigung unterstützt.
 * Für bestimmte Git-Commits werden Git-Untermodulverweise gespeichert. Wenn also Änderungen am Untermodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden, z. B. mithilfe von `git submodule update --remote`.
-* Sofern nicht anders erforderlich, wird dringend empfohlen, &quot;flache&quot;Untermodule zu verwenden. Führen Sie dazu `git config -f .gitmodules submodule.<submodule path>.shallow true` für jedes Untermodul aus.
+* Sofern nicht anders erforderlich, wird dringend empfohlen, &quot;flache&quot;Untermodule zu verwenden. Führen Sie dazu `git config -f .gitmodules submodule.<submodule path>.shallow true` für jedes Untermodul.
