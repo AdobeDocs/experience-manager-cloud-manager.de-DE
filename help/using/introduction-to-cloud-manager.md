@@ -1,20 +1,20 @@
 ---
 title: Einführung in Cloud Manager
-seo-title: Einführung in Cloud Manager
+seo-title: Introduction to Cloud Manager
 description: 'Diese Seite dient als Ausgangspunkt für Informationen zu Cloud Manager. '
-seo-description: 'Diese Seite dient als Ausgangspunkt für Informationen zu Adobe AEM Cloud Manager und stellt die Vorteile und wichtigsten Funktionen vor. '
+seo-description: This page serves as a starting point for learning about Adobe AEM Cloud Manager and highlights the benefits and key features.
 uuid: 62d68e79-c2ba-4d8b-ba7d-33709014d5b6
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: introduction
 discoiquuid: ebcc91a5-be9e-4684-8146-d88f4013d4d1
-feature: Erste Schritte
+feature: Getting Started
 level: Beginner
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 81c14382821de6b2d249000a79799747a6d9cb19
+source-git-commit: 08d831c560510d58062ed81fab809c12169810cb
 workflow-type: tm+mt
-source-wordcount: '833'
-ht-degree: 100%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -29,16 +29,19 @@ ht-degree: 100%
 
 ## Einführung {#introduction}
 
-[!UICONTROL Cloud Manager], Teil von Adobe Experience Manager (AEM) in der Cloud, ermöglicht Unternehmen die eigenständige Verwaltung von Experience Manager in der Cloud. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen.
+[!UICONTROL Cloud Manager] für Adobe Experience Manager bietet Entwicklern die Möglichkeit, durch optimierte Workflows, die auf Best Practices von Adobe Experience Manager basieren, wirkungsvolle Kundenerlebnisse zu erstellen. CI/CD-Pipelines, die für Adobe Experience Manager optimiert sind, ermöglichen es Ihnen, Entwicklungs-Workflows einfach zusammenzuführen, indem Sie Ihren Code einchecken und den gesamten Weg bis zur Produktionsbereitschaft ebnen. Während der Build-Phase werden Ihre benutzerspezifischen Code-Aktualisierungen gründlich mithilfe bewährter und bewährter Best Practices getestet, um Ihren Kunden effektive digitale Erlebnisse bereitzustellen. Cloud Manager verwendet einen offenen API-Ansatz und ermöglicht Ihnen die Integration in Ihre Systeme, ohne bestehende Prozesse und Tools zu stören.
 
-Auf dieser Dokumentations-Website werden speziell die Funktionen von Cloud Manager beschrieben, die für Kunden von Adobe Managed Services (AMS) verfügbar sind. Die Dokumentation zu den Cloud Manager-Funktionen für Kunden von AEM as a Cloud Service finden Sie unter [Implementieren von Programmen für AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=de).
+Auf dieser Dokumentations-Site werden speziell die Funktionen von Cloud Manager für Kunden von Adobe Managed Services (AMS) beschrieben. Die entsprechende Dokumentation für AEM as a Cloud Service Kunden finden Sie im Abschnitt [Implementieren von Anwendungen für AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/implementing/home.html?lang=de).
 
-Das Self-Service-Kundenportal von [!UICONTROL Cloud Manager] bietet **Unternehmen** folgende Möglichkeiten:
+Mit Cloud Manager kann Ihr Entwicklungsteam Folgendes nutzen:
 
-* **Kontinuierliche Integration/kontinuierliche Bereitstellung** (CI/CD) von Code zur Verkürzung der Markteinführungszeit von Monaten/Wochen auf Tage/Stunden
-* **Codeprüfungen, Leistungstests und Sicherheitsprüfungen** basierend auf Best Practices, bevor der Code an die Produktion gesendet wird, um Produktionsunterbrechungen zu minimieren
-* **Automatische, geplante oder manuelle Bereitstellung** auch außerhalb der Geschäftszeiten, um größtmögliche Flexibilität und Kontrolle zu erzielen
-* **Automatische Skalierungsfunktion** zur intelligenten Erkennung der Notwendigkeit erhöhter Kapazitäten und automatischen Online-Stellung zusätzlicher Dispatcher-/Veröffentlichungssegmente.
+* Kontinuierliche Integration/kontinuierliche Bereitstellung (CI/CD) von Code zur Verkürzung der Markteinführungszeit von Monaten/Wochen auf Tage/Stunden
+
+* Codeüberprüfung, Leistungstests und Sicherheitsvalidierung basierend auf Best Practices, bevor sie an die Produktion gesendet werden, um Produktionsunterbrechungen zu minimieren.
+
+* API-Konnektivität zur Ergänzung vorhandener DevOps-Prozesse.
+
+* Automatische Skalierungsfunktion zur intelligenten Erkennung der Notwendigkeit erhöhter Kapazitäten und automatischen Online-Stellung zusätzlicher Dispatcher-/Veröffentlichungssegmente.
 
 Die folgende Abbildung zeigt den CI/CD-Prozessablauf in [!UICONTROL Cloud Manager]:
 
