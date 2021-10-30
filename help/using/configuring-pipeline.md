@@ -11,7 +11,7 @@ content-type: reference
 discoiquuid: ba6c763a-b78a-439e-8c40-367203a719b3
 feature: CI-CD Pipeline
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 9509f83f3cecbeaa81543e3c1f8ec33028009e6a
+source-git-commit: 2be8f290b58fff2991f876c37dd1b499bc6c5352
 workflow-type: tm+mt
 source-wordcount: '1842'
 ht-degree: 56%
@@ -58,23 +58,23 @@ Bevor Sie Code bereitstellen, müssen Sie Ihre Pipelineeinstellungen über [!UIC
 
 ### Hinzufügen einer neuen Produktions-Pipeline über die Pipelines-Karte {#adding-production-pipeline}
 
-Sobald Sie Ihr Programm eingerichtet haben und über mindestens eine Umgebung mit der [!UICONTROL Cloud Manager] -Benutzeroberfläche verfügen, können Sie eine Produktions-Pipeline hinzufügen.
+Sobald Sie Ihr Programm eingerichtet haben und mindestens eine Umgebung mit [!UICONTROL Cloud Manager] -Benutzeroberfläche können Sie eine Produktions-Pipeline hinzufügen.
 
 Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellungen für Ihre Produktions-Pipeline zu konfigurieren:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zum **Pipelines** der Karte **Programmübersicht** Seite.
 
-1. Klicken Sie auf **+Add** und wählen Sie **Produktions-Pipeline hinzufügen** aus.
+1. Klicken Sie auf **+Hinzufügen** und wählen Sie **Produktions-Pipeline hinzufügen**.
 
    ![](/help/using/assets/configure-pipelines/add-prod1.png)
 
-1. **Das Dialogfeld &quot;** Produktions-Pipelineform hinzufügen&quot;wird angezeigt.
+1. **Produktions-Pipeline hinzufügen** angezeigt.
 
-   1. Geben Sie den **Pipeline-Namen** ein. Sie können **Repository** und die **Git-Verzweigung** auswählen.
+   1. Geben Sie die **Pipeline-Name**. Sie können die **Repository** und **Git-Verzweigung**.
 
       ![](/help/using/assets/configure-pipelines/add-prod2.png)
 
-   1. Sie können **Bereitstellungs-Trigger** und **Verhalten bei wichtigen Metrikfehlern** unter **Bereitstellungsoptionen** einrichten.
+   1. Sie können **Deployment Trigger** und **Verhalten bei wichtigen Metrikfehlern** von **Bereitstellungsoptionen**.
 
       ![](/help/using/assets/configure-pipelines/add-prod3.png)
 
@@ -89,20 +89,20 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
       Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
 
       * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-      * **Sofort**  fehlschlagen - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+      * **Sofort scheitern** - Wenn diese Option aktiviert ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
       * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
-   1. Wählen Sie die **Bereitstellungsoptionen** aus.
+   1. Wählen Sie die **Bereitstellungsoptionen**.
 
       ![](/help/using/assets/configure-pipelines/add-prod4.png)
 
       * **Nach Staging-Implementierung genehmigen** funktioniert ähnlich wie die Genehmigung vor der Produktionsbereitstellung, findet aber unmittelbar nach dem Schritt der Staging-Bereitstellung statt (d. h. bevor Tests durchgeführt werden). Das unterscheidet sich von der Genehmigung vor der Produktionsbereitstellung, die nach Abschluss aller Tests erfolgt.
 
-      * **Überspringen Sie die Lastenausgleichsänderungen** in die Änderungen.
-   1. Wählen Sie die **Dispatcher-Konfiguration** für die Staging-Umgebung aus. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
+      * **Änderungen am Lastenausgleich überspringen** überspringt die Änderungen.
+   1. Wählen Sie die **Dispatcher-Konfiguration** für die Staging-Umgebung. Geben Sie den Pfad ein und wählen Sie die Aktion aus **Typ** und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-stage.png)
 
-   1. Wählen Sie die **Bereitstellungsoptionen** für die Produktion aus. Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung.
+   1. Wählen Sie die **Bereitstellungsoptionen** für die Produktion. Jetzt definieren Sie die Parameter zur Steuerung der Produktionsbereitstellung.
 
       ![](/help/using/assets/configure-pipelines/prod-deploymentoptions.png)
 
@@ -121,7 +121,7 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
 
             * **Beliebiger CSE**: Schließt alle verfügbaren CSE ein.
             * **Mein CSE**: Bezieht sich auf einen bestimmten CSE, der dem Kunden zugewiesen wurde, bzw. auf dessen Backup, falls der zugewiesene CSE nicht im Hause ist.
-   1. Richten Sie die **Dispatcher-Konfigurationen** für die Produktion ein. Geben Sie den Pfad ein, wählen Sie die Aktion aus **Typ** aus und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
+   1. Richten Sie die **Dispatcher-Konfigurationen** für die Produktion. Geben Sie den Pfad ein und wählen Sie die Aktion aus **Typ** und klicken Sie auf **Pfad hinzufügen**. Sie können bis zu 100 Pfade pro Umgebung angeben.
 
       ![](/help/using/assets/configure-pipelines/dispatcher-prod.png)
 
@@ -139,15 +139,15 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
 
 
 
-1. Klicken Sie auf **Weiter**, sobald Sie alle Optionen ausgewählt haben.
+1. Klicken Sie auf **Weiter** nach Auswahl aller Optionen.
 
-1. Wählen Sie Ihre Optionen im Schritt **Staging-Tests** aus. Je nachdem, welche Produkte Sie lizenziert haben, können Sie Leistungstests für *AEM Sites* und *AEM Assets* konfigurieren. Weitere Informationen finden Sie unter [Leistungstests](understand-your-test-results.md#performance-testing).
+1. Wählen Sie Ihre Optionen aus dem **Staging-Tests** Schritt. Je nachdem, welche Produkte Sie lizenziert haben, können Sie Leistungstests für *AEM Sites* und *AEM Assets* konfigurieren. Weitere Informationen finden Sie unter [Leistungstests](understand-your-test-results.md#performance-testing).
 
-   1. Wählen Sie Ihre Optionen unter **Sites Content Delivery/Distributed Load Weight** aus. Weitere Informationen finden Sie unter [AEM Sites in Leistungstests](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-sites).
+   1. Wählen Sie Ihre Optionen aus **Sites Content Delivery/Distributed Load Weight**. Siehe [AEM Sites beim Leistungstest](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-sites) für weitere Details.
 
       ![](/help/using/assets/configure-pipelines/add-prod5.png)
 
-   1. Wählen Sie Ihre Optionen unter **Asset-Leistungstestverteilung** aus. Weitere Informationen finden Sie unter [AEM Assets in Leistungstests](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-assets).
+   1. Wählen Sie Ihre Optionen aus **Asset-Leistungstestverteilung**. Siehe [AEM Assets beim Leistungstest](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#aem-assets) für weitere Details.
 
       ![](/help/using/assets/configure-pipelines/add-prod6.png)
 
@@ -155,27 +155,27 @@ Führen Sie die folgenden Schritte aus, um das Verhalten und die Voreinstellunge
 
 ### Bearbeiten einer Produktions-Pipeline {#editing-prod-pipeline}
 
-Sie können die Pipelinekonfigurationen auf der Seite **Programmübersicht** bearbeiten.
+Sie können die Pipeline-Konfigurationen über die **Programmübersicht** Seite.
 
 Gehen Sie wie folgt vor, um die konfigurierte Pipeline zu bearbeiten:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zu **Pipelines** der Karte **Programmübersicht** Seite.
 
-1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Bearbeiten**, wie in der folgenden Abbildung dargestellt.
+1. Klicken Sie auf **...** von **Pipelines** Karte und klicken Sie auf **Bearbeiten**, wie in der folgenden Abbildung dargestellt.
 
    ![](/help/using/assets/configure-pipelines/edit-prod1.png)
 
-1. Das Dialogfeld **Produktions-Pipeline bearbeiten** wird angezeigt.
+1. Die **Produktions-Pipeline bearbeiten** angezeigt.
 
-   1. Auf der Registerkarte **Configuration** können Sie den **Pipeline-Namen**, **Repository**, **Git-Verzweigung**, **Deployment-Trigger**, **Wichtiges Fehlerverhalten bei Metriken** aktualisieren. a12/>Bereitstellungsoptionen **und** Dispatcher-Konfigurationen **.**
+   1. Die **Konfiguration** -Tab können Sie die **Pipeline-Name**, **Repository**, **Git-Verzweigung**, **Deployment Trigger**, **Verhalten bei wichtigen Metriken mit Fehlern**, **Bereitstellungsoptionen** und **Dispatcher-Konfigurationen**.
 
       >[!NOTE]
-      >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+      >Siehe [Hinzufügen und Verwalten von Repositorys](/help/using/cloud-manager-repositories.md) , um zu erfahren, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten.
 
 
-   1. Der Tab **Staging-Tests** bietet Ihnen eine Option, Ihre Optionen aus **Sites-Inhaltsbereitstellung/dezentrales Lastgewicht** und **Asset-Leistungstestverteilung** erneut auszuwählen.
+   1. Die **Staging-Tests** bietet Ihnen die Möglichkeit, Ihre Optionen erneut auszuwählen unter **Sites Content Delivery/Distributed Load Weight** und **Asset-Leistungstestverteilung**.
 
-1. Klicken Sie auf **Aktualisieren** , sobald Sie die Pipeline bearbeitet haben.
+1. Klicken Sie auf **Aktualisieren** nachdem Sie die Pipeline bearbeitet haben.
 
 ### Zusätzliche Produktions-Pipeline-Aktionen {#additional-prod-actions}
 
@@ -183,9 +183,9 @@ Gehen Sie wie folgt vor, um die konfigurierte Pipeline zu bearbeiten:
 
 Sie können die Produktions-Pipeline über die Pipelines-Karte ausführen:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zu **Pipelines** der Karte **Programmübersicht** Seite.
 
-1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Ausführen**, wie in der folgenden Abbildung dargestellt.
+1. Klicken Sie auf **...** von **Pipelines** Karte und klicken Sie auf **Ausführen**, wie in der folgenden Abbildung dargestellt.
 
    ![](/help/using/assets/configure-pipelines/prod-run.png)
 
@@ -193,14 +193,14 @@ Sie können die Produktions-Pipeline über die Pipelines-Karte ausführen:
 
 Sie können die Produktions-Pipeline aus der Pipelines-Karte löschen:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zu **Pipelines** der Karte **Programmübersicht** Seite.
 
-1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Löschen**, wie in der folgenden Abbildung dargestellt.
+1. Klicken Sie auf **...** von **Pipelines** Karte und klicken Sie auf **Löschen**, wie in der folgenden Abbildung dargestellt.
 
    ![](/help/using/assets/configure-pipelines/prod-delete.png)
 
    >[!NOTE]
-   >Ein Benutzer mit der Rolle &quot;Bereitstellungsmanager&quot;kann die Produktions-Pipeline jetzt über die Option **Löschen** auf der Pipeline-Karte selbstständig löschen.
+   >Ein Benutzer mit der Rolle &quot;Bereitstellungsmanager&quot;kann die Produktions-Pipeline jetzt auf Self-Service-Weise über die **Löschen** -Option auf der Pipeline-Karte aus.
 
 ## Produktionsfremde Pipelines und Pipelines für Tests der Code-Qualität
 
@@ -218,46 +218,46 @@ CI/CD-Produktionsfremde Pipelines sind in zwei Kategorien unterteilt: Code-Quali
 
 Auf dem Startbildschirm werden diese Pipelines in einer neuen Karte aufgeführt:
 
-1. Greifen Sie über den Cloud Manager-Startbildschirm auf die Karte **Pipelines** zu. Klicken Sie auf **+Add** und wählen Sie **Add Non-Production Pipeline** aus.
+1. Zugriff auf **Pipelines** -Karte vom Cloud Manager-Startbildschirm aus. Klicken Sie auf **+Hinzufügen** und wählen Sie **Hinzufügen einer produktionsfremden Pipeline**.
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. **Das Dialogfeld Nicht-Produktions-**  Pipelineprojekt hinzufügen wird angezeigt. Wählen Sie den Pipeline-Typ aus, den Sie erstellen möchten, entweder **Code Quality Pipeline** oder **Deployment Pipeline**.
+1. **Hinzufügen einer produktionsfremden Pipeline**  angezeigt. Wählen Sie den Pipeline-Typ aus, den Sie erstellen möchten, entweder **Code-Qualitäts-Pipeline** oder **Bereitstellungs-Pipeline**.
 
-   Darüber hinaus können Sie **Deployment Trigger** und **Verhalten bei wichtigen Metrikfehlern** unter **Bereitstellungsoptionen** einrichten. Klicken Sie auf **Weiter**.
+   Darüber hinaus können Sie auch **Deployment Trigger** und **Verhalten bei wichtigen Metrikfehlern** von **Bereitstellungsoptionen**. Klicken Sie auf **Weiter**.
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add2.png)
 
 
-1. Die neu erstellte Nicht-Produktions-Pipeline wird jetzt auf der Karte **Pipelines** angezeigt.
+1. Die neu erstellte Nicht-Produktions-Pipeline wird jetzt im **Pipelines** Karte.
 
    ![](/help/using/assets/configure-pipelines/nonprod-pipeline-add4.png)
 
 
    Die Pipeline wird auf der Karte auf dem Startbildschirm mit drei Aktionen angezeigt, wie unten dargestellt:
 
-   * **Hinzufügen**  - ermöglicht das Hinzufügen einer neuen Pipeline.
+   * **Hinzufügen** - ermöglicht das Hinzufügen einer neuen Pipeline.
    * **Auf Repository-Informationen zugreifen**: Ermöglicht es dem Benutzer, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlichen Informationen abzurufen.
    * **Weitere Informationen**: Führt zu weiteren Informationen über die Dokumentation zur CI/CD-Pipeline.
 
 ### Bearbeiten einer produktionsfremden Pipeline {#editing-nonprod-pipeline}
 
-Sie können die Pipeline-Konfigurationen auf der Seite **Pipelines-Karte** von **Programmübersicht** bearbeiten.
+Sie können die Pipeline-Konfigurationen über die **Pipelines-Karte** von **Programmübersicht** Seite.
 
 Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bearbeiten:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zu **Pipelines** der Karte **Programmübersicht** Seite.
 
 1. Wählen Sie die produktionsfremde Pipeline aus und klicken Sie auf **...**. Klicken Sie auf **Bearbeiten**, wie in der folgenden Abbildung dargestellt.
 
    ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit1.png)
 
-1. Das Dialogfeld **Produktions-Pipeline bearbeiten** wird angezeigt, in dem Sie den **Pipeline-Namen**, **Repository**, **Git-Verzweigung**, **Bereitstellungs-Trigger** und **Verhalten bei wichtigen Metriken ändern&lt;a 11/>.**
+1. Die **Produktions-Pipeline bearbeiten** wird ein Dialogfeld angezeigt, in dem Sie die **Pipeline-Name**, **Repository**, **Git-Verzweigung**, **Deployment Trigger** und **Verhalten bei wichtigen Metriken mit Fehlern**.
 
    ![](/help/using/assets/configure-pipelines/non-prod-pipeline-edit2.png)
 
    >[!NOTE]
-   >Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Hinzufügen und Verwalten von Repositorys](/help/implementing/cloud-manager/managing-code/cloud-manager-repositories.md) .
+   >Siehe [Hinzufügen und Verwalten von Repositorys](/help/using/cloud-manager-repositories.md) , um zu erfahren, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten.
 
    Sie können die folgenden Bereitstellungs-Trigger zuweisen, um die Pipeline zu starten:
 
@@ -267,11 +267,11 @@ Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bear
    Bei der Einrichtung oder Bearbeitung der Pipeline kann der Implementierungsmanager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates (Test der Code-Qualität, Sicherheitstest und Leistungstest) ein wichtiger Fehler auftritt. Das ist für Kunden nützlich, die die Prozesse stärker automatisieren möchten. Die verfügbaren Optionen sind:
 
    * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-   * **Sofort**  fehlschlagen - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+   * **Sofort scheitern** - Wenn diese Option aktiviert ist, wird die Pipeline bei einem wichtigen Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
    * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
 
 
-1. Klicken Sie auf **Aktualisieren** , sobald Sie die Bearbeitung der produktionsfremden Pipeline abgeschlossen haben.
+1. Klicken Sie auf **Aktualisieren** nach Abschluss der Bearbeitung der produktionsfremden Pipeline.
 
 ### Zusätzliche produktionsfremde Pipelineaktionen {#additional-nonprod-actions}
 
@@ -279,9 +279,9 @@ Gehen Sie wie folgt vor, um die konfigurierte Nicht-Produktions-Pipeline zu bear
 
 Sie können die Produktions-Pipeline über die Pipelines-Karte ausführen:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zu **Pipelines** der Karte **Programmübersicht** Seite.
 
-1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Ausführen**, wie in der folgenden Abbildung dargestellt.
+1. Klicken Sie auf **...** von **Pipelines** Karte und klicken Sie auf **Ausführen**, wie in der folgenden Abbildung dargestellt.
 
    ![](/help/using/assets/configure-pipelines/nonprod-run1.png)
 
@@ -289,9 +289,9 @@ Sie können die Produktions-Pipeline über die Pipelines-Karte ausführen:
 
 Sie können die Produktions-Pipeline aus der Pipelines-Karte löschen:
 
-1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines** .
+1. Navigieren Sie zu **Pipelines** der Karte **Programmübersicht** Seite.
 
-1. Klicken Sie auf **...** aus der Karte **Pipelines** und klicken Sie auf **Löschen**, wie in der folgenden Abbildung dargestellt.
+1. Klicken Sie auf **...** von **Pipelines** Karte und klicken Sie auf **Löschen**, wie in der folgenden Abbildung dargestellt.
 
    ![](/help/using/assets/configure-pipelines/nonprod-delete.png)
 
