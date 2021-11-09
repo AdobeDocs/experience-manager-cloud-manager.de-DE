@@ -3,14 +3,14 @@ title: Versionshinweise für 2021.11.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.11.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: e6e5a17c16c42e0b0ed5aedd2f9a6360fd81d8cd
+source-git-commit: 0a8373f9613715f8945f482198710cefd84b169d
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 19%
 
 ---
 
-# Versionshinweise für 2021.10.0 {#release-notes-for}
+# Versionshinweise für 2021.11.0 {#release-notes-for}
 
 Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] Version 2021.11.0.
 
