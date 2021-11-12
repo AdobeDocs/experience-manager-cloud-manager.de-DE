@@ -3,7 +3,7 @@ title: Versionshinweise für 2021.11.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.11.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0a8373f9613715f8945f482198710cefd84b169d
+source-git-commit: 096468d28d70b84286841dd9818c7aab54662b2b
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 19%
@@ -20,7 +20,7 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Clo
 ## Veröffentlichungsdatum {#release-date}
 
 Die [!UICONTROL Cloud Manager]-Version 2021.11.0 wurde am 04. November 2021 veröffentlicht.
-Die nächste Version ist für den 9. Dezember 2021 geplant.
+Die nächste Version ist für den 16. Dezember 2021 geplant.
 
 ## Neue Funktionen {#whats-new}
 
