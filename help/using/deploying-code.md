@@ -11,9 +11,9 @@ discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1220'
-ht-degree: 81%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
 
 1. Der Bildschirm **Pipeline-Ausführung** wird angezeigt.
 
-   Klicken Sie auf **Erstellen**, um den Prozess zu starten.
+   Klicken Sie auf **Build**, um den Prozess zu starten.
 
    ![](assets/Deploy2.png)
 
@@ -40,7 +40,7 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
 
    Der Build-Prozess umfasst die folgenden Phasen:
 
-   1. Staging-Implementierung
+   1. Staging-Bereitstellung
    1. Staging-Tests
    1. Produktionsimplementierung
 
@@ -48,12 +48,12 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
    >
    >Außerdem können Sie die Schritte der verschiedenen Implementierungsprozesse überprüfen, indem Sie die Protokolle anzeigen oder die Ergebnisse anhand der Testkriterien überprüfen.
 
-   Die **Staging-Implementierung** umfasst die folgenden Schritte:
+   Die **Staging-Bereitstellung** umfasst die folgenden Schritte:
 
    * Validierung: Dieser Schritt stellt sicher, dass die Pipeline so konfiguriert ist, dass die derzeit verfügbaren Ressourcen verwendet werden. So wird z. B. überprüft, ob die konfigurierte Verzweigung vorhanden ist und die Umgebungen verfügbar sind.
    * Build- und Komponententests: Dieser Schritt führt einen containerisierten Build-Prozess aus. Weitere Informationen zur Build-Umgebung finden Sie unter [Grundlagen zur Build-Umgebung](/help/using/build-environment-details.md).
    * Code-Scan: Dieser Schritt bewertet die Qualität Ihres Anwendungs-Codes. Weitere Informationen zum Testprozess finden Sie unter [Testergebnisse verstehen](understand-your-test-results.md).
-   * Bereitstellung in der Staging-Umgebung
+   * Bereitstellung für Staging
 
    ![](assets/Stage_Deployment1.png)
 
@@ -94,9 +94,9 @@ Sobald Sie Ihre Produktions-Pipeline (Repository, Umgebung und Testumgebung) kon
 
    ![](assets/Production_Deployment2.png)
 
-## Timeouts {#timeouts}
+## Zeitüberschreitungen {#timeouts}
 
-Die folgenden Schritte führen zu einem Timeout, wenn auf Benutzer-Feedback gewartet wird:
+Die folgenden Schritte führen zu einer Zeitüberschreitung, wenn auf Benutzer-Feedback gewartet wird:
 
 | Schritt | Zeitüberschreitung |
 |--- |--- |
@@ -165,31 +165,31 @@ Produktionsimplementierungen nutzen im Allgemeinen die oben beschriebenen Schrit
 1. dispatcher2 wird in den Lastenausgleich zurückgesetzt
 Dieser Vorgang wird fortgesetzt, bis die Implementierung alle Publisher und Dispatcher in der Topologie erreicht hat.
 
-## Ausführungsmodus der Notfallpipeline {#emergency-pipeline}
+## Notfall-Pipeline-Ausführungsmodus {#emergency-pipeline}
 
-In kritischen Situationen müssen Adobe Managed Services-Kunden möglicherweise Codeänderungen in ihrer Staging- und Produktionsumgebung bereitstellen, ohne auf die Ausführung eines vollständigen Cloud Manager-Testzyklus zu warten.
+In kritischen Situationen müssen Adobe Managed Services-Kunden möglicherweise Code-Änderungen in ihrer Staging- und Produktionsumgebung bereitstellen, ohne auf die Ausführung eines vollständigen Cloud Manager-Testzyklus zu warten.
 
-Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline im Modus *Emergency* ausgeführt werden. Wenn dieser Modus verwendet wird, werden die Sicherheits- und Leistungstestschritte nicht ausgeführt. alle anderen Schritte, einschließlich aller konfigurierten Validierungsschritte, wie im normalen Pipeline-Ausführungsmodus ausgeführt werden.
+Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline in einem *Notfall*-Modus ausgeführt werden. Wenn dieser Modus verwendet wird, werden die Sicherheits- und Leistungstestschritte nicht ausgeführt. Alle anderen Schritte, einschließlich aller konfigurierten Validierungsschritte, werden wie im normalen Pipeline-Ausführungsmodus ausgeführt.
 
 >[!NOTE]
->Die Notfallfunktion des Pipeline-Ausführungsmodus wird vom Customer Success Engineer auf Programmbasis aktiviert.
+>Die Funktion „Notfall-Pipeline-Ausführungsmodus“ wird vom Customer Success Engineer auf der Programmebene aktiviert.
 
-### Verwenden des Ausführungsmodus der Notfallpipeline {#using-emergency-pipeline}
+### Verwenden des Notfall-Pipeline-Ausführungsmodus {#using-emergency-pipeline}
 
-Wenn Sie eine Produktions-Pipeline ausführen und diese Funktion aktiviert wurde, können Sie die Ausführung im normalen oder im Notfall über das Dialogfeld starten, wie in der folgenden Abbildung dargestellt.
+Wenn Sie eine Produktions-Pipeline ausführen und diese Funktion aktiviert wurde, können Sie die Ausführung im normalen oder im Notfallmodus über das Dialogfeld starten, wie in der folgenden Abbildung dargestellt.
 
 ![](assets/execution-emergency1.png)
 
-Darüber hinaus zeigen die Breadcrumbs oben im Bildschirm auf der Seite mit Details zur Pipeline-Ausführung für einen Ausführungsablauf im Notfallmodus an, dass der Notfallmodus für diese bestimmte Ausführung verwendet wurde.
+Darüber hinaus zeigen die Breadcrumbs oben im Bildschirm auf der Seite mit Details zur Pipeline-Ausführung für einen Ausführungslauf im Notfallmodus an, dass der Notfallmodus für diese bestimmte Ausführung verwendet wurde.
 
 ![](assets/execution-emergency2.png)
 
 
-Die Erstellung einer Pipeline-Ausführung in diesem Notmodus kann auch über die Cloud Manager-API oder die CLI erfolgen. Um eine Ausführung im Notfallmodus zu starten, senden Sie mit dem Abfrageparameter `?pipelineExecutionMode=EMERGENCY` eine PUT-Anfrage an den Ausführungsendpunkt der Pipeline oder bei Verwendung der CLI:
+Die Erstellung einer Pipeline-Ausführung in diesem Notfallmodus kann auch über die Cloud Manager-API oder die CLI erfolgen. Um eine Ausführung im Notfallmodus zu starten, senden Sie mit dem Abfrageparameter `?pipelineExecutionMode=EMERGENCY` eine PUT-Anfrage an den Ausführungsendpunkt der Pipeline oder bei Verwendung der CLI:
 
 ```
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
 >[!IMPORTANT]
->Die Verwendung des Flags `--emergency` erfordert möglicherweise eine Aktualisierung auf die neueste `aio-cli-plugin-cloudmanager`-Version.
+>Bei Verwendung des `--emergency`-Flags muss möglicherweise auf die neueste `aio-cli-plugin-cloudmanager`-Version aktualisiert werden.
