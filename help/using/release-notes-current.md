@@ -1,57 +1,36 @@
 ---
-title: Versionshinweise für 2021.11.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.11.0
+title: Versionshinweise für 2021.12.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2021.12.0.
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 096468d28d70b84286841dd9818c7aab54662b2b
-workflow-type: ht
-source-wordcount: '372'
-ht-degree: 100%
+source-git-commit: 910def6d82c09e0220a50a3cb34a61f2c7284cb9
+workflow-type: tm+mt
+source-wordcount: '253'
+ht-degree: 3%
 
 ---
 
-# Versionshinweise für 2021.11.0 {#release-notes-for}
+# Versionshinweise für Cloud Manager - Version 2021.12.0 {#release-notes}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] Version 2021.11.0.
+Im folgenden Abschnitt werden die allgemeinen Versionshinweise für [!UICONTROL Cloud Manager] Version 2021.12.0.
 
 >[!NOTE]
->Unter [Aktuelle Versionshinweise](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/onboarding/getting-access/release-notes-cloud-manager/release-notes-cm-current.html?lang=de#getting-access) finden Sie die neuesten Versionshinweise zu Cloud Manager in AEM as a Cloud Service.
+>
+>Die neuesten Versionshinweise für Cloud Manager AEM as a Cloud Service finden Sie unter [Cloud Manager in den aktuellen Versionshinweisen AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/release-notes-cloud-manager/release-notes-cm-current.html)
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die [!UICONTROL Cloud Manager]-Version 2021.11.0 wurde am 4. November 2021 veröffentlicht.
-Die nächste Version soll am 16. Dezember 2021 veröffentlicht werden.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2021.12.0 wurde am 16. Dezember 2021 veröffentlicht. Die nächste Version ist für Januar 2022 geplant.
 
 ## Neue Funktionen {#whats-new}
 
-* Die Git-Commit-ID wird jetzt in den Details zur Pipeline-Ausführung angezeigt, was die Verfolgung des erstellten Codes erleichtert.
-
-* Der Antwort-Header `x-request-id` ist jetzt im API Playground auf [www.adobe.io](https://www.adobe.io/) sichtbar. Dieser Header ist beim Senden von Problemen an die Kundenunterstützung zur Fehlerbehebung nützlich.
-
-* Als Benutzer sehe ich die Pipeline-Karte mit null Pipelines, die mir eine entsprechende Anleitung bieten.
-
-* Auf einer neuen Aktivitätsseite können jetzt Aktivitäten wie Pipeline- und Code-Ausführungen zusammen mit den zugehörigen Details angezeigt werden. Im Laufe der Zeit werden auf dieser Seite immer mehr Aktivitäten und Details aufgelistet.
-
-* Die neue Pipelines-Seite enthält ein Status-Popover, in dem eine Zusammenfassung der Details eingeblendet wird, sobald der Mauszeiger über eine Aktivität bewegt wird. Pipeline-Ausführungen können zusammen mit den zugehörigen Details angezeigt werden.
-
-* Die API zur Pipeline-Bearbeitung unterstützt jetzt das Festlegen der Pfade für Dispatcher-Invalidierung und -Leerung.
-
-* Außerdem unterstützt sie jetzt das Ändern der in den Bereitstellungsphasen verwendeten Umgebung.
-
-* Für große Pakete wurde eine Optimierung des OakPal-Scan-Prozesses eingeführt.
-
-* Die CSV-Datei mit Qualitätsproblemen enthält jetzt für jedes Qualitätsproblem einen Zeitstempel.
-
-* Die Schaltfläche „Verwalten“ auf der Seite „Umgebungen“ ist nicht mehr auf der Benutzeroberfläche sichtbar.
+* Der Commit-Hash, der bereits in der Benutzeroberfläche sichtbar ist, wird jetzt auch in der API bereitgestellt.
+* Die Seite &quot;Aktivität&quot;enthält jetzt ein Popup für die Ausführung von Pipelines, das eine Zusammenfassung der Pipelinedetails auf einen Blick bietet.
+* Es wurden Aktualisierungen hinzugefügt, die zusätzliche Details enthalten, die auf der Seite Aktivitäten beschrieben werden.
+* Die Registerkarte &quot;Lernen&quot;in Cloud Manager bietet jetzt schnellen Zugriff auf API-Handbücher und zugehörige Ressourcen.
+* Ein Benutzer mit der Rolle &quot;Bereitstellungsmanager&quot;kann jetzt den Erstellungsassistenten für ein Projekt/eine Verzweigung für ein Repository ohne Verzweigungen über das Aktionsmenü auf der Seite &quot;Repositorys&quot;starten.
+* Der Bereitstellungsmanager, der sich im Workflow zum Hinzufügen oder Bearbeiten von Pipeline befindet, wird jetzt darüber informiert, wie eine Verzweigung oder ein Projekt erstellt werden kann, wenn das ausgewählte Repository keine Verzweigungen aufweist.
+* Wenn im Fenster &quot;Produktions-Pipeline bearbeiten&quot;mehr als eine Staging-Umgebung für die Produktion vorhanden ist, ist eine Dropdown-Liste zur Umgebungsauswahl verfügbar.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Bestimmte unorthodoxe Build-Konfigurationen führten dazu, dass unnötige Dateien im Maven-Artefakt-Cache der Pipeline gespeichert wurden, was beim Starten und Beenden des Build-Containers zu überflüssigem Netzwerk-I/O führte.
-
-* Die Pipeline-PATCH-API schlägt fehl, wenn keine Bereitstellungsphase vorhanden ist.
-
-* Die Qualitätsregel `ClientlibProxyResourceCheck` meldete falsch positive Probleme, wenn Client-Bibliotheken mit gemeinsamen Basispfaden vorhanden waren.
-
-* In der Fehlermeldung beim Erreichen der maximalen Anzahl von Repositorys war kein Grund für den Fehler angegeben.
-
-* In seltenen Fällen schlugen Pipelines aufgrund einer unangemessenen Wiederholungsverarbeitung bestimmter Antwort-Codes fehl.
+* Produktions-Pipelines mit vollständigem Stapel erhalten weiterhin den Namen &quot;Produktions-Pipeline&quot;, selbst wenn der Benutzer einen anderen Namen in das Namensfeld eingibt.

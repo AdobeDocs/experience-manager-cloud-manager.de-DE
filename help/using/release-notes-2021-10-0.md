@@ -2,9 +2,8 @@
 title: Versionshinweise für 2021.10.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.10.0
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: e89420ef9e5621cb10ef80715e96fd25e486c9bd
-workflow-type: ht
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
+workflow-type: tm+mt
 source-wordcount: '362'
 ht-degree: 100%
 

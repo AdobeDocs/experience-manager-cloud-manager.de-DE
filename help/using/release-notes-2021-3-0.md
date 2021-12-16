@@ -1,12 +1,11 @@
 ---
 title: Versionshinweise für 2021.3.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2021.3.0.
-feature: Versionshinweise
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 503d9b25855633737c49e3e278a3a76052ed84d1
+feature: Release Information
+source-git-commit: 09dd8fe608d95cd9dbc95129cf86b9693c2839b5
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '244'
+ht-degree: 100%
 
 ---
 
@@ -19,7 +18,7 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Clo
 Die [!UICONTROL Cloud Manager]-Version 2021.3.0 wurde am 11. März 2021 veröffentlicht.
 Die nächste Version ist für den 8. April 2021 geplant.
 
-## Neuigkeiten {#whats-new}
+## Neue Funktionen {#whats-new}
 
 * Zur Validierung der Dispatcher-Konfiguration beim Kunden wurde das neue [Dispatcher-Optimierungs-Tool](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/custom-code-quality-rules.html?lang=de#dispatcher-optimization-tool-rules) zur Überprüfung der Code-Qualität eingeführt.
 
