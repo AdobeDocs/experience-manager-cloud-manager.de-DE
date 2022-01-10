@@ -2,9 +2,10 @@
 title: Versionshinweise für 2021.12.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2021.12.0.
 feature: Release Information
-source-git-commit: 910def6d82c09e0220a50a3cb34a61f2c7284cb9
-workflow-type: ht
-source-wordcount: '253'
+exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
+source-git-commit: 61f2d1e0882b752d1a1d5e62f9c028aa71941efe
+workflow-type: tm+mt
+source-wordcount: '269'
 ht-degree: 100%
 
 ---
@@ -30,6 +31,7 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2021.12.0 is
 * Ein Benutzer mit der Rolle „Implementierungs-Manager“ kann jetzt den Erstellungsassistenten für ein Projekt/eine Verzweigung für ein Repository ohne Verzweigungen über das Aktionsmenü auf der Seite „Repositorys“ starten.
 * Der Implementierungs-Manager, der sich im Workflow zum Hinzufügen oder Bearbeiten einer Pipeline befindet, wird jetzt darüber informiert, wie eine Verzweigung oder ein Projekt erstellt werden kann, wenn das ausgewählte Repository keine Verzweigungen aufweist.
 * Wenn im Fenster „Produktions-Pipeline bearbeiten“ mehr als eine Staging-Umgebung für die Produktion vorhanden ist, ist eine Dropdown-Liste zur Umgebungsauswahl verfügbar.
+* Der von Cloud Manager verwendete AEM-Projektarchetyp wurde auf Version 32 aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
