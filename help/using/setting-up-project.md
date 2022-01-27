@@ -4,9 +4,9 @@ description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
 feature: Getting Started, Production Programs
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 8861b5e48b8e1d081b4c8653000a8f2cf16dd11f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1289'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -264,9 +264,9 @@ Mit dem content-package-maven-plugin ist es ähnlich:
 
 ## Artefakt-Wiederverwendung erstellen {#build-artifact-reuse}
 
-In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn festgestellt wird, dass dieselbe Git-Übertragung in mehreren Pipelineausführungen mit vollem Stapel verwendet wird, verhindert Cloud Manager, dass die Codebasis neu erstellt wird.
+In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn festgestellt wird, dass ein und derselbe Git-Commit in mehreren Pipeline-Ausführungen mit vollem Stapel verwendet wird, verhindert Cloud Manager nach Möglichkeit, dass die Code-Basis neu aufgebaut wird.
 
-Wenn eine Ausführung gestartet wird, wird der aktuelle HEAD-Commit für die Zweig-Pipeline extrahiert. Der Commit-Hash ist in der Benutzeroberfläche und über die API sichtbar. Wenn der Build-Schritt erfolgreich abgeschlossen wurde, werden die resultierenden Artefakte basierend auf diesem Commit-Hash gespeichert und können in nachfolgenden Pipeline-Ausführungen wiederverwendet werden. Wenn eine Wiederverwendung erfolgt, werden die Build- und Codequalitätsschritte effektiv durch die Ergebnisse der ursprünglichen Ausführung ersetzt. In der Protokolldatei für den Build-Schritt werden die Artefakte und die Ausführungsinformationen aufgelistet, die ursprünglich zum Erstellen verwendet wurden.
+Wenn eine Ausführung gestartet wird, wird der aktuelle HEAD-Commit für die Zweig-Pipeline extrahiert. Der Commit-Hash ist in der Benutzeroberfläche und über die API sichtbar. Wenn der Build-Schritt erfolgreich abgeschlossen wurde, werden die resultierenden Artefakte basierend auf diesem Commit-Hash gespeichert und können in nachfolgenden Pipeline-Ausführungen wiederverwendet werden. Wenn eine Wiederverwendung erfolgt, werden die Build- und Code-Qualitätsschritte effektiv durch die Ergebnisse der ursprünglichen Ausführung ersetzt. In der Protokolldatei für den Build-Schritt werden die Artefakte und die Ausführungsinformationen aufgelistet, die ursprünglich zum Erstellen verwendet wurden.
 
 Im Folgenden finden Sie ein Beispiel für eine solche Protokollausgabe.
 
@@ -276,26 +276,26 @@ build/aem-guides-wknd.all-2021.1216.1101633.0000884042.zip (content-package)
 build/aem-guides-wknd.dispatcher.cloud-2021.1216.1101633.0000884042.zip (dispatcher-configuration)
 ```
 
-Das Protokoll des Codequalitätsschritts enthält ähnliche Informationen.
+Das Protokoll des Code-Qualitätsschritts enthält ähnliche Informationen.
 
-### Opt-out {#opting-out}
+### Opt-Out {#opting-out}
 
-Falls gewünscht, kann das Wiederverwendungsverhalten für bestimmte Pipelines deaktiviert werden, indem die Pipeline-Variable festgelegt wird. `CM_DISABLE_BUILD_REUSE` nach `true`. Wenn diese Variable festgelegt ist, wird der Commit-Hash weiterhin extrahiert und die resultierenden Artefakte werden zur späteren Verwendung gespeichert, aber alle zuvor gespeicherten Artefakte werden nicht wiederverwendet. Um dieses Verhalten zu verstehen, sehen Sie sich das folgende Szenario an.
+Falls gewünscht, kann das Wiederverwendungsverhalten für bestimmte Pipelines deaktiviert werden, indem die Pipeline-Variable `CM_DISABLE_BUILD_REUSE` auf `true` festgelegt wird. Wenn diese Variable festgelegt ist, wird der Commit-Hash weiterhin extrahiert und die resultierenden Artefakte werden zur späteren Verwendung gespeichert, aber die zuvor gespeicherten Artefakte werden nicht wiederverwendet. Um dieses Verhalten zu verstehen, sehen Sie sich das folgende Szenario an.
 
 1. Eine neue Pipeline wird erstellt.
-1. Die Pipeline wird ausgeführt (Ausführung #1) und der aktuelle HEAD-Commit lautet `becdddb`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
-1. Die `CM_DISABLE_BUILD_REUSE` festgelegt ist.
-1. Die Pipeline wird erneut ausgeführt, ohne den Code zu ändern. Es sind zwar gespeicherte Artefakte vorhanden, die mit `becdddb`, werden sie aufgrund der `CM_DISABLE_BUILD_REUSE` -Variable.
-1. Der Code wird geändert und die Pipeline wird ausgeführt. Der HEAD-Commit ist jetzt `f6ac5e6`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
-1. Die `CM_DISABLE_BUILD_REUSE` wird gelöscht.
-1. Die Pipeline wird erneut ausgeführt, ohne den Code zu ändern. Da gespeicherte Artefakte mit `f6ac5e6`, werden diese Artefakte wiederverwendet.
+1. Die Pipeline wird ausgeführt (Ausführung #1), und der aktuelle HEAD-Commit lautet `becdddb`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
+1. Die Variable `CM_DISABLE_BUILD_REUSE` ist festgelegt.
+1. Die Pipeline wird erneut ausgeführt, ohne dass der Code geändert wird. Obwohl es gespeicherte Artefakte gibt, die mit `becdddb` verknüpft sind, werden sie aufgrund der Variablen `CM_DISABLE_BUILD_REUSE` nicht wiederverwendet.
+1. Der Code wird geändert, und die Pipeline wird ausgeführt. Der HEAD-Commit ist jetzt `f6ac5e6`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
+1. Die Variable `CM_DISABLE_BUILD_REUSE` wird gelöscht.
+1. Die Pipeline wird erneut ausgeführt, ohne dass der Code geändert wird. Da es gespeicherte Artefakte gibt, die mit `f6ac5e6` verknüpft sind, werden diese Artefakte wiederverwendet.
 
 ### Einschränkungen {#caveats}
 
-* [Umgang mit Maven-Versionen](/help/using/activating-maven-project.md) die Projektversion nur in Produktions-Pipelines ersetzen. Wenn daher derselbe Commit sowohl für die Ausführung einer Entwicklungs-Bereitstellung als auch für die Ausführung einer Produktions-Pipeline verwendet wird und die Entwicklungs-Bereitstellungs-Pipeline zuerst ausgeführt wird, werden die Versionen in der Staging- und Produktionsumgebung bereitgestellt, ohne dass Änderungen vorgenommen werden. In diesem Fall wird jedoch weiterhin ein Tag erstellt.
+* Der [Umgang mit Maven-Versionen](/help/using/activating-maven-project.md) ersetzt die Projektversion nur in Produktions-Pipelines. Wenn daher derselbe Commit sowohl für die Ausführung einer Entwicklungs-Bereitstellung als auch für die Ausführung einer Produktions-Pipeline verwendet wird und die Pipeline der Entwicklungs-Bereitstellung zuerst ausgeführt wird, werden die Versionen in der Staging- und Produktionsumgebung bereitgestellt, ohne dass Änderungen vorgenommen werden. In diesem Fall wird jedoch weiterhin ein Tag erstellt.
 * Wenn das Abrufen der gespeicherten Artefakte nicht erfolgreich ist, wird der Build-Schritt so ausgeführt, als ob keine Artefakte gespeichert worden wären.
-* Andere Pipeline-Variablen als `CM_DISABLE_BUILD_REUSE` werden nicht berücksichtigt, wenn Cloud Manager beschließt, zuvor erstellte Build-Artefakte wiederzuverwenden.
+* Andere Pipeline-Variablen als `CM_DISABLE_BUILD_REUSE` werden nicht berücksichtigt, wenn Cloud Manager zuvor erstellte Build-Artefakte wiederverwendet.
 
 ## Entwickeln von Code basierend auf Best Practices {#develop-your-code-based-on-best-practices}
 
-Die Entwicklungs- und Beratungsteams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler zusammengestellt.](https://helpx.adobe.com/de/experience-manager/6-4/sites/developing/using/best-practices.html)
+Die Entwicklungs- und Beratungs-Teams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler](https://helpx.adobe.com/de/experience-manager/6-4/sites/developing/using/best-practices.html) zusammengestellt.
