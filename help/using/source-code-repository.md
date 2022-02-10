@@ -1,19 +1,19 @@
 ---
 title: Quell-Code-Repository
-seo-title: Quell-Code-Repository für Adobe AEM Cloud Manager
+seo-title: Source Code Repository for Adobe AEM Cloud Manager
 description: Auf dieser Seite erfahren Sie mehr über das Git-Repository, das für jedes in Cloud Manager enthaltene Programm bereitgestellt wird.
-seo-description: Auf dieser Seite erfahren Sie mehr über das Git-Repository, das für jedes in Adobe AEM Cloud Manager enthaltene Programm bereitgestellt wird.
+seo-description: Follow this page to learn about the git repository that is provisioned for each program you have in Adobe AEM Cloud Manager.
 uuid: 2c42775f-8703-43f7-bad2-7dc086ea9dd7
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: requirements
 discoiquuid: f90f0f4c-c1ff-47f6-8d97-ff5018561bf2
-feature: Bereitstellung
+feature: Provisioning
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '261'
+ht-degree: 87%
 
 ---
 
@@ -27,7 +27,7 @@ Als Best Practice sollten Sie immer das Cloud Manager-Git-Repository verwenden,
 
 Weitere Informationen zum Einrichten von Verzweigungen in Git finden Sie unter [Konfigurieren von Versionsverzweigungen](configure-your-release-branches.md).
 
-Weitere Informationen zum Verwenden des Cloud Manager-**Git-Repositorys** mit der CI/CD-Pipeline finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
+Weitere Informationen zur Verwendung der Cloud Manager-Variablen **Git-Repository** mit der CI/CD-Pipeline. Weitere Informationen finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](configuring-non-production-pipelines.md) , um mehr zu erfahren.
 
 ## On-Premise-Repository {#on-premise-repository}
 

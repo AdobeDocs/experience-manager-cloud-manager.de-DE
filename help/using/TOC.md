@@ -8,10 +8,10 @@ user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstv
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
-source-git-commit: e3f0759437707f73dfc6851608e06e30064c0f16
-workflow-type: ht
-source-wordcount: '294'
-ht-degree: 100%
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
+workflow-type: tm+mt
+source-wordcount: '303'
+ht-degree: 96%
 
 ---
 
@@ -42,7 +42,10 @@ ht-degree: 100%
    + [Konfigurieren von Release-Verzweigungen](configure-your-release-branches.md)
    + [Verwalten von Dispatcher-Konfigurationen](dispatcher-configurations.md)
 + Verwendung {#how-to-use}
-   + [Konfigurieren Ihrer CI/CD-Pipeline](configuring-pipeline.md)
+   + CI/CD Pipelines {#pipelines}
+      + [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md)
+      + [Konfigurieren von Nicht-Produktions-Pipelines](configuring-non-production-pipelines.md)
+      + [Verwalten von Pipelines](managing-pipelines.md)
    + [Bereitstellen Ihres Codes](deploying-code.md)
    + [Wissenswertes zu Testergebnissen](understand-your-test-results.md)
    + [Verwalten von Umgebungen](manage-your-environment.md)
@@ -62,6 +65,7 @@ ht-degree: 100%
    + [Test](evaluation.md)
 + Versionshinweise {#release-notes}
    + [Aktuelle Versionshinweise](release-notes-current.md)
+   + [Versionshinweise für 2022.1.0](release-notes-2022-1-0.md)
    + [Versionshinweise für 2021.12.0](release-notes-2021-12-0.md)
    + [Versionshinweise für 2021.11.0](release-notes-2021-11-0.md)
    + [Versionshinweise für 2021.10.0](release-notes-2021-10-0.md)

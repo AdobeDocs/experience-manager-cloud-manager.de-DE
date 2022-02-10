@@ -1,19 +1,19 @@
 ---
 title: Versionshinweise für 2019.1.0
-seo-title: Versionshinweise für AEM Cloud Manager 2019.1.0
+seo-title: AEM Cloud Manager Release Notes for 2019.1.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.1.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2019.1.0.
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2019.1.0.
 uuid: 3af5808f-828f-4846-bee4-1e62194b48ad
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
-feature: Versionshinweise
+feature: Release Information
 exl-id: 383ca5a0-4b0b-48e9-aa48-1d1388875329
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '319'
+ht-degree: 82%
 
 ---
 
@@ -25,12 +25,12 @@ Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun das Testen von
 
 Die [!UICONTROL Cloud Manager]-Version 2019.1.0 wurde am 17. Januar 2019 veröffentlicht.
 
-## Neuigkeiten {#whats-new}
+## Neue Funktionen {#whats-new}
 
-* AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
-* Pipelines, die ausschließlich Build- und Code-Qualitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md) im Abschnitt **Reine Nicht-Produktions- und Code-Qualitäts-Pipelines**.
+* AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
+* Pipelines, die ausschließlich Build- und Code-Qualitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie im Dokument . [Nicht-Produktions-Pipelines konfigurieren](configuring-non-production-pipelines.md) , um mehr zu erfahren.
 * Benutzerdefinierte Umgebungsvariablen in der Build-Umgebung werden nun unterstützt.
-* Kunden mit mehreren Staging- oder Produktionsumgebungen können auf der Seite [CI/CD-Pipeline konfigurieren](configuring-pipeline.md) festlegen, welche Umgebung als Teil der Produktionspipeline bereitgestellt wird.
+* Kunden mit mehreren Staging- oder Produktionsumgebungen können auswählen, in welcher Umgebung als Teil der Produktions-Pipeline bereitgestellt wird. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
 * httxt2dbm wurde dem Buildcontainer hinzugefügt.
 * Sie können über alle Elemente des Hilfemenüs eine neue Registerkarte öffnen.
 

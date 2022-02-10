@@ -1,14 +1,14 @@
 ---
 title: Einrichten des Programms
-seo-title: Einrichten des Programms
+seo-title: Set Up Your Program
 description: Nach dem Onbarding muss der Business Owner verschiedene Ersteinstellungen am Programm vornehmen.
-seo-description: 'Nach dem Onboarding muss der Business Owner verschiedene Ersteinstellungen an Adobe AEM Cloud Manager vornehmen. Hierzu gehören das Festlegen der Programmbeschreibung und das Definieren der für Leistungstests verwendeten KPIs. '
-feature: Erste Schritte
+seo-description: After onboarding, the business owner will need to do some initial setup of Adobe AEM Cloud Manager. This involves setting the program description and defining the KPIs which will be used for performance testing.
+feature: Getting Started
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 71a6f2709efb9c4c3831deaa1ce89d93e30b775c
-workflow-type: ht
-source-wordcount: '733'
-ht-degree: 100%
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
+workflow-type: tm+mt
+source-wordcount: '693'
+ht-degree: 97%
 
 ---
 
@@ -106,4 +106,4 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
 Wenn Sie die Pipeline bereits eingerichtet haben, werden Ihre aktualisierten Einstellungen bei der nächsten Ausführung berücksichtigt. Wenn Sie die Pipeline noch nicht eingerichtet haben, führen Sie zunächst die Schritte zum Einrichten der Pipeline aus.
 
-Weitere Informationen zum Einrichten der Pipeline finden Sie unter [Konfigurieren der CI/CD-Pipeline](https://helpx.adobe.com/de/experience-manager/cloud-manager/using/configuring-pipeline.html).
+Weitere Informationen finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](configuring-non-production-pipelines.md) zum Einrichten der Pipeline.

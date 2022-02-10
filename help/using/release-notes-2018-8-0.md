@@ -1,19 +1,19 @@
 ---
 title: Versionshinweise für 2018.8.0
-seo-title: Versionshinweise für AEM Cloud Manager 2018.8.0
+seo-title: AEM Cloud Manager Release Notes for 2018.8.0
 description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.8.0.
-seo-description: Auf dieser Seite erhalten Sie Informationen zur AEM Cloud Manager-Version 2018.8.0.
+seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: release-notes
 discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
-feature: Versionshinweise
+feature: Release Information
 exl-id: 20f87048-30f7-4869-aad0-13ca383a404b
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '324'
+ht-degree: 96%
 
 ---
 
@@ -25,11 +25,11 @@ Die [!UICONTROL Cloud Manager]-Version 2018.8.0 unterstützt nun das automatisc
 
 Die [!UICONTROL Cloud Manager]-Version 2018.8.0 wurde am 4. Oktober 2018 veröffentlicht.
 
-## Neuigkeiten {#what-s-new}
+## Neue Funktionen {#what-s-new}
 
 * **Programm-Setup**: Neuer Assistent zum Erstellen eines Anwendungsprojekts in Git mithilfe des AEM-Projekt-Archetyps
 
-* **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie unter [Konfigurieren der CI/CD-Pipeline](configuring-pipeline.md).
+* **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
 
    * Auslöser „Bei Git-Änderungen“, durch den die CI/CD-Pipeline gestartet wird, wenn der konfigurierten Git-Verzweigung Commits hinzugefügt werden.
    * Die Karten auf dem Startbildschirm besitzen nun einen Deep-Link zu bestimmten Abschnitten der Pipelineausführungsseite.

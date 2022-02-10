@@ -1,14 +1,14 @@
 ---
 title: Häufig gestellte Fragen zu Cloud Manager
-seo-title: Häufig gestellte Fragen zu Cloud Manager
+seo-title: Cloud Manager FAQs
 description: Unter „Häufig gestellte Fragen zu Cloud Manager“ erhalten Sie Tipps zur Fehlerbehebung
-seo-description: Auf dieser Seite finden Sie Antworten auf häufig gestellte Fragen zu Cloud Manager
-feature: Erste Schritte
+seo-description: Follow this page to get answers on Cloud Manager FAQs
+feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '881'
+ht-degree: 97%
 
 ---
 
@@ -30,7 +30,7 @@ AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 auf 11
 
 ## Unsere Bereitstellung ist blockiert, da die Überprüfung der Code-Qualität fehlgeschlagen ist. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
 
-Alle Fehler in der Code-Qualität mit Ausnahme der *Sicherheitsbewertung* sind nicht kritische Metriken, sodass sie umgangen werden können, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
+Alle Code-Qualitätsfehler mit Ausnahme der *Sicherheitseinstufung* sind nicht kritische Metriken, sodass sie durch Erweitern der Elemente in der Ergebnisoberfläche umgangen werden können.
 
 Benutzer mit der Rolle [Implementierungs-Manager, Projekt-Manager oder Geschäftsinhaber](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/requirements/setting-up-users-and-roles.html?lang=de#requirements) können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.  Weitere Informationen finden Sie unter [Dreistufige Akzeptanztests bei der Pipeline-Ausführung](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=de#how-to-use).
 
@@ -43,7 +43,7 @@ Einige Hinweise zum Leistungstest:
 * Der *Leistungstest* ist ein Web-Leistungsschritt, d. h. der Zeitaufwand, bis die Seite in einem Webbrowser geladen ist.
 * Die in der *CSV*-Ergebnisdatei aufgelisteten URLs werden während des Tests im Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig fehlgeschlagene Metrik ist die *Fehlerquote*. Damit eine URL den Test besteht, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die länger als `20` Sekunden dauern, werden als `504`-Fehler gekennzeichnet.
-* Wenn für Ihre Site eine Benutzerauthentifizierung erforderlich ist, finden Sie unter [Authentifizierte Leistungstests](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/configuring-pipeline.html?lang=de#how-to-use) Informationen zur Konfiguration des Tests zur Authentifizierung für Ihre Site.
+* Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, lesen Sie das Dokument . [Wissenswertes zu Testergebnissen](understand-your-test-results.md#authenticated-performance-testing) für die Konfiguration des Tests zur Authentifizierung für Ihre Site.
 
 ## Können wir SNAPSHOT in der Version des Maven-Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der JAR-Paketdateien für Staging- und Produktionsbereitstellungen? {#snapshot-version}
 
@@ -51,7 +51,7 @@ In den folgenden Szenarien erfahren Sie mehr über die Versionierung der Pakete 
 
 1. Bei Entwicklerbereitstellungen müssen die `pom.xml`-Dateien der Git-Verzweigung `-SNAPSHOT` am Ende des `<version>`-Werts enthalten. Dies ermöglicht nachfolgend eine Bereitstellung, bei der die Version nicht geändert und dennoch installiert wird. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
-1. Bei der Staging- und Produktionsbereitstellung wird wie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=de#managing-code) beschrieben eine automatische Version generiert.
+1. Bei der Staging- und Produktionsbereitstellung wird wie [hier](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/activating-maven-project.html?lang=den#managing-code) beschrieben eine automatische Version generiert.
 
 1. Legen Sie für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstellungen eine geeignete dreiteilige Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie eine andere Bereitstellung für die Produktion durchführen müssen.
 
@@ -71,7 +71,7 @@ In den folgenden Szenarien erfahren Sie mehr über die Versionierung der Pakete 
 
    `git push origin --delete testbranch1`
 
-## Der Maven-Build schlägt in Cloud Manager-Bereitstellungen fehl, wird jedoch ohne Fehler lokal erstellt. Wie lässt sich dies debuggen? {#maven-build-fail}
+## Der Maven-Build schlägt in Cloud Manager-Bereitstellungen fehl, wird jedoch ohne Fehler lokal erstellt. Debugging? {#maven-build-fail}
 
 Weitere Informationen finden Sie unter [Git-Ressource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 

@@ -1,17 +1,17 @@
 ---
 title: CI/CD-Pipeline
-seo-title: CI/CD-Pipeline
+seo-title: CI/CD Pipeline
 description: Übersicht über die CI/CD-Pipeline, die Bereitstellungen für Staging und Produktion in Cloud Manager verwaltet
-seo-description: In diesem Abschnitt erfahren Sie mehr über die CI/CD-Pipeline, die Bereitstellungen für die Staging- und Produktionsumgebung in Cloud Manager verarbeitet
+seo-description: Follow this section to learn about the CI/CD pipeline, which handles deployments to stage and production in Cloud Manager
 uuid: 763ddb24-05cd-463f-8d72-a2e69bbe6b7e
 topic-tags: introduction
 discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
-feature: CI-CD-Pipeline
+feature: CI-CD Pipeline
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
-source-git-commit: 43bb3c477ef9c1ce178509b8180479d7616edc66
+source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '551'
+ht-degree: 94%
 
 ---
 
@@ -46,7 +46,7 @@ In der folgenden Tabelle finden Sie Details zu den Vorgängen in jedem Schritt d
 
 ### Einrichten einer CI/CD-Pipeline {#how-to-setup-a-ci-cd-pipeline}
 
-Weitere Informationen zur Pipelinekonfiguration finden Sie unter [Konfigurieren von Pipelines](configuring-pipeline.md).
+Weitere Informationen zur Pipeline-Konfiguration finden Sie in den Dokumenten . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines.](configuring-non-production-pipelines.md)
 
 ## Quality Gates {#quality-gates}
 
@@ -68,4 +68,4 @@ Nachfolgend sehen Sie ein Beispiel für einen Codescan mit erkannten Codeproblem
 
 ### Einrichten der Gate-Tests {#how-to-setup-gates}
 
-Weitere Informationen zum Einrichten von Code-, Qualitäts- und Leistungstests finden Sie unter **[Konfigurieren von Gate-Tests](configuring-pipeline.md)**.
+Siehe Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) für Details zum Einrichten von Code-, Qualitäts- und Leistungstests.
