@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für 2019.1.0
 seo-title: AEM Cloud Manager Release Notes for 2019.1.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2019.1.0.
+description: Auf dieser Seite erhalten Sie Informationen zu Cloud Manager Version 2019.1.0.
 seo-description: Follow this page to get information for AEM Cloud Manager Release 2019.1.0.
 uuid: 3af5808f-828f-4846-bee4-1e62194b48ad
 contentOwner: jsyal
@@ -11,15 +11,15 @@ discoiquuid: 85a1dcf3-2eef-4ba8-b4d1-09e4a88c7bd0
 feature: Release Information
 exl-id: 383ca5a0-4b0b-48e9-aa48-1d1388875329
 source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '319'
-ht-degree: 82%
+ht-degree: 100%
 
 ---
 
 # Versionshinweise für 2019.1.0 {#release-notes-for}
 
-Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun das Testen von AEM Assets-Programmen und zusätzlichen Pipelinetypen, über die die Build- und Code-Qualitätsschritte ausgeführt werden. Optional ist die Bereitstellung in einer Nicht-Produktionsumgebung möglich.
+Die [!UICONTROL Cloud Manager]-Version 2018.9.0 unterstützt nun das Testen von AEM Assets-Programmen und zusätzlichen Pipeline-Typen, über die die Build- und Code-Qualitätsschritte ausgeführt werden. Optional ist die Bereitstellung in einer produktionsfremden Umgebung möglich.
 
 ## Veröffentlichungsdatum {#release-date}
 
@@ -27,10 +27,10 @@ Die [!UICONTROL Cloud Manager]-Version 2019.1.0 wurde am 17. Januar 2019 veröf
 
 ## Neue Funktionen {#whats-new}
 
-* AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
-* Pipelines, die ausschließlich Build- und Code-Qualitätsschritte ausführen, und Pipelines zum Bereitstellen in Nicht-Produktionsumgebungen werden nun unterstützt. Weitere Informationen finden Sie im Dokument . [Nicht-Produktions-Pipelines konfigurieren](configuring-non-production-pipelines.md) , um mehr zu erfahren.
+* AEM Assets-Leistungstests werden nun unterstützt. Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
+* Pipelines, die ausschließlich Build- und Code-Qualitätsschritte ausführen, und Pipelines zum Bereitstellen in produktionsfremden Umgebungen werden nun unterstützt. Weitere Informationen finden Sie im Dokument [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md).
 * Benutzerdefinierte Umgebungsvariablen in der Build-Umgebung werden nun unterstützt.
-* Kunden mit mehreren Staging- oder Produktionsumgebungen können auswählen, in welcher Umgebung als Teil der Produktions-Pipeline bereitgestellt wird. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
+* Kunden mit mehreren Staging- oder Produktionsumgebungen können auswählen, welche Umgebung als Teil der Produktions-Pipeline bereitgestellt wird. Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
 * httxt2dbm wurde dem Buildcontainer hinzugefügt.
 * Sie können über alle Elemente des Hilfemenüs eine neue Registerkarte öffnen.
 
