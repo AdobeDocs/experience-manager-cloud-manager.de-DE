@@ -9,9 +9,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
 source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '303'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -42,9 +42,9 @@ ht-degree: 96%
    + [Konfigurieren von Release-Verzweigungen](configure-your-release-branches.md)
    + [Verwalten von Dispatcher-Konfigurationen](dispatcher-configurations.md)
 + Verwendung {#how-to-use}
-   + CI/CD Pipelines {#pipelines}
+   + CI/CD-Pipelines {#pipelines}
       + [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md)
-      + [Konfigurieren von Nicht-Produktions-Pipelines](configuring-non-production-pipelines.md)
+      + [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md)
       + [Verwalten von Pipelines](managing-pipelines.md)
    + [Bereitstellen Ihres Codes](deploying-code.md)
    + [Wissenswertes zu Testergebnissen](understand-your-test-results.md)
