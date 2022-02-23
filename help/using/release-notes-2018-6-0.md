@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für 2018.6.0
 seo-title: AEM Cloud Manager Release Notes for 2018.6.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.6.0.
+description: Auf dieser Seite erhalten Sie Informationen zu Cloud Manager Version 2018.6.0.
 seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.6.0.
 uuid: 211b6e1b-10fb-46b0-b591-44d5e44abd77
 contentOwner: jsyal
@@ -11,15 +11,15 @@ discoiquuid: 8584f467-3e61-41ea-98e4-f79e68c86469
 feature: Release Information
 exl-id: 456f7892-c64c-4b3f-b845-15682d034aaa
 source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '321'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
 # Versionshinweise für 2018.6.0 {#release-notes-for}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2018.6.0. Diese Version unterstützt nun Dispatcherinvalidierungen bei Bereitstellungen, bietet zusätzliche Benachrichtigungen und Verbesserungen an der Benutzerfreundlichkeit.
+Im folgenden Abschnitt finden Sie allgemeine Versionshinweise für [!UICONTROL Cloud Manager] 2018.6.0. Diese Version unterstützt nun Dispatcher-Invalidierungen bei Bereitstellungen, bietet zusätzliche Benachrichtigungen und Verbesserungen der Benutzerfreundlichkeit.
 
 ## Veröffentlichungsdatum {#release-date}
 
@@ -27,11 +27,11 @@ Die [!UICONTROL Cloud Manager]-Version 2018.6.0 wurde am 9. August 2018 veröff
 
 ## Neue Funktionen {#what-s-new}
 
-* **CI/CD-Pipeline**: Konfigurierbare Dispatcherinvalidierung und Cacheflushing in der Staging- und Produktionsumgebung während der CI/CD-Pipelineausführung. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
+* **CI/CD-Pipeline**: Konfigurierbare Dispatcher-Iinvalidierung und Cache Flushing in Staging- und Produktionsumgebung während der CI/CD-Pipeline-Ausführung. Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
 
-* **CI/CD-Pipeline**: Während der Pipelineeinrichtung können Sie nun definieren, wie sich die Pipeline verhält, wenn ein wesentlicher Fehler an einem der Quality Gates auftritt. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
+* **CI/CD-Pipeline**: Während der Pipeline-Einrichtung können Sie nun definieren, wie sich die Pipeline verhält, wenn an einem der Quality Gates ein Fehler der Kategorie „Wichtig“ auftritt. Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
 
-* **CI/CD-Pipeline**: Während der Pipelineeinrichtung können Sie nun festlegen, ob der für Sie zuständige oder ein beliebiger CSE eine CSE-Überwachung durchführen soll. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
+* **CI/CD-Pipeline**: Während der Pipeline-Einrichtung können Sie nun festlegen, ob der für Sie zuständige oder ein beliebiger CSE eine CSE-Überwachung durchführen soll. Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
 
 * **CI/CD-Pipeline**: Wenn die CI/CD-Pipeline den Schritt „Geschäftsgenehmigung“ erreicht, wird eine Benachrichtigung an die Anwender gesendet, die zur Genehmigung der Bereitstellung berechtigt sind. Weitere Informationen finden Sie unter [Benachrichtigungen](notifications.md).
 
