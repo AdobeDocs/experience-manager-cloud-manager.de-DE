@@ -1,14 +1,14 @@
 ---
 title: Einrichten des Programms
 seo-title: Set Up Your Program
-description: Nach dem Onbarding muss der Business Owner verschiedene Ersteinstellungen am Programm vornehmen.
+description: Nach dem Onbarding muss der Geschäftsinhaber verschiedene Ersteinstellungen am Programm vornehmen.
 seo-description: After onboarding, the business owner will need to do some initial setup of Adobe AEM Cloud Manager. This involves setting the program description and defining the KPIs which will be used for performance testing.
 feature: Getting Started
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '693'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -106,4 +106,4 @@ Während der Programmeinrichtung werden Asset-spezifische KPIs angegeben:
 
 Wenn Sie die Pipeline bereits eingerichtet haben, werden Ihre aktualisierten Einstellungen bei der nächsten Ausführung berücksichtigt. Wenn Sie die Pipeline noch nicht eingerichtet haben, führen Sie zunächst die Schritte zum Einrichten der Pipeline aus.
 
-Weitere Informationen finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](configuring-non-production-pipelines.md) zum Einrichten der Pipeline.
+Weitere Informationen zum Einrichten von Pipelines finden Sie unter [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md).
