@@ -6,7 +6,7 @@ seo-description: A video series that walks through the set up and integration of
 feature: Git Repositories
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '363'
 ht-degree: 100%
 
@@ -42,7 +42,7 @@ Erste Schritte zum Synchronisieren eines kundenverwalteten Git-Repository mit de
 
 ## Standard-Verzweigungsstrategie {#branching-strategy}
 
-Richten Sie eine Standard-Verzweigungsstrategie ein, um die [](configuring-production-pipelines.md)[Produktions- und produktionsfremden Pipelines](configuring-non-production-pipelines.md) von Cloud Manager zu nutzen.
+Richten Sie eine grundlegende Verzweigungsstrategie ein, um die [Produktions-](configuring-production-pipelines.md) und [produktionsfremden Pipelines](configuring-non-production-pipelines.md) von Cloud Manager zu nutzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 
@@ -66,7 +66,7 @@ Synchronisieren Sie Versions-Tags aus einem Cloud Manager-Git-Repository in eine
 
 ## Zusätzliche Ressourcen {#additional-resources}
 
-* [Dokumentation für Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html)
+* [Dokumentation für Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/introduction-to-cloud-manager.html?lang=de)
 * [GitHub-Ressourcen](https://try.github.io)
 * [Git-Tutorials von Atlassian](https://www.atlassian.com/git/tutorials/what-is-version-control)
 * [Git-Schnellübersicht](https://education.github.com/git-cheat-sheet-education.pdf)
