@@ -3,7 +3,7 @@ title: Versionshinweise für 2021.12.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2021.12.0.
 feature: Release Information
 source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '269'
 ht-degree: 100%
 
