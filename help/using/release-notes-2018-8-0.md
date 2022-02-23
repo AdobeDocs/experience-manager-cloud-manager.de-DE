@@ -1,7 +1,7 @@
 ---
 title: Versionshinweise für 2018.8.0
 seo-title: AEM Cloud Manager Release Notes for 2018.8.0
-description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager-Version 2018.8.0.
+description: Auf dieser Seite erhalten Sie Informationen zur Cloud Manager Version 2018.8.0.
 seo-description: Follow this page to get information for AEM Cloud Manager Release 2018.8.0.
 uuid: e8aaba32-89b4-4bc5-b295-09b753252612
 contentOwner: jsyal
@@ -11,9 +11,9 @@ discoiquuid: 9222ac3b-525e-47c1-b481-ac9d22e3d559
 feature: Release Information
 exl-id: 20f87048-30f7-4869-aad0-13ca383a404b
 source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '324'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Die [!UICONTROL Cloud Manager]-Version 2018.8.0 wurde am 4. Oktober 2018 veröf
 
 * **Programm-Setup**: Neuer Assistent zum Erstellen eines Anwendungsprojekts in Git mithilfe des AEM-Projekt-Archetyps
 
-* **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie im Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) , um mehr zu erfahren.
+* **CI/CD-Pipeline**: Die CI/CD-Pipeline wird wie folgt beschrieben geändert. Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
 
    * Auslöser „Bei Git-Änderungen“, durch den die CI/CD-Pipeline gestartet wird, wenn der konfigurierten Git-Verzweigung Commits hinzugefügt werden.
    * Die Karten auf dem Startbildschirm besitzen nun einen Deep-Link zu bestimmten Abschnitten der Pipelineausführungsseite.
