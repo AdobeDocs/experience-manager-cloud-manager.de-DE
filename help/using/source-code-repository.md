@@ -11,9 +11,9 @@ discoiquuid: f90f0f4c-c1ff-47f6-8d97-ff5018561bf2
 feature: Provisioning
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
 source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 87%
+ht-degree: 100%
 
 ---
 
@@ -27,7 +27,7 @@ Als Best Practice sollten Sie immer das Cloud Manager-Git-Repository verwenden,
 
 Weitere Informationen zum Einrichten von Verzweigungen in Git finden Sie unter [Konfigurieren von Versionsverzweigungen](configure-your-release-branches.md).
 
-Weitere Informationen zur Verwendung der Cloud Manager-Variablen **Git-Repository** mit der CI/CD-Pipeline. Weitere Informationen finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](configuring-non-production-pipelines.md) , um mehr zu erfahren.
+Weitere Informationen zur Verwendung des **Git-Repositorys** von Cloud Manager mit der CI/CD-Pipeline finden Sie unter [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md).
 
 ## On-Premise-Repository {#on-premise-repository}
 
