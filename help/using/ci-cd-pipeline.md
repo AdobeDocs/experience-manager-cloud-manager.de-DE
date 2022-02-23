@@ -9,21 +9,21 @@ discoiquuid: 1cdb76eb-1a91-4689-8579-0fa9fccc0592
 feature: CI-CD Pipeline
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 source-git-commit: 4f0e1d163001fd18cfa838256c813152d65c3b4c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '551'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 # CI/CD-Pipeline {#ci-cd-pipeline}
 
-## Pipelineübersicht {#pipeline-overview}
+## Pipeline-Übersicht {#pipeline-overview}
 
 [!UICONTROL Cloud Manager] enthält ein CI-Framework (Continuous Integration) und ein CD-Framework (Continuous Delivery), mit denen Implementierungs-Teams schnell neuen oder aktualisierten Code testen und bereitstellen können. Beispielsweise können Implementierungs-Teams eine automatisierte CI/CD-Pipeline einrichten, konfigurieren und starten, die Best Practices von Adobe für die Kodierung nutzt, um einen umfassenden Codescan durchzuführen und die höchste Code-Qualität sicherzustellen.
 
 Die CI/CD-Pipeline automatisiert außerdem die Einheiten- und Leistungstests, um die Bereitstellungseffizienz zu erhöhen und proaktiv wichtige Probleme zu identifizieren, deren Behebung nach der Bereitstellung hohe Kosten verursacht. Implementierungs-Teams können auf einen umfassenden Codeleistungsbericht zugreifen, um einen Überblick über die potenziellen Auswirkungen auf KPIs und kritische Sicherheitsprüfungen für den Fall zu erhalten, dass der Code in der Produktion bereitgestellt wird.
 
-## Pipelineprozess {#pipeline-process}
+## Pipeline-Prozess {#pipeline-process}
 
 Das folgende Diagramm zeigt, was nach dem Auslösen einer Veröffentlichung in [!UICONTROL Cloud Manager] geschieht. In der zugehörigen Tabelle werden die einzelnen Schritte des Arbeitsablaufs erläutert.
 
@@ -46,7 +46,7 @@ In der folgenden Tabelle finden Sie Details zu den Vorgängen in jedem Schritt d
 
 ### Einrichten einer CI/CD-Pipeline {#how-to-setup-a-ci-cd-pipeline}
 
-Weitere Informationen zur Pipeline-Konfiguration finden Sie in den Dokumenten . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines.](configuring-non-production-pipelines.md)
+Weitere Informationen zur Pipeline-Konfiguration finden Sie unter [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md).
 
 ## Quality Gates {#quality-gates}
 
@@ -68,4 +68,4 @@ Nachfolgend sehen Sie ein Beispiel für einen Codescan mit erkannten Codeproblem
 
 ### Einrichten der Gate-Tests {#how-to-setup-gates}
 
-Siehe Dokument . [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md) für Details zum Einrichten von Code-, Qualitäts- und Leistungstests.
+Weitere Informationen zum Einrichten von Code-, Qualitäts- und Leistungs-Gates finden Sie unter [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md).
