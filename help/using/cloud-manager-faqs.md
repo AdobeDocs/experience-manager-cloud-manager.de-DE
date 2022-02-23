@@ -6,9 +6,9 @@ seo-description: Follow this page to get answers on Cloud Manager FAQs
 feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 71d44c7e3673ca62fcd2203ecc0bc4ed9fa22002
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '881'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -36,14 +36,14 @@ Benutzer mit der Rolle [Implementierungs-Manager, Projekt-Manager oder Geschäft
 
 ## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie können wir dies debuggen, um kritische Metriken zu erfüllen? {#debug-critical-metrics}
 
-Informationen zur Auswertung der Ergebnisse finden Sie unter [Wissenswertes zu Testergebnissen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=en#how-to-use).
+Informationen zur Auswertung der Ergebnisse finden Sie unter [Wissenswertes zu Testergebnissen](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/how-to-use/understand-your-test-results.html?lang=de#how-to-use).
 
 Einige Hinweise zum Leistungstest:
 
 * Der *Leistungstest* ist ein Web-Leistungsschritt, d. h. der Zeitaufwand, bis die Seite in einem Webbrowser geladen ist.
 * Die in der *CSV*-Ergebnisdatei aufgelisteten URLs werden während des Tests im Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig fehlgeschlagene Metrik ist die *Fehlerquote*. Damit eine URL den Test besteht, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Seitenladevorgänge, die länger als `20` Sekunden dauern, werden als `504`-Fehler gekennzeichnet.
-* Wenn für Ihre Site die Benutzerauthentifizierung erforderlich ist, lesen Sie das Dokument . [Wissenswertes zu Testergebnissen](understand-your-test-results.md#authenticated-performance-testing) für die Konfiguration des Tests zur Authentifizierung für Ihre Site.
+* Wenn für die Site eine Benutzerauthentifizierung erforderlich ist, finden Sie unter [Wissenswertes zu Testergebnissen](understand-your-test-results.md#authenticated-performance-testing) weitere Informationen dazu, wie Sie den Test zur Authentifizierung auf Ihrer Site konfigurieren.
 
 ## Können wir SNAPSHOT in der Version des Maven-Projekts verwenden? Wie funktioniert die Versionierung der Pakete und der JAR-Paketdateien für Staging- und Produktionsbereitstellungen? {#snapshot-version}
 
@@ -71,7 +71,7 @@ In den folgenden Szenarien erfahren Sie mehr über die Versionierung der Pakete 
 
    `git push origin --delete testbranch1`
 
-## Der Maven-Build schlägt in Cloud Manager-Bereitstellungen fehl, wird jedoch ohne Fehler lokal erstellt. Debugging? {#maven-build-fail}
+## Der Maven-Build schlägt in Cloud Manager-Bereitstellungen fehl, wird jedoch ohne Fehler lokal erstellt. Vorgehensweise beim Debugging? {#maven-build-fail}
 
 Weitere Informationen finden Sie unter [Git-Ressource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
