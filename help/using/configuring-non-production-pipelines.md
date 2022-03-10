@@ -1,13 +1,13 @@
 ---
 title: Konfigurieren von produktionsfremden Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
-source-git-commit: 205113735cc743e11e140b1161413002844f5b79
-workflow-type: ht
-source-wordcount: '626'
-ht-degree: 100%
+exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
+source-git-commit: 154b95e1b43717097b9ae9076a15792517dd613d
+workflow-type: tm+mt
+source-wordcount: '629'
+ht-degree: 95%
 
 ---
-
 
 # Konfigurieren von produktionsfremden Pipelines {#configuring-non-production-pipelines}
 
@@ -23,7 +23,7 @@ Die Rolle **Bereitstellungs-Manager** ist dafür verantwortlich, die Pipeline mi
 
 Sie können zwei Arten von Pipelines erstellen.
 
-* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
+* **Produktions-Pipelines**: Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
 Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Informationen zum Konfigurieren von produktionsfremden Pipelines finden Sie unter [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md).
@@ -71,10 +71,10 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
       * **Manuell**: Verwenden Sie diese Option, um die Pipeline manuell zu starten.
       * **Bei Git-Änderungen**: Bei Auswahl dieser Option wird die Pipeline immer dann gestartet, wenn der konfigurierten Git-Verzweigung Übertragungen hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
-   1. Definieren Sie unter **Verhalten bei wichtigen Metrikfehlern** das Verhalten der Pipeline, wenn in einer der Qualitätsstufen ein wichtiger Fehler auftritt.
+   1. Für Implementierungs-Pipelines unter **Verhalten bei wichtigen Metrikfehlern** festlegen, definieren Sie das Verhalten der Pipeline, wenn in einem der Quality Gates ein wichtiger Fehler auftritt.
 
       * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-      * **Sofort fehlschlagen**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler ablehnt.
+      * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
       * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler genehmigt.
 
 

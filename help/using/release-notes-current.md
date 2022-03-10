@@ -1,18 +1,19 @@
 ---
-title: Versionshinweise für 2022.2.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.2.0.
+title: Versionshinweise für 2022.3.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ae4cc3e8056e6ac317628e997271b4b01c7251c3
-workflow-type: ht
-source-wordcount: '135'
-ht-degree: 100%
+source-git-commit: 6e98f9d2fcd69799bad86d1e247212b26273bd0b
+workflow-type: tm+mt
+source-wordcount: '201'
+ht-degree: 29%
 
 ---
 
-# Versionshinweise für Cloud Manager Version 2022.2.0 {#release-notes}
 
-Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Cloud Manager] Version 2022.2.0.
+# Versionshinweise für Cloud Manager Version 2022.3.0 {#release-notes}
+
+Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.3.0.
 
 >[!NOTE]
 >
@@ -20,13 +21,17 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Clo
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.2.0 ist der 10. Februar 2022. Die nächste Version soll am 10. März 2022 veröffentlicht werden.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.3.0 wurde am 10. März 2022 veröffentlicht. Die nächste Version ist für den 7. April 2022 geplant.
 
-## Neue Funktionen {#whats-new}
+## Neue Funktionen {#what-is-new}
 
-* Eine aktualisierte Landingpage für Cloud Manager bietet verbesserte Navigation, einfaches Wechseln zwischen Raster-/Kachelansichten und Popup-Fenster für eine schnelle Programmübersicht.
+* [Die `reliability_rating` kritische Metrik](understand-your-test-results.md) wurde deaktiviert.
+* Ein Benutzer kann nun die Spalten im **Pipelines** in Cloud Manager.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Rollback-Ausführungen werden nun ordnungsgemäß von der Ausführung der vollständigen Stapel-Pipeline unterschieden.
-* Alte Git-Repository-Kennwörter werden jetzt immer invalidiert, wenn ein neues Kennwort generiert wird.
+* [Die **Änderungen am Lastenausgleich überspringen** option](configuring-production-pipelines.md#adding-production-pipeline) kann jetzt ordnungsgemäß deaktiviert werden.
+* [Die **Änderungen am Lastenausgleich überspringen** option](configuring-production-pipelines.md#adding-production-pipeline) wird nun für den Workflow zur Bearbeitung der Bereitstellungs-Pipeline angezeigt.
+* Eine Untergruppe manuell erstellter Git-Repositorys hatte falsche Namenswerte, die sich auf [die Funktion zur Wiederverwendung von Build-Artefakten.](setting-up-project.md#build-artifact-reuse) Die Namen dieser Repositorys wurden geändert, und die Benutzer sehen den berichtigten Namen in der Cloud Manager-API/-Benutzeroberfläche.
+* [Beim Hinzufügen oder Bearbeiten einer Code-Qualitäts-Pipeline](configuring-non-production-pipelines.md) die Optionen zur Handhabung von Metrikfehlern werden nicht mehr angezeigt.
+* Unerwartete Pipelinevariablenkonfigurationen verursachen keine Fehler mehr im Build-Schritt.
