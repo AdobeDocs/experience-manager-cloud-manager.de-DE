@@ -3,7 +3,7 @@ title: Versionshinweise für 2022.3.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2022.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6e98f9d2fcd69799bad86d1e247212b26273bd0b
+source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
 workflow-type: tm+mt
 source-wordcount: '201'
 ht-degree: 29%
@@ -25,8 +25,9 @@ Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.3.0 wur
 
 ## Neue Funktionen {#what-is-new}
 
-* [Die `reliability_rating` kritische Metrik](understand-your-test-results.md) wurde deaktiviert.
-* Ein Benutzer kann nun die Spalten im **Pipelines** in Cloud Manager.
+* (Nur Cloud Service) Der Zugriff auf das AEM-Umgebungsprotokoll kann über die Entwicklerrolle erfolgen.
+* Die [`reliability_rating` kritische Metrik](understand-your-test-results.md) wurde deaktiviert.
+
 
 ## Fehlerbehebungen {#bug-fixes}
 
