@@ -3,10 +3,10 @@ title: Versionshinweise für 2022.3.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2022.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 0d14adda454889eebbb0a875978ceeaa5ee4f7ea
+source-git-commit: 79b2729814af483844d095ed8d6db6cead2ceaf7
 workflow-type: tm+mt
-source-wordcount: '201'
-ht-degree: 29%
+source-wordcount: '233'
+ht-degree: 25%
 
 ---
 
@@ -26,13 +26,14 @@ Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.3.0 wur
 ## Neue Funktionen {#what-is-new}
 
 * (Nur Cloud Service) Der Zugriff auf das AEM-Umgebungsprotokoll kann über die Entwicklerrolle erfolgen.
-* Die [`reliability_rating` kritische Metrik](understand-your-test-results.md) wurde deaktiviert.
+* (AMS): Outbounds von HTTP-Anforderungen aus Asset-Tests stammen jetzt aus einem festen IP-Bereich.
 
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* [Die **Änderungen am Lastenausgleich überspringen** option](configuring-production-pipelines.md#adding-production-pipeline) kann jetzt ordnungsgemäß deaktiviert werden.
-* [Die **Änderungen am Lastenausgleich überspringen** option](configuring-production-pipelines.md#adding-production-pipeline) wird nun für den Workflow zur Bearbeitung der Bereitstellungs-Pipeline angezeigt.
-* Eine Untergruppe manuell erstellter Git-Repositorys hatte falsche Namenswerte, die sich auf [die Funktion zur Wiederverwendung von Build-Artefakten.](setting-up-project.md#build-artifact-reuse) Die Namen dieser Repositorys wurden geändert, und die Benutzer sehen den berichtigten Namen in der Cloud Manager-API/-Benutzeroberfläche.
-* [Beim Hinzufügen oder Bearbeiten einer Code-Qualitäts-Pipeline](configuring-non-production-pipelines.md) die Optionen zur Handhabung von Metrikfehlern werden nicht mehr angezeigt.
-* Unerwartete Pipelinevariablenkonfigurationen verursachen keine Fehler mehr im Build-Schritt.
+* (Nur AMS) Die **Änderungen am Lastenausgleich überspringen** -Option konnte nicht deaktiviert werden.
+* (AMS) Die **Änderungen am Lastenausgleich überspringen** wurde in der AMS-Entwicklungsimplementierung nicht angezeigt **Pipeline-Workflow bearbeiten**.
+* Eine Untergruppe von manuell erstellten Git-Repositorys hatte einen falschen Namenswert, was verhindert hat, dass die Funktion zur Wiederverwendung von Build-Artefakten effektiv ist. Die Namen dieser Repositorys wurden geändert, und die Benutzer sehen den berichtigten Namen in der Cloud Manager-API/-Benutzeroberfläche.
+* Build-Artefakte aus produktionsfremden Pipelines wurden in Produktions-Vollstapelpipelines unangemessen wiederverwendet.
+* Beim Hinzufügen oder Bearbeiten einer Code-Qualitäts-Pipeline werden die Optionen zum Verarbeiten von Metrikfehlern nicht mehr angezeigt.
+* Einige unerwartete Pipelinevariablenkonfigurationen konnten im Build-Schritt verursacht werden.
