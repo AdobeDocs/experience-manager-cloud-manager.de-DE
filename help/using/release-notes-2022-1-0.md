@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2022.1.0.
 feature: Release Information
 exl-id: 9cc40326-cb8e-415f-b2ad-937d42189ee3
 source-git-commit: 797731ff0f9a499fe359d2e4e6044877fdcac702
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '149'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Im folgenden Abschnitt finden Sie allgemeine Versionshinweise zu [!UICONTROL Clo
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.1.0 ist der 20. Januar 2022. Die nächste Version ist für den 10. Februar 2022 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.1.0 ist der 20. Januar 2022. Die Veröffentlichung der nächsten Version war für den 10. Februar 2022 geplant.
 
 ## Neue Funktionen {#whats-new}
 
