@@ -3,9 +3,9 @@ title: Konfigurieren von produktionsfremden Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 154b95e1b43717097b9ae9076a15792517dd613d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '629'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -71,7 +71,7 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
       * **Manuell**: Verwenden Sie diese Option, um die Pipeline manuell zu starten.
       * **Bei Git-Änderungen**: Bei Auswahl dieser Option wird die Pipeline immer dann gestartet, wenn der konfigurierten Git-Verzweigung Übertragungen hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
-   1. Für Implementierungs-Pipelines unter **Verhalten bei wichtigen Metrikfehlern** festlegen, definieren Sie das Verhalten der Pipeline, wenn in einem der Quality Gates ein wichtiger Fehler auftritt.
+   1. Für Bereitstellungs-Pipelines definieren Sie unter **Verhalten bei wichtigen Metrikfehlern** das Verhalten der Pipeline, wenn ein wichtiger Fehler in einem der Quality Gates auftritt.
 
       * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
       * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
