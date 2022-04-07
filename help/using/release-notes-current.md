@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2022.3.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.3.0.
+title: Versionshinweise für 2022.4.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.4.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 4a5ddf3144ec50f1a7a4ac367b5c99bc9b486752
-workflow-type: ht
-source-wordcount: '214'
-ht-degree: 100%
+source-git-commit: 3d4eea13c0f2e9c4030bbfd3b7c5c25336548498
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.3.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2022.4.0 {#release-notes}
 
-Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.3.0 dokumentiert.
+Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.4.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,18 +21,15 @@ Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Ver
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.3.0 ist der 10. März 2022. Die nächste Version ist für den 7. April 2022 geplant.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.4.0 wurde am 7. April 2022 veröffentlicht. Die nächste Version ist für den 5. Mai 2022 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Outbounds von HTTP-Anforderungen aus Asset-Tests stammen jetzt aus einem festen IP-Bereich.
-
-
-## Fehlerbehebungen {#bug-fixes}
-
-* Die Option **Änderungen am Lastenausgleich überspringen** konnte nicht deaktiviert werden.
-* Die Option **Änderungen am Lastenausgleich überspringen** wurde in der AMS-Entwicklungsimplementierung **Pipeline-Workflow bearbeiten** nicht angezeigt.
-* Eine Untergruppe von manuell erstellten Git-Repositorys hatte einen falschen Namenswert, was verhindert hat, dass die Funktion zur Wiederverwendung von Build-Artefakten effektiv war. Die Namen dieser Repositorys wurden geändert, und die Benutzer sehen den berichtigten Namen in der Cloud Manager-API/-Benutzeroberfläche.
-* Build-Artefakte aus produktionsfremden Pipelines wurden in Vollstapel-Pipelines der Produktion unangemessen wiederverwendet.
-* Beim Hinzufügen oder Bearbeiten einer Code-Qualitäts-Pipeline werden die Optionen zum Verarbeiten von Metrikfehlern nicht mehr angezeigt.
-* Im Build-Schritt konnten einige unerwartete Konfigurationen von Pipeline-Variablen auftreten.
+* Verbesserungen an der Dauer und Erfolgsrate der Pipelineaufbauschritte wurden implementiert und werden schrittweise bis zum April für alle Kunden eingeführt.
+* Sie können jetzt eine Git-Verzweigung einfach finden, indem Sie die ersten Zeichen des Namens in das Eingabefeld im Pipeline-Assistenten hinzufügen und bearbeiten und aus vorgeschlagenen Übereinstimmungen auswählen.
+* Die **Pipelines** Seite hat jetzt Paginierung, um die Benutzerfreundlichkeit für Programme mit einer großen Anzahl von Pipelines zu verbessern.
+   * In der Tabelle werden 50 Zeilen pro Seite angezeigt.
+* Die Version der [AEM Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) verwendet von Cloud Manager wurde auf Version 36 aktualisiert.
+* Oracle JDK ist jetzt das Standard-JDK für die Entwicklung und den Betrieb von AEM. Der Build-Prozess von Cloud Manager wechselt automatisch zur Verwendung von Oracle JDK, auch wenn in der Maven-Toolchain explizit eine alternative Option ausgewählt ist.
+   * Weitere Informationen zum Umstieg auf Oracle JDK finden Sie unter [die Dokumentation zur Build-Umgebung .](/help/using/build-environment-details.md#using-java-support)
+   * Siehe [Häufig gestellte Fragen zur Java-Support-Richtlinie für Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) um allgemeine Fragen zu dieser Änderung zu beantworten.
