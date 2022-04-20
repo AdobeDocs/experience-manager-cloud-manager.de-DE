@@ -3,15 +3,15 @@ product: adobe experience manager
 sub-product: experience manager cloud manager
 archetype: administrator
 user-guide-title: Benutzerhandbuch zu Experience Manager Cloud Manager
-breadcrumb-title: Benutzerhandbuch zu Cloud Manager für AEM 6.x
+breadcrumb-title: Benutzerhandbuch zu Cloud Manager  für AEM 6.x
 user-guide-description: Erfahren Sie, wie Sie Adobe Managed Services zur Selbstverwaltung von Experience Manager in der Cloud nutzen können.
 feature-set: Experience Manager Cloud Manager, Experience Manager
 role: Admin
 level: Intermediate
 source-git-commit: f1d359921a11ab8a6117a15cd5eb72362bbb8360
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '309'
+ht-degree: 100%
 
 ---
 
