@@ -3,10 +3,10 @@ title: Einrichten des Projekts
 description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
 feature: Getting Started, Production Programs
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: 8861b5e48b8e1d081b4c8653000a8f2cf16dd11f
-workflow-type: ht
-source-wordcount: '1289'
-ht-degree: 100%
+source-git-commit: fd1a72f2fd3b3e3789fcb38a8d4a9585293ced50
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -262,11 +262,15 @@ Mit dem content-package-maven-plugin ist es ähnlich:
         </plugin>
 ```
 
-## Artefakt-Wiederverwendung erstellen {#build-artifact-reuse}
+## Wiederverwendung von Build-Artefakten {#build-artifact-reuse}
 
-In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn festgestellt wird, dass ein und derselbe Git-Commit in mehreren Pipeline-Ausführungen mit vollem Stapel verwendet wird, verhindert Cloud Manager nach Möglichkeit, dass die Code-Basis neu aufgebaut wird.
+In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn festgestellt wird, dass derselbe Git-Commit in mehreren Pipeline-Ausführungen mit vollem Stapel verwendet wird, verhindert Cloud Manager, dass die Code-Basis neu erstellt wird.
 
-Wenn eine Ausführung gestartet wird, wird der aktuelle HEAD-Commit für die Zweig-Pipeline extrahiert. Der Commit-Hash ist in der Benutzeroberfläche und über die API sichtbar. Wenn der Build-Schritt erfolgreich abgeschlossen wurde, werden die resultierenden Artefakte basierend auf diesem Commit-Hash gespeichert und können in nachfolgenden Pipeline-Ausführungen wiederverwendet werden. Wenn eine Wiederverwendung erfolgt, werden die Build- und Code-Qualitätsschritte effektiv durch die Ergebnisse der ursprünglichen Ausführung ersetzt. In der Protokolldatei für den Build-Schritt werden die Artefakte und die Ausführungsinformationen aufgelistet, die ursprünglich zum Erstellen verwendet wurden.
+Wenn eine Ausführung gestartet wird, wird der aktuelle HEAD-Commit für die Zweig-Pipeline extrahiert. Der Commit-Hash ist in der Benutzeroberfläche und über die API sichtbar. Wenn der Build-Schritt erfolgreich abgeschlossen wurde, werden die resultierenden Artefakte basierend auf diesem Commit-Hash gespeichert und können in nachfolgenden Pipeline-Ausführungen wiederverwendet werden.
+
+Pakete werden in allen Pipelines wiederverwendet, wenn sie sich im selben Programm befinden. Bei der Suche nach Paketen, die wiederverwendet werden können, ignoriert AEM Verzweigungen und verwendet Artefakte in allen Verzweigungen wieder.
+
+Wenn eine Wiederverwendung erfolgt, werden die Build- und Code-Qualitätsschritte effektiv durch die Ergebnisse der ursprünglichen Ausführung ersetzt. In der Protokolldatei für den Build-Schritt werden die Artefakte und die Ausführungsinformationen aufgelistet, die ursprünglich zum Erstellen verwendet wurden.
 
 Im Folgenden finden Sie ein Beispiel für eine solche Protokollausgabe.
 
@@ -278,21 +282,51 @@ build/aem-guides-wknd.dispatcher.cloud-2021.1216.1101633.0000884042.zip (dispatc
 
 Das Protokoll des Code-Qualitätsschritts enthält ähnliche Informationen.
 
-### Opt-Out {#opting-out}
+### Beispiele {#example-reuse}
 
-Falls gewünscht, kann das Wiederverwendungsverhalten für bestimmte Pipelines deaktiviert werden, indem die Pipeline-Variable `CM_DISABLE_BUILD_REUSE` auf `true` festgelegt wird. Wenn diese Variable festgelegt ist, wird der Commit-Hash weiterhin extrahiert und die resultierenden Artefakte werden zur späteren Verwendung gespeichert, aber die zuvor gespeicherten Artefakte werden nicht wiederverwendet. Um dieses Verhalten zu verstehen, sehen Sie sich das folgende Szenario an.
+#### Beispiel 1 {#example-1}
+
+Beachten Sie, dass Ihr Programm über zwei Entwicklungs-Pipelines verfügt:
+
+* Pipeline 1 auf Verzweigung `foo`
+* Pipeline 2 auf Verzweigung `bar`
+
+Beide Zweige befinden sich auf derselben Commit-ID.
+
+1. Wenn Sie zuerst Pipeline 1 ausführen, werden die Pakete normal erstellt.
+1. Wenn Sie dann Pipeline 2 ausführen, werden von Pipeline 1 erstellte Pakete wiederverwendet.
+
+#### Beispiel 2 {#example-2}
+
+Beachten Sie, dass Ihr Programm zwei Verzweigungen hat:
+
+* Verzweigung `foo`
+* Verzweigung `bar`
+
+Beide Zweige haben dieselbe Commit-ID.
+
+1. Eine Entwicklungs-Pipeline erstellt und führt sie aus `foo`.
+1. Anschließend wird eine Produktions-Pipeline erstellt und ausgeführt `bar`.
+
+In diesem Fall wird das Artefakt von `foo` wird für die Produktions-Pipeline wiederverwendet, da derselbe Commit-Hash identifiziert wurde.
+
+### Deaktivieren {#opting-out}
+
+Falls gewünscht, kann das Wiederverwendungsverhalten für bestimmte Pipelines deaktiviert werden, indem die Pipeline-Variable `CM_DISABLE_BUILD_REUSE` auf `true` festgelegt wird. Wenn diese Variable festgelegt ist, wird der Commit-Hash weiterhin extrahiert und die resultierenden Artefakte werden zur späteren Verwendung gespeichert, aber alle zuvor gespeicherten Artefakte werden nicht wiederverwendet. Um dieses Verhalten zu verstehen, sehen Sie sich das folgende Szenario an.
 
 1. Eine neue Pipeline wird erstellt.
-1. Die Pipeline wird ausgeführt (Ausführung #1), und der aktuelle HEAD-Commit lautet `becdddb`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
+1. Die Pipeline wird ausgeführt (Ausführung #1) und der aktuelle HEAD-Commit lautet `becdddb`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
 1. Die Variable `CM_DISABLE_BUILD_REUSE` ist festgelegt.
 1. Die Pipeline wird erneut ausgeführt, ohne dass der Code geändert wird. Obwohl es gespeicherte Artefakte gibt, die mit `becdddb` verknüpft sind, werden sie aufgrund der Variablen `CM_DISABLE_BUILD_REUSE` nicht wiederverwendet.
-1. Der Code wird geändert, und die Pipeline wird ausgeführt. Der HEAD-Commit ist jetzt `f6ac5e6`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
+1. Der Code wird geändert und die Pipeline wird ausgeführt. Der HEAD-Commit ist jetzt `f6ac5e6`. Die Ausführung ist erfolgreich und die resultierenden Artefakte werden gespeichert.
 1. Die Variable `CM_DISABLE_BUILD_REUSE` wird gelöscht.
 1. Die Pipeline wird erneut ausgeführt, ohne dass der Code geändert wird. Da es gespeicherte Artefakte gibt, die mit `f6ac5e6` verknüpft sind, werden diese Artefakte wiederverwendet.
 
 ### Einschränkungen {#caveats}
 
-* Der [Umgang mit Maven-Versionen](/help/using/activating-maven-project.md) ersetzt die Projektversion nur in Produktions-Pipelines. Wenn daher derselbe Commit sowohl für die Ausführung einer Entwicklungs-Bereitstellung als auch für die Ausführung einer Produktions-Pipeline verwendet wird und die Pipeline der Entwicklungs-Bereitstellung zuerst ausgeführt wird, werden die Versionen in der Staging- und Produktionsumgebung bereitgestellt, ohne dass Änderungen vorgenommen werden. In diesem Fall wird jedoch weiterhin ein Tag erstellt.
+* Build-Artefakte werden nicht in verschiedenen Programmen wiederverwendet, unabhängig davon, ob der Commit-Hash identisch ist.
+* Build-Artefakte werden innerhalb desselben Programms wiederverwendet, selbst wenn der Zweig und/oder die Pipeline unterschiedlich sind.
+* Der [Umgang mit Maven-Versionen](/help/using/activating-maven-project.md) ersetzt die Projektversion nur in Produktions-Pipelines. Wenn daher derselbe Commit sowohl für die Ausführung einer Entwicklungsbereitstellung als auch für die Ausführung einer Produktions-Pipeline verwendet wird und die Pipeline der Entwicklungsbereitstellung zuerst ausgeführt wird, werden die Versionen in der Staging- und Produktionsumgebung bereitgestellt, ohne dass Änderungen vorgenommen werden. In diesem Fall wird jedoch weiterhin ein Tag erstellt.
 * Wenn das Abrufen der gespeicherten Artefakte nicht erfolgreich ist, wird der Build-Schritt so ausgeführt, als ob keine Artefakte gespeichert worden wären.
 * Andere Pipeline-Variablen als `CM_DISABLE_BUILD_REUSE` werden nicht berücksichtigt, wenn Cloud Manager zuvor erstellte Build-Artefakte wiederverwendet.
 
