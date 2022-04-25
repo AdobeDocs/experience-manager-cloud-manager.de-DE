@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2022.4.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.4.0.
+title: Versionshinweise für 2022.5.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.5.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 3d4eea13c0f2e9c4030bbfd3b7c5c25336548498
-workflow-type: ht
-source-wordcount: '281'
-ht-degree: 100%
+source-git-commit: 5dd9471e1044ce0dcc6a03099256d182b1776f02
+workflow-type: tm+mt
+source-wordcount: '86'
+ht-degree: 81%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.4.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2022.5.0 {#release-notes}
 
-Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.4.0 dokumentiert.
+Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.5.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,15 +21,8 @@ Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Ver
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.4.0 ist der 7. April 2022. Die nächste Version soll am 5. Mai 2022 veröffentlicht werden.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.5.0 ist der 5. Mai 2022. Die nächste Version ist für den 9. Juni 2022 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Verbesserungen an der Dauer und Erfolgsrate der Pipeline-Erstellungsschritte wurden implementiert und werden schrittweise bis zum April für alle Kunden eingeführt.
-* Sie können jetzt eine Git-Verzweigung einfach finden, indem Sie die ersten Zeichen des Namens in das Eingabefeld im Pipeline-Assistenten einfügen und aus vorgeschlagenen Treffern auswählen.
-* Die Seite **Pipelines** bietet jetzt Seitennummerierung, um die Benutzerfreundlichkeit für Programme mit einer großen Anzahl von Pipelines zu verbessern.
-   * In der Tabelle werden 50 Zeilen pro Seite angezeigt.
-* Der von Cloud Manager verwendete [AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) wurde auf Version 36 aktualisiert.
-* Oracle JDK ist jetzt das Standard-JDK für Entwicklung und Ausführung von AEM. Der Build-Prozess von Cloud Manager wechselt automatisch zur Verwendung von Oracle JDK, auch wenn in der Maven-Toolchain explizit eine alternative Option ausgewählt ist.
-   * Weitere Informationen zum Umstieg auf Oracle JDK finden Sie in der [Dokumentation zur Build-Umgebung](/help/using/build-environment-details.md#using-java-support).
-   * In den [häufig gestellten Fragen zur Java-Support-Richtlinie für Adobe Experience Manager](https://experienceleague.adobe.com/docs/experience-manager-65/assets/Java_Policy_for_Adobe_Experience_Manager.pdf) finden Sie Antworten auf häufige Fragen zu diesem Wechsel.
+## Fehlerbehebungen {#bug-fixes}

@@ -10,8 +10,8 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 2fcefda1e30871d44e3a1353470a4728904d7598
-workflow-type: ht
+source-git-commit: 0ba7c49b3550666030249562219b2d0dc51f4ae1
+workflow-type: tm+mt
 source-wordcount: '1220'
 ht-degree: 100%
 
@@ -100,12 +100,12 @@ Die folgenden Schritte führen zu einer Zeitüberschreitung, wenn auf Benutzer-F
 
 | Schritt | Zeitüberschreitung |
 |--- |--- |
-| Testen der Code-Qualität | 7 Tage |
-| Sicherheitstests | 7 Tage |
-| Leistungstests | 7 Tage |
-| Genehmigungsantrag | 7 Tage |
-| Planen der Bereitstellung für die Produktion | 7 Tage |
-| CSE-Unterstützung | 7 Tage |
+| Testen der Code-Qualität | 14 Tage |
+| Sicherheitstests | 14 Tage |
+| Leistungstests | 14 Tage |
+| Genehmigungsantrag | 14 Tage |
+| Planen der Bereitstellung für die Produktion | 14 Tage |
+| CSE-Unterstützung | 14 Tage |
 
 ## Implementierungsprozess {#deployment-process}
 
