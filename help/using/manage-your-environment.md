@@ -1,19 +1,19 @@
 ---
 title: Verwalten von Umgebungen
-seo-title: Verwalten von Umgebungen
+seo-title: Manage your Environments
 description: Informationen zur Cloud Manager-Umgebung
-seo-description: Auf dieser Seite können Sie eine Liste der Produktions- und Nicht-Produktionsumgebungen anzeigen, die zum Einrichten und Ausführen der CI/CD-Pipeline in Cloud Manager verwendet werden.
+seo-description: Follow this page to view the list of production and non-production environments that are used for setting up and running the CI/CD pipeline in Cloud Manager.
 uuid: 04e67572-11db-4d5d-acf3-fd7f644a95f0
 contentOwner: jsyal
 products: SG_EXPERIENCEMANAGER/CLOUDMANAGER
 topic-tags: using
 discoiquuid: c5b39de2-3a9b-437f-98e8-e6e6249a5b3a
-feature: Umgebungen
+feature: Environments
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: df2f598f91201d362f54b17e4092ff6bd6a72cec
+source-git-commit: 6ff704ec11dd4a5f73d5b5df5721c4fee649527b
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '280'
+ht-degree: 94%
 
 ---
 
@@ -55,3 +55,7 @@ Auf dem Bildschirm **Umgebungen** wird jeweils eine Karte für *Produktions-* un
 >Der **STATUS** des Knotens stellt den Leistungsstatus der VM dar und spiegelt nicht den Status von AEM auf dem Server wider. Der Status kann wie folgt lauten: **Aktiv** (grüner Kreis), **Angehalten** (roter Kreis), **Demnächst aktiv** (blauer Kreis) oder **Nicht verfügbar** (gelber Kreis).
 
 ![](assets/Environments-tab.png)
+
+>[!NOTE]
+>
+>Wenn Sie Ihre Umgebungsprotokolle benötigen, können diese von Ihrem Customer Success Engineer angefordert werden.
