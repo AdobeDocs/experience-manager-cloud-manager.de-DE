@@ -4,9 +4,9 @@ description: Auf dieser Seite erfahren Sie, wie Sie ein Projekt einrichten
 feature: Getting Started, Production Programs
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: fd1a72f2fd3b3e3789fcb38a8d4a9585293ced50
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '1440'
+ht-degree: 100%
 
 ---
 
@@ -291,7 +291,7 @@ Beachten Sie, dass Ihr Programm über zwei Entwicklungs-Pipelines verfügt:
 * Pipeline 1 auf Verzweigung `foo`
 * Pipeline 2 auf Verzweigung `bar`
 
-Beide Zweige befinden sich auf derselben Commit-ID.
+Beide Verzweigungen befinden sich auf derselben Commit-ID.
 
 1. Wenn Sie zuerst Pipeline 1 ausführen, werden die Pakete normal erstellt.
 1. Wenn Sie dann Pipeline 2 ausführen, werden von Pipeline 1 erstellte Pakete wiederverwendet.
@@ -303,12 +303,12 @@ Beachten Sie, dass Ihr Programm zwei Verzweigungen hat:
 * Verzweigung `foo`
 * Verzweigung `bar`
 
-Beide Zweige haben dieselbe Commit-ID.
+Beide Verzweigungen haben dieselbe Commit-ID.
 
-1. Eine Entwicklungs-Pipeline erstellt und führt sie aus `foo`.
-1. Anschließend wird eine Produktions-Pipeline erstellt und ausgeführt `bar`.
+1. Eine Entwicklungs-Pipeline erstellt `foo` und führt sie aus.
+1. Anschließend erstellt eine Produktions-Pipeline `bar` und führt sie aus.
 
-In diesem Fall wird das Artefakt von `foo` wird für die Produktions-Pipeline wiederverwendet, da derselbe Commit-Hash identifiziert wurde.
+In diesem Fall wird das Artefakt von `foo` für die Produktions-Pipeline wiederverwendet, da derselbe Commit-Hash erkannt wurde.
 
 ### Deaktivieren {#opting-out}
 
@@ -325,7 +325,7 @@ Falls gewünscht, kann das Wiederverwendungsverhalten für bestimmte Pipelines d
 ### Einschränkungen {#caveats}
 
 * Build-Artefakte werden nicht in verschiedenen Programmen wiederverwendet, unabhängig davon, ob der Commit-Hash identisch ist.
-* Build-Artefakte werden innerhalb desselben Programms wiederverwendet, selbst wenn der Zweig und/oder die Pipeline unterschiedlich sind.
+* Build-Artefakte werden innerhalb desselben Programms wiederverwendet, selbst wenn die Verzweigung und/oder die Pipeline unterschiedlich sind.
 * Der [Umgang mit Maven-Versionen](/help/using/activating-maven-project.md) ersetzt die Projektversion nur in Produktions-Pipelines. Wenn daher derselbe Commit sowohl für die Ausführung einer Entwicklungsbereitstellung als auch für die Ausführung einer Produktions-Pipeline verwendet wird und die Pipeline der Entwicklungsbereitstellung zuerst ausgeführt wird, werden die Versionen in der Staging- und Produktionsumgebung bereitgestellt, ohne dass Änderungen vorgenommen werden. In diesem Fall wird jedoch weiterhin ein Tag erstellt.
 * Wenn das Abrufen der gespeicherten Artefakte nicht erfolgreich ist, wird der Build-Schritt so ausgeführt, als ob keine Artefakte gespeichert worden wären.
 * Andere Pipeline-Variablen als `CM_DISABLE_BUILD_REUSE` werden nicht berücksichtigt, wenn Cloud Manager zuvor erstellte Build-Artefakte wiederverwendet.
