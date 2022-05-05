@@ -3,10 +3,10 @@ title: Versionshinweise für 2022.5.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2022.5.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 84cc4352488002ad40102ea2c507af652d9012a1
+source-git-commit: 59e57e33e52b2749865f8c92a8d947c9a04ffe79
 workflow-type: tm+mt
-source-wordcount: '214'
-ht-degree: 66%
+source-wordcount: '141'
+ht-degree: 54%
 
 ---
 
@@ -25,13 +25,11 @@ Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.5.0 wur
 
 ## Neue Funktionen {#what-is-new}
 
-Outbounds von HTTP-Anforderungen aus Asset-Tests stammen jetzt aus einem festen IP-Bereich.
+* Die Seite &quot;Umgebungen&quot;verfügt über eine Spalte zur Anzeige AEM Version der Umgebung.
+* Bei der Pipelineausführung werden nun Fehler der obersten Ebene der Benutzeroberfläche auf dem Ausführungsbildschirm angezeigt.
+* Die Standardkonfiguration wurde aktualisiert und enthält nun Pause für die B/G-Konfiguration.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Die Option &quot;Lastenausgleich überspringen&quot;konnte nicht deaktiviert werden.
-* Die Option &quot;Änderungen am Lastenausgleich überspringen&quot;wurde im Workflow für die Bearbeiten der AMS-Dev-Bereitstellung nicht angezeigt.
-* Eine Untergruppe von manuell erstellten GIT-Repositorys hatte einen falschen Namenswert, was verhindert hat, dass die Funktion zur Wiederverwendung von Build-Artefakten effektiv ist. Die Namen dieser Repositorys wurden geändert, und die Benutzer sehen den berichtigten Namen in der Cloud Manager-API/-Benutzeroberfläche.
-* Build-Artefakte aus produktionsfremden Pipelines wurden in Vollstapel-Pipelines der Produktion unangemessen wiederverwendet.
-* Beim Hinzufügen oder Bearbeiten einer Code-Qualitäts-Pipeline werden die Optionen zum Verarbeiten von Metrikfehlern nicht mehr angezeigt.
-* Einige unerwartete Pipelinevariablenkonfigurationen können Fehler im Build-Schritt verursachen.
+* Irreführende Ergebnisse des Leistungstests mit einem 504-Timeout-Fehler.
+* Einige Ausführungen blieben im Zusammenhang mit dem Commit-Trigger und dem Abbruch des Validierungsschritts hängen.
