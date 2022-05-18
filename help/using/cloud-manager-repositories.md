@@ -3,9 +3,9 @@ title: Cloud Manager-Repositorys
 description: Cloud Manager-Repositorys
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 280d760766cf445e609b865f827c01b4ab1db69c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '443'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -52,7 +52,7 @@ Git-Untermodule können verwendet werden, um den Inhalt mehrerer Verzweigungen z
 $ git submodule update --init
 ```
 
-Dadurch wird jedes Untermodul in das entsprechende Verzeichnis eingecheckt. Diese Technik ist eine potenzielle Alternative zur [Arbeit mit mehreren Quell-Git-Repositorys](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html) für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
+Dadurch wird jedes Untermodul in das entsprechende Verzeichnis eingecheckt. Diese Technik ist eine potenzielle Alternative zur [Arbeit mit mehreren Quell-Git-Repositorys](https://experienceleague.adobe.com/docs/experience-manager-cloud-manager/using/managing-code/working-with-multiple-source-git-repos.html?lang=de) für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
 
 Angenommen, es gibt drei Repositorys, die jeweils eine einzige Verzweigung mit dem Namen „main“ enthalten. Im „primären“ Repository, d. h. dem in den Pipelines konfigurierten, verfügt die Hauptverzweigung über eine „pom.xml“-Datei, in der die in den beiden anderen Repositorys enthaltenen Projekte deklariert werden:
 
