@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2022.5.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.5.0.
+title: Versionshinweise für 2022.6.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc28bbacfe86a68f416a525d386a2d8d1c1b0190
+source-git-commit: 844aa7c697c793af05766048ef4263a1bba87c94
 workflow-type: tm+mt
-source-wordcount: '138'
-ht-degree: 55%
+source-wordcount: '136'
+ht-degree: 56%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.5.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2022.6.0 {#release-notes}
 
-Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.5.0 dokumentiert.
+Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.6.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,15 +21,12 @@ Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Ver
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.5.0 wurde am 5. Mai 2022 veröffentlicht. Die nächste Version ist für den 9. Juni 2022 geplant.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.6.0 wurde am 9. Juni 2022 veröffentlicht. Die nächste Version ist für den 30. Juni 2022 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Bei der Pipelineausführung werden nun Fehler der obersten Ebene der Benutzeroberfläche auf dem Ausführungsbildschirm angezeigt.
-* Die Standardkonfiguration wurde aktualisiert und enthält nun Pause für die B/G-Konfiguration.
-* Führen Sie Schritt zur Produktionsbereitstellung über die Cloud Manager-Benutzeroberfläche erneut aus.
+* Eine neue Willkommenskarte auf der Landingpage von Cloud Manager bietet Benutzern schnellen Zugriff auf Onboarding-Tutorials und Fortschrittsmetriken zum Mandanten.
+   * Diese Funktion wird in der Woche nach der Version 2022.06.0 schrittweise eingeführt.
+* [Build-Artefakte können jetzt wiederverwendet werden](/help/using/setting-up-project.md#build-artifact-reuse) bei Verwendung von Git-Spiegeln.
 
 ## Fehlerbehebungen {#bug-fixes}
-
-* Irreführende Ergebnisse des Leistungstests mit einem 504-Timeout-Fehler.
-* Einige Ausführungen blieben im Zusammenhang mit dem Commit-Trigger und dem Abbruch des Validierungsschritts hängen.
