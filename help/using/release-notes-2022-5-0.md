@@ -2,13 +2,13 @@
 title: Versionshinweise für 2022.5.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2022.5.0.
 feature: Release Information
-source-git-commit: a0261c3bb9b931c743655d7d05138131a740db33
-workflow-type: tm+mt
+exl-id: c8759f81-4a7c-4f3e-aac6-b1bde8dd46a3
+source-git-commit: 4aba86d40977e57dc714d08836af1f6a9e49404e
+workflow-type: ht
 source-wordcount: '138'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
-
 
 # Versionshinweise für Cloud Manager Version 2022.5.0 {#release-notes}
 
@@ -20,15 +20,15 @@ Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Ver
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.5.0 wurde am 5. Mai 2022 veröffentlicht. Die nächste Version ist für den 9. Juni 2022 geplant.
+Das Veröffentlichungsdatum der Version 2022.5.0 von [!UICONTROL Cloud Manager] ist der 5. Mai 2022. Die nächste Version ist für den 9. Juni 2022 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Bei der Pipelineausführung werden nun Fehler der obersten Ebene der Benutzeroberfläche auf dem Ausführungsbildschirm angezeigt.
-* Die Standardkonfiguration wurde aktualisiert und enthält nun Pause für die B/G-Konfiguration.
-* Führen Sie Schritt zur Produktionsbereitstellung über die Cloud Manager-Benutzeroberfläche erneut aus.
+* Bei der Pipeline-Ausführung werden nun Fehler der obersten Ebene der Benutzeroberfläche auf dem Ausführungsbildschirm angezeigt.
+* Die Standardkonfiguration wurde aktualisiert, um ein Pausieren der B/G-Konfiguration zu ermöglichen.
+* Führen Sie den Schritt zur Produktionsbereitstellung über die Cloud Manager-Benutzeroberfläche erneut aus.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Irreführende Ergebnisse des Leistungstests mit einem 504-Timeout-Fehler.
-* Einige Ausführungen blieben im Zusammenhang mit dem Commit-Trigger und dem Abbruch des Validierungsschritts hängen.
+* Ein irreführender Leistungstest führt zu einem 504-Timeout-Fehler.
+* Einige Ausführungen blieben im Kontext des Commit-Auslösers und des Abbrechens des Genehmigungsschritts stecken.
