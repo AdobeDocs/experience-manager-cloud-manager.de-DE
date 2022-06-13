@@ -11,9 +11,9 @@ discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1615'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -193,21 +193,21 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 >[!IMPORTANT]
 >Bei Verwendung des `--emergency`-Flags muss möglicherweise auf die neueste `aio-cli-plugin-cloudmanager`-Version aktualisiert werden.
 
-## Produktionsimplementierung erneut ausführen {#Reexecute-Deployment}
+## Produktionsbereitstellung erneut ausführen {#Reexecute-Deployment}
 
-Die erneute Ausführung des Produktionsbereitstellungsschritts wird bei Ausführungen unterstützt, bei denen der Schritt zur Produktionsbereitstellung abgeschlossen ist. Die Art der Fertigstellung ist nicht wichtig - die Bereitstellung könnte erfolgreich sein (nur für AMS-Programme), abgebrochen oder nicht erfolgreich sein. Der primäre Anwendungsfall ist jedoch Fälle, in denen der Produktionsbereitstellungsschritt aus Verlaufsgründen fehlgeschlagen ist. Bei der erneuten Ausführung wird eine neue Ausführung mit derselben Pipeline erstellt. Diese neue Ausführung besteht aus drei Schritten:
+Die erneute Ausführung des Produktionsbereitstellungsschritts wird bei Ausführungen unterstützt, bei denen der Schritt zur Produktionsbereitstellung abgeschlossen ist. Die Art der Fertigstellung ist nicht wichtig – die Bereitstellung könnte erfolgreich sein (nur für AMS-Programme), abgebrochen oder nicht erfolgreich sein. Der primäre Anwendungsfall sind jedoch Fälle, in denen der Produktionsbereitstellungsschritt aus vorübergehenden Gründen fehlgeschlagen ist. Bei der erneuten Ausführung wird eine neue Ausführung mit derselben Pipeline erstellt. Diese neue Ausführung besteht aus drei Schritten:
 
-1. Der Validierungsschritt - dies ist im Wesentlichen dieselbe Validierung, die während einer normalen Pipeline-Ausführung erfolgt.
-1. Der Build-Schritt - Im Kontext einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen neuen Build-Prozess aus.
-1. Der Schritt zur Produktionsbereitstellung - verwendet dieselbe Konfiguration und dieselben Optionen wie der Schritt zur Produktionsbereitstellung bei einer normalen Pipeline-Ausführung.
+1. Der Validierungsschritt – dies ist im Wesentlichen dieselbe Validierung, die während einer normalen Pipeline-Ausführung erfolgt.
+1. Der Build-Schritt – Im Kontext einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen neuen Build-Prozess aus.
+1. Der Schritt zur Produktionsbereitstellung – er verwendet dieselbe Konfiguration und dieselben Optionen wie der Schritt zur Produktionsbereitstellung bei einer normalen Pipeline-Ausführung.
 
-Der Build-Schritt ist in der Benutzeroberfläche möglicherweise etwas anders beschriftet, um zu erkennen, dass er Artefakte kopiert und nicht neu erstellt.
+Der Build-Schritt ist in der Benutzeroberfläche möglicherweise etwas anders beschriftet, um zu erkennen, dass er Artefakte kopiert und nicht etwas neu erstellt.
 
 ![](assets/Re-deploy.png)
 
 Beschränkungen:
 
-* Die erneute Ausführung des Produktionsbereitstellungsschritts ist nur bei der letzten Ausführung verfügbar.
+* Die erneute Ausführung des Produktionsbereitstellungsschritts ist nur für die letzte Ausführung verfügbar.
 * Die Neuausführung ist nicht für Rollback-Ausführungen verfügbar.
 * Wenn es sich bei der letzten Ausführung um eine Rollback-Ausführung handelt, ist eine erneute Ausführung nicht möglich.
 * Wenn es sich bei der letzten Ausführung um eine Push-Update-Ausführung handelt, ist eine erneute Ausführung nicht möglich.
@@ -217,11 +217,11 @@ Beschränkungen:
 
 ### Ermitteln einer erneuten Ausführung
 
-Um festzustellen, ob es sich bei einer Ausführung um eine erneute Ausführung handelt, kann das Feld Trigger geprüft werden. Ihr Wert lautet *RE_EXECUTE*.
+Um festzustellen, ob es sich bei einer Ausführung um eine erneute Ausführung handelt, kann das Auslösefeld geprüft werden. Sein Wert sollte *RE_EXECUTE* sein.
 
 ### Auslösen einer neuen Ausführung
 
-Um eine erneute Ausführung Trigger, muss eine PUT-Anfrage an den HAL Link &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> im Status der Produktionsbereitstellungs-Schritte. Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden. Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt an nicht erneut gestartet werden. In der ersten Version ist dieser Link nur im Schritt zur Produktionsbereitstellung vorhanden, aber zukünftige Versionen unterstützen möglicherweise das Starten der Pipeline von anderen Schritten aus. Beispiel:
+Um eine erneute Ausführung auszulösen, muss eine PUT-Anfrage an den HAL-Link &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> im Status der Produktionsbereitstellungsschritte erfolgen. Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden. Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt an nicht erneut gestartet werden. In der ersten Version ist dieser Link nur im Schritt zur Produktionsbereitstellung vorhanden, aber zukünftige Versionen unterstützen möglicherweise das Starten der Pipeline von anderen Schritten aus. Beispiel:
 
 ```Javascript
  {
@@ -259,6 +259,6 @@ Um eine erneute Ausführung Trigger, muss eine PUT-Anfrage an den HAL Link &lt;(
 ```
 
 
-Die Syntax des HAL-Links *href*  Der obige Wert ist nicht zur Verwendung als Bezugspunkt vorgesehen. Der tatsächliche Wert sollte immer aus dem HAL-Link gelesen und nicht generiert werden.
+Die Syntax des *href*-Wertes des HAL-Links ist nicht zu dessen Verwendung als Bezugspunkt vorgesehen. Der tatsächliche Wert sollte immer aus dem HAL-Link gelesen und nicht generiert werden.
 
-Senden einer *PUT* -Anfrage an diesen Endpunkt führt zu einer *201* Antwort bei Erfolg und der Antworttext ist die Darstellung der neuen Ausführung. Dies ähnelt dem Starten einer regulären Ausführung über die API.
+Das Senden einer *PUT*-Anfrage an diesen Endpunkt führt zu einer *201*-Antwort bei Erfolg, wobei der Antworttext die Darstellung der neuen Ausführung ist. Dies ähnelt dem Starten einer regulären Ausführung über die API.
