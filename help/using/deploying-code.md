@@ -10,10 +10,10 @@ topic-tags: using
 discoiquuid: 832a4647-9b83-4a9d-b373-30fe16092b15
 feature: Code Deployment
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 9a9d7067a1369e80ccf9b2925369a466b3da2901
-workflow-type: ht
+source-git-commit: 4c86446127c8cd66f964b192f3602f02fd2ddf8e
+workflow-type: tm+mt
 source-wordcount: '1615'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -221,7 +221,7 @@ Um festzustellen, ob es sich bei einer Ausführung um eine erneute Ausführung h
 
 ### Auslösen einer neuen Ausführung
 
-Um eine erneute Ausführung auszulösen, muss eine PUT-Anfrage an den HAL-Link &lt;(<http://ns.adobe.com/adobecloud/rel/pipeline/reExecute>)> im Status der Produktionsbereitstellungsschritte erfolgen. Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden. Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt an nicht erneut gestartet werden. In der ersten Version ist dieser Link nur im Schritt zur Produktionsbereitstellung vorhanden, aber zukünftige Versionen unterstützen möglicherweise das Starten der Pipeline von anderen Schritten aus. Beispiel:
+Um eine erneute Ausführung Trigger, muss eine PUT-Anfrage an den HAL-Link gesendet werden ```http://ns.adobe.com/adobecloud/rel/pipeline/reExecute``` im Status der Produktionsbereitstellungsschritte. Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden. Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt an nicht erneut gestartet werden. In der ersten Version ist dieser Link nur im Schritt zur Produktionsbereitstellung vorhanden, aber zukünftige Versionen unterstützen möglicherweise das Starten der Pipeline von anderen Schritten aus. Beispiel:
 
 ```Javascript
  {

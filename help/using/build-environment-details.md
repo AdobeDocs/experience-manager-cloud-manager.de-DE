@@ -3,9 +3,9 @@ title: Grundlagen zur Build-Umgebung
 description: Auf dieser Seite erfahren Sie mehr über Umgebungen
 feature: Environments
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 17f79fdc7278cae532485570a6e2b8700683ef0d
-workflow-type: ht
-source-wordcount: '996'
+source-git-commit: 9959f649e553d0ff6d41a70a468bec3e2e854d75
+workflow-type: tm+mt
+source-wordcount: '997'
 ht-degree: 100%
 
 ---
@@ -35,7 +35,7 @@ Cloud Manager erstellt und testet Ihren Code mithilfe einer speziellen Erstellun
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 
 * Maven wird auf Systemebene mit einer settings.xml-Datei konfiguriert, die automatisch das öffentliche Adobe-**Artefakt**-Repository mit einem Profil namens `adobe-public` enthält.
-Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https://repo.adobe.com/).
+Weitere Informationen dazu finden Sie im [Adobe Public Maven Repository](https://repo1.maven.org/).
 
 >[!NOTE]
 >Obwohl Cloud Manager keine bestimmte Version des Programms des `jacoco-maven-plugin` definiert, muss mindestens die Version `0.7.5.201505241946` verwendet werden.
