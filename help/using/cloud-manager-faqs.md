@@ -6,9 +6,9 @@ seo-description: Follow this page to get answers on Cloud Manager FAQs
 feature: Getting Started
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 6dce1f48b66c6970c3ba025031f0adcbd01195dd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '874'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -28,13 +28,13 @@ AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 auf 11
 
 * Bei Cloud Manager-Builds schlägt das Maven-Enforcer-Plug-in mit dem Fehler `"[main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion"` fehl. Dies ist ein bekanntes Problem, da Cloud Manager eine andere Version von Java verwendet, um den maven-Befehl auszuführen, anstatt Code zu kompilieren. Verwenden Sie `requireJavaVersion` vorerst nicht in Ihren maven-enforcer-plugin-Konfigurationen.
 
-## Unsere Implementierung hängt davon ab, dass die Code-Qualitätsprüfung fehlgeschlagen ist. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
+## Unsere Bereitstellung ist blockiert, da die Code-Qualitätsprüfung fehlgeschlagen ist. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
 
-Ja. Alle Fehler bei der Code-Qualität mit Ausnahme von *Sicherheitsbewertung* sind nicht kritische Metriken, sodass sie als Teil einer Bereitstellungs-Pipeline übersprungen werden können, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
+Ja. Alle Fehler bei der Überprüfung der Code-Qualität mit Ausnahme der *Sicherheitseinstufung* sind nicht kritische Metriken, sodass sie als Teil einer Bereitstellungs-Pipeline übersprungen werden können, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
 
 Benutzer mit der Rolle [Implementierungs-Manager, Projekt-Manager oder Geschäftsinhaber](/help/using/setting-up-users-and-roles.md#role-definitions) können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.
 
-Siehe Dokumente . [Dreistufige Akzeptanztests beim Ausführen einer Pipeline](/help/using/understand-your-test-results.md#three-tier-gates-while-running-a-pipeline) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/configuring-non-production-pipelines.md#understanding-the-flow) für weitere Details.
+Weitere Informationen finden Sie unter [Code-Qualitätstests von Pipelines](/help/using/understand-your-test-results.md#three-tier-gates-while-running-a-pipeline) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/configuring-non-production-pipelines.md#understanding-the-flow).
 
 ## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie können wir dies debuggen, um kritische Metriken zu erfüllen? {#debug-critical-metrics}
 
