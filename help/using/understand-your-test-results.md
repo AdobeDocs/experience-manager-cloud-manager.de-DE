@@ -8,9 +8,9 @@ discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2900'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Diese werden anhand eines dreistufigen Bewertungssystems, wie im nächsten Absch
 
 >[!NOTE]
 >
->Weitere Informationen zu Tests, die von Cloud Manager für AEM as a Cloud Service unterstützt werden, finden Sie unter [as a Cloud Service Dokumentation AEM](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=de).
+>Weitere Informationen zu den von Cloud Manager für AEM as a Cloud Service unterstützten Tests finden Sie in der [Dokumentation zu AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/test-results/overview-test-results.html?lang=de).
 
 
 ## Dreistufige Bewertungen  {#three-tier-gates-while-running-a-pipeline}
@@ -61,7 +61,7 @@ Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln
 >
 >Sie können die vollständige Liste von Regeln [über diesen Link](/help/using/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
-Die Ergebnisse des Code-Qualitätstests werden als **Bewertungen**. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Testkriterien zusammen.
+Die Ergebnisse der Code-Qualitätstests werden als **Bewertungen** bereitgestellt. Die nachstehende Tabelle fasst die Bewertungen für verschiedene Testkriterien zusammen.
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
 |--- |--- |--- |--- |
@@ -129,8 +129,8 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Name | Implementierung der Konsistenzprüfung | Kategorie |
 |---|---|---|
 | Deserialisierungs-Firewall-Attach-API-Bereitschaft befindet sich in einem akzeptablen Zustand. | [Deserialisierungs-Firewall-Attach-API-Bereitschaft](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
-| Deserialisierungs-Firewall ist funktionsfähig. | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html#security) | Kritisch |
-| Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html#security) | Kritisch |
+| Deserialisierungs-Firewall ist funktionsfähig. | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
+| Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
 | `AuthorizableNodeName`-Implementierung des weist keine autorisierbare ID im Knotennamen/Pfad auf. | [Namenserstellung für autorisierbare Knoten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=de#security) | Kritisch |
 | Standardkennwörter wurden geändert. | [Standard-Anmeldekonten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de#users-and-groups-in-aem) | Kritisch |
 | Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
@@ -138,7 +138,7 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Sling JSP Script Handler ist ordnungsgemäß konfiguriert. | Sling JSP Script Handler | Kritisch |
 | SSL ist richtig konfiguriert. | SSL-Konfiguration | Kritisch |
 | Es wurden keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden. | Standardzugriff auf Benutzerprofil | Kritisch |
-| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html#security) | Wichtig |
+| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=de#security) | Wichtig |
 | Adobe Granite HTML Library Manager ist ordnungsgemäß konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Paket ist deaktiviert. | CRXDE-Support | Wichtig |
 | Sling DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
