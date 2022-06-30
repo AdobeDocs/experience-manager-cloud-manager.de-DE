@@ -7,10 +7,10 @@ topic-tags: using
 discoiquuid: 83299ed8-4b7a-4b1c-bd56-1bfc7e7318d4
 feature: CI-CD Pipeline, Test Results
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: bfcb0fb5b9cf8317eb75e3b7b46455b14cd9d7b7
-workflow-type: ht
-source-wordcount: '2900'
-ht-degree: 100%
+source-git-commit: fefb267793e5e1dc6f604a753e89cce2bf2620dd
+workflow-type: tm+mt
+source-wordcount: '2921'
+ht-degree: 98%
 
 ---
 
@@ -129,8 +129,8 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Name | Implementierung der Konsistenzprüfung | Kategorie |
 |---|---|---|
 | Deserialisierungs-Firewall-Attach-API-Bereitschaft befindet sich in einem akzeptablen Zustand. | [Deserialisierungs-Firewall-Attach-API-Bereitschaft](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
-| Deserialisierungs-Firewall ist funktionsfähig. | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
-| Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
+| Deserialisierungs-Firewall ist funktionsfähig. | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html#security) | Kritisch |
+| Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html#security) | Kritisch |
 | `AuthorizableNodeName`-Implementierung des weist keine autorisierbare ID im Knotennamen/Pfad auf. | [Namenserstellung für autorisierbare Knoten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=de#security) | Kritisch |
 | Standardkennwörter wurden geändert. | [Standard-Anmeldekonten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de#users-and-groups-in-aem) | Kritisch |
 | Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
@@ -138,7 +138,7 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Sling JSP Script Handler ist ordnungsgemäß konfiguriert. | Sling JSP Script Handler | Kritisch |
 | SSL ist richtig konfiguriert. | SSL-Konfiguration | Kritisch |
 | Es wurden keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden. | Standardzugriff auf Benutzerprofil | Kritisch |
-| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=de#security) | Wichtig |
+| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html#security) | Wichtig |
 | Adobe Granite HTML Library Manager ist ordnungsgemäß konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Paket ist deaktiviert. | CRXDE-Support | Wichtig |
 | Sling DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
@@ -160,7 +160,12 @@ Die Anzahl der virtuellen Benutzer oder Container, die von Cloud Manager erzeugt
 
 #### Crawler {#crawler}
 
-Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten Seed-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht. Dieser Crawling-Vorgang ist auf maximal 5.000 Seiten beschränkt. Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
+Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten Seed-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht.
+
+* Dieser Crawling-Prozess ist standardmäßig auf maximal 5.000 Seiten beschränkt.
+* Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die Variable [Umgebungsvariable](build-environment-details.md#environment-variables) `MAX_PAGES`.
+   * Zulässige Werte sind `2000` - `7000`.
+* Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
 
 #### Seitensätze zum Testen {#page-sets}
 

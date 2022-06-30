@@ -3,7 +3,7 @@ title: Versionshinweise für 2022.6.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2022.6.0.
 feature: Release Information
 source-git-commit: f202b245f35bcffa56b43f26a13b97d42fdb474e
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 100%
 
