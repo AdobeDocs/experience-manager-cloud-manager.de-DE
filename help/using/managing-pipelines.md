@@ -1,11 +1,11 @@
 ---
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
-index: true
-source-git-commit: 099a4490e3a8578b9f3485fd1514d1e97db977ab
-workflow-type: ht
-source-wordcount: '518'
-ht-degree: 100%
+exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
+source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
+workflow-type: tm+mt
+source-wordcount: '517'
+ht-degree: 98%
 
 ---
 
@@ -18,7 +18,7 @@ Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bear
 
 Die Karte **Pipelines** auf der Seite **Programmübersicht** in Cloud Manager bietet Ihnen einen Überblick über alle Ihre Pipelines und deren aktuellen Status.
 
-![Pipelines-Karte in Cloud Manager](/help/using/assets/configure-pipelines/pipelines-card.png)
+![Pipelines-Karte in Cloud Manager](/help/assets/configure-pipelines/pipelines-card.png)
 
 Wenn Sie auf die Schaltfläche mit den Auslassungspunkten neben jeder Pipeline klicken, können Sie die folgenden Aktionen ausführen.
 
@@ -29,8 +29,8 @@ Wenn Sie auf die Schaltfläche mit den Auslassungspunkten neben jeder Pipeline k
 
 Am Ende der Pipeline-Liste befinden sich allgemeine Optionen.
 
-* **Hinzufügen**: Dient zum [Hinzufügen einer neuen Produktions-Pipeline](configuring-production-pipelines.md) oder [Hinzufügen einer neuen produktionsfremden Pipeline](configuring-non-production-pipelines.md)
-* **Alle anzeigen**: Leitet den Anwender zum Bildschirm **Pipelines**, wo alle Pipelines in einer detaillierteren Tabelle angezeigt werden.
+* **Hinzufügen**: Dient zum [Hinzufügen einer neuen Produktions-Pipeline](/help/using/production-pipelines.md) oder [Hinzufügen einer neuen produktionsfremden Pipeline](/help/using/non-production-pipelines.md)
+* **Alle anzeigen**: Leitet den Anwender zum Bildschirm **Pipelines**, wo alle Pipelines in einer detaillierteren Tabelle angezeigt werden
 * **Zugriff auf Repo Info**: Zeigt die Informationen an, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlich sind
 * **Weitere Infos**: Navigiert zu den Dokumentationsressourcen zur CI/CD-Pipeline.
 
@@ -55,8 +55,8 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 1. Daraufhin wird das Dialogfeld **Produktions-Pipeline bearbeiten** oder **Produktionsfremde Pipeline bearbeiten** angezeigt, sodass Sie die Details bearbeiten können, die Sie beim Erstellen der Pipeline eingegeben haben.
 
    * Auf den folgenden Seiten finden Sie Details zu allen Feldern und Konfigurationsoptionen, die für Pipelines verfügbar sind.
-      * [Konfigurieren von Produktions-Pipelines](configuring-production-pipelines.md)
-      * [Konfigurieren von produktionsfremden Pipelines](configuring-non-production-pipelines.md)
+      * [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md)
+      * [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md)
 
 1. Klicken Sie auf **Aktualisieren**, nachdem Sie die Pipeline bearbeitet haben.
 
@@ -82,9 +82,9 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 
 1. Sie gelangen zur Detailseite der Pipeline, die gerade ausgeführt wird.
 
-![Pipeline-Details](/help/using/assets/configure-pipelines/pipeline-running-details.png)
+![Pipeline-Details](/help/assets/configure-pipelines/pipeline-running-details.png)
 
-Von hier aus können Sie den Status der verschiedenen Schritte der Pipeline einsehen und Build-Protokolle zu Diagnosezwecken abrufen. Weitere Informationen finden Sie im Dokument [Bereitstellen des Codes](deploying-code.md).
+Von hier aus können Sie den Status der verschiedenen Schritte der Pipeline einsehen und Build-Protokolle zu Diagnosezwecken abrufen. Siehe Dokument . [Codebereitstellung](/help/using/code-deployment.md) für weitere Informationen.
 
 >[!NOTE]
 >
