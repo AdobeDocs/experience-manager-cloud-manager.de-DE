@@ -2,10 +2,10 @@
 title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 22d40a1f07f56ee7a7dddb4897e4079f1e346674
+source-git-commit: 14e35882765783b234ca35da14257279af5130a0
 workflow-type: tm+mt
-source-wordcount: '1316'
-ht-degree: 15%
+source-wordcount: '1311'
+ht-degree: 16%
 
 ---
 
@@ -100,7 +100,7 @@ Es ist immer nur eine der Umgebungen aktiv, wobei die Live-Umgebung den gesamten
 * Eine blaue/grüne Implementierung ist ein Add-on zu CI/CD-Pipelines von Cloud Manager, in dem eine zweite Reihe von Veröffentlichungs- und Dispatcher-Instanzen (grün) erstellt und für Bereitstellungen verwendet wird. Die grünen Instanzen werden dann an den Produktionslastausgleich angehängt und die alten Instanzen (blau) werden entfernt und beendet.
 * Diese Implementierung von blau/grün behandelt Instanzen als transient und jede Iteration einer blauen/grünen Pipeline erstellt einen neuen Satz von Veröffentlichungs- und Dispatcher-Servern.
 * Im Rahmen der Einrichtung wird ein grüner Lastenausgleich erstellt. Dieser Lastenausgleich ändert sich nie und sollte auf Ihre grüne oder &quot;Test&quot;-URL verweisen.
-* Bei einer blauen/grünen Implementierung wird eine exakte Replikation der vorhandenen Veröffentlichungs-/Dispatcher-Ebenen erstellt (wie aus der TDL gelesen).
+* Bei einer blauen/grünen Implementierung wird eine exakte Replikation der vorhandenen Veröffentlichungs-/Dispatcher-Ebenen erstellt.
 
 #### Blau/Grün-Implementierungsfluss {#flow}
 
