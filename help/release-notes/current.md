@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2022.7.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.7.0.
+title: Versionshinweise für 2022.8.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.8.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 55%
+source-wordcount: '154'
+ht-degree: 50%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.7.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2022.8.0 {#release-notes}
 
-Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.7.0 dokumentiert.
+Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.8.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,13 +21,14 @@ Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Ver
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.7.0 ist der 30. Juni 2022. Die nächste Version ist für den 11. August 2022 geplant.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.8.0 ist der 11. August 2022. Die nächste Version ist für den 9. September 2022 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Cloud Manager-Benutzer können jetzt von der Landingpage aus auf nützliche Video-Tutorials zugreifen **Willkommen** Karten zu jeder Zeit.
-* Die maximale Anzahl der zu testenden Seiten [kann jetzt überschrieben werden, indem Sie die `MAX_PAGES` Umgebungsvariable.](/help/using/code-quality-testing.md#crawler)
+* Unter bestimmten Szenarien trägt ein stummer Wiederholungsmechanismus dazu bei sicherzustellen, dass die Bereitstellungs-Pipeline keinen Fehlerstatus erzeugt.
+* [Der AEM Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) wurde auf Version 37 aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Es wurde ein Problem behoben, bei dem nach der Genehmigung einer Frontend-Pipeline kein Aufruf zur Ausführung des Implementierungsschritts erfolgte.
+* Bestimmte Fälle von seltenen Fehlern bei der Repository-Erstellung wurden widerstandsfähiger gemacht.
+* Seltene Vorkommnisse von Fehlern beim Einrichten der VSTS-Organisation werden jetzt durch Neuversuche reduziert.
