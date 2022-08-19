@@ -1,76 +1,76 @@
 ---
-title: Journey
-description: In diesem Dokument werden die verschiedenen Onboarding-Szenarien beschrieben und Ihre ersten Schritte zum Journey mit Cloud Manager erläutert.
+title: Anwendertour
+description: In diesem Dokument werden die verschiedenen Onboarding-Szenarien beschrieben und die Tour mit den ersten Schritten mit Cloud Manager erklärt.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '546'
-ht-degree: 11%
+ht-degree: 100%
 
 ---
 
 
-# Journey {#user-journey}
+# Anwendertour {#user-journey}
 
-Als Adobe Experience Manager-Benutzer haben Sie folgende Möglichkeiten:
+Als Adobe Experience Manager-Anwender gibt es folgende Möglichkeiten:
 
-* Sei neu zu AEM.
-* Verwenden Sie derzeit AEM 6.x.
-* Sie müssen auf AEM Version 6.5 aktualisieren, um [!UICONTROL Cloud Manager].
+* Sie sind neu bei AEM.
+* Sie verwenden derzeit AEM 6.x.
+* Sie benötigen ein Upgrade auf AEM Version 6.5, um [!UICONTROL Cloud Manager] nutzen zu können.
 
-In diesem Dokument werden diese Szenarien erläutert und Ihre Journey erläutert, um mit [!UICONTROL Cloud Manager].
+In diesem Dokument werden diese Szenarien erläutert und Ihre Tour mit den ersten Schritten mit [!UICONTROL Cloud Manager] erklärt.
 
 >[!NOTE]
 >
->[!UICONTROL Cloud Manager] ist nur für Adobe Managed Services-Kunden (AMS) mit AEM 6.4 oder höher verfügbar.
+>[!UICONTROL Cloud Manager] ist nur für Kunden von Adobe Managed Services mit AEM 6.4 oder höher verfügbar.
 
-## Einstieg  {#onboarding}
+## Onboarding {#onboarding}
 
-Der Integrationsprozess unterscheidet sich je nachdem, ob Sie neu bei AMS sind oder ein bestehender AMS-Kunde sind.
+Der Onboarding-Prozess unterscheidet sich, je nachdem, ob Sie neu bei AMS sind oder bereits Kunde bei AMS.
 
 ### Neu bei Adobe Managed Services {#new-to-ams}
 
-Als neuer Kunde sind Sie bei [!UICONTROL Cloud Manager] als Teil des Onboarding-Prozesses für Adobe Managed Services.
+Als Neukunde erhalten Sie eine Einführung in [!UICONTROL Cloud Manager] im Rahmen des Onboardings für Adobe Managed Services.
 
 Im Rahmen des Onboarding-Prozesses erhalten Sie eine Begrüßungs-E-Mail mit folgenden Informationen:
 
-* Die URL für den Zugriff [!UICONTROL Cloud Manager]
+* Die URL für den Zugriff auf [!UICONTROL Cloud Manager]
 * Anleitung zur Anmeldung bei [!UICONTROL Experience Cloud]
-* Anweisungen zur Verwendung der Admin Console für die Verwaltung Ihrer Benutzer und der entsprechenden Berechtigungen, damit sie darauf zugreifen können [!UICONTROL Cloud Manager] falls erforderlich.
+* Anweisungen zur Verwendung der Admin Console für die Verwaltung Ihrer Anwender und der entsprechenden Berechtigungen, damit sie, falls erforderlich, auf [!UICONTROL Cloud Manager] zugreifen können.
 
 ### Bestehender Adobe Managed Services-Kunde {#existing-customer}
 
-Als bestehender AMS-Kunde müssen Sie zunächst Ihre bestehenden Produktions- und Nicht-Produktionsumgebungen auf AEM 6.4 oder höher aktualisieren.
+Als bestehender AMS-Kunde benötigen Sie zunächst ein Upgrade Ihrer vorhandenen Produktions- und produktionsfremden Umgebungen auf Version AEM 6.4 oder höher.
 
-Während der Aktualisierung werden Sie in Cloud Manager integriert und über die URL für den Zugriff auf [!UICONTROL Cloud Manager]. Zusätzlich für die Benutzer, die auf [!UICONTROL Cloud Manager]müssen Sie die Admin Console verwenden, um sie und ihre jeweiligen Berechtigungen zu verwalten.
+Wenn Sie das Upgrade durchführen, werden Sie in Cloud Manager eingeführt und erhalten die URL für den Zugriff auf [!UICONTROL Cloud Manager]. Außerdem müssen Sie für die Anwender, die auf [!UICONTROL Cloud Manager] zugreifen müssen, die Admin Console verwenden, um sie und ihre jeweiligen Berechtigungen zu verwalten.
 
 Auch vorhandene AEM-Projekte müssen Best-Practice-Verfahren entsprechen, wenn Sie mit [!UICONTROL Cloud Manager] neue Code-Änderungen in Ihren AEM-Umgebungen bereitstellen.
 
-Weitere Informationen zu den Vorteilen der Aktualisierung auf AEM 6.5 finden Sie im Dokument [Upgrade auf AEM 6.5.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html)
+Weitere Informationen zu den Vorteilen eines Upgrades auf AEM 6.5 finden Sie im Dokument [Upgrade auf AEM 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=de).
 
 ## Zugriff auf [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
-Sie erhalten Zugriff auf [!UICONTROL Cloud Manager] und Ihre AEM Umgebungen, indem Sie sich einfach bei der [!UICONTROL Experience Cloud] Landingpage mit Ihren Adobe Identity Management-Anmeldedaten und Auswahl von AEM in der Lösungsmenü.
+Für den Zugriff auf [!UICONTROL Cloud Manager] und Ihre AEM-Umgebungen müssen Sie sich lediglich auf der [!UICONTROL Experience Cloud]-Landingpage mit Ihren Adobe Identity Management-Anmeldedaten anmelden und im Solution Switcher „AEM“ auswählen.
 
-Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. An dieser Stelle sind Sie bereit, alle Möglichkeiten von [!UICONTROL Cloud Manager] und bereiten Sie Ihre erste Codeverzweigung vor, die in Ihrer Staging- und Produktionsumgebung bereitgestellt werden soll.
+Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. Jetzt sind Sie bereit, alle Möglichkeiten von [!UICONTROL Cloud Manager] zu erkunden und Ihre erste Code-Verzweigung vorzubereiten, um sie in Ihren Staging- und Produktionsumgebungen bereitzustellen.
 
-Erste Schritte mit [!UICONTROL Cloud Manager], siehe Dokument [Erstmalige Anmeldung](/help/getting-started/first-time-login.md).
+Die ersten Schritte mit [!UICONTROL Cloud Manager] finden Sie im Dokument [Erstmalige Anmeldung](/help/getting-started/first-time-login.md) beschrieben.
 
-Weitere Informationen zu AEM finden Sie im Dokument . [Bereitstellung und Wartung](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html)
+Weitere Informationen zu AEM finden Sie im Dokument [Bereitstellung und Wartung](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de).
 
 ## Erste Schritte mit [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 
-Nachdem Sie sich bei [!UICONTROL Cloud Manager] Sie können mit Ihrem AEM-Projekt beginnen, indem Sie:
+Sobald Sie bei [!UICONTROL Cloud Manager] angemeldet sind, können Sie mit Ihrem AEM-Projekt beginnen, indem Sie:
 
-1. Einrichten der Code-Repository-Umgebung.
-1. Einrichten des Teams und der Rollen
-   * Rollenmitgliedschaften werden zugewiesen, indem der Benutzer zu einem [!UICONTROL Cloud Manager] Profil mit der Admin Console.
-1. Einrichten der Quellcodeverzweigungen im Git-Repository.
-1. Definieren Ihrer Ziele in Bezug auf Last- und Performance-KPIs.
-1. Definieren von Testszenarien, um Ihren Code erfolgreich in Ihrer Staging- und Produktionsumgebung bereitzustellen, sobald alle Qualitätsprüfungen erfolgreich abgeschlossen wurden.
+1. Ihre Code-Repository-Umgebung einrichten.
+1. Ihr Team und die Rollen einrichten.
+   * Rollenmitgliedschaften werden zugewiesen, indem der Anwender über die Admin Console zu einem [!UICONTROL Cloud Manager]-Profil hinzugefügt wird.
+1. Ihre Quell-Code-Verzweigungen im Git-Repository einrichten.
+1. Ihre Ziele in Bezug auf Last- und Performance-KPIs definieren.
+1. Testszenarien definieren, um Ihren Code erfolgreich in Ihrer Staging- und Produktionsumgebung bereitzustellen, sobald alle Qualitätsprüfungen erfolgreich abgeschlossen wurden.
 
 ## End-to-End-Journey {#end-to-end-journey}
 
-Dieses Diagramm veranschaulicht die Journey auf hoher Ebene bei der Verwendung von [!UICONTROL Cloud Manager] CI/CD-Pipeline zur Bereitstellung Ihrer Codeänderungen in Ihren Staging- und Produktionsumgebungen.
+Dieses Diagramm veranschaulicht die Customer Journey auf einer allgemeinen Ebene, wenn Sie die [!UICONTROL Cloud Manager]-CI/CD-Pipeline für die Bereitstellung Ihrer Codeänderungen in Ihren Staging- und Produktionsumgebungen verwenden.
 
 ![End-to-End-Journey](/help/assets/screen_shot_2018-05-15at124004pm.png)
