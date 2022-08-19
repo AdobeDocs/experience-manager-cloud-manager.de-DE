@@ -3,9 +3,9 @@ title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2867'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und w
 
 Während der Pipeline-Ausführung werden verschiedene Metriken erfasst und entweder mit den vom Geschäftsinhaber definierten KPIs (Key Performance Indicators) oder mit den von Adobe Managed Services festgelegten Standards verglichen.
 
-Diese werden über ein dreistufiges Ratingsystem gemeldet.
+Diese werden über ein dreistufiges Bewertungssystem gemeldet.
 
 ## Dreistufige Bewertungen {#three-tiered-ratings}
 
@@ -36,7 +36,7 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 
 >[!NOTE]
 >
->In einer reinen Codequalitäts-Pipeline können wichtige Fehler im Code-Qualitäts-Gate nicht überschrieben werden, da der Schritt zum Testen der Codequalität der letzte Schritt in der Pipeline ist.
+>In einer Pipeline nur für Code-Qualität können Fehler der Kategorie „Wichtig“ des Code-Qualitätstests nicht überschrieben werden, da dieser Test der letzte Schritt in der Pipeline ist.
 
 ## Testen der Code-Qualität {#code-quality-testing-step}
 
@@ -50,7 +50,7 @@ Es gibt über 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln
 >
 >Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
-Die Ergebnisse des Tests der Code-Qualität werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
+Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
 |--- |--- |--- |--- |
@@ -103,7 +103,7 @@ Dann bestünde die richtige Lösung darin, das hartcodierte Kennwort zu entferne
 
 >[!NOTE]
 >
->Es empfiehlt sich zwar, die `@SuppressWarnings` -Anmerkungen so spezifisch wie möglich sind (d. h. nur die spezifische Anweisung oder den Block kommentieren, der das Problem verursacht), können Anmerkungen auf Klassenebene hinzugefügt werden.
+>Obwohl sich möglichst spezifische `@SuppressWarnings`-Anmerkungen bewährt haben, also nur eine bestimmte Anweisung oder den Block zu kommentieren, der das Problem verursacht, können Anmerkungen auf Klassenebene hinzugefügt werden.
 
 ## Sicherheitstests {#security-testing}
 
@@ -118,8 +118,8 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Name | Implementierung der Konsistenzprüfung | Kategorie |
 |---|---|---|
 | Deserialisierungs-Firewall-Attach-API-Bereitschaft befindet sich in einem akzeptablen Zustand. | [Deserialisierungs-Firewall-Attach-API-Bereitschaft](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
-| Deserialisierungs-Firewall ist funktionsfähig. | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html#security) | Kritisch |
-| Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html#security) | Kritisch |
+| Deserialisierungs-Firewall ist funktionsfähig. | [Deserialisierungs-Firewall funktionsfähig](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
+| Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/mitigating-serialization-issues.html?lang=de#security) | Kritisch |
 | `AuthorizableNodeName`-Implementierung des weist keine autorisierbare ID im Knotennamen/Pfad auf. | [Namenserstellung für autorisierbare Knoten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=de#security) | Kritisch |
 | Standardkennwörter wurden geändert. | [Standard-Anmeldekonten](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security.html?lang=de#users-and-groups-in-aem) | Kritisch |
 | Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
@@ -127,7 +127,7 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Sling JSP Script Handler ist ordnungsgemäß konfiguriert. | Sling JSP Script Handler | Kritisch |
 | SSL ist richtig konfiguriert. | SSL-Konfiguration | Kritisch |
 | Es wurden keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden. | Standardzugriff auf Benutzerprofil | Kritisch |
-| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html#security) | Wichtig |
+| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/docs/experience-manager-65/administering/security/security-checklist.html?lang=de#security) | Wichtig |
 | Adobe Granite HTML Library Manager ist ordnungsgemäß konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Paket ist deaktiviert. | CRXDE-Support | Wichtig |
 | Sling DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
@@ -151,9 +151,9 @@ Die Anzahl der virtuellen Benutzer oder Container, die von Cloud Manager erzeugt
 
 Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten Seed-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht.
 
-* Dieser Crawling-Prozess ist standardmäßig auf maximal 5.000 Seiten beschränkt.
-* Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die Variable [Umgebungsvariable](/help/getting-started/build-environment.md#environment-variables) `MAX_PAGES`.
-   * Zulässige Werte sind `2000` - `7000`.
+* Dieser Crawling-Vorgang ist standardmäßig auf maximal 5.000 Seiten beschränkt.
+* Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die Variable [Umgebungsvariable](/help/getting-started/build-environment.md#environment-variables) `MAX_PAGES` festlegen.
+   * Zulässige Werte sind `2000`–`7000`.
 * Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
 
 #### Seitensätze zum Testen {#page-sets}
@@ -162,9 +162,9 @@ Die Seiten werden nach drei Seitensätzen ausgewählt. Cloud Manager verwendet d
 
 * **Beliebte Live-Seiten**: Diese Option wird ausgewählt, um sicherzustellen, dass die von Live-Kunden bevorzugt aufgerufenen Seiten getestet werden. Cloud Manager liest das Zugriffsprotokoll und ermittelt die 25 am häufigsten aufgerufenen Seiten von Live-Kunden, um eine Liste von `Popular Live Pages` zu generieren. Die Schnittmenge dieser Seiten, die auch in der Staging-Umgebung vorhanden sind, wird dann in der Staging-Umgebung durchsucht.
 
-* **Andere Live-Seiten** - Diese Option ist ausgewählt, um sicherzustellen, dass die Seiten getestet werden, die außerhalb der 25 beliebtesten Live-Seiten liegen, die möglicherweise nicht beliebt sind, aber getestet werden müssen. Ähnlich wie „Beliebte Live-Seiten“ werden auch diese aus dem Zugriffsprotokoll extrahiert und müssen auch in der Staging-Umgebung vorhanden sein.
+* **Andere Live-Seiten**: Diese Option wird ausgewählt, um sicherzustellen, dass Seiten, die nicht zu den 25 beliebtesten Live-Seiten gehören und nicht besonders beliebt sind, aber unbedingt getestet werden sollten, tatsächlich getestet werden. Ähnlich wie „Beliebte Live-Seiten“ werden auch diese aus dem Zugriffsprotokoll extrahiert und müssen auch in der Staging-Umgebung vorhanden sein.
 
-* **Neue Seiten** - Diese Option ist ausgewählt, um neue Seiten zu testen, die möglicherweise nur für die Staging-Umgebung und noch nicht für die Produktion bereitgestellt wurden, aber getestet werden müssen.
+* **Neue Seiten**: Diese Option wird ausgewählt, um neue Seiten zu testen, die möglicherweise nur im Staging bereitgestellt wurden und noch nicht zur Produktion gehören, aber getestet werden müssen.
 
 ##### Verteilung des Traffics auf ausgewählte Seitensätze {#distribution-of-traffic}
 
@@ -220,7 +220,7 @@ Um diese Variablen mithilfe der Cloud Manager-Befehlszeilenschnittstelle festzu
 $ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
 ```
 
-Weitere Informationen finden Sie unter [Patch User Pipeline-Variablen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) API-Dokumentation , um zu erfahren, wie Sie die API verwenden.
+Informationen zur Verwendung der API finden Sie in der API-Dokumentation [Patchen von Benutzer-Pipeline-Variablen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables).
 
 ### AEM Assets {#aem-assets}
 
@@ -244,11 +244,11 @@ Wenn beispielsweise eine Verteilung von 70/30 verwendet wird und pro Minute 10 D
 
 #### Tests und Reporting {#testing-and-reporting}
 
-Cloud Manager erstellt in der Autoreninstanz einen Ordner, der den vom CSE eingerichteten Benutzernamen und das Kennwort verwendet. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [-Open-Source-Bibliothek geschrieben.](https://github.com/adobe/toughday2) Während der 30-minütigen Testdauer werden sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
+Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei den Benutzernamen und das Kennwort, die vom CSE festgelegt wurden. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [-Open-Source-Bibliothek geschrieben.](https://github.com/adobe/toughday2) Während der 30-minütigen Testdauer werden sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
 
 >[!TIP]
 >
->Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md). Siehe Dokument . [Programmeinrichtung](/help/getting-started/program-setup.md) , um zu erfahren, wie Sie Ihr Programm einrichten und Ihre KPIs definieren.
+>Weitere Informationen finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie im Dokument [Programm einrichten](/help/getting-started/program-setup.md).
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
@@ -262,20 +262,20 @@ Die Bereiche mit Metriken können erweitert werden, um ein Diagramm anzuzeigen o
 
 Diese Funktion ist für die folgenden Metriken verfügbar.
 
-* **CPU-Auslastung** - Ein Diagramm zur CPU-Auslastung während des Testzeitraums
+* **CPU-Auslastung** : Ein Diagramm zur CPU-Auslastung während des Testzeitraums
 
-* **Festplatten-I/O-Wartezeit** - Ein Diagramm zur Festplatten-I/O-Wartezeit während des Testzeitraums
+* **Festplatten-E/A-Wartezeit**: Ein Diagramm zur Festplatten-E/A-Wartezeit während des Testzeitraums
 
-* **Seitenfehlerrate** - Ein Diagramm zu Seitenfehlern pro Minute während des Testzeitraums
+* **Fehlerrate für die Seite**: Ein Diagramm zu den Seitenfehlern pro Minute während des Testzeitraums
    * Eine CSV-Datei mit den Seiten, die während des Tests einen Fehler verursacht haben
 
-* **Festplatten-Bandbreitenauslastung** - Ein Diagramm zur Festplatten-Bandbreitenauslastung während des Testzeitraums
+* **Festplatten-Bandbreitenauslastung** : Ein Diagramm zur Festplatten-Bandbreitenauslastung während des Testzeitraums
 
-* **Netzwerk-Bandbreitenauslastung** - Ein Diagramm zur Auslastung der Netzwerkbandbreite während des Testzeitraums
+* **Auslastung der Netzwerkbandbreite**: Ein Diagramm zur Netzwerk-Bandbreitenauslastung während des Testzeitraums
 
-* **Spitzenreaktionszeit** - Ein Diagramm zur Spitzenreaktionszeit pro Minute während des Testzeitraums
+* **Spitzenreaktionszeit**: Ein Diagramm zur Spitzenreaktionszeit pro Minute während des Testzeitraums
 
-* **95. Perzentil der Reaktionszeit** - Ein Diagramm zur 95. Perzentil-Reaktionszeit pro Minute während des Testzeitraums
+* **95. Perzentil der Reaktionszeit**: Ein Diagramm zum 95. Perzentil der Reaktionszeit pro Minute während des Testzeitraums
    * Eine CSV-Datei mit den Seiten, deren 95. Perzentil der Reaktionszeit die definierte KPI überschritten hat
 
 ## Optimierung der Inhaltspaketüberprüfung {#content-package-scanning-optimization}
