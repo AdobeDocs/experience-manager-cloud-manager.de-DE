@@ -1,25 +1,25 @@
 ---
 title: Konfigurieren von Produktions-Pipelines
-description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines zur Bereitstellung Ihres Codes erstellen und konfigurieren.
+description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1302'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 
 
 # Konfigurieren von Produktions-Pipelines {#configuring-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines zur Bereitstellung Ihres Codes erstellen und konfigurieren. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie im Dokument weitere Informationen. [CI/CD Pipelines.](/help/overview/ci-cd-pipelines.md)
+Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, lesen Sie die das Dokument [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
 ## Übersicht {#overview}
 
-Verwenden der **Pipeline-Einstellungen** Kachel in [!UICONTROL Cloud Manager] Sie können zwei verschiedene Pipelinetypen erstellen.
+Über die Kachel **Pipeline-Einstellungen** in [!UICONTROL Cloud Manager] können Sie zwei verschiedene Arten von Pipelines erstellen.
 
-* **Produktions-Pipelines** - Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die aus einer Reihe aufeinander abgestimmter Schritte besteht, um Quellcode aus Ihrem Git-Repository bis zur Produktion zu übernehmen.
-* **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quel-Code in einer Entwicklungsumgebung bereitzustellen.
+* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe orchestrierter Schritte umfasst, um Quell-Code aus dem Git-Repository bis hin in die Produktionsumgebung zu bringen.
+* **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
 Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zur Konfiguration von produktionsfremden Pipelines finden Sie unter [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
@@ -31,7 +31,7 @@ Die Rolle **Implementierungs-Manager** ist für die Einrichtung der Pipeline ver
 
 >[!NOTE]
 >
->Die Pipeline kann erst eingerichtet werden, wenn das Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
+>Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
 
 ## Video-Tutorial {#video-tutorial-one}
 
@@ -58,7 +58,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
       * **Repository**: Diese Option legt fest, aus welchem Git-Repository die Pipeline den Code abrufen soll.
       >[!TIP]
       >
-      >Siehe Dokument . [Programmeinrichtung](/help/getting-started/program-setup.md) , um zu erfahren, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten.
+      >Im Dokument [Einrichten von Programmen](/help/getting-started/program-setup.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
 
       * **Git-Verzweigung**: Mit dieser Option wird festgelegt, von welchem Zweig in der ausgewählten Pipeline der Code abgerufen werden soll.
       * **Speicherort des Codes**: Mit dieser Option wird der Pfad in der Verzweigung des ausgewählten Repositorys festgelegt, aus dem die Pipeline den Code abrufen soll.
@@ -76,8 +76,8 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
          * **Verhalten bei bedeutenden Metrikfehlern**: Bei der Einrichtung oder Bearbeitung der Pipeline kann der Implementierungs-Manager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates ein wichtiger Fehler auftritt. Folgende Optionen sind verfügbar:
 
             * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-            * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
-            * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler genehmigt.
+            * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler ablehnt.
+            * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler genehmigt.
 
          ![Bereitstellungsauslöser](/help/assets/configure-pipelines/add-prod3.png)
 
@@ -107,15 +107,15 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
          * **Bereitstellungsoptionen**: Sie können die Parameter zur Steuerung der Produktionsbereitstellung definieren.
 
-            * **GoLive-Genehmigung verwenden**: Für die Bereitstellung ist eine manuelle Genehmigung durch einen Benutzer mit der Rolle **Geschäftsinhaber**, **Projekt-Manager** oder **Implementierungs-Manager** über die Benutzeroberfläche von [!UICONTROL Cloud Manager] erforderlich.
-            * **Geplant**: Mit dieser Option wird die Pipeline vor der Produktionsbereitstellung angehalten, sodass sie geplant werden kann. Wenn diese Option ausgewählt ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und der Benutzer wird aufgefordert, die entsprechenden Maßnahmen zu ergreifen.
+            * **GoLive-Genehmigung verwenden**: Für die Bereitstellung ist eine manuelle Genehmigung durch eine Anwenderin oder einen Anwender mit der Rolle **Geschäftsinhaber**, **Projekt-Manager** oder **Implementierungs-Manager** über die Benutzeroberfläche von [!UICONTROL Cloud Manager] erforderlich.
+            * **Geplant**: Mit dieser Option wird die Pipeline vor der Produktionsbereitstellung angehalten, sodass sie geplant werden kann. Wenn diese Option ausgewählt ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und die Anwenderin bzw. der Anwender wird aufgefordert, die entsprechenden Maßnahmen zu ergreifen.
                * **Jetzt**: Bei Auswahl dieser Option erfolgt sofort die Bereitstellung in der Produktion und die Pipeline wird damit abgeschlossen.
-               * **Datum**: Mit dieser Option kann der Benutzer einen Zeitpunkt festlegen, zu dem die Bereitstellung abgeschlossen sein soll.
+               * **Datum**: Mit dieser Option kann die Anwenderin oder der Anwender einen Zeitpunkt festlegen, zu dem die Bereitstellung abgeschlossen sein soll.
                * **Ausführung stoppen**: Mit dieser Option wird die Bereitstellung in der Produktionsumgebung abgebrochen.
 
             >[!TIP]
             >
-            >Weitere Informationen finden Sie im Dokument . [Codebereitstellung,](/help/using/code-deployment.md) , um zu erfahren, wie Sie den Bereitstellungsplan festlegen oder die Pipeline sofort ausführen.
+            >Weitere Informationen dazu, wie Sie den Bereitstellungsplan festlegen oder die Pipeline sofort ausführen können, finden Sie im Dokument [Bereitstellen des Codes](/help/using/code-deployment.md).
 
             * **CSE-Überwachung nutzen**: Bei Auswahl dieser Option wird ein CSE eingeschaltet, um die Bereitstellung tatsächlich zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Implementierungs-Manager** folgende Optionen.
 
@@ -140,7 +140,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
    >[!TIP]
    >
-   >Siehe Dokument . [Tests der Code-Qualität](/help/using/code-quality-testing.md#performance-testing) Weitere Informationen zu den verfügbaren Optionen finden Sie unter **Staging-Tests** Registerkarte.
+   >Im Dokument [Testen der Code-Qualität](/help/using/code-quality-testing.md#performance-testing) finden Sie weitere Informationen zu den Optionen, die auf der Registerkarte **Staging-Tests** verfügbar sind.
 
    1. Im Abschnitt **Site-Inhaltsbereitstellung/verteilte Lastgewichtung** legen Sie fest, wie die Leistungstests für Sites konfiguriert werden, basierend auf der Gewichtung der Seitenanfragen zwischen den drei Seitensätzen, die aktiviert oder deaktiviert werden können.
 
@@ -169,4 +169,4 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Lesen Sie das Dokument [Codebereitstellung](/help/using/code-deployment.md) für weitere Details.
+Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Einzelheiten finden Sie in dem Dokument [Code-Bereitstellung](/help/using/code-deployment.md).
