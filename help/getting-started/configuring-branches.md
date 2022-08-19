@@ -1,24 +1,24 @@
 ---
 title: Konfigurieren von Verzweigungen
-description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen Ihres Anwendungs-Codes verwendet wird.
+description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen des Programm-Codes verwendet wird.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '329'
-ht-degree: 34%
+ht-degree: 100%
 
 ---
 
 
 # Konfigurieren von Verzweigungen {#configuring-branches}
 
-Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen Ihres Anwendungs-Codes verwendet wird.
+Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen des Programm-Codes verwendet wird.
 
 ## Einrichten der ersten Verzweigung in Git {#setting-up-your-first-branch-in-git}
 
-Ein einzelnes, zunächst leeres Git-Repository [bereitgestellt wird](/help/requirements/environment-provisioning.md) für jedes in Cloud Manager integrierte Programm. Dieses Repository kann so viele Verzweigungen enthalten, wie Ihr Entwicklungsprozess erfordert. Es muss jedoch mindestens eine Verzweigung vorhanden sein, die von der CI/CD-Pipeline verwendet wird, um Anwendungscode für die Staging- und Produktionsumgebung bereitzustellen. Als Best Practice gilt, für diese Verzweigung den Namen `main` zu verwenden. Praktisch ist dies das Standardverhalten von Git-Clients beim Einrichten neuer Projekte.
+Ein einziges, zunächst leeres Git-Repository wird für jedes Programm [bereitgestellt](/help/requirements/environment-provisioning.md), das in Cloud Manager eingebunden ist. Dieses Repository kann so viele Verzweigungen enthalten, wie es der Entwicklungsprozesses erfordert. Es muss jedoch mindestens eine Verzweigung vorhanden sein, die von der CI/CD-Pipeline verwendet wird, um Programm-Code für die Staging- und Produktionsumgebung bereitzustellen. Als Best Practice gilt, für diese Verzweigung den Namen `main` zu verwenden. Praktischerweise ist dies die standardmäßige Verhaltensweise von Git-Clients beim Einrichten neuer Projekte.
 
-Wenn Sie beispielsweise ein neues Projekt einrichten, führen Sie eine Reihe von Befehlen ähnlich der folgenden aus.
+Wenn Sie beispielsweise ein neues Projekt einrichten, führen Sie eine Reihe von Befehlen aus, die den folgenden ähnlich sind:
 
 ```shell
 $ git init
@@ -50,11 +50,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Sie müssen keinen Befehlszeilen-Client verwenden. Es gibt eine Vielzahl grafischer Git-Clients, die entweder als eigenständige Anwendungen oder als Teil einer integrierten Entwicklungsumgebung (IDE) wie Eclipse oder IntelliJ verfügbar sind. Solange die Client-Anwendung Git mit HTTPS unterstützt, sollte sie mit [!UICONTROL Cloud Manager].
+>Sie müssen keinen Befehlszeilen-Client verwenden. Es gibt eine Vielzahl grafischer Git-Clients, die als eigenständige Programme oder als Teil einer integrierten Entwicklungsumgebung (IDE), wie z. B. Eclipse oder IntelliJ, verfügbar sind. Sofern das Client-Programm das Git mit HTTPS unterstützt, sollte es mit [!UICONTROL Cloud Manager] kompatibel sein.
 
 ## Push-Veröffentlichung der ersten Verzweigung {#pushing-your-first-branch}
 
-Nachdem Sie mindestens eine Revision vorgenommen haben, können Sie die [!UICONTROL Cloud Manager] Repository als Remote-Ressource zu speichern und dann Ihre Commits dorthin zu übertragen.
+Sobald Sie sich für mindestens eine Revision entschieden haben, können Sie das [!UICONTROL Cloud Manager]-Repository als Remote-Datenquelle hinzufügen und dann Ihre Commits dorthin senden.
 
 ```shell
 $ git remote add adobe <url>
@@ -78,4 +78,4 @@ Eine einzelne `main`-Verzweigung kann für sehr einfache Projekte ausreichend se
 
 >[!TIP]
 >
->Informationen zu allgemeinen Git-Befehlen finden Sie in der [Git Cheat Sheet](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Die gebräuchlichen Git-Befehle finden Sie in der [Git-Schnellübersicht](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
