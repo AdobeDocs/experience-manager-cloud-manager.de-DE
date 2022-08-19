@@ -3,9 +3,9 @@ title: Sicherheit und Datenschutz
 description: Erfahren Sie mehr über die Sicherheit und den Datenschutz von Code- und Artefakt-Assets in Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: d7751757c1d3bda3d60406a1d39cb41c61f5c863
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '205'
-ht-degree: 25%
+ht-degree: 100%
 
 ---
 
@@ -18,20 +18,20 @@ Erfahren Sie mehr über die Sicherheit und den Datenschutz von Code- und Artefak
 
 [!UICONTROL Cloud Manager] verfügt über vorkonfigurierte Rollen mit entsprechenden Berechtigungen.
 
-Informationen zu den möglichen Rollen, die Sie in der Admin Console und den Benutzerrollenberechtigungen zuweisen können, finden Sie im Dokument . [Rollenbasierte Berechtigungen.](/help/requirements/role-based-permissions.md)
+Informationen zu den möglichen Rollen, die Sie in der Admin Console und den Benutzerrollenberechtigungen zuweisen können, finden Sie unter [Rollenbasierte Berechtigungen](/help/requirements/role-based-permissions.md).
 
 ## Ressourcenisolation {#resource-isolation}
 
-[!UICONTROL Cloud Manager] Kunden benötigen ihre IMS-Anmeldeinformationen, um sich zu authentifizieren, da alle Berechtigungen an [!UICONTROL Cloud Manager] sind an ihre IMS-Organisationen gebunden. Während des Onboarding-Prozesses stellt das Bereitstellungsteam sicher, dass die Ressourcenisolation in [!UICONTROL Cloud Manager].
+[!UICONTROL Cloud Manager]-Kunden benötigen ihre IMS-Anmeldedaten, um sich zu authentifizieren, da alle Berechtigungen, die an [!UICONTROL Cloud Manager] gebunden sind, an ihre IMS-Organisationen gebunden sind. Während des Onboarding-Prozesses stellt das Bereitstellung-Team sicher, dass die Ressourcenisolation in [!UICONTROL Cloud Manager] durchgesetzt wird.
 
 ## Datensicherheit {#data-security}
 
 Code in [!UICONTROL Cloud Manager] wird während der Übertragung verschlüsselt. Von Cloud Manager erstellte Binärdateien werden ebenfalls während der Übertragung und beim Speichern verschlüsselt.
 
-Jeder Kunde erhält sein eigenes Git-Repository und Code ist sicher und wird nicht für andere Organisationen freigegeben.
+Jeder Kunde erhält ein eigenes Git-Repository. Sein Code ist sicher und wird nicht an andere Organisationen weitergegeben.
 
 ## Datenschutz {#data-privacy}
 
-[!UICONTROL Cloud Manager] erfüllt die von Adobe definierten Datenschutzgrundsätze. Entwickler pushen Code sicher über HTTPS in Git-Repositorys.
+[!UICONTROL Cloud Manager] erfüllt die von Adobe definierten Datenschutzgrundsätze. Entwickler können Code dank HTTPS sicher per Push an Git-Repositorys übertragen.
 
-[!UICONTROL Cloud Manager]Die -Benutzeroberfläche von basiert auf Diensten, die einem gemeinsamen Steuerungsframework der Adobe entsprechen, das dies ermöglicht. [!UICONTROL Cloud Manager]Die -Benutzeroberfläche von verwendet sichere Dienste verschiedener Cloud-Anbieter.
+Die Benutzeroberfläche von [!UICONTROL Cloud Manager] basiert auf Services, die einem gemeinsamen Kontroll-Framework von Adobe entsprechen. Die Benutzeroberfläche von [!UICONTROL Cloud Manager] nutzt sichere Services von verschiedenen Cloud-Anbietern.
