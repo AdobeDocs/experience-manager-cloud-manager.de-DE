@@ -3,9 +3,9 @@ title: Überwachen von Umgebungen
 description: Informationen zum Überwachen von Umgebungen in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 5907ca6337d33c26ff19a14bfeb358cd9f7b935d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '939'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
@@ -14,11 +14,11 @@ ht-degree: 52%
 
 Informationen zum Überwachen von Umgebungen in Cloud Manager.
 
-## Metrikschwellen {#thresholds}
+## Schwellenwerte für Metriken {#thresholds}
 
-Die Systemüberwachung in [!UICONTROL Cloud Manager] erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz. Jede Metrik hat zwei definierte Schwellenwerte: eine Warnschwelle und eine kritische Schwelle.
+Die Systemüberwachung in [!UICONTROL Cloud Manager] erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz. Jede Metrik hat zwei definierte Schwellenwerte: einen Warnschwellenwert und einen kritischen Schwellenwert.
 
-Wenn eine Metrik ihren kritischen Schwellenwert überschreitet, wird sie als kritisch betrachtet. Wenn eine Metrik über ihrem Warnschwellenwert liegt (aber unter ihrem kritischen Schwellenwert), wird sie als Warnstatus betrachtet. Die Schwellenwerte werden von Adobe Managed Services festgelegt und können in [!UICONTROL Cloud Manager] visualisiert werden. In den meisten Fällen sind die Schwellenwerte zwischen Kunden konsistent. Es gibt jedoch Fälle, in denen Adobe Managed Services Schwellenwerte für bestimmte Kundenanforderungen anpasst. Fragen zu Schwellenwerten richten Sie bitte an Ihren Customer Success Engineer (CSE).
+Wenn eine Metrik über ihrem kritischen Schwellenwert liegt, wird dies als kritischer Status betrachtet. Wenn eine Metrik über dem Warnschwellenwert liegt (aber unter ihrem kritischen Schwellenwert), wird dies als Warnstatus betrachtet. Die Schwellenwerte werden von Adobe Managed Services festgelegt und können in [!UICONTROL Cloud Manager] visualisiert werden. In den meisten Fällen sind die Schwellenwerte zwischen Kunden konsistent. Es gibt jedoch Fälle, in denen Adobe Managed Services Schwellenwerte für bestimmte Kundenanforderungen anpasst. Fragen zu Schwellenwerten richten Sie bitte an Ihren Customer Success Engineer (CSE).
 
 ## Zugriff auf die Systemüberwachung {#accessing-system-monitoring}
 
@@ -33,24 +33,24 @@ Führen Sie diese Schritte aus, um auf die Systemüberwachung zuzugreifen.
    ![Einstellungen](/help/assets/first-timea1.png)
 
 
-Alternativ können Sie zur **Systemüberwachung** Landingpage durch **Berichte** globales Navigationsmenüelement innerhalb von [!UICONTROL Cloud Manager].
+Gehen Sie in [!UICONTROL Cloud Manager] über das globale Navigationsmenüelement **Berichte** zur Landingpage **Systemüberwachung**.
 
-## Systemüberwachung - Übersicht {#system-monitoring-overview}
+## Systemüberwachung – Übersicht {#system-monitoring-overview}
 
-Auf der Übersichtsseite Systemüberwachung werden die überwachten Umgebungen im Programm aufgelistet und Berichte zu deren allgemeinen Zustand in vier verschiedenen Kategorien erstellt:
+Auf der Seite „Übersicht“ der Systemüberwachung werden die überwachten Umgebungen im Programm aufgelistet und Berichte zu deren allgemeinen Zustand in vier separaten Kategorien erstellt:
 
 * Host
 * Speicherung
 * Netzwerk
-* Anwendung
+* Programm
 
-Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn eine Metrik in einer Kategorie den kritischen Status aufweist, befindet sich die gesamte Kategorie in einem kritischen Zustand für die Zwecke der Übersichtsseite. Dieselbe Zusammenfassung kann auf Umgebungs- und Instanzebene angezeigt werden.
+Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn eine Metrik in einer Kategorie einen kritischen Status aufweist, hat die gesamte Kategorie einen kritischen Status auf der Seite „Übersicht“. Dieselbe Zusammenfassung kann auf Umgebungs- und Instanzebene angezeigt werden.
 
-![Systemüberwachung - Übersicht](/help/assets/System-Monitoring-Reports.png)
+![Systemüberwachung – Übersicht](/help/assets/System-Monitoring-Reports.png)
 
 >[!NOTE]
 >
->Standardmäßig sind beim Navigieren zu dieser Seite die Instanzen der Produktionsumgebung sichtbar, aber auch andere Umgebungen können angezeigt werden.
+>Beim Navigieren zu dieser Seite werden die Instanzen der Produktionsumgebung standardmäßig angezeigt, aber es können auch andere Umgebungen angezeigt werden.
 
 ## Details zur Systemüberwachung {#system-monitoring-detail}
 
@@ -60,7 +60,7 @@ Zum Anzeigen von Details bestimmter Metriken können Sie entweder auf eine der K
 
 Im Navigationsbereich auf der linken Seite finden Sie die verfügbaren Metriken innerhalb der aktuell ausgewählten Kategorie, für die Daten für die aktuell ausgewählte Umgebung und die Instanzen vorhanden sind.
 
-![Überwachungsmetriken](/help/assets/System_Monitoring2.png)
+![Überwachen von Metriken](/help/assets/System_Monitoring2.png)
 
 In einem einzelnen Diagramm werden der Status und ein Graph der Daten zusammen mit den Schwellenwerten angezeigt. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
 
@@ -75,37 +75,37 @@ Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kr
 
 #### Host {#host}
 
-* **Pro Kern laden**: Die Anzahl der Prozesse, die von der CPU ausgeführt werden oder sich in einem Wartezustand befinden, gemittelt über einen Zeitraum von einer (load1), fünf (load5) und fünfzehn (load15) Minuten
+* **Last pro Kern**: Die Anzahl der Prozesse, die von der CPU ausgeführt werden oder sich in einem über einen Zeitraum von einer (load1), fünf (load5) und fünfzehn (load15) Minuten gemittelten Wartestatus befinden
 * **Prozessanzahl**: Die Anzahl der derzeit geöffneten Prozesse
-* **Benutzeranzahl**: Die Anzahl der Benutzer mit einer aktiven Shell-Sitzung
-* **Speichernutzung**: Der derzeit zugewiesene Prozentsatz des Systemspeichers
-* **JVM-Speicher**: Die Größe (in Megabyte) des zugewiesenen Java-Heap
-* **Alte Generation**: Der Prozentsatz des JVM-Speicherplatzes der alten Generation, der derzeit zugewiesen ist
+* **Anwenderanzahl**: Die Anzahl der Anwender mit einer aktiven Shell-Sitzung
+* **Speicherauslastung**: Der Prozentsatz des aktuell zugewiesenen Systemspeichers
+* **JVM-Arbeitsspeicher**: Die Größe (in Megabyte) des zugewiesenen Java Heap
+* **Bereich für die alte Generation von Objekten (Old Generation Space)**: Der Prozentsatz, der derzeit dem JVM-Speicher für die alte Generation von Objekten zugewiesen ist
 
 #### Netzwerk {#network}
 
-* **CQ-Port-Prüfung**: Die Antwortzeit in Sekunden, um auf den AEM- oder Dispatcher-Port zuzugreifen
+* **CQ-Port-Prüfung**: Die Reaktionszeit in Sekunden, um auf den AEM- oder Dispatcher-Port zuzugreifen
    * Es gibt verschiedene Metriken für Autor, Veröffentlichung und Dispatcher.
 
 #### Speicherung {#storage}
 
-* **Festplattenspeicher**: Der für jeden Bereitstellungspunkt auf dem Host verwendete Speicherplatz (in Megabyte)
+* **Speicherplatz**: Der für jeden einzelnen Bereitstellungspunkt auf dem Host belegte Speicherplatz (in Megabyte)
    * Für jeden Bereitstellungspunkt gibt es verschiedene Metriken.
-   * Es gibt mindestens Metriken für `/` und `/mnt`, aber je nach der spezifischen Instanzkonfiguration können zusätzliche Bereitstellungspunkt-Metriken verfügbar sein.
+   * Es werden zumindest Metriken für `/` und `/mnt` angezeigt. Abhängig von der jeweiligen Instanzkonfiguration können jedoch weitere Bereitstellungspunkt-Metriken verfügbar sein.
 * **Ordnergröße**
-* **AEM Segmentspeicher**: Der für den AEM Segmentspeicher verwendete Speicherplatz (in Gigabyte).
+* **AEM-Segmentspeicher**: Der für den AEM-Segmentspeicher belegte Speicherplatz (in Gigabyte)
 
-#### Anwendung {#application}
+#### Programm {#application}
 
-* **Replikationsagent**: Die Zeit (in Sekunden) für ein Testreplikationsereignis
+* **Replizierungsagent**: Die Zeit (in Sekunden) für eine Testreplikation
    * Für jeden Replizierungsagenten gibt es verschiedene Metriken.
-* **Dispatcher Flush**: Die Anzahl der Elemente, die sich derzeit in der Dispatcher-Flush-Warteschlange befinden
+* **Dispatcherflush**: Die Anzahl der sich aktuell in der Dispatcherflush-Warteschlange befindlichen Elemente
 
 ## SLA-Berichte {#sla-reporting}
 
-Kunden können die Leistung ihrer Produktions-AEM im Verhältnis zu ihrem vertraglich vereinbarten Service Level Agreement (SLA) sehen. Dies ist über ein Untermenü auf der **Berichte** angezeigt.
+Die Leistungsdaten einer AEM-Produktionsumgebung können mit dem vertraglich vereinbarten Service Level Agreement (SLA) verglichen werden. Möglich ist dies über ein Untermenü auf dem Bildschirm **Berichte**.
 
-Das folgende Diagramm zeigt die monatliche SLA-Leistung für 2018.
+Das folgende Diagramm zeigt die monatliche SLA-Erreichung für 2018.
 
 ![SLA-Diagramm 2018](/help/assets/SLA-Reports-one.png)
 
@@ -113,7 +113,7 @@ Wie bei den Systemüberwachungsdiagrammen werden beim Bewegen der Maus über ein
 
 ![Datenpunkt-Rollover](/help/assets/SLA-Reports-two.png)
 
-Die **Ereignisanalyse** in diesem Diagramm die Anzahl der Vorfälle, die während des aktuell ausgewählten Jahres für das Programm aufgetreten sind. Für jeden Vorfall werden Zeitraum und Ursache mitsamt Kommentaren angegeben.
+Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Anzahl von Vorfällen, die im aktuell ausgewählten Jahr beim Programm aufgetreten sind. Für jeden Vorfall werden Zeitraum und Ursache mitsamt Kommentaren angegeben.
 
 ![Ereignisanalyse](/help/assets/sla-reporting3.png)
 
@@ -128,6 +128,6 @@ Die **Ereignisanalyse** in diesem Diagramm die Anzahl der Vorfälle, die währen
 
 ## Video-Tutorial {#video-tutorial}
 
-In diesem Video erhalten Sie einen Überblick über die Verwendung der von Cloud Manager-Berichten erstellten Diagramme, in denen Sie sich einen Überblick über Ihre Programmumgebungen verschaffen können.
+Dieses Video bietet einen Überblick über die Verwendung der von Cloud Manager Reports erstellten Diagramme, die einen Einblick in Ihre Programmumgebungen geben.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26315/)
