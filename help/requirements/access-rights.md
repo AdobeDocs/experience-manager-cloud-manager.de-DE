@@ -1,27 +1,27 @@
 ---
 title: Zugriffsrechte
-description: Erfahren Sie mehr über Ihre Adobe ID und wie Sie damit auf Experience Cloud-Ressourcen zugreifen können.
+description: Erfahren Sie mehr über Ihre Adobe ID und wie Sie damit auf Experience Cloud-Ressourcen zugreifen können.
 exl-id: 9e51936c-9727-4b9c-a86a-2ea3aabd42cf
 source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '250'
-ht-degree: 18%
+ht-degree: 100%
 
 ---
 
 
 # Zugriffsrechte {#access-rights}
 
-Erfahren Sie mehr über Ihre Adobe ID und wie Sie damit auf Experience Cloud-Ressourcen zugreifen können.
+Erfahren Sie mehr über Ihre Adobe ID und wie Sie damit auf Experience Cloud-Ressourcen zugreifen können.
 
 ## Anwenderidentitätstypen {#user-identity-types}
 
-Im Rahmen des Onboarding-Prozesses erstellt Adobe eine Organisationskennung für Ihr Unternehmen im Adobe Identity Management System (IMS). In IMS können alle Ihre Benutzer und deren Berechtigungen verwaltet werden. Jeder Anwender, der Mitglied dieser Organisation sein muss und Zugriff auf alle [!UICONTROL Experience Cloud]-Dienste erhält, muss über eine eigene Adobe ID verfügen.
+Im Rahmen des Onboarding-Prozesses erstellt Adobe eine Organisationskennung für Ihr Unternehmen im Adobe Identity Management System (IMS). In IMS können alle Ihre Benutzerinnen und Benutzer sowie deren Berechtigungen verwaltet werden. Sämtliche Anwenderinnen und Anwender, die Mitglieder dieser Organisation sein müssen und Zugriff auf alle [!UICONTROL Experience Cloud]-Services erhalten, müssen über eine eigene Adobe ID verfügen.
 
-Informationen zu den ersten Schritten mit einer Adobe ID finden Sie im Dokument . [Identitätstypen für Adoben verwalten](https://helpx.adobe.com/de/enterprise/using/identity.html) für ausführliche Anweisungen zum Abrufen einer Adobe ID mit einem der verfügbaren Identitätstypen.
+Für die ersten Schritte mit der Adobe ID rufen Sie zunächst das Dokument [Verwalten von Adobe Identitätstypen](https://helpx.adobe.com/de/enterprise/using/identity.html) auf. Dort finden Sie ausführliche Informationen zum Bezug einer Adobe ID mithilfe eines der verfügbaren Identitätstypen.
 
-### Anwender und Rollen {#users-and-roles}
+### Anwenderinnen und Anwender und Rollen {#users-and-roles}
 
-Nachdem Adobe eine Organisation für Ihr Unternehmen erstellt hat, wird Ihr Systemadministrator als erstes Mitglied dieser Organisation hinzugefügt. Dem Systemadministrator werden die Administratorberechtigungen standardmäßig erteilt und der [!UICONTROL AEM Managed Services] Produkt oder Produkt [!UICONTROL Cloud Manager] Produktprofile. Lesen Sie das Dokument [Benutzer und Rollen hinzufügen](/help/requirements/users-and-roles.md) , um mehr über die Konfiguration und Verwaltung Ihrer Teambenutzer mithilfe der Admin Console zu erfahren.
+Sobald Adobe eine Organisation für Ihr Unternehmen erstellt hat, wird Ihr Systemadmin als erstes Mitglied dieser Organisation hinzugefügt. Systemadmins erhalten standardmäßig Administratorberechtigungen und ihnen wird [!UICONTROL AEM Managed Services] sowie mindestens ein [!UICONTROL Cloud Manager]-Produktprofil zugewiesen. Weitere Informationen zum Konfigurieren und Verwalten Ihrer Team-Awenderinnen und -Anwender mit der Admin Console finden Sie im Dokument [Hinzufügen von Anwenderinnen und Anwendern und Rollen](/help/requirements/users-and-roles.md).
 
-Mit diesen Rechten wird Ihr Administrator jetzt mit einem Single Sign-on unter Verwendung einer Adobe ID für den Zugriff auf die [!UICONTROL Experience Cloud] Dienste, melden Sie sich bei Ihren AEM Cloud-Umgebungen an und verwenden Sie [!UICONTROL Cloud Manager].
+Mit diesen Rechten kann Ihr Admin nun per Single Sign-on mit der Adobe ID auf die [!UICONTROL Experience Cloud]-Services zugreifen, sich bei Ihren AEM-Cloud-Umgebungen anmelden und [!UICONTROL Cloud Manager] verwenden.
