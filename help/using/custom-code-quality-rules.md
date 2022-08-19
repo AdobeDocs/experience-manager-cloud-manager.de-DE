@@ -1,18 +1,18 @@
 ---
-title: Benutzerspezifische Regeln für Code-Qualität
-description: Erfahren Sie mehr über die benutzerspezifischen Regeln für die Code-Qualität, die von Cloud Manager im Rahmen von Code-Qualitätstests ausgeführt werden, basierend auf Best Practices von AEM Engineering.
+title: Qualitätsregeln für benutzerspezifischen Code
+description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3575'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 
 # Qualitätsregeln für benutzerspezifischen Code {#custom-code-quality-rules}
 
-Erfahren Sie mehr über die benutzerspezifischen Regeln für die Code-Qualität, die von Cloud Manager im Rahmen von [Codequalitätstests,](/help/using/code-quality-testing.md) basierend auf Best Practices von AEM Engineering.
+Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der [Code-Qualitätsprüfung](/help/using/code-quality-testing.md) ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 
 >[!NOTE]
 >
@@ -759,7 +759,7 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d.�
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass die Eigenschaft `compatVersion` für benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) auf `2` festgelegt wird. Andere Werte werden von AEM Cloud Service nicht unterstützt. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html).
+AEM Cloud Service erfordert, dass die Eigenschaft `compatVersion` für benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) auf `2` festgelegt wird. Andere Werte werden von AEM Cloud Service nicht unterstützt. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de).
 
 ### Absteigende Knoten einer benutzerdefinierten Suchindex-Definition müssen vom Typ nt:unstructured sein {#oakpal-descendent-nodes}
 
@@ -795,7 +795,7 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. 
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) eine `type`-Eigenschaft mit dem Wert `lucene` aufweisen. Die Indizierung mit älteren Indextypen muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use).
+AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) eine `type`-Eigenschaft mit dem Wert `lucene` aufweisen. Die Indizierung mit älteren Indextypen muss vor der Migration auf AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de#how-to-use).
 
 ### Knoten einer benutzerdefinierten Suchindex-Definition dürfen keine Eigenschaft namens „seed“ enthalten {#oakpal-property-name-seed}
 
@@ -804,7 +804,7 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. 
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service verbietet, benutzerdefinierten Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`), eine Eigenschaft mit dem Namen `seed` zu enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration zu AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use).
+AEM Cloud Service verbietet, benutzerdefinierten Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`), eine Eigenschaft mit dem Namen `seed` zu enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration zu AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de#how-to-use).
 
 ### Knoten einer benutzerdefinierten Suchindex-Definition dürfen keine Eigenschaft namens „reindex“ enthalten {#oakpal-reindex-property}
 
@@ -813,7 +813,7 @@ AEM Cloud Service verbietet, benutzerdefinierten Suchindex-Definitionen (d. h. K
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service verbietet, benutzerdefinierten Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`), eine Eigenschaft mit dem Namen `reindex` zu enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration zu AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html#how-to-use).
+AEM Cloud Service verbietet, benutzerdefinierten Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`), eine Eigenschaft mit dem Namen `reindex` zu enthalten. Die Indizierung mit dieser Eigenschaft muss vor der Migration zu AEM Cloud Service aktualisiert werden. Weitere Informationen finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/operations/indexing.html?lang=de#how-to-use).
 
 ## Dispatcher-Optimierungs-Tool {#dispatcher-optimization-tool-rules}
 
