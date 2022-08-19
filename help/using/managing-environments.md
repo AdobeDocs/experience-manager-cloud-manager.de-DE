@@ -3,9 +3,9 @@ title: Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 80f8707e00357f5a08dd835b846c9ee610f3e573
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '263'
-ht-degree: 41%
+ht-degree: 100%
 
 ---
 
@@ -22,35 +22,35 @@ Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 ![Übersichtsseite](/help/assets/Manage-Environ-Overview.png)
 
-## Kachel &quot;Umgebungen&quot; {#environments-tile}
+## Kachel „Umgebungen“ {#environments-tile}
 
-Die **Umgebungen** -Kachel zeigt die in Ihrem Programm bereitgestellten Produktions- und Staging-Umgebungen zusammen mit dem Status an.
+Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Produktions- und Staging-Umgebungen zusammen mit dem Status angezeigt.
 
-Der Status ist der aggregierte Leistungsstatus über die Knoten in der Umgebung in der folgenden Prioritätsreihenfolge hinweg.
+Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung, in der folgenden Prioritätsreihenfolge.
 
 * Grün: Alle Knoten werden ausgeführt
-* Rot - Ein oder mehrere Knoten werden angehalten.
-* Blau - Es wird ein oder mehrere Knoten angezeigt.
-* Gelb - Ein oder mehrere Knoten verfügen über keinen Leistungsstatus.
+* Rot: Ein oder mehrere Knoten sind angehalten
+* Blau: Ein oder mehrere Knoten sind im Entstehen
+* Gelb: Ein oder mehrere Knoten verfügen über keinen Leistungsstatus
 
-![Umgebungskachel](/help/assets/Environments-card-new.png)
+![Kachel „Umgebungen“](/help/assets/Environments-card-new.png)
 
 ## Verwalten von Umgebungen {#managing-environments-with-cloud-manager}
 
-Im **Umgebungen** tile, click **Verwalten** , um **Umgebungen** angezeigt.
+Klicken Sie auf der Kachel **Umgebungen** auf **Verwalten**, um den Bildschirm **Umgebungen** anzuzeigen.
 
-Die **Umgebungen** -Bildschirm zeigt eine Karte für Produktions- und Staging-Umgebungen (falls zutreffend) in Ihrem Programm an. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle der Knoten in der Umgebung sowie die Größe der CPU, den Speicher, die Region und den Status.
+Auf dem Bildschirm **Umgebungen** wird jeweils eine Karte für Produktions- und Staging-Umgebungen (sofern zutreffend) in Ihrem Programm angezeigt. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle der Knoten in der Umgebung sowie die Größe der CPU, den Speicher, die Region und den Status.
 
 >[!NOTE]
 >
 >Der **STATUS** des Knotens stellt den Leistungsstatus der VM dar und spiegelt nicht den Status von AEM auf dem Server wider. Der Status kann wie folgt lauten:
 
-* Green - Running
-* Rot - Angehalten
-* Blue - Coming up
-* Gelb - nicht verfügbar
+* Grün: Wird ausgeführt
+* Rot: Angehalten
+* Blau: Anstehend
+* Gelb: Nicht verfügbar
 
-![Registerkarte Umgebungen](/help/assets/Environments-tab.png)
+![Registerkarte „Umgebungen“](/help/assets/Environments-tab.png)
 
 >[!NOTE]
 >
@@ -58,6 +58,6 @@ Die **Umgebungen** -Bildschirm zeigt eine Karte für Produktions- und Staging-Um
 
 ## Video-Tutorial {#video-tutorial}
 
-Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM Authoring-, Publishing- und Dispatcher-Instanzen bestehen.
+Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-Veröffentlichungs- und Dispatcher-Instanzen bestehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/)
