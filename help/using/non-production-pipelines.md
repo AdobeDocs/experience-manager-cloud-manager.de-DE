@@ -1,26 +1,26 @@
 ---
 title: Konfigurieren von produktionsfremden Pipelines
-description: Erfahren Sie, wie Sie mit Cloud Manager Nicht-Produktions-Pipelines erstellen und konfigurieren können, um Ihren Code bereitzustellen.
+description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 567a16a032bf80451b5e8ba4e3d842cb617a615f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '600'
-ht-degree: 78%
+ht-degree: 100%
 
 ---
 
 # Konfigurieren von produktionsfremden Pipelines {#configuring-non-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager Nicht-Produktions-Pipelines erstellen und konfigurieren können, um Ihren Code bereitzustellen. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie weitere Informationen im Dokument . [CI/CD Pipelines.](/help/overview/ci-cd-pipelines.md)
+Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, lesen Sie die das Dokument [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
 ## Übersicht {#overview}
 
-Verwenden der **Pipelines** Kachel in [!UICONTROL Cloud Manager], die **Bereitstellungsmanager** kann zwei verschiedene Pipelinetypen erstellen.
+Über die Kachel **Pipelines** in [!UICONTROL Cloud Manager] kann der **Implementierungs-Manager** zwei verschiedene Arten von Pipelines erstellen.
 
 * **Produktions-Pipelines**: Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
-Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Informationen zum Konfigurieren von Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Produktions-Pipelines.](/help/using/production-pipelines.md)
+Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Informationen zur Konfiguration von Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md).
 
 Es gibt zwei Arten von produktionsfremden Pipelines:
 
@@ -29,7 +29,7 @@ Es gibt zwei Arten von produktionsfremden Pipelines:
 
 >[!NOTE]
 >
->Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Siehe Dokument . [Cloud Manager-Repositorys](/help/managing-code/repositories.md) , um zu erfahren, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten.
+>Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Im Dokument [Cloud Manager Repositorys](/help/managing-code/repositories.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
 
 ## Video-Tutorial {#video-tutorial}
 
@@ -47,7 +47,7 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
    ![Produktionsfremde Pipeline hinzufügen](/help/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
-1. Wählen Sie auf der Registerkarte **Konfiguration** im Dialogfeld **Produktionsfremde Pipeline hinzufügen** den zu erstellenden Pipeline-Typ aus: entweder **Codequalitätspipeline** oder **Bereitstellungspipeline**.
+1. Wählen Sie auf der Registerkarte **Konfiguration** im Dialogfeld **Produktionsfremde Pipeline hinzufügen** den zu erstellenden Pipeline-Typ aus: entweder **Codequalitäts-Pipeline** oder **Bereitstellungspipeline**.
 
    ![Pipeline-Typ wählen](/help/assets/configure-pipelines/add-non-production-pipeline.png)
 
@@ -69,7 +69,7 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
    1. Für Bereitstellungs-Pipelines definieren Sie unter **Verhalten bei wichtigen Metrikfehlern** das Verhalten der Pipeline, wenn ein wichtiger Fehler in einem der Quality Gates auftritt.
 
       * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-      * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Benutzer simuliert, der manuell jeden Fehler ablehnt.
+      * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler ablehnt.
       * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler genehmigt.
 
 
@@ -77,4 +77,4 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Lesen Sie das Dokument [Codebereitstellung](/help/using/code-deployment.md) für weitere Details.
+Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Einzelheiten finden Sie in dem Dokument [Code-Bereitstellung](/help/using/code-deployment.md).
