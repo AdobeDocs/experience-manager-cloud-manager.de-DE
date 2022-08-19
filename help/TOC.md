@@ -9,7 +9,7 @@ role: Admin
 source-git-commit: 42f445465ff9dbfe773a0aee8bdc263f50376a4a
 workflow-type: tm+mt
 source-wordcount: '303'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -17,9 +17,9 @@ ht-degree: 84%
 # Dokumentation zu Cloud Manager {#content}
 
 + [Cloud Manager für AMS](introduction.md)
-+ Überblick {#overview}
-   + [Schlüsselkonzepte](overview/key-concepts.md)
-   + [Journey](overview/user-journey.md)
++ Übersicht {#overview}
+   + [Wichtige Konzepte](overview/key-concepts.md)
+   + [Anwendertour](overview/user-journey.md)
    + [CI/CD-Pipelines](overview/ci-cd-pipelines.md)
    + [Sicherheit und Datenschutz](overview/security-and-privacy.md)
    + [Hilfe-Ressourcen](overview/help-resources.md)
@@ -32,8 +32,8 @@ ht-degree: 84%
    + [Umgebungsbereitstellung](requirements/environment-provisioning.md)
 + Erste Schritte {#getting-started}
    + [Erste Anmeldung](getting-started/first-time-login.md)
-   + [Programmeinrichtung](getting-started/program-setup.md)
-   + AEM Projekterstellung {#project-creation}
+   + [Einrichten von Programmen](getting-started/program-setup.md)
+   + AEM-Projekterstellung {#project-creation}
       + [Verwenden des Assistenten](getting-started/using-the-wizard.md)
       + [Projekt-Setup](getting-started/project-setup.md)
       + [Die Build-Umgebung](getting-started/build-environment.md)
@@ -51,14 +51,14 @@ ht-degree: 84%
    + [Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
    + [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Benachrichtigungen](using/notifications.md)
-   + [Benutzerspezifische Regeln für Code-Qualität](using/custom-code-quality-rules.md)
+   + [Qualitätsregeln für benutzerspezifischen Code](using/custom-code-quality-rules.md)
 + Verwalten von Code {#managing-code}
    + [Umgang mit Maven-Projektversionen](managing-code/maven-project-version.md)
    + [Repositorys](managing-code/repositories.md)
-   + [Integration mit Git](managing-code/git-integration.md)
+   + [Integrieren mit Git](managing-code/git-integration.md)
    + [Arbeiten mit mehreren Git-Repositorys](managing-code/multiple-git-repos.md)
 + Assistent für Produktaktualisierungen {#product-update-wizard}
-   + [Überblick](product-update-wizard/overview.md)
+   + [Übersicht](product-update-wizard/overview.md)
    + [Test](product-update-wizard/evaluation.md)
 + Versionshinweise {#release-notes}
    + [Aktuelle Versionshinweise](release-notes/current.md)
