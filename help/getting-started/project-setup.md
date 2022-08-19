@@ -3,9 +3,9 @@ title: Einrichten des Projekts
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1432'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -16,16 +16,16 @@ Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager ver
 
 ## Ändern vorhandener Projekte {#modifying-project-setup-details}
 
-Vorhandene AEM müssen einige Grundregeln einhalten, damit sie erfolgreich mit Cloud Manager erstellt und bereitgestellt werden können.
+Vorhandene AEM-Projekte müssen einige Grundregeln einhalten, damit sie erfolgreich mit Cloud Manager erstellt und bereitgestellt werden können.
 
 * Projekte müssen mit Apache Maven erstellt werden.
-* Es muss eine `pom.xml` im Stammverzeichnis des Git-Repositorys.
-   * Diese `pom.xml` -Datei kann beliebig viele Untermodule (die wiederum weitere Untermodule enthalten können) enthalten.
+* Im Stammverzeichnis des Git-Repositorys muss eine `pom.xml`-Datei vorhanden sein.
+   * Diese `pom.xml`-Datei kann auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.).
    * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren `pom.xml`-Dateien hinzufügen.
    * Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
-* Bereitstellbare Inhaltspakete werden erkannt, indem nach .zip-Dateien des Inhaltspakets in einem Verzeichnis mit dem Namen gesucht wird. `target`.
+* Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im .zip-Format suchen, die in einem Verzeichnis mit dem Namen `target` enthalten sind.
    * Eine beliebige Anzahl von Untermodulen kann Inhaltspakete produzieren.
-* Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach `zip` Dateien enthielten Unterverzeichnisse von `target` benannt `conf` und `conf.d`.
+* Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach `zip`-Dateien suchen, die Unterverzeichnisse von `target` mit den Namen `conf` und `conf.d` enthalten.
 * Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketimplementierungen nicht garantiert.
 * Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden.
 * Pakete können bei der Implementierung [übersprungen](#skipping-content-packages) werden.
@@ -34,7 +34,7 @@ Vorhandene AEM müssen einige Grundregeln einhalten, damit sie erfolgreich mit C
 
 In einigen wenigen Fällen müssen Sie den Build-Prozess möglicherweise etwas anders gestalten, wenn er in Cloud Manager und auf Entwickler-Workstations ausgeführt wird. In diesen Fällen können Sie mit [Maven-Profilen](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) definieren, wie der Build in verschiedenen Umgebungen (einschließlich Cloud Manager) abweichen soll.
 
-Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung sollte durch Suchen nach `CM_BUILD` [Umgebungsvariable](/help/getting-started/build-environment.md#environment-variables) Umgebungsvariable. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
+Die Aktivierung eines Maven-Profils in der Cloud Manager-Build-Umgebung sollte durch die Suche nach der [Umgebungsvariablen](/help/getting-started/build-environment.md#environment-variables) `CM_BUILD` erfolgen. Beim Erstellen eines Profils, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, sollte hingegen das Nichtvorhandensein dieser Variable verifiziert werden.
 
 Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn der Build innerhalb von Cloud Manager ausgeführt wird, verwenden Sie Folgendes:
 
@@ -110,19 +110,19 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
 
 ## Unterstützung für kennwortgeschütztes Maven-Repository {#password-protected-maven-repositories}
 
-Artefakte aus einem kennwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, nicht alle Qualitätsregeln durchläuft, die in den Quality Gates von Cloud Manager implementiert sind. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquell-Code bereitzustellen.
+Artefakte aus einem passwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht die Quality Gates von in Cloud Manager implementierenten Qualitätsregeln durchläuft. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquell-Code bereitzustellen.
 
 >[!TIP]
 >
->Artefakte aus kennwortgeschützten Maven-Repositorys sollten nur in seltenen Fällen und für Code verwendet werden, der nicht an AEM gebunden ist.
+>Artefakte aus passwortgeschützten Maven-Repositorys sollten nur in seltenen Fällen und für Code verwendet werden, der nicht an AEM gebunden ist.
 
-Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/getting-started/build-environment.md#pipeline-variables) an und verweisen Sie dann in einer Datei im git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei.](https://maven.apache.org/settings.html)
+Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/getting-started/build-environment.md#pipeline-variables) an und verweisen Sie dann in einer Datei im Git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html).
 
 Wenn der Build-Vorgang von Cloud Manager gestartet wird, wird das `<servers>`-Element in dieser Datei mit der von Cloud Manager bereitgestellten `settings.xml`-Standarddatei zusammengeführt. Server-IDs, die mit `adobe` und `cloud-manager` beginnen, gelten als reserviert und sollten nicht von kundenspezifischen Servern verwendet werden. Server-IDs, die nicht mit einem dieser Präfixe oder der Standard-ID `central` übereinstimmen, werden von Cloud Manager niemals gespiegelt.
 
-Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb einer `<repository>` und/oder `<pluginRepository>` -Element innerhalb des `pom.xml` -Datei. Im Allgemeinen wären diese `<repository>`- und/oder `<pluginRepository>`-Elemente in einem [Cloud Manager-spezifischen Profil](#activating-maven-profiles-in-cloud-manager) enthalten, auch wenn dies nicht unbedingt erforderlich ist.
+Wenn diese Datei vorhanden ist, wird die Server-ID von innerhalb eines `<repository>`- und/oder `<pluginRepository>`-Elements in der `pom.xml`-Datei referenziert. Im Allgemeinen wären diese `<repository>`- und/oder `<pluginRepository>`-Elemente in einem [Cloud Manager-spezifischen Profil](#activating-maven-profiles-in-cloud-manager) enthalten, auch wenn dies nicht unbedingt erforderlich ist.
 
-Nehmen wir als Beispiel an, dass sich das Repository unter `https://repository.myco.com/maven2`, sollte der Benutzername, den Cloud Manager verwenden sollte, lautet `cloudmanager` und das Kennwort lautet `secretword`.
+Beispiel: Das Repository befindet sich unter `https://repository.myco.com/maven2`, der von Cloud Manager zu verwendende Benutzername lautet `cloudmanager` und das Passwort lautet `secretword`.
 
 Legen Sie zunächst in der Pipeline das Kennwort als Geheimnis fest:
 
@@ -193,7 +193,7 @@ Verweisen Sie schließlich auf die Server-ID in der `pom.xml`-Datei:
 
 Es empfiehlt sich, die Java-Quellen zusammen mit der Binärdatei in einem Maven-Repository bereitzustellen.
 
-Konfigurieren Sie die `maven-source-plugin` in Ihrem Projekt:
+Konfigurieren Sie das `maven-source-plugin` in Ihrem Projekt.
 
 ```xml
         <plugin>
@@ -212,9 +212,9 @@ Konfigurieren Sie die `maven-source-plugin` in Ihrem Projekt:
 
 ### Bereitstellen von Projektquellen {#deploying-project-sources}
 
-Es empfiehlt sich, die gesamte Projektquelle zusammen mit der Binärdatei in einem Maven-Repository bereitzustellen. Dadurch kann das genaue Artefakt neu erstellt werden.
+Es empfiehlt sich, die gesamte Projekt-Quelle zusammen mit der Binärdatei in einem Maven-Repository bereitzustellen. Dadurch kann das genaue Artefakt neu erstellt werden.
 
-Konfigurieren Sie die `maven-assembly-plugin` in Ihrem Projekt:
+Konfigurieren Sie das `maven-assembly-plugin` in Ihrem Projekt.
 
 ```xml
         <plugin>
@@ -241,7 +241,7 @@ Konfigurieren Sie die `maven-assembly-plugin` in Ihrem Projekt:
 
 In Cloud Manager können Builds eine beliebige Anzahl von Inhaltspaketen generieren. Aus vielerlei Gründen kann es sinnvoll sein, ein Inhaltspaket zu erstellen, es jedoch nicht bereitzustellen. Dies kann nützlich sein, etwa für Inhaltspakete, die nur zum Testen erstellt wurden, oder für Pakete, die in einem anderen Schritt im Build-Prozess (also als Unterpaket eines anderen Pakets) neu verpackt werden.
 
-Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschaften erstellter Inhaltspakete nach einer Eigenschaft namens `cloudManagerTarget`. Wenn diese Eigenschaft auf `none`, wird das Paket übersprungen und nicht bereitgestellt. Der Mechanismus zum Festlegen dieser Eigenschaft hängt davon ab, wie der Build das Inhaltspaket erzeugt. Beispiel: mit dem `filevault-maven-plugin` Sie würden das Plug-in wie folgt konfigurieren:
+Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschaften erstellter Inhaltspakete nach einer Eigenschaft namens `cloudManagerTarget`. Wenn diese Eigenschaft auf `none` festgelegt ist, wird das Paket übersprungen und nicht bereitgestellt. Der Mechanismus zum Festlegen dieser Eigenschaft hängt davon ab, wie der Build das Inhaltspaket erzeugt. Mit dem `filevault-maven-plugin` würden Sie beispielsweise das Plug-in wie folgt konfigurieren:
 
 ```xml
         <plugin>
@@ -257,7 +257,7 @@ Um diese Szenarien zu berücksichtigen, sucht Cloud Manager in den Eigenschafte
         </plugin>
 ```
 
-Mit dem `content-package-maven-plugin` ist ähnlich:
+Mit dem `content-package-maven-plugin` ist es ähnlich:
 
 ```xml
         <plugin>
@@ -305,7 +305,7 @@ Beachten Sie, dass Ihr Programm über zwei Entwicklungs-Pipelines verfügt:
 Beide Verzweigungen befinden sich auf derselben Commit-ID.
 
 1. Wenn Sie zuerst Pipeline 1 ausführen, werden die Pakete normal erstellt.
-1. Wenn Sie dann die Pipeline 2 ausführen, werden die von Pipeline 1 erstellten Pakete wiederverwendet.
+1. Wenn Sie dann Pipeline 2 ausführen, werden von Pipeline 1 erstellte Pakete wiederverwendet.
 
 #### Beispiel 2 {#example-2}
 
@@ -343,4 +343,4 @@ Falls gewünscht, kann das Wiederverwendungsverhalten für bestimmte Pipelines d
 
 ## Entwickeln von Code basierend auf Best Practices {#develop-your-code-based-on-best-practices}
 
-Die Entwicklungs- und Beratungs-Teams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html) zusammengestellt.
+Die Entwicklungs- und Beratungs-Teams von Adobe haben einen [umfassenden Satz an Best Practices für AEM-Entwickler](https://experienceleague.adobe.com/docs/experience-manager-65/developing/bestpractices/best-practices.html?lang=de) zusammengestellt.
