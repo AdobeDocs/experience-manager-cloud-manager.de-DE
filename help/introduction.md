@@ -3,9 +3,9 @@ title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 14e35882765783b234ca35da14257279af5130a0
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1311'
-ht-degree: 57%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und
 >
 >Auf dieser Dokumentations-Website werden speziell die Funktionen von Cloud Manager beschrieben, die für Kunden von Adobe Managed Services (AMS) relevant sind.
 >
->Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie in der [Dokumentation zu AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html).
+>Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie in der [Dokumentation zu AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html?lang=de).
 
 Mit Cloud Manager profitiert Ihr Entwicklungs-Team von den folgenden Funktionen:
 
@@ -39,7 +39,7 @@ Mit Cloud Manager profitiert Ihr Entwicklungs-Team von den folgenden Funktionen:
 
 * API-Konnektivität zur Ergänzung vorhandener DevOps-Prozesse
 
-* Automatische Skalierung, die intelligent erkennt, dass eine höhere Kapazität erforderlich ist, und automatisch zusätzliche Dispatcher-/Publishing-Segmente online stellt
+* Automatische Skalierungsfunktion zur intelligenten Erkennung eines erhöhten Kapazitätsbedarfs und automatischen Online-Bereitstellung zusätzlicher Dispatcher-/Publishing-Segmente
 
 Die folgende Abbildung zeigt den CI/CD-Prozessfluss, wie er in [!UICONTROL Cloud Manager] verwendet wird:
 
@@ -77,57 +77,57 @@ Weitere Informationen zum Bereitstellen von Code und zu Qualitätsprüfungen fin
 
 ## Optionale Funktionen in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager bietet zusätzliche erweiterte Funktionen, die je nach Einrichtung und Anforderungen Ihrer Umgebung für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an Ihren Customer Success Engineer (CSE) oder an einen Adobe Support-Mitarbeiter, um weitere Informationen zu erhalten.
+Cloud Manager bietet zusätzliche erweiterte Funktionen, die je nach Einrichtung und Anforderungen Ihrer Umgebung für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an Ihren Customer Success Engineer (CSE) oder an einen Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
 
 ### Automatische Skalierung {#autoscaling}
 
-Wenn die Produktionsumgebung ungewöhnlich stark ausgelastet ist, [!UICONTROL Cloud Manager] erkennt den Bedarf an zusätzlicher Kapazität und bringt automatisch zusätzliche Kapazität über seine Funktion zur automatischen Skalierung online.
+Wenn die Produktionsumgebung ungewöhnlich stark ausgelastet ist, erkennt [!UICONTROL Cloud Manager] den Bedarf an zusätzlicher Kapazität und stellt mit seiner Funktion zur automatischen Skalierung automatisch zusätzliche Kapazität online bereit.
 
-In einem solchen Fall löst [!UICONTROL Cloud Manager] automatisch die Skalierung aus, sendet eine Benachrichtigung über die automatische Skalierung und schaltet die zusätzliche Kapazität innerhalb von Minuten aktiv. Die zusätzliche Kapazität wird in der Produktionsumgebung bereitgestellt, in denselben Regionen und entsprechend den Systemspezifikationen wie die laufenden Dispatcher-/Veröffentlichungsknoten.
+In einem solchen Fall löst [!UICONTROL Cloud Manager] automatisch die Skalierung aus, sendet eine Benachrichtigung über die automatische Skalierung und macht die zusätzliche Kapazität innerhalb von Minuten online verfügbar. Die zusätzliche Kapazität wird in der Produktionsumgebung bereitgestellt, und zwar in denselben Regionen und mit denselben Systemspezifikationen wie in laufenden Dispatcher-/Publishing-Knoten.
 
-Die Funktion zur automatischen Skalierung gilt nur für die Dispatcher-/Veröffentlichungsstufe und wird mit einer horizontalen Skalierungsmethode ausgeführt, wobei mindestens ein zusätzliches Segment eines Dispatcher-/Publishing-Paares bis zu maximal zehn Segmenten verwendet wird. Jede zusätzlich bereitgestellte Kapazität wird innerhalb von zehn Arbeitstagen, wie vom CSE (Customer Success Engineer) bestimmt, manuell zurückgenommen.
+Die Funktion zur automatischen Skalierung gilt nur für die Dispatcher-/Publishing-Ebene und wird immer mit einer horizontalen Skalierungsmethode durchgeführt, wobei mindestens ein zusätzliches Segment als Dispatcher-/Publishing-Paar hinzugefügt wird und maximal zehn Segmente verwendet werden. Jede zusätzlich bereitgestellte Kapazität wird innerhalb von zehn Arbeitstagen, wie vom CSE (Customer Success Engineer) festgelegt, manuell skaliert.
 
 >[!NOTE]
 >
->Wenn Sie herausfinden möchten, ob die automatische Skalierung für Ihre Anwendung geeignet ist, wenden Sie sich an Ihren CSE oder einen Adobe-Support-Mitarbeiter.
+>Wenn Sie herausfinden möchten, ob die automatische Skalierung für Ihr Programm geeignet ist, wenden Sie sich an Ihren CSE oder an die Adobe-Support-Mitarbeitenden.
 
 ### Blau/Grün-Implementierungen {#blue-green}
 
-Eine Blau/Grün-Implementierung ist eine Technik, die Ausfallzeiten und Risiken reduziert, indem zwei identische Produktionsumgebungen namens Blau und Grün ausgeführt werden.
+Eine Blau/Grün-Implementierung ist eine Technik, die Ausfallzeiten und Risiken reduziert, indem zwei identische Produktionsumgebungen namens „Blau“ und „Grün“ ausgeführt werden.
 
-Es ist immer nur eine der Umgebungen aktiv, wobei die Live-Umgebung den gesamten Produktions-Traffic bereitstellt. Im Allgemeinen ist Blau die derzeit aktive Umgebung und Grün ist inaktiv.
+Es ist immer nur eine der Umgebungen aktiv, wobei der gesamte Produktions-Traffic über die Live-Umgebung läuft. Generell ist Blau die derzeit aktive Umgebung und Grün ist inaktiv.
 
-* Eine blaue/grüne Implementierung ist ein Add-on zu CI/CD-Pipelines von Cloud Manager, in dem eine zweite Reihe von Veröffentlichungs- und Dispatcher-Instanzen (grün) erstellt und für Bereitstellungen verwendet wird. Die grünen Instanzen werden dann an den Produktionslastausgleich angehängt und die alten Instanzen (blau) werden entfernt und beendet.
-* Diese Implementierung von blau/grün behandelt Instanzen als transient und jede Iteration einer blauen/grünen Pipeline erstellt einen neuen Satz von Veröffentlichungs- und Dispatcher-Servern.
-* Im Rahmen der Einrichtung wird ein grüner Lastenausgleich erstellt. Dieser Lastenausgleich ändert sich nie und sollte auf Ihre grüne oder &quot;Test&quot;-URL verweisen.
-* Bei einer blauen/grünen Implementierung wird eine exakte Replikation der vorhandenen Veröffentlichungs-/Dispatcher-Ebenen erstellt.
+* Eine Blau/Grün-Implementierung ist ein Add-on zu CI/CD-Pipelines von Cloud Manager, bei der ein zweiter Satz an Publishing- und Dispatcher-Instanzen (grün) erstellt und für Bereitstellungen verwendet wird. Die grünen Instanzen werden dann an den Produktionslastenausgleich angehängt und die alten Instanzen (blau) werden entfernt und beendet.
+* Diese Blau/Grün-Implementierung behandelt Instanzen als transient und jede Iteration einer Blau/Grün-Pipeline erstellt einen neuen Satz von Publishing- und Dispatcher-Servern.
+* Im Rahmen der Einrichtung wird ein grüner Lastenausgleich erstellt. Dieser Lastenausgleich ändert sich nie und sollte auf Ihre grüne „Test“-URL verweisen.
+* Bei einer Blau/Grün-Implementierung wird eine exakte Replikation der vorhandenen Publishing-/Dispatcher-Ebenen erstellt.
 
 #### Blau/Grün-Implementierungsfluss {#flow}
 
-Wenn die Blau/Grün-Implementierung aktiviert ist, unterscheidet sich der Bereitstellungsfluss vom standardmäßigen Cloud Service-Bereitstellungsfluss.
+Wenn die Blau/Grün-Implementierung aktiviert ist, unterscheidet sich der Bereitstellungsfluss vom standardmäßigen Cloud-Service-Bereitstellungsfluss.
 
-| Schritt | Blau/Grün-Implementierung | Standardbereitstellung |
+| Schritt | Blau/Grün-Implementierung | Standard-Implementierung |
 |---|---|---|
-| 1 | Bereitstellung für Autor | Bereitstellung für Autor |
-| 2 | Testen pausieren | - |
-| 3 | Grüne Infrastruktur geschaffen | - |
-| 4 | Implementierung in grüne Veröffentlichungs-/Dispatcher-Ebenen | Bereitstellung für Publisher |
-| 5 | Anhalten für Tests (bis zu 24 Stunden) | - |
-| 6 | Die grüne Infrastruktur wird zum Produktionslastausgleich hinzugefügt | - |
-| 7 | Die blaue Infrastruktur wird aus dem Produktionslastausgleich entfernt. |
+| 1 | Implementierung für Autor | Implementierung für Autor |
+| 2 | Zum Testen pausieren | - |
+| 3 | Grün-Infrastruktur erstellt | - |
+| 4 | Implementierung in grüne Publishing-/Dispatcher-Ebenen | Implementierung für Publisher |
+| 5 | Zum Testen pausieren (bis zu 24 Stunden) | - |
+| 6 | Die grüne Infrastruktur wird zum Produktionslastenausgleich hinzugefügt. | - |
+| 7 | Die blaue Infrastruktur wird aus dem Produktionslastenausgleich entfernt. |
 | 8 | Blaue Infrastruktur wird automatisch beendet | - |
 
 #### Implementieren von Blau/Grün {#implementing}
 
-Alle AMS-Benutzer, die Cloud Manager für Produktionsbereitstellungen verwenden, können eine blaue/grüne Implementierung verwenden. Die Verwendung einer blauen/grünen Implementierung erfordert jedoch eine zusätzliche Validierung Ihrer Umgebungen und die Einrichtung durch einen Adobe-CSE.
+Alle AMS-Benutzer, die Cloud Manager für Produktionsimplementierungen verwenden, können eine Blau/Grün-Implementierung verwenden. Die Verwendung einer Blau/Grün-Implementierung erfordert jedoch eine zusätzliche Validierung Ihrer Umgebungen und die Einrichtung durch einen Adobe CSE.
 
-Wenn Sie an einer blauen/grünen Implementierung interessiert sind, beachten Sie die folgenden Anforderungen und Einschränkungen und kontaktieren Sie Ihren CSE.
+Wenn Sie an einer Blau/Grün-Implementierung interessiert sind, beachten Sie die folgenden Anforderungen und Einschränkungen und wenden Sie sich an Ihren CSE.
 
 #### Anforderungen und Einschränkungen {#limitations}
 
-* Blau/Grün ist nur für Veröffentlichungs-/Dispatcher-Paare verfügbar.
-* Vorschau-Dispatcher-/Veröffentlichungspaare sind nicht Teil von blauen/grünen Implementierungen.
-* Jedes Dispatcher-/Veröffentlichungspaar ist mit jedem anderen Dispatcher-/Veröffentlichungspaar identisch.
+* Blau/Grün ist nur für Publishing-/Dispatcher-Paare verfügbar.
+* Vorschau-Dispatcher-/Publishing-Paare sind nicht Teil von Blau/Grün-Implementierungen.
+* Jedes Dispatcher-/Publisher-Paar ist mit jedem anderen Dispatcher-/Publisher-Paar identisch.
 * Blau/Grün ist nur in der Produktionsumgebung verfügbar.
-* Blau/Grün ist in AWS sowie Azure verfügbar.
+* Blau/Grün ist in AWS sowie in Azure verfügbar.
 * Blau/Grün steht nur Kunden von Assets zur Verfügung.
