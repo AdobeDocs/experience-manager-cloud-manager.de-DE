@@ -4,16 +4,16 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2022.8.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '154'
-ht-degree: 50%
+ht-degree: 100%
 
 ---
 
 
 # Versionshinweise für Cloud Manager Version 2022.8.0 {#release-notes}
 
-Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.8.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.8.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,14 +21,14 @@ Auf dieser Seite werden die Versionshinweise für [!UICONTROL Cloud Manager] Ver
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.8.0 ist der 11. August 2022. Die nächste Version ist für den 9. September 2022 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.8.0 ist der 11. August 2022. Die nächste Version wird am 9. September 2022 veröffentlicht.
 
 ## Neue Funktionen {#what-is-new}
 
-* Unter bestimmten Szenarien trägt ein stummer Wiederholungsmechanismus dazu bei sicherzustellen, dass die Bereitstellungs-Pipeline keinen Fehlerstatus erzeugt.
-* [Der AEM Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) wurde auf Version 37 aktualisiert.
+* In bestimmten Szenarien trägt ein stummer Wiederholungsmechanismus dazu bei, sicherzustellen, dass die Implementierungs-Pipeline keinen Fehlerstatus erzeugt.
+* Der in Cloud Manager enthaltene [AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) wurde auf Version 37 aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Bestimmte Fälle von seltenen Fehlern bei der Repository-Erstellung wurden widerstandsfähiger gemacht.
-* Seltene Vorkommnisse von Fehlern beim Einrichten der VSTS-Organisation werden jetzt durch Neuversuche reduziert.
+* Bestimmte Fälle von seltenen Fehlern bei der Repository-Erstellung sind nun stabiler.
+* Selten vorkommende Fehler beim Einrichten der VSTS-Organisation werden jetzt durch die Einführung der weiteren Zustellversuche reduziert.
