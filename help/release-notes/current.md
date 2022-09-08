@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2022.8.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.8.0.
+title: Versionshinweise für 2022.9.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.9.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1c4fe7407dc059773cfd0c1779a11c1ba1acad22
-workflow-type: ht
-source-wordcount: '154'
-ht-degree: 100%
+source-git-commit: e74d386d0b2d50a7e276bb7ead7594ef448742ae
+workflow-type: tm+mt
+source-wordcount: '200'
+ht-degree: 35%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.8.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2022.9.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.8.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.9.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,14 +21,16 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.8.0 ist der 11. August 2022. Die nächste Version wird am 9. September 2022 veröffentlicht.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.9.0 wurde am 8. September 2022 veröffentlicht. Die nächste Version ist für den 6. Oktober 2022 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* In bestimmten Szenarien trägt ein stummer Wiederholungsmechanismus dazu bei, sicherzustellen, dass die Implementierungs-Pipeline keinen Fehlerstatus erzeugt.
-* Der in Cloud Manager enthaltene [AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) wurde auf Version 37 aktualisiert.
+* Cloud Manager-Unterstützung für die horizontale automatische Skalierung mehrerer Regionen.
+* Die neue Karte Begrüßungsseite wurde für Benutzer angepasst, die nur über eine Cloud Manager-Benutzerrolle verfügen und sie bei der Navigation zu AEM Umgebungen und beim eingeschränkten Programmzugriff beraten.
+* Kunden ohne Cloud Manager-Rolle können nicht auf Programmdetails zugreifen. Sie können jedoch von der CM-Landingpage aus zu den Autoren-Endpunkten navigieren.
+* Beseitigen Sie Pipelinefehler, die durch Wiederholungsfehler verursacht werden, die durch eine größere Ausfallsicherheit erzielt wurden.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Bestimmte Fälle von seltenen Fehlern bei der Repository-Erstellung sind nun stabiler.
-* Selten vorkommende Fehler beim Einrichten der VSTS-Organisation werden jetzt durch die Einführung der weiteren Zustellversuche reduziert.
+* Verbessertes Kunden-Feedback im Zusammenhang mit der Erstellung AEM App, wenn Maven mit Verbindungsproblemen zu privaten Berichten konfrontiert ist.
+* In seltenen Fällen wird kein Ereignis im automatischen Maßstab ausgelöst, wenn das Konsistenzprüfungssystem keinen gültigen Konsistenzwert abrufen kann.
