@@ -5,7 +5,7 @@ exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
 workflow-type: tm+mt
 source-wordcount: '261'
-ht-degree: 66%
+ht-degree: 71%
 
 ---
 
@@ -20,7 +20,7 @@ Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingeri
 
 ## Anmeldung beim ersten Mal {#logging-in-for-the-first-time}
 
-1. Bei Adobe anmelden [!UICONTROL Experience Cloud] und Sie sehen die Liste der Programme.
+1. Melden Sie sich bei Adobe [!UICONTROL Experience Cloud] an, und Sie sehen die Liste der Programme.
 
 1. Wählen Sie das Programm aus.
 
