@@ -3,9 +3,9 @@ title: Erste Anmeldung
 description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die allgemeine Konfiguration eingerichtet haben und für die erste Verwendung von Cloud Manager bereit sind.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '261'
-ht-degree: 71%
+ht-degree: 100%
 
 ---
 
@@ -42,4 +42,4 @@ Cloud Manager bietet einen Überblick über die Aktivitäten eines Programms, in
 
 >[!NOTE]
 >
->Standardmäßig hat ein Benutzer mit Zugriff auf eine AEM Umgebung auch die Benutzerrolle &quot;Cloud Manager&quot;. Diese Rolle an sich reicht nicht aus, um dem Benutzer Zugriff auf die Programmdetails zu gewähren. Ein Benutzer mit nur Cloud Manager-Benutzerrolle kann über die Programmmenüoptionen zur Autoren-URL der AEM Umgebung navigieren (sofern Umgebungen vorhanden). Diese Benutzer müssen sich an ihren Administrator wenden, wenn sie Zugriff auf Programmebene erhalten möchten.
+>Standardmäßig hat ein Benutzer oder eine Benutzerin mit Zugriff auf eine AEM-Umgebung auch eine Cloud Manager-Benutzerrolle. Diese Rolle an sich reicht nicht aus, um der Person Zugriff auf die Programm-Detailansicht zu gewähren. Ein solcher Benutzer oder eine solche Benutzerin, der oder die nur die Cloud Manager-Benutzerrolle hat, kann über die Menüoptionen des Programms zur Autoren-URL der AEM-Umgebung navigieren (sofern Umgebungen vorhanden sind). Diese Benutzer und Benutzerinnen müssen sich an ihre Admins wenden, wenn sie Zugriff auf Programmebene erhalten möchten.
