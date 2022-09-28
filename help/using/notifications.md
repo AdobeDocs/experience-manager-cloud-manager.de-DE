@@ -2,7 +2,7 @@
 title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 804b537bbd61105a92b42960d44ecedabfb13099
+source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
 source-wordcount: '573'
 ht-degree: 24%
@@ -82,7 +82,7 @@ Sie können das Verhalten der Warnhinweise definieren.
 * **Warnhinweise sollten auf dem Bildschirm bleiben, bis ich sie schließe** - Steuert, ob die Warnhinweise bestehen bleiben sollen, wenn Sie sie nicht aktiv verwerfen
 * **Dauer** - Definiert, wie lange der Warnhinweis auf dem Bildschirm bleiben soll, wenn Sie nicht ausgewählt haben, dass er auf dem Bildschirm angezeigt werden soll.
 
-## E-Mails {#emails}
+### E-Mails {#emails}
 
 Benachrichtigungen sind in der gesamten Adobe in der Web-Benutzeroberfläche verfügbar [!UICONTROL Experience Cloud] Lösungen. Sie können sich auch dafür entscheiden, dass diese Benachrichtigungen per E-Mail im **E-Mails** Abschnitt.
 
