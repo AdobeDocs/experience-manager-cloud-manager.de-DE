@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2022.10.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 69c1c8a1136c037a5eea635a75f2d4d187f2ac4d
-workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+workflow-type: ht
+source-wordcount: '124'
+ht-degree: 100%
 
 ---
 
@@ -25,8 +25,8 @@ Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.10.0 is
 
 ## Neue Funktionen {#what-is-new}
 
-* Die Version der [AEM Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de) Die von Cloud Manager verwendete Version wurde auf Version 39 aktualisiert.
+* Die vom Cloud Manager verwendete [AEM-Projektarchetyp](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/developing/archetype/overview.html?lang=de)-Version wurde auf Version 39 aktualisiert.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Die Zuverlässigkeit von Assets-Leistungstests wurde durch das Hinzufügen von Wiederholungsversuchen unter bestimmten Bedingungen verbessert.
+* Die Zuverlässigkeit von Assets-Leistungstests wurde durch das Hinzufügen von weiteren Zustellversuchen unter bestimmten Bedingungen verbessert.
