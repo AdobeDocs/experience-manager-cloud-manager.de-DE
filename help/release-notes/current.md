@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für  2022.11.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.11.0.
+title: Versionshinweise für  2022.12.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2022.12.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 2defbdbee0221540f66f7d824ccf1bd33179c9d9
+source-git-commit: 83a404c1f54bc6a791a4c13a22b7a78f83755869
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '120'
 ht-degree: 58%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.11.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2022.12.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.11.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.12.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,12 +21,13 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.11.0 ist der 3. November 2022. Die nächste Version ist für den 29. November 2022 geplant.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.12.0 ist der 29. November 2022. Die nächste Version ist für den 19. Januar 2023 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Wenn eine mit einer Pipeline verknüpfte Umgebung einen Status aufweist, der die Ausführung der Pipeline nicht zulässt, wird die Ausführungsaktion mit einer erläuternden QuickInfo deaktiviert.
+* Automatische Skalierung für mehrere Regionen ist jetzt verfügbar. Es können bestimmte Einschränkungen gelten.
+* Verbesserung der Verfügbarkeit und Zuverlässigkeit von [Cloud Manager-Pipelines](/help/overview/ci-cd-pipelines.md) wurden hergestellt.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Das Feedback während der Bearbeitungs-Produktions-Pipeline wurde verbessert, um unregelmäßige Vorkommen einer oder mehrerer fehlender Umgebungen zu erfassen.
+* Es wurde eine Änderung vorgenommen, um eine `PATCH /program//environment//variables` -Anfrage für -Umgebungen mit der `FAILED` Status.
