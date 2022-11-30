@@ -3,10 +3,10 @@ title: Versionshinweise für  2022.12.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2022.12.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5c97e8bfa30ed6bbbaf361e5d3987aa2a0bf5b13
+source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 64%
+source-wordcount: '124'
+ht-degree: 54%
 
 ---
 
@@ -26,4 +26,5 @@ Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2022.12.0 is
 ## Neue Funktionen {#what-is-new}
 
 * Automatische Skalierung für mehrere Regionen ist jetzt verfügbar. Es können bestimmte Einschränkungen gelten.
+   * Diese Änderung wird in den vier bis sechs Wochen nach der Veröffentlichung von 2022.12.0 schrittweise eingeführt.
 * Verbesserung der Verfügbarkeit und Zuverlässigkeit von [Cloud Manager-Pipelines](/help/overview/ci-cd-pipelines.md) wurden hergestellt.
