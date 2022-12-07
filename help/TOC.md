@@ -63,7 +63,7 @@ ht-degree: 100%
 + Versionshinweise {#release-notes}
    + [Aktuelle Versionshinweise](release-notes/current.md)
    + 2022 {#2022}
-      + [Versionshinweise für  2022.11.0](release-notes/2022/2022-11-0.md)
+      + [Versionshinweise für 2022.11.0](release-notes/2022/2022-11-0.md)
       + [Versionshinweise für 2022.10.0](release-notes/2022/2022-10-0.md)
       + [Versionshinweise für 2022.9.0](release-notes/2022/2022-9-0.md)
       + [Versionshinweise für 2022.8.0](release-notes/2022/2022-8-0.md)
