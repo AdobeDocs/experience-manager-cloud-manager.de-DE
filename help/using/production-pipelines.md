@@ -3,9 +3,9 @@ title: Konfigurieren von Produktions-Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 39b38da17ed1cadf4f2e9633a9e76b537325316f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1302'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -94,8 +94,8 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
             1. Geben Sie unter **PATH** einen Pfad für den Inhalt an.
             1. Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.
 
-               * **Leeren** - Führen Sie einen Cache-Löschvorgang durch.
-               * **Ungültigmachen** - Führen Sie eine Cache-Invalidierung durch, ähnlich wie bei der Aktivierung von Inhalten von einer Authoring-Instanz zu einer Publishing-Instanz.
+               * **Leeren**: Löschen des Cache-Inhalts.
+               * **Invalidieren**: Eine Cache-Invalidierung durchführen, ähnlich wie bei der Aktivierung von Inhalten von einer Autoreninstanz auf einer Veröffentlichungsinstanz.
             1. Klicken Sie auf **Pfad hinzufügen**, um den angegebenen Pfad hinzuzufügen. Sie können bis zu 100 Pfade pro Umgebung hinzufügen.
 
          ![Dispatcherkonfiguration](/help/assets/configure-pipelines/dispatcher-stage.png)
