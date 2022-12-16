@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
 workflow-type: tm+mt
 source-wordcount: '124'
-ht-degree: 62%
+ht-degree: 100%
 
 ---
 
@@ -21,10 +21,10 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.12.0 ist der 29. November 2022. Die nächste Version ist für den 19. Januar 2023 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.12.0 ist der 29. November 2022. Die nächste Version soll am 19. Januar 2023 veröffentlicht werden.
 
 ## Neue Funktionen {#what-is-new}
 
-* Automatische Skalierung für mehrere Regionen ist jetzt verfügbar. Es können bestimmte Einschränkungen gelten.
-   * Diese Änderung wird in den vier bis sechs Wochen nach der Veröffentlichung von 2022.12.0 schrittweise eingeführt.
-* Verbesserung der Verfügbarkeit und Zuverlässigkeit von [Cloud Manager-Pipelines](/help/overview/ci-cd-pipelines.md) wurden hergestellt.
+* Jetzt ist das automatische Skalieren mehrerer Regionen verfügbar. Es können bestimmte Einschränkungen gelten.
+   * Diese Änderung wird in den vier bis sechs Wochen nach der Freigabe von Version 2022.12.0 schrittweise eingeführt.
+* Die Verfügbarkeit und Zuverlässigkeit von [Cloud Manager-Pipelines](/help/overview/ci-cd-pipelines.md) wurden verbessert.
