@@ -2,10 +2,10 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
-workflow-type: ht
-source-wordcount: '1044'
-ht-degree: 100%
+source-git-commit: 60a6fd062a3878230dafdc34d9ce289ade361120
+workflow-type: tm+mt
+source-wordcount: '1139'
+ht-degree: 91%
 
 ---
 
@@ -127,6 +127,28 @@ Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen 
 | `CM_PROGRAM_ID` | Numerische Programmkennung |
 | `CM_PROGRAM_NAME` | Name des Programms |
 | `ARTIFACTS_VERSION` | Die von Cloud Manager generierte synthetische Version bei einer Staging- oder Produktions-Pipeline |
+
+### Standardverfügbarkeit von Umgebungsvariablen {#availability}
+
+Standard-Umgebungsvariablen können an verschiedenen Stellen verwendet werden.
+
+#### Autoren-, Vorschau- und Veröffentlichungsinstanz {#author-preview-publish}
+
+Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in der Authoring-, Vorschau- und Veröffentlichungsumgebung verwendet werden.
+
+#### Dispatcher {#dispatcher}
+
+Auf dem Dispatcher können nur normale Umgebungsvariablen verwendet werden. Geheimnisse können nicht verwendet werden.
+
+Umgebungsvariablen können jedoch nicht in `IfDefine` Richtlinien.
+
+>[!TIP]
+>
+>Sie sollten Ihre Verwendung von Umgebungsvariablen mit dem [Dispatcher lokal](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) vor der Bereitstellung.
+
+#### OSGi-Konfigurationen {#osgi}
+
+In OSGi-Konfigurationen können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
 
 ### Pipeline-Variablen {#pipeline-variables}
 
