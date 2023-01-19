@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2022.12.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2022.12.0.
+title: Versionshinweise für 2023.1.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2023.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 1fe5fb860da07105ac7e8ce21fce683b238637c1
+source-git-commit: 3e4937fc262016cef5c5c692c06244f411b28c0f
 workflow-type: tm+mt
-source-wordcount: '124'
-ht-degree: 100%
+source-wordcount: '125'
+ht-degree: 68%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2022.12.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2023.1.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2022.12.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.1.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,10 +21,12 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2022.12.0 ist der 29. November 2022. Die nächste Version soll am 19. Januar 2023 veröffentlicht werden.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.1.0 ist der 19. Januar 2023. Die nächste Version soll am 16. Februar 2023 veröffentlicht werden.
 
 ## Neue Funktionen {#what-is-new}
 
-* Jetzt ist das automatische Skalieren mehrerer Regionen verfügbar. Es können bestimmte Einschränkungen gelten.
-   * Diese Änderung wird in den vier bis sechs Wochen nach der Freigabe von Version 2022.12.0 schrittweise eingeführt.
-* Die Verfügbarkeit und Zuverlässigkeit von [Cloud Manager-Pipelines](/help/overview/ci-cd-pipelines.md) wurden verbessert.
+* Verbesserungen der Benutzerfreundlichkeit wurden durch die Aktualisierung von Cursorstilen erreicht, die unterscheiden zwischen dem Ort, an dem Benutzer Aktionen ausführen können, und dem Standardzeiger.
+
+## Fehlerbehebungen {#bug-fixes}
+
+* Cloud Manager verhindert, dass zwei Pipeline-Ausführungen gleichzeitig (oder nahezu gleichzeitig) beginnen, wodurch Pipelinefehler vermieden werden.
