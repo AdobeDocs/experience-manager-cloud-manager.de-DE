@@ -5,7 +5,7 @@ exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
 workflow-type: tm+mt
 source-wordcount: '1152'
-ht-degree: 91%
+ht-degree: 98%
 
 ---
 
@@ -128,11 +128,11 @@ Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen 
 | `CM_PROGRAM_NAME` | Name des Programms |
 | `ARTIFACTS_VERSION` | Die von Cloud Manager generierte synthetische Version bei einer Staging- oder Produktions-Pipeline |
 
-### Standardverfügbarkeit von Umgebungsvariablen {#availability}
+### Verfügbarkeit von Standard-Umgebungsvariablen {#availability}
 
 Standard-Umgebungsvariablen können an verschiedenen Stellen verwendet werden.
 
-#### Autoren-, Vorschau- und Veröffentlichungsinstanz {#author-preview-publish}
+#### Authoring, Vorschau und Veröffentlichung {#author-preview-publish}
 
 Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in der Authoring-, Vorschau- und Veröffentlichungsumgebung verwendet werden.
 
@@ -140,11 +140,11 @@ Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in der Authorin
 
 Nur normale Umgebungsvariablen können mit [den Dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) Geheimnisse können nicht verwendet werden.
 
-Umgebungsvariablen können jedoch nicht in `IfDefine` Richtlinien.
+Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet werden.
 
 >[!TIP]
 >
->Sie sollten Ihre Verwendung von Umgebungsvariablen mit dem [Dispatcher lokal](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html) vor der Bereitstellung.
+>Sie sollten die Verwendung von Umgebungsvariablen [lokal im Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=de) validieren, bevor Sie sie bereitstellen.
 
 #### OSGi-Konfigurationen {#osgi}
 
