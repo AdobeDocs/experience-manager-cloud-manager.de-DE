@@ -1,10 +1,10 @@
 ---
 title: Das Werkzeug "Inhaltskopie"
 description: Mit dem Content Copy-Tool für Cloud Manager können Benutzer veränderliche Inhalte bei Bedarf aus ihren AEM Produktionsumgebungen in niedrigere Umgebungen kopieren, um sie zu Testzwecken zu verwenden.
-source-git-commit: e32e51f7d10e753b7ecb2a63adb36d1b6c90fcc1
+source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
 workflow-type: tm+mt
-source-wordcount: '1040'
-ht-degree: 8%
+source-wordcount: '1017'
+ht-degree: 7%
 
 ---
 
@@ -33,12 +33,7 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Quelle der Wahrheit.
 
 ## Berechtigungen {#permissions}
 
-Um das Werkzeug zum Kopieren von Inhalten zu verwenden, sind bestimmte Berechtigungen sowohl in der Quell- als auch in der Zielumgebung erforderlich.
-
-| Funktion &quot;Inhaltskopie&quot; | In AEM Administratorgruppe? | In der Rolle &quot;Bereitstellungsmanager&quot;? |
-|---|---|---|
-| Erstellen und Ändern [Inhaltssätze](#create-content-set) | Ja | Nein |
-| Starten oder Abbrechen [Content Copy-Prozess](#copy-content) | Ja | Ja |
+Um das Werkzeug zum Kopieren von Inhalten verwenden zu können, muss der Benutzer dem **Bereitstellungsmanager** Rolle in der Quell- und Zielumgebung.
 
 ## Erstellen eines Inhaltssatzes {#create-content-set}
 
