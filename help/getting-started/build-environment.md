@@ -3,9 +3,9 @@ title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1152'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -138,7 +138,7 @@ Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in der Authorin
 
 #### Dispatcher {#dispatcher}
 
-Nur normale Umgebungsvariablen können mit [den Dispatcher.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) Geheimnisse können nicht verwendet werden.
+Nur reguläre Umgebungsvariablen können [mit dem Dispatcher verwendet werden.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) Geheimnisse können nicht verwendet werden.
 
 Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet werden.
 
@@ -148,7 +148,7 @@ Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet 
 
 #### OSGi-Konfigurationen {#osgi}
 
-Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in [OSGi-Konfigurationen.](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de)
+Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in [OSGi-Konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de) verwendet werden.
 
 ### Pipeline-Variablen {#pipeline-variables}
 
