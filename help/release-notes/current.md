@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2023.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: dc534e6339f910014a3edbd684f7b1535079f039
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '164'
-ht-degree: 54%
+ht-degree: 100%
 
 ---
 
@@ -25,10 +25,10 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.1.0 ist
 
 ## Neue Funktionen {#what-is-new}
 
-* Unterstützung für [Self-Service-Inhaltskopie](/help/using/content-copy.md) werden nach dieser Version über einen stufenweisen Rollout zur Verfügung gestellt. Es können bestimmte Einschränkungen gelten.
+* Unterstützung für [Self-Service-Inhaltskopie](/help/using/content-copy.md) wird nach dieser Version über einen stufenweisen Rollout zur Verfügung gestellt. Es können bestimmte Einschränkungen gelten.
 * In Listen mit Umgebungen und Pipeline-Ausführungen können Sie jetzt auf Details zugreifen, indem Sie auf die jeweilige Zeile klicken.
-* Verbesserungen der Benutzerfreundlichkeit wurden durch die Aktualisierung der Cursorstile vorgenommen, die unterscheiden zwischen dem Ort, an dem Benutzer Aktionen ausführen können, und dem Standardzeiger.
+* Die Benutzerfreundlichkeit wurde verbessert, indem die Cursor-Stile aktualisiert wurden, die unterscheiden, wo die Benutzerin oder der Benutzer eine Aktion ausführen kann und wo der Standardzeiger ist.
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Cloud Manager verhindert, dass zwei Pipeline-Ausführungen gleichzeitig (oder nahezu gleichzeitig) beginnen, wodurch Pipelinefehler vermieden werden.
+* Cloud Manager verhindert, dass zwei Pipeline-Ausführungen gleichzeitig (oder nahezu gleichzeitig) beginnen, wodurch Pipeline-Fehler vermieden werden.
