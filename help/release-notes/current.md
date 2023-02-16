@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2023.1.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2023.1.0.
+title: Versionshinweise für 2023.2.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2023.2.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: dc534e6339f910014a3edbd684f7b1535079f039
-workflow-type: ht
-source-wordcount: '164'
+source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
+workflow-type: tm+mt
+source-wordcount: '82'
 ht-degree: 100%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2023.1.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2023.2.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.1.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.2.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,14 +21,4 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.1.0 ist der 19. Januar 2023. Die nächste Version soll am 16. Februar 2023 veröffentlicht werden.
-
-## Neue Funktionen {#what-is-new}
-
-* Unterstützung für [Self-Service-Inhaltskopie](/help/using/content-copy.md) wird nach dieser Version über einen stufenweisen Rollout zur Verfügung gestellt. Es können bestimmte Einschränkungen gelten.
-* In Listen mit Umgebungen und Pipeline-Ausführungen können Sie jetzt auf Details zugreifen, indem Sie auf die jeweilige Zeile klicken.
-* Die Benutzerfreundlichkeit wurde verbessert, indem die Cursor-Stile aktualisiert wurden, die unterscheiden, wo die Benutzerin oder der Benutzer eine Aktion ausführen kann und wo der Standardzeiger ist.
-
-## Fehlerbehebungen {#bug-fixes}
-
-* Cloud Manager verhindert, dass zwei Pipeline-Ausführungen gleichzeitig (oder nahezu gleichzeitig) beginnen, wodurch Pipeline-Fehler vermieden werden.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.1.0 ist der 16. Februar 2023. Die nächste Version soll am 16. März 2023 veröffentlicht werden.
