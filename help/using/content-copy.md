@@ -4,7 +4,7 @@ description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende 
 source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
 workflow-type: tm+mt
 source-wordcount: '1017'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -33,7 +33,7 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
 ## Berechtigungen {#permissions}
 
-Um das Werkzeug zum Kopieren von Inhalten verwenden zu können, muss der Benutzer dem **Bereitstellungsmanager** Rolle in der Quell- und Zielumgebung.
+Um das Werkzeug zum Kopieren von Inhalten verwenden zu können, muss den Benutzenden die Rolle **Bereitstellungs-Manager** in der Quell- und Zielumgebung zugewiesen sein.
 
 ## Erstellen eines Content-Sets {#create-content-set}
 
