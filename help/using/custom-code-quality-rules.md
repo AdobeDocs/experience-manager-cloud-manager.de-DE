@@ -2,10 +2,10 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 5fe0d20d9020e6b90353ef5a54e49c93be5c00be
-workflow-type: ht
-source-wordcount: '3575'
-ht-degree: 100%
+source-git-commit: 611cd8f874e8e0d21a475365f4aceb6ae2565644
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -16,7 +16,7 @@ Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die
 
 >[!NOTE]
 >
->Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. In der [Dokumentation zu den Konzepten von SonarQube](https://docs.sonarqube.org/7.4/user-guide/concepts/) finden Sie weitere Informationen zu den betreffenden Konzepten und Qualitätsregeln.
+>Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. Siehe [Dokumentation zu SonarQube-Konzepten](https://docs.sonarqube.org/latest/) , um mehr über die Konzepte und Qualitätsregeln zu erfahren.
 
 ## SonarQube-Regeln {#sonarqube-rules}
 
@@ -104,7 +104,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * **Schweregrad**: Kritisch
 * **Seit**: Version 2018.6.0
 
-Beim Ausführen von HTTP-Anfragen aus einem AEM-Programm muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert werden, um unnötige Thread-Nutzung zu vermeiden. Leider sind im Java-Standard-HTTP-Client `java.net.HttpUrlConnection` und dem häufig verwendeten Client für Apache-HTTP-Komponenten standardmäßig keine Zeitüberschreitungen festgelegt, sodass diese explizit festgelegt werden müssen. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
+Beim Ausführen von HTTP-Anfragen aus einem AEM-Programm muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert werden, um unnötige Thread-Nutzung zu vermeiden. Leider ist das Standardverhalten des Standard-HTTP-Clients von Java™ `java.net.HttpUrlConnection`, und der häufig verwendete Apache HTTP Components-Client darf nie zu einem Timeout führen. Daher müssen Timeouts explizit festgelegt werden. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
 
 #### Nicht konformer Code {#non-compliant-code-2}
 
@@ -181,7 +181,7 @@ public void orDoThis() {
 
 `ResourceResolver`-Objekte, die aus `ResourceResolverFactory` abgerufen werden, verbrauchen Systemressourcen. Obwohl es Möglichkeiten gibt, diese Ressourcen freizugeben, wenn ein `ResourceResolver` nicht mehr verwendet wird, ist es effizienter, alle offenen `ResourceResolver`-Objekte explizit durch Aufruf der Methode `close()` zu schließen.
 
-Es ist ein verbreiteter Irrtum, dass `ResourceResolver`-Objekte, die mit einer bestehenden JCR-Sitzung erstellt wurden, nicht explizit geschlossen werden sollten, da sonst die zugrunde liegende JCR-Sitzung geschlossen wird. Dies ist nicht der Fall. Gleichgültig, wie ein `ResourceResolver` geöffnet wird, sollte es geschlossen werden, wenn es nicht mehr benötigt wird. Da `ResourceResolver` die `Closeable`-Schnittstelle implementiert, kann auch die Syntax `try-with-resources` statt eines expliziten Aufrufs von `close()` verwendet werden.
+Ein häufiges Missverständnis ist, dass `ResourceResolver` -Objekte, die mit einer vorhandenen JCR-Sitzung erstellt wurden, sollten nicht explizit geschlossen werden oder die zugrunde liegende JCR-Sitzung dadurch geschlossen wird. Dies ist nicht der Fall. Gleichgültig, wie ein `ResourceResolver` geöffnet wird, sollte es geschlossen werden, wenn es nicht mehr benötigt wird. Da `ResourceResolver` die `Closeable`-Schnittstelle implementiert, kann auch die Syntax `try-with-resources` statt eines expliziten Aufrufs von `close()` verwendet werden.
 
 #### Nicht konformer Code {#non-compliant-code-4}
 
@@ -221,7 +221,7 @@ public void orDoThis(Session session) throws Exception {
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
 
-Wie in der [Sling-Dokumentation](http://sling.apache.org/documentation/the-sling-engine/servlets.html) beschrieben, sollten Servlets nicht über Pfade verknüpft werden. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
+Wie in der [Sling-Dokumentation](https://sling.apache.org/documentation/the-sling-engine/servlets.html) beschrieben, sollten Servlets nicht über Pfade verknüpft werden. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
 
 #### Nicht konformer Code {#non-compliant-code-5}
 
@@ -283,7 +283,7 @@ public void orDoThis() throws MyCustomException {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Ein weiteres gängiges Muster, das vermieden werden sollte, ist die Protokollierung einer Nachricht, direkt gefolgt von der Auslösung einer Ausnahme. Dadurch erscheint die Ausnahmemeldung in Protokolldateien meist doppelt.
+Ein weiteres gängiges Muster, das vermieden werden sollte, ist die Protokollierung einer Nachricht, direkt gefolgt von der Auslösung einer Ausnahme. Dies weist im Allgemeinen darauf hin, dass die Ausnahmemeldung in Protokolldateien dupliziert wird.
 
 #### Nicht konformer Code {#non-compliant-code-7}
 
@@ -308,7 +308,7 @@ public void doThis() throws Exception {
 * **Typ**: Code Smell
 * **Schweregrad**: Gering
 
-Im Allgemeinen sollten mit der Protokollierungsstufe INFO wichtige Aktionen abgegrenzt werden. Standardmäßig ist AEM so konfiguriert, dass auf der INFO-Ebene oder höher protokolliert wird. GET- und HEAD-Methoden sollten nur schreibgeschützte Vorgänge sein und stellen daher keine wichtigen Aktionen dar. Die Protokollierung auf INFO-Ebene als Antwort auf GET- oder HEAD-Anfragen füllt das Protokoll wahrscheinlich mit erheblichen Mengen überflüssiger Informationen, sodass es schwieriger wird, nützliche Informationen in Protokolldateien zu finden. Bei der Verarbeitung von GET- oder HEAD-Anfragen sollte die Protokollierung entweder bei einem Fehler auf WARN- oder ERROR-Ebene erfolgen oder auf DEBUG- oder TRACE-Ebene, wenn eine tiefgehendere Fehlerbehebung hilfreich wäre.
+Im Allgemeinen sollten mit der Protokollierungsstufe INFO wichtige Aktionen abgegrenzt werden. Standardmäßig ist AEM so konfiguriert, dass auf der INFO-Ebene oder höher protokolliert wird. GET- und HEAD-Methoden sollten nur schreibgeschützte Vorgänge sein und stellen daher keine wichtigen Aktionen dar. Eine Protokollierung auf INFO-Ebene als Antwort auf GET- oder HEAD-Anfragen füllt das Protokoll wahrscheinlich mit erheblichen Mengen überflüssiger Informationen, sodass es schwieriger wird, nützliche Informationen in Protokolldateien zu finden. Bei der Verarbeitung von GET- oder HEAD-Anfragen sollte bei einem Fehler die Protokollierung entweder auf WARN- oder ERROR-Ebene erfolgen oder auf DEBUG- oder TRACE-Ebene, wenn detailliertere Informationen erforderlich sind.
 
 >[!NOTE]
 >
@@ -337,7 +337,7 @@ public void doGet() throws Exception {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Programmausnahme aufgetreten ist. Während der Kontext auch mit Stacktraces bestimmt werden kann, ist die Protokollmeldung meist besser lesbar und verständlicher. Wenn Sie eine Ausnahme protokollieren, ist es daher nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. Die Ausnahmemeldung enthält Informationen dazu, was nicht funktioniert hat, während die Protokollmeldung dem Protokollleser mitteilt, was das Programm getan hat, als die Ausnahme auftrat. Die Ausnahmemeldung wird weiterhin protokolliert. Wenn Sie Ihre eigene Meldung festlegen, werden die Protokolle verständlicher.
+Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Programmausnahme aufgetreten ist. Obwohl der Kontext auch mit Stacktraces bestimmt werden kann, ist die Protokollmeldung meist besser lesbar und verständlicher. Daher ist es bei der Protokollierung einer Ausnahme nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. Die Ausnahmemeldung enthält Informationen zu Fehlern, während die Protokollmeldung verwendet werden sollte, um Protokoll-Lesenden den Status der Anwendung beim Auftreten der Ausnahme mitzuteilen. Die Ausnahmemeldung wird dennoch protokolliert. Durch die Spezifizierung Ihrer eigenen Nachricht sind die Protokolle leichter verständlich.
 
 #### Nicht konformer Code {#non-compliant-code-9}
 
@@ -370,7 +370,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Wie der schon Name sagt, sollten Java-Ausnahmen immer unter Ausnahmebedingungen verwendet werden. Wenn eine Ausnahme erfasst wird, muss daher sichergestellt sein, dass Protokollmeldungen auf der entsprechenden Ebene – WARN oder ERROR – protokolliert werden. damit diese Meldungen in den Protokollen korrekt angezeigt werden.
+Wie schon der Name sagt, sollten Java™-Ausnahmen immer in Ausnahmefällen verwendet werden. Wenn eine Ausnahme erfasst wird, muss daher sichergestellt sein, dass Protokollmeldungen auf der entsprechenden Ebene – WARN oder ERROR – protokolliert werden. damit diese Meldungen in den Protokollen korrekt angezeigt werden.
 
 #### Nicht konformer Code {#non-compliant-code-10}
 
@@ -403,7 +403,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Kontext ist zum Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von `Exception.printStackTrace()` wird bei der Ausgabe des Standardfehler-Streams nur der Stacktrace ausgegeben, sodass der gesamte Kontext verloren geht. Bei einem Multi-Thread-Programm wie AEM kann es beim parallelen Drucken mehrerer Ausnahmen mit dieser Methode zu einer Überlappung der Stacktraces kommen, was erhebliche Verwirrung verursacht. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
+Kontext ist zum Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von `Exception.printStackTrace()` wird nur der Stacktrace an den Standardfehler-Stream ausgegeben, während der gesamte Kontext verloren geht. Bei einem Multi-Thread-Programm wie AEM kann es beim parallelen Drucken mehrerer Ausnahmen mit dieser Methode zu einer Überlappung der Stacktraces kommen, was erhebliche Verwirrung verursacht. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
 
 #### Nicht konformer Code {#non-compliant-code-11}
 
@@ -436,7 +436,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Die Protokollierung in AEM sollte immer über das Protokollierungs-Framework (SLF4J) erfolgen. Durch die direkte Ausgabe an Standardausgabe- oder Standardfehler-Streams gehen strukturelle und kontextbezogene Informationen verloren, die vom Protokollierungs-Framework bereitgestellt werden. Außerdem kann diese Vorgehensweise in einigen Fällen zu Leistungseinbußen führen.
+Die Protokollierung in AEM sollte immer über das Protokollierungs-Framework (SLF4J) erfolgen. Bei der direkten Ausgabe an die standardmäßigen Ausgabe- oder Standard-Fehlerströme gehen die vom Protokollierungs-Framework bereitgestellten strukturellen und kontextbezogenen Informationen verloren und können manchmal zu Leistungsproblemen führen.
 
 #### Nicht konformer Code {#non-compliant-code-12}
 
@@ -494,9 +494,9 @@ public void doThis(Resource resource) {
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Die Sling-Planung darf nicht für Aufgaben verwendet werden, die eine garantierte Ausführung erfordern. Über Sling geplante Aufträge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
+Verwenden Sie den Sling-Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Vorgänge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
 
-Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Umgebung mit Clustern finden Sie unter [Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
+Siehe [Dokumentation zu Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) , um mehr darüber zu erfahren, wie Sling-Aufträge in Clusterumgebungen verarbeitet werden.
 
 ### Veraltete AEM-APIs sollten nicht verwendet werden {#sonarqube-aem-deprecated}
 
@@ -507,9 +507,9 @@ Weitere Informationen zum Umgang mit Sling-Aufträgen in einer Umgebung mit Clus
 
 Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, von deren Verwendung abgeraten wird und die daher als veraltet gelten.
 
-In vielen Fällen sind diese APIs unter Verwendung der Standard-Java-Annotation *@Deprecated* abgekündigt und als solche durch `squid:CallToDeprecatedMethod` gekennzeichnet.
+Häufig werden diese APIs mit dem Standard-Java™ nicht mehr unterstützt *@Deprecated* -Anmerkung und als solche, wie durch `squid:CallToDeprecatedMethod`.
 
-Es gibt jedoch Fälle, in denen eine API im Kontext von AEM veraltet ist, in anderen Kontexten jedoch nicht. Diese Regel identifiziert diese zweite Klasse.
+Es gibt jedoch Fälle, in denen eine API im Kontext von AEM nicht mehr unterstützt wird, in anderen Kontexten jedoch nicht mehr unterstützt wird. Diese Regel identifiziert diese zweite Gruppe. 
 
 ## OakPAL-Inhaltsregeln {#oakpal-rules}
 
@@ -526,11 +526,11 @@ Im folgenden Abschnitt werden die von Cloud Manager durchgeführten OakPAL-Prüf
 * **Schweregrad**: Kritisch
 * **Seit**: Version 2018.7.0
 
-Die AEM-API enthält Java-Schnittstellen und -Klassen, die durch benutzerdefinierten Code lediglich verwendet, aber nicht implementiert werden sollen. Zum Beispiel ist die Schnittstelle `com.day.cq.wcm.api.Page` nur für die Implementierung durch AEM vorgesehen.
+Die AEM-API enthält Java™-Schnittstellen und -Klassen, die nur für die Verwendung, aber nicht für die Implementierung durch benutzerdefinierten Code vorgesehen sind. Beispielsweise die -Benutzeroberfläche `com.day.cq.wcm.api.Page` wird nur von AEM implementiert.
 
 Wenn zu diesen Schnittstellen neue Methoden hinzugefügt werden, wirken sich diese zusätzlichen Methoden nicht auf den vorhandenen Code aus, der diese Schnittstellen verwendet. Daher wird das Hinzufügen neuer Methoden zu diesen Schnittstellen als abwärtskompatibel betrachtet. Wenn jedoch benutzerdefinierter Code eine dieser Schnittstellen implementiert, führt dieser benutzerspezifische Code ein Abwärtskompatibilitätsrisiko für den Kunden ein.
 
-Schnittstellen (und Klassen), die nur von AEM implementiert werden sollen, werden mit `org.osgi.annotation.versioning.ProviderType` (oder in einigen Fällen mit einer veralteten Anmerkung `aQute.bnd.annotation.ProviderType`) kommentiert. Diese Regel identifiziert die Fälle, in denen eine solche Schnittstelle durch benutzerdefinierten Code implementiert wird (oder eine Klasse erweitert wird).
+Schnittstellen und Klassen, die nur von AEM implementiert werden sollen, werden mit kommentiert. `org.osgi.annotation.versioning.ProviderType` oder manchmal eine ähnliche Legacy-Anmerkung `aQute.bnd.annotation.ProviderType`. Diese Regel identifiziert die Fälle, in denen eine solche Schnittstelle durch benutzerdefinierten Code implementiert wird (oder eine Klasse erweitert wird).
 
 #### Nicht konformer Code {#non-compliant-code-3}
 
@@ -549,7 +549,7 @@ public class DontDoThis implements Page {
 * **Schweregrad**: Blocker
 * **Seit**: Version 2019.6.0
 
-Es ist eine lange bestehende Best Practice, dass die Inhaltsstruktur `/libs` im AEM-Inhalts-Repository von Kunden als schreibgeschützt betrachtet werden sollte. Das Ändern von Knoten und Eigenschaften unter `/libs` ist mit erheblichen Risiken für umfassende und kleinere Aktualisierungen verbunden. Änderungen an `/libs` sollten nur durch Adobe über offizielle Kanäle vorgenommen werden.
+Es ist eine lange bestehende Best Practice, dass die Inhaltsstruktur `/libs` im AEM-Inhalts-Repository von Kunden als schreibgeschützt betrachtet werden sollte. Das Ändern von Knoten und Eigenschaften unter `/libs` ist mit erheblichen Risiken für umfassende und kleinere Aktualisierungen verbunden. Änderungen an `/libs` wird nur durch Adobe über offizielle Kanäle durchgeführt.
 
 ### Pakete dürfen keine doppelten OSGi-Konfigurationen enthalten {#oakpal-package-osgi}
 
@@ -558,7 +558,7 @@ Es ist eine lange bestehende Best Practice, dass die Inhaltsstruktur `/libs` im 
 * **Schweregrad**: Hoch
 * **Seit**: Version 2019.6.0
 
-Ein häufig auftretendes Problem bei komplexen Projekten besteht darin, dass dieselbe OSGi-Komponente mehrmals konfiguriert ist. Dadurch ist nicht mehr eindeutig, welche Konfiguration gelten soll. Diese Regel ist „Laufzeitmodus-fokussiert“, da sie nur Probleme erkennt, bei denen dieselbe Komponente mehrmals im gleichen Laufzeitmodus (oder mit der gleichen Kombination aus Laufzeitmodi) konfiguriert ist.
+Ein häufig auftretendes Problem bei komplexen Projekten besteht darin, dass dieselbe OSGi-Komponente mehrmals konfiguriert ist. Dadurch entsteht eine Unklarheit darüber, welche Konfiguration funktionsfähig ist. Diese Regel ist &quot;runmode-basiert&quot;, da sie nur Probleme erkennt, bei denen dieselbe Komponente mehrmals im selben Ausführungsmodus oder in einer Kombination von Ausführungsmodi konfiguriert ist.
 
 #### Nicht konformer Code {#non-compliant-code-osgi}
 
@@ -627,7 +627,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definiert den standardmäßigen Authoring-Modus in AEM. Da die [klassische Benutzeroberfläche seit AEM 6.4 nicht mehr unterstützt wird](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=de), tritt jetzt ein Problem auf, wenn als standardmäßiger Authoring-Modus die klassische Benutzeroberfläche konfiguriert ist.
+Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definiert den standardmäßigen Authoring-Modus in AEM. weil [Die klassische Benutzeroberfläche wird seit AEM 6.4 nicht mehr unterstützt.](https://experienceleague.adobe.com/docs/experience-manager-64/release-notes/deprecated-removed-features.html?lang=de) Jetzt tritt ein Problem auf, wenn der standardmäßige Authoring-Modus für die klassische Benutzeroberfläche konfiguriert ist.
 
 ### Komponenten mit Dialogfeldern sollten Dialogfelder für die Touch-Benutzeroberfläche aufweisen {#oakpal-components-dialogs}
 
@@ -651,7 +651,7 @@ Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Details zum Konverti
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Um mit dem Cloud Service-Bereitstellungsmodell kompatibel zu sein, müssen einzelne Inhaltspakete entweder Inhalte für die unveränderlichen Bereiche des Repositorys (d. h. `/apps` und `/libs`) oder den veränderlichen Bereich (d. h. alles, was nicht in `/apps` oder `/libs` ist) enthalten, aber nicht beides. Beispielsweise ist ein Paket, das beide `/apps/myco/components/text and /etc/clientlibs/myco` enthält, nicht mit Cloud Service kompatibel und führt dazu, dass ein Problem gemeldet wird.
+Um mit dem Cloud Service-Bereitstellungsmodell kompatibel zu sein, müssen einzelne Inhaltspakete entweder Inhalte für die unveränderlichen Bereiche des Repositorys (d. h. `/apps` und `/libs`) oder den veränderlichen Bereich (d. h. alles, was nicht in `/apps` oder `/libs` ist) enthalten, aber nicht beides. Beispiel: ein Paket, das beide `/apps/myco/components/text and /etc/clientlibs/myco` ist nicht mit Cloud Service kompatibel und verursacht die Meldung eines Problems.
 
 Weitere Informationen finden Sie in der Dokumentation zur [AEM-Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=de).
 
@@ -719,7 +719,7 @@ Mit dem Migrations-Tool im [GitHub-Repository für AEM Assets as a Cloud Service
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Die Verwendung von statischen Vorlagen war in AEM-Projekten stets weit verbreitet. Editierbare Vorlagen werden jedoch dringend empfohlen, da sie die größte Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie in der Dokumentation [Seitenvorlagen – Bearbeitbar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=de).
+Die Verwendung statischer Vorlagen war in AEM Projekten schon immer üblich, aber bearbeitbare Vorlagen werden dringend empfohlen, da sie die größte Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie in der Dokumentation [Seitenvorlagen – Bearbeitbar](https://experienceleague.adobe.com/docs/experience-manager-65/developing/platform/templates/page-templates-editable.html?lang=de).
 
 Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) weitgehend automatisiert werden.
 
@@ -734,14 +734,14 @@ Die alten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) w
 
 Diese Konvertierung kann durch die [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) erleichtert werden.
 
-### Es sollten nur unterstützte Ausführungsmodus-Namen und -Reihenfolgen verwendet werden {#oakpal-supported-runmodes}
+### Es sollten nur die Namen und die Reihenfolge der unterstützten Ausführungsmodi verwendet werden {#oakpal-supported-runmodes}
 
 * **Schlüssel**: SupportedRunmode
 * **Typ**: Code Smell
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service erzwingt eine strikte Benennungsrichtlinie für Runmode-Namen und eine strikte Reihenfolge für diese Laufzeitmodi. Die Liste der unterstützten Ausführungsmodi finden Sie in der Dokumentation unter [Bereitstellung für AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de#runmodes) und jede Abweichung davon wird als Problem identifiziert.
+AEM Cloud Service erzwingt eine strenge Benennungsrichtlinie für Namen von Ausführungsmodi und eine strikte Reihenfolge für diese Ausführungsmodi. Die Liste der unterstützten Ausführungsmodi finden Sie im Abschnitt [Bereitstellen in AEM as a Cloud Service Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de#runmodes) und jede Abweichung davon wird als Problem erkannt.
 
 ### Knoten für benutzerdefinierte Suchindex-Definitionen müssen direkt untergeordnete Knoten von /oak:index sein {#oakpal-custom-search}
 
@@ -768,7 +768,7 @@ AEM Cloud Service erfordert, dass die Eigenschaft `compatVersion` für benutzerd
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Schwer behebbare Probleme können auftreten, wenn ein Knoten mit einer benutzerdefinierten Suchindex-Definition ungeordnete untergeordnete Knoten enthält. Um dies zu vermeiden, wird empfohlen, dass alle untergeordneten Knoten eines `oak:QueryIndexDefinition`-Knotens vom Typ `nt:unstructured` sein sollten.
+Probleme können schwer zu beheben sein, wenn ein benutzerdefinierter Suchindex-Definitionsknoten ungeordnete untergeordnete Knoten hat. Um dies zu vermeiden, wird empfohlen, dass alle untergeordneten Knoten eines `oak:QueryIndexDefinition`-Knotens vom Typ `nt:unstructured` sein sollten.
 
 ### Benutzerdefinierte Knoten einer Suchindex-Definition müssen einen untergeordneten Knoten mit dem Namen „indexRules“ enthalten, der wiederum untergeordnete Knoten enthält {#oakpal-custom-search-index}
 
@@ -847,10 +847,10 @@ Im folgenden Abschnitt werden die von Cloud Manager durchgeführten Prüfungen d
 
 * [Jede Dispatcher-Farm muss einen eindeutigen Namen haben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [Die ignoreUrlParams-Regeln für den Cache der Dispatcher-Veröffentlichungs-Farm sollten als Zulassungsliste konfiguriert werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [Die ignoreUrlParams-Regeln des Dispatcher-Veröffentlichungs-Farm-Caches sollten auf eine Art und Weise konfiguriert werden, wie das Zulassungsliste erfolgt](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Selektoren als Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [Die Dispatcher-Veröffentlichungsfarm-Filter sollten die zulässigen Sling-Selektoren auf eine Zulassungsliste spezifizieren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Suffix-Muster als Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [Die Dispatcher-Veröffentlichungsfarm-Filter sollten die zulässigen Sling-Suffix-Muster auf eine Zulassungsliste spezifizieren](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [Die Anweisung „Require all granted“ sollte nicht in einem VirtualHost Directory-Abschnitt mit einem Stammverzeichnis-Pfad verwendet werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [Verwenden Sie nicht die Anweisung &quot;Alle gewährten Anforderungen erforderlich&quot;in einem VirtualHost-Ordnerabschnitt mit einem Stammverzeichnis-Pfad.](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
