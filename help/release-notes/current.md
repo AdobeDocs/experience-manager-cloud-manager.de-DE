@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2023.2.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2023.2.0.
+title: Versionshinweise für 2023.3.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2023.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: ab1747e14be783004544681f9aefefaa0587302e
-workflow-type: ht
-source-wordcount: '82'
-ht-degree: 100%
+source-git-commit: 6ff44d7a7ccccc64f937df4dca854788c973bfd0
+workflow-type: tm+mt
+source-wordcount: '102'
+ht-degree: 82%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2023.2.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2023.3.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.2.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.3.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,4 +21,8 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.1.0 ist der 16. Februar 2023. Die nächste Version soll am 16. März 2023 veröffentlicht werden.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.3.0 ist der 16. März 2023. Die nächste Version ist für den 13. April 2023 geplant.
+
+## Fehlerbehebungen {#bug-fixes}
+
+* Die Commerce-Kachel auf der **Lernen** -Registerkarte von Cloud Manager navigiert der Benutzer jetzt zur richtigen Seite.
