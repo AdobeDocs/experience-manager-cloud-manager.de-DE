@@ -1,10 +1,10 @@
 ---
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AEM-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
-source-git-commit: 360cbf7e3a21e530a4e43f13f6d414dae4afa104
+source-git-commit: 7ab5bdea2b388f3e9e199a6d32a1a80977eba35b
 workflow-type: tm+mt
-source-wordcount: '1017'
-ht-degree: 100%
+source-wordcount: '1074'
+ht-degree: 93%
 
 ---
 
@@ -81,6 +81,11 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
 Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwendet werden.
 
+>[!NOTE]
+>
+>Sie können einem Inhaltsset bis zu 50 Pfade hinzufügen.
+>Ausgeschlossene Pfade sind nicht beschränkt.
+
 ## Bearbeiten eines Content-Sets {#edit-content-set}
 
 Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Anstatt auf **Content-Set hinzufügen** zu tippen oder zu klicken, wählen Sie ein vorhandenes Set aus der Konsole aus und wählen Sie im Menü mit den Auslassungspunkten die Option **Bearbeiten**.
@@ -99,7 +104,7 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 1. Navigieren Sie vom Bildschirm **Umgebungen** zur Seite **Content-Sets**.
 
-1. Wählen Sie ein Content-Set aus der Konsole aus und wählen Sie im Menü mit den Auslassungspunkten **Inhalt kopieren**.
+1. Wählen Sie einen Inhaltssatz aus der Konsole aus und wählen Sie **Inhalt kopieren** aus dem Menü mit den Auslassungspunkten.
 
    ![Inhaltskopie](/help/assets/copy-content.png)
 
@@ -112,6 +117,8 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 
 1. Geben Se im Dialog **Inhalt kopieren** die Quelle und das Ziel für die Inhaltskopie-Aktion an.
+
+1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Kontrollkästchen aktivieren `Do not delete exclude paths from destination` , wenn Sie die im Inhaltssatz angegebenen Ausschlusspfade beibehalten möchten. Wenn das Kontrollkästchen deaktiviert bleibt, werden Ausschlusspfade in der Zielumgebung gelöscht.
 
    ![Kopieren von Inhalten](/help/assets/copying-content.png)
 
@@ -150,7 +157,7 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Eine programmübergreifende Inhaltskopie ist nicht möglich.
 * Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
-* Pro Content-Set können bis zu zehn Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
+* Pro Inhaltsset können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
 * Das Werkzeug zum Kopieren von Inhalten sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
 * Das Werkzeug zum Kopieren von Inhalten verfügt über keine Versionierungsfunktion und kann geänderten oder neu erstellten Inhalt in der Quellumgebung in einem Content-Set seit dem letzten Inhaltskopievorgang nicht automatisch erkennen.
    * Um die Zielumgebung nur mit Inhaltsänderungen zu aktualisieren, die seit dem letzten Inhaltskopievorgang vorgenommen wurden, müssen Sie ein Content-Set erstellen. Geben Sie in diesem Set sind die Pfade in der Quellinstanz an, an denen seit dem letzten Inhaltskopievorgang Änderungen vorgenommen wurden.
