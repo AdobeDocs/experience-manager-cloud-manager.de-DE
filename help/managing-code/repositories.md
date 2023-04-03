@@ -3,9 +3,9 @@ title: Cloud Manager-Repositorys
 description: Erfahren Sie, wie Sie Repositorys für Ihre Cloud Manager-Programme aufrufen, erstellen und bearbeiten können.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '796'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -81,19 +81,19 @@ Führen Sie die folgenden Schritte aus, um Repositorys in Cloud Manager zu bearb
 
 1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte **Repositorys** und gehen Sie zur Seite **Repositorys**. Hier können Sie die Details Ihrer vorhandenen Repositorys anzeigen.
 
-1. Wählen Sie das Repository aus und klicken Sie auf die Suchschaltfläche ganz rechts in der Tabelle, um **Repository-URL kopieren** oder **Anzeigen und Aktualisieren** Ihr Repository.
+1. Wählen Sie das Repository aus und klicken Sie auf die Schaltfläche mit den Auslassungspunkten ganz rechts in der Tabelle, um die **Repository-URL zu kopieren** oder Ihr Repository **anzuzeigen und zu aktualisieren**.
 
 ![Repository bearbeiten](/help/assets/create-repo3.png)
 
 ## Löschen von Repositorys {#delete-repos}
 
-Gehen Sie wie folgt vor, um ein Repository zu löschen [Anzeigen und Bearbeiten von Repositorys](#edit-repos) aber auf **Repositorys** Seitenauswahl **Löschen** über die Suchschaltfläche des zu löschenden Repositorys.
+Um ein Repository zu löschen, gehen Sie wie beim [Anzeigen und Bearbeiten von Repositorys](#edit-repos) vor, wählen Sie jedoch auf der Seite **Repositorys** über die Schaltfläche mit den Auslassungspunkten für das zu löschende Repository die Option **Löschen** aus.
 
-Beachten Sie, dass ein in Cloud Manager gelöschtes Repository als gelöscht gekennzeichnet ist und für den Benutzer nicht mehr zugänglich ist, aber zu Wiederherstellungszwecken im System gepflegt wird.
+Beachten Sie, dass ein in Cloud Manager gelöschtes Repository als gelöscht gekennzeichnet ist und für die Person nicht mehr zugänglich ist, im System jedoch zu Wiederherstellungszwecken weiterhin geführt wird.
 
-Wenn Sie versuchen, ein neues Repository zu erstellen, nachdem Sie ein Repository mit demselben Namen gelöscht haben, erhalten Sie die Fehlermeldung &quot;Beim Erstellen des Repositorys ist ein Fehler aufgetreten. Wenden Sie sich an Ihren CSE oder den Support Ihrer Adobe.&quot;
+Wenn Sie versuchen, ein neues Repository zu erstellen, nachdem Sie ein Repository mit demselben Namen gelöscht haben, erhalten Sie die Fehlermeldung: „Beim Erstellen des Repositorys ist ein Fehler aufgetreten“. Wenden Sie sich an Ihren CSE oder den Adobe-Support.“
 
-Wenn Sie diese Fehlermeldung erhalten, wenden Sie sich an den Support der Adobe, damit dieser beim Umbenennen des gelöschten Repositorys helfen kann oder einen anderen Namen für Ihr neues Repository wählen kann.
+Wenn Sie diese Fehlermeldung erhalten, wenden Sie sich an den Adobe-Support, damit dieser beim Umbenennen des gelöschten Repositorys helfen kann, oder wählen Sie einen anderen Namen für Ihr neues Repository.
 
 ## Unterstützung von Git-Untermodulen {#git-submodule-support}
 
