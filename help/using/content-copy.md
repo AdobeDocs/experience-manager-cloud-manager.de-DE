@@ -1,10 +1,10 @@
 ---
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AEM-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
-source-git-commit: 7ab5bdea2b388f3e9e199a6d32a1a80977eba35b
-workflow-type: ht
-source-wordcount: '1074'
-ht-degree: 100%
+source-git-commit: 5b10ac5e47052cabd7478050651a4ca04287a8f0
+workflow-type: tm+mt
+source-wordcount: '1082'
+ht-degree: 99%
 
 ---
 
@@ -30,6 +30,10 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
 * Wenn der Inhalt in der Zielumgebung geändert wurde, wird er durch den Inhalt in der Quelle überschrieben, wenn die Pfade übereinstimmen.
 * Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
+
+   >[!NOTE]
+   >
+   >Es werden nur auf Dateidatenspeicher basierende Topologien unterstützt.
 
 ## Berechtigungen {#permissions}
 
