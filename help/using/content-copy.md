@@ -1,13 +1,13 @@
 ---
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AEM-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
-source-git-commit: 5b10ac5e47052cabd7478050651a4ca04287a8f0
+exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
+source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
 workflow-type: tm+mt
-source-wordcount: '1082'
-ht-degree: 99%
+source-wordcount: '1083'
+ht-degree: 98%
 
 ---
-
 
 # Das Inhaltskopie-Werkzeug {#content-copy}
 
@@ -87,7 +87,7 @@ Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwend
 
 >[!NOTE]
 >
->Sie können einem Content-Set bis zu 50 Pfade hinzufügen.
+>Sie können bis zu 50 Pfade in einem Inhaltsset hinzufügen.
 >Für ausgeschlossene Pfade gibt es keine Beschränkung.
 
 ## Bearbeiten eines Content-Sets {#edit-content-set}
