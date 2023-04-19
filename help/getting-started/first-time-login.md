@@ -2,10 +2,10 @@
 title: Erste Anmeldung
 description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die allgemeine Konfiguration eingerichtet haben und für die erste Verwendung von Cloud Manager bereit sind.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: d8f16deacfe52c76ff6b0aee0344d50bfe2b9c74
-workflow-type: ht
-source-wordcount: '261'
-ht-degree: 100%
+source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -20,13 +20,13 @@ Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingeri
 
 ## Anmeldung beim ersten Mal {#logging-in-for-the-first-time}
 
-1. Melden Sie sich bei Adobe [!UICONTROL Experience Cloud] an, und Sie sehen die Liste der Programme.
+1. Melden Sie sich bei Cloud Manager an unter [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) und Sie sehen Ihre Programmliste.
 
-1. Wählen Sie das Programm aus.
+   ![Cloud Manager-Konsole](/help/assets/cloud-manager-console.png)
 
-1. Klicken Sie auf der Programmkarte auf die Schaltfläche mit den Auslassungspunkten und anschließend auf **Cloud Manager**, um zur Seite **Übersicht** von Cloud Manager zu gelangen.
+1. Wählen Sie auf der Programmkarte die Schaltfläche mit Auslassungspunkten aus und **Programmübersicht** , um zu den **Übersicht** Seite.
 
-   ![Cloud Manager-Option](/help/assets/navigate-cm1.png)
+   ![Cloud Manager-Option](/help/assets/program-overview-option.png)
 
 1. In Cloud Manager wird die Seite **Übersicht** geöffnet.
 
