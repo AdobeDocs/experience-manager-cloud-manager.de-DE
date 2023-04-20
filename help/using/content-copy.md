@@ -5,7 +5,7 @@ exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
 workflow-type: tm+mt
 source-wordcount: '1083'
-ht-degree: 98%
+ht-degree: 99%
 
 ---
 
@@ -33,7 +33,7 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
    >[!NOTE]
    >
-   >Es werden nur auf Dateidatenspeicher basierende Topologien unterstützt.
+   >Es werden nur Topologien auf der Grundlage von Dateidatenspeichern unterstützt.
 
 ## Berechtigungen {#permissions}
 
