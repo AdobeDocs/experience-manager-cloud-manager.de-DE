@@ -2,8 +2,8 @@
 title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
+source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
+workflow-type: tm+mt
 source-wordcount: '2867'
 ht-degree: 100%
 
@@ -152,7 +152,7 @@ Die Anzahl der virtuellen Benutzer oder Container, die von Cloud Manager erzeugt
 Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Staging-Umgebung anhand einer oder mehrerer vom Customer Success Engineer konfigurierten Seed-URLs. Ausgehend von diesen URLs wird der HTML-Code jeder Seite überprüft und Links werden breitenorientiert durchsucht.
 
 * Dieser Crawling-Vorgang ist standardmäßig auf maximal 5.000 Seiten beschränkt.
-* Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die Variable [Umgebungsvariable](/help/getting-started/build-environment.md#environment-variables) `MAX_PAGES` festlegen.
+* Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die Variable [Umgebungsvariable](/help/getting-started/build-environment.md#environment-variables) `CM_PERF_TEST_CRAWLER_MAX_PAGES` festlegen.
    * Zulässige Werte sind `2000`–`7000`.
 * Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
 
@@ -191,7 +191,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix
 | Metrik | Kategorie | Fehlerschwellenwert |
 |---|---|---|
 | Seitenanforderungsfehlerrate | Kritisch | >= 2 % |
-| CPU-Auslastungsrate | Kritisch | >= 80% |
+| CPU-Auslastungsrate | Kritisch | >= 80 % |
 | Festplatten-I/O-Wartezeit | Kritisch | >= 50 % |
 | 95. Perzentil der Reaktionszeit | Wichtig | >= KPI auf Programmebene |
 | Spitzenreaktionszeit | Wichtig | >= 18 Sekunden |
