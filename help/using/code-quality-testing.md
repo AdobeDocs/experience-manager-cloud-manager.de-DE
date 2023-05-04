@@ -3,8 +3,8 @@ title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 8c3b59ab9e00d6ee3b90b9255d025d9e19b3b89a
-workflow-type: tm+mt
-source-wordcount: '2867'
+workflow-type: ht
+source-wordcount: '0'
 ht-degree: 100%
 
 ---
