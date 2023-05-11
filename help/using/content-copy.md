@@ -2,10 +2,10 @@
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AEM-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 7ef29a244688de82537da0b879fbf397900427c0
-workflow-type: ht
-source-wordcount: '1083'
-ht-degree: 100%
+source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
+workflow-type: tm+mt
+source-wordcount: '1123'
+ht-degree: 95%
 
 ---
 
@@ -31,9 +31,9 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 * Wenn der Inhalt in der Zielumgebung geändert wurde, wird er durch den Inhalt in der Quelle überschrieben, wenn die Pfade übereinstimmen.
 * Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
 
-   >[!NOTE]
-   >
-   >Es werden nur Topologien auf der Grundlage von Dateidatenspeichern unterstützt.
+>[!NOTE]
+>
+>Wenden Sie sich an Ihren Customer Success Engineer (CSE), um diese Funktion zu aktivieren.
 
 ## Berechtigungen {#permissions}
 
@@ -158,7 +158,8 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
 * Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
-* Eine programmübergreifende Inhaltskopie ist nicht möglich.
+* Eine programmübergreifende und regionenübergreifende Inhaltskopie ist nicht möglich.
+* Eine Inhaltskopie für eine auf dem Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung bei demselben Cloud-Anbieter befinden.
 * Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
@@ -166,3 +167,4 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Das Werkzeug zum Kopieren von Inhalten verfügt über keine Versionierungsfunktion und kann geänderten oder neu erstellten Inhalt in der Quellumgebung in einem Content-Set seit dem letzten Inhaltskopievorgang nicht automatisch erkennen.
    * Um die Zielumgebung nur mit Inhaltsänderungen zu aktualisieren, die seit dem letzten Inhaltskopievorgang vorgenommen wurden, müssen Sie ein Content-Set erstellen. Geben Sie in diesem Set sind die Pfade in der Quellinstanz an, an denen seit dem letzten Inhaltskopievorgang Änderungen vorgenommen wurden.
 * Versionsinformationen sind in einer Inhaltskopie nicht enthalten.
+* Eine Inhaltskopie kann nicht angehalten oder abgebrochen werden, nachdem sie initiiert wurde.
