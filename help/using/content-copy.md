@@ -3,9 +3,9 @@ title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AEM-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1123'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -158,7 +158,7 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
 * Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
-* Eine programmübergreifende und regionenübergreifende Inhaltskopie ist nicht möglich.
+* Eine programm- und regionenübergreifende Inhaltskopie ist nicht möglich.
 * Eine Inhaltskopie für eine auf dem Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung bei demselben Cloud-Anbieter befinden.
 * Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
@@ -167,4 +167,4 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Das Werkzeug zum Kopieren von Inhalten verfügt über keine Versionierungsfunktion und kann geänderten oder neu erstellten Inhalt in der Quellumgebung in einem Content-Set seit dem letzten Inhaltskopievorgang nicht automatisch erkennen.
    * Um die Zielumgebung nur mit Inhaltsänderungen zu aktualisieren, die seit dem letzten Inhaltskopievorgang vorgenommen wurden, müssen Sie ein Content-Set erstellen. Geben Sie in diesem Set sind die Pfade in der Quellinstanz an, an denen seit dem letzten Inhaltskopievorgang Änderungen vorgenommen wurden.
 * Versionsinformationen sind in einer Inhaltskopie nicht enthalten.
-* Eine Inhaltskopie kann nicht angehalten oder abgebrochen werden, nachdem sie initiiert wurde.
+* Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie einmal initiiert wurde.
