@@ -3,9 +3,9 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3566'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die
 
 >[!NOTE]
 >
->Vollständige SonarQube-Regeln stehen aufgrund von Adobe-proprietären Informationen nicht zum Download zur Verfügung. Sie können die vollständige Liste von Regeln [über diesen Link herunterladen.](/help/assets/CodeQuality-rules-latest-AMS.xlsx) Lesen Sie dieses Dokument weiter, um Beschreibungen und Beispiele für die Regeln zu erhalten.
+>Vollständige SonarQube-Regeln stehen aufgrund von proprietären Informationen von Adobe nicht zum Download zur Verfügung. Sie können die vollständige Liste von Regeln [über diesen Link herunterladen.](/help/assets/CodeQuality-rules-latest-AMS.xlsx) Lesen Sie dieses Dokument weiter, um Beschreibungen und Beispiele für die Regeln zu erhalten.
 
 ## SonarQube-Regeln {#sonarqube-rules}
 
@@ -640,7 +640,7 @@ Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` def
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-AEM-Komponenten mit einem Dialogfeld für die klassische Benutzeroberfläche sollten immer über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche verfügen, um ein optimales Authoring-Erlebnis zu erzielen und mit dem Cloud Service-Implementierungsmodell kompatibel zu sein, bei dem die klassische Benutzeroberfläche nicht unterstützt wird. Diese Regel überprüft die folgenden Szenarien:
+AEM-Komponenten mit einem Dialogfeld für die klassische Benutzeroberfläche sollten immer über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche verfügen, um ein optimales Authoring-Erlebnis zu erzielen und mit dem Cloud Service-Bereitstellungsmodell kompatibel zu sein, bei dem die klassische Benutzeroberfläche nicht unterstützt wird. Diese Regel überprüft die folgenden Szenarien:
 
 * Eine Komponente mit einem Dialogfeld für die klassische Benutzeroberfläche (d. h. einem untergeordneten `dialog`-Knoten) muss über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche verfügen (d. h. über einen untergeordneten `cq:dialog`-Knoten).
 * Eine Komponente mit einem Design-Dialogfeld für die klassische Benutzeroberfläche (d. h. einem `design_dialog`-Knoten) muss über ein entsprechendes Design-Dialogfeld für die Touch-Benutzeroberfläche verfügen (d. h. über einen untergeordneten `cq:design_dialog`-Knoten).
@@ -670,7 +670,7 @@ Weitere Informationen finden Sie in der Dokumentation zur [AEM-Projektstruktur](
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Cloud Service-Implementierungen unterstützen keine Rückwärtsreplikation. Weitere Informationen finden Sie unter [Versionshinweise: Entfernung von Replikations-Agenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html?lang=de#replication-agents).
+Cloud Service-Bereitstellungen unterstützen keine Rückwärtsreplikation. Weitere Informationen finden Sie unter [Versionshinweise: Entfernung von Replikations-Agenten](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes.html?lang=de#replication-agents).
 
 Kunden, die die Rückwärtsreplikation verwenden, sollten sich für alternative Lösungen an Adobe wenden.
 
