@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2023.5.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 5a92ceb98de68025ca917c9b9cb358d54282b235
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '111'
-ht-degree: 75%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.5.0 ist
 
 ## Neue Funktionen {#what-is-new}
 
-* [Self-Service-Inhaltskopie](/help/using/content-copy.md) ist jetzt über die Cloud Manager -Benutzeroberfläche von einer höheren Umgebung in eine niedrigere Umgebung verfügbar. Weitere Informationen erhalten Sie von Ihrem Customer Success Engineer.
+* [Self-Service-Inhaltskopie](/help/using/content-copy.md) ist jetzt über die Cloud Manager-Benutzeroberfläche von einer höheren Umgebung für eine niedrigere Umgebung verfügbar. Weitere Informationen erhalten Sie von Ihrem Customer Success Engineer.
