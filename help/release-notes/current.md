@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2023.5.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2023.5.0.
+title: Versionshinweise für 2023.6.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2023.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 5a92ceb98de68025ca917c9b9cb358d54282b235
-workflow-type: ht
-source-wordcount: '111'
-ht-degree: 100%
+source-git-commit: 1bbdc88a2c7a86e258d5fd56fab504aa7232e9fc
+workflow-type: tm+mt
+source-wordcount: '99'
+ht-degree: 77%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2023.5.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2023.6.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.5.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.6.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,8 +21,8 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.5.0 ist der 11. Mai 2023. Die nächste Version ist für den 8. Juni 2023 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.6.0 ist der 8. Juni 2023. Die nächste Version ist für den 6. Juli 2023 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* [Self-Service-Inhaltskopie](/help/using/content-copy.md) ist jetzt über die Cloud Manager-Benutzeroberfläche von einer höheren Umgebung für eine niedrigere Umgebung verfügbar. Weitere Informationen erhalten Sie von Ihrem Customer Success Engineer.
+* Beim Fortsetzen einer [Produktions-Pipeline,](/help/using/production-pipelines.md) wird jetzt beim Schritt Validierung ein Bestätigungsdialogfeld angezeigt.
