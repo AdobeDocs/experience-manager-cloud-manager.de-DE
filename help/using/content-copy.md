@@ -2,10 +2,10 @@
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AEM-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 65cca64cb230686617af7f797fa86b754658e46d
-workflow-type: ht
-source-wordcount: '1123'
-ht-degree: 100%
+source-git-commit: 435efe2e6cecae738a62869c55034113c09f70e7
+workflow-type: tm+mt
+source-wordcount: '1090'
+ht-degree: 95%
 
 ---
 
@@ -119,7 +119,6 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
    >* die Benutzenden nicht über die entsprechenden Berechtigungen verfügen.
    >* in der Umgebung eine laufende Pipeline oder ein Vorgang zum Kopieren von Inhalten in Bearbeitung ist.
 
-
 1. Geben Se im Dialog **Inhalt kopieren** die Quelle und das Ziel für die Inhaltskopie-Aktion an.
 
 1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination`, wenn Sie die im Content-Set angegebenen Ausschlusspfade beibehalten möchten. Wenn das Kontrollkästchen deaktiviert bleibt, werden Ausschlusspfade in der Zielumgebung gelöscht.
@@ -164,7 +163,6 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
 * Das Werkzeug zum Kopieren von Inhalten sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
-* Das Werkzeug zum Kopieren von Inhalten verfügt über keine Versionierungsfunktion und kann geänderten oder neu erstellten Inhalt in der Quellumgebung in einem Content-Set seit dem letzten Inhaltskopievorgang nicht automatisch erkennen.
-   * Um die Zielumgebung nur mit Inhaltsänderungen zu aktualisieren, die seit dem letzten Inhaltskopievorgang vorgenommen wurden, müssen Sie ein Content-Set erstellen. Geben Sie in diesem Set sind die Pfade in der Quellinstanz an, an denen seit dem letzten Inhaltskopievorgang Änderungen vorgenommen wurden.
-* Versionsinformationen sind in einer Inhaltskopie nicht enthalten.
 * Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie einmal initiiert wurde.
+* Das Werkzeug zum Kopieren von Inhalten kopiert Assets zusammen mit Dynamic Media-bezogenen Metadaten aus der höheren Umgebung in die ausgewählte untere Umgebung.
+   * Kopierte Assets müssen dann mithilfe der [Workflow für DAM-Prozess-Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=de) in der unteren Umgebung, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
