@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2023.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 1bbdc88a2c7a86e258d5fd56fab504aa7232e9fc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '99'
-ht-degree: 77%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.6.0 ist
 
 ## Neue Funktionen {#what-is-new}
 
-* Beim Fortsetzen einer [Produktions-Pipeline,](/help/using/production-pipelines.md) wird jetzt beim Schritt Validierung ein Bestätigungsdialogfeld angezeigt.
+* Beim Fortsetzen einer [Produktions-Pipeline](/help/using/production-pipelines.md) wird jetzt beim Genehmigungsschritt ein Bestätigungsdialogfeld angezeigt.
