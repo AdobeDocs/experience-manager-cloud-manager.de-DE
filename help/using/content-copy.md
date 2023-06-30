@@ -5,7 +5,7 @@ exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
 workflow-type: tm+mt
 source-wordcount: '1096'
-ht-degree: 88%
+ht-degree: 92%
 
 ---
 
@@ -164,6 +164,6 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
 * Das Werkzeug zum Kopieren von Inhalten sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
-* Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie einmal initiiert wurde.
-* Das Werkzeug zum Kopieren von Inhalten kopiert Assets zusammen mit Dynamic Media-bezogenen Metadaten aus der höheren Umgebung in die ausgewählte untere Umgebung.
-   * Kopierte Assets müssen dann mithilfe der [Workflow für DAM-Prozess-Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=de) in der unteren Umgebung, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
+* Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
+* Das Inhaltskopie-Werkzeug kopiert Assets zusammen mit Metadaten von Dynamic Media aus der höheren Umgebung in die ausgewählte untere Umgebung.
+   * Kopierte Assets müssen dann mithilfe des [Workflows für DAM-Prozess-Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=de) in der unteren Umgebung neu verarbeitet werden, um die entsprechende Konfiguration für Dynamic Media zu verwenden.
