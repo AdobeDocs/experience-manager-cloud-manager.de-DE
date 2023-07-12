@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 9ecefd72cb9701026798ba47a743d99375f657c1
 workflow-type: tm+mt
 source-wordcount: '106'
-ht-degree: 79%
+ht-degree: 100%
 
 ---
 
@@ -25,4 +25,4 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.7.0 ist
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Wann [Bearbeiten einer Produktions-Pipeline,](/help/using/managing-pipelines.md#editing-pipelines) wenn der Benutzer versucht, ein Asset aus der **Staging-Tests** ein Fehler angezeigt.
+* Beim [Bearbeiten einer Produktions-Pipeline](/help/using/managing-pipelines.md#editing-pipelines), wenn Benutzende versuchen, ein Asset von der Registerkarte **Staging-Tests** zu entfernen, wird ein Fehler angezeigt.
