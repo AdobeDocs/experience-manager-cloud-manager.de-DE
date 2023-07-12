@@ -1,22 +1,22 @@
 ---
 title: Das Inhaltskopie-Werkzeug
-description: Mit dem Content Copy-Tool für Cloud Manager können Benutzer veränderliche Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Umgebungen kopieren, um dies zu Testzwecken zu ermöglichen.
+description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1096'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
 
 # Das Inhaltskopie-Werkzeug {#content-copy}
 
-Mit dem Content Copy-Tool für Cloud Manager können Benutzer veränderliche Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Umgebungen kopieren, um dies zu Testzwecken zu ermöglichen.
+Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 
 ## Einführung {#introduction}
 
-Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Werkzeug zum Kopieren von Inhalten können Sie Inhalte aus Ihrer Produktions-AMS-gehosteten AEM 6.x-Umgebung in eine Staging- oder Entwicklungsumgebung für solche Tests kopieren.
+Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Inhaltskopie-Werkzeug können Sie Inhalte für solche Tests aus Ihren AMS-gehosteten AEM 6.x-Umgebungen in eine Staging- oder Entwicklungsumgebung kopieren.
 
 Der zu kopierende Inhalt wird durch ein Content-Set definiert. Ein Content-Set besteht aus einer Liste von JCR-Pfaden, die den veränderlichen Inhalt enthalten, der aus einer Quellumgebung in eine Zielumgebung innerhalb desselben Cloud Manager-Programms kopiert werden soll. Die folgenden Pfade sind in einem Content-Set zulässig.
 
