@@ -3,9 +3,9 @@ title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1322'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -117,7 +117,7 @@ Wenn die Blau/Grün-Implementierung aktiviert ist, unterscheidet sich der Bereit
 | 7 | Die blaue Infrastruktur wird aus dem Produktionslastenausgleich entfernt. |
 | 8 | Pause für die endgültige Abmeldung (bis zu 24 Stunden) | - |
 | 9 | Blaue Infrastruktur wird automatisch beendet | - |
-| 10 | Pipeline abgeschlossen | - |
+| 10 | Pipeline ist abgeschlossen | - |
 
 #### Implementieren von Blau/Grün {#implementing}
 
