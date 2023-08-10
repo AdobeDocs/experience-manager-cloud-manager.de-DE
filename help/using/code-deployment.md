@@ -2,10 +2,10 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '1609'
-ht-degree: 100%
+source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
+workflow-type: tm+mt
+source-wordcount: '1655'
+ht-degree: 84%
 
 ---
 
@@ -56,7 +56,7 @@ Der Schritt **Staging-Tests** umfasst die folgenden Aktionen:
 * **Sicherheitstests**: Dieser Schritt bewertet die Auswirkungen des Programm-Codes auf die Sicherheit der AEM-Umgebung. Einzelheiten zum Testverfahren finden Sie im Dokument [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
    * **Leistungstests**: Dieser Schritt bewertet die Leistung des Codes. Einzelheiten zum Testverfahren finden Sie in unter [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
 
-   ![Staging-Tests](/help/assets/Stage_Testing1.png)
+  ![Staging-Tests](/help/assets/Stage_Testing1.png)
 
 ### Schritt zur Produktionsbereitstellung {#production-deployment}
 
@@ -68,7 +68,7 @@ Der Schritt **Produktionsbereitstellung** umfasst die folgenden Aktionen:
 * **Planen der Bereitstellung für die Produktion**
    * Diese Option ist beim Konfigurieren der Pipeline aktiviert.
    * Datum und Uhrzeit für den Zeitplan beziehen sich auf die Zeitzone des Benutzers.
-      ![Bereitstellung planen](/help/assets/Production_Deployment1.png)
+     ![Bereitstellung planen](/help/assets/Production_Deployment1.png)
 * **CSE-Unterstützung** (sofern aktiviert)
 * **Bereitstellung für Produktion**
 
@@ -111,6 +111,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 1. Jedes AEM-Artefakt wird über Package Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
 
    * Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie im Dokument [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=de).
+
    >[!NOTE]
    >
    >Alle AEM-Artefakte werden für Autor und Veröffentlichung bereitgestellt. Wenn knotenspezifische Konfigurationen erforderlich sind, sollten Ausführungsmodi genutzt werden. Weitere Informationen dazu, wie Sie mit Ausführungsmodi Ihre AEM-Instanz für einen bestimmten Zweck anpassen können, finden Sie im [Abschnitt „Ausführungsmodi“ des Dokuments „Bereitstellen in AEM as a Cloud Service“](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de#runmodes).
@@ -175,17 +176,21 @@ Die Ausführung einer Pipeline im Notfallmodus kann auch über die Cloud Manager
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Erneutes Ausführen der Produktionsbereitstellung {#re-execute-deployment}
+## Neuausführung einer Produktionsbereitstellung {#reexecute-deployment}
 
-Die erneute Ausführung des Produktionsbereitstellungsschritts ist bei Ausführungen verfügbar, bei denen der Schritt zur Produktionsbereitstellung abgeschlossen ist. Die Art der Fertigstellung ist nicht wichtig. die Bereitstellung könnte erfolgreich (nur für AMS-Programme), abgebrochen oder nicht erfolgreich sein. Der Hauptanwendungsfall besteht darin, dass der Produktionsbereitstellungsschritt aus vorübergehenden Gründen fehlgeschlagen ist. Bei der erneuten Ausführung wird eine neue Ausführung mit derselben Pipeline erstellt. Diese neue Ausführung besteht aus drei Schritten:
+In seltenen Fällen können Produktionsbereitstellungsschritte aus Verlaufsgründen fehlschlagen. In solchen Fällen wird die Neuausführung des Produktionsbereitstellungsschritts unterstützt, solange der Produktionsbereitstellungsschritt abgeschlossen ist, unabhängig vom Fertigstellungstyp (z. B. erfolgreich, abgebrochen oder nicht erfolgreich). Bei der erneuten Ausführung wird eine neue Ausführung mit derselben Pipeline erstellt, die aus drei Schritten besteht.
 
-1. **Der Validierungsschritt**: Dies ist im Wesentlichen die gleiche Validierung, die während einer normalen Pipeline-Ausführung erfolgt.
-1. **Der Build-Schritt**: Im Kontext einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen neuen Build-Prozess aus.
-1. **Der Schritt zur Produktionsbereitstellung**: Er verwendet dieselbe Konfiguration und dieselben Optionen wie der Schritt zur Produktionsbereitstellung bei einer normalen Pipeline-Ausführung.
+1. **Der Validierungsschritt** - Dies ist im Wesentlichen die gleiche Validierung, die während einer normalen Pipeline-Ausführung erfolgt.
+1. **Der Build-Schritt** - Im Kontext einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen neuen Build-Prozess aus.
+1. **Schritt zur Produktionsbereitstellung** - Hierbei werden dieselben Konfigurationen und Optionen wie beim Produktionsbereitstellungsschritt in einer normalen Pipeline-Ausführung verwendet.
 
-Der Build-Schritt ist in der Benutzeroberfläche möglicherweise etwas anders beschriftet, sodass zu erkennen ist, dass er Artefakte kopiert und nicht etwas neu erstellt.
+Wenn eine Neuausführung möglich ist, stellt die Produktions-Pipeline-Statusseite die **Neu ausführen** neben der üblichen **Build-Protokoll herunterladen** -Option.
 
-![Erneutes Ausführen](/help/assets/Re-deploy.png)
+![Die Option &quot;Neu ausführen&quot;im Fenster der Pipeline-Übersicht](/help/assets/re-execute.png)
+
+>[!NOTE]
+>
+>Bei einer erneuten Ausführung wird der Build-Schritt in der Benutzeroberfläche beschriftet, um anzuzeigen, dass er Artefakte kopiert und nicht neu erstellt.
 
 ### Beschränkungen {#limitations}
 
@@ -193,15 +198,21 @@ Der Build-Schritt ist in der Benutzeroberfläche möglicherweise etwas anders be
 * Die erneute Ausführung ist nicht für Rollback-Ausführungen oder Push-Update-Ausführungen verfügbar.
 * Wenn die letzte Ausführung vor dem Produktionsbereitstellungsschritt fehlschlug, ist eine erneute Ausführung nicht möglich.
 
-### Erkennen einer erneuten Ausführung {#identifying}
 
-Um festzustellen, ob es sich bei einer Ausführung um eine erneute Ausführung handelt, kann das `trigger`-Feld geprüft werden. Sein Wert sollte `RE_EXECUTE` sein.
+### Erneutes Ausführen der API {#reexecute-api}
 
-### Auslösen einer erneuten Ausführung {#triggering}
+Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) um Trigger-Wiederausführungen sowie die Identifizierung von Ausführungen, die als Wiederausführungen ausgelöst wurden.
 
-Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an den HAL-Link `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Produktionsbereitstellungsschritts erfolgen. Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden. Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt aus nicht erneut gestartet werden. Dieser Link ist nur im Produktionsbereitstellungsschritt vorhanden.
+#### Auslösen einer erneuten Ausführung {#triggering}
 
-```Javascript
+Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an den HAL-Link `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Produktionsbereitstellungsschritts erfolgen.
+
+* Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden.
+* Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt aus nicht erneut gestartet werden.
+
+Dieser Link steht nur für den Schritt zur Produktionsbereitstellung zur Verfügung.
+
+```javascript
  {
   "_links": {
     "http://ns.adobe.com/adobecloud/rel/pipeline/logs": {
@@ -236,6 +247,10 @@ Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an den HAL-Link
   "status": "FINISHED"
 ```
 
-Die Syntax des `href`-Wertes des HAL-Links ist nicht zu dessen Verwendung als Bezugspunkt vorgesehen. Der tatsächliche Wert sollte immer aus dem HAL-Link gelesen und nicht generiert werden.
+Die Syntax des HAL-Links `href` -Wert ist nur ein Beispiel und der tatsächliche Wert sollte immer aus dem HAL-Link gelesen und nicht generiert werden.
 
 Das Senden einer `PUT`-Anfrage an diesen Endpunkt führt zu einer `201`-Antwort bei Erfolg, wobei der Antworttext die Darstellung der neuen Ausführung ist. Dies ähnelt dem Starten einer regulären Ausführung über die API.
+
+#### Erkennen einer erneuten Ausführung {#identifying}
+
+Wiederausgeführte Ausführungen können durch den Wert identifiziert werden `RE_EXECUTE` im `trigger` -Feld.

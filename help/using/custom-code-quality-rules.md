@@ -2,9 +2,9 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 1ba4ed6c311eeaff9c71313d265531f427ef2736
-workflow-type: ht
-source-wordcount: '3566'
+source-git-commit: f930f12b5f50dd96a1677ff7a56cf0e92a400556
+workflow-type: tm+mt
+source-wordcount: '3377'
 ht-degree: 100%
 
 ---
@@ -648,21 +648,6 @@ AEM-Komponenten mit einem Dialogfeld für die klassische Benutzeroberfläche sol
 
 Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Details zum Konvertieren von Komponenten aus der klassischen Benutzeroberfläche in die Touch-Benutzeroberfläche. Weitere Informationen finden Sie in der Dokumentation zu den [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/).
 
-### Pakete sollten keinen veränderlichen und unveränderlichen Inhalt mischen {#oakpal-packages-immutable}
-
-* **Schlüssel**: ImmutableMutableMixedPackage
-* **Typ**: Code Smell/Cloud Service-Kompatibilität
-* **Schweregrad**: Gering
-* **Seit**: Version 2020.5.0
-
-Um mit dem Cloud Service-Bereitstellungsmodell kompatibel zu sein, müssen einzelne Inhaltspakete entweder Inhalte für die unveränderlichen Bereiche des Repositorys (d. h. `/apps` und `/libs`) oder den veränderlichen Bereich (d. h. alles, was nicht in `/apps` oder `/libs` ist) enthalten, aber nicht beides. Beispielsweise ist ein Paket, das `/apps/myco/components/text and /etc/clientlibs/myco` enthält, nicht mit Cloud Service kompatibel und führt dazu, dass ein Problem gemeldet wird.
-
-Weitere Informationen finden Sie in der Dokumentation zur [AEM-Projektstruktur](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developing/aem-project-content-package-structure.html?lang=de).
-
->[!NOTE]
->
->Die Regel [Kundenpakete sollten Knoten unter /libs nicht erstellen oder ändern](#oakpal-customer-package) ist immer gültig.
-
 ### Rückwärtsreplikations-Agenten sollten nicht verwendet werden {#oakpal-reverse-replication}
 
 * **Schlüssel**: ReverseReplication
@@ -737,15 +722,6 @@ Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Mo
 Die alten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) werden seit mehreren AEM-Versionen nicht mehr verwendet und wurden durch die [-Kernkomponenten ersetzt.](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/introduction.html?lang=de) Von der Verwendung der älteren Foundation-Komponenten als Basis für benutzerdefinierte Komponenten – sei es durch Überlagerung oder Vererbung – wird abgeraten und sie sollten in die entsprechende Kernkomponente konvertiert werden.
 
 Diese Konvertierung kann durch die [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) erleichtert werden.
-
-### Es sollten nur unterstützte Ausführungsmodusnamen und -reihenfolgen verwendet werden {#oakpal-supported-runmodes}
-
-* **Schlüssel**: SupportedRunmode
-* **Typ**: Code Smell
-* **Schweregrad**: Gering
-* **Seit**: Version 2021.2.0
-
-AEM as a Cloud Service erzwingt eine strikte Benennungsrichtlinie und Reihenfolge für diese Ausführungsmodi. Die Liste der unterstützten Ausführungsmodi ist in der [Dokumentation zur Bereitstellung für AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de#runmodes) zu finden, und jede Abweichung davon erzeugt einen Fehler.
 
 ### Knoten für benutzerdefinierte Suchindex-Definitionen müssen direkt untergeordnete Knoten von /oak:index sein {#oakpal-custom-search}
 
