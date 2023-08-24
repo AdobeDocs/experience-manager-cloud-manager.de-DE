@@ -3,7 +3,7 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: f930f12b5f50dd96a1677ff7a56cf0e92a400556
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3377'
 ht-degree: 100%
 
@@ -646,7 +646,7 @@ AEM-Komponenten mit einem Dialogfeld für die klassische Benutzeroberfläche sol
 * Eine Komponente mit einem Design-Dialogfeld für die klassische Benutzeroberfläche (d. h. einem `design_dialog`-Knoten) muss über ein entsprechendes Design-Dialogfeld für die Touch-Benutzeroberfläche verfügen (d. h. über einen untergeordneten `cq:design_dialog`-Knoten).
 * Eine Komponente mit einem Dialogfeld für die klassische Benutzeroberfläche und einem Design-Dialogfeld für die klassische Benutzeroberfläche muss sowohl über ein entsprechendes Dialogfeld für die Touch-Benutzeroberfläche als auch über ein entsprechendes Design-Dialogfeld für die Touch-Benutzeroberfläche verfügen.
 
-Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Details zum Konvertieren von Komponenten aus der klassischen Benutzeroberfläche in die Touch-Benutzeroberfläche. Weitere Informationen finden Sie in der Dokumentation zu den [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/).
+Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Details zum Konvertieren von Komponenten aus der klassischen Benutzeroberfläche in die Touch-Benutzeroberfläche. Weitere Informationen finden Sie in der [Dokumentation der AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/).
 
 ### Rückwärtsreplikations-Agenten sollten nicht verwendet werden {#oakpal-reverse-replication}
 
