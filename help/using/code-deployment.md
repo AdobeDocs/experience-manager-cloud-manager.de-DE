@@ -3,9 +3,9 @@ title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1655'
-ht-degree: 84%
+ht-degree: 100%
 
 ---
 
@@ -176,21 +176,21 @@ Die Ausführung einer Pipeline im Notfallmodus kann auch über die Cloud Manager
 $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 ```
 
-## Neuausführung einer Produktionsbereitstellung {#reexecute-deployment}
+## Erneutes Ausführen einer Produktionsbereitstellung {#reexecute-deployment}
 
-In seltenen Fällen können Produktionsbereitstellungsschritte aus Verlaufsgründen fehlschlagen. In solchen Fällen wird die Neuausführung des Produktionsbereitstellungsschritts unterstützt, solange der Produktionsbereitstellungsschritt abgeschlossen ist, unabhängig vom Fertigstellungstyp (z. B. erfolgreich, abgebrochen oder nicht erfolgreich). Bei der erneuten Ausführung wird eine neue Ausführung mit derselben Pipeline erstellt, die aus drei Schritten besteht.
+In seltenen Fällen kann es vorkommen, dass Schritte der Produktionsbereitstellung aus vorübergehenden Gründen fehlschlagen. In solchen Fällen wird die erneute Ausführung des Schritts der Produktionsbereitstellung unterstützt, solange der Schritt der Produktionsbereitstellung abgeschlossen ist, unabhängig von der Art des Abschlusses (wie zum Beispiel erfolgreich, abgebrochen oder fehlgeschlagen). Bei der erneuten Ausführung wird eine neue Ausführung mit derselben Pipeline erstellt, die aus drei Schritten besteht.
 
-1. **Der Validierungsschritt** - Dies ist im Wesentlichen die gleiche Validierung, die während einer normalen Pipeline-Ausführung erfolgt.
-1. **Der Build-Schritt** - Im Kontext einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen neuen Build-Prozess aus.
-1. **Schritt zur Produktionsbereitstellung** - Hierbei werden dieselben Konfigurationen und Optionen wie beim Produktionsbereitstellungsschritt in einer normalen Pipeline-Ausführung verwendet.
+1. **Der Validierungsschritt** – Dies ist im Wesentlichen dieselbe Validierung wie bei einer normalen Pipeline-Ausführung.
+1. **Der Build-Schritt** – Im Rahmen einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen wirklich neuen Build-Prozess aus.
+1. **Der Produktionsbereitstellungsschritt** – Dieser Schritt verwendet dieselbe Konfiguration und dieselben Optionen wie der Produktionsbereitstellungsschritt bei einer normalen Pipeline-Ausführung.
 
-Wenn eine Neuausführung möglich ist, stellt die Produktions-Pipeline-Statusseite die **Neu ausführen** neben der üblichen **Build-Protokoll herunterladen** -Option.
+In solchen Fällen, in denen eine erneute Ausführung möglich ist, bietet die Statusseite der Produktions-Pipeline neben der üblichen Option **Build-Protokoll herunterladen** auch die Option **Erneut ausführen**.
 
-![Die Option &quot;Neu ausführen&quot;im Fenster der Pipeline-Übersicht](/help/assets/re-execute.png)
+![Die Option „Erneut ausführen“ im Pipeline-Übersichtsfenster](/help/assets/re-execute.png)
 
 >[!NOTE]
 >
->Bei einer erneuten Ausführung wird der Build-Schritt in der Benutzeroberfläche beschriftet, um anzuzeigen, dass er Artefakte kopiert und nicht neu erstellt.
+>Bei einer erneuten Ausführung wird der Build-Schritt in der Benutzeroberfläche mit dem Hinweis versehen, dass er Artefakte kopiert und nicht neu erstellt.
 
 ### Beschränkungen {#limitations}
 
@@ -201,16 +201,16 @@ Wenn eine Neuausführung möglich ist, stellt die Produktions-Pipeline-Statussei
 
 ### Erneutes Ausführen der API {#reexecute-api}
 
-Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) um Trigger-Wiederausführungen sowie die Identifizierung von Ausführungen, die als Wiederausführungen ausgelöst wurden.
+Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [die Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) verwenden, um erneute Ausführungen auszulösen und Ausführungen zu identifizieren, die als erneute Ausführungen ausgelöst wurden.
 
 #### Auslösen einer erneuten Ausführung {#triggering}
 
-Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an den HAL-Link `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Produktionsbereitstellungsschritts erfolgen.
+Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an die HAL-Verknüpfung `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Schritts der Produktionsbereitstellung erfolgen.
 
-* Wenn dieser Link vorhanden ist, kann die Ausführung von diesem Schritt an neu gestartet werden.
-* Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt aus nicht erneut gestartet werden.
+* Wenn diese Verknüpfung vorhanden ist, kann die Ausführung von diesem Schritt aus neu gestartet werden.
+* Fehlt sie, kann die Ausführung ab diesem Schritt nicht wieder aufgenommen werden.
 
-Dieser Link steht nur für den Schritt zur Produktionsbereitstellung zur Verfügung.
+Diese Verknüpfung ist immer nur für den Schritt der Produktionsbereitstellung verfügbar.
 
 ```javascript
  {
@@ -247,10 +247,10 @@ Dieser Link steht nur für den Schritt zur Produktionsbereitstellung zur Verfüg
   "status": "FINISHED"
 ```
 
-Die Syntax des HAL-Links `href` -Wert ist nur ein Beispiel und der tatsächliche Wert sollte immer aus dem HAL-Link gelesen und nicht generiert werden.
+Die Syntax für den Wert `href` der HAL-Verknüpfung ist nur ein Beispiel, und der tatsächliche Wert sollte immer aus der HAL-Verknüpfung ausgelesen und nicht generiert werden.
 
 Das Senden einer `PUT`-Anfrage an diesen Endpunkt führt zu einer `201`-Antwort bei Erfolg, wobei der Antworttext die Darstellung der neuen Ausführung ist. Dies ähnelt dem Starten einer regulären Ausführung über die API.
 
-#### Erkennen einer erneuten Ausführung {#identifying}
+#### Identifizieren einer Ausführung mit erneuter Ausführung {#identifying}
 
-Wiederausgeführte Ausführungen können durch den Wert identifiziert werden `RE_EXECUTE` im `trigger` -Feld.
+Erneute Ausführungen können durch den Wert `RE_EXECUTE` im Feld `trigger` identifiziert werden.
