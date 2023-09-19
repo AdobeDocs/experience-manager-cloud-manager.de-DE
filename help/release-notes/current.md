@@ -2,10 +2,10 @@
 title: Versionshinweise für 2023.9.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2023.9.0.
 feature: Release Information
-source-git-commit: a3e926fa13d54da1322f3a5219519fae07ddb273
+source-git-commit: f15a4b739150ee40b6dc48de0fbc20859093c79c
 workflow-type: tm+mt
-source-wordcount: '164'
-ht-degree: 52%
+source-wordcount: '145'
+ht-degree: 57%
 
 ---
 
@@ -22,12 +22,8 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.9.0 ist der 14. September 2023. Die Veröffentlichung der nächsten Version ist für den 5. Oktober 2023 geplant.
 
-## Neue Funktionen {#what-is-new}
-
-* Diese Version besteht aus Fehlerbehebungen, die nur für Cloud Manager verfügbar sind.
-
 ## Fehlerbehebungen {#bug-fixes}
 
-* Wenn ein Programm gelöscht wird, werden auch alle verknüpften, laufenden Pipelines gelöscht, um sicherzustellen, dass die Pipeline nicht fälschlicherweise als fehlgeschlagen gekennzeichnet ist.
-* Wenn alle Schritte einer Pipeline-Ausführung &quot;abgeschlossen&quot;sind, wird der Status der Pipeline gelegentlich als &quot;ausgeführt&quot;betrachtet, sodass sie sich in einem blockierten Zustand zu befinden scheint. Es wird nun als &quot;vollständig&quot;bezeichnet.
-* Bei Repository-Verzweigungen, die mit dem Code-Generator-Archetyp generiert wurden, schlägt die CI/CD-Pipeline fehl.
+* Wenn ein Programm gelöscht wird, werden alle verknüpften, laufenden Pipelines nun ebenfalls gelöscht.
+* Es wurde ein gelegentlicher Fehler behoben, durch den alle Schritte einer Pipelineausführung als abgeschlossen markiert wurden, der Status der Pipeline jedoch weiterhin ausgeführt wurde, was das Erscheinungsbild eines blockierten Status verursachte.
+* Ein Fehler wurde behoben, wenn CI/CD-Pipelines für Repository-Verzweigungen, die den Archetyp generierten, fehlschlugen.
