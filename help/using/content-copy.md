@@ -2,10 +2,10 @@
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 223b547d6bc94137dfbb7d92862a508fa67799d2
-workflow-type: ht
-source-wordcount: '1096'
-ht-degree: 100%
+source-git-commit: fe5de4e1ab5cd0d0e317cd399b8e44758a6312c4
+workflow-type: tm+mt
+source-wordcount: '1139'
+ht-degree: 93%
 
 ---
 
@@ -124,6 +124,8 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination`, wenn Sie die im Content-Set angegebenen Ausschlusspfade beibehalten möchten. Wenn das Kontrollkästchen deaktiviert bleibt, werden Ausschlusspfade in der Zielumgebung gelöscht.
 
+1. Sie können den Versionsverlauf der kopierten Pfade aus der Quell- in die Zielumgebung kopieren. Kontrollkästchen aktivieren `Copy Versions` , wenn Sie alle Versionsverläufe kopieren möchten.
+
    ![Kopieren von Inhalten](/help/assets/copying-content.png)
 
 1. Tippen oder klicken Sie auf **Kopieren**.
@@ -159,7 +161,7 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
 * Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
 * Eine programm- und regionenübergreifende Inhaltskopie ist nicht möglich.
-* Eine Inhaltskopie für eine auf dem Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung bei demselben Cloud-Anbieter befinden.
+* Eine Inhaltskopie für eine auf dem Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung auf demselben Cloud-Anbieter und derselben Region befinden.
 * Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
@@ -167,3 +169,4 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
 * Das Inhaltskopie-Werkzeug kopiert Assets zusammen mit Metadaten von Dynamic Media aus der höheren Umgebung in die ausgewählte untere Umgebung.
    * Kopierte Assets müssen dann mithilfe des [Workflows für DAM-Prozess-Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=de) in der unteren Umgebung neu verarbeitet werden, um die entsprechende Konfiguration für Dynamic Media zu verwenden.
+* Der Vorgang zum Kopieren von Inhalten wird erheblich schneller ausgeführt, wenn der Versionsverlauf nicht kopiert wird.
