@@ -2,8 +2,8 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 42cafc03a607ace183d58adbe1c397c1a6c5c22f
-workflow-type: ht
+source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
+workflow-type: tm+mt
 source-wordcount: '1152'
 ht-degree: 100%
 
@@ -19,9 +19,11 @@ Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer
 Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 
 * Die Erstellungsumgebung ist Linux-basiert und von Ubuntu 18.04 abgeleitet.
-* Apache Maven 3.6.0 ist installiert.
-* Die installierten Java-Versionen sind Oracle JDK 8u202 und Oracle JDK 11.0.2.
-* Standardmäßig wird die Umgebungsvariable `JAVA_HOME` auf `/usr/lib/jvm/jdk1.8.0_202` festgelegt, was Oracle JDK 8u202 enthält. Weitere Einzelheiten finden Sie im Abschnitt [Alternative JDK-Version für die Maven-Ausführung](#alternate-maven).
+* Apache Maven 3.8.8 ist installiert.
+* Die installierten Java-Versionen sind Oracle JDK 8u371 und Oracle JDK 11.0.20.
+   * `/usr/lib/jvm/jdk1.8.0_371`
+   * `/usr/lib/jvm/jdk-11.0.20`
+* Standardmäßig wird die Umgebungsvariable `JAVA_HOME` auf `/usr/lib/jvm/jdk1.8.0_371` festgelegt, was Oracle JDK 8u371 enthält. Weitere Einzelheiten finden Sie im Abschnitt [Alternative JDK-Version für die Maven-Ausführung](#alternate-maven).
 * Es sind einige zusätzliche erforderliche Systempakete installiert.
    * `bzip2`
    * `unzip`
@@ -47,7 +49,6 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [Erstellen einer API-Integration](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API-Berechtigungen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
-
 
 ## Verwenden einer bestimmten Java-Version {#using-java-version}
 
@@ -134,11 +135,11 @@ Standard-Umgebungsvariablen können an verschiedenen Stellen verwendet werden.
 
 #### Authoring, Vorschau und Veröffentlichung {#author-preview-publish}
 
-Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in der Authoring-, Vorschau- und Veröffentlichungsumgebung verwendet werden.
+In der Authoring-, Vorschau- und Veröffentlichungsumgebung können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
 
 #### Dispatcher {#dispatcher}
 
-Nur reguläre Umgebungsvariablen können [mit dem Dispatcher verwendet werden.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) Geheimnisse können nicht verwendet werden.
+Im [Dispatcher können nur reguläre Umgebungsvariablen verwendet werden.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) Geheimnisse können nicht verwendet werden.
 
 Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet werden.
 
@@ -148,7 +149,7 @@ Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet 
 
 #### OSGi-Konfigurationen {#osgi}
 
-Sowohl reguläre Umgebungsvariablen als auch Geheimnisse können in [OSGi-Konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de) verwendet werden.
+In [OSGi-Konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de) können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
 
 ### Pipeline-Variablen {#pipeline-variables}
 

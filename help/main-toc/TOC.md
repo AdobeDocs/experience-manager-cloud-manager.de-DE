@@ -7,10 +7,10 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: f1f1d53181362e4a92ad6918182107d710724496
-workflow-type: ht
-source-wordcount: '348'
-ht-degree: 100%
+source-git-commit: 76a3dc6df41032488a3cfe11d0c72769562b96df
+workflow-type: tm+mt
+source-wordcount: '359'
+ht-degree: 97%
 
 ---
 
@@ -30,6 +30,7 @@ ht-degree: 100%
    + [Quell-Code-Repository](/help/requirements/source-code-repository.md)
    + [Rollenbasierte Berechtigungen](/help/requirements/role-based-permissions.md)
    + [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md)
+   + [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md)
    + [Umgebungsbereitstellung](/help/requirements/environment-provisioning.md)
 + Erste Schritte {#getting-started}
    + [Erste Anmeldung](/help/getting-started/first-time-login.md)
@@ -59,12 +60,14 @@ ht-degree: 100%
    + [Repositorys](/help/managing-code/repositories.md)
    + [Integrieren mit Git](/help/managing-code/git-integration.md)
    + [Arbeiten mit mehreren Git-Repositorys](/help/managing-code/multiple-git-repos.md)
+   + [Arbeiten mit Ihren eigenen GitHub-Repositorys](/help/managing-code/byo-github.md)
 + Assistent für Produktaktualisierungen {#product-update-wizard}
    + [Übersicht](/help/product-update-wizard/overview.md)
    + [Test](/help/product-update-wizard/evaluation.md)
 + Versionshinweise {#release-notes}
    + [Aktuelle Versionshinweise](/help/release-notes/current.md)
    + 2023 {#2023}
+      + [Versionshinweise für 2023.10.0](/help/release-notes/2023/2023-10-0.md)
       + [Versionshinweise für 2023.9.0](/help/release-notes/2023/2023-9-0.md)
       + [Versionshinweise für 2023.8.0](/help/release-notes/2023/2023-8-0.md)
       + [Versionshinweise für 2023.7.0](/help/release-notes/2023/2023-7-0.md)

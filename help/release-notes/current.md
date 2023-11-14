@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2023.10.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2023.10.0.
+title: Versionshinweise für 2023.11.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2023.11.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 851364e74864c28b3bcd9285dfbe06ddb530eb10
-workflow-type: ht
-source-wordcount: '226'
-ht-degree: 100%
+source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+workflow-type: tm+mt
+source-wordcount: '351'
+ht-degree: 23%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2023.10.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2023.11.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.10.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.11.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,16 +21,28 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2023.10.0 ist der 5. Oktober 2023. Die nächste Version ist für den 2. November 2023 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.11.0 ist der 14. November 2023. Die nächste Version wurde am 7. Dezember 2023 veröffentlicht.
 
 ## Neue Funktionen {#what-is-new}
 
-* Die Rolle **Bereitstellungs-Manager** kann [eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM-Dispatcher-Cache gelöscht werden, wenn eine produktionsfremde Pipeline ausgeführt wird.](/help/using/non-production-pipelines.md)
-   * Wenn diese Cache-Aktionen konfiguriert sind, werden sie im Rahmen der Einrichtung der Bereitstellungs-Pipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt.
-   * Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher.
-* Mit der Cloud Manager-Version Oktober 2023 werden Java-Versionen schrittweise aktualisiert.
-   * Die kleineren Versionen für Java 8 und 11 und Maven wurden aktualisiert und werden in den nächsten zwei Monaten schrittweise eingeführt. Die neue Version verfügt über mehrere Sicherheitskorrekturen und Fehlerbehebungen. Die neuen Versionen sind:
-   * *Maven 3.8.8*
-   * *Java 8-Version: /usr/lib/jvm/jdk1.8.0_371*
-   * *Java 11-Version: /usr/lib/jvm/jdk-11.0.20*
-   * [Siehe die OpenJDK-Beratung](https://openjdk.org/groups/vulnerability/advisories/) für Details zur Sicherheit und zu Fehlerbehebungen in diesen JDK-Updates.
+* [Seite mit Details zur Pipelineausführung](/help/using/managing-pipelines.md#view-details) zeigt nun alle Schritte in einer Pipeline-Ausführung an, bei denen die Schritte noch nicht ausgegraut wurden.
+* Bei beiden **[Aktivität](/help/using/managing-pipelines.md#activity)** und **[Pipelines](/help/using/managing-pipelines.md#pipelines)** Seiten enthält, ist jetzt eine Zusammenfassung der Pipeline-Ausführung verfügbar, wenn auf eine Pipeline mit einem Ausführungsstatus geklickt wird.
+* Eine neue **Dauer** wurde zum Abschnitt [Pipeline-Detailseite](/help/using/managing-pipelines.md#view-details) , die die durchschnittliche Dauer des Pipeline-Schritts basierend auf dem historischen Trend für dieses Programm enthält.
+* Auf der Seite zur Pipelineausführung zeigen die abgeschlossenen Schritte jetzt die Dauer an
+* Cloud Manager [Content Copy-Tool](/help/using/content-copy.md) ermöglicht es Benutzern, veränderliche Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Umgebungen zu Testzwecken zu kopieren.
+
+## Frühzeitige Annahme des Programms {#early-adoption}
+
+Nehmen Sie an unserem Programm teil und haben Sie die Möglichkeit, einige zukünftige Funktionen zu testen
+
+### Erstellen Sie Ihren eigenen GitHub {#byo-github}
+
+Wenn Sie Ihre Repositorys mit GitHub verwalten, [Sie können jetzt Code direkt in Ihren GitHub-Repositorys über Cloud Manager validieren.](/help/managing-code/byo-github.md) Durch diese Integration entfällt die Notwendigkeit, Code konsistent mit dem Adobe-Repository zu synchronisieren, und Sie können Pull-Anforderungen überprüfen, bevor Sie sie in die Hauptverzweigungen zusammenführen.
+
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte eine E-Mail an `Grp-CloudManager_BYOG@adobe.com` von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse aus.
+
+### Benutzerdefinierte Berechtigungen {#custom-permissions}
+
+[Benutzerdefinierte Berechtigungen für Cloud Manager](/help/using/custom-permissions.md) können Sie neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzer zu beschränken.
+
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte eine E-Mail `Grp-CloudManager_ams_custompermissions@adobe.com` von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse aus.

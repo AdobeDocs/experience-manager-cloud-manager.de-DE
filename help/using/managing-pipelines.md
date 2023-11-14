@@ -2,10 +2,10 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 99325c28c379103db2ba4c19bb6d206849c6e126
-workflow-type: ht
-source-wordcount: '517'
-ht-degree: 100%
+source-git-commit: 28ab641ec85335d8330aeb465c07bf0264218fe4
+workflow-type: tm+mt
+source-wordcount: '807'
+ht-degree: 67%
 
 ---
 
@@ -33,6 +33,38 @@ Am Ende der Pipeline-Liste befinden sich allgemeine Optionen.
 * **Alle anzeigen**: Leitet den Anwender zum Bildschirm **Pipelines**, wo alle Pipelines in einer detaillierteren Tabelle angezeigt werden
 * **Zugriff auf Repo Info**: Zeigt die Informationen an, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlich sind
 * **Weitere Infos**: Navigiert zu den Dokumentationsressourcen zur CI/CD-Pipeline.
+
+## Pipelines Window {#pipelines}
+
+Die **Pipelines** zeigt eine vollständige Liste aller Pipelines für das ausgewählte Programm an. Dies ist nützlich, da es umfassendere Informationen enthält, als im Abschnitt [Pipeline-Karte.](#pipeline-card)
+
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+
+1. Aus dem **Programmübersicht** Seite, tippen oder klicken Sie auf **Pipelines** Registerkarte, um zu der **Pipelines** Fenster.
+
+1. Hier sehen Sie eine Liste aller Pipelines für das Programm sowie die Ausführung der Pipeline wie im **Pipelines Card**.
+
+Wenn eine Pipeline ausgeführt wird, bewegen Sie den Mauszeiger über die **Status** enthält Details zur Ausführung.
+
+![Details zur Pipelineausführung](/help/assets/configure-pipelines/pipeline-status.png)
+
+Tippen oder Klicken **Details anzeigen** bringt Sie zu [Details zur Pipelineausführung.](#view-details)
+
+## Aktivitätsfenster {#activity}
+
+Die **Tätigkeiten** zeigt eine vollständige Liste aller Pipelines-Ausführungen für das ausgewählte Programm an.
+
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+
+1. Aus dem **Programmübersicht** Seite, tippen oder klicken Sie auf **Aktivität** Registerkarte, um zu der **Aktivität** Fenster.
+
+1. Hier sehen Sie eine Liste aller Pipeline-Ausführungen für das Programm, einschließlich aktueller und historischer Ausführungen.
+
+Wenn eine Pipeline ausgeführt wird, bewegen Sie den Mauszeiger über die **Status** enthält Details zur Ausführung.
+
+![Details zur Pipelineausführung](/help/assets/configure-pipelines/pipeline-activity.png)
+
+Tippen oder Klicken **Details anzeigen** bringt Sie zu [Details zur Pipelineausführung.](#view-details)
 
 ## Ausführen von Pipelines {#running-pipelines}
 
@@ -85,6 +117,16 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 ![Pipeline-Details](/help/assets/configure-pipelines/pipeline-running-details.png)
 
 Von hier aus können Sie den Status der verschiedenen Schritte der Pipeline einsehen und Build-Protokolle zu Diagnosezwecken abrufen. Weitere Informationen finden Sie im Dokument [Bereitstellung von Code](/help/using/code-deployment.md).
+
+Alle Schritte in einer Pipeline-Ausführung werden angezeigt, wobei die Schritte, die noch nicht gestartet wurden, ausgegraut sind. Die abgeschlossenen Schritte zeigen ihre Dauer an.
+
+Sobald ein Pipeline-Schritt abgeschlossen ist, wird eine Zusammenfassung angezeigt.
+
+![Schrittzusammenfassung](/help/assets/configure-pipelines/pipeline-step.png)
+
+Tippen oder klicken Sie auf **Details anzeigen** -Link, um die **Dauer** Abschnitt. Dies umfasst die durchschnittliche Dauer der Pipeline basierend auf dem historischen Trend für dieses Programm.
+
+![Dauer](/help/assets/configure-pipelines/duration.png)
 
 >[!NOTE]
 >
