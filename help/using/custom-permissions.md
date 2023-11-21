@@ -1,32 +1,32 @@
 ---
 title: Benutzerdefinierte Berechtigungen
-description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzer zu beschränken.
-source-git-commit: e1a3814041a8a7842e39ab09289c83e9c935b4ab
+description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
+source-git-commit: 769538ec21b21e612619b0c96718f27982574f6c
 workflow-type: tm+mt
-source-wordcount: '1444'
-ht-degree: 2%
+source-wordcount: '1489'
+ht-degree: 96%
 
 ---
 
 
 # Benutzerdefinierte Berechtigungen {#custom-permissions}
 
-Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzer zu beschränken.
+Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 
 >[!NOTE]
 >
->Diese Funktion steht nur für [das Programm für den frühen Anwender.](/help/release-notes/current.md#early-adoption)
+>Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md#early-adoption) verfügbar.
 
 ## Einführung {#introduction}
 
-Cloud Manager verfügt über eine Reihe vordefinierter Rollen, die den Zugriff auf verschiedene Funktionen von Cloud Manager steuern:
+Cloud Manager bietet eine Reihe vordefinierter Rollen, die den Zugriff auf verschiedene Cloud Manager-Funktionen steuern:
 
 * Geschäftsinhaber
 * Programm-Manager
 * Bereitstellungs-Manager
 * Entwickler
 
-Mit benutzerdefinierten Berechtigungen können Benutzer neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff für Cloud Manager-Benutzer auf Programme, Pipelines und Umgebungen zu beschränken.
+Mit benutzerdefinierten Berechtigungen können Benutzende neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 
 >[!TIP]
 >
@@ -34,40 +34,40 @@ Mit benutzerdefinierten Berechtigungen können Benutzer neue benutzerdefinierte 
 
 ## Verwenden benutzerdefinierter Berechtigungen {#using}
 
-Um eigene benutzerdefinierte Berechtigungen zu erstellen und zu verwenden, sind drei Schritte erforderlich:
+Um eigene, benutzerdefinierte Berechtigungen zu erstellen und zu verwenden, sind drei Schritte erforderlich:
 
-1. [Erstellen Sie ein neues Produktprofil.](#create)
-1. [Weisen Sie dem neuen Produktprofil benutzerdefinierte Berechtigungen zu.](#assign-permissions)
-1. [Weisen Sie dem neuen Produktprofil Benutzer zu.](#assign-users)
+1. [Ein neues Produktprofil erstellen.](#create)
+1. [Dem neuen Produktprofil benutzerdefinierte Berechtigungen zuweisen.](#assign-permissions)
+1. [Dem neuen Produktprofil Benutzende zuweisen.](#assign-users)
 
-In diesem Abschnitt werden diese Schritte beschrieben. Sie können es für nützlich halten, die Informationen unter [Begriffe](#terms) und [Konfigurierbare Berechtigungen](#configurable-permissions) -Abschnitte, während Sie Ihre eigenen benutzerdefinierten Berechtigungen erstellen.
+In diesem Abschnitt werden diese Schritte beschrieben. Möglicherweise helfen Ihnen die Informationen unter [Begriffe](#terms) und [Konfigurierbare Berechtigungen](#configurable-permissions) bei der Erstellung Ihrer eigenen benutzerdefinierten Berechtigungen.
 
 >[!NOTE]
 >
->Sie müssen über Produktadministratorrechte in Admin Console verfügen, um neue Profile erstellen und Berechtigungen für Cloud Manager verwalten zu können.
+>Sie müssen über Produktadministrator-Berechtigungen in Admin Console verfügen, um neue Profile erstellen und Cloud Manager-Berechtigungen verwalten zu können.
 
-### Neues Produktprofil erstellen {#create}
+### Erstellen eines neuen Produktprofils {#create}
 
 Sie müssen zunächst ein neues Produktprofil erstellen, bevor Sie benutzerdefinierte Berechtigungen zuweisen können.
 
-1. Melden Sie sich bei Cloud Manager an unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/)
+1. Melden Sie sich bei Cloud Manager unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) an.
 
-1. Produkt auswählen **AEM Managed Services**.
+1. Wählen Sie das Produkt **AEM Managed Services** aus.
 
-1. Suchen Sie nach und -Instanz mit dem Namen, der dem Muster entspricht. `*-cloud-manager` und tippen oder klicken Sie auf , um Benutzer und Berechtigungen zu verwalten.
+1. Suchen Sie nach einer Instanz, deren Name dem Muster `*-cloud-manager` entspricht, und tippen oder klicken Sie darauf, um Benutzende und Berechtigungen zu verwalten.
 
-1. Sie werden zum **Produkte** -Registerkarte der Admin Console, auf der Sie Benutzer und Berechtigungen für Cloud Manager verwalten können. Tippen oder klicken Sie in der Admin Console auf die **Neues Profil** Schaltfläche.
+1. Sie werden zur Registerkarte **Produkte** der Admin Console geleitet, auf der Sie Cloud Manager-Benutzende und Berechtigungen verwalten können. Tippen oder klicken Sie in der Admin Console auf **Neues Profil**.
 
-![Schaltfläche &quot;Neues Profil&quot;](/help/assets/admin-console-new-profile.png)
+![Schaltfläche „Neues Profil“](/help/assets/admin-console-new-profile.png)
 
 1. Geben Sie die allgemeinen Details zum Profil an.
 
-   * **Name des Produktprofils** - Ein beschreibender Name für das Profil
-   * **Anzeigename** - Ein abgekürzter Name, der in der Benutzeroberfläche angezeigt wird (Optionen)
-   * **Beschreibung** - Eine informative Beschreibung des Profils, das seinen Zweck erklärt (optional)
-   * **Benutzer per E-Mail benachrichtigen** - Wenn diese Option aktiviert ist, werden Benutzer per E-Mail benachrichtigt, wenn sie diesem Profil hinzugefügt oder daraus entfernt werden.
+   * **Name des Produktprofils** – Ein aussagekräftiger Name des Profils
+   * **Anzeigename** – Ein abgekürzter Name, der auf der Benutzeroberfläche angezeigt wird (Optionen)
+   * **Beschreibung** – Eine informative Beschreibung des Profils, das seinen Zweck erklärt (optional)
+   * **Benutzer per E-Mail benachrichtigen** – Wenn diese Option aktiviert ist, werden Benutzende per E-Mail benachrichtigt, wenn sie zu diesem Profil hinzugefügt oder daraus entfernt werden.
 
-1. Tippen oder klicken **Speichern** wenn abgeschlossen.
+1. Tippen oder klicken Sie auf **Speichern**, wenn Sie den Vorgang abgeschlossen haben.
 
 Das neue Produktprofil wird gespeichert und ist in der Liste der Produktprofile in der Admin Console sichtbar.
 
@@ -75,99 +75,104 @@ Das neue Produktprofil wird gespeichert und ist in der Liste der Produktprofile 
 
 Nachdem Sie ein neues Produktprofil erstellt haben, können Sie ihm benutzerdefinierte Berechtigungen zuweisen.
 
-1. Tippen oder klicken Sie in der Admin Console auf den Namen der [neues Produktprofil, das Sie soeben erstellt haben.](#create)
+1. Tippen oder klicken Sie in der Admin Console auf den Namen des [neuen Produktprofils, das Sie soeben erstellt haben](#create).
 
-1. Wählen Sie im sich öffnenden Fenster die **Berechtigungen** um eine Liste bearbeitbarer Berechtigungen anzuzeigen.
+1. Öffnen Sie in dem Fenster, das daraufhin erscheint, die Registerkarte **Berechtigungen**, um eine Liste bearbeitbarer Berechtigungen anzuzeigen.
 
    ![Bearbeitbare Berechtigungen](/help/assets/permissions-tab.png)
 
-1. Tippen oder klicken Sie auf die **Bearbeiten** Link einer Berechtigung zur Bearbeitung.
+1. Tippen oder klicken Sie auf den Link **Bearbeiten** einer Berechtigung, um sie zu bearbeiten.
 
-1. Die **Berechtigungen bearbeiten** öffnet sich.
-   * Die Berechtigung, die Sie im vorherigen Schritt ausgewählt haben, wird in der linken Spalte ausgewählt.
-   * Die für die Zuweisung der Berechtigung verfügbaren Berechtigungselemente befinden sich in der mittleren Spalte **Verfügbare Berechtigung** Elemente.
+1. Es öffnet sich das Fenster **Berechtigungen bearbeiten**.
+   * Die Berechtigung, die Sie im vorherigen Schritt ausgewählt haben, ist in der linken Spalte ausgewählt.
+   * Die für die Zuweisung der Berechtigung verfügbaren Berechtigungselemente befinden sich in der mittleren Spalte **Verfügbare Berechtigungselemente**.
    * Die zugewiesenen Berechtigungselemente befinden sich in der rechten Spalte mit der Bezeichnung **Eingeschlossene Berechtigungselemente**.
 
    ![Berechtigungselemente bearbeiten](/help/assets/edit-permission-items.png)
 
-1. Tippen oder klicken Sie auf das Pluszeichen (`+`) neben dem Berechtigungselement, um es der Spalte hinzuzufügen. **Eingeschlossene Berechtigungselemente**.
+1. Tippen oder klicken Sie auf das Pluszeichen (`+`) neben dem Berechtigungselement, um dieses der Spalte **Eingeschlossene Berechtigungselemente** hinzuzufügen.
 
-   * Tippen oder klicken Sie auf `i` neben einem Berechtigungselement klicken, um mehr darüber zu erfahren.
+   * Tippen oder klicken Sie auf das Symbol `i` neben einem Berechtigungselement, um mehr darüber zu erfahren.
 
-1. Tippen oder klicken Sie auf **Alle hinzufügen** -Schaltfläche oben im **Verfügbare Berechtigungen** um alle Berechtigungen hinzuzufügen. Tippen oder klicken Sie auf **Alle entfernen** um alle zuvor ausgewählten Berechtigungen zu entfernen.
+1. Tippen oder klicken Sie auf **Alle hinzufügen** oben in der Spalte **Verfügbare Berechtigungen**, um alle Berechtigungen hinzuzufügen. Tippen oder klicken Sie auf **Alle entfernen**, um alle zuvor ausgewählten Berechtigungen zu entfernen.
 
-1. Tippen oder klicken **Speichern** wenn Sie mit der Definition der Berechtigungselemente für Ihr neues Produktprofil fertig sind.
+1. Tippen oder klicken Sie auf **Speichern**, wenn Sie die Berechtigungselemente für Ihr neues Produktprofil definiert haben.
 
 Ihr neues Produktprofil wird jetzt mit den benutzerdefinierten Berechtigungen gespeichert.
 
-### Benutzer benutzerdefinierten Berechtigungen zuweisen {#assign-users}
+### Zuweisen von Benutzenden zu den benutzerdefinierten Berechtigungen {#assign-users}
 
-Sie können jetzt Benutzer dem neuen Produktprofil zuweisen, das Sie mit benutzerdefinierten Berechtigungen erstellt haben.
+Sie können dem neuen Produktprofil, das Sie mit benutzerdefinierten Berechtigungen erstellt haben, jetzt Benutzende zuweisen.
 
-1. Tippen oder klicken Sie in der Admin Console auf den Namen der [neues Produktprofil, dem Sie soeben benutzerdefinierte Berechtigungen zugewiesen haben.](#assign-permissions)
+1. Tippen oder klicken Sie dazu in der Admin Console auf den Namen des [neuen Produktprofils, dem Sie soeben benutzerdefinierte Berechtigungen zugewiesen haben](#assign-permissions).
 
-1. Wählen Sie im sich öffnenden Fenster die **Benutzer** Registerkarte.
+1. Öffnen Sie in dem Fenster, das daraufhin erscheint, die Registerkarte **Benutzer**.
 
-1. Tippen oder klicken Sie auf **Benutzer hinzufügen** und weisen Sie Ihrem neuen Produktprofil Benutzer mit benutzerdefinierten Berechtigungen zu.
+1. Tippen oder klicken Sie auf **Benutzer hinzufügen** und weisen Sie Ihrem neuen Produktprofil Benutzende mit benutzerdefinierten Berechtigungen zu.
 
-Siehe Abschnitt . **Hinzufügen von Benutzern und Benutzergruppen zu einem Produktprofil** des Dokuments [Verwalten von Produktprofilen für Unternehmensbenutzer](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html) für weitere Informationen zur Verwendung der Admin Console.
+Weitere Informationen zum Arbeiten mit der Admin Console finden Sie im Abschnitt **Hinzufügen von Benutzenden und Benutzergruppen zu einem Produktprofil** des Dokuments [Verwalten von Produktprofilen für Unternehmensbenutzende](https://helpx.adobe.com/de/enterprise/using/manage-product-profiles.html).
 
 ## Konfigurierbare Berechtigungen {#configurable-permissions}
 
-Die folgenden Berechtigungen sind für das Erstellen benutzerdefinierter Profile verfügbar.
+Zum Erstellen benutzerdefinierter Profile stehen folgende Berechtigungen zur Verfügung.
 
 | Berechtigung | Beschreibung |
 |---|---|
-| Programmzugriff | Ermöglichen des Zugriffs auf Programme |
-| Programmbearbeitung | Benutzer können Programme bearbeiten |
-| Pipeline erstellen | Benutzer können neue Pipelines erstellen |
-| Pipeline löschen | Löschen von Pipelines durch Benutzer zulassen |
-| Pipeline bearbeiten | Bearbeiten von Pipelines durch Benutzer zulassen |
-| Produktionsbereitstellungen Genehmigen/Ablehnen | Erlauben Sie Benutzern, einen Produktionsbereitstellungsschritt zu genehmigen oder abzulehnen |
-| Pipeline-Ausführungen abbrechen | Abbrechen von Pipeline-Ausführungen durch Benutzer zulassen |
-| Pipeline-Ausführungen starten | Benutzer können neue Pipeline-Ausführungen starten |
-| Wichtige Metrikfehler überschreiben/ablehnen | Benutzer können wichtige Metrikfehler überschreiben/ablehnen |
-| Zeitplan für Produktionsbereitstellungen | Benutzern erlauben, einen Produktionsbereitstellungsschritt zu planen |
-| Zugriff auf Repository-Informationen | Ermöglichen Sie Benutzern den Zugriff auf Repository-Informationen und das Generieren des Zugriffs-Kennworts |
+| Programmzugriff | Benutzenden den Zugriff auf Programme gewähren |
+| Programmbearbeitung | Benutzenden erlauben, Programme zu bearbeiten |
+| Pipeline erstellen | Benutzenden erlauben, neue Pipelines zu erstellen |
+| Pipeline löschen | Benutzenden erlauben, Pipelines zu löschen |
+| Pipeline-Bearbeitung | Benutzenden erlauben, Pipelines zu bearbeiten |
+| Genehmigung/Ablehnung von Produktionsbereitstellungen | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu genehmigen oder abzulehnen |
+| Pipeline-Ausführungen abbrechen | Benutzenden erlauben, Pipeline-Ausführungen abzubrechen |
+| Pipeline-Ausführungen starten | Benutzenden erlauben, neue Pipeline-Ausführungen zu starten |
+| Wichtige Metrikfehler überschreiben/ablehnen | Benutzenden erlauben, wichtige Metrikfehler zu überschreiben/abzulehnen |
+| Produktionsbereitstellungs-Zeitplan | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu planen |
+| Zugriff auf Repository-Informationen | Benutzenden erlauben, auf Repository-Informationen zuzugreifen und ein Passwort für den Zugriff zu erstellen |
+| Repository erstellen | Benutzern das Erstellen neuer Git-Repositorys ermöglichen |
+| Repository löschen | Löschen von Git-Repositorys durch Benutzer zulassen |
+| Repository bearbeiten | Benutzern erlauben, Git-Repositorys zu bearbeiten |
+| Repository-Codegenerierung | Benutzern erlauben, ein Projekt aus einem Archetyp zu generieren |
+| Inhaltskopie verwalten | Benutzern erlauben, Vorgänge zum Kopieren von Inhalten zu verwalten |
 
-### Berechtigungen auf Organisationsebene {#organization-level}
+### Berechtigungen auf Unternehmensebene {#organization-level}
 
-Berechtigungen auf Organisationsebene beziehen sich auf Berechtigungen, die immer für alle Programme in einer Organisation gewährt werden.
+Berechtigungen auf Unternehmensebene beziehen sich auf Berechtigungen, die immer für alle Programme in einem Unternehmen gewährt werden.
 
-Die folgenden Berechtigungen sind Berechtigungen auf Unternehmensebene:
+Folgende Berechtigungen sind Berechtigungen auf Unternehmensebene:
 
-* **Zugriff auf Repository-Informationen** Mit dieser Berechtigung auf Mandanten-/Organisationsebene können Benutzer Benutzernamen, Kennwort und Repository-URL generieren, um auf das Kundenprojekt zuzugreifen und zu diesem beizutragen.
-   * Benutzername und Kennwort für den Repository-Zugriff sind in allen Repositorys in der Organisation gleich, die Repository-URL ist jedoch für jedes Programm eindeutig.
-   * Lesen Sie das Dokument . [Quellcode-Repository](/help/requirements/source-code-repository.md) für weitere Informationen.
+* **Zugriff auf Repository-Informationen** Mit dieser Berechtigung auf Mandanten-/Unternehmensebene können Benutzende Benutzernamen, Passwort und Repository-URL generieren, um auf das Kundenprojekt zuzugreifen und zu diesem beizutragen.
+   * Benutzername und Passwort für den Repository-Zugriff sind für alle Repositorys des Unternehmens gleich, die Repository-URL ist jedoch für jedes Programm eindeutig.
+   * Weitere Informationen finden Sie im Dokument [Quell-Code-Repository](/help/requirements/source-code-repository.md).
 
 ## Begriffe {#terms}
 
-Die folgenden Begriffe werden beim Erstellen und Verwalten von benutzerdefinierten Berechtigungen und vordefinierten Rollen verwendet.
+Folgende Begriffe werden beim Erstellen und Verwalten benutzerdefinierter Berechtigungen und vordefinierter Rollen verwendet.
 
 | Begriff | Beschreibung |
 |---|---|
-| Vordefinierte Berechtigungen | Vordefinierte Rollen wie **Business Owner**, **Bereitstellungsmanager**, usw. , um verschiedene Funktionen von Cloud Manager zu steuern. Weitere Informationen zu vordefinierten Rollen finden Sie im Dokument [Rollenbasierte Berechtigungen.](/help/requirements/role-based-permissions.md) |
-| Benutzerdefinierte Berechtigungen | Cloud Manager-Funktionen, mit denen Benutzer Berechtigungsprofile erstellen können, um Rollen für unterstützte Cloud Manager-Funktionen zu definieren |
-| Berechtigungsprofil | In der Admin Console erstellt, um konfigurierbare Berechtigungen zu verwalten, die für Benutzer gelten, die Teil des Berechtigungsprofils sind |
+| Vordefinierte Berechtigungen | Vordefinierte Rollen wie **Geschäftseigentümer**, **Bereitstellungsmanager**, usw. zur Steuerung verschiedener Cloud Manager-Funktionen. Weitere Informationen zu vordefinierten Rollen finden Sie im Dokument [Rollenbasierte Berechtigungen.](/help/requirements/role-based-permissions.md) |
+| Benutzerdefinierte Berechtigungen | Cloud Manager-Funktionen, mit denen Benutzende Berechtigungsprofile erstellen können, um Rollen zur Verwaltung unterstützter Cloud Manager-Funktionen zu definieren |
+| Berechtigungsprofil | Werden in der Admin Console zur Verwaltung konfigurierbarer Berechtigungen erstellt, die für Benutzende gelten, die Teil des Berechtigungsprofils sind |
 | Konfigurierbare Berechtigung | Cloud Manager-Berechtigungen, die im Berechtigungsprofil konfiguriert werden können |
 | Berechtigungselement | Eine Programm-, Umgebungs- oder Pipeline-Ressource, auf die eine Berechtigung angewendet werden kann |
 
-Berechtigungselemente beziehen sich auf den Umfang, in dem die Berechtigung angewendet wird. In der Regel ist dies einer der folgenden Schritte.
+Berechtigungselemente beziehen sich auf den Anwendungsumfang der Berechtigung. In der Regel ist dies eines der folgenden Elemente.
 
 | Berechtigungselementtyp | Beispiel | Beschreibung |
 |---|---|---|
-| Organisation | Organisation:companyA | Alle anwendbaren Ressourcen einer Organisation. Eine Ressource kann ein Programm, eine Umgebung oder eine Pipeline sein. Wenn der Benutzer eine Organisation für eine Berechtigung hinzufügt, erhalten auch alle neuen Ressourcen in dieser Organisation diese Berechtigung. |
+| Unternehmen | Unternehmen:FirmaA | Alle anwendbaren Ressourcen eines Unternehmens. Eine Ressource kann ein Programm, eine Umgebung oder eine Pipeline sein. Wenn Benutzende ein Unternehmen für eine Berechtigung hinzufügen, erhalten auch alle neuen Ressourcen in diesem Unternehmen diese Berechtigung. |
 | Programm | Programm A | Alle anwendbaren Ressourcen eines Programms |
-| Umgebung | Programm A : Umwelt | Anwendbar in einer bestimmten Umgebung |
-| Pipeline | Programm A : Pipeline | Anwendbar auf einer bestimmten Pipeline |
+| Umgebung | Programm A : Umgebung | Anwendbar für eine bestimmte Umgebung |
+| Pipeline | Programm A : Pipeline | Anwendbar für eine bestimmte Pipeline |
 
 ## Einschränkungen {#limitations}
 
 Beachten Sie bei der Verwendung benutzerdefinierter Berechtigungen die folgenden Einschränkungen.
 
-* A [Begrenzte Berechtigungen sind verfügbar](#configurable-permissions) zum Erstellen benutzerdefinierter Profile.
-* Ressourcen wie Programm, Umgebung, Pipeline usw. die in Cloud Manager erstellt wurden, kann es zwei Minuten dauern, bis die Admin Console zur Berechtigungskonfiguration angezeigt wird.
-* In seltenen Fällen, in denen der benutzerdefinierte Berechtigungsdienst nicht reagiert, sind vordefinierte Profile weiterhin verfügbar und Benutzer in vordefinierten Profilen haben weiterhin angemessenen Zugriff.
+* Zur Erstellung benutzerdefinierter Profile ist ein [begrenzter Satz an Berechtigungen verfügbar](#configurable-permissions).
+* Bei Ressourcen wie Programm, Umgebung, Pipeline usw., die in Cloud Manager erstellt wurden, kann es bis zu zwei Minuten dauern, bis die Admin Console zur Berechtigungskonfiguration angezeigt wird.
+* In seltenen Fällen, in denen der benutzerdefinierte Berechtigungsdienst nicht reagiert, sind vordefinierte Profile weiterhin verfügbar und Benutzende in vordefinierten Profilen haben weiterhin darauf Zugriff.
 
 ## Häufig gestellte Fragen {#faq}
 
@@ -180,26 +185,26 @@ Beachten Sie bei der Verwendung benutzerdefinierter Berechtigungen die folgenden
 
 Weitere Informationen zu vordefinierten Rollen finden Sie im Dokument [Rollenbasierte Berechtigungen.](/help/requirements/role-based-permissions.md)
 
-### Was passiert mit vordefinierten Berechtigungsprofilen mit der Einführung in benutzerdefinierte Profile?
+### Was passiert mit vordefinierten Berechtigungsprofilen bei der Einführung in benutzerdefinierte Profile?
 
 Die standardmäßigen Produktprofile und Cloud Manager-Rollen funktionieren weiterhin wie zuvor.
 
 ### Kann ich vordefinierte Berechtigungsprofile bearbeiten?
 
-Nein, Standardprofile können nicht bearbeitet werden. Sie können dem standardmäßigen Berechtigungsprofil keine Berechtigungen hinzufügen oder entfernen. Sie können nur Benutzer aus vordefinierten Profilen hinzufügen oder entfernen.
+Nein, Standardprofile können nicht bearbeitet werden. Sie können keine Berechtigungen zum standardmäßigen Berechtigungsprofil hinzufügen oder welche daraus entfernen. Sie können nur Benutzende zu vordefinierten Profilen hinzufügen oder daraus entfernen.
 
-### Sollte ich vordefinierte Berechtigungsprofile löschen, da jetzt benutzerdefinierte Profile verfügbar sind?
+### Sollte ich vordefinierte Berechtigungsprofile löschen, wenn benutzerdefinierte Profile verfügbar sind?
 
 Vordefinierte Berechtigungsprofile dürfen nicht aus der Admin Console gelöscht werden.
 
-### Kann ich Benutzer zu mehreren Berechtigungsprofilen hinzufügen?
+### Kann ich Benutzende zu mehreren Berechtigungsprofilen hinzufügen?
 
-Ja, ein Benutzer kann Teil mehrerer Profile sein, einschließlich vordefinierter und benutzerdefinierter Berechtigungsprofile. Wenn ein Benutzer mehreren Profilen zugewiesen wird, stehen ihm die kombinierten Berechtigungen aus allen zugewiesenen Berechtigungsprofilen zur Verfügung.
+Ja, eine Person kann Teil mehrerer Profile sein, einschließlich vordefinierter und benutzerdefinierter Berechtigungsprofile. Wenn eine Person mehreren Profilen zugewiesen wird, stehen ihr die kombinierten Berechtigungen aus allen zugewiesenen Berechtigungsprofilen zur Verfügung.
 
-### Was passiert, wenn ein Benutzer berechtigt ist, eine Umgebung/Pipeline zu bearbeiten, aber keinen Zugriff auf ein Programm hat, das die Umgebung/Pipeline enthält?
+### Was passiert, wenn eine Person berechtigt ist, eine Umgebung/Pipeline zu bearbeiten, aber keinen Zugriff auf ein Programm hat, das die Umgebung/Pipeline enthält?
 
-In diesem Fall kann der Benutzer nicht auf die Umgebung oder Pipeline zugreifen, wenn er nicht über die **Programmzugriff** Berechtigungen, die die Umgebung oder Pipeline enthalten.
+In diesem Fall kann die Person nicht auf die Umgebung oder Pipeline zugreifen, wenn sie nicht über die Berechtigungen für den **Programmzugriff** auf die Umgebung oder Pipeline verfügt.
 
 ### Was passiert, wenn ich sowohl AEM as a Cloud Service als auch AMS-Programme in derselben IMS-Organisation habe? Kann ich Berechtigungen von einem Profil aus verwalten? {#ams-and-aemaacs}
 
-Sie sollten für jeden Produkttyp ein eigenes Profil erstellen (d. h. eines für AEM als Cloud Service und eines für Adobe Managed Services oder AMS).
+Sie sollten für jeden Produkttyp ein eigenes Profil erstellen (d. h. eines für AEM als Cloud Service und eines für Adobe Managed Services oder AMS).
