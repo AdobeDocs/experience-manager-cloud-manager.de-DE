@@ -6,7 +6,7 @@ exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
 workflow-type: tm+mt
 source-wordcount: '386'
-ht-degree: 21%
+ht-degree: 88%
 
 ---
 
@@ -21,30 +21,30 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.11.0 ist der 14. November 2023. Die nächste Version wurde am 7. Dezember 2023 veröffentlicht.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.11.0 ist der 14. November 2023. Die nächste Version soll am 7. Dezember 2023 veröffentlicht werden.
 
 ## Neue Funktionen {#what-is-new}
 
-* [Seite mit Details zur Pipelineausführung](/help/using/managing-pipelines.md#view-details) zeigt nun alle Schritte in einer Pipeline-Ausführung an, bei denen die Schritte noch nicht ausgegraut wurden.
-* Bei beiden **[Aktivität](/help/using/managing-pipelines.md#activity)** und **[Pipelines](/help/using/managing-pipelines.md#pipelines)** Seiten enthält, ist jetzt eine Zusammenfassung der Pipeline-Ausführung verfügbar, wenn auf eine Pipeline mit einem Ausführungsstatus geklickt wird.
-* Eine neue **Dauer** wurde zum Abschnitt [Pipeline-Detailseite](/help/using/managing-pipelines.md#view-details) , die die durchschnittliche Dauer des Pipeline-Schritts basierend auf dem historischen Trend für dieses Programm enthält.
+* [Die Seite mit Details zur Pipelineausführung](/help/using/managing-pipelines.md#view-details) zeigt nun alle Schritte einer Pipeline-Ausführung an, wobei die Schritte, die noch nicht gestartet wurden, ausgegraut sind.
+* Auf den Seiten **[Aktivität](/help/using/managing-pipelines.md#activity)** und **[Pipelines](/help/using/managing-pipelines.md#pipelines)** ist nun eine Übersicht der Pipeline-Ausführung verfügbar, wenn Sie während der Ausführung auf eine Pipeline klicken.
+* Ein neuer Abschnitt **Dauer** wurde zum Abschnitt [Pipeline-Detailseite](/help/using/managing-pipelines.md#view-details) hinzugefügt. Er enthält die durchschnittliche Dauer des Pipeline-Schritts anhand des Verlaufs-Trends dieses Programms.
 * Im [Pipeline-Ausführungsseite,](/help/using/managing-pipelines.md#activity-window) Die abgeschlossenen Schritte zeigen nun die Dauer an.
-* Cloud Manager [Content Copy-Tool](/help/using/content-copy.md) ermöglicht es Benutzern, veränderliche Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Umgebungen zu Testzwecken zu kopieren.
+* Mit dem [Inhaltskopie-Werkzeug](/help/using/content-copy.md) von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in ältere Umgebungen kopieren.
 * Ausführungen, die [Build-Artefakte wiederverwenden](/help/getting-started/project-setup.md#build-artifact-reuse) zeigt nun den Link zur Ausführung, die diese Artefakte ursprünglich erstellt hat.
 * Die ausgewählte Option **Wichtige Metrikfehler** kann jetzt konfiguriert werden für [Code-Qualitäts-Pipelines](/help/using/non-production-pipelines.md) sowie.
 
-## Frühzeitige Annahme des Programms {#early-adoption}
+## Early-Adopter-Programm {#early-adoption}
 
-Nehmen Sie an unserem Programm teil und haben Sie die Möglichkeit, einige zukünftige Funktionen zu testen
+Nehmen Sie an unserem Early-Adopter-Programm teil und nutzen Sie die Möglichkeit, einige zukünftige Funktionen zu testen
 
-### Erstellen Sie Ihren eigenen GitHub {#byo-github}
+### Bringen Sie Ihren eigenen GitHub mit {#byo-github}
 
-Wenn Sie Ihre Repositorys mit GitHub verwalten, [Sie können jetzt Code direkt in Ihren GitHub-Repositorys über Cloud Manager validieren.](/help/managing-code/byo-github.md) Durch diese Integration entfällt die Notwendigkeit, Code konsistent mit dem Adobe-Repository zu synchronisieren, und Sie können Pull-Anforderungen überprüfen, bevor Sie sie in die Hauptverzweigungen zusammenführen.
+Wenn Sie Ihre Repositorys mit GitHub verwalten, [können Sie jetzt Code direkt in Ihren GitHub-Repositorys über Cloud Manager validieren.](/help/managing-code/byo-github.md) Durch diese Integration entfällt die Notwendigkeit, Code ständig mit dem Adobe-Repository zu synchronisieren, und Sie können Pull-Anfragen überprüfen, bevor Sie sie in den Hauptverzweigungen zusammenführen.
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte eine E-Mail an `Grp-CloudManager_BYOG@adobe.com` von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse aus.
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte über die mit Ihrer Adobe-ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-CloudManager_BYOG@adobe.com`.
 
 ### Benutzerdefinierte Berechtigungen {#custom-permissions}
 
-[Benutzerdefinierte Berechtigungen für Cloud Manager](/help/using/custom-permissions.md) können Sie neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzer zu beschränken.
+Mit [benutzerdefinierten Cloud Manager-Berechtigungen](/help/using/custom-permissions.md) können Sie neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte eine E-Mail `Grp-CloudManager_ams_custompermissions@adobe.com` von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse aus.
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte über die mit Ihrer Adobe-ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-CloudManager_ams_custompermissions@adobe.com`.

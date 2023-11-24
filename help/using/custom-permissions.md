@@ -1,13 +1,13 @@
 ---
 title: Benutzerdefinierte Berechtigungen
 description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
-source-git-commit: 769538ec21b21e612619b0c96718f27982574f6c
+exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
+source-git-commit: 4ff8d66356b510600019daad78470ca5dd1c57d4
 workflow-type: tm+mt
 source-wordcount: '1489'
 ht-degree: 96%
 
 ---
-
 
 # Benutzerdefinierte Berechtigungen {#custom-permissions}
 
