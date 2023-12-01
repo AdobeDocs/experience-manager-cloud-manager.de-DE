@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2023.11.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 264c7ffcbc9e10903880a511a4ca605be666f7e8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '386'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -28,10 +28,10 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2023.11.0 is
 * [Die Seite mit Details zur Pipelineausführung](/help/using/managing-pipelines.md#view-details) zeigt nun alle Schritte einer Pipeline-Ausführung an, wobei die Schritte, die noch nicht gestartet wurden, ausgegraut sind.
 * Auf den Seiten **[Aktivität](/help/using/managing-pipelines.md#activity)** und **[Pipelines](/help/using/managing-pipelines.md#pipelines)** ist nun eine Übersicht der Pipeline-Ausführung verfügbar, wenn Sie während der Ausführung auf eine Pipeline klicken.
 * Ein neuer Abschnitt **Dauer** wurde zum Abschnitt [Pipeline-Detailseite](/help/using/managing-pipelines.md#view-details) hinzugefügt. Er enthält die durchschnittliche Dauer des Pipeline-Schritts anhand des Verlaufs-Trends dieses Programms.
-* Im [Pipeline-Ausführungsseite,](/help/using/managing-pipelines.md#activity-window) Die abgeschlossenen Schritte zeigen nun die Dauer an.
+* Auf der Seite zur [Pipeline-Ausführung](/help/using/managing-pipelines.md#activity-window) wird nun die Dauer der abgeschlossenen Schritte angezeigt
 * Mit dem [Inhaltskopie-Werkzeug](/help/using/content-copy.md) von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in ältere Umgebungen kopieren.
-* Ausführungen, die [Build-Artefakte wiederverwenden](/help/getting-started/project-setup.md#build-artifact-reuse) zeigt nun den Link zur Ausführung, die diese Artefakte ursprünglich erstellt hat.
-* Die ausgewählte Option **Wichtige Metrikfehler** kann jetzt konfiguriert werden für [Code-Qualitäts-Pipelines](/help/using/non-production-pipelines.md) sowie.
+* Ausführungen, die [Build-Artefakte wiederverwenden](/help/getting-started/project-setup.md#build-artifact-reuse), zeigen nun den Link zur Ausführung an, die diese Artefakte ursprünglich erstellt hat.
+* Die Option, um **wichtige Metrikfehler** auszuwählen, kann jetzt auch für [Code-Qualitäts-Pipelines](/help/using/non-production-pipelines.md) ausgewählt werden.
 
 ## Early-Adopter-Programm {#early-adoption}
 
