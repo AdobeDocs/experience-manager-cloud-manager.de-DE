@@ -3,9 +3,9 @@ title: Benutzerdefinierte Berechtigungen
 description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
 source-git-commit: 4ff8d66356b510600019daad78470ca5dd1c57d4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1489'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -129,11 +129,11 @@ Zum Erstellen benutzerdefinierter Profile stehen folgende Berechtigungen zur Ver
 | Wichtige Metrikfehler überschreiben/ablehnen | Benutzenden erlauben, wichtige Metrikfehler zu überschreiben/abzulehnen |
 | Produktionsbereitstellungs-Zeitplan | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu planen |
 | Zugriff auf Repository-Informationen | Benutzenden erlauben, auf Repository-Informationen zuzugreifen und ein Passwort für den Zugriff zu erstellen |
-| Repository erstellen | Benutzern das Erstellen neuer Git-Repositorys ermöglichen |
-| Repository löschen | Löschen von Git-Repositorys durch Benutzer zulassen |
-| Repository bearbeiten | Benutzern erlauben, Git-Repositorys zu bearbeiten |
-| Repository-Codegenerierung | Benutzern erlauben, ein Projekt aus einem Archetyp zu generieren |
-| Inhaltskopie verwalten | Benutzern erlauben, Vorgänge zum Kopieren von Inhalten zu verwalten |
+| Repository – Erstellen | Benutzenden erlauben, neue Git-Repositorys zu erstellen |
+| Repository – Löschen | Benutzenden erlauben, Git-Repositorys zu löschen |
+| Repository – Bearbeiten | Benutzenden erlauben, Git-Repositorys zu bearbeiten |
+| Repository – Code generieren | Benutzenden erlauben, ein Projekt aus einem Archetyp zu generieren |
+| Inhaltskopien – Verwalten | Benutzenden erlauben, Inhaltskopiervorgänge zu verwalten |
 
 ### Berechtigungen auf Unternehmensebene {#organization-level}
 
