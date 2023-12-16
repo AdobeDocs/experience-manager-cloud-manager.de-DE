@@ -2,10 +2,10 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 7f9866976667b485124cef60453ec3908ba41ec8
-workflow-type: ht
-source-wordcount: '1152'
-ht-degree: 100%
+source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
+workflow-type: tm+mt
+source-wordcount: '1283'
+ht-degree: 86%
 
 ---
 
@@ -18,8 +18,9 @@ Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer
 
 Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 
-* Die Erstellungsumgebung ist Linux-basiert und von Ubuntu 18.04 abgeleitet.
+* Die Build-Umgebung ist Linux-basiert und von Ubuntu 22.04 abgeleitet.
 * Apache Maven 3.8.8 ist installiert.
+   * Adobe empfiehlt Benutzern [Aktualisieren Sie ihre Maven-Repositorys, um HTTPS anstelle von HTTP zu verwenden.](#https-maven)
 * Die installierten Java-Versionen sind Oracle JDK 8u371 und Oracle JDK 11.0.20.
    * `/usr/lib/jvm/jdk1.8.0_371`
    * `/usr/lib/jvm/jdk-11.0.20`
@@ -38,6 +39,7 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven wird auf Systemebene mit einer `settings.xml`-Datei konfiguriert die automatisch das öffentliche Adobe-Artefakt-Repository enthält und ein Profil namens `adobe-public` verwendet.
    * Weitere Informationen dazu finden Sie im [öffentlichen Adobe Maven Repository](https://repo1.maven.org/).
+* Node.js 18 ist für [Front-End- und vollständige Stapel-Pipelines.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
@@ -49,6 +51,14 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [Erstellen einer API-Integration](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API-Berechtigungen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
+
+## HTTPS-Maven-Repositorys {#https-maven}
+
+Cloud Manager [Version 2023.10.0](/help/release-notes/2023/2023-10-0.md) hat eine rollierende Aktualisierung der Build-Umgebung gestartet (mit Version 2023.12.0 abgeschlossen), die eine Aktualisierung auf Maven 3.8.8 enthielt. Eine wesentliche Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitsverbesserung, die darauf abzielte, potenzielle Schwachstellen zu minimieren. Insbesondere deaktiviert Maven jetzt alle unsicheren `http://*` Spiegeln standardmäßig, wie im Abschnitt [Maven-Versionshinweise.](http://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291)
+
+Aufgrund dieser Sicherheitsverbesserung können einige Benutzer während des Build-Schritts mit Problemen konfrontiert sein, insbesondere beim Herunterladen von Artefakten aus Maven-Repositorys, die unsichere HTTP-Verbindungen verwenden.
+
+Um ein reibungsloses Erlebnis mit der aktualisierten Version zu gewährleisten, empfiehlt Adobe, dass Benutzer ihre Maven-Repositorys so aktualisieren, dass sie HTTPS anstelle von HTTP verwenden. Diese Anpassung steht im Einklang mit dem wachsenden Trend der Branche hin zu sicheren Kommunikationsprotokollen und trägt zur Aufrechterhaltung eines sicheren und zuverlässigen Build-Prozesses bei.
 
 ## Verwenden einer bestimmten Java-Version {#using-java-version}
 
