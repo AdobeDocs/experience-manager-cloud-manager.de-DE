@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2023.12.0
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '305'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -26,13 +26,13 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2021.12.0 is
 ## Neue Funktionen {#what-is-new}
 
 * Mit [benutzerdefinierten Cloud Manager-Berechtigungen](/help/using/custom-permissions.md) können Sie neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
-* Die Rollouts der Aktualisierungen für die [Build-Umgebung](/help/getting-started/build-environment.md) die [bekannt gegeben und mit der Oktober-Version von Cloud Manager begonnen](/help/release-notes/2023/2023-10-0.md) wurden abgeschlossen.
-   * Unterstützung für Node 18 wurde hinzugefügt für [Front-End- und vollständige Stapel-Pipelines.](/help/overview/ci-cd-pipelines.md)
-   * Die untergeordnete Java 8-Version wurde aktualisiert auf `jdk1.8.0_371`.
-   * Die untergeordnete Java 11-Version wurde auf `jdk-11.0.20`.
+* Die Rollouts der Aktualisierungen für die [Build-Umgebung](/help/getting-started/build-environment.md), die [mit der Oktoberversion von Cloud Manager bekannt gegeben und begonnen](/help/release-notes/2023/2023-10-0.md) wurden, sind abgeschlossen.
+   * Es wurde Unterstützung für Node 18 für [Front-End- und Full-Stack-Pipelines](/help/overview/ci-cd-pipelines.md) hinzugefügt.
+   * Die untergeordnete Java 8-Version wurde auf `jdk1.8.0_371` aktualisiert.
+   * Die untergeordnete Java 11-Version wurde auf `jdk-11.0.20` aktualisiert.
    * Maven wurde auf Version 3.8.8 aktualisiert.
-      * Maven deaktiviert jetzt alle unsicheren `http://*` spiegelt standardmäßig wider.
-      * [Adobe empfiehlt](/help/getting-started/build-environment.md#https-maven) -Benutzer aktualisieren ihre Maven-Repositorys so, dass sie HTTPS anstelle von HTTP verwenden.
+      * Maven deaktiviert jetzt standardmäßig alle unsicheren `http://*`-Spiegelungen.
+      * [Adobe empfiehlt](/help/getting-started/build-environment.md#https-maven) Benutzenden, ihre Maven-Repositorys zu aktualisieren, damit sie HTTPS anstelle von HTTP verwenden.
 * Das Basisbild des Build-Containers wurde auf Ubuntu 22.04 aktualisiert.
 
 ## Early-Adopter-Programm {#early-adoption}
