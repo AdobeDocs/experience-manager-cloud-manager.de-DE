@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2023.12.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2023.12.0.
+title: Versionshinweise für 2024.1.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2024.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 2ac254508e4015fea21c4fcd087703ac5fbeeec6
-workflow-type: ht
-source-wordcount: '305'
-ht-degree: 100%
+source-git-commit: b901c7bf9d821f6e84fc513e5e6cba5eab8ea894
+workflow-type: tm+mt
+source-wordcount: '178'
+ht-degree: 92%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2023.12.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2024.1.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2023.12.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2024.1.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,19 +21,7 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2021.12.0 ist der 14. Dezember 2023. Die nächste Version soll am 18. Januar 2024 veröffentlicht werden.
-
-## Neue Funktionen {#what-is-new}
-
-* Mit [benutzerdefinierten Cloud Manager-Berechtigungen](/help/using/custom-permissions.md) können Sie neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
-* Die Rollouts der Aktualisierungen für die [Build-Umgebung](/help/getting-started/build-environment.md), die [mit der Oktoberversion von Cloud Manager bekannt gegeben und begonnen](/help/release-notes/2023/2023-10-0.md) wurden, sind abgeschlossen.
-   * Es wurde Unterstützung für Node 18 für [Front-End- und Full-Stack-Pipelines](/help/overview/ci-cd-pipelines.md) hinzugefügt.
-   * Die untergeordnete Java 8-Version wurde auf `jdk1.8.0_371` aktualisiert.
-   * Die untergeordnete Java 11-Version wurde auf `jdk-11.0.20` aktualisiert.
-   * Maven wurde auf Version 3.8.8 aktualisiert.
-      * Maven deaktiviert jetzt standardmäßig alle unsicheren `http://*`-Spiegelungen.
-      * [Adobe empfiehlt](/help/getting-started/build-environment.md#https-maven) Benutzenden, ihre Maven-Repositorys zu aktualisieren, damit sie HTTPS anstelle von HTTP verwenden.
-* Das Basisbild des Build-Containers wurde auf Ubuntu 22.04 aktualisiert.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.1.0 wurde am 17. Januar 2024 veröffentlicht.
 
 ## Early-Adopter-Programm {#early-adoption}
 
