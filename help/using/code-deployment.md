@@ -2,10 +2,10 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: b85bd1bdf38360885bf2777d75bf7aa97c6da7ee
-workflow-type: ht
-source-wordcount: '1655'
-ht-degree: 100%
+source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
+workflow-type: tm+mt
+source-wordcount: '1650'
+ht-degree: 99%
 
 ---
 
@@ -84,12 +84,13 @@ Die folgenden Schritte führen zu einer Zeitüberschreitung, wenn auf Benutzer-F
 
 | Schritt | Zeitüberschreitung |
 |--- |--- |
-| Testen der Code-Qualität | 14 Tage |
-| Sicherheitstests | 14 Tage |
-| Leistungstests | 14 Tage |
-| Genehmigungsantrag | 14 Tage |
+| Testen der Code-Qualität | 7 Tage |
+| Sicherheitstests | 7 Tage |
+| Leistungstests | 7 Tage |
+| Genehmigungsantrag (Stufe) | 7 Tage |
+| Genehmigungsantrag (Produktion) | 14 Tage |
 | Planen der Bereitstellung für die Produktion | 14 Tage |
-| CSE-Unterstützung | 14 Tage |
+| Verwaltete Produktionsbereitstellung | 14 Tage |
 
 ## Details zum Bereitstellungsprozess {#deployment-process}
 
@@ -192,7 +193,7 @@ In solchen Fällen, in denen eine erneute Ausführung möglich ist, bietet die S
 >
 >Bei einer erneuten Ausführung wird der Build-Schritt in der Benutzeroberfläche mit dem Hinweis versehen, dass er Artefakte kopiert und nicht neu erstellt.
 
-### Beschränkungen {#limitations}
+### Einschränkungen {#limitations}
 
 * Das erneute Ausführen des Produktionsbereitstellungsschritts ist nur für die letzte Ausführung verfügbar.
 * Die erneute Ausführung ist nicht für Rollback-Ausführungen oder Push-Update-Ausführungen verfügbar.
