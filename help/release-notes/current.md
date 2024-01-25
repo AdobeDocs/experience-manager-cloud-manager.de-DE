@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2024.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: b235e398b42e9da3dd2efacdc0ef38b6803bd213
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '243'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -21,7 +21,7 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.1.0 wurde am 17. Januar 2024 veröffentlicht. Die nächste Version ist für den 16. Februar 2024 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.1.0 ist der 17. Januar 2024. Die nächste Version wird voraussichtlich am 16. Februar 2024 veröffentlicht.
 
 ## Early-Adopter-Programm {#early-adoption}
 
@@ -35,5 +35,5 @@ Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Ein Fehler wurde für einige Fälle korrigiert, in denen Downloads aufgrund der Interpretation von Daten durch die Testanwendung fehlschlugen, wodurch der Gesamt-Fehlerprozentsatz für den Test fehlschlug.
-* Wenn ein Build-Schritt mit dem Status abgeschlossen wird `FAILED` aufgrund einer `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR`, wird sie nun aufgrund von Zusammenführungskonflikten mit der Zielverzweigung ordnungsgemäß als Fehler beschrieben.
+* Es wurde ein Fehler für einige Fälle korrigiert, in denen Downloads aufgrund der Interpretation von Daten durch die Testanwendung fehlschlugen, wodurch der gesamte Fehlerprozentsatz den Test fehlschlagen ließ.
+* Wenn ein Build-Schritt aufgrund eines `BUILD_MAVEN_TRANSFER_ARTIFACT_ERROR` mit dem Status `FAILED` abgeschlossen wird, wird dies nun ordnungsgemäß als Fehler aufgrund von Zusammenführungskonflikten mit der Zielverzweigung beschrieben.
