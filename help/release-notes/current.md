@@ -3,10 +3,10 @@ title: Versionshinweise für 2024.1.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2024.1.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: b235e398b42e9da3dd2efacdc0ef38b6803bd213
-workflow-type: ht
-source-wordcount: '243'
-ht-degree: 100%
+source-git-commit: b5907179d3de329e8b86546bb8aa99608a5b351a
+workflow-type: tm+mt
+source-wordcount: '257'
+ht-degree: 84%
 
 ---
 
@@ -29,7 +29,7 @@ Nehmen Sie an unserem Early-Adopter-Programm teil und nutzen Sie die Möglichkei
 
 ### Bringen Sie Ihren eigenen GitHub mit {#byo-github}
 
-Wenn Sie Ihre Repositorys mit GitHub verwalten, [können Sie jetzt Code direkt in Ihren GitHub-Repositorys über Cloud Manager validieren.](/help/managing-code/byo-github.md) Durch diese Integration entfällt die Notwendigkeit, Code ständig mit dem Adobe-Repository zu synchronisieren, und Sie können Pull-Anfragen überprüfen, bevor Sie sie in den Hauptverzweigungen zusammenführen.
+Wenn Sie Ihre Repositorys mit GitHub verwalten, [können Sie jetzt Code direkt in Ihren GitHub-Repositorys über Cloud Manager validieren.](/help/managing-code/byo-github.md) Durch diese Integration entfällt die Notwendigkeit, Code konsistent mit dem Adobe-Repository zu synchronisieren, und Sie können Pull-Anforderungen überprüfen, bevor Sie sie in die Hauptverzweigungen zusammenführen. Diese Funktion ist nur für öffentliche GitHub-Anwendungen verfügbar. Unterstützung für selbstgehostetes GitHub ist nicht verfügbar.
 
 Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte über die mit Ihrer Adobe-ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-CloudManager_BYOG@adobe.com`.
 
