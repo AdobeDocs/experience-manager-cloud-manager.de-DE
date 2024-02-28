@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2024.2.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: cc87246503ab63d6dd60c691f15fc4759fcf6939
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '299'
-ht-degree: 61%
+ht-degree: 100%
 
 ---
 
@@ -21,11 +21,11 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.2.0 wurde am 15. Februar 2024 veröffentlicht. Die nächste Version ist für den 16. März 2024 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.2.0 ist der 15. Februar 2024. Die Veröffentlichung der nächsten Version ist für den 16. März 2024 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Als Teil von [Bereitstellung,](/help/using/code-deployment.md) der Dispatcher-Cache am **Dispatcher anhängen** Schritt. Damit Sie Änderungen an jedem Knoten testen können, bevor Sie ihn an den App-Lastenausgleich anhängen, können Sie nach der Bereitstellung von Code an einen bestimmten Herausgeber Änderungen direkt vom zugehörigen Dispatcher testen, bevor Sie diesen Dispatcher an den Lastenausgleich anhängen.
+* Im Rahmen der [Bereitstellung](/help/using/code-deployment.md) des Dispatcher-Cache wurde der Schritt **Dispatcher anhängen** entfernt. Um Änderungen an jedem Knoten testen zu können, bevor dieser an den Anwendungs-Lastenausgleich angehängt wird, können Sie nach der Bereitstellung von Code für einen bestimmten Publisher Änderungen direkt über den zugehörigen Dispatcher testen, bevor Sie diesen Dispatcher an den Lastenausgleich anhängen.
 * [Die Build-Umgebung](/help/getting-started/build-environment.md) wurde auf die Maven-Version 3.9.4 und die JDK-Versionen jdk-11.0.22 und jdk1.8.0_401 aktualisiert.
 
 ## Early-Adopter-Programm {#early-adoption}
@@ -40,5 +40,5 @@ Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Das JDK der Build-Container wurde auf eine Version aktualisiert, die [JDK-8313765.](https://bugs.openjdk.org/browse/JDK-8313765)
+* Das JDK der Build-Container wurde auf eine Version aktualisiert, die [JDK-8313765](https://bugs.openjdk.org/browse/JDK-8313765) auflöst.
 §
