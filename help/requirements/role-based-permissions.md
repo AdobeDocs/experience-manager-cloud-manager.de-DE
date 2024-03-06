@@ -2,10 +2,10 @@
 title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 522e5fbc650a8159602eb1aeaf42d64f4e23e8b4
-workflow-type: ht
-source-wordcount: '565'
-ht-degree: 100%
+source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
+workflow-type: tm+mt
+source-wordcount: '602'
+ht-degree: 93%
 
 ---
 
@@ -13,6 +13,12 @@ ht-degree: 100%
 # Rollenbasierte Berechtigungen {#role-based-permissions}
 
 [!UICONTROL Cloud Manager] verfügt über vorkonfigurierte Rollen mit entsprechenden Berechtigungen. Beispielsweise schreibt ein Entwickler Code und ist berechtigt, den Code per Push an das Git-Repository zu übertragen. Ein Geschäftsinhaber verfügt wiederum über verschiedene Berechtigungen, um KPIs (Key Performance Indicators) zu definieren und Bereitstellungen zu genehmigen.
+
+>[!NOTE]
+>
+>In dieser Dokumentation werden rollenbasierte Berechtigungen für Cloud Manager für Adobe Managed Services (AMS) beschrieben.
+>
+>Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie im Dokument [Einführung in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions) in der AEM as a Cloud Service Dokumentation.
 
 ## Anwenderrollen {#user-roles}
 
@@ -26,7 +32,7 @@ In dieser Tabelle sind die Rollen aufgeführt, die Sie in der Admin Console zuwe
 |---|---|
 | Geschäftsinhaber | Dies ist der primäre Anwender, der die anfängliche Einrichtung von [!UICONTROL Cloud Manager] durchführt und für die Definition von KPIs, die Genehmigung von Produktionsbereitstellungen und das Überschreiben gravierender 3-Tier-Fehler verantwortlich ist, falls erforderlich. |
 | Programm-Manager | Dieser Anwender nutzt [!UICONTROL Cloud Manager], um die Einrichtung von Teams vorzunehmen, den Status zu überprüfen, KPIs einzusehen und ggf. gravierende 3-Tier-Fehler zu genehmigen. |
-| Implementierungs-Manager | Dieser Anwender verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, kann bei Bedarf gravierende 3-Tier-Fehler genehmigen und hat Zugriff auf das Git-Repository. |
+| Bereitstellungs-Manager | Dieser Anwender verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, kann bei Bedarf gravierende 3-Tier-Fehler genehmigen und hat Zugriff auf das Git-Repository. |
 | Entwickler | Dieser Anwender entwickelt und testet benutzerdefinierten Anwendungs-Code, verwendet [!UICONTROL Cloud Manager] hauptsächlich zur Anzeige des Bereitstellungsstatus und hat Commit-Zugriff auf das Git-Repository. |
 | Customer Success Engineer | Dieser Anwender unterstützt im Allgemeinen den Kundenerfolg für AMS-Kunden und interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen durchzuführen, die die Aufsicht des Customer Success Engineer (CSE) erfordern. |
 | Inhaltsautor | Dieser Anwender interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager], kann aber das [!UICONTROL Cloud Manager]-Programm switcher verwenden (von [!UICONTROL Experience Cloud] kommend), um auf Adobe Experience Manager (AEM) zuzugreifen. |
@@ -36,7 +42,7 @@ In dieser Tabelle sind die Rollen aufgeführt, die Sie in der Admin Console zuwe
 Jede der Rollen verfügt über bestimmte vorkonfigurierte Berechtigungen. In der folgenden Tabelle sind die verfügbaren Berechtigungen aufgelistet, sowie die Rollen, die sie ausführen können.
 
 
-| Berechtigung | Beschreibung | Geschäftsinhaber | Implementierungs-Manager | Programm-Manager | Entwickler | CSE |
+| Berechtigung | Beschreibung | Geschäftsinhaber | Bereitstellungs-Manager | Programm-Manager | Entwickler | CSE |
 |--- |--- |--- |--- |--- |--- |--- |
 | Anwendung lesen | Lesen der Programm-KPIs | x | x | x | x | x |
 | Anwendung schreiben | Programmeinrichtung oder -bearbeitung | x |  |  |  |  |
@@ -54,7 +60,7 @@ Jede der Rollen verfügt über bestimmte vorkonfigurierte Berechtigungen. In der
 | Pipeline lesen | Siehe Pipeline-Details | x | x | x | x | x |
 | Pipeline schreiben | Pipeline einrichten/bearbeiten |  | x |  |  |  |
 | Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Geschäftsinhaber“ |  | x |  |  |  |
-| Pipeline ändern, Managed Deployment | Berechtigung zum Bearbeiten der Option „CSE-Aufsicht“ |  | x |  |  |  |
+| Pipeline ändern, verwaltete Bereitstellung | Berechtigung zum Bearbeiten der Option „CSE-Aufsicht“ |  | x |  |  |  |
 | Pipeline löschen | Berechtigung zum Löschen der Pipeline |  | x |  |  |  |
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“ | x | x | x | x | x |
 | Persönliches Zugriffs-Token erstellen | Zugriff auf Git |  | x |  | x |  |
