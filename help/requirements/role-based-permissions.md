@@ -3,9 +3,9 @@ title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 10297789ac8f905f242ac52bdc6fc4812b989e8a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '602'
-ht-degree: 93%
+ht-degree: 100%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 93%
 >
 >In dieser Dokumentation werden rollenbasierte Berechtigungen für Cloud Manager für Adobe Managed Services (AMS) beschrieben.
 >
->Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie im Dokument [Einführung in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions) in der AEM as a Cloud Service Dokumentation.
+>Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie unter [Einführung in Cloud Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/onboarding/concepts/cloud-manager-introduction.html#role-based-permissions?lang=de) in der Dokumentation zu AEM as a Cloud Service.
 
 ## Anwenderrollen {#user-roles}
 
