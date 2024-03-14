@@ -3,10 +3,10 @@ title: Versionshinweise für 2024.3.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2024.3.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 95a7a7be3ba20e05311ff90b91bd0773f6e77a07
+source-git-commit: 22730ba281f7c1c4720158a3a813c56b815a0af1
 workflow-type: tm+mt
-source-wordcount: '290'
-ht-degree: 63%
+source-wordcount: '268'
+ht-degree: 68%
 
 ---
 
@@ -25,8 +25,7 @@ Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.3.0 wur
 
 ## Neue Funktionen {#what-is-new}
 
-* Sie können jetzt den Zustand der Server überprüfen, Protokolle überprüfen und mehr über die Instanzen, die bei blauen/grünen Implementierungen erstellt wurden.
-   * Details wie IP/DNS (FQDN)-Informationen der grünen Server werden jetzt in der Benutzeroberfläche von Cloud Manager angezeigt.
+* Details wie IP/DNS (FQDN)-Informationen zu grünen Servern werden jetzt in der Benutzeroberfläche von Cloud Manager angezeigt.
 
 ## Early-Adopter-Programm {#early-adoption}
 
