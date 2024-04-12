@@ -2,9 +2,9 @@
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: c7803c75bcfcc967877808214704c5746015481d
+source-git-commit: 655111cdf7327e92e03ac7eedd9eedd87cd4b2f1
 workflow-type: tm+mt
-source-wordcount: '1128'
+source-wordcount: '1120'
 ht-degree: 100%
 
 ---
@@ -25,6 +25,7 @@ Der zu kopierende Inhalt wird durch ein Content-Set definiert. Ein Content-Set b
 /conf/**
 /etc/**
 /var/workflow/models/**
+/var/commerce/**
 ```
 
 Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
@@ -42,7 +43,7 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
-1. Gehen Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
+1. Navigieren Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
 
 1. Navigieren Sie vom Bildschirm **Umgebungen** zur Seite **Content-Sets**.
 
@@ -101,7 +102,7 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
-1. Gehen Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
+1. Navigieren Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
 
 1. Navigieren Sie vom Bildschirm **Umgebungen** zur Seite **Content-Sets**.
 
