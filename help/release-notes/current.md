@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2024.4.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 4a7c6fbc3fa936ff1470420966823f94fb3a4d7b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '258'
-ht-degree: 70%
+ht-degree: 100%
 
 ---
 
@@ -21,12 +21,12 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.4.0 wurde am 10. April 2024 veröffentlicht. Die nächste Version ist für den 9. Mai 2024 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.4.0 ist der 10. April 2024. Die nächste Version ist für den 9. Mai 2024 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Die Unterstützung für reine Staging- und Produktions-Pipelines wurde eingeführt, sodass Sie produktionsorientierte Produktions-Pipelines in kleinere, spezialisierte Implementierungen aufteilen können.
-* Verbesserte Fehlermeldungen für Code-Build-Probleme ermöglichen eine einfachere Identifizierung der Hauptursachen und der nächsten umsetzbaren Schritte.
+* Die Unterstützung für reine Staging- und reine Produktions-Pipelines wurde eingeführt, sodass Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen können.
+* Optimierte Fehlermeldungen für Probleme beim Erstellen von Code ermöglichen eine einfachere Identifizierung der Hauptursachen und der nächsten möglichen Schritte.
 
 ## Early-Adopter-Programm {#early-adoption}
 
@@ -40,4 +40,4 @@ Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Es wurde ein Fehler behoben, durch den Cloud Manager Artefakte mit dem falschen Commit-Hash wiederverwendete.
+* Es wurde ein Fehler behoben, bei dem Cloud Manager Artefakte mit dem falschen Commit-Hash wiederverwendet hat.
