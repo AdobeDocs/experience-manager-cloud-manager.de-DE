@@ -3,9 +3,9 @@ title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 1c0c3a751ba2023fc2c2dd5d0d54f914373ad95b
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '620'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
@@ -69,4 +69,4 @@ Weitere Informationen zum Einrichten von Anwendern finden Sie im Dokument [Einri
 
 >[!TIP]
 >
->Auch benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen sind verfügbar. Lesen Sie das Dokument . [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md) für weitere Details.
+>Es sind auch benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen verfügbar. Weitere Informationen finden Sie im Dokument [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md).
