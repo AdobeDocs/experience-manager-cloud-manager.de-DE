@@ -2,9 +2,9 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 70e68f8af17b0acf644176c2ed3afaf8fc219063
-workflow-type: ht
-source-wordcount: '1650'
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+workflow-type: tm+mt
+source-wordcount: '1648'
 ht-degree: 100%
 
 ---
@@ -55,8 +55,6 @@ Der Schritt **Staging-Tests** umfasst die folgenden Aktionen:
 
 * **Sicherheitstests**: Dieser Schritt bewertet die Auswirkungen des Programm-Codes auf die Sicherheit der AEM-Umgebung. Einzelheiten zum Testverfahren finden Sie im Dokument [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
    * **Leistungstests**: Dieser Schritt bewertet die Leistung des Codes. Einzelheiten zum Testverfahren finden Sie in unter [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
-
-  ![Staging-Tests](/help/assets/Stage_Testing1.png)
 
 ### Schritt zur Produktionsbereitstellung {#production-deployment}
 

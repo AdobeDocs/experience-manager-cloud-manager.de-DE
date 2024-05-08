@@ -2,10 +2,10 @@
 title: Überwachen von Umgebungen
 description: Informationen zum Überwachen von Umgebungen in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 5907ca6337d33c26ff19a14bfeb358cd9f7b935d
-workflow-type: ht
-source-wordcount: '939'
-ht-degree: 100%
+source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+workflow-type: tm+mt
+source-wordcount: '928'
+ht-degree: 89%
 
 ---
 
@@ -24,20 +24,17 @@ Wenn eine Metrik über ihrem kritischen Schwellenwert liegt, wird dies als kriti
 
 Führen Sie diese Schritte aus, um auf die Systemüberwachung zuzugreifen.
 
-1. Melden Sie sich auf der Landingpage **Managed Services – Programme** an.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-   ![Managed Services-Programme](/help/assets/ProgramLanding.png)
-
-1. Klicken Sie auf das vierte Symbol auf der Programmkarte.
+1. Tippen oder klicken Sie auf die Suchschaltfläche des Programms, das Sie überwachen möchten, und wählen Sie die **Überwachung anzeigen** -Option.
 
    ![Einstellungen](/help/assets/first-timea1.png)
 
-
-Gehen Sie in [!UICONTROL Cloud Manager] über das globale Navigationsmenüelement **Berichte** zur Landingpage **Systemüberwachung**.
+Die **Berichte** -Seite geöffnet, um Informationen zur Systemüberwachung anzuzeigen.
 
 ## Systemüberwachung – Übersicht {#system-monitoring-overview}
 
-Auf der Seite „Übersicht“ der Systemüberwachung werden die überwachten Umgebungen im Programm aufgelistet und Berichte zu deren allgemeinen Zustand in vier separaten Kategorien erstellt:
+Die **Systemüberwachung** Abschnitt **Berichte** auf der Seite werden die überwachten Umgebungen im Programm aufgelistet und Berichte zu deren allgemeinen Gesundheitszustand in vier separaten Kategorien erstellt:
 
 * Host
 * Speicherung
@@ -54,13 +51,11 @@ Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn 
 
 ## Details zur Systemüberwachung {#system-monitoring-detail}
 
-Zum Anzeigen von Details bestimmter Metriken können Sie entweder auf eine der Kategorien im linken Navigationsbereich oder auf eine der Kategorieindikatoren einer bestimmten Instanz klicken. Jede Detailseite präsentiert eine Reihe von Diagrammen für die Metriken in dieser Kategorie. Sie können die Metriken entweder für alle Instanzen in einer Umgebung oder für eine bestimmte Instanz anzeigen. Mithilfe der Dropdownfelder oben rechts können Sie zwischen der Umgebung und den Instanzen wechseln.
+Um die Details bestimmter Metriken anzuzeigen, tippen oder klicken Sie auf eine der Kategoriespalten einer bestimmten Instanz oder auf den Kategorientitel im linken Navigationsbereich. Jede Detailseite präsentiert eine Reihe von Diagrammen für die Metriken in dieser Kategorie. Sie können die Metriken entweder für alle Instanzen in einer Umgebung oder für eine bestimmte Instanz anzeigen. Mithilfe der Dropdownfelder oben rechts können Sie zwischen der Umgebung und den Instanzen wechseln.
 
 ![Umgebung auswählen](/help/assets/System_Monitoring1.png)
 
 Im Navigationsbereich auf der linken Seite finden Sie die verfügbaren Metriken innerhalb der aktuell ausgewählten Kategorie, für die Daten für die aktuell ausgewählte Umgebung und die Instanzen vorhanden sind.
-
-![Überwachen von Metriken](/help/assets/System_Monitoring2.png)
 
 In einem einzelnen Diagramm werden der Status und ein Graph der Daten zusammen mit den Schwellenwerten angezeigt. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
 
@@ -103,9 +98,9 @@ Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kr
 
 ## SLA-Berichte {#sla-reporting}
 
-Die Leistungsdaten einer AEM-Produktionsumgebung können mit dem vertraglich vereinbarten Service Level Agreement (SLA) verglichen werden. Möglich ist dies über ein Untermenü auf dem Bildschirm **Berichte**.
+Sie können die Leistung Ihrer Produktions-AEM in Bezug auf Ihre vertraglich vereinbarte Service Level Agreement (SLA) anzeigen.
 
-Das folgende Diagramm zeigt die monatliche SLA-Erreichung für 2018.
+Das folgende Diagramm zeigt die monatliche SLA-Erreichung für 2019.
 
 ![SLA-Diagramm 2018](/help/assets/SLA-Reports-one.png)
 

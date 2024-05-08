@@ -2,10 +2,10 @@
 title: Erste Anmeldung
 description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die allgemeine Konfiguration eingerichtet haben und für die erste Verwendung von Cloud Manager bereit sind.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 413edd167b5eda51c207113aaa00a92c808fb09f
-workflow-type: ht
-source-wordcount: '261'
-ht-degree: 100%
+source-git-commit: 1417d3bfa5a844641e0942d1fe1bd7bf84e41997
+workflow-type: tm+mt
+source-wordcount: '297'
+ht-degree: 75%
 
 ---
 
@@ -24,21 +24,23 @@ Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingeri
 
    ![Cloud Manager-Konsole](/help/assets/cloud-manager-console.png)
 
-1. Klicken Sie auf der Programmkarte auf die Schaltfläche mit den Auslassungspunkten und anschließend auf **Programmübersicht**, um zur Seite **Übersicht** von Cloud Manager zu gelangen.
-
-   ![Cloud Manager-Option](/help/assets/program-overview-option.png)
+1. Tippen oder klicken Sie auf die Karte Ihres Programms, um zu Cloud Manager zu navigieren **Übersicht** Seite.
 
 1. In Cloud Manager wird die Seite **Übersicht** geöffnet.
 
-   ![Cloud Manager-Übersichtsseite](/help/assets/FirstLogin1.png)
+   ![Cloud Manager-Übersichtsseite](/help/assets/program-overview-page.png)
 
-1. Klicken Sie auf **Programm einrichten**, um Ihre Programmbeschreibung einzurichten und wichtige Leistungsindikatoren (Key Performance Indicators, KPIs) zu definieren.
+1. Wenn Ihr Programm noch nicht eingerichtet ist, tippen oder klicken Sie auf **Programm einrichten** im [Aktionsaufruf](/help/getting-started/navigation.md#cta) , um Ihre Programmbeschreibung einzurichten und wichtige Leistungsindikatoren (Key Performance Indicators, KPIs) zu definieren. Wenn Ihr Programm bereits eingerichtet ist, kann der CTA weitere Schritte anbieten.
 
 Fahren Sie mit dem Dokument [Programmeinrichtung](/help/getting-started/program-setup.md) fort, um die nächsten Schritte zur Einrichtung Ihres Programms zu erfahren.
 
 ## Cloud Manager-Aktivität {#activity}
 
 Cloud Manager bietet einen Überblick über die Aktivitäten eines Programms, in dem alle CI/CD-Pipeline-Ausführungen aufgelistet werden (Produktion und produktionsfremd), sodass Sie die vergangene und aktuelle Aktivität einsehen können.
+
+>[!TIP]
+>
+>Weitere Informationen zur Verwendung der Cloud Manager-Benutzeroberfläche finden Sie im Dokument [Navigieren zur Cloud Manager-Benutzeroberfläche.](/help/getting-started/navigation.md)
 
 >[!NOTE]
 >

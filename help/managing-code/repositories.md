@@ -2,10 +2,10 @@
 title: Cloud Manager-Repositorys
 description: Erfahren Sie, wie Sie Repositorys für Ihre Cloud Manager-Programme aufrufen, erstellen und bearbeiten können.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 63cbcf8724a840efa67b8fafc4c321e04a5d70d9
-workflow-type: ht
-source-wordcount: '796'
-ht-degree: 100%
+source-git-commit: 1d4ab9704fdb743b097e24be335fbf069d1e78bd
+workflow-type: tm+mt
+source-wordcount: '762'
+ht-degree: 98%
 
 ---
 
@@ -26,11 +26,7 @@ Um auf Ihr Repository zuzugreifen, verwenden Sie in Cloud Manager die Schaltflä
 
    ![Schaltfläche „Informationen zu Repository abrufen“](/help/assets/access-repo1.png)
 
-1. Wenn Sie zur Registerkarte **Produktionsfremde Pipeline** wechseln, ist die Option **Informationen zu Repository abrufen** ebenfalls dort verfügbar, wie [für die Pipeline konfiguriert](/help/using/non-production-pipelines.md).
-
-   ![Produktionsfremde Pipelines](/help/assets/access-repo-nonprod.png)
-
-1. Klicken Sie auf die Schaltfläche **Informationen zu Repository abrufen**, um ein Dialogfeld zu öffnen, das Folgendes enthält:
+1. Tippen oder klicken Sie auf **Zugriff auf Repo Info** Schaltfläche zum Öffnen eines Dialogfelds, das Folgendes enthält:
 
    * Die URL zum Git-Repository
    * Benutzername
@@ -43,7 +39,7 @@ Verwenden Sie die bereitgestellten Informationen, um das Repository lokal zu klo
 
 >[!NOTE]
 >
->Die Option **Auf Repository-Informationen zugreifen** ist für Benutzer mit den Rollen **Entwickler** und **Implementierungs-Manager** sichtbar.
+>Die Option **Auf Repository-Informationen zugreifen** ist für Benutzer mit den Rollen **Entwickler** und **Bereitstellungs-Manager** sichtbar.
 
 ## Hinzufügen von Repositorys {#add-repos}
 
@@ -57,7 +53,7 @@ Führen Sie die folgenden Schritte aus, um Repositorys in Cloud Manager hinzuzuf
 
    >[!NOTE]
    >
-   >Sie müssen die Rolle des **Implementierungs-Managers** oder des **Geschäftsinhabers** haben, um ein Repository hinzuzufügen.
+   >Sie müssen die Rolle des **Bereitstellungs-Managers** oder des **Geschäftsinhabers** haben, um ein Repository hinzuzufügen.
 
    ![Repository hinzufügen](/help/assets/create-repo2.png)
 
@@ -68,8 +64,6 @@ Führen Sie die folgenden Schritte aus, um Repositorys in Cloud Manager hinzuzuf
 1. Wählen Sie **Speichern** aus.
 
 Ihr neu erstelltes Repository wird angezeigt.
-
-![Neues Repository erstellt](/help/assets/create-repo3.png)
 
 In Cloud Manager erstellte Repositorys stehen Ihnen beim [Erstellen Ihrer Pipelines](/help/overview/ci-cd-pipelines.md) zur Auswahl.
 

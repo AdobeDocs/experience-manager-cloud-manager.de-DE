@@ -2,10 +2,10 @@
 title: Wichtige Konzepte
 description: Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriffe. Dieses Dokument fasst einige der wichtigsten Informationen für Sie bei den ersten Schritten mit Cloud Manager zusammen.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 73e322cf93dc7709b7581860974079c8d94034ba
-workflow-type: ht
-source-wordcount: '419'
-ht-degree: 100%
+source-git-commit: 67621fb2dbb0c32371b2ffc16ec45f47daf04e05
+workflow-type: tm+mt
+source-wordcount: '413'
+ht-degree: 91%
 
 ---
 
@@ -16,7 +16,7 @@ Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriff
 
 ## Programm {#application}
 
-Ein Programm ist eine Reihe von Anpassungen und Konfigurationen, die von einem Kunden erstellt werden, um die zugrunde liegende [Lösung](#solution) (z. B. AEM Sites oder AEM Assets) für seine spezifischen Anwendungsfälle und Bedürfnisse anzupassen. Ein Programm ist eine logische Einheit, die aus mehreren [Artefakten](#artifact) bestehen kann.
+Eine Anwendung ist der Satz von Anpassungen und Konfigurationen, die von einem Kunden erstellt werden, um den zugrunde liegenden [Lösung](#solution) (z. B. AEM Sites oder AEM Assets) für spezifische Anwendungsfälle und Anforderungen. Ein Programm ist eine logische Einheit, die aus mehreren [Artefakten](#artifact) bestehen kann.
 
 Ein Beispielprogramm ist das fiktive [WKND-Lifestyle-Programm](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de).
 
