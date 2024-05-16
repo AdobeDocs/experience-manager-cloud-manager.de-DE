@@ -1,13 +1,13 @@
 ---
 title: Navigieren zur Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Cloud Manager-Benutzeroberfläche organisiert ist und wie Sie zur Verwaltung Ihrer Programme und Umgebungen navigieren.
-source-git-commit: 95736be8c38488c3f16164784247e160a967ecb7
+exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
+source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1292'
 ht-degree: 18%
 
 ---
-
 
 # Navigieren in der Cloud Manager-Benutzeroberfläche {#navigation}
 
@@ -101,7 +101,6 @@ Jedes Programm wird durch eine Karte (oder eine Zeile in einer Tabelle) dargeste
 * Programmbild (falls konfiguriert)
 * Programmname
 * Diensttyp: **Experience Manager Cloud** für [AEM as a Cloud Service Programme](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/home) oder **Experience Manager** für AMS-Programme
-* [Programmtyp](/help/getting-started/program-setup.md): Sandbox oder Produktion
 * Status
 * Konfigurierte Lösungen
 * Erstellungsdatum
