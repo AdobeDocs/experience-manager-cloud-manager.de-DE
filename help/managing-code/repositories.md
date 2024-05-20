@@ -3,9 +3,9 @@ title: Cloud Manager-Repositorys
 description: Erfahren Sie, wie Sie Repositorys für Ihre Cloud Manager-Programme aufrufen, erstellen und bearbeiten können.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 1d4ab9704fdb743b097e24be335fbf069d1e78bd
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '762'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -26,7 +26,7 @@ Um auf Ihr Repository zuzugreifen, verwenden Sie in Cloud Manager die Schaltflä
 
    ![Schaltfläche „Informationen zu Repository abrufen“](/help/assets/access-repo1.png)
 
-1. Tippen oder klicken Sie auf **Zugriff auf Repo Info** Schaltfläche zum Öffnen eines Dialogfelds, das Folgendes enthält:
+1. Tippen oder klicken Sie auf die Schaltfläche **Auf Repository-Informationen zugreifen**, um ein Dialogfeld zu öffnen, das Ihnen Folgendes anzeigt:
 
    * Die URL zum Git-Repository
    * Benutzername

@@ -3,9 +3,9 @@ title: Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '264'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -37,9 +37,9 @@ Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung
 
 ## Verwalten von Umgebungen {#managing-environments-with-cloud-manager}
 
-Im **Umgebungen** auf die Zeile einer Umgebung tippen oder klicken, um die **Umgebungen** angezeigt.
+Tippen oder klicken Sie auf der Kachel **Umgebungen** auf die Zeile einer beliebigen Umgebung, um den Bildschirm **Umgebungen** anzuzeigen.
 
-Die **Umgebungen** zeigt alle Produktions- und Staging-Umgebungen in Ihrem Programm an. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle der Knoten in der Umgebung sowie die Größe der CPU, den Speicher, die Region und den Status.
+Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ihrem Programm an. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle der Knoten in der Umgebung sowie die Größe der CPU, den Speicher, die Region und den Status.
 
 >[!NOTE]
 >

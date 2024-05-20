@@ -3,9 +3,9 @@ title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '800'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
@@ -44,7 +44,7 @@ Das Fenster **Pipelines** zeigt eine vollständige Liste aller Pipelines für da
 
 1. Hier können Sie eine Liste aller Pipelines für das Programm sehen und die Ausführung von Pipelines starten und stoppen, wie Sie es von der **Pipelines-Karte** kennen.
 
-Tippen oder klicken Sie auf `i` zeigt Details zur letzten oder aktuellen Ausführung der Pipeline an.
+Durch Tippen oder Klicken auf das Symbol `i` erhalten Sie Details über die letzte oder aktuelle Ausführung der Pipeline.
 
 ![Details zur Pipeline-Ausführung](/help/assets/configure-pipelines/pipeline-status.png)
 
@@ -60,7 +60,7 @@ Das Fenster **Aktivität** zeigt eine vollständige Liste aller Pipeline-Ausfüh
 
 1. Hier sehen Sie eine Liste aller Pipeline-Ausführungen für das Programm, einschließlich aktueller und vorheriger Ausführungen.
 
-Tippen oder klicken Sie auf `i` zeigt Details zur Ausführung des ausgewählten Pipeline-Laufs an.
+Durch Tippen oder Klicken auf das Symbol `i` werden Details zur Ausführung des ausgewählten Pipeline-Laufs angezeigt.
 
 ![Details zur Pipeline-Ausführung](/help/assets/configure-pipelines/pipeline-activity.png)
 
