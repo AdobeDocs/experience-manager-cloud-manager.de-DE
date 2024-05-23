@@ -4,9 +4,9 @@ description: Dies sind die Versionshinweise für Cloud Manager Version 2024.5.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
 source-git-commit: 395fe2a42fc2d6413dff38c9e4620c62039f87e2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '287'
-ht-degree: 68%
+ht-degree: 100%
 
 ---
 
@@ -21,21 +21,21 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.5.0 wurde am 9. Mai 2024 veröffentlicht. Die nächste Version ist für den 6. Juni 2024 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.5.0 ist der 9. Mai 2024. Die nächste Version ist für den 6. Juni 2024 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Der Schritt &quot;Inhaltsprüfung&quot;wird jetzt übersprungen, wenn eine Pipeline in [Notfallmodus.](/help/using/code-deployment.md#emergency-pipeline)
+* Der Schritt „Inhaltsprüfung“ wird jetzt übersprungen, wenn eine Pipeline im [Notfallmodus](/help/using/code-deployment.md#emergency-pipeline) ausgeführt wird.
 
 ## Early-Adopter-Programm {#early-adoption}
 
 Nehmen Sie an unserem Early-Adopter-Programm teil und nutzen Sie die Möglichkeit, einige zukünftige Funktionen zu testen
 
-### Nur-Staging- und reine Produktions-Pipelines {#staging-production-only-pipelines}
+### Reine Staging- und Produktions-Pipelines {#staging-production-only-pipelines}
 
-Unterstützung für [reine Staging- und reine Produktionslinien](/help/using/stage-prod-only.md) wurde eingeführt, sodass Sie produktionsorientierte Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen können.
+Die Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) wurde eingeführt, sodass Sie Full-Stack-Produktionsbereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen können.
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte eine E-Mail an  `Grp-cloudmanager_splitpipelines@adobe.com` von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse aus.
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte über die mit Ihrer Adobe-ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com`.
 
 ### Bringen Sie Ihren eigenen GitHub mit {#byo-github}
 

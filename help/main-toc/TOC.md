@@ -8,9 +8,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '509'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -46,7 +46,7 @@ ht-degree: 99%
    + CI/CD-Pipelines {#pipelines}
       + [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md)
       + [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md)
-      + [Pipelines &quot;Nur Staging&quot;und &quot;Nur Produktion&quot;](/help/using/stage-prod-only.md)
+      + [Reine Staging- und Produktions-Pipelines](/help/using/stage-prod-only.md)
       + [Verwalten von Pipelines](/help/using/managing-pipelines.md)
    + [Code-Bereitstellung](/help/using/code-deployment.md)
    + [Testen der Code-Qualität](/help/using/code-quality-testing.md)
@@ -64,7 +64,7 @@ ht-degree: 99%
    + [Arbeiten mit mehreren Git-Repositorys](/help/managing-code/multiple-git-repos.md)
    + [Arbeiten mit Ihren eigenen GitHub-Repositorys](/help/managing-code/byo-github.md)
 + Assistent für Produktaktualisierungen {#product-update-wizard}
-   + [Übersicht](/help/product-update-wizard/overview.md)
+   + [Überblick](/help/product-update-wizard/overview.md)
    + [Test](/help/product-update-wizard/evaluation.md)
 + Versionshinweise {#release-notes}
    + [Aktuelle Versionshinweise](/help/release-notes/current.md)
