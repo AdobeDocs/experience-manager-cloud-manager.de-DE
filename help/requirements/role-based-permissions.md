@@ -3,9 +3,9 @@ title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: fc1bc626dc18d25ce8c5bbae71396b234b5676db
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '620'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -35,7 +35,7 @@ In dieser Tabelle sind die Rollen aufgeführt, die Sie in der Admin Console zuwe
 | Bereitstellungs-Manager | Dieser Anwender verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, kann bei Bedarf gravierende 3-Tier-Fehler genehmigen und hat Zugriff auf das Git-Repository. |
 | Entwickler | Dieser Anwender entwickelt und testet benutzerdefinierten Anwendungs-Code, verwendet [!UICONTROL Cloud Manager] hauptsächlich zur Anzeige des Bereitstellungsstatus und hat Commit-Zugriff auf das Git-Repository. |
 | Customer Success Engineer | Dieser Anwender unterstützt im Allgemeinen den Kundenerfolg für AMS-Kunden und interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen durchzuführen, die die Aufsicht des Customer Success Engineer (CSE) erfordern. |
-| Inhaltsautor | Dieser Benutzer interagiert im Allgemeinen nicht mit Cloud Manager, kann jedoch den Cloud Manager-Programmschalter (nach Navigation von Experience Cloud) verwenden, um auf Adobe Experience Manager (AEM) zuzugreifen. |
+| Inhaltsautor | Diese bzw. dieser Benutzende interagiert im Allgemeinen nicht mit Cloud Manager, kann aber das Cloud Manager-Programm switcher verwenden (von Experience Cloud kommend), um auf Adobe Experience Manager (AEM) zuzugreifen. |
 
 ## Benutzerberechtigungen {#user-permissions}
 
