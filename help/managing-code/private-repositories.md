@@ -3,10 +3,10 @@ title: Hinzufügen privater Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie Cloud Manager für die Verwendung mit Ihren eigenen privaten GitHub-Repositorys einrichten.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: dcb48f6914ff48c6905da40609ca99fe529d9fe3
+source-git-commit: 84a6d8b7a44af124eb227999ad1cbd1fe14ab7ee
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 80%
+source-wordcount: '884'
+ht-degree: 68%
 
 ---
 
@@ -122,10 +122,12 @@ Validierte private Repositorys können mit [Vollstapel- und Frontend-Pipelines.]
 
 ## Einschränkungen {#limitations}
 
-Beachten Sie bei der Verwendung Ihrer eigenen GitHub-Repositorys mit Cloud Manager folgende Einschränkungen.
+Bei der Verwendung privater Repositorys mit Cloud Manager gelten bestimmte Einschränkungen.
 
-* Sie können die GitHub-Repositorys nicht als direkte Repository-Quelle für die von Ihnen verwalteten Pipelines verwenden.
-   * Diese Funktionalität ist geplant.
-* Sie können die Überprüfung der Pull-Anfrage nicht mithilfe der GitHub-Prüfung über Cloud Manager anhalten.
-   * Während der Validierung des GitHub-Repositorys versucht Cloud Manager immer, die für dieses Repository erstellten Pull-Anfragen zu validieren.
-Wenn die Adobe GitHub-App aus Ihrer GitHub-Organisation entfernt wird, wird dadurch auch die Überprüfungsfunktion für Pull-Anfragen für alle Repositorys entfernt.
+* Sie können private Repositorys nicht als direkte Repository-Quelle für die von Ihnen verwalteten Pipelines verwenden.
+* Sie können die Überprüfung der Pull-Anforderung nicht mithilfe der GitHub-Prüfung aus Cloud Manager anhalten.
+   * Wenn das GitHub-Repository in Cloud Manager validiert wird, versucht Cloud Manager immer, die für dieses Repository erstellten Pull-Anforderungen zu validieren.
+* Wenn die Adobe GitHub-App aus Ihrer GitHub-Organisation entfernt wird, wird dadurch auch die Überprüfungsfunktion für Pull-Anfragen für alle Repositorys entfernt.
+* Bei Verwendung privater Repositorys in Produktions-Vollstapelpipelines wird kein Git-Tag erstellt und gesendet.
+* Pipelines, die private Repositorys und den On-Commit-Build-Trigger verwenden, werden nicht automatisch gestartet, wenn ein neuer Commit in die ausgewählte Verzweigung verschoben wird.
+* [Funktion zur Wiederverwendung von Artefakten](/help/getting-started/project-setup.md#build-artifact-reuse) gilt nicht für private Repositorys.
