@@ -1,19 +1,19 @@
 ---
-title: Versionshinweise für 2024.5.0
-description: Dies sind die Versionshinweise für Cloud Manager Version 2024.5.0.
+title: Versionshinweise für 2024.6.0
+description: Dies sind die Versionshinweise für Cloud Manager Version 2024.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 395fe2a42fc2d6413dff38c9e4620c62039f87e2
-workflow-type: ht
-source-wordcount: '287'
-ht-degree: 100%
+source-git-commit: a41ea35cb685d4e88e016bc887eb2465963747e1
+workflow-type: tm+mt
+source-wordcount: '291'
+ht-degree: 48%
 
 ---
 
 
-# Versionshinweise für Cloud Manager Version 2024.5.0 {#release-notes}
+# Versionshinweise für Cloud Manager Version 2024.6.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2024.5.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Version 2024.6.0 dokumentiert.
 
 >[!NOTE]
 >
@@ -21,11 +21,16 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.5.0 ist der 9. Mai 2024. Die nächste Version ist für den 6. Juni 2024 geplant.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] Version 2024.6.0 wurde am 6. Juni 2024 veröffentlicht. Die nächste Version ist für den 11. Juli 2024 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Der Schritt „Inhaltsprüfung“ wird jetzt übersprungen, wenn eine Pipeline im [Notfallmodus](/help/using/code-deployment.md#emergency-pipeline) ausgeführt wird.
+* Sie können jetzt [Verwenden Ihrer eigenen GitHub-Repositorys](/help/managing-code/private-repositories.md) als Quellen für Vollstapel- und Frontend-Pipelines.
+   * Darüber hinaus können Sie GitHub-Repositorys mit [Git-Untermodule,](/help/managing-code/git-submodules.md) erhalten Sie eine verbesserte Kontrolle über die automatisch generierten Pipelines, die zur Überprüfung von Pull-Anforderungen verwendet werden, und können Verhalten für wichtige Metriken während der Codescan-Phase definieren.
+   * [Sie haben auch die Wahl](/help/managing-code/github-check-config.md) Um den Berichtsverlauf auf GitHub beizubehalten, benennen Sie die Pipeline und legen Sie Pipeline-Variablen entsprechend Ihren Anforderungen fest.
+* Neue OakPal-Regeln wurden zum [Überprüfung der Code-Qualität von Cloud Manager.](/help/using/custom-code-quality-rules.md#oakpal-ui-content-package)
+   * Jede neue Regel, die ab Juni 2024 hinzugefügt wurde, ist eine ununterbrochene Änderung.
+   * Sie werden dringend aufgefordert, diese so bald wie möglich zu beheben, da diese neuen Regeln dazu führen werden, dass Pipelines ab der Cloud Manager-Version vom August 2024 fehlschlagen.
 
 ## Early-Adopter-Programm {#early-adoption}
 
@@ -36,13 +41,3 @@ Nehmen Sie an unserem Early-Adopter-Programm teil und nutzen Sie die Möglichkei
 Die Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) wurde eingeführt, sodass Sie Full-Stack-Produktionsbereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen können.
 
 Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte über die mit Ihrer Adobe-ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com`.
-
-### Bringen Sie Ihren eigenen GitHub mit {#byo-github}
-
-Wenn Sie Ihre Repositorys mit GitHub verwalten, [können Sie jetzt Code direkt in Ihren GitHub-Repositorys über Cloud Manager validieren.](/help/managing-code/byo-github.md) Durch diese Integration entfällt die Notwendigkeit, Code ständig mit dem Adobe-Repository zu synchronisieren, und Sie können Pull-Anfragen überprüfen, bevor Sie sie in den Hauptverzweigungen zusammenführen. Diese Funktion ist nur für öffentliche GitHub-Repositorys verfügbar. Unterstützung für selbstgehostetes GitHub-Repositorys ist nicht verfügbar.
-
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie bitte über die mit Ihrer Adobe-ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-CloudManager_BYOG@adobe.com`.
-
-## Fehlerbehebungen {#bug-fixes}
-
-* Es wurde ein Fehler behoben, durch den Cloud Manager Artefakte mit dem falschen Commit-Hash wiederverwendet hat.

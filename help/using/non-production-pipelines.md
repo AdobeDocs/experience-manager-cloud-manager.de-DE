@@ -2,8 +2,8 @@
 title: Konfigurieren von produktionsfremden Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
-workflow-type: ht
+source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+workflow-type: tm+mt
 source-wordcount: '716'
 ht-degree: 100%
 
@@ -29,7 +29,7 @@ Es gibt zwei Arten von produktionsfremden Pipelines:
 
 >[!NOTE]
 >
->Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Im Dokument [Cloud Manager Repositorys](/help/managing-code/repositories.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
+>Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Im Dokument [Cloud Manager Repositorys](/help/managing-code/managing-repositories.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
 
 ## Hinzufügen einer produktionsfremden Pipeline {#add-non-production-pipeline}
 

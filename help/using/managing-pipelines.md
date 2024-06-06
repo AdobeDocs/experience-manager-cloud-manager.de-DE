@@ -2,10 +2,10 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
-workflow-type: ht
-source-wordcount: '800'
-ht-degree: 100%
+source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
+workflow-type: tm+mt
+source-wordcount: '901'
+ht-degree: 88%
 
 ---
 
@@ -96,6 +96,10 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 >
 >Pipelines, die gerade ausgeführt werden, können nicht bearbeitet werden.
 
+>[!NOTE]
+>
+>Web-Ebene- und Konfigurations-Pipelines werden von privaten Repositorys nicht unterstützt. Lesen Sie das Dokument . [Hinzufügen privater Repositorys in Cloud Manager](/help/managing-code/private-repositories.md) für Details und die vollständige Liste der Einschränkungen.
+
 ## Löschen von Pipelines {#deleting-pipelines}
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
@@ -127,6 +131,15 @@ Sobald ein Pipeline-Schritt abgeschlossen ist, wird eine Zusammenfassung angezei
 Tippen oder klicken Sie auf den Link **Details anzeigen**, um den Abschnitt **Dauer** anzuzeigen. Hier ist die durchschnittliche Dauer der Pipeline basierend auf dem Verlaufs-Trend für dieses Programm aufgeführt.
 
 ![Dauer](/help/assets/configure-pipelines/duration.png)
+
+Wenn Ihre Pipeline eine **Codescans** -Schritt, bei dem Probleme aufgetreten sind, können Sie auf die **Download-Details** Schaltfläche zum Anzeigen einer Liste von [Codequalitätstests](/help/using/code-quality-testing.md) das nicht bestanden hat.
+
+![Codequalitätsprobleme](assets/managing-pipelines-code-quality-issues.png)
+
+A **Speicherort der Projektdatei** -Spalte ist in der CSV-Datei verfügbar, um den Speicherort des fehlerhaften Codes anzugeben. Diese Spalte ist der projektrelative Pfad, während die **Dateispeicherort** -Spalte wird von Maven generiert.
+
+![Problemdetails zum Prüfen des Projektcodes](assets/managing-pipelines-code-quality-details.png)
+
 
 >[!NOTE]
 >

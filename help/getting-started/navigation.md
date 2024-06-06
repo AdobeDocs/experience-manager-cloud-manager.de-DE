@@ -2,8 +2,8 @@
 title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 9d0f4dd29e2d05ab3f6900ee23c536b91c849e65
-workflow-type: ht
+source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+workflow-type: tm+mt
 source-wordcount: '1292'
 ht-degree: 100%
 
@@ -168,7 +168,7 @@ Jedem Programm sind zahlreiche Optionen und Daten zugeordnet. Diese Daten werden
 * Übersicht: Die im aktuellen Dokument beschriebene Programmübersicht
 * [Aktivität](/help/using/managing-pipelines.md#activity): Verlauf der Pipeline-Ausführungen des Programms
 * [Pipelines](/help/using/managing-pipelines.md#pipelines): Alle für das Programm konfigurierten Pipelines
-* [Repositorys](/help/managing-code/repositories.md): Alle für das Programm konfigurierten Repositorys
+* [Repositorys](/help/managing-code/managing-repositories.md): Alle für das Programm konfigurierten Repositorys
 * [Berichte](/help/using/monitoring-environments.md#system-monitoring-overview): Metriken wie SLA-Daten
 * [Umgebungen](/help/using/managing-environments.md): Alle für das Programm konfigurierten Umgebungen
 * [Content-Sets](/help/using/content-copy.md): Sätze von Inhalten, die zu Kopierzwecken festgelegt wurden
