@@ -1,23 +1,23 @@
 ---
-title: Hinzufügen privater Repositorys in Cloud Manager
-description: Erfahren Sie, wie Sie Cloud Manager für die Verwendung mit Ihren eigenen privaten GitHub-Repositorys einrichten.
+title: Hinzufügen von privaten Repositorys in Cloud Manager
+description: Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigenen privaten GitHub-Repositorys einrichten.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 6f14a8e9ff8e56f9f7b84799733e26b4c0ff8dcb
 workflow-type: tm+mt
 source-wordcount: '868'
-ht-degree: 70%
+ht-degree: 88%
 
 ---
 
 
-# Hinzufügen privater Repositorys in Cloud Manager {#private-repositories}
+# Hinzufügen von privaten Repositorys in Cloud Manager {#private-repositories}
 
-Erfahren Sie, wie Sie Cloud Manager für die Verwendung mit Ihren eigenen privaten GitHub-Repositorys einrichten.
+Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigenen privaten GitHub-Repositorys einrichten.
 
-## Überblick {#overview}
+## Übersicht {#overview}
 
-Wenn Sie Cloud Manager so konfigurieren, dass es mit Ihren eigenen privaten GitHub-Repositorys funktioniert, können Sie Ihren Code direkt in Ihrem GitHub-Repository über Cloud Manager validieren, sodass Sie Ihren Code nicht konsistent mit dem Adobe-Repository synchronisieren müssen.
+Indem Sie Cloud Manager für die Verwendung mit Ihren eigenen privaten GitHub-Repositorys konfigurieren, können Sie Ihren Code über Cloud Manager direkt in Ihrem GitHub-Repository validieren, sodass Sie ihn nicht ständig mit dem Adobe-Repository synchronisieren müssen.
 
 >[!NOTE]
 >
@@ -106,19 +106,19 @@ Wenn die Pull-Anfrage geschlossen oder zusammengeführt wird, wird die erstellte
 
 >[!TIP]
 >
->Siehe Dokument . [GitHub - Anmerkungen prüfen](github-annotations.md) für Details zu den Informationen, die über GitHub bereitgestellt werden, wenn Pull-Anfrageprüfungen ausgeführt werden.
+>Im Dokument [Anmerkungen zur GitHub-Prüfung](github-annotations.md) finden Sie Details zu den Informationen, die bei der Ausführung von Pull-Anfrageprüfungen über GitHub bereitgestellt werden.
 
 >[!TIP]
 >
->Sie können die automatisch erstellten Pipelines steuern, um jede Pull-Anforderung in ein privates Repository zu validieren. Lesen Sie das Dokument . [GitHub-Prüfkonfiguration für private Repositorys](github-check-config.md) für weitere Informationen.
+>Sie können die automatisch erstellten Pipelines so steuern, dass sie jede Pull-Anfrage an ein privates Repository validieren. Weitere Informationen finden Sie im Dokument [Konfiguration der GitHub-Prüfung für private Repositorys](github-check-config.md).
 
 ## Zuordnen von privaten Repositorys zu Pipelines {#pipelines}
 
-Validierte private Repositorys können mit [Vollstapel- und Frontend-Pipelines.](/help/overview/ci-cd-pipelines.md)
+Validierte private Repositorys können [Full-Stack- und Frontend-Pipelines zugeordnet werden.](/help/overview/ci-cd-pipelines.md)
 
 >[!NOTE]
 >
->Web-Ebene- und Konfigurations-Pipelines werden von privaten Repositorys nicht unterstützt.
+>Pipelines auf Web-Ebene und Konfigurations-Pipelines werden bei privaten Repositorys nicht unterstützt.
 
 ## Einschränkungen {#limitations}
 
