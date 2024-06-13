@@ -3,9 +3,9 @@ title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '901'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -98,7 +98,7 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 
 >[!NOTE]
 >
->Web-Ebene- und Konfigurations-Pipelines werden von privaten Repositorys nicht unterstützt. Lesen Sie das Dokument . [Hinzufügen privater Repositorys in Cloud Manager](/help/managing-code/private-repositories.md) für Details und die vollständige Liste der Einschränkungen.
+>Pipelines auf Web-Ebene und Konfigurations-Pipelines werden bei privaten Repositorys nicht unterstützt. Details sowie eine vollständige Liste der Einschränkungen finden Sie im Dokument [Hinzufügen privater Repositorys in Cloud Manager](/help/managing-code/private-repositories.md).
 
 ## Löschen von Pipelines {#deleting-pipelines}
 
@@ -132,13 +132,13 @@ Tippen oder klicken Sie auf den Link **Details anzeigen**, um den Abschnitt **Da
 
 ![Dauer](/help/assets/configure-pipelines/duration.png)
 
-Wenn Ihre Pipeline eine **Codescans** -Schritt, bei dem Probleme aufgetreten sind, können Sie auf die **Download-Details** Schaltfläche zum Anzeigen einer Liste von [Codequalitätstests](/help/using/code-quality-testing.md) das nicht bestanden hat.
+Wenn Ihre Pipeline den Schritt **Code-Scan** umfasste, durch den Probleme aufgetreten sind, können Sie auf die Schaltfläche **Details herunterladen** tippen oder klicken, um eine Liste von [Code-Qualitätstests](/help/using/code-quality-testing.md) anzuzeigen, die nicht bestanden wurden.
 
-![Codequalitätsprobleme](assets/managing-pipelines-code-quality-issues.png)
+![Fehler bei der Code-Qualität](assets/managing-pipelines-code-quality-issues.png)
 
-A **Speicherort der Projektdatei** -Spalte ist in der CSV-Datei verfügbar, um den Speicherort des fehlerhaften Codes anzugeben. Diese Spalte ist der projektrelative Pfad, während die **Dateispeicherort** -Spalte wird von Maven generiert.
+In der CSV-Datei ist eine Spalte **Speicherort der Projektdatei** verfügbar, die den Speicherort des fehlerhaften Codes angibt. Diese Spalte ist der projektrelative Pfad, während die Spalte **Dateispeicherort** von Maven generiert wird.
 
-![Problemdetails zum Prüfen des Projektcodes](assets/managing-pipelines-code-quality-details.png)
+![Details zu Problemen beim Scannen des Projekt-Codes](assets/managing-pipelines-code-quality-details.png)
 
 
 >[!NOTE]

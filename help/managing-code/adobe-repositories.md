@@ -1,27 +1,27 @@
 ---
 title: Hinzufügen von Adobe-Repositorys in Cloud Manager
-description: Erfahren Sie, wie Sie in Cloud Manager Adobe-verwaltete Repositorys erstellen.
+description: Erfahren Sie, wie Sie in Cloud Manager von Adobe verwaltete Repositorys erstellen.
 source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '145'
-ht-degree: 31%
+ht-degree: 100%
 
 ---
 
 
 # Hinzufügen von Adobe-Repositorys in Cloud Manager {#adobe-repositories}
 
-Erfahren Sie, wie Sie in Cloud Manager Adobe-verwaltete Repositorys erstellen.
+Erfahren Sie, wie Sie in Cloud Manager von Adobe verwaltete Repositorys erstellen.
 
-## Hinzufügen eines Adobe-verwalteten Repositorys {#add-adobe-repository}
+## Hinzufügen eines von Adobe verwalteten Repositorys {#add-adobe-repository}
 
-Die **Repositorys** -Fenster erleichtern das Hinzufügen zusätzlicher Adobe-verwalteter Repositorys für Ihr Programm.
+Im Fenster **Repositorys** können Sie ganz einfach zusätzliche von Adobe verwaltete Repositorys für Ihr Programm hinzufügen.
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
 1. Wählen Sie auf der Seite **Programmübersicht** die Registerkarte **Repositorys** und wechseln Sie zu der Seite **Repositorys**.
 
-1. Klicks **Repository hinzufügen** in der Symbolleiste.
+1. Klicken Sie in der Symbolleiste auf **Repository hinzufügen**.
 
    ![Schaltfläche „Repository hinzufügen“](assets/repositories.png)
 
@@ -29,8 +29,8 @@ Die **Repositorys** -Fenster erleichtern das Hinzufügen zusätzlicher Adobe-ver
 
    ![Dialogfeld „Repository hinzufügen“](assets/add-repository-wizard.png)
 
-Wenn der Assistent geschlossen wird, wird Ihr neues Repository in der Tabelle im **Repositorys** Fenster. Sie können jetzt eine [CI/CD-Pipeline](/help/overview/ci-cd-pipelines.md) mit , oder verwalten Sie sie innerhalb der [**Repositorys** Fenster.](managing-repositories.md)
+Wenn der Assistent geschlossen wird, wird Ihr neues Repository im Fenster **Repositorys** in der Tabelle angezeigt. Sie können jetzt eine [CI/CD-Pipeline](/help/overview/ci-cd-pipelines.md) damit verbinden oder es im Fenster [**Repositorys** verwalten.](managing-repositories.md)
 
 >[!TIP]
 >
->Sie können auch GitHub-Repositorys hinzufügen, die Sie selbst als [private Repositorys.](private-repositories.md)
+>Sie können auch GitHub-Repositorys hinzufügen, die Sie selbst als [private Repositorys verwalten.](private-repositories.md)
