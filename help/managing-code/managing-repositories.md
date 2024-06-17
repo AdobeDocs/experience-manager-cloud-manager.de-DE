@@ -3,9 +3,9 @@ title: Verwalten von Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager Ihre Git-Repositorys erstellen, anzeigen und bearbeiten.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 73add7bee892769d1b3864e3238aff26bf96162d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '660'
-ht-degree: 88%
+ht-degree: 100%
 
 ---
 
@@ -38,7 +38,7 @@ Im Fenster **Repositorys** sind Details zu den Repositorys angegeben:
 
 * Der Repository-Typ
    * **Adobe** zeigt von Adobe verwaltete Repositorys
-   * **GitHub** zeigt private GitHub-Repositorys an, die Sie verwalten
+   * **GitHub** zeigt private von Ihnen verwaltete GitHub-Repositorys an
 * Zeitpunkt der Erstellung
 * Pipelines, die mit dem Repository verknüpft sind
 
@@ -77,12 +77,12 @@ Das Fenster **Repository-Informationen** mit den Details wird geöffnet. Weitere
 
 ## Überprüfen von Verzweigungen {#check-branches}
 
-Die **Verzweigungen prüfen/Projekt erstellen** -Aktion führt je nach dem Status des Repositorys zwei Funktionen aus.
+Mit der Aktion **Verzweigungen überprüfen/Projekt erstellen** werden je nach dem Status des Repositorys zwei Funktionen ausgeführt.
 
-* Wenn das Repository neu erstellt wurde, erstellt die Aktion ein Beispielprojekt basierend auf [den AEM Projektarchetyp.](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/developing/archetype/overview)
-* Wenn das Beispielprojekt bereits im Repository erstellt wurde, prüft es den Status des Repositorys und seiner Verzweigungen und erstellt Berichte zurück, wenn das Beispielprojekt bereits vorhanden ist.
+* Wenn das Repository neu erstellt wurde, erstellt die Aktion ein Beispielprojekt basierend auf dem [AEM-Projektarchetyp.](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/developing/archetype/overview)
+* Wenn im Repository bereits ein Beispielprojekt erstellt wurde, prüft es den Status des Repositorys und seiner Verzweigungen und gibt zurück, wenn ein Beispielprojekt bereits vorhanden ist.
 
-![Aktion &quot;Verzweigungen überprüfen&quot;](assets/check-branches.png)
+![Aktion „Verzweigungen überprüfen“](assets/check-branches.png)
 
 ## Repository-URL kopieren {#copy-url}
 

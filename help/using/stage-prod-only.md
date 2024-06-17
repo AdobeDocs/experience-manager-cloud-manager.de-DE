@@ -3,9 +3,9 @@ title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: c238caa22fdd71ae6aefd098331b626b9b951a0f
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '891'
-ht-degree: 92%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Reine Staging- und Produktions-Pipelines bieten Lösungen für diese Anwendungsf
 * **Bereitstellungs-Pipelines für reine Produktionsumgebungen** stellen nur in einer Produktionsumgebung bereit, mit der Möglichkeit, eine erfolgreich abgeschlossene und validierte Ausführung in der Staging-Umgebung auszuwählen und ihre Artefakte in der Produktionsumgebung bereitzustellen.
    * Reine Produktions-Pipelines verwenden die Artefakte aus den Staging-Bereitstellungen erneut und überspringen die Erstellungsphase.
 
-Weder stage-only- noch prod-only-Pipelines werden ausgeführt, während eine Full-Stack-Produktions-Pipeline ausgeführt wird und umgekehrt. Wenn sowohl die Produktions-Pipeline &quot;Nur Staging&quot;als auch die Produktions-Pipeline &quot;Vollstack&quot;über Folgendes verfügen: **Bei Git-Änderungen** Trigger konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die schreibgeschützte Pipeline automatisch gestartet. Reine Pipelines werden nicht gestartet **Bei Git-Änderungen** da sie nicht direkt mit einem Repository verknüpft sind.
+Weder reine Staging- noch reine Produktions-Pipelines werden ausgeführt, während eine Full-Stack-Produktions-Pipeline läuft und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Reine Produktions-Pipelines werden nicht mit **Bei Git-Änderungen** gestartet, da sie nicht direkt mit einem Repository verknüpft sind.
 
 Diese dedizierten Pipelines bieten mehr Flexibilität. Beachten Sie jedoch die folgenden Details zum Betrieb und Empfehlungen.
 
