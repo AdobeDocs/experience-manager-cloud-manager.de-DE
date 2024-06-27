@@ -2,9 +2,9 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 4ab4bd416658c55d72228b701c57a1845d2d0f41
-workflow-type: ht
-source-wordcount: '901'
+source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+workflow-type: tm+mt
+source-wordcount: '872'
 ht-degree: 100%
 
 ---
@@ -95,10 +95,6 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 >[!NOTE]
 >
 >Pipelines, die gerade ausgeführt werden, können nicht bearbeitet werden.
-
->[!NOTE]
->
->Pipelines auf Web-Ebene und Konfigurations-Pipelines werden bei privaten Repositorys nicht unterstützt. Details sowie eine vollständige Liste der Einschränkungen finden Sie im Dokument [Hinzufügen privater Repositorys in Cloud Manager](/help/managing-code/private-repositories.md).
 
 ## Löschen von Pipelines {#deleting-pipelines}
 

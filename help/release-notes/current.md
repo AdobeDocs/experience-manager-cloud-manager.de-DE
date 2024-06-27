@@ -3,10 +3,10 @@ title: Versionshinweise für 2024.6.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2024.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: a41ea35cb685d4e88e016bc887eb2465963747e1
-workflow-type: ht
-source-wordcount: '291'
-ht-degree: 100%
+source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+workflow-type: tm+mt
+source-wordcount: '288'
+ht-degree: 95%
 
 ---
 
@@ -25,7 +25,7 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.6.0 ist
 
 ## Neue Funktionen {#what-is-new}
 
-* Nun ist die [Verwendung Ihrer eigenen GitHub-Repositorys](/help/managing-code/private-repositories.md) als Quellen für sowohl Full-Stack- als auch Frontend-Pipelines möglich.
+* Sie können jetzt [Verwenden Ihrer eigenen GitHub-Repositorys](/help/managing-code/private-repositories.md) als Quellen für vollständige Pipelines.
    * Darüber hinaus können Sie GitHub-Repositorys mit [Git-Untermodulen](/help/managing-code/git-submodules.md) nutzen. So haben Sie mehr Kontrolle über die automatisch generierten Pipelines, die zur Prüfung von Pull-Anfragen verwendet werden, und können das Verhalten für wichtige Metriken während der Code-Scan-Phase definieren.
    * [Sie haben auch die Möglichkeit](/help/managing-code/github-check-config.md), den Berichtsverlauf auf GitHub beizubehalten, die Pipeline zu benennen und Pipeline-Variablen entsprechend Ihren Anforderungen festzulegen.
 * Es wurden neue OakPal-Regeln zur [Code-Qualitätsprüfung von Cloud Manager hinzugefügt.](/help/using/custom-code-quality-rules.md#oakpal-ui-content-package)
