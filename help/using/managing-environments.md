@@ -3,9 +3,9 @@ title: Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 116a930eea08b2bb9d288ec153519699754e0374
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '277'
-ht-degree: 95%
+ht-degree: 100%
 
 ---
 
@@ -29,9 +29,9 @@ Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Prod
 Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung, in der folgenden Prioritätsreihenfolge.
 
 * Grün: Alle Knoten werden ausgeführt
-* Rot: Ein oder mehrere Knoten sind angehalten
-* Blau: Ein oder mehrere Knoten sind im Entstehen
-* Gelb: Ein oder mehrere Knoten verfügen über keinen Leistungsstatus
+* Rot: Ein oder mehrere Knoten sind angehalten.
+* Blau: Ein oder mehrere Knoten sind im Entstehen.
+* Gelb: Ein oder mehrere Knoten verfügen über keinen Leistungsstatus.
 
 ![Kachel „Umgebungen“](/help/assets/Environments-card-new.png)
 
