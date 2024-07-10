@@ -3,10 +3,10 @@ title: Versionshinweise für 2024.6.0
 description: Dies sind die Versionshinweise für Cloud Manager Version 2024.6.0.
 feature: Release Information
 exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
-workflow-type: ht
+source-git-commit: 851b556c0917d9f6d97d958a0c8e8aeff4141079
+workflow-type: tm+mt
 source-wordcount: '288'
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -21,7 +21,7 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] Versi
 
 ## Veröffentlichungsdatum {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.6.0 ist der 6. Juni 2024. Die nächste Version ist für den 11. Juli 2024 geplant.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] Version 2024.6.0 ist der 6. Juni 2024. Die nächste Version ist für den 18. Juli 2024 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
