@@ -4,8 +4,8 @@ description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse b
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '573'
+ht-degree: 100%
 
 ---
 
@@ -16,11 +16,11 @@ Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt
 
 ## Benachrichtigungen in Cloud Manager {#cloud-manager-notifications}
 
-Über [!UICONTROL Cloud Manager] können Anwenderinnen und Anwender Benachrichtigungen beim Starten oder Abschließen einer Produktions-Pipeline (ob erfolgreich oder nicht), zu Beginn einer Produktionsimplementierung bzw. beim Erreichen der Schritte **GoLive-Genehmigung** und **Geplant** empfangen. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+Über [!UICONTROL Cloud Manager] können Anwenderinnen und Anwender Benachrichtigungen beim Starten oder Abschließen einer Produktions-Pipeline (ob erfolgreich oder nicht), zu Beginn einer Produktionsbereitstellung bzw. beim Erreichen der Schritte **GoLive-Genehmigung** und **Geplant** empfangen. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >
->Die Genehmigung und geplanten Benachrichtigungen werden nur an Anwender mit den Rollen **Geschäftsinhaber**, **Programm-Manager** und **Implementierungs-Manager** gesendet.
+>Die Genehmigung und geplanten Benachrichtigungen werden nur an Anwender mit den Rollen **Geschäftsinhaber**, **Programm-Manager** und **Bereitstellungs-Manager** gesendet.
 
 Die Benachrichtigungen werden in einer Seitenleiste der [!UICONTROL Cloud Manager]-Benutzeroberfläche und überall in Adobe [!UICONTROL Experience Cloud] angezeigt.
 
@@ -28,7 +28,7 @@ Das Glockensymbol in der Kopfzeile zeigt ein Badge, wenn es neue Benachrichtigun
 
 ![Benachrichtigungssymbol](/help/assets/notifications-bell-badged.png)
 
-Klicken Sie auf das Glockensymbol, um die Seitenleiste zu öffnen und die Benachrichtigungen anzuzeigen. Die Registerkarte **Benachrichtigungen** in der Seitenleiste listet die neuesten Benachrichtigungen wie beispielsweise Implementierungsbestätigungen auf. Benachrichtigungen beziehen sich auf Ihre Umgebungen.
+Klicken Sie auf das Glockensymbol, um die Seitenleiste zu öffnen und die Benachrichtigungen anzuzeigen. Die Registerkarte **Benachrichtigungen** in der Seitenleiste listet die neuesten Benachrichtigungen wie beispielsweise Bereitstellungsbestätigungen auf. Benachrichtigungen beziehen sich auf Ihre Umgebungen.
 
 ![Benachrichtigungsseitenleiste](/help/assets/notifications-activities.png)
 
@@ -36,7 +36,7 @@ Die Registerkarte **Ankündigungen** enthält Ankündigungen zu Adobe-Produkten.
 
 ![Benachrichtigungsseitenleiste](/help/assets/notificaitons-announcements.png)
 
-Klicken Sie auf eine Ankündigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Implementierungen verknüpft sind, führen Sie zu den Details dieser Aktivität, beispielsweise dem Pipeline-Ausführungsfenster.
+Klicken Sie auf eine Ankündigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Bereitstellungen verknüpft sind, führen Sie zu den Details dieser Aktivität, beispielsweise dem Pipeline-Ausführungsfenster.
 
 Klicken Sie auf die Option **Alles anzeigen** am Ende des Bedienfelds, um alle Benachrichtigungen in Ihrem Posteingang anzuzeigen.
 
@@ -78,7 +78,7 @@ Warnhinweise werden für einige Sekunden in der oberen rechten Ecke des Fensters
 
 Sie können das Verhalten der Warnhinweise definieren.
 
-* **Warnhinweise anzeigen für**: Definiert die Arten von Benachrichtigungen, die Warnungen auslösen.
+* **Warnhinweise anzeigen für**: Definiert die Arten von Benachrichtigungen, die Warnhinweise auslösen.
 * **Warnhinweise sollen am Bildschirm angezeigt werden, bis ich sie schließe**: Legt fest, ob die Warnhinweise bestehen bleiben sollen, bis Sie sie aktiv deaktivieren.
 * **Dauer**: Legt fest, wie lange ein Warnhinweis auf dem Bildschirm eingeblendet werden soll, außer Sie haben ausgewählt, dass ein Warnhinweis auf dem Bildschirm verbleiben soll.
 

@@ -4,8 +4,8 @@ seo-title: Evaluation Phase
 description: Erfahren Sie, wie die Bewertungsphase des Assistenten für Produktaktualisierungen mit der Mustererkennung die Komplexität des Upgrades bewertet.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
 source-git-commit: ce2145da3b9e605e8a41bac28df520f14e255557
-workflow-type: ht
-source-wordcount: '296'
+workflow-type: tm+mt
+source-wordcount: '289'
 ht-degree: 100%
 
 ---

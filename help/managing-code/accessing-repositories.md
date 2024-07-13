@@ -1,31 +1,31 @@
 ---
-title: Zugriff auf Repository-Informationen
+title: Repository-Zugriffsinformationen
 description: Erfahren Sie, wie Sie mithilfe der Self-Service-Git-Kontoverwaltung über Cloud Manager auf Ihre von Adobe verwalteten Git-Repositorys zugreifen und diese verwalten können.
-source-git-commit: b15ef71ae24f51811798d2d25c8f75320e21c01f
-workflow-type: ht
+exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
+source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+workflow-type: tm+mt
 source-wordcount: '400'
 ht-degree: 100%
 
 ---
 
-
-# Zugriff auf Repository-Informationen {#accessing-repos}
+# Repository-Zugriffsinformationen {#accessing-repos}
 
 Erfahren Sie, wie Sie mithilfe der Self-Service-Git-Kontoverwaltung über Cloud Manager auf Ihre von Adobe verwalteten Git-Repositorys zugreifen und diese verwalten können.
 
 ## Zugriff auf Repository-Informationen von der Übersichtsseite aus {#overview-page}
 
-Cloud Manager macht es Ihnen leicht, Ihre Repository-Zugriffsinformationen für von Adobe verwaltete Repositorys abzurufen, indem Sie die Schaltfläche **Auf Repository-Informationen zugreifen** verwenden, die sich auf der Pipeline-Karte befindet.
+Cloud Manager macht es Ihnen leicht, Ihre Repository-Zugriffsinformationen abzurufen, indem Sie die Schaltfläche **Auf Repository-Informationen zugreifen** verwenden, die sich auf der Pipeline-Karte befindet.
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Gehen Sie von Ihrer Seite **Programmübersicht** aus zur Karte **Pipelines**.
+1. Navigieren Sie von Ihrer Seite **Programmübersicht** aus zur Karte **Pipelines**.
 
    ![Schaltfläche „Auf Repository-Informationen zugreifen“ auf der Karte „Umgebungen“](assets/pipelines-card.png)
 
 1. Tippen oder klicken Sie auf die Schaltfläche **Auf Repository-Informationen zugreifen**, um das Dialogfeld **Repository-Informationen** zu öffnen, das Ihnen Folgendes anzeigt:
 
-   * Der Git-Benutzername.
+   * Den Git-Benutzernamen.
    * Das Git-Kennwort.
    * Die URL zum Git-Repository von Cloud Manager.
    * Vordefinierte Git-Befehle zum schnellen Hinzufügen einer Remote-Verbindung zu Ihrem Git-Repository und Push-Code.
@@ -46,7 +46,7 @@ Cloud Manager macht es Ihnen leicht, Ihre Repository-Zugriffsinformationen für 
 
    ![Beispiel eines generierten Kennworts](assets/generated-password.png)
 
-Mithilfe dieser Anmeldeinformationen können Benutzende eine lokale Kopie des Repositorys klonen, Änderungen an diesem lokalen Repository vornehmen und etwaige Code-Änderungen wieder in das Remote-Code-Repository in Cloud Manager übertragen.
+Mithilfe dieser Anmeldeinformationen können Sie eine lokale Kopie des Repositorys klonen, Änderungen an diesem lokalen Repository vornehmen und etwaige Code-Änderungen wieder in das Remote-Code-Repository in Cloud Manager übertragen.
 
 >[!NOTE]
 >

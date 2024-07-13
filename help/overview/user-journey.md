@@ -3,8 +3,8 @@ title: Anwendertour
 description: In diesem Dokument werden die verschiedenen Onboarding-Szenarien beschrieben und die Tour mit den ersten Schritten mit Cloud Manager erklärt.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
-workflow-type: ht
-source-wordcount: '546'
+workflow-type: tm+mt
+source-wordcount: '539'
 ht-degree: 100%
 
 ---

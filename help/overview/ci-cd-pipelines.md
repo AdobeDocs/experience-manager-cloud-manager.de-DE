@@ -3,8 +3,8 @@ title: CI/CD-Pipelines
 description: Erfahren Sie mehr über CI/CD-Pipelines und wie sie Bereitstellungen in Staging- und Produktionsumgebungen in Cloud Manager handhaben.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '552'
+workflow-type: tm+mt
+source-wordcount: '562'
 ht-degree: 100%
 
 ---
@@ -28,7 +28,7 @@ Dieses Diagramm zeigt, was passiert, wenn eine Freigabe unter Verwendung einer P
 
 | Pipeline-Schritt | Beschreibung |
 |---|---|
-| 1. Start einer Release-Veröffentlichung | Ein Implementierungs-Manager löst die Freigabe entweder manuell (per Git-Commit) oder basierend auf einem wiederkehrenden Zeitplan aus. |
+| 1. Start einer Release-Veröffentlichung | Ein Bereitstellungs-Manager löst die Freigabe entweder manuell (per Git-Commit) oder basierend auf einem wiederkehrenden Zeitplan aus. |
 | 2. Erstellen des Release-Tags | [!UICONTROL Cloud Manager] erstellt ein Git-Tag, um die Release-Version mit einer automatisch generierten Versionsnummer zu kennzeichnen, z. B. `2018.531.245527.0000001222`. |
 | 3. Erstellung als Release-Version mit automatisch generierter Versionsnummer | [!UICONTROL Cloud Manager] erstellt das Programm mit der neu zugewiesenen Versionsnummer. |
 | 4. Bewertung der Code-Qualität | [!UICONTROL Cloud Manager] scannt den Quell-Code und stellt eine Zusammenfassung bereit, bevor der Code in der Staging-Umgebung bereitgestellt werden kann. |
@@ -54,7 +54,7 @@ Die CI/CD-Pipeline bietet Quality Gates (bzw. Akzeptanzkriterien), die erfüllt 
 Für jeden dieser Akzeptanztests sind drei Stufen von Problemen definiert:
 
 * **Kritisch:** Beim Test festgestellte ausschlaggebende Probleme, die ein sofortiges Fehlschlagen der Pipeline verursachen.
-* **Wichtig:** Beim Test festgestellte wichtige Probleme, durch die die Pipeline angehalten wird. Implementierungs-Manager, Projekt-Manager oder Geschäftsinhaber können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.
+* **Wichtig:** Beim Test festgestellte wichtige Probleme, durch die die Pipeline angehalten wird. Bereitstellungs-Manager, Projekt-Manager oder Geschäftsinhaber können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.
 * **Information:** Beim Test festgestellte Probleme informativer Natur, die ausschließlich zu Informationszwecken genannt werden und keine Auswirkungen auf die Pipeline-Ausführung haben.
 
 Dies ist ein Beispiel für eine Code-Prüfung mit festgestellten Problemen.

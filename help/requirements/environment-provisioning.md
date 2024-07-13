@@ -3,7 +3,7 @@ title: Umgebungsbereitstellung
 description: Erfahren Sie, wie Ihre Umgebungen im Rahmen des Cloud Manager-Onboarding-Prozesses bereitgestellt werden.
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 100%
 

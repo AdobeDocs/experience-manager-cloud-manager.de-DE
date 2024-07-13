@@ -3,7 +3,7 @@ title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: dc0b83fa045208fcd333af10f90f9590c2aa96b8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1280'
 ht-degree: 100%
 

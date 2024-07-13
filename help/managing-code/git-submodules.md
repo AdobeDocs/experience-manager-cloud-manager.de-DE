@@ -1,13 +1,13 @@
 ---
 title: Unterstützung von Git-Untermodulen
-description: Erfahren Sie, wie Sie Git-Untermodule dazu verwenden können, um den Inhalt mehrerer Verzweigungen zum Build-Zeitpunkt über Git-Repositorys hinweg zusammenzuführen.
-source-git-commit: aa30c0024e422c96f0dfbaa2804e75143faf14dc
-workflow-type: ht
+description: Erfahren Sie, wie Sie Git-Untermodule dazu verwenden können, den Inhalt mehrerer Verzweigungen zum Build-Zeitpunkt über Git-Repositorys hinweg zusammenzuführen.
+exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
+source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 100%
 
 ---
-
 
 # Unterstützung von Git-Untermodulen für Adobe-Repositorys {#git-submodule-support}
 

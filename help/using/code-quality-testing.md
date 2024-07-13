@@ -3,9 +3,9 @@ title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 38cf86a5effa201afdc8e00d8f33582fc06214d7
-workflow-type: ht
-source-wordcount: '2867'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '2848'
+ht-degree: 98%
 
 ---
 
@@ -31,7 +31,7 @@ Die Pipeline muss drei Akzeptanztests bestehen:
 Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test identifizierte Probleme.
 
 * **Kritisch**: Hierbei handelt es sich um vom Test identifizierte Probleme, die zu einem sofortigen Pipeline-Fehler führen.
-* **Wichtig**: Hierbei handelt es sich um Probleme, durch die die Pipeline angehalten wird. Implementierungs-Manager, Projekt-Manager oder Geschäftsinhaber können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler. Die Außerkraftsetzung wichtiger Fehler unterliegt einem [Timeout](/help/using/code-deployment.md#timeouts).
+* **Wichtig**: Hierbei handelt es sich um Probleme, durch die die Pipeline angehalten wird. Bereitstellungs-Manager, Projekt-Manager oder Geschäftsinhaber können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler. Die Außerkraftsetzung wichtiger Fehler unterliegt einem [Timeout](/help/using/code-deployment.md#timeouts).
 * **Info**: Hierbei handelt es sich um Probleme, die ausschließlich zu Informationszwecken bereitgestellt werden und keine Auswirkungen auf die Pipeline-Ausführung haben.
 
 >[!NOTE]
@@ -131,7 +131,7 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Adobe Granite HTML Library Manager ist ordnungsgemäß konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Paket ist deaktiviert. | CRXDE-Support | Wichtig |
 | Sling DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
-| Beispielinhalt ist nicht installiert.. | Pakete mit Beispielinhalt | Wichtig |
+| Beispielinhalt ist nicht installiert. | Pakete mit Beispielinhalt | Wichtig |
 | Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert. | [WCM-Filterkonfiguration](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/osgi-configuration-settings.html?lang=de#configuring) | Wichtig |
 | Sling WebDAV Bundle und Servlet sind angemessen konfiguriert. | WebDAV-Konsistenzprüfung | Wichtig |
 | Der Webserver ist so konfiguriert, dass Clickjacking verhindert wird. | Webserver-Konfiguration | Wichtig |
@@ -262,14 +262,14 @@ Die Bereiche mit Metriken können erweitert werden, um ein Diagramm anzuzeigen o
 
 Diese Funktion ist für die folgenden Metriken verfügbar.
 
-* **CPU-Auslastung** : Ein Diagramm zur CPU-Auslastung während des Testzeitraums
+* **CPU-Auslastung** - Ein Diagramm zur CPU-Auslastung während des Testzeitraums
 
 * **Festplatten-E/A-Wartezeit**: Ein Diagramm zur Festplatten-E/A-Wartezeit während des Testzeitraums
 
 * **Fehlerrate für die Seite**: Ein Diagramm zu den Seitenfehlern pro Minute während des Testzeitraums
    * Eine CSV-Datei mit den Seiten, die während des Tests einen Fehler verursacht haben
 
-* **Festplatten-Bandbreitenauslastung** : Ein Diagramm zur Festplatten-Bandbreitenauslastung während des Testzeitraums
+* **Festplatten-Bandbreitenauslastung** - Ein Diagramm der Bandbreitenauslastung während des Testzeitraums
 
 * **Auslastung der Netzwerkbandbreite**: Ein Diagramm zur Netzwerk-Bandbreitenauslastung während des Testzeitraums
 
@@ -296,4 +296,3 @@ Ein Sonderfall kann eintreten, wenn das Inhaltspaket „all“ eine Kombination 
 >
 >* Diese Optimierung hat keine Auswirkungen auf die Pakete, die in AEM bereitgestellt werden.
 >* Da der Abgleich zwischen den eingebetteten Inhaltspaketen und den übersprungenen Inhaltspaketen auf Dateinamen basiert, kann diese Optimierung nicht durchgeführt werden, wenn mehrere übersprungene Inhaltspakete genau denselben Dateinamen haben oder wenn der Dateiname während des Einbettens geändert wird.
-

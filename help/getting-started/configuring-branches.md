@@ -3,8 +3,8 @@ title: Konfigurieren von Verzweigungen
 description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen des Programm-Codes verwendet wird.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
 source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
-workflow-type: ht
-source-wordcount: '329'
+workflow-type: tm+mt
+source-wordcount: '325'
 ht-degree: 100%
 
 ---

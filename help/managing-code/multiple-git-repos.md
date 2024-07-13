@@ -3,7 +3,7 @@ title: Arbeiten mit mehreren Git-Repositorys
 description: Anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten, erfahren Sie hier, wie Sie mit Ihrem eigenen Git-Repository oder mehreren Git-Repositorys arbeiten können.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
 source-git-commit: da9dff997a277c207e2c48207217cb30325f3c0d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '756'
 ht-degree: 100%
 
@@ -121,7 +121,7 @@ Wie oben gezeigt, ist die Verwendung einer GitHub-Aktion sehr flexibel. Es könn
 >
 >Das obige Skript verwendet `git add`, um das Repository zu aktualisieren, wobei davon ausgegangen wird, dass dies Löschvorgänge umfasst. Abhängig von der Standardkonfiguration von Git muss dies möglicherweise durch `git add --all` ersetzt werden.
 
-## Jenkins-Beispielauftrag {#sample-jenkins-job}
+## Jenkins-Beispielvorgang {#sample-jenkins-job}
 
 Hierbei handelt es sich um ein Beispielskript, das in einem Jenkins-Auftrag oder einem ähnlichem Auftrag verwendet werden kann. Er wird durch eine Änderung in einem Git-Repository ausgelöst. Der Jenkins-Auftrag überprüft den neuesten Status des Projekts oder der Verzweigung und löst dann dieses Skript aus.
 

@@ -3,7 +3,7 @@ title: Anmerkungen zur GitHub-Prüfung
 description: Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
 source-git-commit: 210d40a5e12b40fd84efc461c6a1c48559120837
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 100%
 
@@ -14,7 +14,7 @@ ht-degree: 100%
 
 Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Wenn Sie [private Repositorys](private-repositories.md) für Ihr Cloud Manager-Programm verwenden, werden Prüfungen in GitHub automatisch bei jeder Pull-Anfrage ausgeführt. Diese werden mit nützlichen Informationen kommentiert, die Ihnen helfen, Probleme mit Ihrem Code so schnell wie möglich zu verstehen.
 
@@ -32,7 +32,7 @@ Alle kommentierten Zeilen werden auf der Registerkarte **Geänderte Dateien** f�
 
 ![Beispiel für Anmerkungen auf der Registerkarte „Geänderte Dateien“](assets/github-check-annotations-files-changed.png)
 
-## Code-Qualitäts-Pipeline {#code-quality-pipelines}
+## Code-Qualitäts-Pipelines {#code-quality-pipelines}
 
 Die Ergebnisse für die [Code-Qualität](/help/using/code-quality-testing.md) werden ebenfalls am unteren Rand der Registerkarte **Prüfungen** in der Pipeline angezeigt, die automatisch von Cloud Manager ausgelöst wird. Sie ist auch über die **Details** der Prüfung der Pull-Anfrage zugänglich.
 

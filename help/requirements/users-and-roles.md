@@ -3,9 +3,9 @@ title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Anwender und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 source-git-commit: dd96d773ea3e6b9c45886fe41b28d3dd70cb8a61
-workflow-type: ht
-source-wordcount: '780'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '774'
+ht-degree: 96%
 
 ---
 
@@ -18,7 +18,7 @@ In [!UICONTROL Cloud Manager] sind derzeit vier Rollen für Anwender definiert, 
 
 * Geschäftsinhaber
 * Programm-Manager
-* Implementierungs-Manager
+* Bereitstellungs-Manager
 * Entwickler
 
 >[!NOTE]
@@ -33,7 +33,7 @@ Diese Tabelle fasst die Rollen zusammen.
 |--- |--- |
 | Geschäftsinhaber | Dieser Anwender ist verantwortlich für die Definition von KPIs, die Genehmigung von Produktionbereitstellungen und das Überschreiben von gravierenden 3-Tier-Fehlern, falls erforderlich. |
 | Programm-Manager | Dieser Anwender nutzt [!UICONTROL Cloud Manager], um die Einrichtung von Teams vorzunehmen, den Status zu überprüfen, KPIs einzusehen und ggf. gravierende 3-Tier-Fehler zu genehmigen. |
-| Implementierungs-Manager | Dieser Anwender verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, CI/CD-Pipeline zu bearbeiten, kann bei Bedarf gravierende 3-Tier-Fehler genehmigen und hat Zugriff auf das Git-Repository. |
+| Bereitstellungs-Manager | Dieser Anwender verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, CI/CD-Pipeline zu bearbeiten, kann bei Bedarf gravierende 3-Tier-Fehler genehmigen und hat Zugriff auf das Git-Repository. |
 | Entwickler | Dieser Anwender entwickelt und testet benutzerdefinierten Anwendungscode, verwendet [!UICONTROL Cloud Manager] hauptsächlich zur Anzeige des Bereitstellungsstatus und für Code-Commits auf das Git-Repository zugreifen. |
 | Customer Success Engineer | Dieser Anwender unterstützt im Allgemeinen den Kundenerfolg für AMS-Kunden und interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen durchzuführen, die die Aufsicht des Customer Success Engineer (CSE) erfordern. |
 | Inhaltsautor | Dieser Anwender interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager], kann aber das [!UICONTROL Cloud Manager]-Programm switcher verwenden, um auf Adobe Experience Manager (AEM) zuzugreifen. |
@@ -51,7 +51,7 @@ Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigunge
 Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Manager]-Anwender bereitzustellen, muss ein Administrator in der Organisation des Kunden neue Produktprofile unter dem [!UICONTROL AEM Managed Services]-Produktkontext für jede der vier [!UICONTROL Cloud Manager]-Rollen erstellen:
 
 * Geschäftsinhaber
-* Implementierungs-Manager
+* Bereitstellungs-Manager
 * Entwickler
 * Programm-Manager
 
@@ -73,7 +73,7 @@ Mit der Admin Console können Sie Anwender/Gruppen für diese Produktprofile ers
 
 1. Tragen Sie die Informationen ein, um eine neue Rolle für [!UICONTROL Cloud Manager] einzurichten.
 
-   * **Profilname** – Der **Profilname** ist beliebig. Um Verwirrungen zu vermeiden, sollten Sie jedoch die Werte in der unten stehenden Spalte **Empfohlener Profilname** verwenden.
+   * **Profilname** - Der **Profilname** kann beliebig sein. Um Verwirrungen zu vermeiden, wird jedoch empfohlen, die Werte in der Spalte **Empfohlener Profilname** zu verwenden.
    * **Anzeigename** – Der **Anzeigename** muss dem vom [!UICONTROL Cloud Manager] definierten technischen Wert entsprechen (siehe nachfolgende Tabelle).
    * **Berechtigungsgruppe** – Sie können eine Berechtigungsgruppe für das Profil auswählen (nicht immer verfügbar).
 
@@ -82,7 +82,7 @@ Mit der Admin Console können Sie Anwender/Gruppen für diese Produktprofile ers
    | Rolle | Anzeigename (erforderlich) | Empfohlener Profilname |
    |---|---|---|
    | Geschäftsinhaber | `CM_BUSINESS_OWNER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Geschäftsinhaber“ |
-   | Implementierungs-Manager | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Implementierungs-Manager“ |
+   | Bereitstellungs-Manager | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Bereitstellungs-Manager“ |
    | Entwickler | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Entwickler“ |
    | Programm-Manager | `CM_PROGRAM_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Programm-Manager“ |
 

@@ -3,7 +3,7 @@ title: Umgang mit Maven-Projektversionen
 description: Erfahren Sie, wie Maven die Projektversionierung in Cloud Manager handhabt.
 exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
 source-git-commit: 9312999660b324f0f9d2b44dfbf49c4813a3a6e9
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '260'
 ht-degree: 100%
 
@@ -16,7 +16,7 @@ Erfahren Sie, wie Maven die Projektversionierung in Cloud Manager handhabt.
 
 ## Handhabung von Projektversionen durch Maven {#how-maven}
 
-Für Staging- und Produktionsumgebungen generiert Cloud Manager eine eindeutige, inkrementierende Version.
+Für Staging- und Produktionsbereitstellungen generiert Cloud Manager eine eindeutige, inkrementierende Version.
 
 Diese Version wird auf der Seite mit den Details zur Pipeline-Ausführung sowie auf der Aktivitätsseite angezeigt. Wenn ein Build ausgeführt wird, wird das Maven-Projekt aktualisiert, um diese Version zu verwenden. Außerdem wird im Git-Repository ein Tag mit dieser Version als Name erstellt.
 

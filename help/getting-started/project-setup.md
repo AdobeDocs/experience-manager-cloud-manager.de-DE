@@ -3,8 +3,8 @@ title: Einrichten des Projekts
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
-workflow-type: ht
-source-wordcount: '1432'
+workflow-type: tm+mt
+source-wordcount: '1428'
 ht-degree: 100%
 
 ---
@@ -26,9 +26,9 @@ Vorhandene AEM-Projekte müssen einige Grundregeln einhalten, damit sie erfolgre
 * Bereitstellbare Inhaltspakete werden erkannt, wenn Sie nach Inhaltspaketen im .zip-Format suchen, die in einem Verzeichnis mit dem Namen `target` enthalten sind.
    * Eine beliebige Anzahl von Untermodulen kann Inhaltspakete produzieren.
 * Bereitstellbare Dispatcher-Artefakte werden erkannt, wenn Sie nach `zip`-Dateien suchen, die Unterverzeichnisse von `target` mit den Namen `conf` und `conf.d` enthalten.
-* Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketimplementierungen nicht garantiert.
+* Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketbereitstellungen nicht garantiert.
 * Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden.
-* Pakete können bei der Implementierung [übersprungen](#skipping-content-packages) werden.
+* Pakete können bei der Bereitstellung [übersprungen](#skipping-content-packages) werden.
 
 ## Aktivieren von Maven-Profilen in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 

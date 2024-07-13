@@ -3,7 +3,7 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 48ae41cb23f6a94fbaf31423f9c5cea3bfd45020
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3513'
 ht-degree: 100%
 
@@ -806,7 +806,7 @@ AEM Cloud Service verbietet die Bereitstellung benutzerdefinierter Suchindex-Def
 
 >[!WARNING]
 >
->Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024 fehlschlagen.](/help/release-notes/current.md)
+>Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024](/help/release-notes/current.md) fehlschlagen.
 
 ### Die benutzerdefinierte Volltext-Indexdefinition des Typs „damAssetLucene“ muss korrekt mit dem Präfix „damAssetLucene“ versehen werden {#oakpal-dam-asset-lucene}
 
@@ -819,7 +819,7 @@ AEM Cloud Service verbietet es, benutzerdefinierte Volltext-Indexdefinitionen de
 
 >[!WARNING]
 >
->Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024 fehlschlagen.](/help/release-notes/current.md)
+>Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024](/help/release-notes/current.md) fehlschlagen.
 
 ### Indexdefinitionsknoten dürfen keine Eigenschaften mit demselben Namen enthalten {#oakpal-index-property-name}
 
@@ -828,11 +828,11 @@ AEM Cloud Service verbietet es, benutzerdefinierte Volltext-Indexdefinitionen de
 * **Schweregrad**: Gering
 * **Seit**: Version 2024.6.0
 
-AEM Cloud Service verbietet es, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs `oak:QueryIndexDefinition`) Eigenschaften mit demselben Namen enthalten. 
+AEM Cloud Service verbietet es, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs `oak:QueryIndexDefinition`) Eigenschaften mit demselben Namen enthalten.
 
 >[!WARNING]
 >
->Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024 fehlschlagen.](/help/release-notes/current.md)
+>Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024](/help/release-notes/current.md) fehlschlagen.
 
 ### Das Anpassen bestimmter vorkonfigurierter Indexdefinitionen ist verboten {#oakpal-customizing-ootb-index}
 
@@ -852,7 +852,7 @@ AEM Cloud Service verbietet unbefugte Änderungen der folgenden vorkonfigurierte
 
 >[!WARNING]
 >
->Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024 fehlschlagen.](/help/release-notes/current.md)
+>Sie werden dringend aufgefordert, sich dieser so bald wie möglich anzunehmen, da Pipelines hierdurch ab der [Cloud Manager-Version August 2024](/help/release-notes/current.md) fehlschlagen.
 
 ### Die Konfiguration der Tokenizer in Analyzern sollte mit dem Namen „tokenizer“ erstellt werden {#oakpal-tokenizer}
 
