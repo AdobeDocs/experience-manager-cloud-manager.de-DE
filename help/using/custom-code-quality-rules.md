@@ -2,10 +2,10 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der Code-Qualitätsprüfung ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 48ae41cb23f6a94fbaf31423f9c5cea3bfd45020
+source-git-commit: 8f0f5e819cf312ef25beac815beca92d4e3ac255
 workflow-type: tm+mt
-source-wordcount: '3513'
-ht-degree: 100%
+source-wordcount: '3544'
+ht-degree: 99%
 
 ---
 
@@ -862,6 +862,15 @@ AEM Cloud Service verbietet unbefugte Änderungen der folgenden vorkonfigurierte
 * **Seit**: Version 2024.6.0
 
 AEM Cloud Service verbietet die Erstellung von Tokenizern mit falschen Namen in Analyzern. Tokenizer sollten immer als `tokenizer` definiert werden.
+
+### Die Konfiguration von Indexdefinitionen sollte keine Leerzeichen enthalten {#oakpal-indexing-definitions-spaces}
+
+* **Schlüssel**: PathSpacesCheck
+* **Typ**: Verbesserung
+* **Schweregrad**: Gering
+* **Seit**: Version 2024.7.0
+
+AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Eigenschaften mit Leerzeichen enthalten.
 
 ## Dispatcher-Optimierungs-Tool {#dispatcher-optimization-tool-rules}
 
