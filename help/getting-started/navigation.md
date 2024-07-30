@@ -3,9 +3,9 @@ title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1439'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -28,13 +28,13 @@ Wenn Sie sich bei Cloud Manager unter [my.cloudmanager.adobe.com](https://my.clo
 Die Konsole „Meine Programme“ bietet einen Überblick über alle Programme, auf die Sie in der ausgewählten Organisation Zugriff haben. Sie besteht aus mehreren Teilen.
 
 1. [Symbolleisten](#toolbars-my-programs-toolbars) für die Auswahl von Organisationen, Warnmeldungen und Kontoeinstellungen
-1. Registerkarten, mit denen Sie die aktuelle Ansicht Ihrer Programme umschalten können.
-   * Ansicht **Home** (Standard), die die Ansicht **My Programs** mit einer Übersicht aller Programme auswählt
-   * **Lizenz**, die auf das Lizenz-Dashboard zugreift. Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme, nicht für AMS-Programme.
-      * Informationen zum Bestimmen des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie im Abschnitt [Programmkarten](#program-cards) dieses Dokuments.
-   * Beachten Sie, dass die Registerkarten standardmäßig geschlossen sind und über das Hamburger-Menü in der Kopfzeile [Cloud Manager](#cloud-manager-header) angezeigt werden können.
-1. [Aktionsaufrufe und Statistiken](#cta-statistics) für einen Überblick über Ihre jüngste Aktivität
-1. [**Meine Programme** Abschnitt](#my-programs-section) mit einer Übersicht über alle Ihre Programme
+1. Registerkarten, um die aktuelle Ansicht der Programme zu wechseln:
+   * Ansicht **Startseite** (Standard) mit Auswahl der Ansicht **Meine Programme**, die einen Überblick über alle Programme enthält
+   * **Lizenz** für den Zugriff auf das Lizenz-Dashboard. Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme, aber nicht für AMS-Programme.
+      * Informationen zum Ermitteln des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie in diesem Dokument im Abschnitt [Programmkarten](#program-cards).
+   * Beachten Sie, dass die Registerkarten standardmäßig geschlossen sind und über das Hamburger-Menü im [Cloud Manager-Header](#cloud-manager-header) angezeigt werden können.
+1. [Aktionsaufrufe und Statistiken](#cta-statistics) für einen Überblick über Ihre aktuellen Aktivitäten
+1. [**Meine Programme**](#my-programs-section) mit einem Überblick über Ihre gesamten Programme
 1. [Schnell-Links](#quick-links) für den einfachen Zugriff auf verwandte Ressourcen
 
 >[!TIP]
@@ -51,9 +51,9 @@ Die erste ist der Header von Cloud Manager, der bestehen bleibt, wenn Sie in Clo
 
 ![Die Kopfzeile von Experience Cloud](assets/experience-cloud-header.png)
 
-1. Das Hamburger-Menü, über das Sie auf Registerkarten zugreifen können, die Sie zu bestimmten Teilen eines Programms in einem einzelnen Programm führen oder je nach Kontext zwischen dem Lizenz-Dashboard und der Konsole **[Meine Programme](#my-programs-console)** wechseln können.
-   * Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme, nicht für AMS-Programme.
-   * Informationen zum Bestimmen des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie im Abschnitt [Programmkarten](#program-cards) dieses Dokuments.
+1. Das Hamburger-Menü für den Zugriff auf Registerkarten, über die Sie zu bestimmten Teilen eines einzelnen Programms gelangen oder je nach Kontext zwischen dem Lizenz-Dashboard und der Konsole **[Meine Programme](#my-programs-console)** wechseln können.
+   * Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme, aber nicht für AMS-Programme.
+   * Informationen zum Ermitteln des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie in diesem Dokument im Abschnitt [Programmkarten](#program-cards).
 1. Über die Schaltfläche „Cloud Manager“ gelangen Sie zurück zur Konsole „Meine Programme“ von Cloud Manager, unabhängig davon, wo Sie sich in Cloud Manager befinden.
 1. Tippen oder klicken Sie auf die Schaltfläche „Feedback“, um Adobe Feedback zu Cloud Manager zu geben.
 1. Der Organisationsselektor zeigt die Organisation an, bei der Sie sich derzeit angemeldet haben (in diesem Beispiel „Foundation Intern“). Tippen oder klicken Sie, um zu einer anderen Organisation zu wechseln, wenn Ihre Adobe ID mit mehreren Organisationen verknüpft ist.
@@ -75,7 +75,7 @@ Die Programmsymbolleiste enthält Links zum Wechseln zwischen Cloud Manager-Prog
 
 ### Aktionsaufrufe und Statistiken {#cta-statistics}
 
-Der Abschnitt Aktionsaufruf und Statistiken enthält aggregierte Daten für Ihre Organisation. Wenn Sie beispielsweise Ihre Programme erfolgreich eingerichtet haben, können Statistiken über Ihre Aktivitäten aus den letzten 90 Tagen angezeigt werden, darunter:
+Im Abschnitt für Aktionsaufrufe und Statistiken finden Sie zusammengefasste Daten zu Ihrer Organisation. Wenn Sie z. B. Ihre Programme erfolgreich eingerichtet haben, können Sie hier Statistiken über Ihre Aktivitäten der letzten 90 Tage einsehen, u. a.:
 
 * Anzahl der [Bereitstellungen](/help/using/code-deployment.md)
 * Anzahl der identifizierten [Code-Qualitätsprobleme](/help/using/code-quality-testing.md)
@@ -83,13 +83,13 @@ Der Abschnitt Aktionsaufruf und Statistiken enthält aggregierte Daten für Ihre
 
 Oder wenn Sie gerade mit der Einrichtung Ihrer Organisation beginnen, gibt es Tipps zu den nächsten Schritten oder Dokumentationsressourcen.
 
-### Eigene Programmbereiche {#my-programs-section}
+### Abschnitt „Meine Programme“ {#my-programs-section}
 
-Der Hauptinhalt der Konsole &quot;Meine Programme&quot;ist der Abschnitt &quot;**Meine Programme**&quot;, in dem Ihre Programme als einzelne Karten aufgelistet werden. Tippen oder klicken Sie auf eine Karte, um die Seite **Programmübersicht** des Programms aufzurufen, auf der Sie Details zum Programm finden.
+Der Hauptinhalt der Konsole „Meine Programme“ ist der Abschnitt **Meine Programme**, in dem Ihre Programme als einzelne Karten aufgeführt sind. Tippen oder klicken Sie auf eine Karte, um die Seite **Programmübersicht** des Programms aufzurufen, auf der Sie Details zum Programm finden.
 
 >[!NOTE]
 >
->Je nach Ihren Berechtigungen können Sie bestimmte Programme möglicherweise nicht auswählen.
+>Abhängig von Ihren Berechtigungen können Sie bestimmte Programme möglicherweise nicht auswählen.
 
 Verwenden Sie die Sortieroptionen, um das benötigte Programm leichter zu finden.
 
@@ -137,7 +137,7 @@ Jedes Programm wird durch eine Karte (oder eine Zeile in einer Tabelle) dargeste
 
 ## Fenster „Programmübersicht“ {#program-overview}
 
-Nachdem Sie ein Programm in der Konsole [**Meine Programme**,](#my-programs-console) ausgewählt haben, gelangen Sie zur Programmübersicht.
+Nachdem Sie ein Programm in der Konsole [**Meine Programme**](#my-programs-console) ausgewählt haben, gelangen Sie zur Programmübersicht.
 
 ![Programmübersicht](assets/program-overview.png)
 
