@@ -4,9 +4,9 @@ type: Documentation
 cloud: Experience Cloud
 git-repo: https://github.com/AdobeDocs/experience-manager-cloud-manager.de-DE
 recommendations: noDisplay
-source-git-commit: f35a777176522d412267f481622c8cd3d2592764
+source-git-commit: 2a25b0482800d4c5428a5595c9699dceed327043
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '112'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,7 @@ Die metadata.md-Datei enthält Metadaten auf Repo-Ebene, die über die TOC.md-Da
 |--- |--- |
 | solution-title | Wird in der Artikelkopfzeile als Link verwendet |
 | solution-hub-url | Öffnet die helpx-Hub-Seite |
-| solution-icon | Zeigt das Lösungssymbol neben Lösungstitel an. Noch nicht implementiert |
+| solution-icon | Zeigt das Lösungssymbol neben dem Lösungstitel an. Noch nicht implementiert |
 | getting-started-url | Link zur helpx-Seite „Erste Schritte“ |
 | tutorials-url | Link zu Video-Tutorials – entweder helpx-Tutorials oder KT-Tutorials |
 | mini-toc-levels | Legt die Anzahl der Überschriftenebenen fest, die in der rechten Leiste angezeigt werden. Standard ist 2 |

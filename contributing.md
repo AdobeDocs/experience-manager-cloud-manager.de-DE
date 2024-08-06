@@ -1,60 +1,61 @@
 ---
-source-git-commit: a70b04bd5bb6ac6465a5da4b276e9faf1dc470ae
-translation-type: ht
+source-git-commit: 2a25b0482800d4c5428a5595c9699dceed327043
+workflow-type: tm+mt
+source-wordcount: '500'
+ht-degree: 100%
 
 ---
-# Beiträge zur Adobe Experience Manager Cloud Service-Dokumentation
+# Beitragen zur Adobe Experience Manager Screens-Dokumentation
 
-Vielen Dank, dass Sie sich entschieden haben, zur Adobe Experience Manager Cloud Service-Dokumentation beizutragen! Wir freuen uns über Inhaltsbeiträge unserer gesamten Reader-Community sowie unserer Kollegen von Adobe.
+Vielen Dank, dass Sie sich entschieden haben, zur Adobe Experience Manager Screens-Dokumentation beizutragen! Adobe begrüßt Inhaltsbeiträge der gesamten Leser-Community und von Adobe-Mitarbeitenden.
 
 In dieser Datei wird beschrieben, wie Sie Beiträge beisteuern können und welche Richtlinien zu befolgen sind, wenn Sie Ihre Beiträge vornehmen.
 
 ## Adobe Open Source-Verhaltenskodex
 
-Dieses Projekt folgt dem [Adobe Open Source-Verhaltenskodex](code-of-conduct.md). Mit Ihrer Teilnahme an der AEM-Dokumentation erklären Sie sich damit einverstanden, diesen Verhaltenskodex einzuhalten. Bitte melden Sie inakzeptables Verhalten an
-[Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
+Dieses Projekt folgt dem [Adobe Open Source-Verhaltenskodex](code-of-conduct.md). Mit Ihrer Teilnahme an der AEM-Dokumentation erklären Sie sich damit einverstanden, diesen Verhaltenskodex einzuhalten. Melden Sie inakzeptables Verhalten an [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## Richtlinien für Beiträge
 
-Wir freuen uns zwar über jeden Beitrag, um die AEM-Dokumentation zu verbessern, bitten jedoch darum, dass die Beiträge möglichst bestimmten Richtlinien und Standards entsprechen. Weitere Informationen finden Sie in den [Richtlinien zur Teilnahme an der AEM-Dokumentation](guidelines.md) .
+Adobe freut sich zwar über jeden Beitrag, um die AEM-Dokumentation zu verbessern, die Beiträge müssen aber nach Möglichkeit bestimmten Richtlinien und Standards entsprechen. Weitere Informationen finden Sie in den [Richtlinien für Beiträge zur AEM-Dokumentation](guidelines.md).
 
 ## So können Sie einen Beitrag leisten
 
-Wir möchten es Ihnen so einfach wie möglich machen, Ihre Beiträge einzureichen. Es gibt zwei Möglichkeiten:
+Adobe möchte es Ihnen so einfach wie möglich machen, Beiträge einzureichen. Sie können auf zwei Arten beitragen:
 
 * [Erstellen eines Problems](#create-an-issue)
-* [Erstellen einer Pull-Anforderung](#create-a-pull-request)
+* [Erstellen einer Pull-Anfrage](#create-a-pull-request)
 
 Wählen Sie die Methode aus, die für Sie zum Bearbeiten der Dokumentation in GitHub am bequemsten ist.
 
 >[!NOTE]
 >
->Eingereichte Beiträge unterliegen den [Allgemeinen Nutzungsbedingungen von Adobe.](https://www.adobe.com/legal/terms.html)
+>Eingereichte Beiträge unterliegen den [Allgemeinen Nutzungsbedingungen von Adobe.](https://www.adobe.com/de/legal/terms.html)
 
 ### Erstellen eines Problems {#create-an-issue}
 
-Haben Sie einen Vorschlag, eine Beobachtung zu den aktuellen Dokumenten oder eine Frage dazu, wie etwas beschrieben wird? Dann erstellen Sie bitte ein Problem. Probleme eignen sich auch, wenn Sie etwas beizutragen haben, jedoch lieber nicht selbst die Dokumente bearbeiten oder eine Pull-Anforderung erstellen möchten.
+Haben Sie einen Vorschlag, eine Beobachtung zu den aktuellen Dokumenten oder eine Frage dazu, wie etwas beschrieben wird? Dann erstellen Sie ein Problem. Probleme eignen sich auch, wenn Sie etwas beizutragen haben, jedoch lieber nicht selbst die Dokumente bearbeiten oder eine Pull-Anfrage erstellen möchten.
 
-Mithilfe von Problemen können Sie Ihre Verbesserungsidee für Dokumente einfach beschreiben, damit ein AEM Docs-Team-Mitglied sie überprüfen kann. Zum Erstellen eines Problems klicken Sie einfach auf einer beliebigen Seite oben im rechten Navigationsbereich auf den Link **Ein Problem protokollieren**.
+Mithilfe von Problemen können Sie Ihre Verbesserungsidee für Dokumente einfach beschreiben, damit ein Team-Mitglied von AEM Docs sie überprüfen kann. Klicken Sie auf einer beliebigen Seite oben im rechten Navigationsbedienfeld auf den Link zum **Öffnen eines Tickets**, um ein Ticket zu erstellen.
 
-### Erstellen einer Pull-Anforderung {#create-a-pull-request}
+### Erstellen einer Pull-Anfrage {#create-a-pull-request}
 
-Wenn Sie ein Problem sehen und genau wissen, wie Sie es beheben können, sollten Sie eine Pull-Anforderung erstellen. Mithilfe von Pull-Anforderungen können Sie Ihre eigenen Änderungen an der Dokumentation vornehmen, die dann von einem Mitglied des AEM Docs Teams zur Aufnahme geprüft werden. Klicken Sie einfach auf einer beliebigen Seite oben im rechten Navigationsbereich auf den Link **Diese Seite bearbeiten**, um Ihre vorgeschlagenen Änderungen vorzunehmen und die Pull-Anforderung zu erstellen.
+Wenn Sie ein Problem sehen und genau wissen, wie Sie es beheben können, sollten Sie eine Pull-Anfrage erstellen. Mithilfe von Pull-Anfragen können Sie eigene Änderungen an der Dokumentation vornehmen. Ein AEM Docs-Team-Mitglied prüft, ob die Änderungen aufgenommen werden sollten. Klicken Sie auf einer beliebigen Seite oben im rechten Navigationsbereich auf den Link **Diese Seite bearbeiten**, um Ihre vorgeschlagenen Änderungen vorzunehmen und die Pull-Anfrage zu erstellen.
 
-Für Pull-Anforderungen muss eine [Lizenzvereinbarung für Mitwirkende (CLA) unterzeichnet werden.](https://opensource.adobe.com/cla.html)  Damit kann Adobe Ihre Beiträge als Teil des Projekts weitervertreiben. Sie müssen nur einmal eine Adobe-CLA übermitteln. Wenn Sie also bereits eine übermittelt haben, können Sie sofort loslegen!
+Für Pull-Anfragen muss eine [Lizenzvereinbarung für Mitwirkende (CLA)](https://opensource.adobe.com/cla.html) unterzeichnet werden. Dadurch erhält Adobe die Erlaubnis, Ihre Beiträge im Rahmen des Projekts zu veröffentlichen. Sie müssen nur einmal eine Adobe-CLA übermitteln. Wenn Sie also bereits eine übermittelt haben, können Sie sofort loslegen!
 
 ### Kurze Videoeinführung
 
-Im folgenden Video erhalten Sie einen schnellen Überblick darüber, wie Probleme erstellt und Anforderungen abgerufen werden.
+Im folgenden Video erhalten Sie einen schnellen Überblick darüber, wie Probleme und Pull-Anfragen erstellt werden.
 
->[!VIDEO](https://video.tv.adobe.com/v/27069?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/27069)
 
 ### Beiträge von Adobe-Mitarbeitern
 
-Wenn Sie ein Mitarbeiter von Adobe sind und einen Beitrag einreichen möchten, verwenden Sie bitte `AdobeDocs` der Organisation im Git-Repository des Unternehmens.
+Wenn Sie Adobe-Mitarbeitende sind und einen Beitrag einreichen möchten, verwenden Sie `AdobeDocs` als Organisation im Git-Repository des Unternehmens.
 
-Wir freuen uns über jeden Beitrag und überprüfen Ihren Beitrag, wenn er im öffentlichen Repository eingereicht wird. Pull-Anforderungen von Adobe-Mitarbeitern sind jedoch einfacher zu verarbeiten und können im Repository des Unternehmens schneller genehmigt werden. Bitte stellen Sie sicher, dass geschützte Informationen nur im Repository des Unternehmens diskutiert werden.
+Adobe freut sich über alle Beiträge und überprüft diese, wenn sie im öffentlichen Repository gelistet werden. Pull-Anfragen von Adobe-Beschäftigten sind jedoch einfacher zu verarbeiten und können schneller im Unternehmens-Repository genehmigt werden. Stellen Sie sicher, dass geschützte Informationen nur im Repository des Unternehmens diskutiert werden.
 
 ## Weiterführende Informationen
 
-Weitere Informationen zur Verwendung der GitHub-Autoren-Plattform finden Sie im [Adobe Docs Contributor Guide](https://docs.adobe.com/help/en/contributor/contributor-guide/introduction.html).
+Weitere Informationen zur Verwendung der GitHub-Autoren-Plattform finden Sie im [Handbuch für Mitwirkende an Adobe Docs](https://experienceleague.adobe.com/de/docs/contributor/contributor-guide/introduction).
