@@ -1,13 +1,13 @@
 ---
 source-git-commit: 2a25b0482800d4c5428a5595c9699dceed327043
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '74'
-ht-degree: 86%
+ht-degree: 100%
 
 ---
 # Dokumentation zu Adobe Experience Manager Cloud Manager
 
-Dieses Repository dient der Dokumentation zu Adobe Experience Manager Cloud Manager.
+Dies ist das Repository für die Dokumentation zu Adobe Experience Manager Cloud Manager.
 
 Ihre Beiträge zur Dokumentation sind willkommen. Sehen Sie sich die folgenden Ressourcen an:
 
