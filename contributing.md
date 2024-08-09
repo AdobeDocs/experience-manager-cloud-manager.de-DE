@@ -1,7 +1,7 @@
 ---
-source-git-commit: 2a25b0482800d4c5428a5595c9699dceed327043
-workflow-type: ht
-source-wordcount: '500'
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+workflow-type: tm+mt
+source-wordcount: '498'
 ht-degree: 100%
 
 ---
@@ -30,7 +30,7 @@ Wählen Sie die Methode aus, die für Sie zum Bearbeiten der Dokumentation in Gi
 
 >[!NOTE]
 >
->Eingereichte Beiträge unterliegen den [Allgemeinen Nutzungsbedingungen von Adobe.](https://www.adobe.com/de/legal/terms.html)
+>Eingereichte Beiträge unterliegen den [Allgemeinen Nutzungsbedingungen von Adobe](https://www.adobe.com/de/legal/terms.html).
 
 ### Erstellen eines Problems {#create-an-issue}
 

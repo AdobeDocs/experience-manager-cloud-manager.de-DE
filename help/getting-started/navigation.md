@@ -2,10 +2,10 @@
 title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: d4d9a9f38c5a969f276140dca98731c670547a3d
-workflow-type: ht
-source-wordcount: '1439'
-ht-degree: 100%
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+workflow-type: tm+mt
+source-wordcount: '1410'
+ht-degree: 80%
 
 ---
 
@@ -31,15 +31,15 @@ Die Konsole „Meine Programme“ bietet einen Überblick über alle Programme, 
 1. Registerkarten, um die aktuelle Ansicht der Programme zu wechseln:
    * Ansicht **Startseite** (Standard) mit Auswahl der Ansicht **Meine Programme**, die einen Überblick über alle Programme enthält
    * **Lizenz** für den Zugriff auf das Lizenz-Dashboard. Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme, aber nicht für AMS-Programme.
-      * Informationen zum Ermitteln des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie in diesem Dokument im Abschnitt [Programmkarten](#program-cards).
-   * Beachten Sie, dass die Registerkarten standardmäßig geschlossen sind und über das Hamburger-Menü im [Cloud Manager-Header](#cloud-manager-header) angezeigt werden können.
+      * Informationen zum Festlegen des Diensttyps für Ihr Programm (AMS oder AEMaaCS) finden Sie im Abschnitt [Programmkarten-Abschnitt](#program-cards) dieses Dokuments.
+   * Beachten Sie, dass die Registerkarten standardmäßig geschlossen sind und über das Hamburger-Menü in der Kopfzeile [Cloud Manager](#cloud-manager-header) angezeigt werden können.
 1. [Aktionsaufrufe und Statistiken](#cta-statistics) für einen Überblick über Ihre aktuellen Aktivitäten
 1. [**Meine Programme**](#my-programs-section) mit einem Überblick über Ihre gesamten Programme
 1. [Schnell-Links](#quick-links) für den einfachen Zugriff auf verwandte Ressourcen
 
 >[!TIP]
 >
->Einzelheiten zu den Programmen sind dem Dokument [Programme und Programmarten](/help/getting-started/program-setup.md) zu entnehmen.
+>Weitere Informationen zu Programmen finden Sie unter [Programme und Programmtypen](/help/getting-started/program-setup.md) .
 
 ### Symbolleisten {#my-programs-toolbars}
 
@@ -53,13 +53,13 @@ Die erste ist der Header von Cloud Manager, der bestehen bleibt, wenn Sie in Clo
 
 1. Das Hamburger-Menü für den Zugriff auf Registerkarten, über die Sie zu bestimmten Teilen eines einzelnen Programms gelangen oder je nach Kontext zwischen dem Lizenz-Dashboard und der Konsole **[Meine Programme](#my-programs-console)** wechseln können.
    * Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme, aber nicht für AMS-Programme.
-   * Informationen zum Ermitteln des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie in diesem Dokument im Abschnitt [Programmkarten](#program-cards).
+   * Informationen zum Festlegen des Diensttyps für Ihr Programm (AMS oder AEMaaCS) finden Sie im Abschnitt [Programmkarten-Abschnitt](#program-cards) dieses Dokuments.
 1. Über die Schaltfläche „Cloud Manager“ gelangen Sie zurück zur Konsole „Meine Programme“ von Cloud Manager, unabhängig davon, wo Sie sich in Cloud Manager befinden.
-1. Tippen oder klicken Sie auf die Schaltfläche „Feedback“, um Adobe Feedback zu Cloud Manager zu geben.
-1. Der Organisationsselektor zeigt die Organisation an, bei der Sie sich derzeit angemeldet haben (in diesem Beispiel „Foundation Intern“). Tippen oder klicken Sie, um zu einer anderen Organisation zu wechseln, wenn Ihre Adobe ID mit mehreren Organisationen verknüpft ist.
-1. Durch Tippen oder Klicken auf den Lösungsumschalter können Sie schnell zu anderen Experience Cloud-Lösungen wechseln.
+1. Klicken Sie auf die Schaltfläche Feedback , um Adobe Feedback zu Cloud Manager zu geben.
+1. Der Organisationsselektor zeigt die Organisation an, bei der Sie sich derzeit angemeldet haben (in diesem Beispiel „Foundation Intern“). Klicken Sie auf , um zu einer anderen Organisation zu wechseln, wenn Ihre Adobe ID mehreren zugeordnet ist.
+1. Durch Klicken auf den Lösungsschalter können Sie schnell zu anderen Experience Cloud-Lösungen wechseln.
 1. Das Hilfesymbol bietet schnellen Zugriff auf Lern- und Support-Ressourcen.
-1. Dieses Benachrichtigungssymbol wird mit der Anzahl der aktuell zugewiesenen unvollständigen [Benachrichtigungen](/help/using/notifications.md) gekennzeichnet.
+1. Das Benachrichtigungssymbol wird mit der Anzahl der derzeit zugewiesenen unvollständigen [Benachrichtigungen](/help/using/notifications.md) gekennzeichnet
 1. Wählen Sie das Symbol für Ihre Benutzerin bzw. Ihren Benutzer aus, um auf Ihre Benutzereinstellungen zuzugreifen. Wenn Sie kein Benutzerbild konfiguriert haben, wird ein zufälliges Symbol zugewiesen.
 
 #### Programmsymbolleiste {#program-toolbar}
@@ -85,7 +85,7 @@ Oder wenn Sie gerade mit der Einrichtung Ihrer Organisation beginnen, gibt es Ti
 
 ### Abschnitt „Meine Programme“ {#my-programs-section}
 
-Der Hauptinhalt der Konsole „Meine Programme“ ist der Abschnitt **Meine Programme**, in dem Ihre Programme als einzelne Karten aufgeführt sind. Tippen oder klicken Sie auf eine Karte, um die Seite **Programmübersicht** des Programms aufzurufen, auf der Sie Details zum Programm finden.
+Der Hauptinhalt der Konsole „Meine Programme“ ist der Abschnitt **Meine Programme**, in dem Ihre Programme als einzelne Karten aufgeführt sind. Klicken Sie auf eine Karte, um die Seite **Programmübersicht** des Programms mit Details zum Programm aufzurufen.
 
 >[!NOTE]
 >
@@ -143,7 +143,7 @@ Nachdem Sie ein Programm in der Konsole [**Meine Programme**](#my-programs-conso
 
 Die Programmübersicht bietet Zugriff auf alle Details eines Cloud Manager-Programms. Wie die Konsole „Meine Programme“ besteht sie aus mehreren Teilen.
 
-1. [Symbolleisten](#program-overview-toolbar), um schnell zur Konsole „Meine Programme“ zurückzukehren und durch das Programm zu navigieren.
+1. [Symbolleisten](#program-overview-toolbar) , um schnell zur Konsole &quot;Meine Programme&quot;zurückzuspringen und im Programm zu navigieren
 1. [Registerkarten](#program-tabs), um zwischen den verschiedenen Aspekten des Programms zu wechseln
 1. Ein [Aktionsaufruf](#cta) basierend auf den letzten Aktionen des Programms
 1. Eine [Übersicht über die Umgebungen](#environments) des Programms
@@ -152,7 +152,7 @@ Die Programmübersicht bietet Zugriff auf alle Details eines Cloud Manager-Progr
 
 ### Symbolleisten {#program-overview-toolbar}
 
-Die Symbolleisten für die Programmübersicht sind denen der Konsole [Meine Programme](#my-programs-toolbars) sehr ähnlich. Hier werden nur die Unterschiede veranschaulicht.
+Die Symbolleisten für die Programmübersicht ähneln denen der Konsole [Meine Programme](#my-programs-toolbars). Hier werden nur die Unterschiede veranschaulicht.
 
 #### Cloud Manager-Header {#cloud-manager-header-2}
 
@@ -160,7 +160,7 @@ Der Header von Cloud Manager verfügt über ein Hamburger-Menü, das automatisch
 
 ![Cloud Manager-Hamburger-Menü](assets/cloud-manager-hamburger.png)
 
-Tippen oder klicken Sie auf das Hamburger-Menüsymbol, um die Registerkarten auszublenden.
+Klicken Sie auf das Hamburger Menüsymbol, um die Registerkarten auszublenden.
 
 #### Programmsymbolleiste {#program-toolbar-2}
 
@@ -190,7 +190,7 @@ Verwenden Sie das Hamburger-Menü im [Cloud Manager-Header](#cloud-manager-heade
 
 ### Aktionsaufruf {#cta}
 
-Der Aktionsaufrufs-Abschnitt gibt Ihnen je nach Status Ihres Programms hilfreiche Informationen. Für ein neues Programm werden Ihnen möglicherweise die nächsten Schritte angeboten sowie eine Erinnerung an das Startdatum, [das bei der Programmerstellung festgelegt wurde.](/help/getting-started/program-setup.md)
+Der Aktionsaufrufs-Abschnitt gibt Ihnen je nach Status Ihres Programms hilfreiche Informationen. Für ein neues Programm werden möglicherweise die nächsten Schritte und eine Erinnerung an ein &quot;Go-Live&quot;-Datum, [festgelegt während der Programmerstellung](/help/getting-started/program-setup.md), angezeigt.
 
 Bei einem Live-Programm den Status Ihrer letzten Bereitstellung mit Links zu Details und zum Beginn einer neuen Bereitstellung.
 
@@ -198,19 +198,19 @@ Bei einem Live-Programm den Status Ihrer letzten Bereitstellung mit Links zu Det
 
 ### Umgebungskarte {#environments}
 
-Die Karte **Umgebungen** gibt Ihnen einen Überblick über Ihre Umgebungen sowie Links für Schnellaktionen.
+Die Karte **Umgebungen** bietet Ihnen einen Überblick über Ihre Umgebungen und Links für Schnellaktionen.
 
 Die Karte **Umgebungen** listet nur drei Umgebungen auf. Klicken Sie auf **Alle anzeigen**, um alle Umgebungen des Programms zu sehen.
 
-Bitte lesen Sie das Dokument [Verwaltung von Umgebungen](/help/using/managing-environments.md), um zu erfahren, wie Sie Ihre Umgebungen verwalten können.
+Weitere Informationen zum Verwalten Ihrer Umgebungen finden Sie unter [Verwalten von Umgebungen](/help/using/managing-environments.md) .
 
 ### Pipelines-Karte {#pipelines}
 
-Die Karte **Pipelines** gibt Ihnen einen Überblick über Ihre Pipelines sowie Links für Schnellaktionen.
+Die Karte **Pipelines** bietet Ihnen einen Überblick über Ihre Pipelines und Links für Schnellaktionen.
 
 Auf der Karte **Pipelines** sind nur drei Pipelines aufgeführt. Klicken Sie auf **Alle anzeigen**, um alle Pipelines des Programms zu sehen.
 
-Bitte lesen Sie das Dokument [Verwaltung von Pipelines](/help/using/managing-pipelines.md), um zu erfahren, wie Sie Ihre Pipelines verwalten können.
+Weitere Informationen zur Verwaltung Ihrer Pipelines finden Sie unter [Verwalten von Pipelines](/help/using/managing-pipelines.md) .
 
 ### Nützliche Ressourcen {#useful-resources}
 

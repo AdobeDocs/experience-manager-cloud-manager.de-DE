@@ -2,10 +2,10 @@
 title: Das Inhaltskopie-Werkzeug
 description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 655111cdf7327e92e03ac7eedd9eedd87cd4b2f1
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1120'
-ht-degree: 100%
+source-wordcount: '1096'
+ht-degree: 87%
 
 ---
 
@@ -47,39 +47,39 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
 1. Navigieren Sie vom Bildschirm **Umgebungen** zur Seite **Content-Sets**.
 
-1. Tippen oder klicken Sie rechts oben auf dem Bildschirm auf **Content-Set hinzufügen**.
+1. Klicken Sie oben rechts im Bildschirm auf die Schaltfläche **Inhaltsset hinzufügen** .
 
    ![Content-Sets](/help/assets/content-sets.png)
 
-1. Geben Sie auf der Registerkarte **Details** des Assistenten einen Namen und eine Beschreibung für das Content-Set ein und tippen oder klicken Sie auf **Weiter**.
+1. Geben Sie auf der Registerkarte **Details** des Assistenten einen Namen und eine Beschreibung für den Inhaltssatz ein und klicken Sie auf **Weiter**.
 
    ![Content-Set-Details](/help/assets/add-content-set-details.png)
 
 1. Auf der Registerkarte **Inhaltspfade** des Assistenten geben Sie die Pfade der veränderbaren Inhalte an, die in das Content-Set aufgenommen werden sollen.
 
    1. Geben Sie den Pfad in das Feld **Einschlusspfad hinzufügen** ein.
-   1. Tippen oder klicken Sie auf die Schaltfläche **Pfad hinzufügen**, um den Pfad zum Content-Set hinzuzufügen.
-   1. Tippen oder klicken Sie bei Bedarf erneut auf die Schaltfläche **Pfad hinzufügen**.
+   1. Klicken Sie auf die Schaltfläche **Pfad hinzufügen** , um den Pfad zum Inhaltsset hinzuzufügen.
+   1. Klicken Sie bei Bedarf erneut auf die Schaltfläche **Pfad hinzufügen** .
 
    ![Hinzufügen von Pfaden zu Content-Sets](/help/assets/add-content-set-paths.png)
 
 1. Wenn Sie Ihr Content-Set verfeinern oder einschränken möchten, können Sie Unterpfade ausschließen.
 
-   1. Tippen oder klicken Sie in der Liste der enthaltenen Pfade auf das Symbol **Ausschluss-Unterpfade hinzufügen** neben dem Pfad, den Sie einschränken möchten.
+   1. Klicken Sie in der Liste der eingeschlossenen Pfade neben dem Pfad, den Sie beschränken müssen, auf das Symbol **Unterpfade zum Ausschließen hinzufügen** .
    1. Geben Sie den Unterpfad ein, der unterhalb des ausgewählten Pfads ausgeschlossen werden soll.
-   1. Tippen oder klicken Sie auf **Pfad ausschließen**.
-   1. Tippen oder klicken Sie erneut auf **Ausschluss-Unterpfade hinzufügen**, um bei Bedarf weitere Pfade zum Ausschluss hinzuzufügen.
+   1. Klicken Sie auf **Pfad ausschließen**.
+   1. Klicken Sie erneut auf **Unterpfade zum Ausschließen hinzufügen** , um weitere Pfade hinzuzufügen, die bei Bedarf ausgeschlossen werden sollen.
 
    ![Ausschließen von Pfaden](/help/assets/add-content-set-paths-excluded.png)
 
 1. Sie können die angegebenen Pfade bei Bedarf ändern.
 
-   1. Tippen oder klicken Sie auf das X neben den ausgeschlossenen Unterpfaden, um sie zu löschen.
-   1. Tippen oder klicken Sie auf die Ellipsen-Schaltfläche neben den Pfaden, um die Optionen **Bearbeiten** und **Löschen** anzuzeigen.
+   1. Klicken Sie auf das X neben den ausgeschlossenen Unterpfaden, um sie zu löschen.
+   1. Klicken Sie auf die Suchschaltfläche neben den Pfaden, um die Optionen **Bearbeiten** und **Löschen** anzuzeigen.
 
    ![Bearbeiten der Pfadliste](/help/assets/add-content-set-excluded-paths.png)
 
-1. Tippen oder klicken Sie auf **Erstellen**, um das Content-Set zu erstellen.
+1. Klicken Sie auf **Erstellen** , um den Inhaltssatz zu erstellen.
 
 Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwendet werden.
 
@@ -90,7 +90,7 @@ Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwend
 
 ## Bearbeiten eines Content-Sets {#edit-content-set}
 
-Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Anstatt auf **Content-Set hinzufügen** zu tippen oder zu klicken, wählen Sie ein vorhandenes Set aus der Konsole aus und wählen Sie im Menü mit den Auslassungspunkten die Option **Bearbeiten**.
+Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Wählen Sie statt auf **Inhaltsset hinzufügen** einen vorhandenen Satz aus der Konsole aus und wählen Sie im Suchmenü die Option **Bearbeiten** aus.
 
 ![Bearbeiten des Content-Sets](/help/assets/edit-content-set.png)
 
@@ -125,7 +125,7 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
    ![Kopieren von Inhalten](/help/assets/copying-content.png)
 
-1. Tippen oder klicken Sie auf **Kopieren**.
+1. Klicken Sie auf **Kopieren**.
 
 Der Kopiervorgang wird gestartet. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 

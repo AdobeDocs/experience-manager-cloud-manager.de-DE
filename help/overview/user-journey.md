@@ -2,10 +2,10 @@
 title: Anwendertour
 description: In diesem Dokument werden die verschiedenen Onboarding-Szenarien beschrieben und die Tour mit den ersten Schritten mit Cloud Manager erklärt.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
-source-git-commit: b0dbb602253939464ff034941ffbad84b7df77df
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '539'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -46,7 +46,7 @@ Wenn Sie das Upgrade durchführen, werden Sie in Cloud Manager eingeführt und e
 
 Auch vorhandene AEM-Projekte müssen Best-Practice-Verfahren entsprechen, wenn Sie mit [!UICONTROL Cloud Manager] neue Code-Änderungen in Ihren AEM-Umgebungen bereitstellen.
 
-Weitere Informationen zu den Vorteilen eines Upgrades auf AEM 6.5 finden Sie im Dokument [Upgrade auf AEM 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=de).
+Weitere Informationen zu den Vorteilen der Aktualisierung auf AEM 6.5 finden Sie im Dokument [Aktualisieren auf AEM 6.5](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/upgrade.html?lang=de) .
 
 ## Zugriff auf [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
@@ -56,7 +56,7 @@ Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt
 
 Die ersten Schritte mit [!UICONTROL Cloud Manager] finden Sie im Dokument [Erstmalige Anmeldung](/help/getting-started/first-time-login.md) beschrieben.
 
-Weitere Informationen zu AEM finden Sie im Dokument [Bereitstellung und Wartung](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de).
+Weitere Informationen zu AEM finden Sie im Dokument [Bereitstellen und Verwalten](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/deploying/deploy.html?lang=de) .
 
 ## Erste Schritte mit [!UICONTROL Cloud Manager] {#getting-started-with-cloud-manager}
 

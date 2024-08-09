@@ -2,17 +2,17 @@
 title: Konfigurieren von Produktions-Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 33ccb0f2139162845cc1b72505b6a5bfc7cf43e7
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1302'
-ht-degree: 100%
+source-wordcount: '1286'
+ht-degree: 91%
 
 ---
 
 
 # Konfigurieren von Produktions-Pipelines {#configuring-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, lesen Sie die das Dokument [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
+Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie weitere Informationen unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
 ## Übersicht {#overview}
 
@@ -21,7 +21,7 @@ Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konf
 * **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe orchestrierter Schritte umfasst, um Quell-Code aus dem Git-Repository bis hin in die Produktionsumgebung zu bringen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
-Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zur Konfiguration von produktionsfremden Pipelines finden Sie unter [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
+Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zum Konfigurieren von Nicht-Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md) .
 
 Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline verantwortlich. Die Pipeline-Konfiguration besteht aus folgenden Schritten:
 
@@ -39,7 +39,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
-1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines** und klicken Sie auf **Hinzufügen** und wählen Sie **Produktions-Pipeline hinzufügen** aus.
+1. Navigieren Sie auf der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf **+Add** und wählen Sie **Produktions-Pipeline hinzufügen** aus.
 
    ![Produktions-Pipeline hinzufügen](/help/assets/configure-pipelines/add-prod1.png)
 
@@ -113,7 +113,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
            >[!TIP]
            >
-           >Weitere Informationen dazu, wie Sie den Bereitstellungsplan festlegen oder die Pipeline sofort ausführen können, finden Sie im Dokument [Bereitstellen des Codes](/help/using/code-deployment.md).
+           >Unter [Code-Bereitstellung](/help/using/code-deployment.md) erfahren Sie, wie Sie den Bereitstellungsplan festlegen oder die Pipeline sofort ausführen.
 
             * **CSE-Überwachung nutzen**: Bei Auswahl dieser Option wird ein CSE eingeschaltet, um die Bereitstellung tatsächlich zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Bereitstellungs-Manager** folgende Optionen.
 
@@ -128,7 +128,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
    >[!TIP]
    >
-   >Im Dokument [Testen der Code-Qualität](/help/using/code-quality-testing.md#performance-testing) finden Sie weitere Informationen zu den Optionen, die auf der Registerkarte **Staging-Tests** verfügbar sind.
+   >Weitere Informationen zu den auf der Registerkarte **Staging-Tests** verfügbaren Optionen finden Sie unter [Tests der Codequalität](/help/using/code-quality-testing.md#performance-testing) .
 
    1. Im Abschnitt **Site-Inhaltsbereitstellung/verteilte Lastgewichtung** legen Sie fest, wie die Leistungstests für Sites konfiguriert werden, basierend auf der Gewichtung der Seitenanfragen zwischen den drei Seitensätzen, die aktiviert oder deaktiviert werden können.
 
@@ -138,7 +138,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
       ![Sites-Lastgewichtung](/help/assets/configure-pipelines/add-prod5.png)
 
-   1. Im Abschnitt **Asset-Leistungstestverteilung** definieren Sie sowohl die Testverteilung von Bildern und PDFs als auch eigene Test-Assets.
+   1. Im Abschnitt **Assets-Leistungstestverteilung** definieren Sie die Testverteilung von Bildern und PDF und definieren Ihre eigenen Testassets.
 
       * **Bilder**: Stellen Sie den Schieberegler ein, um die Aufteilung des Tests zwischen Bildern und PDFs anzupassen.
       * **PDFs**: Stellen Sie den Schieberegler ein, um die Aufteilung des Tests zwischen Bildern und PDFs anzupassen.
@@ -155,7 +155,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Einzelheiten finden Sie in dem Dokument [Code-Bereitstellung](/help/using/code-deployment.md).
+Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Codebereitstellung](/help/using/code-deployment.md) .
 
 ## Video-Tutorial {#video-tutorial-one}
 

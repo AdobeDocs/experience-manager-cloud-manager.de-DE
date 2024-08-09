@@ -2,10 +2,10 @@
 title: Erste Anmeldung
 description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die allgemeine Konfiguration eingerichtet haben und für die erste Verwendung von Cloud Manager bereit sind.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 1417d3bfa5a844641e0942d1fe1bd7bf84e41997
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '297'
-ht-degree: 100%
+source-wordcount: '293'
+ht-degree: 75%
 
 ---
 
@@ -24,15 +24,15 @@ Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingeri
 
    ![Cloud Manager-Konsole](/help/assets/cloud-manager-console.png)
 
-1. Tippen oder klicken Sie auf die Karte Ihres Programms, um zur Seite **Übersicht** von Cloud Manager zu navigieren.
+1. Klicken Sie auf die Programmkarte, um zur Cloud Manager-Seite **Überblick** zu navigieren.
 
 1. In Cloud Manager wird die Seite **Übersicht** geöffnet.
 
    ![Cloud Manager-Übersichtsseite](/help/assets/program-overview-page.png)
 
-1. Wenn Ihr Programm noch nicht eingerichtet ist, tippen oder klicken Sie im [Aktionsaufruf](/help/getting-started/navigation.md#cta) auf **Programm einrichten**, um Ihre Programmbeschreibung einzurichten und wichtige Leistungsindikatoren (KPIs) zu definieren. Wenn Ihr Programm bereits eingerichtet ist, kann der Aktionsaufruf weitere Schritte anbieten.
+1. Wenn Ihr Programm noch nicht eingerichtet ist, klicken Sie im [Aktionsaufruf](/help/getting-started/navigation.md#cta) auf **Programm einrichten** , um Ihre Programmbeschreibung einzurichten und wichtige Leistungsindikatoren (KPIs) zu definieren. Wenn Ihr Programm bereits eingerichtet ist, kann der Aktionsaufruf weitere Schritte anbieten.
 
-Fahren Sie mit dem Dokument [Programmeinrichtung](/help/getting-started/program-setup.md) fort, um die nächsten Schritte zur Einrichtung Ihres Programms zu erfahren.
+Sie können mit dem Dokument [Programmeinrichtung](/help/getting-started/program-setup.md) fortfahren, um die nächsten Schritte beim Einrichten des Programms zu erfahren.
 
 ## Cloud Manager-Aktivität {#activity}
 
@@ -40,7 +40,7 @@ Cloud Manager bietet einen Überblick über die Aktivitäten eines Programms, in
 
 >[!TIP]
 >
->Weitere Informationen zur Verwendung der Cloud Manager-Benutzeroberfläche finden Sie im Dokument [Navigation in der Cloud Manager-Benutzeroberfläche](/help/getting-started/navigation.md).
+>Weitere Informationen zur Verwendung der Cloud Manager-Benutzeroberfläche finden Sie im Dokument [Navigieren in der Cloud Manager-Benutzeroberfläche](/help/getting-started/navigation.md).
 
 >[!NOTE]
 >

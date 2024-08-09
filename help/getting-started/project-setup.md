@@ -2,9 +2,9 @@
 title: Einrichten des Projekts
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1426'
 ht-degree: 100%
 
 ---
@@ -110,7 +110,7 @@ Wenn zum Beispiel eine einfache Nachricht nur dann ausgegeben werden soll, wenn 
 
 ## Unterstützung für kennwortgeschütztes Maven-Repository {#password-protected-maven-repositories}
 
-Artefakte aus einem passwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht die Quality Gates von in Cloud Manager implementierenten Qualitätsregeln durchläuft. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Projektquell-Code bereitzustellen.
+Artefakte aus einem passwortgeschützten Maven-Repository sollten nur sehr vorsichtig verwendet werden, da Code, der über diesen Mechanismus bereitgestellt wird, derzeit nicht die Quality Gates von in Cloud Manager implementierenten Qualitätsregeln durchläuft. Es wird empfohlen, neben der Binärdatei auch die Java-Quellen sowie den gesamten Quell-Code des Projekts bereitzustellen.
 
 >[!TIP]
 >

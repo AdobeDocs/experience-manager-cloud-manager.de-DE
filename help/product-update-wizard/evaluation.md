@@ -3,10 +3,10 @@ title: Testphase
 seo-title: Evaluation Phase
 description: Erfahren Sie, wie die Bewertungsphase des Assistenten für Produktaktualisierungen mit der Mustererkennung die Komplexität des Upgrades bewertet.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: ce2145da3b9e605e8a41bac28df520f14e255557
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '289'
-ht-degree: 100%
+source-wordcount: '285'
+ht-degree: 85%
 
 ---
 
@@ -25,7 +25,7 @@ Dieser Bericht dient als Bewertungsgrundlage für den erforderlichen Entwicklung
 
 >[!NOTE]
 >
->Weitere Informationen zur Mustererkennung finden Sie unter [Bewerten der Komplexität der Aktualisierung mit der Mustererkennung](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=de).
+>Weitere Informationen zum Musterdetektor finden Sie unter [Bewertung der Komplexität der Aktualisierung mit dem Musterdetektor](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=de).
 
 ## Ausführen der Bewertung {#running}
 
@@ -41,7 +41,7 @@ Führen Sie die folgenden Schritte aus, um den Bewertungsbericht zu erstellen.
 
 1. Über den Assistenten werden Sie über den Status Ihrer Aktion informiert. Während der Erstellung des Testberichts wird **In Bearbeitung** oder **Abgeschlossen** angezeigt.
 
-1. Sobald der Bericht generiert wurde, können Sie auf **[!UICONTROL Bericht herunterladen]** klicken, um eine Kopie zu speichern.
+1. Nachdem der Bericht generiert wurde, können Sie auf **[!UICONTROL Bericht herunterladen]** klicken, um eine Kopie zu speichern.
 
    ![Erstellter Bericht](/help/assets/Evaluation-1.png)
 

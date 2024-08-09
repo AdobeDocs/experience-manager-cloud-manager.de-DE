@@ -2,10 +2,10 @@
 title: Umgebungsbereitstellung
 description: Erfahren Sie, wie Ihre Umgebungen im Rahmen des Cloud Manager-Onboarding-Prozesses bereitgestellt werden.
 exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
-source-git-commit: d033b7cf53d4d9faf074f1dc09e2958eb91afe3b
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '314'
-ht-degree: 100%
+source-wordcount: '312'
+ht-degree: 91%
 
 ---
 
@@ -20,7 +20,7 @@ Während des Onboarding-Prozesses werden alle von Ihnen erworbenen AEM-Cloud-Umg
 
 ## Begrüßungs-E-Mail {#welcome-email}
 
-Nach Abschluss der Umgebungsbereitstellung erhält der vorgesehene Kundenadministrator eine Begrüßungs-E-Mail mit der Bestätigung, dass ihm Zugriff auf Adobe [!UICONTROL Experience Cloud] gewährt wurde. Die Begrüßungs-E-Mail enthält detaillierte Informationen zu den ersten Schritten mit den [!UICONTROL Experience Cloud]-Services, den [!UICONTROL AEM Managed Services]-Cloud-Umgebungen sowie zum [!UICONTROL Cloud Manager]-Self-Service-Portal. Zudem enthält die E-Mail wichtige Informationen wie Kontaktinformationen für Ihren Customer Success Engineer (CSE), Quellen für Support-Ressourcen, Foren, häufig gestellte Fragen und vieles mehr. In der Liste der in der E-Mail bereitgestellten Ressourcen finden Sie außerdem Details zum Zugriff auf [!UICONTROL Cloud Manager]- oder Ihre AEM-Cloud-Umgebungen.
+Nach Abschluss der Umgebungsbereitstellung erhält der vorgesehene Kundenadministrator eine Begrüßungs-E-Mail mit der Bestätigung, dass ihm Zugriff auf Adobe [!UICONTROL Experience Cloud] gewährt wurde. Die Begrüßungs-E-Mail enthält detaillierte Informationen zu den ersten Schritten mit den [!UICONTROL Experience Cloud]-Diensten, den [!UICONTROL AEM Managed Services]-Cloud-Umgebungen und dem [!UICONTROL Cloud Manager]-Self-Service-Portal. Zudem enthält die E-Mail wichtige Informationen wie Kontaktinformationen für Ihren Customer Success Engineer (CSE), Quellen für Support-Ressourcen, Foren, häufig gestellte Fragen und vieles mehr. In der Liste der in der E-Mail bereitgestellten Ressourcen finden Sie außerdem Details zum Zugriff auf [!UICONTROL Cloud Manager]- oder Ihre AEM-Cloud-Umgebungen.
 
 ## Nächste Schritte {#next-steps}
 

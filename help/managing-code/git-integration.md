@@ -2,10 +2,10 @@
 title: Git-Integration mit Adobe Cloud Manager
 description: In dieser Videoreihe wird die Einrichtung und Integration eines vom Kunden verwalteten (lokalen) Git-Repositorys mit Adobe Cloud Manager beschrieben.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
-source-git-commit: 91e909273bf2b21d7f6413731923011915079e45
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '340'
-ht-degree: 100%
+source-wordcount: '337'
+ht-degree: 91%
 
 ---
 
@@ -30,7 +30,7 @@ Diese Videoreihe setzt Grundkenntnisse über Git und die Verwaltung von Versions
 
 Die Schritte und Benennungskonventionen in dieser Videoreihe präsentieren mehrere Best Practices für die Arbeit mit einem vom Kunden verwalteten Git-Repository und Cloud Manager. Es wird erwartet, dass die dargelegten Konventionen und Arbeitsabläufe für einzelne Entwicklungsteams angepasst werden.
 
-Eine vollständige Übersicht über Cloud Manager finden Sie im Dokument [Einführung in Cloud Manager](/help/introduction.md).
+Eine vollständige Übersicht über Cloud Manager finden Sie unter [Einführung in Cloud Manager](/help/introduction.md).
 
 ## Erstsynchronisierung {#initial-sync}
 
@@ -40,7 +40,7 @@ Erste Schritte zum Synchronisieren eines vom Kunden verwalteten Git-Repositorys 
 
 ## Standard-Verzweigungsstrategie {#branching-strategy}
 
-Richten Sie eine grundlegende Verzweigungsstrategie ein, um die [Produktions-](/help/using/production-pipelines.md) und [produktionsfremden Pipelines](/help/using/non-production-pipelines.md) von Cloud Manager zu nutzen.
+Richten Sie eine grundlegende Verzweigungsstrategie ein, um die Vorteile der Cloud Manager-Pipeline [Produktion](/help/using/production-pipelines.md) und [Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md) zu nutzen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28712/?quality=12)
 

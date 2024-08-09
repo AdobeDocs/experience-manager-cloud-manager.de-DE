@@ -3,10 +3,10 @@ title: Hinzufügen von privaten Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigenen privaten GitHub-Repositorys einrichten.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 15e733117b4458cc53dec309dad5bde8cb17029f
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '855'
-ht-degree: 100%
+source-wordcount: '836'
+ht-degree: 83%
 
 ---
 
@@ -32,7 +32,7 @@ Die Konfiguration erfolgt in zwei Hauptschritten:
 
 ### Repository hinzufügen {#add-repo}
 
-1. Tippen oder klicken Sie in Cloud Manager auf der Seite **Programmübersicht** auf die Registerkarte **Repositorys**, um zur Seite **Repositorys** zu wechseln, und dann auf **Repository hinzufügen**.
+1. Klicken Sie in Cloud Manager auf der Seite **Programmübersicht** auf die Registerkarte **Repositorys** , um zur Seite **Repositorys** zu wechseln, und klicken Sie auf **Repository hinzufügen**.
 
 1. Wählen Sie im Dialogfeld **Repository hinzufügen** als Repository-Typ **Privates Repository**.
 
@@ -44,7 +44,7 @@ Die Konfiguration erfolgt in zwei Hauptschritten:
 
    ![Eigenes Repository hinzufügen](/help/assets/repositories/add-own-github.png)
 
-1. Tippen oder klicken Sie auf **Speichern**.
+1. Klicken Sie auf **Speichern**.
 
 >[!TIP]
 >
@@ -62,9 +62,9 @@ Cloud Manager kennt jetzt Ihr GitHub-Repository, benötigt aber noch den Zugriff
    * Eine Eigentümerin bzw. ein Eigentümer Ihrer GitHub-Organisation muss die App unter `https://github.com/apps/cloud-manager-for-aem` installieren und Zugriff auf das Repository gewähren.
    * Weitere Informationen dazu finden Sie in der GitHub-Dokumentation.
 
-1. Um die Sicherheit zu erhöhen, müssen Sie eine geheime Datei in der Standardverzweigung Ihres Repositorys erstellen. Tippen oder klicken Sie auf **Generieren**.
+1. Um die Sicherheit zu erhöhen, müssen Sie eine geheime Datei in der Standardverzweigung Ihres Repositorys erstellen. Klicken Sie auf **Erzeugen**.
 
-1. Bestätigen Sie die Generierung der geheimen Datei, indem Sie auf **Bestätigen** klicken.
+1. Bestätigen Sie die Erstellung der geheimen Datei, indem Sie auf **Bestätigen** klicken.
 
    ![Geheimnisgenerierung bestätigen](/help/assets/repositories/confirm-generation.png)
 
@@ -76,7 +76,7 @@ Cloud Manager kennt jetzt Ihr GitHub-Repository, benötigt aber noch den Zugriff
 
 1. Erstellen Sie in der Standardverzweigung Ihres GitHub-Repositorys eine neue Datei mit dem Namen `.well-known/adobe/cloud-manager-challenge`, fügen Sie den geheimen Dateiinhalt in diese Datei ein und speichern Sie sie.
 
-1. Sobald die App installiert ist und sich die geheime Datei im Repository befindet, können Sie im Dialogfeld **Validierung der Eigentümerschaft eines privaten Repositorys** auf **Bestätigen** tippen oder klicken.
+1. Sobald die App installiert ist und die geheime Datei im Repository vorhanden ist, können Sie im Dialogfeld **Validierung des Eigentums an privaten Repositorys** auf **Validieren** klicken.
 
 Die Installation der App und die Erstellung der geheimen Datei kann in jeder beliebigen Reihenfolge erfolgen. Beide Schritte müssen jedoch vor der Validierung ausgeführt werden.
 
@@ -86,9 +86,9 @@ Bis zur Validierung ist das Repository mit einem roten Symbol gekennzeichnet, da
 
 Beachten Sie, dass in der Spalte **Typ** die von Adobe bereitgestellten Repositorys (**Adobe**) und Ihre eigenen GitHub-Repositorys (**GitHub**) leicht erkennbar aufgeführt sind.
 
-Wenn Sie zu einem späteren Zeitpunkt zum Repository zurückkehren müssen, um die Validierung abzuschließen, klicken oder tippen Sie auf der Seite **Repositorys** auf die Schaltfläche mit den Auslassungspunkten in der Zeile mit dem soeben von Ihnen hinzugefügten GitHub-Repository und wählen Sie **Eigentümervalidierung** aus dem Dropdown-Menü.
+Wenn Sie zu einem späteren Zeitpunkt zum Repository zurückkehren müssen, um die Validierung abzuschließen, klicken Sie auf der Seite **Repositorys** auf die Suchschaltfläche in der Zeile, die das soeben hinzugefügte GitHub-Repository darstellt, und wählen Sie im Dropdownmenü die Option **Besitzvalidierung** aus.
 
-## Verwenden privater Repositorys mit Cloud Manager {#using}
+## Verwenden von privaten Repositorys mit Cloud Manager {#using}
 
 Nachdem das GitHub-Repository in Cloud Manager validiert wurde, ist die Integration abgeschlossen und Sie können das Repository mit Cloud Manager verwenden.
 
@@ -110,11 +110,11 @@ Wenn die Pull-Anfrage geschlossen oder zusammengeführt wird, wird die erstellte
 
 >[!TIP]
 >
->Sie können die automatisch erstellten Pipelines so steuern, dass sie jede Pull-Anfrage an ein privates Repository validieren. Weitere Informationen finden Sie im Dokument [Konfiguration der GitHub-Prüfung für private Repositorys](github-check-config.md).
+>Sie können die automatisch erstellten Pipelines so steuern, dass sie jede Pull-Anfrage an ein privates Repository validieren. Weitere Informationen finden Sie unter [GitHub-Prüfkonfiguration für private Repositorys](github-check-config.md) .
 
 ## Zuordnen von privaten Repositorys zu Pipelines {#pipelines}
 
-Validierte private Repositorys können [Full-Stack-Pipelines](/help/overview/ci-cd-pipelines.md) zugeordnet werden.
+Validierte private Repositorys können [Vollstapelpipelines](/help/overview/ci-cd-pipelines.md) zugeordnet werden.
 
 ## Einschränkungen {#limitations}
 

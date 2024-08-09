@@ -2,10 +2,10 @@
 title: Konfiguration der GitHub-Prüfung für private Repositorys
 description: Erfahren Sie, wie Sie die automatisch erstellten Pipelines steuern, um jede Pull-Anfrage an ein privates Repository zu validieren.
 exl-id: 29c9e487-e196-411a-8cda-6751b0a56066
-source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '255'
-ht-degree: 100%
+ht-degree: 94%
 
 ---
 
@@ -15,7 +15,7 @@ Erfahren Sie, wie Sie die automatisch erstellten Pipelines steuern, um jede Pull
 
 ## Konfiguration von GitHub-Prüfungen {#configuration}
 
-Bei der Verwendung von [privaten Repositorys](private-repositories.md#using) wird automatisch eine [Full-Stack-Code-Qualitäts-Pipeline](/help/overview/ci-cd-pipelines.md) erstellt. Diese Pipeline wird bei jeder Aktualisierung einer Pull-Anfrage gestartet.
+Bei Verwendung von [privaten Repositorys](private-repositories.md#using) wird automatisch eine [vollständige Stack-Code-Qualitäts-Pipeline](/help/overview/ci-cd-pipelines.md) erstellt. Diese Pipeline wird bei jeder Aktualisierung einer Pull-Anfrage gestartet.
 
 Sie können diese Prüfungen steuern, indem Sie eine Datei namens `.cloudmanager/pr_pipelines.yml` in der Standardverzweigung des privaten Repositorys erstellen.
 

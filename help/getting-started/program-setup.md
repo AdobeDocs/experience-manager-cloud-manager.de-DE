@@ -2,10 +2,10 @@
 title: Einrichten von Programmen
 description: Nach dem Onbarding muss der Geschäftsinhaber verschiedene Ersteinstellungen am Programm vornehmen.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '586'
-ht-degree: 100%
+source-wordcount: '584'
+ht-degree: 92%
 
 ---
 
@@ -70,7 +70,7 @@ Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schri
 
 Beachten Sie, dass die Änderungen sofort in Cloud Manager gespeichert werden, aber erst bei der nächsten Ausführung der Pipeline in Ihre Umgebungen übernommen werden.
 
-Wenn Sie noch keine Pipeline erstellt haben, lesen Sie die Dokumente [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
+Wenn Sie noch keine Pipeline erstellt haben, lesen Sie die Dokumente &quot;[Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md)&quot;und &quot;[Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md)&quot;.
 
 ## Wechsel zwischen Programmen {#swithing-programs}
 
@@ -86,7 +86,7 @@ Die KPIs einer Website werden bei Tests gemessen, die in der Staging-Umgebung au
 
 Anwenderinnen und Anwender, die beispielsweise durchschnittlich 1000 Seitenaufrufe pro Minute in der Produktionsumgebung erwartem und vier Dispatcher-/Veröffentlichungs-Server in der Produktion haben, sollten dies auf 250 Seitenaufrufe pro Minute skalieren. Dabei wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
 
-Assets-Leistungstests erfolgen, indem Assets während eines 30-minütigen Testzeitraums wiederholt hochgeladen und die Verarbeitungszeit für jedes Asset sowie verschiedene Metriken auf Systemebene gemessen werden.
+Assets-Leistungstests erfolgen, indem Assets während eines 30-minütigen Testzeitraums wiederholt hochgeladen und die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene gemessen werden.
 
 Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFront vor Ihrer Produktionsumgebung vorgeschaltet. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, sollten die KPIs dem erwarteten Traffic entsprechen, der durch das CDN weitergeleitet wird, d. h. ohne Cache. In der Regel handelt es sich dabei um eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
 

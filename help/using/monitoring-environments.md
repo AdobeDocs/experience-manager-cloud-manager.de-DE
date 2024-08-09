@@ -2,10 +2,10 @@
 title: Überwachen von Umgebungen
 description: Informationen zum Überwachen von Umgebungen in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '928'
-ht-degree: 100%
+source-wordcount: '922'
+ht-degree: 93%
 
 ---
 
@@ -26,7 +26,7 @@ Führen Sie diese Schritte aus, um auf die Systemüberwachung zuzugreifen.
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Tippen oder klicken Sie für das Programm, das Sie überwachen möchten, auf die Schaltfläche mit den Auslassungspunkten und wählen Sie die Option **Überwachung anzeigen**.
+1. Klicken Sie auf die Suchschaltfläche des Programms, das Sie überwachen möchten, und wählen Sie die Option **Überwachung anzeigen** aus.
 
    ![Einstellungen](/help/assets/first-timea1.png)
 
@@ -51,7 +51,7 @@ Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn 
 
 ## Details zur Systemüberwachung {#system-monitoring-detail}
 
-Um die Details zu einer bestimmten Metrik anzuzeigen, tippen oder klicken Sie auf eine der Kategoriespalten einer bestimmten Instanz oder auf den Kategorietitel im linken Navigationsbereich. Jede Detailseite präsentiert eine Reihe von Diagrammen für die Metriken in dieser Kategorie. Sie können die Metriken entweder für alle Instanzen in einer Umgebung oder für eine bestimmte Instanz anzeigen. Mithilfe der Dropdownfelder oben rechts können Sie zwischen der Umgebung und den Instanzen wechseln.
+Um die Details bestimmter Metriken anzuzeigen, klicken Sie auf eine der Kategoriespalten einer bestimmten Instanz oder auf den Kategorientitel im linken Navigationsbereich. Jede Detailseite präsentiert eine Reihe von Diagrammen für die Metriken in dieser Kategorie. Sie können die Metriken entweder für alle Instanzen in einer Umgebung oder für eine bestimmte Instanz anzeigen. Mithilfe der Dropdownfelder oben rechts können Sie zwischen der Umgebung und den Instanzen wechseln.
 
 ![Umgebung auswählen](/help/assets/System_Monitoring1.png)
 
@@ -62,7 +62,7 @@ In einem einzelnen Diagramm werden der Status und ein Graph der Daten zusammen m
 ![Metrikdiagramm](/help/assets/Monitoring_Graphs1.png)
 
 Einzelne Reihen können in einem Diagramm ausgeblendet werden, indem Sie auf die Reihe in der Legende klicken.
-Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kritische Schwellenwert angezeigt.
+Wenn Sie beispielsweise auf die Warnungsschwellenreihe klicken, wird nur der kritische Schwellenwert angezeigt.
 
 ![Diagramm ändern](/help/assets/Monitoring_Graphs2.png)
 

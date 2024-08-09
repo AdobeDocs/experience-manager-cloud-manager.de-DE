@@ -2,10 +2,10 @@
 title: Repository-Zugriffsinformationen
 description: Erfahren Sie, wie Sie mithilfe der Self-Service-Git-Kontoverwaltung über Cloud Manager auf Ihre von Adobe verwalteten Git-Repositorys zugreifen und diese verwalten können.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '400'
-ht-degree: 100%
+source-wordcount: '394'
+ht-degree: 82%
 
 ---
 
@@ -23,7 +23,7 @@ Cloud Manager macht es Ihnen leicht, Ihre Repository-Zugriffsinformationen abzur
 
    ![Schaltfläche „Auf Repository-Informationen zugreifen“ auf der Karte „Umgebungen“](assets/pipelines-card.png)
 
-1. Tippen oder klicken Sie auf die Schaltfläche **Auf Repository-Informationen zugreifen**, um das Dialogfeld **Repository-Informationen** zu öffnen, das Ihnen Folgendes anzeigt:
+1. Klicken Sie auf die Schaltfläche **Zugriff auf Repo Info** , um das Dialogfeld **Repository Info** zu öffnen und anzuzeigen:
 
    * Den Git-Benutzernamen.
    * Das Git-Kennwort.
@@ -32,9 +32,9 @@ Cloud Manager macht es Ihnen leicht, Ihre Repository-Zugriffsinformationen abzur
 
    ![Fenster „Repository-Informationen“](assets/access-repo-info.png)
 
-1. Um auf das Kennwort zugreifen zu können, muss ein neues Kennwort generiert werden. Tippen oder klicken Sie hierzu auf die Schaltfläche **Kennwort generieren**.
+1. Um auf das Kennwort zugreifen zu können, muss ein neues Kennwort generiert werden. Klicken Sie dazu auf die Schaltfläche **Kennwort generieren** .
 
-1. Bestätigen Sie die Generierung des Kennworts im Dialogfeld **Sind Sie sicher …?** durch Tippen oder Klicken auf **Kennwort generieren**.
+1. Bestätigen Sie die Kennworterstellung im Dialogfeld **Sind Sie sicher...**, indem Sie auf **Kennwort generieren** klicken.
 
    ![Kennwortgenerierung bestätigen](assets/confirm-password-generation.png)
 
@@ -55,10 +55,10 @@ Mithilfe dieser Anmeldeinformationen können Sie eine lokale Kopie des Repositor
 
 ## Zugriff auf Repository-Informationen über das Fenster „Repositorys“ {#repositories-window}
 
-Eine Schaltfläche **Auf Repository-Informationen zugreifen** ist auch in der Symbolleiste des Fensters [**Repositorys** verfügbar.](managing-repositories.md) Es werden dieselben Informationen zum Zugriff auf von Adobe verwaltete Repositorys angezeigt.
+Eine Schaltfläche **Zugriff auf Repo Info** ist auch in der Symbolleiste des Fensters [**Repositorys**](managing-repositories.md) verfügbar. Sie enthält dieselben Informationen zum Zugriff auf von Adobe verwaltete Repositorys.
 
 ## Sperren eines Zugangskennworts {#revoke-password}
 
-Sie können jederzeit ein Zugangskennwort sperren lassen. [Erstellen Sie für diese Anfrage ein entsprechendes Support-Ticket.](https://experienceleague.adobe.com/?lang=de?support-solution=Experience+Manager&amp;support-tab=home#support)
+Sie können jederzeit ein Zugangskennwort sperren lassen. Erstellen Sie dazu ein Support-Ticket für diese Anfrage](https://experienceleague.adobe.com/?lang=de?support-solution=Experience+Manager&amp;support-tab=home#support).[
 
 Das Ticket wird mit hoher Priorität behandelt und die Sperrung sollte innerhalb eines Tages erfolgen.

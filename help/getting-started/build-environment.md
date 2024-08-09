@@ -2,10 +2,10 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: dc0b83fa045208fcd333af10f90f9590c2aa96b8
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1280'
-ht-degree: 100%
+source-wordcount: '1275'
+ht-degree: 89%
 
 ---
 
@@ -20,7 +20,7 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 
 * Die Build-Umgebung ist Linux-basiert und von Ubuntu 22.04 abgeleitet.
 * Apache Maven 3.9.4 ist installiert.
-   * Adobe empfiehlt Benutzenden, [ihre Maven-Repositorys zu aktualisieren, sodass sie HTTPS anstelle von HTTP verwenden](#https-maven).
+   * Adobe empfiehlt Benutzern [die Aktualisierung ihrer Maven-Repositorys, um HTTPS anstelle von HTTP](#https-maven) zu verwenden.
 * Die installierten Java-Versionen sind Oracle JDK 8u401 und Oracle JDK 11.0.22.
    * `/usr/lib/jvm/jdk1.8.0_401`
    * `/usr/lib/jvm/jdk-11.0.22`
@@ -38,7 +38,7 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
 * Maven wird auf Systemebene mit einer `settings.xml`-Datei konfiguriert die automatisch das öffentliche Adobe-Artefakt-Repository enthält und ein Profil namens `adobe-public` verwendet.
-   * Weitere Informationen dazu finden Sie im [öffentlichen Adobe Maven Repository](https://repo1.maven.org/).
+   * Weitere Informationen finden Sie im [öffentlichen Maven-Repository für Adobe](https://repo1.maven.org/) .
 * Node.js 18 ist für [Frontend-Pipelines](/help/overview/ci-cd-pipelines.md) verfügbar.
 
 >[!NOTE]
@@ -48,13 +48,14 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 >[!TIP]
 >
 >In den folgenden zusätzlichen Ressourcen erfahren Sie, wie Sie Cloud Manager-APIs verwenden:
+>
 >* [aio-cli-plugin-cloudmanager](https://github.com/adobe/aio-cli-plugin-cloudmanager)
 >* [Erstellen einer API-Integration](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/)
 >* [API-Berechtigungen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/)
 
 ## HTTPS-Maven-Repositorys {#https-maven}
 
-Cloud Manager [Version 2023.10.0](/help/release-notes/2023/2023-10-0.md) hat eine rollierende Aktualisierung der Build-Umgebung gestartet (mit Version 2023.12.0 abgeschlossen), die eine Aktualisierung auf Maven 3.8.8 enthielt. Eine wesentliche Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitsverbesserung, die darauf abzielte, potenzielle Schwachstellen zu minimieren. Insbesondere deaktiviert Maven jetzt alle unsicheren `http://*`-Spiegelungen standardmäßig, wie in den [Maven-Versionshinweisen](http://maven.apache.org/docs/3.8.1/release-notes.html?lang=de#cve-2021-26291) beschrieben.
+Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) hat eine rollierende Aktualisierung der Build-Umgebung gestartet (abgeschlossen mit Version 2023.12.0), die eine Aktualisierung auf Maven 3.8.8 enthielt. Eine wesentliche Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitsverbesserung, die darauf abzielte, potenzielle Schwachstellen zu minimieren. Insbesondere deaktiviert Maven jetzt standardmäßig alle unsicheren `http://*` Spiegel, wie in den [Maven-Versionshinweisen](http://maven.apache.org/docs/3.8.1/release-notes.html?lang=de#cve-2021-26291) beschrieben.
 
 Aufgrund dieser Sicherheitsverbesserung können bei einzelnen Benutzenden während des Build-Schritts Probleme auftreten, insbesondere beim Herunterladen von Artefakten aus Maven-Repositorys, die unsichere HTTP-Verbindungen verwenden.
 
@@ -111,7 +112,7 @@ Die derzeit verfügbaren Anbieter-/Versionskombinationen sind:
 
 >[!NOTE]
 >
->Ab April 2022 wird Oracle JDK das Standard-JDK für die Entwicklung und den Betrieb von AEM-Programmen sein. Der Build-Prozess von Cloud Manager wechselt automatisch zur Verwendung von Oracle JDK, auch wenn in der Maven-Toolchain explizit eine alternative Option ausgewählt ist. Weitere Informationen finden Sie in [den Versionshinweisen vom April](/help/release-notes/2022/2022-4-0.md), sobald sie veröffentlicht werden.
+>Ab April 2022 wird Oracle JDK das Standard-JDK für die Entwicklung und den Betrieb von AEM-Programmen sein. Der Build-Prozess von Cloud Manager wechselt automatisch zur Verwendung von Oracle JDK, auch wenn in der Maven-Toolchain explizit eine alternative Option ausgewählt ist. Weitere Informationen finden Sie in den [Versionshinweisen vom April](/help/release-notes/2022/2022-4-0.md) .
 
 ### Alternative JDK-Version für die Maven-Ausführung {#alternate-maven}
 
@@ -149,7 +150,7 @@ In der Authoring-, Vorschau- und Veröffentlichungsumgebung können sowohl regul
 
 #### Dispatcher {#dispatcher}
 
-Im [Dispatcher können nur reguläre Umgebungsvariablen verwendet werden.](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) Geheimnisse können nicht verwendet werden.
+Mit [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) können nur normale Umgebungsvariablen verwendet werden. Geheimnisse können nicht verwendet werden.
 
 Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet werden.
 
@@ -159,7 +160,7 @@ Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet 
 
 #### OSGi-Konfigurationen {#osgi}
 
-In [OSGi-Konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de) können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
+In den [OSGi-Konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de) können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
 
 ### Pipeline-Variablen {#pipeline-variables}
 

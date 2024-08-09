@@ -2,10 +2,10 @@
 title: CI/CD-Pipelines
 description: Erfahren Sie mehr über CI/CD-Pipelines und wie sie Bereitstellungen in Staging- und Produktionsumgebungen in Cloud Manager handhaben.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 100%
+ht-degree: 97%
 
 ---
 
@@ -41,9 +41,9 @@ Dieses Diagramm zeigt, was passiert, wenn eine Freigabe unter Verwendung einer P
 
 ### Einrichten einer CI/CD-Pipeline {#how-to-setup-a-ci-cd-pipeline}
 
-Weitere Informationen zur Pipeline-Konfiguration finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
+Weitere Informationen zur Pipelinekonfiguration finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md).
 
-## Quality Gates {#quality-gates}
+## Qualitäts-Gates {#quality-gates}
 
 Die CI/CD-Pipeline bietet Quality Gates (bzw. Akzeptanzkriterien), die erfüllt werden müssen, bevor der Code aus der Staging-Umgebung in die Bereitstellungsumgebung verschoben werden kann. Die Pipeline muss drei Akzeptanztests bestehen:
 

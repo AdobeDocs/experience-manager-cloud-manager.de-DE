@@ -2,10 +2,10 @@
 title: Häufig gestellte Fragen zu Cloud Manager
 description: Dieses Dokument enthält Antworten für AMS-Kunden auf die am häufigsten gestellten Fragen zu Cloud Manager.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 6be659e02df0657ec7d3dbce8c18c44a327a36f4
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '749'
-ht-degree: 100%
+source-wordcount: '746'
+ht-degree: 93%
 
 ---
 
@@ -18,8 +18,8 @@ Dieses Dokument enthält Antworten für AMS-Kunden auf die am häufigsten gestel
 
 Ja. Sie müssen das `maven-toolchains-plugin` mit den richtigen Einstellungen für Java 11 hinzufügen.
 
-* Dieser Vorgang ist [hier](/help/getting-started/using-the-wizard.md) dokumentiert.
-* Ein Beispiel finden Sie unter [WKND-Beispielprojekt-Code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* Dieser Prozess wird [hier](/help/getting-started/using-the-wizard.md) dokumentiert.
+* Ein Beispiel finden Sie unter dem Beispielprojektcode [wknd](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über das maven-scr-plugin fehl. Was kann ich tun? {#maven-src-plugin}
 
@@ -29,7 +29,7 @@ Ihr AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 au
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
 ```
 
-Anweisungen zum Entfernen dieses Plug-ins finden Sie [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+Anweisungen zum Entfernen dieses Plug-ins finden Sie in [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über RequireJavaVersion fehl. Was kann ich tun? {#requirejavaversion}
 
@@ -60,7 +60,7 @@ Auf diese Frage gibt es keine einzelne Antwort. Es gibt jedoch einige wichtige P
    * Seitenladevorgänge, die länger als `20` Sekunden dauern, werden als `504`-Fehler gekennzeichnet.
 * Wenn für die Website eine Benutzerauthentifizierung erforderlich ist, finden Sie unter [Wissenswertes zu Testergebnissen](/help/using/code-quality-testing.md#authenticated-performance-testing) weitere Informationen dazu, wie Sie den Test zur Authentifizierung auf Ihrer Website konfigurieren.
 
-Weitere Informationen zu Qualitätsprüfungen finden Sie im Dokument [Wissenswertes zu Testergebnissen](/help/using/code-quality-testing.md).
+Weitere Informationen zu Qualitätsprüfungen finden Sie unter [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md) .
 
 ## Kann ich SNAPSHOT für die Version des Maven-Projekts verwenden? {#snapshot}
 
@@ -74,7 +74,7 @@ Weitere Informationen zur Versionsverwaltung finden Sie [hier dokumentiert](http
 
 ## Wie funktioniert die Paket- und Bundle-Versionierung für Staging- und Produktionsbereitstellungen? {#staging-production}
 
-Bei Staging- und Produktionsnereitstellungen wird wie [hier dokumentiert](/help/managing-code/maven-project-version.md) eine automatische Version generiert.
+In Staging- und Produktionsimplementierungen wird eine automatische Version [generiert, wie hier dokumentiert](/help/managing-code/maven-project-version.md).
 
 Für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstellungen legen Sie eine korrekte dreiteilige Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie sie in der Produktion bereitstellen.
 

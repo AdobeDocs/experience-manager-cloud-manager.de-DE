@@ -2,10 +2,10 @@
 title: Verwalten von Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager Ihre Git-Repositorys erstellen, anzeigen und bearbeiten.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: 73add7bee892769d1b3864e3238aff26bf96162d
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '660'
-ht-degree: 100%
+source-wordcount: '648'
+ht-degree: 79%
 
 ---
 
@@ -22,7 +22,7 @@ Sie können zusätzliche von Adobe verwaltete Repositorys erstellen und auch eig
 
 In Cloud Manager erstellte Repositorys stehen Ihnen auch beim Hinzufügen oder Bearbeiten von Pipelines zur Verfügung. Weitere Informationen finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
-Für jede Pipeline gibt es ein einzelnes primäres Repository oder eine Verzweigung. Mit der [Unterstützung von Git-Untermodulen](git-submodules.md) können zum Zeitpunkt der Erstellung viele sekundäre Verzweigungen einbezogen werden.
+Für jede Pipeline gibt es ein einzelnes primäres Repository oder eine Verzweigung. Mit der [Unterstützung von Git-Untermodulen](git-submodules.md) können jedoch viele sekundäre Verzweigungen zum Zeitpunkt der Erstellung einbezogen werden.
 
 ## Fenster „Repositorys“ {#repositories-window}
 
@@ -53,11 +53,11 @@ Sie können das Repository im Fenster auswählen und auf die Schaltfläche mit d
 
 ## Hinzufügen von Repositorys {#adding-repositories}
 
-Tippen oder klicken Sie im Fenster **Repositorys** auf **Repository hinzufügen**, um den Assistenten **Repository hinzufügen** zu starten.
+Klicken Sie im Fenster **Repositorys** auf die Schaltfläche **Repository hinzufügen** , um den Assistenten **Repository hinzufügen** zu starten.
 
 ![Assistent „Repository hinzufügen“](assets/add-repository-wizard.png)
 
-Cloud Manager unterstützt beide Typen von Repositorys, nämlich die, die von Adobe verwaltet werden (**Adobe-Repository**), sowie Ihre eigenen, selbst verwalteten Repositorys (**privates Repository**). Die erforderlichen Felder unterscheiden sich je nach Typ des Repositorys, das Sie hinzufügen möchten. Weitere Informationen finden Sie in den folgenden Dokumenten:
+Cloud Manager unterstützt beide Repositorys, die vom Adobe verwaltet werden (**Adobe-Repository**), sowie Ihre eigenen, selbst verwalteten Repositorys (**Privates Repository**). Die erforderlichen Felder unterscheiden sich je nach Typ des Repositorys, das Sie hinzufügen möchten. Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 * [Hinzufügen von Adobe-Repositorys in Cloud Manager](adobe-repositories.md)
 * [Hinzufügen von privaten Repositorys in Cloud Manager](private-repositories.md)
@@ -69,17 +69,17 @@ Cloud Manager unterstützt beide Typen von Repositorys, nämlich die, die von Ad
 
 ## Auf Repository-Informationen zugreifen {#repo-info}
 
-Wenn Sie Ihre Repositorys im Fenster **Repositorys** ansehen, können Sie die Details zum programmgesteuerten Zugriff auf die von Adobe verwalteten Repositorys anzeigen, indem Sie in der Symbolleiste auf die Schaltfläche **Auf Repository-Informationen zugreifen** tippen oder klicken.
+Beim Anzeigen Ihrer Repositorys im Fenster **Repositorys** können Sie die Details zum programmgesteuerten Zugriff auf die von Adobe verwalteten Repositorys anzeigen, indem Sie in der Symbolleiste auf die Schaltfläche **Repo Info aufrufen** klicken.
 
 ![Repository-Informationen](assets/access-repo-info.png)
 
-Das Fenster **Repository-Informationen** mit den Details wird geöffnet. Weitere Informationen zum Zugriff auf Repository-Informationen finden Sie im Dokument [Zugriff auf Repository-Informationen](accessing-repositories.md).
+Das Fenster **Repository-Informationen** mit den Details wird geöffnet. Weitere Informationen zum Zugriff auf Repository-Informationen finden Sie unter [Zugreifen auf Repository-Informationen](accessing-repositories.md).
 
 ## Überprüfen von Verzweigungen {#check-branches}
 
 Mit der Aktion **Verzweigungen überprüfen/Projekt erstellen** werden je nach dem Status des Repositorys zwei Funktionen ausgeführt.
 
-* Wenn das Repository neu erstellt wurde, erstellt die Aktion ein Beispielprojekt, das auf dem [AEM-Projektarchetyp](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/developing/archetype/overview) basiert.
+* Wenn das Repository neu erstellt wurde, erstellt die Aktion ein Beispielprojekt basierend auf [dem AEM Projektarchetyp](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/developing/archetype/overview).
 * Wenn im Repository bereits ein Beispielprojekt erstellt wurde, prüft es den Status des Repositorys und seiner Verzweigungen und gibt zurück, dass bereits ein Beispielprojekt vorhanden ist.
 
 ![Aktion „Verzweigungen überprüfen“](assets/check-branches.png)
@@ -90,7 +90,7 @@ Die Aktion **Repository-URL kopieren** kopiert die URL des im Fenster **Reposito
 
 ## Anzeigen und aktualisieren {#view-update}
 
-Die Aktion **Anzeigen/Aktualisieren** öffnet das Dialogfeld **Repository aktualisieren**. Dort können Sie den **Namen** und die **Repository-URL-Vorschau** anzeigen sowie die **Beschreibung** des Repositorys aktualisieren.
+Die Aktion **Anzeigen/Aktualisieren** öffnet das Dialogfeld **Repository aktualisieren**. Damit können Sie die Vorschau **Name** und **Repository-URL-Vorschau** anzeigen und die **Beschreibung** des Repositorys aktualisieren.
 
 ![Anzeigen und Aktualisieren von Repository-Informationen](assets/update-repository.png)
 
@@ -102,6 +102,6 @@ Die Aktion **Löschen** entfernt das Repository aus Ihrem Projekt. Ein Repositor
 
 Beachten Sie, dass ein in Cloud Manager gelöschtes Repository als gelöscht gekennzeichnet ist und für die Person nicht mehr zugänglich ist, im System jedoch zu Wiederherstellungszwecken weiterhin geführt wird.
 
-Wenn Sie versuchen, ein neues Repository zu erstellen, nachdem Sie ein Repository mit demselben Namen gelöscht haben, erhalten Sie die Fehlermeldung `An error has occurred while trying to create repository. Please contact your CSE or Adobe Support.`
+Wenn Sie versuchen, ein neues Repository zu erstellen, nachdem Sie ein Repository mit demselben Namen gelöscht haben, erhalten Sie die Fehlermeldung `An error has occurred while trying to create repository. Contact your CSE or Adobe Support.`
 
-Wenn Sie diese Fehlermeldung erhalten, wenden Sie sich an den Adobe-Support, der beim Umbenennen des gelöschten Repositorys helfen kann, oder wählen Sie einen anderen Namen für Ihr neues Repository.
+Wenn Sie diese Fehlermeldung erhalten, wenden Sie sich an den Adobe-Support , damit dieser beim Umbenennen des gelöschten Repositorys helfen kann oder einen anderen Namen für Ihr neues Repository wählen kann.

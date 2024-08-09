@@ -2,10 +2,10 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: ab527beb706ab73a14cc933a3414873dee6b7a9e
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1648'
-ht-degree: 100%
+source-wordcount: '1637'
+ht-degree: 96%
 
 ---
 
@@ -109,16 +109,16 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
 1. Jedes AEM-Artefakt wird über Package Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
 
-   * Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie im Dokument [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=de).
+   * Weitere Informationen dazu, wie Sie Pakete verwenden können, um neue Funktionen zu installieren, Inhalte zwischen Instanzen zu übertragen und Repository-Inhalte zu sichern, finden Sie unter [Package Manager](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager.html?lang=de).
 
    >[!NOTE]
    >
-   >Alle AEM-Artefakte werden für Autor und Veröffentlichung bereitgestellt. Wenn knotenspezifische Konfigurationen erforderlich sind, sollten Ausführungsmodi genutzt werden. Weitere Informationen dazu, wie Sie mit Ausführungsmodi Ihre AEM-Instanz für einen bestimmten Zweck anpassen können, finden Sie im [Abschnitt „Ausführungsmodi“ des Dokuments „Bereitstellen in AEM as a Cloud Service“](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de#runmodes).
+   >Alle AEM-Artefakte werden für Autor und Veröffentlichung bereitgestellt. Wenn knotenspezifische Konfigurationen erforderlich sind, sollten Ausführungsmodi genutzt werden. Weitere Informationen dazu, wie Sie mit den Ausführungsmodi Ihre AEM-Instanz für einen bestimmten Zweck anpassen können, finden Sie im Abschnitt &quot;[Ausführungsmodi&quot;des Dokuments &quot;In AEM as a Cloud Service bereitstellen&quot;](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/deploying/overview.html?lang=de#runmodes).
 
 1. Das Dispatcher-Artefakt wird wie folgt für jeden Dispatcher bereitgestellt:
 
    1. Aktuelle Konfigurationen werden gesichert und in einen temporären Speicherort kopiert.
-   1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Einzelheiten finden Sie im Dokument [Dispatcher-Konfigurationen](/help/getting-started/dispatcher-configurations.md). Mit diesem Schritt werden die Verzeichnisse gelöscht, damit keine verwaisten Dateien übrig bleiben.
+   1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Informationen finden Sie unter [Dispatcher-Konfigurationen](/help/getting-started/dispatcher-configurations.md) . Mit diesem Schritt werden die Verzeichnisse gelöscht, damit keine verwaisten Dateien übrig bleiben.
    1. Das Artefakt wird in das `httpd`-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien im Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
    1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Service neu geladen. Falls ein Fehler auftritt, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Service wird neu geladen und der Fehler wird an Cloud Manager gemeldet.
    1. Jeder in der Pipeline-Konfiguration angegebene Pfad wird ungültig oder aus dem Dispatcher-Cache entfernt.

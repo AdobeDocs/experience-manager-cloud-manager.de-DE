@@ -2,10 +2,10 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Anwender und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: dd96d773ea3e6b9c45886fe41b28d3dd70cb8a61
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '774'
-ht-degree: 96%
+source-wordcount: '769'
+ht-degree: 80%
 
 ---
 
@@ -46,7 +46,7 @@ Diese Tabelle fasst die Rollen zusammen.
 
 [!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
-Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin Console finden Sie in der Dokumentation zur [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
+Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zu Adobe Admin Console finden Sie in der Dokumentation zur [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
 Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Manager]-Anwender bereitzustellen, muss ein Administrator in der Organisation des Kunden neue Produktprofile unter dem [!UICONTROL AEM Managed Services]-Produktkontext für jede der vier [!UICONTROL Cloud Manager]-Rollen erstellen:
 
@@ -57,9 +57,9 @@ Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Mana
 
 Mit der Admin Console können Sie Anwender/Gruppen für diese Produktprofile erstellen oder hinzufügen.
 
-1. Melden Sie sich bei der Admin Console unter [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
+1. Melden Sie sich bei der Admin Console um [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
 
-1. Klicken Sie auf der Registerkarte **Übersicht** auf das Produkt, das Sie auf der Karte **Produkte und Dienstleistungen** ändern möchten. Wenn es dort nicht aufgeführt ist, verwenden Sie die Registerkarte **Produkte**, um das Produkt zu suchen, und klicken Sie darauf.
+1. Klicken Sie auf die Registerkarte **Übersicht** und klicken Sie auf der Karte **Produkte und Dienste** auf das Produkt, das Sie ändern möchten. Wenn es dort nicht aufgeführt ist, verwenden Sie die Registerkarte **Produkte**, um das Produkt zu suchen, und klicken Sie darauf.
 
    ![Registerkarte Übersicht Admin Console](/help/assets/admin-console-overview.png)
 
@@ -93,19 +93,19 @@ Mit der Admin Console können Sie Anwender/Gruppen für diese Produktprofile ers
 
 Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzer oder Benutzergruppen zuweisen.
 
-1. Melden Sie sich bei der Admin Console unter [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
+1. Melden Sie sich bei der Admin Console um [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
 
 1. Wählen Sie in der Admin Console die Registerkarte **Benutzer**.
 
    ![Registerkarte „Benutzer“](/help/assets/admin-console-users.png)
 
-1. Klicken Sie im linken Navigationsbereich auf **Benutzer** und dann auf einen Benutzer, um ihn zu ändern.
+1. Klicken Sie im linken Navigationsbereich auf **Benutzer** und klicken Sie dann auf einen Benutzer, um ihn zu ändern.
 
-1. Klicken Sie im Abschnitt **Produkte** auf die Schaltfläche mit den Auslassungspunkten und wählen Sie **Bearbeiten**.
+1. Klicken Sie auf die Suchschaltfläche im Abschnitt **Produkte** und wählen Sie **Bearbeiten** aus.
 
    ![Benutzer bearbeiten](/help/assets/admin-console-edit-user.png)
 
-1. Klicken Sie im Dialogfeld **Produkte und Benutzergruppen bearbeiten** auf die Schaltfläche mit dem Pluszeichen und wählen Sie die Profile aus, die dem Benutzer zugewiesen werden sollen.
+1. Klicken Sie im Dialogfeld **Produkte und Benutzergruppen bearbeiten** auf die Plusschaltfläche und wählen Sie die Profile aus, die dem Benutzer zugewiesen werden sollen.
 
    * Wenn der Benutzer den Rollen bereits zugewiesen ist, ist die Schaltfläche mit dem Pluszeichen eine Bearbeitungsschaltfläche (ein Bleistift), funktioniert aber auf dieselbe Weise.
 
@@ -113,6 +113,6 @@ Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzer oder Benut
 
 1. Klicken Sie auf **Speichern**, um die Profile der Benutzer zu speichern.
 
-Wiederholen Sie die gleichen Schritte, um Benutzergruppen Profile zuzuweisen, wählen Sie jedoch **Benutzergruppen** über das linke Navigationsfenster auf der Registerkarte **Benutzer**. Klicken Sie auf eine Benutzergruppe und wählen Sie die Registerkarte **Zugewiesene Produktprofile**, und klicken Sie dann auf **Produktprofil zuweisen**, um die Profile zuzuweisen.
+Wiederholen Sie die gleichen Schritte, um Benutzergruppen Profile zuzuweisen, wählen Sie jedoch **Benutzergruppen** über das linke Navigationsfenster auf der Registerkarte **Benutzer**. Klicken Sie auf eine Benutzergruppe, wählen Sie die Registerkarte **Zugewiesene Produktprofile** aus und klicken Sie auf **Produktprofil zuweisen** , um Profile zuzuweisen.
 
 ![Profile einer Gruppe zuweisen](/help/assets/admin-console-edit-user-groups.png)

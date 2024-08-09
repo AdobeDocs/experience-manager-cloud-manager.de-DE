@@ -2,10 +2,10 @@
 title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: a2cea28061304d109a3c9a48650d01255579443c
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '1300'
-ht-degree: 100%
+source-wordcount: '1295'
+ht-degree: 89%
 
 ---
 
@@ -29,7 +29,7 @@ Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und
 >
 >Auf dieser Dokumentations-Website werden speziell die Funktionen von Cloud Manager beschrieben, die für Kunden von Adobe Managed Services (AMS) relevant sind.
 >
->Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie in der [Dokumentation zu AEM as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html?lang=de).
+>Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie in der [AEM as a Cloud Service-Dokumentation](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/home.html?lang=de).
 
 Mit Cloud Manager profitiert Ihr Entwicklungs-Team von den folgenden Funktionen:
 
@@ -55,7 +55,7 @@ Die [!UICONTROL Cloud Manager]-Benutzeroberfläche ermöglicht den einfachen Zug
 
 Man definiert programmspezifische wichtige Leistungskennzahlen (Key Performance Indicators, KPIs) (z. B. maximale Seitenaufrufe pro Minute und erwartete Antwortzeit beim Laden einer Seite), die die Grundlage für die Messung einer erfolgreichen Bereitstellung bilden. Rollen und Berechtigungen für verschiedene Team-Mitglieder können einfach definiert werden. Die Self-Service-Benutzeroberfläche gibt Ihnen nicht nur die volle Kontrolle, sondern bietet außerdem Links zu Best Practices und Zugang zu Experten von Adobe, die bei Bedarf die erforderliche Anleitung zur Verfügung stellen.
 
-Weitere Informationen zur Benutzeroberfläche von [!UICONTROL Cloud Manager] und zu den ersten Schritten finden Sie unter [Erste Anmeldung](/help/getting-started/first-time-login.md).
+Weitere Informationen zur Benutzeroberfläche von [!UICONTROL Cloud Manager] und zu den ersten Schritten finden Sie im Dokument [Erste Anmeldung](/help/getting-started/first-time-login.md) .
 
 ### CI/CD-Pipeline {#ci-cd-pipeline}
 
@@ -63,7 +63,7 @@ Eine der Hauptfunktionen von [!UICONTROL Cloud Manager] ist die Möglichkeit, ei
 
 Über die [!UICONTROL Cloud Manager]-Benutzeroberfläche können Sie CI/CD-Pipelines konfigurieren und starten. Im Rahmen dieser Pipeline wird ein gründlicher Codescan durchgeführt, um sicherzustellen, dass nur hochwertige Programme in die Produktionsumgebung übertragen werden.
 
-Weitere Informationen zum Konfigurieren der Pipeline in der Benutzeroberfläche von [!UICONTROL Cloud Manager] finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
+Weitere Informationen zum Konfigurieren der Pipeline über die Benutzeroberfläche von [!UICONTROL Cloud Manager] finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md) .
 
 ### Flexible Bereitstellungsmodi {#flexible-deployment-modes}
 
@@ -73,11 +73,11 @@ Im automatischen Auslösermodus wird der Code basierend auf bestimmten Ereigniss
 
 Unabhängig vom Bereitstellungsauslöser werden bei einer CI/CD-Pipeline-Ausführung immer Qualitätsprüfungen durchgeführt. Das gilt für jede ausgelöste Bereitstellung. Zu den Qualitätsprüfungen gehören vorkonfigurierte Code-Prüfungen, Sicherheitstests und Leistungstests, die ohne Aufwand von Ihnen oder Ihren Partnern genutzt werden können.
 
-Weitere Informationen zum Bereitstellen von Code und zu Qualitätsprüfungen finden Sie unter [Bereitstellen von Code](/help/using/code-deployment.md).
+Weitere Informationen zur Bereitstellung von Code und Qualitätsprüfungen finden Sie im Dokument [Bereitstellen von Code](/help/using/code-deployment.md).
 
 ## Optionale Funktionen in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager bietet zusätzliche erweiterte Funktionen, die je nach Einrichtung und Anforderungen Ihrer Umgebung für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an Ihren Customer Success Engineer (CSE) oder an einen Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
+Cloud Manager bietet zusätzliche erweiterte Funktionen, die je nach Einrichtung und Anforderungen Ihrer Umgebung für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an Ihren Customer Success Engineer (CSE) oder Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
 
 ### Automatische Skalierung {#autoscaling}
 
@@ -89,7 +89,7 @@ Die Funktion zur automatischen Skalierung gilt nur für die Dispatcher-/Publishi
 
 >[!NOTE]
 >
->Wenn Sie herausfinden möchten, ob die automatische Skalierung für Ihr Programm geeignet ist, wenden Sie sich an Ihren CSE oder an die Adobe-Support-Mitarbeitenden.
+>Wenn Sie herausfinden möchten, ob die automatische Skalierung für Ihre Anwendung geeignet ist, wenden Sie sich an Ihren CSE oder Adobe-Support-Mitarbeiter.
 
 ### Blau/Grün-Bereitstellungen {#blue-green}
 
@@ -123,7 +123,7 @@ Wenn die Blau/Grün-Implementierung aktiviert ist, unterscheidet sich der Bereit
 
 Alle AMS-Benutzer, die Cloud Manager für Produktionsbereitstellungen verwenden, können eine Blau/Grün-Bereitstellung verwenden. Die Verwendung einer Blau/Grün-Bereitstellung erfordert jedoch eine zusätzliche Validierung Ihrer Umgebungen und die Einrichtung durch einen Adobe CSE.
 
-Wenn Sie an einer Blau/Grün-Bereitstellung interessiert sind, beachten Sie die folgenden Anforderungen und Einschränkungen und wenden Sie sich an Ihren CSE.
+Wenn Sie an einer blauen/grünen Implementierung interessiert sind, beachten Sie die folgenden Anforderungen und Einschränkungen und kontaktieren Sie Ihren CSE.
 
 #### Anforderungen und Einschränkungen {#limitations}
 
@@ -131,5 +131,5 @@ Wenn Sie an einer Blau/Grün-Bereitstellung interessiert sind, beachten Sie die 
 * Vorschau-Dispatcher-/Veröffentlichungs-Paare sind nicht Teil von Blau/Grün-Bereitstellungen.
 * Jedes Dispatcher-/Publisher-Paar ist mit jedem anderen Dispatcher-/Publisher-Paar identisch.
 * Blau/Grün ist nur in der Produktionsumgebung verfügbar.
-* Blau/Grün ist in AWS sowie in Azure verfügbar.
+* Blau/Grün ist in AWS und Azure verfügbar.
 * Blau/Grün steht nur Kunden von Assets zur Verfügung.

@@ -2,10 +2,10 @@
 title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: e767d9ff5e3df0047d2cf47d7b0842854101a01a
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 100%
+source-wordcount: '571'
+ht-degree: 94%
 
 ---
 
@@ -16,7 +16,7 @@ Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt
 
 ## Benachrichtigungen in Cloud Manager {#cloud-manager-notifications}
 
-Über [!UICONTROL Cloud Manager] können Anwenderinnen und Anwender Benachrichtigungen beim Starten oder Abschließen einer Produktions-Pipeline (ob erfolgreich oder nicht), zu Beginn einer Produktionsbereitstellung bzw. beim Erreichen der Schritte **GoLive-Genehmigung** und **Geplant** empfangen. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+[!UICONTROL Cloud Manager] sendet Benachrichtigungen, wenn eine Produktions-Pipeline gestartet und abgeschlossen wird (ob erfolgreich oder nicht), zu Beginn einer Produktionsbereitstellung und wenn die Schritte **Go-Live-Genehmigung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >

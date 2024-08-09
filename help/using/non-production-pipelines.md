@@ -2,16 +2,16 @@
 title: Konfigurieren von produktionsfremden Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 85c1e22609dc5646d3de0ccc71e9423d4243e13a
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 100%
+source-wordcount: '710'
+ht-degree: 94%
 
 ---
 
 # Konfigurieren von produktionsfremden Pipelines {#configuring-non-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, lesen Sie die das Dokument [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
+Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie weitere Informationen unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
 ## Übersicht {#overview}
 
@@ -20,7 +20,7 @@ Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen un
 * **Produktions-Pipelines**: Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
-Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Informationen zur Konfiguration von Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md).
+Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Informationen zum Konfigurieren von Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) .
 
 Es gibt zwei Arten von produktionsfremden Pipelines:
 
@@ -80,7 +80,7 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Einzelheiten finden Sie in dem Dokument [Code-Bereitstellung](/help/using/code-deployment.md).
+Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Codebereitstellung](/help/using/code-deployment.md) .
 
 ## Video-Tutorial {#video-tutorial}
 

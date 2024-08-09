@@ -2,10 +2,10 @@
 title: Wichtige Konzepte
 description: Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriffe. Dieses Dokument fasst einige der wichtigsten Informationen für Sie bei den ersten Schritten mit Cloud Manager zusammen.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: 67621fb2dbb0c32371b2ffc16ec45f47daf04e05
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '413'
-ht-degree: 100%
+ht-degree: 72%
 
 ---
 
@@ -16,9 +16,9 @@ Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriff
 
 ## Programm {#application}
 
-Eine Anwendung ist eine Reihe von Anpassungen und Konfigurationen, die von einer Kundin bzw. einem Kunden erstellt werden, um die zugrundeliegende [Lösung](#solution) (z. B. AEM Sites oder AEM Assets) für ihre spezifischen Anwendungsfälle und Bedürfnisse anzupassen. Ein Programm ist eine logische Einheit, die aus mehreren [Artefakten](#artifact) bestehen kann.
+Eine Anwendung ist eine Reihe von Anpassungen und Konfigurationen, die von einer Kundin bzw. einem Kunden erstellt werden, um die zugrundeliegende [Lösung](#solution) (z. B. AEM Sites oder AEM Assets) für ihre spezifischen Anwendungsfälle und Bedürfnisse anzupassen. Eine Anwendung ist eine logische Einheit, die aus mehreren [Artefakten](#artifact) bestehen kann.
 
-Ein Beispielprogramm ist das fiktive [WKND-Lifestyle-Programm](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de).
+Eine Beispielanwendung ist die fiktive [WKND-Lifestyle-Anwendung](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview.html?lang=de).
 
 ## Artefakt {#artifact}
 
@@ -30,15 +30,15 @@ Ein Artefakt-Repository ist ein Speicherort, an dem kundenspezifische [Artefakte
 
 ## Umgebung {#environment}
 
-Eine Umgebung ist ein einzelnes Cluster virtueller Maschinen innerhalb eines [Programms.](#program) Bei AEM besteht dieses aus einer Autoreninstanz (optional mit einer zusätzlichen Cold-Standby-Autoreninstanz), keiner oder mehreren Veröffentlichungsinstanzen, einer oder mehreren Dispatcher-Instanzen sowie einem Load-Balancer.
+Eine Umgebung ist ein einzelnes Cluster virtueller Maschinen innerhalb eines [Programms](#program). AEM besteht diese aus einer Authoring-Instanz (optional mit einer zusätzlichen Cold-Standby-Authoring-Instanz), null oder mehr Veröffentlichungsinstanzen, einer oder mehreren Dispatcher-Instanzen und einem Lastenausgleich.
 
 ## Git-Repository {#git-repository}
 
-Ein Git-Repository ist ein Speicherort, an dem kundenspezifischer Quell-Code [unter Verwendung von Git](https://git-scm.com) gespeichert und zugänglich ist.
+Ein Git-Repository ist ein Speicherort, an dem kundenspezifischer Quellcode gespeichert wird und [mit git](https://git-scm.com) aufgerufen werden kann.
 
 ## Instanz {#instance}
 
-Eine Instanz ist ein bestimmter virtueller Server, auf dem die AEM-[Lösung ausgeführt wird.](#solution) Instanzen stehen für eine einzige logische Einheit aus der Bereitstellungsperspektive.
+Eine Instanz ist ein bestimmter virtueller Server, auf dem die AEM [Lösung](#solution) ausgeführt wird. Instanzen stehen für eine einzige logische Einheit aus der Bereitstellungsperspektive.
 
 ## Organisation {#organization}
 
@@ -62,4 +62,4 @@ Eine Lösung ist eine der Adobe [!UICONTROL Experience Cloud]-Lösungen, z. B. 
 
 ## Schritt {#step}
 
-Ein Schritt ist eine konfigurierte Anweisung für bestimmte Arbeitseinheiten, z. B. ein Baustein einer [Pipeline](#pipeline).
+Ein Schritt ist ein konfigurierter Anweisungssatz, der eine bestimmte Arbeitseinheit als Baustein einer [Pipeline](#pipeline) ausführt.

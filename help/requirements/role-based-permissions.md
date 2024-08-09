@@ -2,10 +2,10 @@
 title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: fc1bc626dc18d25ce8c5bbae71396b234b5676db
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '620'
-ht-degree: 100%
+source-wordcount: '617'
+ht-degree: 88%
 
 ---
 
@@ -22,9 +22,9 @@ ht-degree: 100%
 
 ## Anwenderrollen {#user-roles}
 
-Die Rollenverwaltung für [!UICONTROL Cloud Manager] erfolgt in der [Admin Console.](https://helpx.adobe.com/de/enterprise/using/admin-console.html) Jede Anwenderin und jeder Anwender von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem die Anwendering bzw. der Anwender in der Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+Die Rollenverwaltung für [!UICONTROL Cloud Manager] erfolgt über die [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html). Jeder Benutzer von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem die Anwendering bzw. der Anwender in der Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
-Weitere Informationen zum Einrichten von Rollen finden Sie im Dokument [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md).
+Weitere Informationen zum Einrichten von Rollen finden Sie im Dokument [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md) .
 
 In dieser Tabelle sind die Rollen aufgeführt, die Sie in der Admin Console zuweisen können.
 
@@ -65,8 +65,8 @@ Jede der Rollen verfügt über bestimmte vorkonfigurierte Berechtigungen. In der
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“ | x | x | x | x | x |
 | Persönliches Zugriffs-Token erstellen | Zugriff auf Git |  | x |  | x |  |
 
-Weitere Informationen zum Einrichten von Anwendern finden Sie im Dokument [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md).
+Weitere Informationen zum Einrichten von Benutzern finden Sie im Dokument [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md) .
 
 >[!TIP]
 >
->Es sind auch benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen verfügbar. Weitere Informationen finden Sie im Dokument [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md).
+>Es sind auch benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen verfügbar. Weitere Informationen finden Sie unter [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md) .

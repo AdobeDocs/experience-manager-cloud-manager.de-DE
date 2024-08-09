@@ -2,10 +2,10 @@
 title: Anmerkungen zur GitHub-Prüfung
 description: Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 210d40a5e12b40fd84efc461c6a1c48559120837
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '252'
-ht-degree: 100%
+source-wordcount: '251'
+ht-degree: 86%
 
 ---
 
@@ -24,7 +24,7 @@ Von [SonarQube](/help/using/custom-code-quality-rules.md) erkannte Probleme mit 
 
 ![Beispiel für eine Anmerkung zu Code-Problemen](assets/github-check-annotations-example.png)
 
-Ihnen wird die genaue Code-Zeile mit dem Problem angegeben und Sie können darauf klicken, um den relevanten Code anzuzeigen. Diese Anmerkungen werden für alle Code-Probleme angezeigt, nicht nur für die in der Pull-Anfrage geänderten.
+Die genaue Codezeile mit dem Problem wird bereitgestellt und Sie können darauf klicken, um den relevanten Code anzuzeigen. Diese Anmerkungen werden für alle Code-Probleme angezeigt, nicht nur für die in der Pull-Anfrage geänderten.
 
 ![Beispiel für eine Anmerkung zu Code-Problemen](assets/github-check-annotations-example-code.png)
 
@@ -40,4 +40,4 @@ Die Ergebnisse für die [Code-Qualität](/help/using/code-quality-testing.md) we
 
 ![Beispiel für Anmerkungen](assets/github-check-annotations-code-quality-2.png)
 
-Sie können die Probleme auch in Form einer CSV-Datei visualisieren. Diese kann abgerufen werden, indem Sie [die Details der Pipeline-Ausführung in Cloud Manager anzeigen.](/help/using/managing-pipelines.md)
+Sie können die Probleme auch in Form einer CSV-Datei visualisieren. Dies kann durch [Anzeigen der Details der Pipeline-Ausführung in Cloud Manager](/help/using/managing-pipelines.md) abgerufen werden.

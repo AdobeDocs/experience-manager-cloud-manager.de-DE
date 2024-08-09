@@ -2,10 +2,10 @@
 title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: fadcf560f08bf16d0d18172c620a450d0cb06225
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '2778'
-ht-degree: 59%
+source-wordcount: '2763'
+ht-degree: 56%
 
 ---
 
@@ -46,11 +46,11 @@ Codequalitätstests scannen den Quellcode, um sicherzustellen, dass er bestimmte
 
 Die Software implementiert sie mithilfe einer Kombination aus SonarQube-Analyse, Inhaltspaketprüfung mit OakPAL und Dispatcher-Validierung mit dem Dispatcher Optimization-Tool.
 
-Es gibt mehr als 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
+Es gibt mehr als 100 Regeln, die generische Java-Regeln und AEM-spezifische Regeln kombinieren. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
 >[!TIP]
 >
->Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
+>Sie können die vollständige Liste der Regeln [über diesen Link ](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
 Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
 
@@ -71,7 +71,7 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 
 >[!NOTE]
 >
->Weitere Informationen zu den benutzerdefinierten Regeln zur Code-Qualität, die von [!UICONTROL Cloud Manager] ausgeführt werden, finden Sie unter [Benutzerspezifische Regeln für Code-Qualität](custom-code-quality-rules.md).
+>Weitere Informationen zu den benutzerspezifischen Regeln für die Codequalität, die von [!UICONTROL Cloud Manager] ausgeführt werden, finden Sie unter [Benutzerspezifische Regeln für die Codequalität](custom-code-quality-rules.md).
 
 ### Umgang mit falsch positiven Treffern {#dealing-with-false-positives}
 
@@ -172,7 +172,7 @@ Drei Seitensätze wählen die Seiten aus. Cloud Manager verwendet die Zugriffspr
 
 ##### Verteilung des Traffics auf ausgewählte Seitensätze {#distribution-of-traffic}
 
-Sie können auf der Registerkarte **Testen** der [Pipeline-Konfiguration zwischen einem Satz und allen drei Sätzen wählen.](/help/using/production-pipelines.md) Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sets. Das heißt, wenn alle drei ausgewählt sind, werden 33 % der gesamten Seitenansichten in jeden Satz eingefügt. Wenn zwei ausgewählt sind, werden 50 % zu jedem Satz hinzugefügt. Wenn eine ausgewählt ist, werden 100 % des Traffics auf diese Gruppe geleitet.
+Auf der Registerkarte **Tests** Ihrer [Pipeline-Konfiguration](/help/using/production-pipelines.md) können Sie zwischen einem und allen drei Sets wählen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sets. Das heißt, wenn alle drei ausgewählt sind, werden 33 % der gesamten Seitenansichten in jeden Satz eingefügt. Wenn zwei ausgewählt sind, werden 50 % zu jedem Satz hinzugefügt. Wenn eine ausgewählt ist, werden 100 % des Traffics auf diese Gruppe geleitet.
 
 Betrachten wir dieses Beispiel.
 
@@ -188,7 +188,7 @@ Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
 #### Tests und Reporting {#testing-reporting}
 
-Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten über einen 30-minütigen Testzeitraum hinweg standardmäßig als nicht authentifizierter Benutzer auf dem Staging-Veröffentlichungs-Server angefordert werden. Sie misst die von virtuellen Benutzern generierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) für jede Seite sowie verschiedene Metriken auf Systemebene (CPU, Speicher, Netzwerkdaten) für alle Instanzen.
+Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten über einen 30-minütigen Testzeitraum hinweg standardmäßig als nicht authentifizierter Benutzer auf dem Staging-Veröffentlichungs-Server angefordert werden. Sie misst die von virtuellen Benutzern generierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) für jede Seite und verschiedene Metriken auf Systemebene (CPU, Speicher, Netzwerkdaten) für alle Instanzen.
 
 In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix unter Verwendung des dreistufigen Gating-Systems.
 
@@ -204,7 +204,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix
 | Netzwerk-Bandbreitenauslastung | Wichtig | >= 90 % |
 | Anforderungen pro Minute | Info | >= 6.000 |
 
-Weitere Informationen zur Verwendung der einfachen Authentifizierung für Leistungstests zum Testen von Sites und Assets finden Sie im Abschnitt [Authentifizierte Leistungstests](#authenticated-performance-testing).
+Weitere Informationen zur Verwendung der Standardauthentifizierung für Leistungstests für Sites und Assets finden Sie unter [Authentifizierte Leistungstests](#authenticated-performance-testing) .
 
 >[!NOTE]
 >
@@ -250,7 +250,7 @@ Wenn beispielsweise eine Aufteilung von 70/30 verwendet wird und pro Minute 10 A
 
 #### Tests und Reporting {#testing-and-reporting}
 
-Cloud Manager erstellt in der Autoreninstanz einen Ordner mit dem Benutzernamen und dem Kennwort, die der CSE eingerichtet hat. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [-Open-Source-Bibliothek geschrieben.](https://github.com/adobe/toughday2) Während der 30-minütigen Testdauer werden sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
+Cloud Manager erstellt in der Autoreninstanz einen Ordner mit dem Benutzernamen und dem Kennwort, die der CSE eingerichtet hat. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [Open-Source-Bibliothek](https://github.com/adobe/toughday2) geschrieben. Sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene werden über die 30-minütige Testdauer gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
 
 >[!TIP]
 >
@@ -298,7 +298,7 @@ Wenn die beiden übersprungenen Inhaltspakete die einzigen Elemente innerhalb vo
 
 Bei Projekten, die Dutzende von eingebetteten Paketen produzieren, kann diese Optimierung nachweislich bis zu 10 Minuten pro Pipeline-Ausführung einsparen.
 
-Ein Sonderfall kann eintreten, wenn das Inhaltspaket „all“ eine Kombination aus übersprungenen Inhaltspaketen und OSGi-Bundles enthält. Wenn `myco-all-1.0.0-SNAPSHOT.zip` beispielsweise die beiden zuvor erwähnten eingebetteten Pakete sowie ein oder mehrere OSGi-Bundles enthält, wird ein neues, minimales Inhaltspaket nur mit den OSGi-Bundles erstellt. Dieses Paket hat immer die Bezeichnung `cloudmanager-synthetic-jar-package` und die darin enthaltenen Bundles werden in `/apps/cloudmanager-synthetic-installer/install` abgelegt.
+Ein Sonderfall kann eintreten, wenn das Inhaltspaket „all“ eine Kombination aus übersprungenen Inhaltspaketen und OSGi-Bundles enthält. Wenn `myco-all-1.0.0-SNAPSHOT.zip` beispielsweise die beiden zuvor erwähnten eingebetteten Pakete und ein oder mehrere OSGi-Bundles enthält, wird ein neues, minimales Inhaltspaket nur mit den OSGi-Bundles erstellt. Dieses Paket hat immer die Bezeichnung `cloudmanager-synthetic-jar-package` und die darin enthaltenen Bundles werden in `/apps/cloudmanager-synthetic-installer/install` abgelegt.
 
 >[!NOTE]
 >

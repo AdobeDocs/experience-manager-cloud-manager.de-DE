@@ -2,17 +2,17 @@
 title: Assistent für Produktaktualisierungen
 description: Erfahren Sie, wie der Assistent für Produktaktualisierungen den AEM-End-to-End-Aktualisierungsprozess in Cloud Manager optimiert.
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
-source-git-commit: bbee49987e2f80825f5f7f5caf29c841e2b00dfb
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '210'
-ht-degree: 100%
+ht-degree: 82%
 
 ---
 
 
 # Assistent für Produktaktualisierungen {#product-update-wizard}
 
-Der Assistent für Produktaktualisierungen führt Sie unter Verwendung von Cloud Manager Schritt für Schritt durch das Upgrade auf die neueste Version von Adobe Experience Manager 6.5. Er optimiert den End-to-End-Prozess und gewährleistet die Einhaltung der Best Practices von AEM mithilfe des CI/CD-Frameworks von Cloud Manager und der integrierten automatisierten Tests.
+Der Assistent für Produktaktualisierungen führt Sie unter Verwendung von Cloud Manager Schritt für Schritt durch das Upgrade auf die neueste Version von Adobe Experience Manager 6.5. Es optimiert den End-to-End-Prozess und gewährleistet die Einhaltung AEM Best Practices mithilfe des CI/CD-Frameworks von Cloud Manager sowie integrierter automatisierter Tests.
 
 Der Assistent deckt folgende fünf Phasen der AEM-Produktaktualisierung ab:
 
@@ -36,4 +36,5 @@ Cloud Manager-Kunden, die eine Berechtigung zum Upgrade auf AEM 6.5 haben, kön
 
 1. Der Assistent zeigt die erste Phase des **[!UICONTROL AEM 6.5-Aktualisierungsprozesses]** an.
 
-Weitere Informationen zur ersten Phase des Assistenten finden Sie im Dokument [Testphase](/help/product-update-wizard/evaluation.md).
+Weitere Informationen zur ersten Phase des Assistenten finden Sie im Dokument [Testphase](/help/product-update-wizard/evaluation.md) .
+

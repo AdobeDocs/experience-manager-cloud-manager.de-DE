@@ -2,10 +2,10 @@
 title: Hinzufügen von Adobe-Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager von Adobe verwaltete Repositorys erstellen.
 exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
-source-git-commit: e93285f7c7495ec9d2f11d289adaf6aaba7e58ea
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 100%
+ht-degree: 79%
 
 ---
 
@@ -29,8 +29,8 @@ Im Fenster **Repositorys** können Sie ganz einfach zusätzliche von Adobe verwa
 
    ![Dialogfeld „Repository hinzufügen“](assets/add-repository-wizard.png)
 
-Wenn der Assistent geschlossen wird, wird Ihr neues Repository im Fenster **Repositorys** in der Tabelle angezeigt. Sie können jetzt eine [CI/CD-Pipeline](/help/overview/ci-cd-pipelines.md) damit verbinden oder es im Fenster [**Repositorys** verwalten.](managing-repositories.md)
+Wenn der Assistent geschlossen wird, wird Ihr neues Repository im Fenster **Repositorys** in der Tabelle angezeigt. Sie können jetzt eine [CI/CD-Pipeline](/help/overview/ci-cd-pipelines.md) damit verknüpfen oder sie im Fenster [**Repositorys**](managing-repositories.md) verwalten.
 
 >[!TIP]
 >
->Sie können auch GitHub-Repositorys hinzufügen, die Sie selbst als [private Repositorys verwalten.](private-repositories.md)
+>Sie können auch GitHub-Repositorys hinzufügen, die Sie selbst als [private Repositorys](private-repositories.md) verwalten.

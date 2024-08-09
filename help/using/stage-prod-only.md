@@ -2,10 +2,10 @@
 title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: c238caa22fdd71ae6aefd098331b626b9b951a0f
+source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
 workflow-type: tm+mt
-source-wordcount: '891'
-ht-degree: 100%
+source-wordcount: '878'
+ht-degree: 81%
 
 ---
 
@@ -15,7 +15,7 @@ Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedi
 
 >[!NOTE]
 >
->Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md#early-adoption) verfügbar.
+>Diese Funktion steht nur [dem frühen Adopter-Programm](/help/release-notes/current.md#early-adoption) zur Verfügung.
 
 ## Überblick {#overview}
 
@@ -34,7 +34,7 @@ Reine Staging- und Produktions-Pipelines bieten Lösungen für diese Anwendungsf
 
 Weder reine Staging- noch reine Produktions-Pipelines werden ausgeführt, während eine Full-Stack-Produktions-Pipeline läuft und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Reine Produktions-Pipelines werden nicht mit **Bei Git-Änderungen** gestartet, da sie nicht direkt mit einem Repository verknüpft sind.
 
-Diese dedizierten Pipelines bieten mehr Flexibilität. Beachten Sie jedoch die folgenden Details zum Betrieb und Empfehlungen.
+Diese dedizierten Pipelines bieten mehr Flexibilität. Beachten Sie jedoch die folgenden Details zu Funktionsweise und Empfehlungen.
 
 >[!NOTE]
 >
@@ -46,9 +46,9 @@ Diese dedizierten Pipelines bieten mehr Flexibilität. Beachten Sie jedoch die f
 
 ## Pipeline-Erstellung {#pipeline-creation}
 
-Die Erstellung von reinen Produktions- und Staging-Pipelines erfolgt auf ähnliche Weise wie bei den standardmäßig gekoppelten [Produktions-Pipelines](/help/using/production-pipelines.md) und [produktionsfremden Pipelines.](/help/using/non-production-pipelines.md) Weitere Informationen finden Sie in diesen Dokumenten.
+Produktions- und Nur-Staging-Pipelines werden ähnlich wie die standardmäßigen gekoppelten Produktions-Pipelines [1} und [produktionsfremden Pipelines](/help/using/non-production-pipelines.md) erstellt. ](/help/using/production-pipelines.md) Weitere Informationen finden Sie in diesen Dokumenten.
 
-1. Tippen oder klicken Sie im Fenster **Pipelines** auf **Pipeline hinzufügen**.
+1. Klicken Sie im Fenster **Pipelines** auf **Pipeline hinzufügen**.
 
    * Wählen Sie **Produktionsfremde Pipeline hinzufügen**, um eine reine Staging-Pipeline zu erstellen.
    * Wählen Sie **Reine Produktions-Pipeline hinzufügen**, um eine reine Produktions-Pipeline zu erstellen.
@@ -59,31 +59,31 @@ Die Erstellung von reinen Produktions- und Staging-Pipelines erfolgt auf ähnlic
 >
 >Bestimmte Optionen können ausgegraut sein, wenn die entsprechenden Pipelines bereits vorhanden sind.
 >
->* **Reine Produktions-Pipeline hinzufügen** ist nicht verfügbar, wenn noch keine reine Staging-Pipeline existiert.
+>* **Nur Produktions-Pipeline hinzufügen** ist nicht verfügbar, wenn noch keine schreibgeschützte Pipeline vorhanden ist.
 >* **Produktions-Pipeline hinzufügen** ist nicht verfügbar, wenn bereits eine standardmäßige gekoppelte Pipeline vorhanden ist.
 >* Pro Programm ist nur eine reine Produktions-Pipeline und eine reine Staging-Pipeline zulässig.
 
 ### Reine Staging-Pipelines {#stage-only}
 
-1. Sobald Sie die Option **Produktionsfremde Pipeline hinzufügen** gewählt haben, öffnet sich der Dialog **Produktionsfremde Pipeline hinzufügen**.
-1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus. Füllen Sie die restlichen Felder aus und tippen oder klicken Sie auf **Fortfahren**.
+1. Nachdem Sie die Option **Nicht-Produktions-Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Nicht-Produktions-Pipeline hinzufügen** geöffnet.
+1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus. Füllen Sie die übrigen Felder aus und klicken Sie auf **Weiter**.
 
    ![Erstellen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only.png)
 
-1. Auf der Registerkarte **Staging-Tests** können Sie dann Tests definieren, die in der Staging-Umgebung durchgeführt werden sollen. Tippen oder klicken Sie auf **Speichern**, um Ihre neue Pipeline zu speichern.
+1. Auf der Registerkarte **Staging-Tests** können Sie dann Tests definieren, die in der Staging-Umgebung durchgeführt werden sollen. Klicken Sie auf **Speichern** , um die neue Pipeline zu speichern.
 
    ![Testparameter für eine reine Staging-Pipeline](/help/assets/configure-pipelines/stage-only-test.png)
 
 ### Reine Produktions-Pipelines {#prod-only}
 
 1. Sobald Sie die Option **Reine Produktions-Pipeline hinzufügen** gewählt haben, öffnet sich das Dialogfeld **Reine Produktions-Pipeline hinzufügen**.
-1. Geben Sie einen **Pipeline-Namen** an. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. Tippen oder klicken Sie auf **Speichern**, um die Pipeline zu speichern.
+1. Geben Sie einen **Pipeline-Namen** an. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. Klicken Sie auf **Speichern** , um die Pipeline zu speichern.
 
    ![Erstellen einer reinen Produktions-Pipeline](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
 ## Ausführen von reinen Produktions- und Staging-Pipelines {#running}
 
-Reine Produktions- und Staging-Pipelines werden auf die gleiche Weise ausgeführt wie [alle anderen Pipelines.](/help/using/managing-pipelines.md#running-pipelines) Weitere Informationen finden Sie in dieser Dokumentation.
+Nur-Prod- und Nur-Staging-Pipelines werden auf dieselbe Weise ausgeführt wie [alle anderen Pipelines werden ausgeführt](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in dieser Dokumentation .
 
 Darüber hinaus kann ein Lauf einer reinen Produktions-Pipeline direkt aus den Ausführungsdetails einer reinen Staging-Pipeline ausgelöst werden.
 
@@ -93,7 +93,7 @@ Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäß
 
 ![Ausführen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Die Schaltfläche **Build weiterleiten** wird nur angezeigt, wenn Sie die neueste erfolgreiche Ausführung der reinen Staging-Pipeline verwenden. Wenn Sie darauf tippen bzw. klicken, werden Sie aufgefordert, die Ausführung der reinen Produktions-Pipeline zu bestätigen oder eine reine Produktions-Pipeline zu erstellen, falls noch keine vorhanden ist.
+Die Schaltfläche **Build weiterleiten** wird nur angezeigt, wenn Sie die neueste erfolgreiche Ausführung der reinen Staging-Pipeline verwenden. Nachdem Sie auf geklickt haben, werden Sie aufgefordert, die Ausführung der reine prod-Pipeline zu bestätigen oder eine reine prod-only-Pipeline zu erstellen, falls noch keine Pipeline vorhanden ist.
 
 ### Reine Produktions-Pipelines {#prod-only-run}
 
