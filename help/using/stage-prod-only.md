@@ -2,10 +2,10 @@
 title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 70b7994435f7f0f587c134fab1fb66c6576386d9
 workflow-type: tm+mt
-source-wordcount: '878'
-ht-degree: 72%
+source-wordcount: '887'
+ht-degree: 37%
 
 ---
 
@@ -19,28 +19,28 @@ Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedi
 
 ## Überblick {#overview}
 
-Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Hierbei handelt es sich um eine Bereitstellungs-Pipeline, die sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt wird. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile vorliegen:
+Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Das heißt, eine Bereitstellungs-Pipeline wird sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile vorliegen:
 
-* Wenn Sie eine Bereitstellung nur für Staging durchführen möchten, können Sie dies nur tun, indem Sie den Schritt **Weiterleiten an Produktion** in der Pipeline ablehnen. Die Ausführung wird jedoch als abgebrochen markiert.
+* Wenn Sie eine Bereitstellung nur für Staging durchführen möchten, lehnen Sie den Schritt **Weiterleiten an Produktion** in der Pipeline ab. Die Ausführung wird jedoch als abgebrochen markiert.
 * Wenn Sie den neuesten Code in einer Staging-Umgebung für die Produktion bereitstellen möchten, müssen Sie die gesamte Pipeline einschließlich der Staging-Bereitstellung erneut bereitstellen, auch wenn dort kein Code geändert wurde.
-* Da Umgebungen während der Bereitstellung nicht aktualisiert werden können, ist es nicht möglich, die Produktionsumgebung zu aktualisieren, wenn Sie mehrere Tage in der Staging-Umgebung pausieren und testen möchten, bevor Sie sie zur Produktion weiterleiten. Dies macht nicht abhängige Aufgaben wie die Aktualisierung von [Umgebungsvariablen](/help/getting-started/build-environment.md#environment-variables) unmöglich.
+* Umgebungen können während der Bereitstellung nicht aktualisiert werden. Wenn Sie den Test in der Staging-Umgebung mehrere Tage lang anhalten, bevor Sie die Promotion zur Produktion durchführen, bleibt die Produktionsumgebung gesperrt und kann nicht aktualisiert werden. Dieses Szenario macht nicht-abhängige Aufgaben wie das Aktualisieren von [Umgebungsvariablen](/help/getting-started/build-environment.md#environment-variables) unmöglich.
 
 Reine Staging- und Produktions-Pipelines bieten Lösungen für diese Anwendungsfälle, indem sie dedizierte Bereitstellungsoptionen bieten.
 
-* **Bereitstellungs-Pipelines für reine Staging-Umgebungen** stellen nur in einer Staging-Umgebung bereit und beenden die Ausführung, sobald die Bereitstellung und die Tests abgeschlossen sind.
-   * Eine reine Staging-Pipeline verhält sich genauso wie die standardmäßig gekoppelte Full-Stack-Produktions-Pipeline, jedoch ohne die Schritte der Produktionsbereitstellung (Genehmigung, Zeitplan, Bereitstellung).
-* **Bereitstellungs-Pipelines für reine Produktionsumgebungen** stellen nur in einer Produktionsumgebung bereit, mit der Möglichkeit, eine erfolgreich abgeschlossene und validierte Ausführung in der Staging-Umgebung auszuwählen und ihre Artefakte in der Produktionsumgebung bereitzustellen.
-   * Reine Produktions-Pipelines verwenden die Artefakte aus den Staging-Bereitstellungen erneut und überspringen die Erstellungsphase.
+* **Bereitstellungs-Pipelines für die Staging-Umgebung:** Wird nur in einer Staging-Umgebung bereitgestellt, während die Ausführung abgeschlossen ist, sobald die Bereitstellung und die Tests abgeschlossen sind. Eine reine Staging-Pipeline verhält sich genauso wie die standardmäßig gekoppelte Full-Stack-Produktions-Pipeline, jedoch ohne die Schritte der Produktionsbereitstellung (Genehmigung, Zeitplan, Bereitstellung).
+* **Nur produktorientierte Bereitstellungs-Pipelines:** Wird nur für die Produktion bereitgestellt, indem eine erfolgreiche Staging-Ausführung ausgewählt wird. Bereitstellen der Artefakte dann für die Produktion. Nur-Prod-Pipelines verwenden die Staging-Bereitstellungsartefakte erneut, wobei die Build-Phase umgangen wird.
 
-Weder reine Staging- noch reine Produktions-Pipelines werden ausgeführt, während eine Full-Stack-Produktions-Pipeline läuft und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Reine Produktions-Pipelines werden nicht mit **Bei Git-Änderungen** gestartet, da sie nicht direkt mit einem Repository verknüpft sind.
+Staging- und reine Produktions-Pipelines werden nicht ausgeführt, während eine Produktions-Pipeline für den vollständigen Stapel ausgeführt wird, und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Nur-Prod-Pipelines starten nicht &quot;**`On Git Changes`**&quot;, da sie nicht direkt mit einem Repository verknüpft sind.
+
+Nur-Prod-Pipelines werden manuell ausgelöst, da sie nicht direkt mit einem Repository für **On-Git-Änderungen** verknüpft sind.
 
 Diese dedizierten Pipelines bieten mehr Flexibilität. Beachten Sie jedoch die folgenden Details zu Funktionsweise und Empfehlungen.
 
 >[!NOTE]
 >
->Reine Produktions-Pipelines verwenden immer die Artefakte aus der reinen Produktions-Pipeline, unabhängig davon, was in der Zwischenzeit über die standardmäßig gekoppelte Produktions-Pipeline auf der Staging-Umgebung bereitgestellt worden ist.
+>Nur-Produkt-Pipelines verwenden immer Artefakte aus der schreibgeschützten Pipeline. Dieser Prozess bleibt auch dann wahr, wenn die standardmäßige gekoppelte Produktions-Pipeline in der Zwischenzeit etwas Anderes für die Staging-Umgebung bereitgestellt hat.
 >
->* Dies könnte zu unerwünschten Code-Rollbacks führen.
+>* Ein Beispiel hierfür könnte zu unerwünschten Code-Rollbacks führen.
 >* Adobe empfiehlt, die standardmäßig gekoppelte Produktions-Pipeline nicht mehr zu verwenden, wenn Sie mit der Verwendung der reinen Produktions- und Staging-Pipelines beginnen.
 >* Wenn Sie weiterhin die standardmäßigen gekoppelten Pipelines und die reinen Staging-/Produktions-Pipelines ausführen möchten, sollten Sie die Wiederverwendung von Artefakten nicht vergessen, um Code-Rollbacks zu vermeiden.
 
@@ -70,14 +70,14 @@ Produktions- und Nur-Staging-Pipelines werden ähnlich wie die standardmäßigen
 
    ![Erstellen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only.png)
 
-1. Auf der Registerkarte **Staging-Tests** können Sie dann Tests definieren, die in der Staging-Umgebung durchgeführt werden sollen. Klicken Sie auf **Speichern** , um die neue Pipeline zu speichern.
+1. Auf der Registerkarte **Staging-Tests** können Sie dann die Tests definieren, die in der Staging-Umgebung durchgeführt werden sollen. Klicken Sie auf **Speichern** , um die neue Pipeline zu speichern.
 
    ![Testparameter für eine reine Staging-Pipeline](/help/assets/configure-pipelines/stage-only-test.png)
 
 ### Schreibgeschützte Pipelines {#prod-only}
 
-1. Sobald Sie die Option **Reine Produktions-Pipeline hinzufügen** gewählt haben, öffnet sich das Dialogfeld **Reine Produktions-Pipeline hinzufügen**.
-1. Geben Sie einen **Pipeline-Namen** an. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. Klicken Sie auf **Speichern** , um die Pipeline zu speichern.
+1. Wenn Sie die Option **Nur Produktions-Pipeline hinzufügen** auswählen, wird das Dialogfeld **Nur Produktions-Pipeline hinzufügen** geöffnet.
+1. Geben Sie einen **Pipeline-Namen** an. Die übrigen Optionen und Funktionen des Dialogfelds entsprechen den Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. Klicken Sie auf **Speichern** , um die Pipeline zu speichern.
 
    ![Erstellen einer reinen Produktions-Pipeline](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
@@ -89,7 +89,7 @@ Darüber hinaus kann ein Lauf einer reinen Produktions-Pipeline direkt aus den A
 
 ### Schreibgeschützte Pipelines {#stage-only-run}
 
-Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäßige gekoppelte Pipeline. Am Ende des Laufs, nach den Testschritten, können Sie jedoch über die Schaltfläche **Build weiterleiten** eine reine Produktions-Pipeline-Ausführung starten, die die Artefakte, die während dieses Durchlaufs in der Staging-Umgebung bereitgestellt wurden, verwendet und in der Produktion bereitstellt.
+Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäßige gekoppelte Pipeline. Am Ende der Ausführung wird jedoch nach den Testschritten eine Schaltfläche **Build bewerben** angezeigt. Mit dieser Schaltfläche können Sie eine reine Pipelineausführung mit den Artefakten starten, die auf der Bühne bereitgestellt wurden, und sie für die Produktion bereitstellen.
 
 ![Ausführen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
@@ -97,6 +97,6 @@ Die Schaltfläche **Build weiterleiten** wird nur angezeigt, wenn Sie die neuest
 
 ### Schreibgeschützte Pipelines {#prod-only-run}
 
-Bei reinen Produktions-Pipelines ist es wichtig, die Quellartefakte zu identifizieren, die für die Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung**. Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
+Bei reinen Produktleitungen ist es wichtig, die Quellartefakte zu identifizieren, die für die Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung**. Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
 
 ![Artefaktdetails](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
