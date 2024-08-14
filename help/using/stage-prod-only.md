@@ -2,10 +2,10 @@
 title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 77eb1c824ba766e43dfd8e2b0f6f6edc71f043e5
+source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 31%
+source-wordcount: '932'
+ht-degree: 27%
 
 ---
 
@@ -66,31 +66,35 @@ Produktions- und Nur-Staging-Pipelines werden ähnlich wie die standardmäßigen
 ### Schreibgeschützte Pipelines {#stage-only}
 
 1. Nachdem Sie die Option **Nicht-Produktions-Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Nicht-Produktions-Pipeline hinzufügen** geöffnet.
-1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus. Füllen Sie die übrigen Felder aus und klicken Sie auf **Weiter**.
+1. Um eine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Für Ihre Pipeline geeignete Bereitstellungsumgebungen** aus.
+1. Füllen Sie die übrigen Felder aus.
+1. Klicken Sie auf **Weiter**.
 
    ![Erstellen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only.png)
 
-1. Auf der Registerkarte **Staging-Tests** können Sie dann die Tests definieren, die in der Staging-Umgebung durchgeführt werden sollen. Klicken Sie auf **Speichern** , um die neue Pipeline zu speichern.
+1. Definieren Sie auf der Registerkarte **Staging-Tests** die Tests, die in der Staging-Umgebung durchgeführt werden sollen.
+1. Klicken Sie auf **Speichern**.
 
    ![Testparameter für eine reine Staging-Pipeline](/help/assets/configure-pipelines/stage-only-test.png)
 
 ### Schreibgeschützte Pipelines {#prod-only}
 
-1. Wenn Sie die Option **Nur Produktions-Pipeline hinzufügen** auswählen, wird das Dialogfeld **Nur Produktions-Pipeline hinzufügen** geöffnet.
-1. Geben Sie einen **Pipeline-Namen** an. Die übrigen Optionen und Funktionen des Dialogfelds entsprechen den Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. Klicken Sie auf **Speichern** , um die Pipeline zu speichern.
+1. Nachdem Sie die Option **Nur Produktions-Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Nur Produktions-Pipeline hinzufügen** geöffnet.
+1. Geben Sie im Feld **Pipeline-Name** den gewünschten Namen ein. Die übrigen Optionen und Funktionen des Dialogfelds entsprechen den Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline.
+1. Klicken Sie in der rechten unteren Ecke des Dialogfelds auf **Speichern**.
 
    ![Erstellen einer reinen Produktions-Pipeline](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
 ## Ausführen von reinen und reinen Pipelines für Phasen {#running}
 
-Nur-Prod- und Nur-Staging-Pipelines werden größtenteils genauso ausgeführt wie [alle anderen Pipelines.](/help/using/managing-pipelines.md#running-pipelines) Weitere Informationen finden Sie in dieser Dokumentation . Es gibt jedoch zwei neue Funktionen dieser Pipelines.
+Nur-Prod- und Nur-Staging-Pipelines werden größtenteils auf dieselbe Weise ausgeführt wie [alle anderen Pipelines werden ausgeführt](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in dieser Dokumentation . Es gibt jedoch zwei neue Funktionen dieser Pipelines.
 
-* Nur-Staging- und reine Pipelines bieten einen neuen [Notmodus](#emergency-mode), der das Überspringen von Tests ermöglicht.
-* Der reine Prod-Pipelineablauf kann direkt aus den Ausführungsdetails einer [Nur-Staging-Pipeline ausgelöst werden.](#stage-only-run)
+* Nur-Staging- und reine Produktleitungen bieten einen neuen [Notfallmodus](#emergency-mode), in dem Tests übersprungen werden können.
+* Der reine Prod-Pipelineablauf kann direkt aus den Ausführungsdetails einer [Nur-Staging-Pipeline](#stage-only-run) ausgelöst werden.
 
 ### Notfallmodus {#emergency-mode}
 
-Wenn Sie reine Produktions- und Staging-Online-Pipelines starten, werden Sie aufgefordert, den Start sowie den Start zu bestätigen.
+Beim Starten von reine Produktions- und Staging-Online-Pipelines werden Sie aufgefordert, den Start und dessen Start zu bestätigen.
 
 * **Normaler Modus** ist ein Standardablauf und umfasst Schritte zum Testen von Phasen.
 * **Notfallmodus** überspringt die Schritte zum Testen der Bühne.
@@ -103,12 +107,12 @@ Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäß
 
 ![Ausführen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Wenn Sie auf **Build bewerben** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen reinen Staging-Pipeline entweder normal oder im [Notmodus zu bestätigen.](#emergency-mode)
+Wenn Sie auf **Build bewerben** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen reinen Staging-Pipeline entweder normal oder im [Notfallmodus](#emergency-mode) zu bestätigen.
 
 Wenn keine reine Pipeline vorhanden ist, werden Sie aufgefordert, eine zu erstellen.
 
 ### Schreibgeschützte Pipelines {#prod-only-run}
 
-Bei reinen Produktleitungen ist es wichtig, die Quellartefakte zu identifizieren, die für die Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung**. Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
+Stellen Sie bei reinen Produktions-Pipelines sicher, dass Sie die Quellartefakte identifizieren, die in der Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung** . Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
 
 ![Artefaktdetails](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
