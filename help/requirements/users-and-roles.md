@@ -2,15 +2,15 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Anwender und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '769'
-ht-degree: 80%
+source-wordcount: '768'
+ht-degree: 78%
 
 ---
 
 
-# Hinzufügen von Anwendern und Rollen {#add-users-and-roles}
+# Hinzufügen von Benutzern und Rollen {#add-users-and-roles}
 
 Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigungen erforderlich. Beispielsweise dürfen nur bestimmte Anwender die KPIs (Key Performance Indicators) für ein Programm festlegen. Diese Berechtigungen werden logisch in Rollen gruppiert.
 
@@ -42,7 +42,7 @@ Diese Tabelle fasst die Rollen zusammen.
 >
 >Die Entwicklerrolle in der Admin Console hat nichts mit der Entwicklerrolle in [!UICONTROL Cloud Manager] zu tun.
 
-## Erstellen von Profilen mit der Admin Console {#using-admin-console-to-create-a-profile}
+## Verwenden der Admin Console zum Erstellen eines Profils {#using-admin-console-to-create-a-profile}
 
 [!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 

@@ -2,15 +2,15 @@
 title: Erste Anmeldung
 description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die allgemeine Konfiguration eingerichtet haben und für die erste Verwendung von Cloud Manager bereit sind.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 75%
+ht-degree: 66%
 
 ---
 
 
-# Erste Anmeldung {#first-time-login}
+# Erstmalige Anmeldung {#first-time-login}
 
 Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingerichtet haben, können Sie sie verwenden.
 
@@ -18,7 +18,7 @@ Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingeri
 >
 >Je nach den in [!UICONTROL Cloud Manager] zugewiesenen Rollen und dem Zustand des Programms können die angezeigten Bildschirme von den Abbildungen abweichen.
 
-## Anmeldung beim ersten Mal {#logging-in-for-the-first-time}
+## Erstmalige Anmeldung {#logging-in-for-the-first-time}
 
 1. Melden Sie sich bei Cloud Manager unter [`my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com/) an. Dort Sie sehen Ihre Programmliste.
 
@@ -44,4 +44,4 @@ Cloud Manager bietet einen Überblick über die Aktivitäten eines Programms, in
 
 >[!NOTE]
 >
->Standardmäßig hat ein Benutzer oder eine Benutzerin mit Zugriff auf eine AEM-Umgebung auch eine Cloud Manager-Benutzerrolle. Diese Rolle an sich reicht nicht aus, um der Person Zugriff auf die Programm-Detailansicht zu gewähren. Ein solcher Benutzer oder eine solche Benutzerin, der oder die nur die Cloud Manager-Benutzerrolle hat, kann über die Menüoptionen des Programms zur Autoren-URL der AEM-Umgebung navigieren (sofern Umgebungen vorhanden sind). Diese Benutzer und Benutzerinnen müssen sich an ihre Admins wenden, wenn sie Zugriff auf Programmebene erhalten möchten.
+>Standardmäßig hat ein Benutzer oder eine Benutzerin mit Zugriff auf eine AEM-Umgebung auch eine Cloud Manager-Benutzerrolle. Diese Rolle an sich reicht nicht aus, um der Person Zugriff auf die Programm-Detailansicht zu gewähren. Ein solcher Benutzer oder eine solche Benutzerin, der oder die nur die Cloud Manager-Benutzerrolle hat, kann über die Menüoptionen des Programms zur Autoren-URL der AEM-Umgebung navigieren (sofern Umgebungen vorhanden sind). Diese Benutzer müssen sich an ihren Administrator wenden, wenn sie Zugriff auf Programmebene erhalten möchten.

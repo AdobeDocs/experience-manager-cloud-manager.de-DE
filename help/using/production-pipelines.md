@@ -2,15 +2,15 @@
 title: Konfigurieren von Produktions-Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '1286'
-ht-degree: 91%
+source-wordcount: '1285'
+ht-degree: 87%
 
 ---
 
 
-# Konfigurieren von Produktions-Pipelines {#configuring-production-pipelines}
+# Produktions-Pipelines konfigurieren {#configuring-production-pipelines}
 
 Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie weitere Informationen unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
@@ -33,7 +33,7 @@ Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline vera
 >
 >Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
 
-## Hinzufügen einer neuen Produktions-Pipeline {#adding-production-pipeline}
+## Neue Produktions-Pipeline hinzufügen {#adding-production-pipeline}
 
 Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm eingerichtet haben und über mindestens eine Umgebung verfügen, können Sie eine Produktions-Pipeline hinzufügen.
 
@@ -124,7 +124,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
          * **Dispatcherkonfiguration**: Definiert die Dispatcher-Konfiguration für die Produktionsumgebung. Es sind die gleichen Optionen wie für die Staging-Umgebung verfügbar.
 
-1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Test** zu gelangen, auf der Sie Leistungstests für AEM Sites und AEM Assets konfigurieren können, je nachdem, welche Produkte Sie lizenziert haben.
+1. Klicken Sie auf **Weiter** , um zur Registerkarte **Staging-Tests** zu wechseln, wo Sie je nachdem, welche Produkte Sie lizenziert haben, Leistungstests für AEM Sites und AEM Assets konfigurieren können.
 
    >[!TIP]
    >

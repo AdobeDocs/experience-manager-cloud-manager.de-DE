@@ -2,10 +2,10 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '1275'
-ht-degree: 89%
+source-wordcount: '1263'
+ht-degree: 53%
 
 ---
 
@@ -16,7 +16,7 @@ Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzer
 
 ## Umgebungsdetails {#details}
 
-Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
+Cloud Manager-Build-Umgebungen weisen die folgenden Attribute auf.
 
 * Die Build-Umgebung ist Linux-basiert und von Ubuntu 22.04 abgeleitet.
 * Apache Maven 3.9.4 ist installiert.
@@ -24,7 +24,7 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 * Die installierten Java-Versionen sind Oracle JDK 8u401 und Oracle JDK 11.0.22.
    * `/usr/lib/jvm/jdk1.8.0_401`
    * `/usr/lib/jvm/jdk-11.0.22`
-* Standardmäßig wird die Umgebungsvariable `JAVA_HOME` auf `/usr/lib/jvm/jdk1.8.0_401` festgelegt, das Oracle JDK 8u401 enthält. Weitere Einzelheiten finden Sie im Abschnitt [Alternative JDK-Version für die Maven-Ausführung](#alternate-maven).
+* Standardmäßig ist die Umgebungsvariable `JAVA_HOME` auf `/usr/lib/jvm/jdk1.8.0_401` gesetzt, die Oracle JDK 8u401 enthält. Weitere Einzelheiten finden Sie im Abschnitt [Alternative JDK-Version für die Maven-Ausführung](#alternate-maven).
 * Es sind einige zusätzliche erforderliche Systempakete installiert.
    * `bzip2`
    * `unzip`
@@ -32,13 +32,12 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
    * `imagemagick`
    * `graphicsmagick`
 * Andere Pakete können zur Build-Zeit installiert werden, wie im Abschnitt [Installieren zusätzlicher Systempakete](#installing-additional-system-packages) beschrieben.
-* Jeder Build wird in einer unberührten Umgebung erstellt. Der Build-Container speichert zwischen den Ausführungen keinen Status.
+* Jeder Build erfolgt in einer unberührten Umgebung. Der Build-Container behält keinen Status zwischen Ausführungen bei.
 * Maven wird immer mit den folgenden drei Befehlen ausgeführt:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
-* Maven wird auf Systemebene mit einer `settings.xml`-Datei konfiguriert die automatisch das öffentliche Adobe-Artefakt-Repository enthält und ein Profil namens `adobe-public` verwendet.
-   * Weitere Informationen finden Sie im [öffentlichen Maven-Repository für Adobe](https://repo1.maven.org/) .
+* Maven wird auf Systemebene mit einer `settings.xml`-Datei konfiguriert, die automatisch das öffentliche Adobe-Artefakt-Repository enthält und ein Profil namens `adobe-public` verwendet. Weitere Informationen finden Sie im [öffentlichen Maven-Repository für Adobe](https://repo1.maven.org/) .
 * Node.js 18 ist für [Frontend-Pipelines](/help/overview/ci-cd-pipelines.md) verfügbar.
 
 >[!NOTE]
@@ -55,7 +54,7 @@ Die Build-Umgebungen von Cloud Manager weisen die folgenden Attribute auf.
 
 ## HTTPS-Maven-Repositorys {#https-maven}
 
-Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) hat eine rollierende Aktualisierung der Build-Umgebung gestartet (abgeschlossen mit Version 2023.12.0), die eine Aktualisierung auf Maven 3.8.8 enthielt. Eine wesentliche Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitsverbesserung, die darauf abzielte, potenzielle Schwachstellen zu minimieren. Insbesondere deaktiviert Maven jetzt standardmäßig alle unsicheren `http://*` Spiegel, wie in den [Maven-Versionshinweisen](http://maven.apache.org/docs/3.8.1/release-notes.html?lang=de#cve-2021-26291) beschrieben.
+Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) hat eine rollierende Aktualisierung der Build-Umgebung gestartet (abgeschlossen mit Version 2023.12.0), die eine Aktualisierung auf Maven 3.8.8 enthielt. Eine wesentliche Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitsverbesserung, die darauf abzielte, potenzielle Schwachstellen zu minimieren. Insbesondere deaktiviert Maven jetzt standardmäßig alle unsicheren `http://*` Spiegel, wie in den [Maven-Versionshinweisen](https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291) beschrieben.
 
 Aufgrund dieser Sicherheitsverbesserung können bei einzelnen Benutzenden während des Build-Schritts Probleme auftreten, insbesondere beim Herunterladen von Artefakten aus Maven-Repositorys, die unsichere HTTP-Verbindungen verwenden.
 
@@ -63,14 +62,14 @@ Um ein reibungsloses Erlebnis mit der aktualisierten Version zu gewährleisten, 
 
 ## Verwenden einer bestimmten Java-Version {#using-java-version}
 
-Standardmäßig werden Projekte vom Cloud Manager-Build-Prozess mit dem Oracle 8 JDK erstellt. Kunden, die ein alternatives JDK verwenden möchten, haben zwei Optionen.
+Standardmäßig verwenden vom Cloud Manager-Build-Prozess erstellte Projekte das Oracle 8 JDK. Kunden, die ein alternatives JDK verwenden möchten, haben zwei Optionen.
 
 * [Maven Toolchains](#maven-toolchains)
 * [Auswahl einer alternativen JDK-Version für den gesamten Maven-Ausführungsprozess](#alternate-maven)
 
 ### Maven Toolchains {#maven-toolchains}
 
-Das [Maven Toolchains-Plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) ermöglicht es Projekten, ein bestimmtes JDK (oder Toolchain) auszuwählen, das im Kontext von Toolchain-fähigen Maven-Plug-ins verwendet werden soll. Dies geschieht in der `pom.xml`-Datei des Projekts, indem ein Anbieter und ein Versionswert angegeben werden. Ein Beispielabschnitt in der Datei `pom.xml` ist:
+Mit dem [Maven Toolchain-Plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) können Projekte ein bestimmtes JDK (oder eine Toolchain) auswählen, das im Kontext von toolchain-basierten Maven-Plug-ins verwendet werden soll. Dieser Vorgang erfolgt in der Datei &quot;`pom.xml`&quot; des Projekts, indem ein Anbieter und ein Versionswert angegeben werden. Ein Beispielabschnitt in der Datei `pom.xml` ist:
 
 ```xml
         <plugin>
@@ -95,7 +94,7 @@ Das [Maven Toolchains-Plug-in](https://maven.apache.org/plugins/maven-toolchains
 </plugin>
 ```
 
-Dies führt dazu, dass alle Toolchain-fähigen Maven-Plug-ins das Oracle JDK, Version 11 verwenden.
+Dieser Vorgang führt dazu, dass alle Toolchain-fähigen Maven-Plug-ins das Oracle JDK, Version 11 verwenden.
 
 Bei Verwendung dieser Methode wird Maven selbst weiterhin mit dem standardmäßigen JDK (Oracle 8) ausgeführt und die `JAVA_HOME`-Umgebungsvariable wird nicht geändert. Daher funktioniert das Überprüfen oder Erzwingen der Java-Version über Plug-ins wie das [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/) nicht und solche Plug-ins dürfen nicht verwendet werden.
 
@@ -106,17 +105,17 @@ Die derzeit verfügbaren Anbieter-/Versionskombinationen sind:
 | Oracle | 1.8 |
 | Oracle | 1.11 |
 | Oracle | 11 |
-| Sun | 1.8 |
-| Sun | 1.11 |
-| Sun | 11 |
+| So | 1.8 |
+| So | 1.11 |
+| So | 11 |
 
 >[!NOTE]
 >
->Ab April 2022 wird Oracle JDK das Standard-JDK für die Entwicklung und den Betrieb von AEM-Programmen sein. Der Build-Prozess von Cloud Manager wechselt automatisch zur Verwendung von Oracle JDK, auch wenn in der Maven-Toolchain explizit eine alternative Option ausgewählt ist. Weitere Informationen finden Sie in den [Versionshinweisen vom April](/help/release-notes/2022/2022-4-0.md) .
+>Ab April 2022 wird Oracle JDK als Standard-JDK für die Entwicklung und den Betrieb von AEM-Anwendungen verwendet. Der Build-Prozess von Cloud Manager wechselt automatisch zur Verwendung von Oracle JDK, auch wenn in der Maven-Toolchain explizit eine alternative Option ausgewählt ist. Weitere Informationen finden Sie in den [Versionshinweisen vom April](/help/release-notes/2022/2022-4-0.md) .
 
-### Alternative JDK-Version für die Maven-Ausführung {#alternate-maven}
+### JDK-Version der alternativen Maven-Ausführung {#alternate-maven}
 
-Es ist auch möglich, Oracle 8 oder Oracle 11 als JDK für die gesamte Maven-Ausführung auszuwählen. Im Gegensatz zu den Toolchain-Optionen ändert dies das für alle Plug-ins verwendete JDK, es sei denn, die Toolchain-Konfiguration ist ebenfalls festgelegt. In diesem Fall wird die Toolchain-Konfiguration weiterhin für Toolchain-fähige Maven-Plug-ins angewendet. Daher funktioniert in diesem Fall das Überprüfen und Erzwingen der Java-Version mit dem [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
+Es ist auch möglich, Oracle 8 oder Oracle 11 als JDK für die gesamte Maven-Ausführung auszuwählen. Im Gegensatz zu den Optionen der Toolketten ändert dies das JDK, das für alle Plug-ins verwendet wird, es sei denn, die Konfiguration der Toolketten ist ebenfalls festgelegt. In diesem Fall wird die Konfiguration der Toolketten weiterhin für die Maven-Plug-ins angewendet, die für Toolketten verwendet werden. Daher funktioniert das Überprüfen und Erzwingen der Java-Version mit dem [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
 
 Erstellen Sie dazu eine Datei mit dem Namen `.cloudmanager/java-version` in der von der Pipeline verwendeten Git-Repository-Verzweigung. Diese Datei kann entweder den Inhalt `11` oder `8` enthalten. Alle anderen Werte werden ignoriert. Wenn `11` angegeben ist, wird Oracle 11 verwendet und die Umgebungsvariable `JAVA_HOME` wird auf `/usr/lib/jvm/jdk-11.0.22` festgelegt. Wenn `8` angegeben ist, wird Oracle 8 verwendet und die Umgebungsvariable `JAVA_HOME` wird auf `/usr/lib/jvm/jdk1.8.0_401` festgelegt.
 
@@ -126,7 +125,7 @@ Erstellen Sie dazu eine Datei mit dem Namen `.cloudmanager/java-version` in der 
 
 In einigen Fällen muss der Build-Prozess je nach Informationen zum Programm oder zur Pipeline variiert werden.
 
-Wenn beispielsweise eine JavaScript-Minimierung während der Build-Erstellung mithilfe eines Tools wie gulp durchgeführt wird, soll beim Erstellen für eine Entwicklungsumgebung möglicherweise eine andere Minimierungsstufe verwendet werden als beim Erstellen für eine Staging- oder Produktionsumgebung.
+Wenn Sie beispielsweise ein Tool wie gulp für die JavaScript-Minimierung verwenden, bevorzugen Sie möglicherweise unterschiedliche Minimierungsstufen für Entwicklungs-, Staging- und Produktionsumgebungen.
 
 Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen bei jeder Ausführung dem Build-Container hinzu.
 
@@ -140,33 +139,33 @@ Um dies zu unterstützen, fügt Cloud Manager diese Standard-Umgebungsvariablen 
 | `CM_PROGRAM_NAME` | Name des Programms |
 | `ARTIFACTS_VERSION` | Die von Cloud Manager generierte synthetische Version bei einer Staging- oder Produktions-Pipeline |
 
-### Verfügbarkeit von Standard-Umgebungsvariablen {#availability}
+### Verfügbarkeit der Standard-Umgebungsvariablen {#availability}
 
 Standard-Umgebungsvariablen können an verschiedenen Stellen verwendet werden.
 
-#### Authoring, Vorschau und Veröffentlichung {#author-preview-publish}
+#### Autoren-, Vorschau- und Veröffentlichungsumgebungen {#author-preview-publish}
 
 In der Authoring-, Vorschau- und Veröffentlichungsumgebung können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
 
 #### Dispatcher {#dispatcher}
 
-Mit [Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-dispatcher/using/dispatcher.html?lang=de) können nur normale Umgebungsvariablen verwendet werden. Geheimnisse können nicht verwendet werden.
+Nur normale Umgebungsvariablen können mit [der Dispatcher](https://experienceleague.adobe.com/de/docs/experience-manager-dispatcher/using/dispatcher) verwendet werden. Geheimnisse können nicht verwendet werden.
 
-Allerdings können Umgebungsvariablen nicht in `IfDefine`-Richtlinien verwendet werden.
+Umgebungsvariablen können jedoch nicht in `IfDefine` -Direktiven verwendet werden.
 
 >[!TIP]
 >
->Sie sollten die Verwendung von Umgebungsvariablen [lokal im Dispatcher](https://experienceleague.adobe.com/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools.html?lang=de) validieren, bevor Sie sie bereitstellen.
+>Validieren Sie die Verwendung von Umgebungsvariablen vor der Bereitstellung mit [Dispatcher lokal](https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/local-development-environment-set-up/dispatcher-tools).
 
 #### OSGi-Konfigurationen {#osgi}
 
-In den [OSGi-Konfigurationen](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/configuring/configuring-osgi.html?lang=de) können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
+In den [OSGi-Konfigurationen](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/configuring/configuring-osgi) können sowohl reguläre Umgebungsvariablen als auch Geheimnisse verwendet werden.
 
 ### Pipeline-Variablen {#pipeline-variables}
 
-In einigen Fällen kann der Build-Prozess von bestimmten Konfigurationsvariablen abhängen, die nicht im Git-Repository platziert werden können oder zwischen Pipeline-Ausführungen mit derselben Verzweigung variieren müssen.
+In einigen Fällen kann Ihr Build-Prozess von bestimmten Konfigurationsvariablen abhängen, die nicht im Git-Repository platziert werden können oder zwischen Pipeline-Ausführungen mit derselben Verzweigung variieren müssen.
 
-Cloud Manager ermöglicht die Konfiguration dieser Variablen über die Cloud Manager-API oder die Cloud Manager-CLI individuell für die Pipelines. Variablen können entweder als reiner Test oder mit Data-at-Rest-Verschlüsselung gespeichert werden. In beiden Fällen werden Variablen innerhalb der Build-Umgebung als Umgebungsvariable bereitgestellt, die in der `pom.xml`-Datei oder anderen Build-Skripten referenziert werden kann.
+Cloud Manager ermöglicht die Konfiguration dieser Variablen über die Cloud Manager-API oder die Cloud Manager-CLI individuell für die Pipelines. Variablen können entweder als reiner Test oder mit Data-at-Rest-Verschlüsselung gespeichert werden. In beiden Fällen werden Variablen innerhalb der Build-Umgebung als Umgebungsvariable bereitgestellt, die dann aus der Datei `pom.xml` oder anderen Build-Skripten referenziert werden kann.
 
 Um eine Variable mithilfe der CLI festzulegen, führen Sie einen Befehl ähnlich dem folgenden aus.
 
@@ -185,9 +184,9 @@ Variablen müssen bestimmte Einschränkungen einhalten.
 * Variablen dürfen nur alphanumerische Zeichen und den Unterstrich (`_`) enthalten.
    * Der Konvention nach sollten die Namen in Großbuchstaben geschrieben werden.
 * Pro Pipeline sind maximal 200 Variablen zulässig.
-* Jeder Name darf höchstens 99 Zeichen enthalten.
-* Jeder Zeichenfolgenwert darf höchstens 2047 Zeichen enthalten.
-* Jeder secretString-Wert darf höchstens 499 Zeichen enthalten.
+* Jeder Name darf maximal 100 Zeichen lang sein.
+* Jeder Zeichenfolgenwert darf maximal 2048 Zeichen lang sein.
+* Jeder `secretString` -Wert darf maximal 500 Zeichen enthalten.
 
 Bei Verwendung in einer Maven-`pom.xml`-Datei ist es in der Regel hilfreich, diese Variablen Maven-Eigenschaften mithilfe einer ähnlichen Syntax wie der folgenden zuzuordnen.
 
@@ -207,7 +206,7 @@ Bei Verwendung in einer Maven-`pom.xml`-Datei ist es in der Regel hilfreich, die
 
 ## Installieren zusätzlicher Systempakete {#installing-additional-system-packages}
 
-Um vollständig zu funktionieren, benötigen einige Builds zusätzliche Systempakete, die installiert werden müssen. So ist es z. B. möglich, dass ein Build ein Python- oder Ruby-Skript aufruft, wofür der entsprechende Sprach-Interpreter installiert sein muss. Dies kann durch Abfrage von [`exec-maven-plugin`](https://www.mojohaus.org/exec-maven-plugin/) erfolgen, wodurch APT aufgerufen wird. Diese Ausführung sollte im Allgemeinen in einem Cloud Manager-spezifischen Maven-Profil eingeschlossen sein. So installieren Sie beispielsweise Python:
+Damit einige Builds vollständig funktionieren, müssen zusätzliche Systempakete installiert werden. So ist es z. B. möglich, dass ein Build ein Python- oder Ruby-Skript aufruft, wofür der entsprechende Sprach-Interpreter installiert sein muss. Dieses Szenario kann durch Aufruf von [`exec-maven-plugin`](https://www.mojohaus.org/exec-maven-plugin/) zum Aufrufen von APT durchgeführt werden. Diese Ausführung sollte im Allgemeinen in einem Cloud Manager-spezifischen Maven-Profil eingeschlossen sein. Um beispielsweise Python zu installieren, können Sie Folgendes tun:
 
 ```xml
         <profile>
@@ -260,7 +259,7 @@ Um vollständig zu funktionieren, benötigen einige Builds zusätzliche Systempa
         </profile>
 ```
 
-Mit derselben Methode können Sie auch sprachspezifische Pakete installieren, d. h. mit `gem` für RubyGems oder mit `pip` für Python-Pakete.
+Diese Technik kann auch verwendet werden, um sprachspezifische Pakete zu installieren. Verwenden Sie also `gem` für RubyGems oder `pip` für Python-Pakete.
 
 >[!NOTE]
 >

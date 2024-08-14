@@ -2,10 +2,10 @@
 title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '571'
-ht-degree: 94%
+source-wordcount: '564'
+ht-degree: 83%
 
 ---
 
@@ -36,13 +36,13 @@ Die Registerkarte **Ankündigungen** enthält Ankündigungen zu Adobe-Produkten.
 
 ![Benachrichtigungsseitenleiste](/help/assets/notificaitons-announcements.png)
 
-Klicken Sie auf eine Ankündigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Bereitstellungen verknüpft sind, führen Sie zu den Details dieser Aktivität, beispielsweise dem Pipeline-Ausführungsfenster.
+Klicken Sie auf eine Benachrichtigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Bereitstellungen verknüpft sind, führen Sie zu den Details dieser Aktivität, beispielsweise dem Pipeline-Ausführungsfenster.
 
-Klicken Sie auf die Option **Alles anzeigen** am Ende des Bedienfelds, um alle Benachrichtigungen in Ihrem Posteingang anzuzeigen.
+Klicken Sie unten im Bedienfeld auf die Option **Alle anzeigen** , um alle Mitteilungen in Ihrem Posteingang anzuzeigen.
 
-Klicken Sie auf die Option **Alle als gelesen markieren** am Ende des Bedienfelds, um alle ungelesenen Benachrichtigungen als gelesen zu markieren und das aktivierte Glockensymbol wieder zu deaktivieren.
+Klicken Sie unten im Bedienfeld auf die Option **Alle als gelesen markieren** , um alle ungelesenen Benachrichtigungen als gelesen zu markieren und das Glockensymbol-Badging zu löschen.
 
-## Konfiguration von Benachrichtigungen {#configuration}
+## Benachrichtigungskonfiguration {#configuration}
 
 Sie können einstellen, wie Sie welche Benachrichtigungen erhalten möchten.
 
@@ -58,7 +58,7 @@ Mit den Abonnements legen Sie fest, welche Benachrichtigungen Sie für welche Pr
 
 ![Abonnements für Benachrichtigungen](/help/assets/notifications-subscriptions.png)
 
-Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken Sie neben einem Produkt auf **Anpassen**, um die Arten von Benachrichtigungen festzulegen, die Sie für dieses Produkt erhalten möchten.
+Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken Sie neben einem Produkt auf **Anpassen** , um die Benachrichtigungstypen zu definieren, die Sie für dieses Produkt erhalten.
 
 ![Anpassung des Benachrichtigungsabonnements](/help/assets/notifications-subscriptions-customize.png)
 

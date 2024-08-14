@@ -2,27 +2,25 @@
 title: Überwachen von Umgebungen
 description: Informationen zum Überwachen von Umgebungen in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '922'
-ht-degree: 93%
+source-wordcount: '903'
+ht-degree: 79%
 
 ---
 
 
-# Überwachen von Umgebungen {#monitoring-environments}
+# Umgebungen überwachen {#monitoring-environments}
 
 Informationen zum Überwachen von Umgebungen in Cloud Manager.
 
-## Schwellenwerte für Metriken {#thresholds}
+## Metrikschwellen {#thresholds}
 
 Die Systemüberwachung in [!UICONTROL Cloud Manager] erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz. Jede Metrik hat zwei definierte Schwellenwerte: einen Warnschwellenwert und einen kritischen Schwellenwert.
 
 Wenn eine Metrik über ihrem kritischen Schwellenwert liegt, wird dies als kritischer Status betrachtet. Wenn eine Metrik über dem Warnschwellenwert liegt (aber unter ihrem kritischen Schwellenwert), wird dies als Warnstatus betrachtet. Die Schwellenwerte werden von Adobe Managed Services festgelegt und können in [!UICONTROL Cloud Manager] visualisiert werden. In den meisten Fällen sind die Schwellenwerte zwischen Kunden konsistent. Es gibt jedoch Fälle, in denen Adobe Managed Services Schwellenwerte für bestimmte Kundenanforderungen anpasst. Fragen zu Schwellenwerten richten Sie bitte an Ihren Customer Success Engineer (CSE).
 
-## Zugriff auf die Systemüberwachung {#accessing-system-monitoring}
-
-Führen Sie diese Schritte aus, um auf die Systemüberwachung zuzugreifen.
+## Systemüberwachung {#accessing-system-monitoring}
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
@@ -32,7 +30,7 @@ Führen Sie diese Schritte aus, um auf die Systemüberwachung zuzugreifen.
 
 Die Seite **Berichte** wird geöffnet, um Informationen zur Systemüberwachung anzuzeigen.
 
-## Systemüberwachung – Übersicht {#system-monitoring-overview}
+## Systemüberwachung - Übersicht {#system-monitoring-overview}
 
 Der Abschnitt **Systemüberwachung** auf der Seite **Berichte** listet die überwachten Umgebungen im Programm auf und berichtet über ihren Zustand in vier verschiedenen Kategorien:
 
@@ -96,7 +94,7 @@ Wenn Sie beispielsweise auf die Warnungsschwellenreihe klicken, wird nur der kri
    * Für jeden Replizierungsagenten gibt es verschiedene Metriken.
 * **Dispatcherflush**: Die Anzahl der sich aktuell in der Dispatcherflush-Warteschlange befindlichen Elemente
 
-## SLA-Berichte {#sla-reporting}
+## SLA Reporting {#sla-reporting}
 
 Sie können die Leistung Ihrer AEM-Produktionsumgebung im Vergleich zu Ihrem vertraglich vereinbarten Service Level Agreement (SLA) sehen.
 
@@ -114,12 +112,12 @@ Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Anzahl von Vor
 
 ## SLA-Metriken {#sla-metrics}
 
-* **Autor-Vertrag**: Dies ist der SLA, der in Ihrem Vertrag mit Adobe Managed Services für die Autorenstufe definiert ist.
-* **AMS-Autor-SLA**: Dies ist die gemessene Produktionszeit im Hinblick auf Factoring-Vorfälle in der Produktions-Autorenstufe, die von Adobe oder unseren Anbietern verursacht wurden.
-* **Autor-SLA**: Dies ist die gemessene Produktionszeit der Autorenstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
-* **Endbenutzervertrag**: Dies ist der SLA, der in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsstufe definiert ist.
-* **AMS-Endbenutzer-SLA**: Dies ist die gemessene Produktionszeit im Hinblick auf Factoring-Vorfälle in der Produktionsveröffentlichungsstufe, die von Adobe oder unseren Anbietern verursacht wurden.
-* **Endbenutzer-SLA**: Dies ist die gemessene Produktionszeit der Veröffentlichungsstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
+* **Autorenvertrag**: Die in Ihrem Vertrag mit Adobe Managed Services definierte SLA für die Autorenstufe.
+* **AMS Author SLA**: Die gemessene Produktionszeit der Factoring-Vorfälle in der Produktionsautorenstufe, die durch Adobe oder unsere Anbieter verursacht wurden.
+* **Autor SLA**: Die gemessene Produktionszeit der Autorenstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
+* **Endbenutzervertrag**: Die in Ihrem Vertrag mit Adobe Managed Services definierte SLA für die Veröffentlichungsstufe.
+* **AMS-Endbenutzer-SLA**: Die gemessene Produktionszeit der Factoring-Vorfälle in der Produktionsveröffentlichungsstufe, die von Adobe oder unseren Anbietern verursacht wurden.
+* **Endbenutzer-SLA**: Die gemessene Produktionszeit der Veröffentlichungsstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
 
 ## Video-Tutorial {#video-tutorial}
 

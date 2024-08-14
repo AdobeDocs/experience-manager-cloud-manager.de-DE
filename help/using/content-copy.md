@@ -1,24 +1,26 @@
 ---
-title: Das Inhaltskopie-Werkzeug
-description: Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
+title: Das Inhaltskopie-Tool
+description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer bei Bedarf veränderliche Inhalte aus AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 87%
+source-wordcount: '1076'
+ht-degree: 44%
 
 ---
 
 
-# Das Inhaltskopie-Werkzeug {#content-copy}
+# Das Werkzeug zum Kopieren von Inhalten {#content-copy}
 
-Mit dem Inhaltskopie-Werkzeug von Cloud Manager können Benutzende veränderbare Inhalte bei Bedarf aus ihren AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
+Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer bei Bedarf veränderliche Inhalte aus AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 
 ## Einführung {#introduction}
 
-Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Inhaltskopie-Werkzeug können Sie Inhalte für solche Tests aus Ihren AMS-gehosteten AEM 6.x-Umgebungen in eine Staging- oder Entwicklungsumgebung kopieren.
+Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Werkzeug zum Kopieren von Inhalten können Sie Inhalte aus Ihrer Produktions-AMS-gehosteten AEM 6.x-Umgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
 
-Der zu kopierende Inhalt wird durch ein Content-Set definiert. Ein Content-Set besteht aus einer Liste von JCR-Pfaden, die den veränderlichen Inhalt enthalten, der aus einer Quellumgebung in eine Zielumgebung innerhalb desselben Cloud Manager-Programms kopiert werden soll. Die folgenden Pfade sind in einem Content-Set zulässig.
+Ein Inhaltssatz definiert den zu kopierenden Inhalt. Ein Inhaltssatz enthält eine Liste von JCR-Pfaden mit dem zu kopierenden veränderlichen Inhalt. Der Inhalt wird von einer Quellumgebung in eine Zielumgebung verschoben. Alle Aktionen erfolgen innerhalb desselben Cloud Manager-Programms.
+
+Die folgenden Pfade sind in einem Inhaltsset zulässig:
 
 ```text
 /content/**
@@ -30,24 +32,24 @@ Der zu kopierende Inhalt wird durch ein Content-Set definiert. Ein Content-Set b
 
 Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
-* Wenn der Inhalt in der Zielumgebung geändert wurde, wird er durch den Inhalt in der Quelle überschrieben, wenn die Pfade übereinstimmen.
+* Wenn Sie Inhalte in der Zielumgebung bearbeiten, überschreibt der Quellinhalt ihn, wenn die Pfade übereinstimmen.
 * Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
 
 ## Berechtigungen {#permissions}
 
-Um das Werkzeug zum Kopieren von Inhalten verwenden zu können, muss den Benutzenden die Rolle **Bereitstellungs-Manager** in der Quell- und Zielumgebung zugewiesen sein.
+Um das Werkzeug zum Kopieren von Inhalten zu verwenden, muss der Benutzer der Rolle **Bereitstellungsmanager** in der Quell- und Zielumgebung zugewiesen sein.
 
-## Erstellen eines Content-Sets {#create-content-set}
+## Inhaltssatz erstellen {#create-content-set}
 
 Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach der Definition können Content-Sets zum Kopieren von Inhalten wiederverwendet werden. Gehen Sie wie folgt vor, um ein Content-Set zu erstellen.
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
+1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
 
-1. Navigieren Sie vom Bildschirm **Umgebungen** zur Seite **Content-Sets**.
+1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Inhaltssets** .
 
-1. Klicken Sie oben rechts im Bildschirm auf die Schaltfläche **Inhaltsset hinzufügen** .
+1. Klicken Sie oben rechts im Bildschirm auf **Inhaltsset hinzufügen**.
 
    ![Content-Sets](/help/assets/content-sets.png)
 
@@ -58,15 +60,15 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 1. Auf der Registerkarte **Inhaltspfade** des Assistenten geben Sie die Pfade der veränderbaren Inhalte an, die in das Content-Set aufgenommen werden sollen.
 
    1. Geben Sie den Pfad in das Feld **Einschlusspfad hinzufügen** ein.
-   1. Klicken Sie auf die Schaltfläche **Pfad hinzufügen** , um den Pfad zum Inhaltsset hinzuzufügen.
-   1. Klicken Sie bei Bedarf erneut auf die Schaltfläche **Pfad hinzufügen** .
+   1. Klicken Sie auf **Pfad hinzufügen**, um den Pfad zum Inhaltssatz hinzuzufügen.
+   1. Klicken Sie bei Bedarf erneut auf **Pfad hinzufügen**.
 
    ![Hinzufügen von Pfaden zu Content-Sets](/help/assets/add-content-set-paths.png)
 
 1. Wenn Sie Ihr Content-Set verfeinern oder einschränken möchten, können Sie Unterpfade ausschließen.
 
    1. Klicken Sie in der Liste der eingeschlossenen Pfade neben dem Pfad, den Sie beschränken müssen, auf das Symbol **Unterpfade zum Ausschließen hinzufügen** .
-   1. Geben Sie den Unterpfad ein, der unterhalb des ausgewählten Pfads ausgeschlossen werden soll.
+   1. Geben Sie den Unterpfad ein, der vom ausgewählten Pfad ausgeschlossen werden soll.
    1. Klicken Sie auf **Pfad ausschließen**.
    1. Klicken Sie erneut auf **Unterpfade zum Ausschließen hinzufügen** , um weitere Pfade hinzuzufügen, die bei Bedarf ausgeschlossen werden sollen.
 
@@ -74,7 +76,7 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
 1. Sie können die angegebenen Pfade bei Bedarf ändern.
 
-   1. Klicken Sie auf das X neben den ausgeschlossenen Unterpfaden, um sie zu löschen.
+   1. Klicken Sie auf den `X` neben den ausgeschlossenen Unterpfaden, um sie zu löschen.
    1. Klicken Sie auf die Suchschaltfläche neben den Pfaden, um die Optionen **Bearbeiten** und **Löschen** anzuzeigen.
 
    ![Bearbeiten der Pfadliste](/help/assets/add-content-set-excluded-paths.png)
@@ -88,7 +90,7 @@ Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwend
 >Sie können einem Content-Set bis zu 50 Pfade hinzufügen.
 >Für ausgeschlossene Pfade gibt es keine Beschränkung.
 
-## Bearbeiten eines Content-Sets {#edit-content-set}
+## Bearbeiten eines Inhaltssatzes {#edit-content-set}
 
 Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Wählen Sie statt auf **Inhaltsset hinzufügen** einen vorhandenen Satz aus der Konsole aus und wählen Sie im Suchmenü die Option **Bearbeiten** aus.
 
@@ -100,11 +102,11 @@ Beim Bearbeiten des Content-Sets müssen Sie möglicherweise die konfigurierten 
 
 Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten verwenden. Führen Sie die folgenden Schritte aus, um Inhalte zu kopieren.
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
+1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
 
-1. Navigieren Sie vom Bildschirm **Umgebungen** zur Seite **Content-Sets**.
+1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Inhaltssets** .
 
 1. Wählen Sie ein Content-Set aus der Konsole aus, und wählen Sie im Menü mit den Auslassungspunkten **Inhalt kopieren**.
 
@@ -117,11 +119,11 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
    >* die Benutzenden nicht über die entsprechenden Berechtigungen verfügen.
    >* in der Umgebung eine laufende Pipeline oder ein Vorgang zum Kopieren von Inhalten in Bearbeitung ist.
 
-1. Geben Se im Dialog **Inhalt kopieren** die Quelle und das Ziel für die Inhaltskopie-Aktion an.
+1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quelle und das Ziel für die Aktion zum Kopieren des Inhalts an.
 
-1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination`, wenn Sie die im Content-Set angegebenen Ausschlusspfade beibehalten möchten. Wenn das Kontrollkästchen deaktiviert bleibt, werden Ausschlusspfade in der Zielumgebung gelöscht.
+1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination` , um den im Inhaltsset angegebenen Wert `exclude paths` beizubehalten. Wenn das Kontrollkästchen deaktiviert ist, werden Ausschlusspfade in der Zielumgebung gelöscht.
 
-1. Sie können den Kopieversionsverlauf der Pfade aus der Quell- in die Zielumgebung kopieren. Aktivieren Sie das Kontrollkästchen `Copy Versions`, wenn Sie alle Versionsverläufe kopieren möchten.
+1. Sie können den Versionsverlauf der Pfade kopieren, die von der Quell- in die Zielumgebung kopiert werden. Aktivieren Sie das Kontrollkästchen `Copy Versions` , wenn Sie alle Versionsverläufe kopieren möchten.
 
    ![Kopieren von Inhalten](/help/assets/copying-content.png)
 
@@ -129,19 +131,19 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 Der Kopiervorgang wird gestartet. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 
-## Aktivität „Inhalt kopieren“ {#copy-activity}
+## Aktivität &quot;Inhaltskopie&quot; {#copy-activity}
 
 Sie können den Status der Kopierprozesse auf der Seite **Aktivität „Inhalt kopieren“** überwachen.
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich bei Cloud Manager unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) an und wählen Sie dann das entsprechende Unternehmen und Programm aus.
 
-1. Gehen Sie von der Seite **Überblick** zum Bildschirm **Umgebungen**.
+1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
 
-1. Navigieren Sie im Bildschirm **Umgebungen** zur Seite **Aktivität „Inhalt kopieren“**.
+1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Aktivität &quot;Inhalt kopieren&quot;** .
 
 ![Aktivität „Inhalt kopieren“](/help/assets/copy-content-activity.png)
 
-### Inhaltskopie-Status {#statuses}
+### Status der Inhaltskopie {#statuses}
 
 Sobald das Kopieren von Inhalten beginnt, kann der Prozess einen der folgenden Status haben.
 
@@ -156,14 +158,14 @@ Sobald das Kopieren von Inhalten beginnt, kann der Prozess einen der folgenden S
 Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkungen.
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
-* Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
+* Die Inhaltskopie kann nur innerhalb derselben Ebene durchgeführt werden. Das heißt, author-author oder publish-publish.
 * Eine programm- und regionenübergreifende Inhaltskopie ist nicht möglich.
-* Eine Inhaltskopie für eine auf dem Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung bei demselben Cloud-Anbieter und in derselben Region befinden.
-* Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
-* Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
-* Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
-* Das Werkzeug zum Kopieren von Inhalten sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
-* Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
-* Das Inhaltskopie-Werkzeug kopiert Assets zusammen mit Metadaten von Dynamic Media aus der höheren Umgebung in die ausgewählte untere Umgebung.
-   * Kopierte Assets müssen dann mithilfe des [Workflows für DAM-Prozess-Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=de) in der unteren Umgebung neu verarbeitet werden, um die entsprechende Konfiguration für Dynamic Media zu verwenden.
-* Der Vorgang zum Kopieren von Inhalten wird erheblich schneller ausgeführt, wenn der Versionsverlauf nicht kopiert wird.
+* Die auf dem Cloud-Datenspeicher basierende Topologie kann nur dann kopiert werden, wenn sich die Quell- und Zielumgebung auf demselben Cloud-Anbieter und in derselben Region befinden.
+* Die Ausführung gleichzeitiger Vorgänge zum Kopieren von Inhalten in derselben Umgebung ist nicht möglich.
+* Eine Inhaltskopie kann nicht ausgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. einer CI/CD-Pipeline.
+* Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Für ausgeschlossene Pfade gibt es keine Beschränkung.
+* Das Inhaltskopie-Tool sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
+* Sie können eine Inhaltskopie nicht anhalten oder abbrechen, nachdem sie initiiert wurde.
+* Das Werkzeug zum Kopieren von Inhalten überträgt Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des Workflows [DAM-Prozess-Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der unteren Umgebung erneut verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
+
+* Wenn der Versionsverlauf nicht kopiert wird, ist der Inhaltskopierprozess wesentlich schneller.

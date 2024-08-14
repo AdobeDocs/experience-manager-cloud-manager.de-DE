@@ -1,27 +1,27 @@
 ---
 title: Arbeiten mit mehreren Git-Repositorys
-description: Anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten, erfahren Sie hier, wie Sie mit Ihrem eigenen Git-Repository oder mehreren Git-Repositorys arbeiten können.
+description: Anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten, erfahren Sie, wie Sie mit Ihrem eigenen Git-Repository oder mehreren Git-Repositorys arbeiten können.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '752'
-ht-degree: 100%
+source-wordcount: '738'
+ht-degree: 9%
 
 ---
 
-# Arbeiten mit Git-Repositorys aus mehreren Quellen {#working-with-multiple-source-git-repos}
+# Arbeiten mit mehreren Quell-Git-Repositorys {#working-with-multiple-source-git-repos}
 
-Anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten, erfahren Sie hier, wie Sie mit Ihrem eigenen Git-Repository oder mehreren Git-Repositorys arbeiten können.
+Anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten, erfahren Sie, wie Sie mit Ihrem eigenen Git-Repository oder mehreren Git-Repositorys arbeiten können.
 
-## Synchronisieren von vom Kunden verwalteten Git-Repositorys {#syncing-customer-managed-git-repositories}
+## Synchronisieren von kundenverwalteten Git-Repositorys {#syncing-customer-managed-git-repositories}
 
-Wenn Sie mit Ihrem eigenen Repository oder Ihren eigenen Repositorys arbeiten möchten, sollten Sie einen automatischen Synchronisierungsprozess einrichten, um sicherzustellen, dass das Git-Repository von Cloud Manager immer auf dem neuesten Stand ist.
+Um das Git-Repository von Cloud Manager auf dem neuesten Stand zu halten, richten Sie einen automatisierten Synchronisierungsprozess ein, wenn Sie Ihr eigenes Repository oder Ihre eigenen Repositorys verwenden.
 
-Je nachdem, wo das Git-Repository gehostet wird, kann eine GitHub-Aktion oder Continuous-Integration-Lösung wie Jenkins zum Einrichten der Automatisierung verwendet werden. Bei einer bereits bestehenden Automatisierung kann jeder Push an ein eigenes Git-Repository automatisch an das Git-Repository von Cloud Manager weitergeleitet werden.
+Je nachdem, wo Ihr Git-Repository gehostet wird, kann zur Einrichtung der Automatisierung eine GitHub-Aktion oder eine kontinuierliche Integrationslösung wie Jenkins verwendet werden. Mit einer vorhandenen Automatisierung kann jeder Push an Ihr eigenes Repository automatisch an das Git-Repository von Cloud Manager weitergeleitet werden.
 
-Während eine solche Automatisierung für ein einzelnes kundeneigenes Git-Repository einfach ist, erfordert die Konfiguration für mehrere Repositorys eine aufwendigere Ersteinrichtung. Die Inhalte aus mehreren Git-Repositorys müssen verschiedenen Ordnern in einem einzelnen Git-Repository von Cloud Manager zugeordnet werden. Das Git-Repository von Cloud Manager muss mit einem Maven-Stamm-`pom.xml` bereitgestellt werden, in dem die verschiedenen Unterprojekte im Abschnitt mit den Module aufgelistet werden.
+Eine solche Automatisierung für ein einzelnes kundeneigenes Git-Repository ist zwar einfach, doch erfordert die Konfiguration für mehrere Repositorys eine umfassendere Ersteinrichtung. Die Inhalte aus mehreren Git-Repositorys müssen verschiedenen Ordnern in einem einzelnen Git-Repository von Cloud Manager zugeordnet werden. Das Git-Repository von Cloud Manager muss mit einem Maven-Stamm `pom.xml` bereitgestellt werden, in dem die verschiedenen Unterprojekte im Modulabschnitt aufgelistet werden.
 
-Nachfolgend finden Sie ein Beispiel-`pom.xml` für zwei kundeneigene Git-Repositorys. Das erste Projekt wird in das Verzeichnis `project-a` gelegt, das zweite Projekt in das Verzeichnis `project-b`.
+Nachfolgend finden Sie ein Beispiel für `pom.xml` für zwei kundeneigene Git-Repositorys. Das erste Projekt wird in den Ordner &quot;`project-a`&quot; eingefügt und das zweite Projekt in den Ordner &quot;`project-b`&quot;.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -42,23 +42,23 @@ Nachfolgend finden Sie ein Beispiel-`pom.xml` für zwei kundeneigene Git-Reposit
 </project>
 ```
 
-Eine solches Stamm-`pom.xml` wird an eine Verzweigung im Git-Repository von Cloud Manager übergeben. Anschließend müssen die beiden Projekte so eingerichtet sein, dass Änderungen automatisch an das Git-Repository von Cloud Manager weitergeleitet werden.
+Ein solcher Stamm `pom.xml` wird in eine Verzweigung im Git-Repository von Cloud Manager gepusht. Anschließend müssen die beiden Projekte so eingerichtet sein, dass Änderungen automatisch an das Git-Repository von Cloud Manager weitergeleitet werden.
 
-Beispielsweise kann eine GitHub-Aktion durch einen Push an eine Verzweigung in Projekt A ausgelöst werden. Die Aktion checkt Projekt A und das Git-Repository von Cloud Manager aus und kopiert alle Inhalte aus Projekt A in das Verzeichnis `project-a` im Git-Repository von Cloud Manager und übernimmt dann die Änderung.
+Beispielsweise kann eine Push-Benachrichtigung an eine Verzweigung in Projekt A eine GitHub-Aktion Trigger werden. Bei der Aktion werden Projekt A und das Cloud Manager-Git-Repository ausgecheckt. Es kopiert alle Inhalte aus Projekt A in das Verzeichnis `project-a` des Git-Repositorys von Cloud Manager. Dann wird die Änderung übernommen und übergeben.
 
-Beispielsweise wird eine Änderung an der Verzweigung `main` in Projekt A automatisch an die Verzweigung `main` im Git-Repository von Cloud Manager übergeben. Es könnte auch eine Zuordnung zwischen Verzweigungen geben. Zum Beispiel, wenn ein Push zu einer Verzweigung namens `dev` in Projekt A zu einer Verzweigung mit der Bezeichnung `development` im Git-Repository von Cloud Manager verschoben wird. Ähnliche Schritte sind für Projekt B erforderlich.
+Beispielsweise wird eine Änderung der Verzweigung `main` in Projekt A automatisch in die Verzweigung `main` im Git-Repository von Cloud Manager verschoben. Natürlich kann es eine Zuordnung zwischen Verzweigungen geben, z. B. wenn eine Push-Benachrichtigung an eine Verzweigung mit dem Namen `dev` in Projekt A an eine Verzweigung mit dem Namen `development` im Git-Repository von Cloud Manager gesendet wird. Ähnliche Schritte sind für Projekt B erforderlich.
 
-Je nach Verzweigungsstrategie und Workflows kann die Synchronisierung für verschiedene Verzweigungen konfiguriert werden. Wenn das verwendete Git-Repository kein Konzept wie GitHub-Aktionen bereitstellt, ist auch eine Integration über Jenkins (oder eine ähnliche Lösung) möglich. In diesem Fall löst ein Webhook einen Jenkins-Auftrag aus, der die Aufgabe ausführt.
+Je nach Verzweigungsstrategie und Workflows kann die Synchronisierung für verschiedene Verzweigungen konfiguriert werden. Wenn das verwendete Git-Repository kein Konzept bereitstellt, das GitHub-Aktionen ähnelt, ist auch eine Integration über Jenkins (oder Ähnliches) möglich. In diesem Fall Trigger ein Webhook einen Jenkins-Job, der die Arbeit ausführt.
 
 Gehen Sie wie folgt vor, um eine neue (dritte) Quelle oder ein neues Repository hinzuzufügen:
 
-1. Fügen Sie eine neue GitHub-Aktion zum neuen Repository hinzu, um Änderungen von diesem Repository in das Git-Repository von Cloud Manager zu übertragen.
-1. Führen Sie diese Aktion mindestens einmal aus, um sicherzustellen, dass sich der Projekt-Code im Git-Repository von Cloud Manager befindet.
-1. Fügen Sie einen Verweis auf das neue Verzeichnis in der Maven-Stamm-`pom.xml` im Git-Repository von Cloud Manager hinzu.
+1. Fügen Sie dem neuen Repository eine neue GitHub-Aktion hinzu, die Änderungen von diesem Repository an das Git-Repository von Cloud Manager überträgt.
+1. Führen Sie diese Aktion mindestens einmal aus, um sicherzustellen, dass sich der Projektcode im Git-Repository von Cloud Manager befindet.
+1. Fügen Sie im Stammordner Maven `pom.xml` des Cloud Manager Git-Repositorys einen Verweis auf den neuen Ordner hinzu.
 
-## GitHub-Beispielaktion {#sample-github-action}
+## Beispielaktion für GitHub {#sample-github-action}
 
-Hierbei handelt es sich um eine GitHub-Beispielaktion, die durch einen Push an die Verzweigung `main` ausgelöst und dann in ein Unterverzeichnis des Git-Repository von Cloud Manager verschoben wird. Die GitHub-Aktionen müssen mit zwei Geheimnissen versehen werden, `MAIN_USER` und `MAIN_PASSWORD`, um eine Verbindung herstellen und zum Git-Repository von Cloud Manager übertragen werden zu können.
+Durch einen Push an die `main`-Verzweigung wird diese GitHub-Beispielaktion Trigger, die dann in ein Unterverzeichnis des Git-Repositorys von Cloud Manager gepusht wird. Die GitHub-Aktionen müssen mit zwei Geheimnissen versehen werden, `MAIN_USER` und `MAIN_PASSWORD`, um eine Verbindung zum Git-Repository von Cloud Manager herstellen und pushen zu können.
 
 ```java
 name: SYNC
@@ -115,17 +115,17 @@ jobs:
           git -C main push
 ```
 
-Wie oben gezeigt, ist die Verwendung einer GitHub-Aktion sehr flexibel. Es können jegliche Zuordnungen zwischen Verzweigungen der Git-Repositorys sowie jede Zuordnung der separaten Git-Projekte in das Verzeichnis-Layout des Hauptprojekts erfolgen.
+Wie oben gezeigt, ist die Verwendung einer GitHub-Aktion flexibel. Jede Zuordnung zwischen Zweigen der Git-Repositorys kann durchgeführt werden und jede Zuordnung der einzelnen Git-Projekte zum Verzeichnis-Layout des Hauptprojekts.
 
 >[!NOTE]
 >
->Das obige Skript verwendet `git add`, um das Repository zu aktualisieren, wobei davon ausgegangen wird, dass dies Löschvorgänge umfasst. Abhängig von der Standardkonfiguration von Git muss dies möglicherweise durch `git add --all` ersetzt werden.
+>Das obige Skript verwendet `git add`, um das Repository zu aktualisieren. Dabei wird davon ausgegangen, dass Entfernungen enthalten sind. Abhängig von der Standardkonfiguration von Git muss diese Anforderung möglicherweise durch `git add --all` ersetzt werden.
 
-## Jenkins-Beispielvorgang {#sample-jenkins-job}
+## Jenkins-Beispielauftrag {#sample-jenkins-job}
 
-Hierbei handelt es sich um ein Beispielskript, das in einem Jenkins-Auftrag oder einem ähnlichem Auftrag verwendet werden kann. Er wird durch eine Änderung in einem Git-Repository ausgelöst. Der Jenkins-Auftrag überprüft den neuesten Status des Projekts oder der Verzweigung und löst dann dieses Skript aus.
+Dieses Skript ist ein Beispiel, das in einem Jenkins-Auftrag oder ähnlichen Aufgaben verwendet werden kann. Eine Änderung in einem Git-Repository Trigger sie. Der Jenkins-Auftrag überprüft den neuesten Status des Projekts oder der Verzweigung und löst dann dieses Skript aus.
 
-Dieses Skript überprüft wiederum das Git-Repository von Cloud Manager und übergibt den Projekt-Code an ein Unterverzeichnis.
+Dieses Skript checkt wiederum das Git-Repository von Cloud Manager aus und übergibt den Projektcode in ein Unterverzeichnis.
 
 Der Jenkins-Auftrag muss mit zwei Geheimnissen versehen werden, `MAIN_USER` und `MAIN_PASSWORD`, um eine Verbindung herstellen und zum Git-Repository von Cloud Manager übertragen werden zu können.
 
@@ -181,8 +181,8 @@ git commit -F ../commit.txt
 git push
 ```
 
-Wie oben gezeigt, ist die Verwendung eines Jenkins-Auftrags sehr flexibel. Es können jegliche Zuordnungen zwischen Verzweigungen der Git-Repositorys sowie jede Zuordnung der separaten Git-Projekte in das Verzeichnis-Layout des Hauptprojekts erfolgen.
+Wie oben gezeigt, ist die Verwendung eines Jenkins-Auftrags sehr flexibel. Jede Zuordnung zwischen Zweigen der Git-Repositorys kann durchgeführt werden und jede Zuordnung der einzelnen Git-Projekte zum Verzeichnis-Layout des Hauptprojekts.
 
 >[!NOTE]
 >
->Das obige Skript verwendet `git add`, um das Repository zu aktualisieren, wobei davon ausgegangen wird, dass dies Löschvorgänge umfasst. Abhängig von der Standardkonfiguration von Git muss dies möglicherweise durch `git add --all` ersetzt werden.
+>Das obige Skript verwendet `git add`, um das Repository zu aktualisieren. Dabei wird davon ausgegangen, dass Entfernungen enthalten sind. Abhängig von der Standardkonfiguration von Git muss `git add` möglicherweise durch `git add --all` ersetzt werden.

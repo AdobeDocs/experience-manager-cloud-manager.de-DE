@@ -2,10 +2,10 @@
 title: Dispatcher-Konfigurationen
 description: Weitere Informationen zum Bereitstellen von Dispatcher-Konfigurationsdateien mit Cloud Manager.
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 6572c16aea2c5d2d1032ca5b0f5d75ade65c3a19
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
 source-wordcount: '586'
-ht-degree: 100%
+ht-degree: 91%
 
 ---
 
@@ -24,7 +24,7 @@ Projekte, die von Cloud Manager mit dem integrierten [Assistenten zur Projekters
 
 Bei der Bereitstellung auf einer Dispatcher-Instanz werden die Inhalte dieser Verzeichnisse auf der Dispatcher-Instanz durch die Inhalte im Git-Repository überschrieben. Da Webserver- und Dispatcher-Konfigurationsdateien häufig umgebungsspezifische Informationen benötigen, müssen Sie zur korrekten Nutzung dieser Funktion zunächst diese Umgebungsvariablen in `/etc/sysconfig/httpd` mithilfe von Customer Success Engineers (CSE) festlegen.
 
-## Dispatcher-Konfiguration für bestehende Managed Services-Kunden {#steps-for-configuring-dispatcher}
+## Dispatcher-Konfiguration für bestehende Managed Service-Kunden {#steps-for-configuring-dispatcher}
 
 Führen Sie die folgenden Schritte aus, um die anfängliche Dispatcher-Konfiguration abzuschließen.
 
@@ -48,7 +48,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
 
    Sie können hier beliebige Namen verwenden, aber der in diesem Schritt erstellte Verzeichnisname muss mit dem in Schritt 6 verwendeten Namen übereinstimmen.
 
-1. Dieses Unterverzeichnis enthält ein Maven-Modul, das die Dispatcher-zip-Datei mit dem Maven-Assembly-Plug-in erstellt. Erstellen Sie hierzu zunächst im Verzeichnis `dispatcher` eine Datei `pom.xml` mit diesem Inhalt, indem Sie den `parent`-Verweis, die `artifactId` und den `name` nach Bedarf ändern.
+1. Dieses Unterverzeichnis enthält ein Maven-Modul, das die ZIP-Datei von Dispatcher mithilfe des Maven Assembly-Plug-ins erstellt. Erstellen Sie hierzu zunächst im Verzeichnis `dispatcher` eine Datei `pom.xml` mit diesem Inhalt, indem Sie den `parent`-Verweis, die `artifactId` und den `name` nach Bedarf ändern.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -90,7 +90,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
 
    * Wie in Schritt 1 können die artifactId und der Name hier bei Bedarf andere Werte sein. `dispatcher` wird hier nur als Beispiel verwendet.
 
-1. Für das Maven-Assembly-Plug-in ist ein `descriptor` erforderlich, mit dem definiert wird, wie die .zip-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei im Unterverzeichnis `dispatcher` mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
+1. Für das Maven Assembly-Plug-in ist ein `descriptor` erforderlich, um zu definieren, wie die ZIP-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei im Unterverzeichnis `dispatcher` mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"

@@ -2,14 +2,14 @@
 title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
 source-wordcount: '878'
-ht-degree: 81%
+ht-degree: 72%
 
 ---
 
-# Reine Staging- und Produktions-Pipelines {#stage-prod-only}
+# Nur-Staging- und reine Produktionslinien {#stage-prod-only}
 
 Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 
@@ -21,8 +21,8 @@ Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedi
 
 Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Hierbei handelt es sich um eine Bereitstellungs-Pipeline, die sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt wird. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile vorliegen:
 
-* Wenn Sie die Bereitstellung nur für die Staging-Umgebung durchführen möchten, können Sie dies nur tun, indem Sie den Schritt **Zur Produktion weiterleiten** in der Pipeline ablehnen. Die Ausführung wird jedoch als abgebrochen markiert.
-* Wenn Sie den neuesten Code in einer Staging-Umgebung für die Produktion bereitstellen möchten, müssen Sie die gesamte Pipeline einschließlich der Staging-Bereitstellung erneut bereitstellen, selbst wenn dort kein Code geändert wurde.
+* Wenn Sie eine Bereitstellung nur für Staging durchführen möchten, können Sie dies nur tun, indem Sie den Schritt **Weiterleiten an Produktion** in der Pipeline ablehnen. Die Ausführung wird jedoch als abgebrochen markiert.
+* Wenn Sie den neuesten Code in einer Staging-Umgebung für die Produktion bereitstellen möchten, müssen Sie die gesamte Pipeline einschließlich der Staging-Bereitstellung erneut bereitstellen, auch wenn dort kein Code geändert wurde.
 * Da Umgebungen während der Bereitstellung nicht aktualisiert werden können, ist es nicht möglich, die Produktionsumgebung zu aktualisieren, wenn Sie mehrere Tage in der Staging-Umgebung pausieren und testen möchten, bevor Sie sie zur Produktion weiterleiten. Dies macht nicht abhängige Aufgaben wie die Aktualisierung von [Umgebungsvariablen](/help/getting-started/build-environment.md#environment-variables) unmöglich.
 
 Reine Staging- und Produktions-Pipelines bieten Lösungen für diese Anwendungsfälle, indem sie dedizierte Bereitstellungsoptionen bieten.
@@ -63,7 +63,7 @@ Produktions- und Nur-Staging-Pipelines werden ähnlich wie die standardmäßigen
 >* **Produktions-Pipeline hinzufügen** ist nicht verfügbar, wenn bereits eine standardmäßige gekoppelte Pipeline vorhanden ist.
 >* Pro Programm ist nur eine reine Produktions-Pipeline und eine reine Staging-Pipeline zulässig.
 
-### Reine Staging-Pipelines {#stage-only}
+### Schreibgeschützte Pipelines {#stage-only}
 
 1. Nachdem Sie die Option **Nicht-Produktions-Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Nicht-Produktions-Pipeline hinzufügen** geöffnet.
 1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus. Füllen Sie die übrigen Felder aus und klicken Sie auf **Weiter**.
@@ -74,20 +74,20 @@ Produktions- und Nur-Staging-Pipelines werden ähnlich wie die standardmäßigen
 
    ![Testparameter für eine reine Staging-Pipeline](/help/assets/configure-pipelines/stage-only-test.png)
 
-### Reine Produktions-Pipelines {#prod-only}
+### Schreibgeschützte Pipelines {#prod-only}
 
 1. Sobald Sie die Option **Reine Produktions-Pipeline hinzufügen** gewählt haben, öffnet sich das Dialogfeld **Reine Produktions-Pipeline hinzufügen**.
 1. Geben Sie einen **Pipeline-Namen** an. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. Klicken Sie auf **Speichern** , um die Pipeline zu speichern.
 
    ![Erstellen einer reinen Produktions-Pipeline](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
-## Ausführen von reinen Produktions- und Staging-Pipelines {#running}
+## Ausführen von reinen und reinen Pipelines für Phasen {#running}
 
 Nur-Prod- und Nur-Staging-Pipelines werden auf dieselbe Weise ausgeführt wie [alle anderen Pipelines werden ausgeführt](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in dieser Dokumentation .
 
 Darüber hinaus kann ein Lauf einer reinen Produktions-Pipeline direkt aus den Ausführungsdetails einer reinen Staging-Pipeline ausgelöst werden.
 
-### Reine Staging-Pipelines {#stage-only-run}
+### Schreibgeschützte Pipelines {#stage-only-run}
 
 Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäßige gekoppelte Pipeline. Am Ende des Laufs, nach den Testschritten, können Sie jedoch über die Schaltfläche **Build weiterleiten** eine reine Produktions-Pipeline-Ausführung starten, die die Artefakte, die während dieses Durchlaufs in der Staging-Umgebung bereitgestellt wurden, verwendet und in der Produktion bereitstellt.
 
@@ -95,7 +95,7 @@ Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäß
 
 Die Schaltfläche **Build weiterleiten** wird nur angezeigt, wenn Sie die neueste erfolgreiche Ausführung der reinen Staging-Pipeline verwenden. Nachdem Sie auf geklickt haben, werden Sie aufgefordert, die Ausführung der reine prod-Pipeline zu bestätigen oder eine reine prod-only-Pipeline zu erstellen, falls noch keine Pipeline vorhanden ist.
 
-### Reine Produktions-Pipelines {#prod-only-run}
+### Schreibgeschützte Pipelines {#prod-only-run}
 
 Bei reinen Produktions-Pipelines ist es wichtig, die Quellartefakte zu identifizieren, die für die Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung**. Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
 

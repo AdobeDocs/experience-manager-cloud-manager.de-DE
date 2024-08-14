@@ -1,16 +1,16 @@
 ---
-title: Verwalten von Pipelines
+title: Pipelines verwalten
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
 workflow-type: tm+mt
-source-wordcount: '848'
-ht-degree: 83%
+source-wordcount: '847'
+ht-degree: 80%
 
 ---
 
 
-# Verwalten von Pipelines {#managing-pipelines}
+# Pipelines verwalten {#managing-pipelines}
 
 Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Bearbeiten, Ausführen und Löschen.
 
@@ -34,7 +34,7 @@ Am Ende der Pipeline-Liste befinden sich allgemeine Optionen.
 * **Zugriff auf Repo Info**: Zeigt die Informationen an, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlich sind
 * **Weitere Infos**: Navigiert zu den Dokumentationsressourcen zur CI/CD-Pipeline.
 
-## Fenster „Pipelines“ {#pipelines}
+## Pipelines-Fenster {#pipelines}
 
 Das Fenster **Pipelines** zeigt eine vollständige Liste aller Pipelines für das ausgewählte Programm an. Dies ist nützlich, da umfassendere Informationen angezeigt werden, als auf der [Pipeline-Karte](#pipeline-card) verfügbar sind.
 
@@ -50,7 +50,7 @@ Wenn Sie auf das Symbol `i` klicken, werden Details zur letzten oder aktuellen A
 
 Durch Klicken auf **Details anzeigen** gelangen Sie zu den [Details der Pipeline-Ausführung](#view-details).
 
-## Fenster „Aktivität“ {#activity}
+## Aktivitätsfenster {#activity}
 
 Das Fenster **Aktivität** zeigt eine vollständige Liste aller Pipeline-Ausführungen für das ausgewählte Programm an.
 
@@ -66,9 +66,9 @@ Wenn Sie auf das Symbol &quot;`i`&quot; klicken, werden Details zur Ausführung 
 
 Durch Klicken auf **Details anzeigen** gelangen Sie zu den [Details der Pipeline-Ausführung](#view-details).
 
-## Ausführen von Pipelines {#running-pipelines}
+## Ruu-Pipelines {#running-pipelines}
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
 1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Pipeline, die Sie ausführen, und wählen Sie im Menü **Ausführen** aus.
 
@@ -80,7 +80,7 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 
 ## Bearbeiten von Pipelines {#editing-pipelines}
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
 1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Pipeline, die Sie bearbeiten möchten, und wählen Sie im Menü **Bearbeiten** aus.
 
@@ -98,7 +98,7 @@ Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, inde
 
 ## Löschen von Pipelines {#deleting-pipelines}
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
 1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Pipeline, die Sie löschen möchten, und wählen Sie im Menü **Löschen** aus.
 
@@ -120,7 +120,7 @@ Von hier aus können Sie den Status der verschiedenen Schritte der Pipeline eins
 
 Es werden alle Schritte einer Pipeline-Ausführung angezeigt, wobei die Schritte, die noch nicht gestartet wurden, ausgegraut sind. Die abgeschlossenen Schritte werden mit ihrer jeweiligen Dauer angezeigt.
 
-Sobald ein Pipeline-Schritt abgeschlossen ist, wird eine Zusammenfassung angezeigt.
+Wenn ein Pipeline-Schritt abgeschlossen ist, wird eine Zusammenfassung angezeigt.
 
 ![Schrittzusammenfassung](/help/assets/configure-pipelines/pipeline-step.png)
 
