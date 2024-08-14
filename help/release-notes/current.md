@@ -1,19 +1,18 @@
 ---
-title: Versionshinweise für 2024.7.0
-description: Informationen zu den Versionshinweisen für Cloud Manager 2024.7.0.
+title: Versionshinweise für Cloud Manager 2024.8.0
+description: Informationen zu den Versionshinweisen für Cloud Manager 2024.8.0.
 feature: Release Information
-exl-id: 2d38abb1-cfc7-44a9-b303-b555e2827eea
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 34f15aff7478a6a0884f88f534a7dff996a8570e
 workflow-type: tm+mt
-source-wordcount: '226'
-ht-degree: 7%
+source-wordcount: '265'
+ht-degree: 5%
 
 ---
 
 
-# Versionshinweise für Cloud Manager 2024.7.0 {#release-notes}
+# Versionshinweise für Cloud Manager 2024.8.0 {#release-notes}
 
-Auf dieser Seite finden Sie die Versionshinweise für [!UICONTROL Cloud Manager] 2024.7.0.
+Auf dieser Seite finden Sie die Versionshinweise für [!UICONTROL Cloud Manager] 2024.8.0.
 
 >[!NOTE]
 >
@@ -21,21 +20,29 @@ Auf dieser Seite finden Sie die Versionshinweise für [!UICONTROL Cloud Manager]
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version von [!UICONTROL Cloud Manager] 2024.7.0 wurde am 18. Juli 2024 veröffentlicht. Die nächste Version wird am Mittwoch, 13. August 2024 veröffentlicht.
+Die Version von [!UICONTROL Cloud Manager] 2024.8.0 wurde am 13. August 2024 veröffentlicht. Die nächste Version wird am 9. September 2021 veröffentlicht.
 
 ## Neuerungen {#what-is-new}
 
-* Die [Produktions-Pipeline](/help/using/production-pipelines.md#adding-production-pipeline) und der Trigger **On Git Changes** (Nicht-Produktions-Pipeline](/help/using/non-production-pipelines.md#adding-non-production-pipeline)), um die Pipeline bei einem Commit zu starten, sind jetzt für [private Repositorys](/help/managing-code/private-repositories.md) verfügbar.[
-* Eine Pre-Production-Pipeline kann nur manuell ausgelöst werden und nicht als **On Git Changes** konfiguriert werden.
-* Bei produktionsreinen Pipelines umfasst die Liste der förderbaren Ausführungen Ausführungen Ausführungen mit einer Artefaktversion, die größer ist als die in der Produktionsumgebung bereitgestellte Artefaktversion.
-* [Der AEM Projektarchetyp](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/developing/archetype/overview) wurde auf [Version 49](https://github.com/adobe/aem-project-archetype/tree/aem-project-archetype-49) aktualisiert.
+* Für reine Staging- und reine Produktions-Pipelines (verfügbar als Bestandteil des [frühen Adopter-Programms](#staging-production-only-pipelines)) können Sie sie jetzt im [Notmodus ausführen, ](/help/using/stage-prod-only.md#emergency-mode) Staging-Tests überspringen.
 
 ## Frühzeitige Annahme {#early-adoption}
 
-Nehmen Sie am Programm zur frühzeitigen Übernahme von Cloud Manager teil und haben Sie die Möglichkeit, einige bevorstehende Funktionen zu testen.
+Nehmen Sie an Adobe teil und haben Sie die Möglichkeit, einige bevorstehende Funktionen zu testen.
 
-### Nur-Staging- und reine Produktions-Pipelines {#staging-production-only-pipelines}
+### Nur-Staging- und reine Produktionslinien {#staging-production-only-pipelines}
 
-Die Unterstützung für [ Nur-Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) ist jetzt eingeführt, sodass Sie produktionsübergreifende Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen können.
+Adobe freut sich, die Einführung der Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) anzukündigen. Mit dieser neuen Funktion können Sie produktionsbezogene Pipelines in kleinere, speziellere Implementierungen unterteilen.
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com` von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse.
+Wenn Sie diese Funktion testen und Feedback geben möchten, senden Sie eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com` und verwenden Sie dabei die E-Mail-Adresse, die Ihrer Adobe ID zugeordnet ist.
+
+## Fehlerbehebungen
+
+* Ein seltenes Problem wurde behoben, bei dem Pipeline-Schritte nach dem Löschen der Pipeline ausgeführt wurden.
+* Die erneute Ausführung der Pipeline funktioniert jetzt beim ersten Versuch und behebt ein seltenes Problem, bei dem eine Wiederholung mehrmals gestartet werden musste.
+* Geplante Implementierungsschritte für Vollstapel-Pipelines berücksichtigen jetzt das ausgewählte geplante Datum und kehren nicht auf **Jetzt** zurück.
+* Die Status von fehlgeschlagenen Inhaltsaufgaben für das Kopieren werden jetzt korrekt angezeigt und zeigen in seltenen Fällen nicht mehr fälschlicherweise den Status &quot;`In Progress`&quot; an.
+
+## Bekannte Probleme {#known-issues}
+
+{{content-copy-known-issues}}

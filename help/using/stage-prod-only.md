@@ -2,10 +2,10 @@
 title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 70b7994435f7f0f587c134fab1fb66c6576386d9
+source-git-commit: 77eb1c824ba766e43dfd8e2b0f6f6edc71f043e5
 workflow-type: tm+mt
-source-wordcount: '887'
-ht-degree: 37%
+source-wordcount: '943'
+ht-degree: 31%
 
 ---
 
@@ -83,9 +83,19 @@ Produktions- und Nur-Staging-Pipelines werden ähnlich wie die standardmäßigen
 
 ## Ausführen von reinen und reinen Pipelines für Phasen {#running}
 
-Nur-Prod- und Nur-Staging-Pipelines werden auf dieselbe Weise ausgeführt wie [alle anderen Pipelines werden ausgeführt](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in dieser Dokumentation .
+Nur-Prod- und Nur-Staging-Pipelines werden größtenteils genauso ausgeführt wie [alle anderen Pipelines.](/help/using/managing-pipelines.md#running-pipelines) Weitere Informationen finden Sie in dieser Dokumentation . Es gibt jedoch zwei neue Funktionen dieser Pipelines.
 
-Darüber hinaus kann ein Lauf einer reinen Produktions-Pipeline direkt aus den Ausführungsdetails einer reinen Staging-Pipeline ausgelöst werden.
+* Nur-Staging- und reine Pipelines bieten einen neuen [Notmodus](#emergency-mode), der das Überspringen von Tests ermöglicht.
+* Der reine Prod-Pipelineablauf kann direkt aus den Ausführungsdetails einer [Nur-Staging-Pipeline ausgelöst werden.](#stage-only-run)
+
+### Notfallmodus {#emergency-mode}
+
+Wenn Sie reine Produktions- und Staging-Online-Pipelines starten, werden Sie aufgefordert, den Start sowie den Start zu bestätigen.
+
+* **Normaler Modus** ist ein Standardablauf und umfasst Schritte zum Testen von Phasen.
+* **Notfallmodus** überspringt die Schritte zum Testen der Bühne.
+
+![Notfallmodus](/help/assets/configure-pipelines/emergency-mode.png)
 
 ### Schreibgeschützte Pipelines {#stage-only-run}
 
@@ -93,7 +103,9 @@ Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäß
 
 ![Ausführen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Die Schaltfläche **Build weiterleiten** wird nur angezeigt, wenn Sie die neueste erfolgreiche Ausführung der reinen Staging-Pipeline verwenden. Nachdem Sie auf geklickt haben, werden Sie aufgefordert, die Ausführung der reine prod-Pipeline zu bestätigen oder eine reine prod-only-Pipeline zu erstellen, falls noch keine Pipeline vorhanden ist.
+Wenn Sie auf **Build bewerben** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen reinen Staging-Pipeline entweder normal oder im [Notmodus zu bestätigen.](#emergency-mode)
+
+Wenn keine reine Pipeline vorhanden ist, werden Sie aufgefordert, eine zu erstellen.
 
 ### Schreibgeschützte Pipelines {#prod-only-run}
 

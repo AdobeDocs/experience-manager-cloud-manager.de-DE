@@ -2,10 +2,10 @@
 title: Das Inhaltskopie-Tool
 description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer bei Bedarf veränderliche Inhalte aus AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 2563c58431e58d2fc5917a2ad88835bbdd4224f2
 workflow-type: tm+mt
-source-wordcount: '1076'
-ht-degree: 44%
+source-wordcount: '1150'
+ht-degree: 48%
 
 ---
 
@@ -119,7 +119,8 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
    >* die Benutzenden nicht über die entsprechenden Berechtigungen verfügen.
    >* in der Umgebung eine laufende Pipeline oder ein Vorgang zum Kopieren von Inhalten in Bearbeitung ist.
 
-1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quelle und das Ziel für die Aktion zum Kopieren des Inhalts an.
+1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quell- und Zielumgebungen für die Aktion zum Kopieren von Inhalten an.
+   * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Untergruppe davon übereinstimmen.
 
 1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination` , um den im Inhaltsset angegebenen Wert `exclude paths` beizubehalten. Wenn das Kontrollkästchen deaktiviert ist, werden Ausschlusspfade in der Zielumgebung gelöscht.
 
@@ -163,9 +164,16 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Die auf dem Cloud-Datenspeicher basierende Topologie kann nur dann kopiert werden, wenn sich die Quell- und Zielumgebung auf demselben Cloud-Anbieter und in derselben Region befinden.
 * Die Ausführung gleichzeitiger Vorgänge zum Kopieren von Inhalten in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht ausgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. einer CI/CD-Pipeline.
-* Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Für ausgeschlossene Pfade gibt es keine Beschränkung.
-* Das Inhaltskopie-Tool sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
-* Sie können eine Inhaltskopie nicht anhalten oder abbrechen, nachdem sie initiiert wurde.
-* Das Werkzeug zum Kopieren von Inhalten überträgt Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des Workflows [DAM-Prozess-Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der unteren Umgebung erneut verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
-
+* Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Ausgeschlossene Pfade sind nicht beschränkt.
+* Das Werkzeug zum Kopieren von Inhalten sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
+* Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
+* Das Inhaltskopie-Werkzeug kopiert Assets zusammen mit Metadaten von Dynamic Media aus der höheren Umgebung in die ausgewählte untere Umgebung.
+   * Kopierte Assets müssen dann mithilfe des [Workflows für DAM-Prozess-Assets](https://experienceleague.adobe.com/docs/experience-manager-65/assets/using/assets-workflow.html?lang=de) in der unteren Umgebung neu verarbeitet werden, um die entsprechende Konfiguration für Dynamic Media zu verwenden.
+* Der Vorgang zum Kopieren von Inhalten wird erheblich schneller ausgeführt, wenn der Versionsverlauf nicht kopiert wird.
+* [Dynamic Media-Konfigurationen mit Asset-Größen größer als 2 GB aktiviert](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
 * Wenn der Versionsverlauf nicht kopiert wird, ist der Inhaltskopierprozess wesentlich schneller.
+* Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Untergruppe davon übereinstimmen.
+
+## Bekannte Probleme {#known-issues}
+
+{{content-copy-known-issues}}
