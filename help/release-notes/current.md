@@ -2,7 +2,7 @@
 title: Versionshinweise für Cloud Manager 2024.8.0
 description: Informationen zu den Versionshinweisen für Cloud Manager 2024.8.0.
 feature: Release Information
-source-git-commit: 34f15aff7478a6a0884f88f534a7dff996a8570e
+source-git-commit: dd764bb17127ba0a1e88e85592329cc9ddff42e3
 workflow-type: tm+mt
 source-wordcount: '265'
 ht-degree: 5%
@@ -20,7 +20,7 @@ Auf dieser Seite finden Sie die Versionshinweise für [!UICONTROL Cloud Manager]
 
 ## Veröffentlichungsdatum {#release-date}
 
-Die Version von [!UICONTROL Cloud Manager] 2024.8.0 wurde am 13. August 2024 veröffentlicht. Die nächste Version wird am 9. September 2021 veröffentlicht.
+Die Version von [!UICONTROL Cloud Manager] 2024.8.0 wurde am 14. August 2024 veröffentlicht. Die nächste Version wird am 9. September 2021 veröffentlicht.
 
 ## Neuerungen {#what-is-new}
 
