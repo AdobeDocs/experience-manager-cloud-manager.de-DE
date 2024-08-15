@@ -1,25 +1,25 @@
 ---
 title: Häufig gestellte Fragen zu Cloud Manager
-description: Dieses Dokument enthält Antworten für AMS-Kunden auf die am häufigsten gestellten Fragen zu Cloud Manager.
+description: Erfahren Sie mehr über die Antworten auf die am häufigsten gestellten Fragen zu Cloud Manager für AMS-Kunden.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
-source-wordcount: '746'
-ht-degree: 93%
+source-wordcount: '748'
+ht-degree: 57%
 
 ---
 
 
 # Häufig gestellte Fragen zu Cloud Manager {#cloud-manager-faqs}
 
-Dieses Dokument enthält Antworten für AMS-Kunden auf die am häufigsten gestellten Fragen zu Cloud Manager.
+Dieses Dokument enthält Antworten auf die am häufigsten gestellten Fragen zu Cloud Manager für AMS-Kunden.
 
 ## Kann Java 11 mit Cloud Manager-Builds verwendet werden? {#java-11}
 
-Ja. Sie müssen das `maven-toolchains-plugin` mit den richtigen Einstellungen für Java 11 hinzufügen.
+Ja. Sie müssen die `maven-toolchains-plugin` mit den richtigen Einstellungen für Java 11 hinzufügen.
 
 * Dieser Prozess wird [hier](/help/getting-started/using-the-wizard.md) dokumentiert.
-* Ein Beispiel finden Sie unter dem Beispielprojektcode [wknd](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* Ein Beispiel finden Sie unter dem Beispielprojektcode [WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über das maven-scr-plugin fehl. Was kann ich tun? {#maven-src-plugin}
 
@@ -29,7 +29,7 @@ Ihr AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 au
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
 ```
 
-Anweisungen zum Entfernen dieses Plug-ins finden Sie in [hier](https://cqdump.wordpress.com/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+Anweisungen zum Entfernen dieses Plug-ins finden Sie in [hier](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über RequireJavaVersion fehl. Was kann ich tun? {#requirejavaversion}
 
@@ -39,26 +39,24 @@ Bei Cloud Manager-Builds kann das `maven-enforcer-plugin` mit diesem Fehler fehl
 [main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion
 ```
 
-Dies ist ein bekanntes Problem, da Cloud Manager eine andere Version von Java verwendet, um den maven-Befehl auszuführen, anstatt Code zu kompilieren. Lassen Sie einfach `requireJavaVersion` in den Konfigurationen Ihres `maven-enforcer-plugin` weg.
+Dieses bekannte Problem liegt daran, dass Cloud Manager eine andere Java-Version verwendet, um den Maven-Befehl und den Kompilierungscode auszuführen. Lassen Sie `requireJavaVersion` aus Ihren `maven-enforcer-plugin` -Konfigurationen weg.
 
-## Die Code-Qualitätsprüfung ist fehlgeschlagen und unsere Bereitstellung ist blockiert. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
+## Die Code-Qualitätsprüfung ist fehlgeschlagen und die Implementierung ist jetzt blockiert. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
 
-Ja. Alle Fehler bei der Überprüfung der Code-Qualität mit Ausnahme der Sicherheitseinstufung sind nicht kritische Metriken, sodass sie als Teil einer Bereitstellungs-Pipeline übersprungen werden können, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
+Ja. Alle Fehler bei der Code-Qualität mit Ausnahme von Sicherheitsbewertungen sind nicht kritische Metriken. Daher können sie im Rahmen einer Bereitstellungs-Pipeline übersprungen werden, indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
 
-Benutzer mit der Rolle [Bereitstellungs-Manager, Projekt-Manager oder Geschäftsinhaber](/help/requirements/users-and-roles.md#role-definitions) können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Sie können die Probleme aber auch akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.
+Benutzer mit der Rolle [Bereitstellungsmanager, Projektmanager oder Business Owner](/help/requirements/users-and-roles.md#role-definitions) können die Probleme außer Kraft setzen. In diesem Fall wird die Pipeline fortgesetzt. Alternativ können sie die Probleme akzeptieren. In diesem Fall stoppt die Pipeline mit einem Fehler.
 
 Weitere Informationen finden Sie unter [Code-Qualitätstests von Pipelines](/help/using/code-quality-testing.md#three-tier-gates-while-running-a-pipeline) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md#understanding-the-flow).
 
-## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie können wir dies debuggen, um kritische Metriken zu erfüllen? {#debug-critical-metrics}
+## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie kann dieses Problem behoben werden, um die kritischen Metriken zu übergeben? {#debug-critical-metrics}
 
-Auf diese Frage gibt es keine einzelne Antwort. Es gibt jedoch einige wichtige Punkte, die Sie bei der Durchführung von Leistungstests beachten sollten:
+Auf diese Frage gibt es keine einzelne Antwort. Die folgenden Punkte zum Leistungstestschritt sind jedoch hilfreich:
 
-* Dieser Schritt ist ein Web-Leistungsschritt, d. h. der Zeitaufwand, bis die Seite in einem Webbrowser geladen ist.
+* Dieser Schritt ist ein Schritt zur Webleistung. Das heißt, es ist an der Zeit, die Seite mit einem Webbrowser zu laden.
 * Die in der. CSV-Ergebnisdatei aufgelisteten URLs werden während des Tests im Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
-* Eine häufig fehlgeschlagene Metrik ist die Fehlerquote.
-   * Damit eine URL den Test besteht, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden.
-   * Seitenladevorgänge, die länger als `20` Sekunden dauern, werden als `504`-Fehler gekennzeichnet.
-* Wenn für die Website eine Benutzerauthentifizierung erforderlich ist, finden Sie unter [Wissenswertes zu Testergebnissen](/help/using/code-quality-testing.md#authenticated-performance-testing) weitere Informationen dazu, wie Sie den Test zur Authentifizierung auf Ihrer Website konfigurieren.
+* Eine gängige Metrik, die fehlschlägt, ist die Fehlerrate. Damit eine URL übergeben werden kann, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Wenn das Laden einer Seite den Wert `20` Sekunden überschreitet, wird sie als `504`-Fehler markiert.
+* Wenn für Ihre Site eine Benutzerauthentifizierung erforderlich ist, lesen Sie [Wissenswertes zu Testergebnissen](/help/using/code-quality-testing.md#authenticated-performance-testing) , um den Test zu konfigurieren, damit Sie sich bei Ihrer Site authentifizieren können.
 
 Weitere Informationen zu Qualitätsprüfungen finden Sie unter [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md) .
 
@@ -66,11 +64,11 @@ Weitere Informationen zu Qualitätsprüfungen finden Sie unter [Grundlegendes zu
 
 Ja. Bei Entwicklerbereitstellungen müssen die `pom.xml`-Dateien der Git-Verzweigung am Ende des `<version>`-Werts `-SNAPSHOT` enthalten.
 
-Dadurch kann die nachfolgende Bereitstellung weiterhin installiert werden, wenn sich die Version nicht geändert hat. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
+Auf diese Weise können nachfolgende Bereitstellungen weiterhin installiert werden, wenn sich die Version nicht geändert hat. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
 Sie können die Version für Staging- und Produktions-Builds oder -Bereitstellungen auch auf `-SNAPSHOT` setzen. Cloud Manager legt automatisch eine geeignete Versionsnummer fest und erstellt für Sie in Git ein Tag. Falls erforderlich, kann auf dieses Tag später verwiesen werden.
 
-Weitere Informationen zur Versionsverwaltung finden Sie [hier dokumentiert](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling.html?lang=de).
+Weitere Informationen zur Versionsverwaltung finden Sie [hier dokumentiert](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/implementing/using-cloud-manager/managing-code/project-version-handling).
 
 ## Wie funktioniert die Paket- und Bundle-Versionierung für Staging- und Produktionsbereitstellungen? {#staging-production}
 
