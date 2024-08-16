@@ -2,10 +2,10 @@
 title: Nicht-Produktions-Pipelines konfigurieren
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
 workflow-type: tm+mt
-source-wordcount: '709'
-ht-degree: 91%
+source-wordcount: '685'
+ht-degree: 55%
 
 ---
 
@@ -24,12 +24,12 @@ Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Infor
 
 Es gibt zwei Arten von produktionsfremden Pipelines:
 
-* **Code-Qualitäts-Pipelines**: Diese Pipelines führen Code-Qualitätsprüfungen für den Code in einer Git-Verzweigung durch und sie führen die Build- und Code-Qualitätsschritte aus.
-* **Bereitstellungs-Pipelines**: Diese Pipelines führen nicht nur wie die Code-Qualitäts-Pipelines die Build- und Code-Qualitätsschritte aus, sondern stellen den Code auch in einer produktionsfremden Umgebung bereit.
+* **Codequalitätspipelines** - Diese führen Code-Qualitätsprüfungen für den Code in einer Git-Verzweigung durch und führen die Schritte zum Erstellen und zur Codequalität aus.
+* **Implementierungs-Pipelines** - Diese Pipelines führen zusammen mit den Build- und Codequalitätsschritten wie den Code-Qualitäts-Pipelines auch den Code in einer Nicht-Produktionsumgebung aus.
 
 >[!NOTE]
 >
->Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Im Dokument [Cloud Manager Repositorys](/help/managing-code/managing-repositories.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
+>Eine Pipeline kann erst eingerichtet werden, wenn ihr verknüpftes Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md) .
 
 ## Hinzufügen einer Nicht-Produktions-Pipeline {#add-non-production-pipeline}
 
@@ -51,36 +51,37 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
 1. Geben Sie das Repository an, aus dem die Pipeline den Code abrufen soll.
 
-   * **Repository**: Diese Option definiert, aus welchem Git-Repository die Pipeline den Code abrufen soll.
-   * **Git-Verzweigung**: Diese Option definiert, aus welcher Verzweigung des ausgewählten Repositorys die Pipeline den Code abrufen soll.
+   * **Repository** - Definiert, aus welchem Git-Repo die Pipeline den Code abrufen soll.
+   * **Git-Verzweigung** - Definiert aus welcher Verzweigung in Git, dass die ausgewählte Pipeline den Code abrufen soll.
 
 1. Definieren Sie die Bereitstellungsoptionen.
 
    1. Definieren Sie unter **Bereitstellungsauslöser**, durch welches Ereignis die Pipeline aktiviert werden soll.
 
-      * **Manuell**: Verwenden Sie diese Option, um die Pipeline manuell zu starten.
-      * **Bei Git-Änderungen**: Bei Auswahl dieser Option wird die Pipeline immer dann gestartet, wenn der konfigurierten Git-Verzweigung Übertragungen hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
+      * **Manuell** - Hiermit können Sie die Pipeline manuell starten.
+      * **Bei Git-Änderungen** - Startet die Pipeline, wenn der konfigurierten Git-Verzweigung Commits hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf weiterhin manuell starten.
 
    1. Für Bereitstellungs-Pipelines definieren Sie unter **Verhalten bei wichtigen Metrikfehlern** das Verhalten der Pipeline, wenn ein wichtiger Fehler in einem der Quality Gates auftritt.
 
-      * **Jedes Mal fragen**: Das ist die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-      * **Sofortiger Ausfall**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler ablehnt.
-      * **Sofort fortfahren**: Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Damit wird im Grunde ein Anwender simuliert, der manuell jeden Fehler genehmigt.
+      * **Jedes Mal fragen** - Die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
+      * **Sofort fehlschlagen** - Die Pipeline wird abgebrochen, sobald ein wichtiger Fehler auftritt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler ablehnen.
+      * **Sofort fortfahren** - Die Pipeline wird automatisch fortgesetzt, wenn ein wichtiger Fehler auftritt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler genehmigen.
 
-   1. **Dispatcherkonfiguration**: Die Rolle **Bereitstellungs-Manager** kann eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM-Dispatcher-Cache gelöscht werden, wenn eine Pipeline ausgeführt wird. Wenn diese Cache-Aktionen konfiguriert sind, werden sie im Rahmen der Einrichtung der Bereitstellungs-Pipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Konfigurieren:
+   1. **Dispatcher-Konfiguration** - Die Rolle **Bereitstellungsmanager** kann eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM Dispatcher-Cache entfernt werden, wenn eine Pipeline ausgeführt wird. Diese Cache-Aktionen werden im Rahmen des Implementierungs-Pipeline-Schritts ausgeführt, unmittelbar nachdem alle Inhaltspakete bereitgestellt wurden. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Konfigurieren:
 
       1. Geben Sie unter **PATH** einen Pfad für den Inhalt an.
       1. Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.
 
          * **Leeren**: Löschen des Cache-Inhalts.
          * **Invalidieren**: Eine Cache-Invalidierung durchführen, ähnlich wie bei der Aktivierung von Inhalten von einer Autoreninstanz auf einer Veröffentlichungsinstanz.
+
       1. Klicken Sie auf **Pfad hinzufügen**, um den angegebenen Pfad hinzuzufügen. Sie können bis zu 100 Pfade pro Umgebung hinzufügen.
 
-1. Klicken Sie auf **Speichern**, um die Pipeline zu speichern.
+1. Klicken Sie auf **Speichern**.
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Codebereitstellung](/help/using/code-deployment.md) .
+Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Codebereitstellung](/help/using/code-deployment.md) .
 
 ## Video-Tutorial {#video-tutorial}
 
