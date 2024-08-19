@@ -1,24 +1,24 @@
 ---
 title: Konfigurieren von Verzweigungen
-description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen des Programm-Codes verwendet wird.
+description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen Ihres Anwendungs-Codes verwendet wird.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 4c051cd1696f8a00d0278131c9521ad4dcb956a3
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '325'
-ht-degree: 100%
+source-wordcount: '324'
+ht-degree: 14%
 
 ---
 
 
-# Konfigurieren von Verzweigungen {#configuring-branches}
+# Verzweigungen konfigurieren {#configuring-branches}
 
-Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen des Programm-Codes verwendet wird.
+Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen Ihres Anwendungs-Codes verwendet wird.
 
 ## Einrichten der ersten Verzweigung in Git {#setting-up-your-first-branch-in-git}
 
-Ein einziges, zunächst leeres Git-Repository wird für jedes Programm [bereitgestellt](/help/requirements/environment-provisioning.md), das in Cloud Manager eingebunden ist. Dieses Repository kann so viele Verzweigungen enthalten, wie es der Entwicklungsprozesses erfordert. Es muss jedoch mindestens eine Verzweigung vorhanden sein, die von der CI/CD-Pipeline verwendet wird, um Programm-Code für die Staging- und Produktionsumgebung bereitzustellen. Als Best Practice gilt, für diese Verzweigung den Namen `main` zu verwenden. Praktischerweise ist dies die standardmäßige Verhaltensweise von Git-Clients beim Einrichten neuer Projekte.
+Ein einziges, zunächst leeres Git-Repository wird für jedes Programm [bereitgestellt](/help/requirements/environment-provisioning.md), das in Cloud Manager eingebunden ist. Dieses Repository kann so viele Verzweigungen enthalten, wie Ihr Entwicklungsprozess erfordert. Es muss jedoch mindestens eine Verzweigung vorhanden sein, die von der CI/CD-Pipeline verwendet wird, um Anwendungscode für die Staging- und Produktionsumgebung bereitzustellen. Als Best Practice gilt, für diese Verzweigung den Namen `main` zu verwenden. Praktisch ist dieser Ansatz das Standardverhalten von Git-Clients beim Einrichten neuer Projekte.
 
-Wenn Sie beispielsweise ein neues Projekt einrichten, führen Sie eine Reihe von Befehlen aus, die den folgenden ähnlich sind:
+Wenn Sie beispielsweise ein neues Projekt einrichten, führen Sie eine Reihe von Befehlen ähnlich der folgenden aus.
 
 ```shell
 $ git init
@@ -50,11 +50,11 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Sie müssen keinen Befehlszeilen-Client verwenden. Es gibt eine Vielzahl grafischer Git-Clients, die als eigenständige Programme oder als Teil einer integrierten Entwicklungsumgebung (IDE), wie z. B. Eclipse oder IntelliJ, verfügbar sind. Sofern das Client-Programm das Git mit HTTPS unterstützt, sollte es mit [!UICONTROL Cloud Manager] kompatibel sein.
+>Es ist nicht erforderlich, den Befehlszeilen-Client zu verwenden. Es gibt eine Vielzahl grafischer Git-Clients, die entweder als eigenständige Anwendungen oder als Teil einer integrierten Entwicklungsumgebung (IDE) wie Eclipse oder IntelliJ verfügbar sind. Sofern das Client-Programm das Git mit HTTPS unterstützt, sollte es mit [!UICONTROL Cloud Manager] kompatibel sein.
 
-## Push-Veröffentlichung der ersten Verzweigung {#pushing-your-first-branch}
+## Den ersten Zweig verschieben {#pushing-your-first-branch}
 
-Sobald Sie sich für mindestens eine Revision entschieden haben, können Sie das [!UICONTROL Cloud Manager]-Repository als Remote-Datenquelle hinzufügen und dann Ihre Commits dorthin senden.
+Wenn Sie mindestens eine Revision vorgenommen haben, können Sie das [!UICONTROL Cloud Manager]-Repository als Remote-Repository hinzufügen und dann Ihre Commits dorthin senden.
 
 ```shell
 $ git remote add adobe <url>
@@ -70,12 +70,12 @@ To <url>
 
 >[!NOTE]
 >
->Sie erhalten die spezifische URL (zusammen mit Ihren Anmeldeinformationen) beim [!UICONTROL Cloud Manager]-Onboarding von Ihrem Customer Success Engineering.
+>Die spezifische URL wird zusammen mit Ihren Anmeldeinformationen vom Adobe CSE (Customer Success Engineer) beim Einstieg in [!UICONTROL Cloud Manager] bereitgestellt.
 
-## Zusätzliche Verzweigungen {#additional-branches}
+## Zusätzliche Zweige {#additional-branches}
 
-Eine einzelne `main`-Verzweigung kann für sehr einfache Projekte ausreichend sein. In den meisten Fällen ist jedoch eine komplexere Verzweigungsstrategie erforderlich. Viele Kunden gehen wie folgt vor: Die täglichen Entwicklungsaktivitäten werden an einer Verzweigung mit dem Namen `develop` durchgeführt und diese Entwicklungsverzweigung wird für die Bereitstellung mit der Verzweigung `main` zusammengeführt.
+Eine einzelne `main` -Verzweigung kann für sehr einfache Projekte ausreichen, aber in den meisten Fällen ist eine komplexere Verzweigungsstrategie erforderlich. Viele Kunden führen einen Prozess durch, bei dem tägliche Entwicklungsaktivitäten in einer Verzweigung mit dem Namen `develop` ausgeführt werden. Die Entwicklungsverzweigung wird dann in der `main`-Verzweigung zusammengeführt, wenn es Zeit für eine Bereitstellung ist.
 
 >[!TIP]
 >
->Die gebräuchlichen Git-Befehle finden Sie in der [Git-Schnellübersicht](https://github.github.com/training-kit/downloads/github-git-cheat-sheet).
+>Allgemeine Git-Befehle finden Sie im [Git Cheat Sheet](https://training.github.com/downloads/github-git-cheat-sheet).

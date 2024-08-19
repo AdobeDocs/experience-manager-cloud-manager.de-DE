@@ -1,35 +1,35 @@
 ---
 title: Testphase
 seo-title: Evaluation Phase
-description: Erfahren Sie, wie die Bewertungsphase des Assistenten für Produktaktualisierungen mit der Mustererkennung die Komplexität des Upgrades bewertet.
+description: Erfahren Sie, wie die Bewertungsphase des Assistenten für Produktaktualisierungen die Komplexität der Aktualisierung mit dem Musterdetektor bewertet.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '280'
-ht-degree: 75%
+source-wordcount: '279'
+ht-degree: 17%
 
 ---
 
 
 # Testphase {#evaluation}
 
-Die erste Phase im Assistenten für Produktaktualisierungen ist die **[!UICONTROL Bewertungs]**-Phase, die mit dem Mustererkennung direkt im Assistenten die Komplexität der Aktualisierung bewertet. Nach diesem Schritt haben Sie Zugriff auf den Berwertungsbericht.
+Die erste Phase im Assistenten für Produktaktualisierungen ist die Phase **[!UICONTROL Evaluierung]**, in der die Aktualisierungskomplexität mit dem Musterdetektor direkt im Assistenten bewertet wird. Am Ende dieses Schritts können Sie auf den Bewertungsbericht zugreifen.
 
-Im generierten Bericht können Sie die Autoreninstanz auf die Berechtigung für ein Upgrade überprüfen. Suchen Sie nach Mustern, die:
+Mit dem generierten Bericht können Sie die Berechtigung der Autoreninstanz auf ein Upgrade überprüfen, indem Sie die folgenden Muster erkennen:
 
-* gegen bestimmte Regeln verstoßen und Bereiche betreffen, die durch das Upgrade überschrieben werden.
+* Verstoßen Sie bestimmte Regeln in Bezug auf Bereiche, die von der Aktualisierung betroffen oder überschrieben werden.
 
-* eine AEM 6.x-Funktion oder eine API verwenden, die mit der neuen Version von AEM nicht abwärtskompatibel ist und nach dem Upgrade möglicherweise beeinträchtigt sein kann.
+* Verwenden Sie eine AEM 6.x-Funktion oder eine API, die nicht abwärtskompatibel mit der neuen Version von AEM ist und nach einem Upgrade möglicherweise beschädigt werden kann.
 
 Dieser Bericht dient als Bewertungsgrundlage für den erforderlichen Entwicklungsaufwand beim Upgrade auf Adobe Experience Manager (AEM) 6.5.
 
 >[!NOTE]
 >
->Weitere Informationen zum Musterdetektor finden Sie unter [Bewertung der Komplexität der Aktualisierung mit dem Musterdetektor](https://experienceleague.adobe.com/docs/experience-manager-65/deploying/upgrading/pattern-detector.html?lang=de).
+>Weitere Informationen zum Musterdetektor finden Sie unter [Bewertung der Komplexität der Aktualisierung mit dem Musterdetektor](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/upgrading/pattern-detector).
 
 ## Testbericht ausführen {#running}
 
-Die Mustererkennung kann in einer beliebigen Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und zu vermeiden, dass in geschäftskritischen Instanzen Verzögerungen auftreten, wird sie von Cloud Manager auf der Autoreninstanz in der Staging-Umgebung ausgeführt.
+Der Musterdetektor kann in jeder Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und Verlangsamungen bei geschäftskritischen Instanzen zu vermeiden, führt Cloud Manager sie in der Staging-Umgebung der Autoreninstanz aus.
 
 **So führen Sie den Bewertungsbericht aus:**
 
@@ -45,4 +45,4 @@ Die Mustererkennung kann in einer beliebigen Umgebung ausgeführt werden. Um jed
 
    ![Erstellter Bericht](/help/assets/Evaluation-1.png)
 
-Die aktuelle Version des Assistenten für Produktaktualisierungen in Cloud Manager unterstützt nur die **Testphase**. Die anderen vier Phasen **Behebung**, **Ausführung**, **Validierung** und **Abschluss** folgen bald.
+Die aktuelle Version des Assistenten für Produktaktualisierungen in Cloud Manager unterstützt nur die Phase **Evaluierung** . Die anderen vier Phasen **Behebung**, **Ausführung**, **Validierung** und **Abschluss** folgen bald.

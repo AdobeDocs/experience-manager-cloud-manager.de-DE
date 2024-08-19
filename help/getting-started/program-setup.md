@@ -1,18 +1,18 @@
 ---
 title: Einrichten von Programmen
-description: Nach dem Onbarding muss der Geschäftsinhaber verschiedene Ersteinstellungen am Programm vornehmen.
+description: Nach dem Onboarding muss der Business Owner einige Ersteinstellungen am Programm vornehmen.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 86%
+source-wordcount: '567'
+ht-degree: 53%
 
 ---
 
 
 # Programmeinrichtung {#program-setup}
 
-Nach dem Onboarding vervollständigt der Geschäftsinhaber die anfängliche Einrichtung des Programms, einschließlich der Festlegung der Programmbeschreibung und der Definition der wichtigsten Leistungsindikatoren (KPIs), die für Leistungstests verwendet werden.
+Nach dem Onboarding richtet der Business Owner das Programm ein, indem er eine Beschreibung hinzufügt und wichtige Leistungsindikatoren (KPIs) definiert. Diese KPIs werden dann für Leistungstests verwendet.
 
 ## Programmeinrichtung mit [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
@@ -24,7 +24,7 @@ Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu
 
    ![Programm einrichten](/help/assets/set-up-program/setup1.png)
 
-1. Im Dialogfeld **Programm einrichten** können Sie in drei Registerkarten Informationen zum Programm eingeben:
+1. Im Dialogfeld **Programm einrichten** können Sie Programminformationen auf drei Registerkarten eingeben:
 
    * **Allgemein**
    * **KPI**
@@ -34,19 +34,19 @@ Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu
 
    ![Registerkarte „Allgemein“](/help/assets/Setup_Program-General.png)
 
-1. Auf der Registerkarte **KPI** definieren Sie Ihre KPIs. In diesem Beispiel werden separate KPIs für **AEM Sites** und **AEM Assets** definiert. Sie können die KPIs für die von Ihnen lizenzierten Produkte angeben.
+1. Auf der Registerkarte **KPI** definieren Sie Ihre KPIs. In diesem Beispiel werden separate KPIs für **AEM Sites** und **AEM Assets** definiert. Geben Sie die KPIs für die Produkte an, die Sie lizenziert haben.
 
-   * Im Abschnitt [KPIs](#kpis) finden Sie weitere Informationen darüber, wie die KPIs in Cloud Manager gemessen werden.
+   Im Abschnitt [KPIs](#kpis) finden Sie weitere Informationen darüber, wie die KPIs in Cloud Manager gemessen werden.
 
    ![Definieren von KPIs](/help/assets/Setup_Program-KPIs.png)
 
 1. Auf der Registerkarte **Bereitstellung** können Sie die bedarfsorientierten Skalierungsoptionen für Ihre Umgebungen festlegen, wenn für Ihr Programm die automatische Skalierung aktiviert ist.
 
-   * Die Funktion zur automatischen Skalierung ist nur auf die Produktionsumgebung anwendbar und steht ggf. nicht für alle Kundenprogramme zur Verfügung.
+   Die automatische Skalierung gilt nur für die Produktionsumgebung und ist möglicherweise nicht für alle Kundenprogramme verfügbar.
 
    ![Bereitstellungsoptionen](/help/assets/Setup_Program-Provisioning.png)
 
-1. Klicken Sie auf **Speichern**, um den Einrichtungsassistenten abzuschließen.
+1. Klicken Sie auf **Speichern**.
 
 Ihr Programm wird erstellt. Die Bereitstellung von Ressourcen kann mehrere Minuten dauern, bevor das Programm einsatzbereit ist.
 
@@ -70,7 +70,7 @@ Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schri
 
 Beachten Sie, dass die Änderungen sofort in Cloud Manager gespeichert werden, aber erst bei der nächsten Ausführung der Pipeline in Ihre Umgebungen übernommen werden.
 
-Wenn Sie noch keine Pipeline erstellt haben, lesen Sie die Dokumente &quot;[Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md)&quot;und &quot;[Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md)&quot;.
+Wenn Sie noch keine Pipeline erstellt haben, finden Sie weitere Informationen unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md).
 
 ## Zwischen Programmen wechseln {#swithing-programs}
 
@@ -82,13 +82,13 @@ Verwenden Sie die Aktionsleiste, um zu einem anderen Programm zu wechseln, das a
 
 ## KPIs {#kpis}
 
-Die KPIs einer Website werden bei Tests gemessen, die in der Staging-Umgebung ausgeführt werden. Normalerweise werden diese KPIs entsprechend den Kapazitäten der Staging-Umgebung herunterskaliert.
+Sites-KPIs werden bei Tests gemessen, die in der Staging-Umgebung ausgeführt werden. Normalerweise werden diese KPIs entsprechend den Kapazitäten der Staging-Umgebung herunterskaliert.
 
-Anwenderinnen und Anwender, die beispielsweise durchschnittlich 1000 Seitenaufrufe pro Minute in der Produktionsumgebung erwartem und vier Dispatcher-/Veröffentlichungs-Server in der Produktion haben, sollten dies auf 250 Seitenaufrufe pro Minute skalieren. Dabei wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
+Beispiel: Ein Anwender, der von durchschnittlich 1.000 Seitenaufrufen pro Minute in seiner Produktionsumgebung ausgeht und über vier Dispatcher-/Veröffentlichungsserver in der Produktion verfügt, sollte dieses Szenario auf 250 Seitenaufrufe pro Minute skalieren. In diesem Szenario wird davon ausgegangen, dass ihre Staging-Umgebung nur aus einem einzigen Dispatcher-/Veröffentlichungs-Server-Paar besteht.
 
-Assets-Leistungstests erfolgen, indem Assets während eines 30-minütigen Testzeitraums wiederholt hochgeladen und die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene gemessen werden.
+Assets-Leistungstests erfordern das wiederholte Hochladen von Assets über einen Zeitraum von 30 Minuten. Die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene werden während des Tests gemessen.
 
-Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFront vor Ihrer Produktionsumgebung vorgeschaltet. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, sollten die KPIs dem erwarteten Traffic entsprechen, der durch das CDN weitergeleitet wird, d. h. ohne Cache. In der Regel handelt es sich dabei um eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
+Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFront vor Ihrer Produktionsumgebung vorgeschaltet. Da [!UICONTROL Cloud Manager] direkt gegen die Staging-Umgebung getestet wird, sollten die KPI nur den erwarteten Traffic widerspiegeln, der durch das CDN weitergeleitet wird. Das heißt, der Cache fehlt. In der Regel handelt es sich bei diesem Erlebnis um eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
 
 ## Videoübersicht {#video}
 
