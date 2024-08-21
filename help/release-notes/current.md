@@ -2,9 +2,9 @@
 title: Versionshinweise für Cloud Manager 2024.8.0
 description: Informationen zu den Versionshinweisen für Cloud Manager 2024.8.0.
 feature: Release Information
-source-git-commit: dd764bb17127ba0a1e88e85592329cc9ddff42e3
+source-git-commit: 5ced643fabe0a670e456cbea72f9da8196ac774a
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '266'
 ht-degree: 5%
 
 ---
@@ -28,7 +28,7 @@ Die Version von [!UICONTROL Cloud Manager] 2024.8.0 wurde am 14. August 2024 ver
 
 ## Frühzeitige Annahme {#early-adoption}
 
-Nehmen Sie an Adobe teil und haben Sie die Möglichkeit, einige bevorstehende Funktionen zu testen.
+Nehmen Sie am Cloud Manager-Programm teil und haben Sie die Möglichkeit, einige bevorstehende Funktionen zu testen.
 
 ### Nur-Staging- und reine Produktionslinien {#staging-production-only-pipelines}
 
