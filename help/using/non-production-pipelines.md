@@ -2,7 +2,7 @@
 title: Nicht-Produktions-Pipelines konfigurieren
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ba08da1b25a1f9ba8bc954b2fbd27b60d4ddf1a0
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 55%
@@ -29,7 +29,7 @@ Es gibt zwei Arten von produktionsfremden Pipelines:
 
 >[!NOTE]
 >
->Eine Pipeline kann erst eingerichtet werden, wenn ihr verknüpftes Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md) .
+>Eine Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md) .
 
 ## Hinzufügen einer Nicht-Produktions-Pipeline {#add-non-production-pipeline}
 
@@ -51,7 +51,7 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
 1. Geben Sie das Repository an, aus dem die Pipeline den Code abrufen soll.
 
-   * **Repository** - Definiert, aus welchem Git-Repo die Pipeline den Code abrufen soll.
+   * **Repository** - Definiert, aus welchem Git-Repository die Pipeline den Code abrufen soll.
    * **Git-Verzweigung** - Definiert aus welcher Verzweigung in Git, dass die ausgewählte Pipeline den Code abrufen soll.
 
 1. Definieren Sie die Bereitstellungsoptionen.

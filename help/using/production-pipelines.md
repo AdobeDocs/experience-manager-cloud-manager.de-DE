@@ -2,10 +2,10 @@
 title: Konfigurieren von Produktions-Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '1248'
-ht-degree: 49%
+source-wordcount: '1247'
+ht-degree: 47%
 
 ---
 
@@ -108,7 +108,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
          * **Bereitstellungsoptionen**: Sie können die Parameter zur Steuerung der Produktionsbereitstellung definieren.
 
             * **GoLive-Genehmigung verwenden** - Ein Benutzer mit der Rolle **Business Owner**, **Project Manager** oder **Deployment Manager** über die Benutzeroberfläche von [!UICONTROL Cloud Manager] muss eine Bereitstellung manuell genehmigen.
-            * **Geplant** - Hält die Pipeline vor der Produktionsbereitstellung, damit sie geplant werden kann. Wenn diese Option ausgewählt ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und die Anwenderin bzw. der Anwender wird aufgefordert, die entsprechenden Maßnahmen zu ergreifen.
+            * **Geplant** - Hält die Pipeline vor der Produktionsbereitstellung, damit sie geplant werden kann. Wenn diese Option aktiviert ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und der Benutzer wird aufgefordert, die Aktion durchzuführen.
                * **`Now`** - Wird sofort für die Produktion bereitgestellt und schließt die Pipeline effektiv ab.
                * **Datum** - Hiermit kann der Benutzer einen Zeitpunkt planen, zu dem die Bereitstellung abgeschlossen werden soll.
                * **Ausführung stoppen** - Bricht die Bereitstellung für die Produktion ab.

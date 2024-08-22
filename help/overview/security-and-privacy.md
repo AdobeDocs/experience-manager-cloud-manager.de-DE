@@ -2,10 +2,10 @@
 title: Sicherheit und Datenschutz
 description: Erfahren Sie mehr über die Sicherheit und den Datenschutz von Code- und Artefakt-Assets in Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 90%
+ht-degree: 60%
 
 ---
 
@@ -28,10 +28,10 @@ Informationen zu den möglichen Rollen, die Sie in der Admin Console und den Ben
 
 Code in [!UICONTROL Cloud Manager] wird während der Übertragung verschlüsselt. Von Cloud Manager erstellte Binärdateien werden ebenfalls während der Übertragung und beim Speichern verschlüsselt.
 
-Jeder Kunde erhält ein eigenes Git-Repository. Sein Code ist sicher und wird nicht an andere Organisationen weitergegeben.
+Jeder Kunde erhält sein eigenes Git-Repository. Der Code ist geschützt und wird nicht für andere Organisationen freigegeben.
 
 ## Datenschutz {#data-privacy}
 
-[!UICONTROL Cloud Manager] erfüllt die von Adobe definierten Datenschutzgrundsätze. Entwickler können Code dank HTTPS sicher per Push an Git-Repositorys übertragen.
+[!UICONTROL Cloud Manager] erfüllt die von Adobe definierten Datenschutzgrundsätze. Entwickler pushen Code sicher über HTTPS in Git-Repositorys.
 
-Die Benutzeroberfläche von [!UICONTROL Cloud Manager] basiert auf Services, die einem gemeinsamen Kontroll-Framework von Adobe entsprechen. Die Benutzeroberfläche von [!UICONTROL Cloud Manager] nutzt sichere Services von verschiedenen Cloud-Anbietern.
+Die Benutzeroberfläche von [!UICONTROL Cloud Manager] basiert auf Diensten, die einem Adobe Common Control Framework entsprechen. Die Benutzeroberfläche von [!UICONTROL Cloud Manager] nutzt sichere Services von verschiedenen Cloud-Anbietern.

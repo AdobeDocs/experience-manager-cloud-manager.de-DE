@@ -2,10 +2,10 @@
 title: Projekt einrichten
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1395'
-ht-degree: 55%
+ht-degree: 54%
 
 ---
 
@@ -19,7 +19,7 @@ Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager ver
 Vorhandene AEM müssen einigen Grundregeln entsprechen, damit sie erfolgreich mit Cloud Manager erstellt und bereitgestellt werden können.
 
 * Projekte müssen mit Apache Maven erstellt werden.
-* Im Stammverzeichnis des Git-Repositorys muss eine `pom.xml`-Datei vorhanden sein.
+* Im Stammverzeichnis des Git-Repositorys muss eine `pom.xml` -Datei vorhanden sein.
    * Diese `pom.xml`-Datei kann auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.).
    * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren `pom.xml`-Dateien hinzufügen.
    * Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
@@ -275,7 +275,7 @@ Mit dem `content-package-maven-plugin` ist es ähnlich:
 
 ## Artefakt-Wiederverwendung erstellen {#build-artifact-reuse}
 
-In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn möglich, verhindert Cloud Manager, dass die Codebasis neu erstellt wird, wenn festgestellt wird, dass dieselbe Git-Bestätigung in mehreren Vollstapelpipelineausführungen verwendet wird.
+In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn möglich, verhindert Cloud Manager, dass die Codebasis neu erstellt wird, wenn festgestellt wird, dass dasselbe Git-Commit in mehreren Full-Stack-Pipeline-Ausführungen verwendet wird.
 
 Wenn eine Ausführung gestartet wird, wird der aktuelle HEAD-Commit für die Zweig-Pipeline extrahiert. Der Commit-Hash ist in der Benutzeroberfläche und über die API sichtbar. Wenn der Build-Schritt erfolgreich abgeschlossen wurde, werden die resultierenden Artefakte basierend auf diesem Commit-Hash gespeichert und können in nachfolgenden Pipeline-Ausführungen wiederverwendet werden.
 

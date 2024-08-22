@@ -2,15 +2,15 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: a7dc30ed31e87ab486f0b279b70c850a33a903eb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1637'
-ht-degree: 56%
+ht-degree: 53%
 
 ---
 
 
-# Code-Bereitstellung {#code-deployment}
+# Codebereitstellung {#code-deployment}
 
 Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 
@@ -34,11 +34,11 @@ Der Build-Prozess startet den Code-Bereitstellungsprozess einschließlich der fo
 
 Sie können die Schritte aus verschiedenen Bereitstellungsprozessen überprüfen, indem Sie Protokolle anzeigen oder die Ergebnisse für die Testkriterien überprüfen.
 
-## Bereitstellungsschritte {#deployment-steps}
+## Implementierungsschritte {#deployment-steps}
 
 In jedem Schritt der Implementierung werden verschiedene Aktionen ausgeführt, die in diesem Abschnitt beschrieben werden. Technische Details dazu, wie der Code selbst hinter den Kulissen bereitgestellt wird, finden Sie unter [Details zum Bereitstellungsprozess](#deployment-process) .
 
-### Staging-Bereitstellung {#stage-deployment}
+### Schritt zur Staging-Bereitstellung {#stage-deployment}
 
 Der Schritt **Staging-Bereitstellung** umfasst die folgenden Aktionen:
 
@@ -49,7 +49,7 @@ Der Schritt **Staging-Bereitstellung** umfasst die folgenden Aktionen:
 
 ![Staging-Bereitstellung](/help/assets/Stage_Deployment1.png)
 
-### Staging-Tests {#stage-testing}
+### Schritt für Staging-Tests {#stage-testing}
 
 Der Schritt **Staging-Tests** umfasst die folgenden Aktionen:
 
@@ -90,7 +90,7 @@ Die folgenden Schritte zeigen ein Timeout, wenn der Benutzer auf Feedback gewart
 | Planen der Bereitstellung für die Produktion | 14 Tage |
 | Verwaltete Produktionsbereitstellung | 14 Tage |
 
-## Details zum Bereitstellungsprozess {#deployment-process}
+## Details zum Implementierungsprozess {#deployment-process}
 
 Cloud Manager lädt alle beim Build-Prozess generierten target/*.zip-Dateien in einen Speicherort hoch. Diese Artefakte werden in der Pipeline-Bereitstellungsphase von diesem Speicherort abgerufen.
 
@@ -133,7 +133,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    >
    >Sie können Änderungen am Load-Balancer in Entwicklungs- und Staging-Bereitstellungen überspringen. Das heißt, für die Entwicklungsumgebung trennen und anhängen Sie Schritte in beiden produktionsfremden Pipelines und für die Staging-Umgebung in der Produktions-Pipeline.
 
-### Bereitstellung in der Produktionsphase {#deployment-production-phase}
+### Implementierung in die Produktionsphase {#deployment-production-phase}
 
 Der Bereitstellungsprozess für Produktions-Topologien unterscheidet sich geringfügig, um die Auswirkungen auf AEM Site-Besucher zu minimieren.
 
@@ -149,7 +149,7 @@ Produktionsbereitstellungen nutzen im Allgemeinen die oben beschriebenen Schritt
 
 Dieser Vorgang wird fortgesetzt, bis die Bereitstellung alle Publisher und Dispatcher in der Topologie erreicht hat.
 
-## Notfall-Pipeline-Ausführungsmodus {#emergency-pipeline}
+## Ausführungsmodus der Notfallpipeline {#emergency-pipeline}
 
 In kritischen Situationen müssen Adobe Managed Services-Kunden möglicherweise Code-Änderungen sofort in ihrer Staging- und Produktionsumgebung bereitstellen. Durch diese Fähigkeit können sie den gesamten Cloud Manager-Testzyklus umgehen.
 
@@ -159,7 +159,7 @@ Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline in 
 >
 >Die Funktion des Ausführungsmodus der Notfallpipeline wird für jedes Programm aktiviert. Die Aktivierung erfolgt durch Customer Success Engineers.
 
-### Verwenden des Notfall-Pipeline-Ausführungsmodus {#using-emergency-pipeline}
+### Verwenden des Ausführungsmodus der Notfallpipeline {#using-emergency-pipeline}
 
 Beim Starten einer Produktions-Pipeline können Sie in einem Dialogfeld zwischen dem normalen Modus und dem Notmodus wählen. Diese Option ist verfügbar, wenn die Funktion für den Ausführungsmodus der Notfallpipeline für das Programm aktiviert ist. Diese Auswahl ist verfügbar, sobald die Funktion aktiviert wurde.
 
@@ -195,14 +195,14 @@ In solchen Fällen, in denen eine erneute Ausführung möglich ist, bietet die S
 
 * Das erneute Ausführen des Produktionsbereitstellungsschritts ist nur für die letzte Ausführung verfügbar.
 * Die Neuausführung ist nicht für Rollback-Ausführungen oder &quot;Push-Update&quot;-Ausführungen verfügbar.
-* Wenn die letzte Ausführung zu irgendeinem Zeitpunkt vor dem Schritt der Produktionsbereitstellung fehlgeschlagen ist, ist eine erneute Ausführung nicht möglich.
+* Wenn die letzte Ausführung vor dem Produktionsbereitstellungsschritt fehlschlug, ist eine erneute Ausführung nicht möglich.
 
 
-### Erneutes Ausführen der API {#reexecute-api}
+### API erneut ausführen {#reexecute-api}
 
 Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [die Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) verwenden, um erneute Ausführungen auszulösen und Ausführungen zu identifizieren, die als erneute Ausführungen ausgelöst wurden.
 
-#### Auslösen einer erneuten Ausführung {#triggering}
+#### Trigger einer erneuten Ausführung {#triggering}
 
 Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an die HAL-Verknüpfung `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Schritts der Produktionsbereitstellung erfolgen.
 
@@ -250,6 +250,6 @@ Die Syntax für den Wert `href` der HAL-Verknüpfung ist nur ein Beispiel, und d
 
 Wenn eine `PUT` -Anfrage an diesen Endpunkt gesendet wird, wird eine `201` -Antwort angezeigt, wenn sie erfolgreich ist. Der Antworttext stellt die Darstellung der neuen Ausführung dar. Diese Funktion ähnelt dem Starten einer regulären Ausführung über die API.
 
-#### Identifizieren einer Ausführung mit erneuter Ausführung {#identifying}
+#### Ermitteln einer erneut ausgeführten Ausführung {#identifying}
 
 Das System identifiziert erneut ausgeführte Ausführungen anhand des Werts `RE_EXECUTE` im Feld Trigger .

@@ -1,11 +1,11 @@
 ---
 title: Assistent für Produktaktualisierungen
-description: Erfahren Sie, wie der Assistent für Produktaktualisierungen den AEM-End-to-End-Aktualisierungsprozess in Cloud Manager optimiert.
+description: Erfahren Sie, wie der Produktaktualisierungsassistent den End-to-End-AEM-Aktualisierungsprozess in Cloud Manager optimiert.
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '210'
-ht-degree: 82%
+source-wordcount: '208'
+ht-degree: 38%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 82%
 
 Der Assistent für Produktaktualisierungen führt Sie unter Verwendung von Cloud Manager Schritt für Schritt durch das Upgrade auf die neueste Version von Adobe Experience Manager 6.5. Es optimiert den End-to-End-Prozess und gewährleistet die Einhaltung AEM Best Practices mithilfe des CI/CD-Frameworks von Cloud Manager sowie integrierter automatisierter Tests.
 
-Der Assistent deckt folgende fünf Phasen der AEM-Produktaktualisierung ab:
+Der Assistent umfasst fünf Phasen, die Sie während einer AEM Produktaktualisierung begleiten:
 
 * Test
 * Behebung
@@ -26,15 +26,15 @@ Der Assistent deckt folgende fünf Phasen der AEM-Produktaktualisierung ab:
 
 Cloud Manager-Kunden, die eine Berechtigung zum Upgrade auf AEM 6.5 haben, können den Assistenten für Produktaktualisierungen nutzen. Weitere Informationen erhalten Sie bei Ihrem Customer Success Engineer (CSE).
 
-1. Wenn AEM 6.5 für Ihr Programm verfügbar ist, erhalten Sie eine Push-Benachrichtigung über Cloud Manager.
+1. Sie erhalten eine Push-Benachrichtigung über Cloud Manager, die Sie darüber informiert, dass AEM 6.5 für Ihr Programm verfügbar ist.
 
-1. Auf dem Übersichtsbildschirm von [!UICONTROL Cloud Manager] wird dann die Karte **[!UICONTROL AEM 6.5-Aktualisierung]** angezeigt. Anhand dieser Karte können Sie sehen, in welcher Phase des Aktualisierungsprozesses Sie sich gerade befinden und welcher der nächste Schritt ist.
+1. Auf dem Übersichtsbildschirm von [!UICONTROL Cloud Manager] wird dann die Karte **[!UICONTROL AEM 6.5-Aktualisierung]** angezeigt. Diese Karte hilft zu verfolgen, in welcher Phase des Aktualisierungsprozesses Sie sich derzeit befinden, und informiert Sie darüber, was der nächste Schritt ist.
 
    ![Karte zum Assistenten für Aktualisierungen](/help/assets/Start-Update.png)
 
 1. Wählen Sie **[!UICONTROL Aktualisierung starten]**, um den Assistenten zu starten.
 
-1. Der Assistent zeigt die erste Phase des **[!UICONTROL AEM 6.5-Aktualisierungsprozesses]** an.
+1. Der Assistent zeigt die erste Phase des Prozesses **[!UICONTROL AEM 6.5 Update]** an.
 
-Weitere Informationen zur ersten Phase des Assistenten finden Sie im Dokument [Testphase](/help/product-update-wizard/evaluation.md) .
+Weitere Informationen zur ersten Phase des Assistenten finden Sie unter [Testphase](/help/product-update-wizard/evaluation.md).
 

@@ -2,19 +2,19 @@
 title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1435'
-ht-degree: 41%
+ht-degree: 40%
 
 ---
 
 
-# Navigation durch die Cloud Manager-Benutzeroberfläche {#navigation}
+# Navigieren zur Cloud Manager-Benutzeroberfläche {#navigation}
 
 Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 
-Die Benutzeroberfläche für die Cloud-Verwaltung besteht in erster Linie aus zwei grafischen Schnittstellen:
+Die Benutzeroberfläche von Cloud Manager besteht hauptsächlich aus zwei grafischen Schnittstellen:
 
 * [In der Konsole &quot;Meine Programme&quot;](#my-programs-console) können Sie alle Programme anzeigen und verwalten.
 * [Im Fenster &quot;Programmübersicht&quot;](#program-overview) können Sie die Details eines einzelnen Programms anzeigen und verwalten.

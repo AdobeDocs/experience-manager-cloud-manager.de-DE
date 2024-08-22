@@ -2,10 +2,10 @@
 title: Verwenden des Assistenten für neue Projekte
 description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM-Programmprojekt erstellen
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 33%
+ht-degree: 28%
 
 ---
 
@@ -33,7 +33,7 @@ Führen Sie diese Schritte aus, um mithilfe des Assistenten ein AEM-Projekt zu e
 
    ![Detaillierte Archetypparameter](/help/assets/screen_shot_2018-10-08at60032am.png)
 
-1. Klicken Sie auf **Erstellen**, um das Starterprojekt unter Verwendung des Archetyps zu erstellen und in die benannte Git-Verzweigung zu übertragen.
+1. Klicken Sie auf **Erstellen** , um das Starterprojekt mithilfe des Archetyps zu erstellen und in die benannte Git-Verzweigung zu übertragen.
 
 Sie haben jetzt ein Basisprojekt. Es ist Zeit, Ihre Pipelines einzurichten.
 

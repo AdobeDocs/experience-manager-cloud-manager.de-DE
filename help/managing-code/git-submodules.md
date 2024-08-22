@@ -2,10 +2,10 @@
 title: Unterstützung von Git-Untermodulen
 description: Erfahren Sie, wie Sie mit Git-Untermodulen den Inhalt mehrerer Verzweigungen zum Zeitpunkt der Erstellung über Git-Repositorys hinweg zusammenführen können.
 exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '412'
-ht-degree: 28%
+ht-degree: 20%
 
 ---
 
@@ -68,7 +68,7 @@ Weitere Informationen zu Git-Untermodulen finden Sie im [Git-Referenzhandbuch](h
 
 Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 
-* Die Git-URL muss sich genau an die oben beschriebene Syntax halten.
+* Die Git-URL muss sich genau in der oben beschriebenen Syntax befinden.
 * Betten Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
 * Es werden nur Untermodule im Stammverzeichnis der Verzweigung unterstützt.
 * Git-Untermodulverweise werden für bestimmte Git-Commits gespeichert. Wenn also Änderungen am Submodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden. Verwenden Sie beispielsweise &quot;`git submodule update --remote`&quot;.
@@ -91,4 +91,4 @@ Beachten Sie bei der Verwendung von Git-Untermodulen mit privaten Repositorys di
 
 * Die Git-URLs für die Untermodule können entweder im HTTPS- oder im SSH-Format vorliegen, müssen jedoch mit einem Github.com-Repository verknüpft werden. Das Hinzufügen eines Adobe-Repository-Untermoduls zu einem GitHub-Aggregator-Repository oder umgekehrt funktioniert nicht.
 * Die GitHub-Untermodule müssen für die Adobe-GitHub-App zugänglich sein.
-* [Die Einschränkungen bei der Verwendung von Git-Untermodulen mit von Adobe verwalteten Repositorys](#limitations-recommendations) gelten ebenfalls.
+* [Die Einschränkungen bei der Verwendung von Git-Untermodulen mit von Adobe verwalteten Repositorys](#limitations-recommendations) gelten ebenfalls.

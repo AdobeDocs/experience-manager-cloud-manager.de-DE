@@ -2,10 +2,10 @@
 title: Das Inhaltskopie-Tool
 description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer bei Bedarf veränderliche Inhalte aus AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 8e2c57d2594691e7fb18d8a538caa9b54a26b6bb
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1144'
-ht-degree: 41%
+ht-degree: 42%
 
 ---
 
@@ -98,7 +98,7 @@ Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus
 
 Beim Bearbeiten des Content-Sets müssen Sie möglicherweise die konfigurierten Pfade erweitern, um die ausgeschlossenen Unterpfade anzuzeigen.
 
-## Kopieren von Inhalten {#copy-content}
+## Inhalt kopieren {#copy-content}
 
 Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten verwenden. Führen Sie die folgenden Schritte aus, um Inhalte zu kopieren.
 

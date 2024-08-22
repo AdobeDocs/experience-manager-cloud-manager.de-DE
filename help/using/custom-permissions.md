@@ -2,10 +2,10 @@
 title: Benutzerdefinierte Berechtigungen
 description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1416'
-ht-degree: 52%
+ht-degree: 51%
 
 ---
 
@@ -123,8 +123,8 @@ Zum Erstellen benutzerdefinierter Profile stehen folgende Berechtigungen zur Ver
 | Wichtige Metrikfehler überschreiben/ablehnen | Benutzenden erlauben, wichtige Metrikfehler zu überschreiben/abzulehnen |
 | Produktionsbereitstellungs-Zeitplan | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu planen |
 | Zugriff auf Repository-Informationen | Erlauben Sie Benutzern, auf Repository-Informationen zuzugreifen und ein Kennwort für den Zugriff zu generieren |
-| Repository – Erstellen | Benutzenden erlauben, neue Git-Repositorys zu erstellen |
-| Repository – Löschen | Benutzenden erlauben, Git-Repositorys zu löschen |
+| Repository erstellen | Benutzern das Erstellen neuer Git-Repositorys ermöglichen |
+| Repository löschen | Löschen von Git-Repositorys durch Benutzer zulassen |
 | Repository bearbeiten | Benutzern erlauben, Git-Repositorys zu bearbeiten |
 | Repository-Code-Generierung | Benutzenden erlauben, Projekte aus einem Archetyp zu generieren |
 | Inhaltskopie verwalten | Benutzenden erlauben, Vorgänge zum Kopieren von Inhalten zu verwalten |

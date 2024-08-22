@@ -1,18 +1,18 @@
 ---
 title: Quell-Code-Repository
-description: Hier erfahren Sie mehr über das Git-Repository, das für jedes in Cloud Manager enthaltene Programm bereitgestellt wird.
+description: Erfahren Sie mehr über das Git-Repository, das für jedes Programm bereitgestellt wird, das Sie in Cloud Manager haben.
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
-source-git-commit: 4c977cdfbef438fdabd90ee104d98887f2467b49
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '245'
-ht-degree: 20%
+ht-degree: 7%
 
 ---
 
 
 # Source-Code-Repository {#source-code-repository}
 
-Hier erfahren Sie mehr über das Git-Repository, das für jedes in Cloud Manager enthaltene Programm bereitgestellt wird.
+Erfahren Sie mehr über das Git-Repository, das für jedes Programm bereitgestellt wird, das Sie in Cloud Manager haben.
 
 ## Cloud Manager-Repository {#cloud-manager-repository}
 

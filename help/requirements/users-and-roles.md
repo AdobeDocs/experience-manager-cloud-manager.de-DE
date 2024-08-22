@@ -1,11 +1,11 @@
 ---
 title: Hinzufügen von Anwendern und Rollen
-description: Erfahren Sie, wie Sie mit der Admin Console Anwender und Rollen hinzufügen und Profile erstellen können.
+description: Erfahren Sie, wie Sie mit der Admin Console Benutzer und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '768'
-ht-degree: 78%
+source-wordcount: '758'
+ht-degree: 47%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 78%
 
 Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigungen erforderlich. Beispielsweise dürfen nur bestimmte Anwender die KPIs (Key Performance Indicators) für ein Programm festlegen. Diese Berechtigungen werden logisch in Rollen gruppiert.
 
-In [!UICONTROL Cloud Manager] sind derzeit vier Rollen für Anwender definiert, die die Verfügbarkeit bestimmter Funktionen steuern:
+[!UICONTROL Cloud Manager] definiert derzeit vier Benutzerrollen, die für die Verfügbarkeit bestimmter Funktionen gelten:
 
 * Geschäftsinhaber
 * Programm-Manager
@@ -27,39 +27,39 @@ In [!UICONTROL Cloud Manager] sind derzeit vier Rollen für Anwender definiert, 
 
 ## Rollendefinitionen {#role-definitions}
 
-Diese Tabelle fasst die Rollen zusammen.
+Die folgende Tabelle fasst die Rollen in Cloud Manager zusammen.
 
 | [!UICONTROL Cloud Manager]-Rolle | Beschreibung |
-|--- |--- |
-| Geschäftsinhaber | Dieser Anwender ist verantwortlich für die Definition von KPIs, die Genehmigung von Produktionbereitstellungen und das Überschreiben von gravierenden 3-Tier-Fehlern, falls erforderlich. |
-| Programm-Manager | Dieser Anwender nutzt [!UICONTROL Cloud Manager], um die Einrichtung von Teams vorzunehmen, den Status zu überprüfen, KPIs einzusehen und ggf. gravierende 3-Tier-Fehler zu genehmigen. |
-| Bereitstellungs-Manager | Dieser Anwender verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, CI/CD-Pipeline zu bearbeiten, kann bei Bedarf gravierende 3-Tier-Fehler genehmigen und hat Zugriff auf das Git-Repository. |
-| Entwickler | Dieser Anwender entwickelt und testet benutzerdefinierten Anwendungscode, verwendet [!UICONTROL Cloud Manager] hauptsächlich zur Anzeige des Bereitstellungsstatus und für Code-Commits auf das Git-Repository zugreifen. |
-| Customer Success Engineer | Dieser Anwender unterstützt im Allgemeinen den Kundenerfolg für AMS-Kunden und interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen durchzuführen, die die Aufsicht des Customer Success Engineer (CSE) erfordern. |
-| Inhaltsautor | Dieser Anwender interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager], kann aber das [!UICONTROL Cloud Manager]-Programm switcher verwenden, um auf Adobe Experience Manager (AEM) zuzugreifen. |
+| --- | --- |
+| Geschäftsinhaber | Verantwortlich für die Definition von KPIs, die Genehmigung von Produktionsbereitstellungen und das Überschreiben wichtiger 3-Tier-Fehler bei Bedarf. |
+| Programm-Manager | Sie verwenden [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen, KPIs anzuzeigen und wichtige 3-Tier-Fehler bei Bedarf zu genehmigen. |
+| Bereitstellungs-Manager | Verwaltet Bereitstellungsvorgänge und verwendet [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen auszuführen, CI/CD-Pipelines zu bearbeiten und bei Bedarf kritische 3-Tier-Fehler zu genehmigen. Sie haben auch Zugriff auf das Git-Repository. |
+| Entwicklerin oder Entwickler | Entwickelt und testet benutzerdefinierten Anwendungscode und verwendet hauptsächlich [!UICONTROL Cloud Manager], um den Bereitstellungsstatus anzuzeigen, und kann auf das Git-Repository für Codecommits zugreifen. |
+| Customer Success Engineer | Der CSE unterstützt im Allgemeinen den Kundenerfolg für AMS-Kunden. Sie interagieren mit [!UICONTROL Cloud Manager] , um Bereitstellungen auszuführen, die von einem CSE überwacht werden müssen. |
+| Inhaltsautorin oder -autor | Sie interagieren im Allgemeinen nicht mit [!UICONTROL Cloud Manager], können jedoch den Programmschalter [!UICONTROL Cloud Manager] verwenden, um auf AEM zuzugreifen. |
 
 >[!NOTE]
 >
 >Die Entwicklerrolle in der Admin Console hat nichts mit der Entwicklerrolle in [!UICONTROL Cloud Manager] zu tun.
 
-## Verwenden der Admin Console zum Erstellen eines Profils {#using-admin-console-to-create-a-profile}
+## Erstellen eines Profils mithilfe der Admin Console {#using-admin-console-to-create-a-profile}
 
 [!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
-Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zu Adobe Admin Console finden Sie in der Dokumentation zur [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
+Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin Console finden Sie unter [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
-Um die entsprechenden rollenbasierten Berechtigungen für [!UICONTROL Cloud Manager]-Anwender bereitzustellen, muss ein Administrator in der Organisation des Kunden neue Produktprofile unter dem [!UICONTROL AEM Managed Services]-Produktkontext für jede der vier [!UICONTROL Cloud Manager]-Rollen erstellen:
+Ein Administrator muss unter dem Produktkontext [!UICONTROL AEM Managed Services] neue Produktprofile erstellen, um rollenbasierte Berechtigungen für Benutzer von [!UICONTROL Cloud Manager] zuzuweisen, die jeder der vier Rollen [!UICONTROL Cloud Manager] entsprechen.
 
 * Geschäftsinhaber
 * Bereitstellungs-Manager
 * Entwickler
 * Programm-Manager
 
-Mit der Admin Console können Sie Anwender/Gruppen für diese Produktprofile erstellen oder hinzufügen.
+Mit der Admin Console können Sie Benutzer oder Gruppen für diese Produktprofile erstellen oder hinzufügen.
 
 1. Melden Sie sich bei der Admin Console um [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
 
-1. Klicken Sie auf die Registerkarte **Übersicht** und klicken Sie auf der Karte **Produkte und Dienste** auf das Produkt, das Sie ändern möchten. Wenn es dort nicht aufgeführt ist, verwenden Sie die Registerkarte **Produkte**, um das Produkt zu suchen, und klicken Sie darauf.
+1. Klicken Sie auf die Registerkarte **Übersicht** und dann auf der Karte **Produkte und Dienste** auf das Produkt, das Sie bearbeiten möchten. Wenn es dort nicht aufgeführt ist, verwenden Sie die Registerkarte **Produkte**, um das Produkt zu suchen, und klicken Sie darauf.
 
    ![Registerkarte Übersicht Admin Console](/help/assets/admin-console-overview.png)
 

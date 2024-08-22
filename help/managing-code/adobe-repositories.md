@@ -2,10 +2,10 @@
 title: Hinzufügen von Adobe-Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager von Adobe verwaltete Repositorys erstellen.
 exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 79%
+ht-degree: 72%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 79%
 
 Erfahren Sie, wie Sie in Cloud Manager von Adobe verwaltete Repositorys erstellen.
 
-## Hinzufügen eines von Adobe verwalteten Repositorys {#add-adobe-repository}
+## Adobe-verwaltetes Repository hinzufügen {#add-adobe-repository}
 
 Im Fenster **Repositorys** können Sie ganz einfach zusätzliche von Adobe verwaltete Repositorys für Ihr Programm hinzufügen.
 

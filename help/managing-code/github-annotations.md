@@ -1,22 +1,22 @@
 ---
 title: Anmerkungen zur GitHub-Prüfung
-description: Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
+description: Erfahren Sie, wie GitHub PRs für Ihre privaten Repositorys mit Anmerkungen überprüft, um Ihnen hilfreiches Feedback zu geben.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 86%
+ht-degree: 39%
 
 ---
 
 
-# Anmerkungen zur GitHub-Prüfung {#github-annotations}
+# GitHub-Prüfungsnotationen {#github-annotations}
 
-Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
+Erfahren Sie, wie GitHub PRs für Ihre privaten Repositorys mit Anmerkungen überprüft, um Ihnen hilfreiches Feedback zu geben.
 
 ## Überblick {#overview}
 
-Wenn Sie [private Repositorys](private-repositories.md) für Ihr Cloud Manager-Programm verwenden, werden Prüfungen in GitHub automatisch bei jeder Pull-Anfrage ausgeführt. Diese werden mit nützlichen Informationen kommentiert, die Ihnen helfen, Probleme mit Ihrem Code so schnell wie möglich zu verstehen.
+Wenn Sie [private Repositorys](private-repositories.md) für Ihr Cloud Manager-Programm verwenden, werden GitHub-Prüfungen automatisch für jede Pull-Anforderung ausgeführt. Diese Prüfungen werden mit nützlichen Informationen kommentiert, die Ihnen helfen, Probleme mit Ihrem Code so schnell wie möglich zu verstehen.
 
 ![Beispiel für Anmerkungen zur GitHub-Prüfung](assets/github-check-annotations.png)
 
@@ -24,7 +24,7 @@ Von [SonarQube](/help/using/custom-code-quality-rules.md) erkannte Probleme mit 
 
 ![Beispiel für eine Anmerkung zu Code-Problemen](assets/github-check-annotations-example.png)
 
-Die genaue Codezeile mit dem Problem wird bereitgestellt und Sie können darauf klicken, um den relevanten Code anzuzeigen. Diese Anmerkungen werden für alle Code-Probleme angezeigt, nicht nur für die in der Pull-Anfrage geänderten.
+Die genaue Codezeile mit dem Problem wird bereitgestellt und Sie können darauf klicken, um den relevanten Code anzuzeigen. Diese Anmerkungen werden für alle Code-Probleme bereitgestellt, nicht nur für die Probleme, die in der Pull-Anforderung geändert wurden.
 
 ![Beispiel für eine Anmerkung zu Code-Problemen](assets/github-check-annotations-example-code.png)
 
@@ -32,12 +32,12 @@ Alle kommentierten Zeilen werden auf der Registerkarte **Geänderte Dateien** f�
 
 ![Beispiel für Anmerkungen auf der Registerkarte „Geänderte Dateien“](assets/github-check-annotations-files-changed.png)
 
-## Code-Qualitäts-Pipelines {#code-quality-pipelines}
+## Pipelines zur Code-Qualität {#code-quality-pipelines}
 
-Die Ergebnisse für die [Code-Qualität](/help/using/code-quality-testing.md) werden ebenfalls am unteren Rand der Registerkarte **Prüfungen** in der Pipeline angezeigt, die automatisch von Cloud Manager ausgelöst wird. Sie ist auch über die **Details** der Prüfung der Pull-Anfrage zugänglich.
+Die Ergebnisse der [Codequalität](/help/using/code-quality-testing.md) sind auch in der Pipeline sichtbar, die von Cloud Manager-Triggern automatisch unten auf der Registerkarte **Prüfungen** angezeigt werden. Sie ist auch über die **Details** der Prüfung der Pull-Anfrage zugänglich.
 
 ![Beispiel für Anmerkungen](assets/github-check-annotations-code-quality.png)
 
 ![Beispiel für Anmerkungen](assets/github-check-annotations-code-quality-2.png)
 
-Sie können die Probleme auch in Form einer CSV-Datei visualisieren. Dies kann durch [Anzeigen der Details der Pipeline-Ausführung in Cloud Manager](/help/using/managing-pipelines.md) abgerufen werden.
+Sie können die Probleme auch in Form einer CSV-Datei visualisieren. Diese Methode kann abgerufen werden, indem [die Details der Pipeline-Ausführung in Cloud Manager anzeigen](/help/using/managing-pipelines.md).

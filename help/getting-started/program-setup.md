@@ -2,10 +2,10 @@
 title: Einrichten von Programmen
 description: Nach dem Onboarding muss der Business Owner einige Ersteinstellungen am Programm vornehmen.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '567'
-ht-degree: 53%
+source-wordcount: '564'
+ht-degree: 49%
 
 ---
 
@@ -68,7 +68,7 @@ Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schri
 
 1. Klicken Sie auf **Aktualisieren** , um Ihre Änderungen zu speichern.
 
-Beachten Sie, dass die Änderungen sofort in Cloud Manager gespeichert werden, aber erst bei der nächsten Ausführung der Pipeline in Ihre Umgebungen übernommen werden.
+Die Änderungen werden sofort in Cloud Manager gespeichert, werden jedoch erst bei der nächsten Pipeline-Ausführung in Ihren Umgebungen übernommen.
 
 Wenn Sie noch keine Pipeline erstellt haben, finden Sie weitere Informationen unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md).
 

@@ -2,10 +2,10 @@
 title: Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '275'
-ht-degree: 94%
+source-wordcount: '281'
+ht-degree: 78%
 
 ---
 
@@ -22,7 +22,7 @@ Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 ![Übersichtsseite](/help/assets/Manage-Environ-Overview.png)
 
-## Kachel „Umgebungen“ {#environments-tile}
+## Umgebungskachel {#environments-tile}
 
 Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Produktions- und Staging-Umgebungen zusammen mit dem Status angezeigt.
 
@@ -35,7 +35,7 @@ Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung
 
 ![Kachel „Umgebungen“](/help/assets/Environments-card-new.png)
 
-## Verwalten von Umgebungen {#managing-environments-with-cloud-manager}
+## Umgebungen verwalten {#managing-environments-with-cloud-manager}
 
 Klicken Sie auf der Kachel **Umgebungen** auf die Zeile einer Umgebung, um den Bildschirm **Umgebungen** anzuzeigen.
 
@@ -54,14 +54,14 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 >[!NOTE]
 >
->Umgebungsdetails wie der Name können nach der Bereitstellung nicht mehr geändert werden.
+>Umgebungsdetails wie ein Name können nach der Bereitstellung nicht mehr geändert werden.
 
 >[!NOTE]
 >
->Wenn Sie Ihre Umgebungsprotokolle benötigen, können Sie diese von Ihrem Customer Success Engineer anfordern.
+>Wenn Sie Ihre Umgebungsprotokolle benötigen, können diese von Ihrem Customer Success Engineer angefordert werden.
 
 ## Video-Tutorial {#video-tutorial}
 
 Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-Veröffentlichungs- und Dispatcher-Instanzen bestehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/) (3 Minuten, 1 Sekunde)

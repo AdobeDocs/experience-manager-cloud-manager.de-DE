@@ -2,10 +2,10 @@
 title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '564'
-ht-degree: 83%
+source-wordcount: '561'
+ht-degree: 71%
 
 ---
 
@@ -16,7 +16,7 @@ Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt
 
 ## Benachrichtigungen in Cloud Manager {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] sendet Benachrichtigungen, wenn eine Produktions-Pipeline gestartet und abgeschlossen wird (ob erfolgreich oder nicht), zu Beginn einer Produktionsbereitstellung und wenn die Schritte **Go-Live-Genehmigung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+[!UICONTROL Cloud Manager] sendet Ihnen Benachrichtigungen, wenn eine Produktions-Pipeline zu Beginn einer Produktionsbereitstellung gestartet und abgeschlossen (erfolgreich oder nicht erfolgreich) wird. Und wenn die Schritte **Go-Live-Genehmigung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >
@@ -50,7 +50,7 @@ Klicken Sie auf das Zahnradsymbol oben in der Benachrichtigungsseitenleiste.
 
 ![Symbol für Benachrichtigungseinstellungen](/help/assets/notifications-configuration.png)
 
-Dadurch öffnet sich das Fenster **Experience Cloud-Einstellungen**, in dem Sie Benachrichtigungsabonnements auswählen und festlegen können, wie Sie Benachrichtigungen erhalten.
+Das Fenster **Experience Cloud Preferences** wird geöffnet, in dem Sie Ihre Benachrichtigungs-Abonnements und den Empfang Ihrer Benachrichtigungen definieren können.
 
 ### Abonnements {#subscriptions}
 
@@ -64,11 +64,11 @@ Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken
 
 ### Priorität {#priority}
 
-Prioritätswarnhinweise werden mit einem **HOCH**-Tag gekennzeichnet und können so konfiguriert werden, dass sie ausschließlich als Warnhinweise empfangen werden. Im Abschnitt **Priorität** können Sie festlegen, welche Kategorien als Prioritätsbenachrichtigungen eingestuft werden.
+Prioritätswarnungen werden mit dem Tag **HIGH** markiert. Sie können sie so konfigurieren, dass sie ausschließlich als Warnhinweise empfangen werden. Im Abschnitt **Priorität** können Sie festlegen, welche Kategorien als Prioritätsbenachrichtigungen eingestuft werden.
 
 ![Benachrichtigungspriorität](/help/assets/notifications-priority.png)
 
-Verwenden Sie die Dropdown-Liste, um die Liste der Kategorien zu erweitern, die als prioritär eingestuft werden. Klicken Sie auf das X neben den Kategorienamen, um sie zu entfernen.
+Verwenden Sie die Dropdown-Liste, um die Liste der Kategorien zu erweitern, die als prioritär eingestuft werden. Klicken Sie auf den `X` neben den Kategorienamen, um sie zu entfernen.
 
 ### Warnhinweise {#alerts}
 
@@ -94,4 +94,4 @@ Standardmäßig werden keine E-Mails versendet. Sie haben für den E-Mail-Empfan
 * Täglich
 * Wöchentlich
 
-Wenn die **sofortige Benachrichtigung** ausgewählt ist, werden für jede Benachrichtigung sofort E-Mails versendet. Bei einer **täglichen Zusammenfassung** können Sie die Uhrzeit und bei einer **wöchentlichen Zusammenfassung** können Sie den Tag und die Uhrzeit des Versands auswählen.
+Wenn **Sofortige Benachrichtigungen** ausgewählt sind, werden für jede Benachrichtigung sofort E-Mails gesendet. Bei einer **täglichen Zusammenfassung** können Sie die Uhrzeit und bei einer **wöchentlichen Zusammenfassung** können Sie den Tag und die Uhrzeit des Versands auswählen.

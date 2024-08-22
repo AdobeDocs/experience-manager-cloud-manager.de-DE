@@ -2,10 +2,10 @@
 title: Überwachen von Umgebungen
 description: Informationen zum Überwachen von Umgebungen in Cloud Manager.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 33%
+source-wordcount: '910'
+ht-degree: 31%
 
 ---
 
@@ -60,7 +60,7 @@ Um die Details bestimmter Metriken anzuzeigen, klicken Sie auf eine der Kategori
 
 Die Navigation auf der linken Seite zeigt die verfügbaren Metriken innerhalb der aktuell ausgewählten Kategorie an, für die Daten für die aktuell ausgewählte Umgebung und Instanzen vorhanden sind.
 
-In einem einzelnen Diagramm werden der Status und ein Graph der Daten zusammen mit den Schwellenwerten angezeigt. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
+Ein einzelnes Diagramm zeigt den Status und ein Diagramm der Daten im Zeitverlauf zusammen mit den Schwellenwerten an. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
 
 ![Metrikdiagramm](/help/assets/Monitoring_Graphs1.png)
 

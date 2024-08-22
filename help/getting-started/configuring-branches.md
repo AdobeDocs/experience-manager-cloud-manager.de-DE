@@ -2,10 +2,10 @@
 title: Konfigurieren von Verzweigungen
 description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen Ihres Anwendungs-Codes verwendet wird.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '324'
-ht-degree: 14%
+ht-degree: 4%
 
 ---
 
@@ -16,7 +16,7 @@ Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von d
 
 ## Einrichten der ersten Verzweigung in Git {#setting-up-your-first-branch-in-git}
 
-Ein einziges, zunächst leeres Git-Repository wird für jedes Programm [bereitgestellt](/help/requirements/environment-provisioning.md), das in Cloud Manager eingebunden ist. Dieses Repository kann so viele Verzweigungen enthalten, wie Ihr Entwicklungsprozess erfordert. Es muss jedoch mindestens eine Verzweigung vorhanden sein, die von der CI/CD-Pipeline verwendet wird, um Anwendungscode für die Staging- und Produktionsumgebung bereitzustellen. Als Best Practice gilt, für diese Verzweigung den Namen `main` zu verwenden. Praktisch ist dieser Ansatz das Standardverhalten von Git-Clients beim Einrichten neuer Projekte.
+Für jedes in Cloud Manager integrierte Programm wird ein einziges, zunächst leeres Git-Repository [bereitgestellt. ](/help/requirements/environment-provisioning.md) Dieses Repository kann so viele Verzweigungen enthalten, wie Ihr Entwicklungsprozess erfordert. Es muss jedoch mindestens eine Verzweigung vorhanden sein, die von der CI/CD-Pipeline verwendet wird, um Anwendungscode für die Staging- und Produktionsumgebung bereitzustellen. Als Best Practice gilt, für diese Verzweigung den Namen `main` zu verwenden. Praktisch ist dieser Ansatz das Standardverhalten von Git-Clients beim Einrichten neuer Projekte.
 
 Wenn Sie beispielsweise ein neues Projekt einrichten, führen Sie eine Reihe von Befehlen ähnlich der folgenden aus.
 
@@ -50,7 +50,7 @@ $ git commit -m "initial commit"
 
 >[!NOTE]
 >
->Es ist nicht erforderlich, den Befehlszeilen-Client zu verwenden. Es gibt eine Vielzahl grafischer Git-Clients, die entweder als eigenständige Anwendungen oder als Teil einer integrierten Entwicklungsumgebung (IDE) wie Eclipse oder IntelliJ verfügbar sind. Sofern das Client-Programm das Git mit HTTPS unterstützt, sollte es mit [!UICONTROL Cloud Manager] kompatibel sein.
+>Es ist nicht erforderlich, den Befehlszeilen-Client zu verwenden. Es gibt eine Vielzahl grafischer Git-Clients, die entweder als eigenständige Anwendungen oder als Teil einer integrierten Entwicklungsumgebung (IDE) wie Eclipse oder IntelliJ verfügbar sind. Solange die Client-Anwendung Git mit HTTPS unterstützt, sollte sie mit [!UICONTROL Cloud Manager] kompatibel sein.
 
 ## Den ersten Zweig verschieben {#pushing-your-first-branch}
 
