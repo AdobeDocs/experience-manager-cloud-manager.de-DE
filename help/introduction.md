@@ -18,8 +18,8 @@ Hier erfahren Sie mehr über Cloud Manager für AMS (Adobe Managed Services) und
 >id="aemcloud_cloudmanager_introduction"
 >title="Einführung in Cloud Manager für AMS"
 >abstract="Ermöglicht Organisationen die Selbstverwaltung von Adobe Experience Manager in der Cloud. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen."
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/programs#cloud-manager" text="Programme erstellen"
->additional-url="https://experienceleague.adobe.com/en/docs/experience-manager-learn/cloud-service/cloud-manager/environments#cloud-manager" text="Umgebungen erstellen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/cloud-manager/programs#cloud-manager" text="Programme erstellen"
+>additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/cloud-manager/environments#cloud-manager" text="Umgebungen erstellen"
 
 ## Einführung {#introduction}
 
