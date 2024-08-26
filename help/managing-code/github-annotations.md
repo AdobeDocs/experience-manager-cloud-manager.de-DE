@@ -5,7 +5,7 @@ exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '251'
-ht-degree: 39%
+ht-degree: 47%
 
 ---
 
@@ -24,7 +24,7 @@ Von [SonarQube](/help/using/custom-code-quality-rules.md) erkannte Probleme mit 
 
 ![Beispiel für eine Anmerkung zu Code-Problemen](assets/github-check-annotations-example.png)
 
-Die genaue Codezeile mit dem Problem wird bereitgestellt und Sie können darauf klicken, um den relevanten Code anzuzeigen. Diese Anmerkungen werden für alle Code-Probleme bereitgestellt, nicht nur für die Probleme, die in der Pull-Anforderung geändert wurden.
+Ihnen wird die genaue Code-Zeile mit dem Problem angegeben und Sie können darauf klicken, um den relevanten Code anzuzeigen. Diese Anmerkungen werden für alle Code-Probleme bereitgestellt, nicht nur für die Probleme, die in der Pull-Anforderung geändert wurden.
 
 ![Beispiel für eine Anmerkung zu Code-Problemen](assets/github-check-annotations-example-code.png)
 

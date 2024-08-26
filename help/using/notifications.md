@@ -5,7 +5,7 @@ exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '561'
-ht-degree: 71%
+ht-degree: 81%
 
 ---
 
@@ -38,11 +38,11 @@ Die Registerkarte **Ankündigungen** enthält Ankündigungen zu Adobe-Produkten.
 
 Klicken Sie auf eine Benachrichtigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Bereitstellungen verknüpft sind, führen Sie zu den Details dieser Aktivität, beispielsweise dem Pipeline-Ausführungsfenster.
 
-Klicken Sie unten im Bedienfeld auf die Option **Alle anzeigen** , um alle Mitteilungen in Ihrem Posteingang anzuzeigen.
+Klicken Sie unten im Bedienfeld auf die Option **Alle anzeigen**, um alle Mitteilungen in Ihrem Posteingang anzuzeigen.
 
-Klicken Sie unten im Bedienfeld auf die Option **Alle als gelesen markieren** , um alle ungelesenen Benachrichtigungen als gelesen zu markieren und das Glockensymbol-Badging zu löschen.
+Klicken Sie unten im Bedienfeld auf die Option **Alle als gelesen markieren**, um alle ungelesenen Benachrichtigungen als gelesen zu markieren und das aktivierte Glockensymbol zurückzusetzen.
 
-## Benachrichtigungskonfiguration {#configuration}
+## Konfiguration von Benachrichtigungen {#configuration}
 
 Sie können einstellen, wie Sie welche Benachrichtigungen erhalten möchten.
 
@@ -58,7 +58,7 @@ Mit den Abonnements legen Sie fest, welche Benachrichtigungen Sie für welche Pr
 
 ![Abonnements für Benachrichtigungen](/help/assets/notifications-subscriptions.png)
 
-Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken Sie neben einem Produkt auf **Anpassen** , um die Benachrichtigungstypen zu definieren, die Sie für dieses Produkt erhalten.
+Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken Sie neben einem Produkt auf **Anpassen**, um festzulegen, welche Arten von Benachrichtigungen Sie für dieses Produkt erhalten möchten.
 
 ![Anpassung des Benachrichtigungsabonnements](/help/assets/notifications-subscriptions-customize.png)
 

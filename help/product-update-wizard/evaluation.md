@@ -6,12 +6,12 @@ exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
 source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
 workflow-type: tm+mt
 source-wordcount: '279'
-ht-degree: 17%
+ht-degree: 31%
 
 ---
 
 
-# Testphase {#evaluation}
+# Auswertungsphase {#evaluation}
 
 Die erste Phase im Assistenten für Produktaktualisierungen ist die Phase **[!UICONTROL Evaluierung]**, in der die Aktualisierungskomplexität mit dem Musterdetektor direkt im Assistenten bewertet wird. Am Ende dieses Schritts können Sie auf den Bewertungsbericht zugreifen.
 
@@ -27,19 +27,19 @@ Dieser Bericht dient als Bewertungsgrundlage für den erforderlichen Entwicklung
 >
 >Weitere Informationen zum Musterdetektor finden Sie unter [Bewertung der Komplexität der Aktualisierung mit dem Musterdetektor](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/implementing/deploying/upgrading/pattern-detector).
 
-## Testbericht ausführen {#running}
+## Ausführen des Auswertungsberichts {#running}
 
 Der Musterdetektor kann in jeder Umgebung ausgeführt werden. Um jedoch die Erkennungsrate zu erhöhen und Verlangsamungen bei geschäftskritischen Instanzen zu vermeiden, führt Cloud Manager sie in der Staging-Umgebung der Autoreninstanz aus.
 
-**So führen Sie den Bewertungsbericht aus:**
+**So führen Sie den Auswertungsbericht aus:**
 
-1. Starten Sie den Assistenten wie im Dokument [Assistent für Produktaktualisierungen](/help/product-update-wizard/overview.md) beschrieben.
+1. Starten Sie den Assistenten, wie unter [Assistent für Produktaktualisierungen](/help/product-update-wizard/overview.md) beschrieben.
 
-1. Klicken Sie auf **[!UICONTROL Test ausführen]**.
+1. Klicken Sie auf **[!UICONTROL Auswertung durchführen]**.
 
    ![Bewertung ausführen](/help/assets/Run-Evaluation.png)
 
-1. Über den Assistenten werden Sie über den Status Ihrer Aktion informiert. Beachten Sie bei der Erstellung des Auswertungsberichts den Wert **Gestartet** oder **Abgeschlossen**.
+1. Über den Assistenten werden Sie über den Status Ihrer Aktion informiert. Während der Erstellung des Auswertungsberichts wird **In Bearbeitung** oder **Abgeschlossen** angezeigt.
 
 1. Nachdem der Bericht generiert wurde, können Sie auf **[!UICONTROL Bericht herunterladen]** klicken, um eine Kopie zu speichern.
 

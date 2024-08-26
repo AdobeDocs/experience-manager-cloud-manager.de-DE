@@ -5,14 +5,14 @@ exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1247'
-ht-degree: 47%
+ht-degree: 58%
 
 ---
 
 
-# Produktions-Pipelines konfigurieren {#configuring-production-pipelines}
+# Konfigurieren von Produktions-Pipelines {#configuring-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie weitere Informationen unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
+Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
 
 ## Übersicht {#overview}
 
@@ -21,7 +21,7 @@ Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konf
 * **Produktions-Pipelines** - Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die aus einer Reihe aufeinander abgestimmter Schritte besteht, um Quellcode aus Ihrem Git-Repository bis zur Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
-Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zum Konfigurieren von Nicht-Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md) .
+Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zur Konfiguration von produktionsfremden Pipelines finden Sie unter [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
 
 Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline verantwortlich. Die Pipeline-Konfiguration besteht aus folgenden Schritten:
 
@@ -33,7 +33,7 @@ Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline vera
 >
 >Eine Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
 
-## Neue Produktions-Pipeline hinzufügen {#adding-production-pipeline}
+## Hinzufügen einer neuen Produktions-Pipeline {#adding-production-pipeline}
 
 Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichten Ihres Programms verwendet haben und über mindestens eine Umgebung verfügen, können Sie eine Produktions-Pipeline hinzufügen.
 
@@ -115,7 +115,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
            >[!TIP]
            >
-           >Unter [Code-Bereitstellung](/help/using/code-deployment.md) erfahren Sie, wie Sie den Bereitstellungsplan festlegen oder die Pipeline sofort ausführen.
+           >Weitere Informationen dazu, wie Sie einen Bereitstellungsplan festlegen oder die Pipeline sofort ausführen können, finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
 
             * **CSE-Überwachung verwenden** - Wenn diese Option ausgewählt ist, ist ein CSE (Customer Success Engineer) damit beauftragt, die eigentliche Bereitstellung zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Bereitstellungs-Manager** folgende Optionen.
 
@@ -126,11 +126,11 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
          * **Dispatcher-Konfiguration** - Definieren Sie die Dispatcher-Konfiguration für Ihre Produktionsumgebung. Die Optionen entsprechen den Optionen für die Staging-Umgebung.
 
-1. Klicken Sie auf **Weiter** , um zur Registerkarte **Staging-Tests** zu wechseln, wo Sie je nachdem, welche Produkte Sie lizenziert haben, Leistungstests für AEM Sites und AEM Assets konfigurieren können.
+1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Dort können Sie abhängig von den von Ihnen lizenzierten Produkten Leistungstests für AEM Sites und AEM Assets konfigurieren.
 
    >[!TIP]
    >
-   >Weitere Informationen zu den auf der Registerkarte **Staging-Tests** verfügbaren Optionen finden Sie unter [Tests der Codequalität](/help/using/code-quality-testing.md#performance-testing) .
+   >Weitere Informationen zu den verfügbaren Optionen auf der Registerkarte **Staging-Tests** finden Sie unter [Testen der Code-Qualität](/help/using/code-quality-testing.md#performance-testing).
 
    1. Im Abschnitt **Sites Content Delivery/Distributed Load Weight** konfigurieren Sie die Site-Leistungstests anhand der Gewichtung von Seitenanfragen zwischen drei Seitensätzen. Sie können die Seitensätze nach Bedarf aktivieren oder deaktivieren.
 
@@ -140,7 +140,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
       ![Sites-Lastgewichtung](/help/assets/configure-pipelines/add-prod5.png)
 
-   1. Im Abschnitt **Assets-Leistungstestverteilung** definieren Sie die Testverteilung von Bildern und PDF und definieren Ihre eigenen Testassets.
+   1. Im Abschnitt **Asset-Leistungstestverteilung** definieren Sie sowohl die Testverteilung von Bildern und PDFs als auch eigene Test-Assets.
 
       * **Bilder**: Stellen Sie den Schieberegler ein, um die Aufteilung des Tests zwischen Bildern und PDFs anzupassen.
       * **PDFs**: Stellen Sie den Schieberegler ein, um die Aufteilung des Tests zwischen Bildern und PDFs anzupassen.
@@ -157,7 +157,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem Sie die Pipeline konfiguriert haben, stellen Sie Ihren Code bereit. Weitere Informationen finden Sie unter [Codebereitstellung](/help/using/code-deployment.md) .
+Nachdem Sie die Pipeline konfiguriert haben, stellen Sie Ihren Code bereit. Weitere Informationen finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
 
 ## Video-Tutorial {#video-tutorial-one}
 

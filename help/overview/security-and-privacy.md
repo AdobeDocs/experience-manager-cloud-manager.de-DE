@@ -5,7 +5,7 @@ exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '202'
-ht-degree: 60%
+ht-degree: 70%
 
 ---
 
@@ -18,7 +18,7 @@ Erfahren Sie mehr über die Sicherheit und den Datenschutz von Code- und Artefak
 
 [!UICONTROL Cloud Manager] verfügt über vorkonfigurierte Rollen mit entsprechenden Berechtigungen.
 
-Informationen zu den möglichen Rollen, die Sie in der Admin Console und den Benutzerrollenberechtigungen zuweisen können, finden Sie unter [Rollenbasierte Berechtigungen](/help/requirements/role-based-permissions.md).
+Informationen zu den möglichen Rollen, die Sie in der Admin Console und in den Benutzerrollenberechtigungen zuweisen können, finden Sie unter [Rollenbasierte Berechtigungen](/help/requirements/role-based-permissions.md).
 
 ## Ressourcenisolation {#resource-isolation}
 

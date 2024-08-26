@@ -5,7 +5,7 @@ exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '748'
-ht-degree: 52%
+ht-degree: 56%
 
 ---
 
@@ -18,7 +18,7 @@ Dieses Dokument enthält Antworten auf die am häufigsten gestellten Fragen zu C
 
 Ja. Sie müssen die `maven-toolchains-plugin` mit den richtigen Einstellungen für Java 11 hinzufügen.
 
-* Dieser Prozess wird [hier](/help/getting-started/using-the-wizard.md) dokumentiert.
+* Dieser Vorgang ist [hier](/help/getting-started/using-the-wizard.md) dokumentiert.
 * Ein Beispiel finden Sie unter dem Beispielprojektcode [WKND](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über das maven-scr-plugin fehl. Was kann ich tun? {#maven-src-plugin}
@@ -29,7 +29,7 @@ Ihr AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 au
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
 ```
 
-Anweisungen zum Entfernen dieses Plug-ins finden Sie in [hier](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
+Anweisungen zum Entfernen dieses Plug-ins finden Sie [hier](https://cqdump.joerghoh.de/2019/01/03/from-scr-annotations-to-osgi-annotations/).
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über RequireJavaVersion fehl. Was kann ich tun? {#requirejavaversion}
 
@@ -72,7 +72,7 @@ Weitere Informationen zur Versionsverwaltung finden Sie [hier dokumentiert](http
 
 ## Wie funktioniert die Paket- und Bundle-Versionierung für Staging- und Produktionsbereitstellungen? {#staging-production}
 
-In Staging- und Produktionsimplementierungen wird eine automatische Version [generiert, wie hier dokumentiert](/help/managing-code/maven-project-version.md).
+Bei Staging- und Produktionsbereitstellungen wird, wie [hier beschrieben](/help/managing-code/maven-project-version.md), eine automatische Version generiert.
 
 Für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstellungen legen Sie eine korrekte dreiteilige Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie sie in der Produktion bereitstellen.
 

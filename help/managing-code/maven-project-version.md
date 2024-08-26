@@ -5,7 +5,7 @@ exl-id: a1d676e0-27cc-4b0d-8799-527c0520946a
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '249'
-ht-degree: 37%
+ht-degree: 43%
 
 ---
 
@@ -18,7 +18,7 @@ Erfahren Sie, wie Maven die Projektversionierung in Cloud Manager handhabt.
 
 Für Staging- und Produktionsbereitstellungen generiert Cloud Manager eine eindeutige, inkrementierende Version.
 
-Diese Version wird auf der Seite mit Details zur Pipeline-Ausführung und auf der Aktivitätsseite angezeigt. Wenn ein Build ausgeführt wird, wird das Maven-Projekt aktualisiert, um diese Version zu verwenden. Ein Tag wird im Git-Repository mit dieser Version als Namen erstellt.
+Diese Version wird auf der Seite mit den Details zur Pipeline-Ausführung und auf der Aktivitätsseite angezeigt. Wenn ein Build ausgeführt wird, wird das Maven-Projekt aktualisiert, um diese Version zu verwenden. Ein Tag wird im Git-Repository mit dieser Version als Namen erstellt.
 
 Wenn die Originalversion des Projekts bestimmte Kriterien erfüllt, führt die aktualisierte Maven-Projektversion sowohl die Originalversion des Projekts als auch die von Cloud Manager generierte Version zusammen. Das Tag verwendet jedoch immer die generierte Version. Für diese Zusammenführung muss die ursprüngliche Projektversion mit genau drei Versionssegmenten erstellt werden (z. B. `1.0.0` oder `1.2.3`, nicht jedoch `1.0` oder `1`) und die Originalversion darf nicht auf `-SNAPSHOT` enden.
 

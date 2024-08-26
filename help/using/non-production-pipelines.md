@@ -1,17 +1,17 @@
 ---
-title: Nicht-Produktions-Pipelines konfigurieren
+title: Konfigurieren produktionsfremder Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '685'
-ht-degree: 55%
+ht-degree: 64%
 
 ---
 
-# Nicht-Produktions-Pipelines konfigurieren {#configuring-non-production-pipelines}
+# Konfigurieren produktionsfremder Pipelines {#configuring-non-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie zunächst einen konzeptionellen Überblick darüber erhalten möchten, wie Pipelines in Cloud Manager funktionieren, finden Sie weitere Informationen unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
+Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
 
 ## Übersicht {#overview}
 
@@ -20,7 +20,7 @@ Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen un
 * **Produktions-Pipelines**: Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
-Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Informationen zum Konfigurieren von Produktions-Pipelines finden Sie im Dokument [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) .
+Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Informationen zur Konfiguration von Produktions-Pipelines finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md).
 
 Es gibt zwei Arten von produktionsfremden Pipelines:
 
@@ -31,13 +31,13 @@ Es gibt zwei Arten von produktionsfremden Pipelines:
 >
 >Eine Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md) .
 
-## Hinzufügen einer Nicht-Produktions-Pipeline {#add-non-production-pipeline}
+## Hinzufügen einer produktionsfremden Pipeline {#add-non-production-pipeline}
 
 Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingerichtet und mindestens eine Umgebung haben, können Sie eine produktionsfremde Pipeline hinzufügen, indem Sie die folgenden Schritte ausführen.
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
-1. Rufen Sie die Karte „Pipelines“ über den Startbildschirm von Cloud Manager auf. Klicken Sie auf **Hinzufügen** und wählen Sie dann **Nicht-Produktions-Pipeline hinzufügen** aus.
+1. Rufen Sie die Karte „Pipelines“ über den Startbildschirm von Cloud Manager auf. Klicken Sie auf **Hinzufügen** und wählen Sie **Produktionsfremde Pipeline hinzufügen** aus.
 
    ![Produktionsfremde Pipeline hinzufügen](/help/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
@@ -81,7 +81,7 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Codebereitstellung](/help/using/code-deployment.md) .
+Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
 
 ## Video-Tutorial {#video-tutorial}
 

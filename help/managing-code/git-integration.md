@@ -5,7 +5,7 @@ exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '351'
-ht-degree: 18%
+ht-degree: 21%
 
 ---
 
@@ -30,7 +30,7 @@ Diese Videoreihe setzt grundlegende Kenntnisse der Git- und Quellcodeverwaltung 
 
 Die Schritte und Benennungskonventionen, die in dieser Videoreihe beschrieben werden, stellen einige Best Practices für die Arbeit mit einem kundenverwalteten Git-Repository und Cloud Manager dar. Es wird erwartet, dass die dargelegten Konventionen und Arbeitsabläufe für einzelne Entwicklungsteams angepasst werden.
 
-Eine vollständige Übersicht über Cloud Manager finden Sie unter [Einführung in Cloud Manager](/help/introduction.md).
+Einen vollständigen Überblick über Cloud Manager liefert Ihnen die [Einführung in Cloud Manager](/help/introduction.md).
 
 ## Erstsynchronisierung {#initial-sync}
 

@@ -5,7 +5,7 @@ exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '641'
-ht-degree: 50%
+ht-degree: 68%
 
 ---
 
@@ -53,11 +53,11 @@ Sie können das Repository im Fenster auswählen und auf die Schaltfläche mit d
 
 ## Repositorys hinzufügen {#adding-repositories}
 
-Klicken Sie im Fenster **Repositorys** auf die Schaltfläche **Repository hinzufügen** , um den Assistenten **Repository hinzufügen** zu starten.
+Klicken Sie im Fenster **Repositorys** auf die Schaltfläche **Repository hinzufügen**, um den Assistenten **Repository hinzufügen** zu starten.
 
 ![Assistent „Repository hinzufügen“](assets/add-repository-wizard.png)
 
-Cloud Manager unterstützt beide Repositorys, die vom Adobe verwaltet werden (**Adobe-Repository**), sowie Ihre eigenen, selbst verwalteten Repositorys (**Privates Repository**). Die erforderlichen Felder unterscheiden sich je nach Repository-Typ, den Sie hinzufügen möchten.
+Cloud Manager unterstützt sowohl Repositorys, die von Adobe verwaltet werden (**Adobe-Repository**), als auch Ihre eigenen, selbst verwalteten Repositorys (**Privates Repository**). Die erforderlichen Felder unterscheiden sich je nach Repository-Typ, den Sie hinzufügen möchten.
 
 Siehe [Hinzufügen von Adobe-Repositorys in Cloud Manager](adobe-repositories.md).
 Siehe [Hinzufügen privater Repositorys in Cloud Manager](private-repositories.md).
@@ -70,11 +70,11 @@ Siehe [Hinzufügen privater Repositorys in Cloud Manager](private-repositories.m
 
 ## Zugriff auf Repo-Informationen {#repo-info}
 
-Beim Anzeigen Ihrer Repositorys im Fenster **Repositorys** können Sie die Details zum programmgesteuerten Zugriff auf die von Adobe verwalteten Repositorys anzeigen, indem Sie in der Symbolleiste auf die Schaltfläche **Repo Info aufrufen** klicken.
+Wenn Sie sich Ihre Repositorys im Fenster **Repositorys** ansehen, können Sie die Details zum programmgesteuerten Zugriff auf die von Adobe verwalteten Repositorys anzeigen, indem Sie in der Symbolleiste auf die Schaltfläche **Auf Repository-Informationen zugreifen** klicken.
 
 ![Repository-Informationen](assets/access-repo-info.png)
 
-Das Fenster **Repository-Informationen** mit den Details wird geöffnet. Weitere Informationen zum Zugriff auf Repository-Informationen finden Sie unter [Zugreifen auf Repository-Informationen](accessing-repositories.md).
+Das Fenster **Repository-Informationen** mit den Details wird geöffnet. Weitere Informationen zum Zugreifen auf Repository-Informationen finden Sie unter [Zugriff auf Repository-Informationen](accessing-repositories.md).
 
 ## Zweige überprüfen {#check-branches}
 
@@ -92,7 +92,7 @@ Die Aktion **Repository-URL kopieren** kopiert die URL des im Fenster **Reposito
 
 ## Anzeigen und Aktualisieren {#view-update}
 
-Die Aktion **Anzeigen/Aktualisieren** öffnet das Dialogfeld **Repository aktualisieren**. Damit können Sie die Vorschau **Name** und **Repository-URL-Vorschau** anzeigen und die **Beschreibung** des Repositorys aktualisieren.
+Die Aktion **Anzeigen/Aktualisieren** öffnet das Dialogfeld **Repository aktualisieren**. Dort können Sie den **Namen** und die **Repository-URL-Vorschau** anzeigen und die **Beschreibung** des Repositorys aktualisieren.
 
 ![Anzeigen und Aktualisieren von Repository-Informationen](assets/update-repository.png)
 
@@ -106,4 +106,4 @@ Wenn ein Repository in Cloud Manager gelöscht wird, wird es als gelöscht marki
 
 Wenn Sie versuchen, ein neues Repository zu erstellen, nachdem Sie ein Repository mit demselben Namen gelöscht haben, erhalten Sie die Fehlermeldung `An error has occurred while trying to create repository. Contact your CSE or Adobe Support.`
 
-Wenn Sie diese Fehlermeldung erhalten, wenden Sie sich an den Adobe-Support , damit dieser beim Umbenennen des gelöschten Repositorys helfen kann oder einen anderen Namen für Ihr neues Repository wählen kann.
+Wenn Sie diese Fehlermeldung erhalten, wenden Sie sich an den Adobe-Support, damit dieser Ihnen beim Umbenennen des gelöschten Repositorys helfen kann, oder wählen Sie einen anderen Namen für Ihr neues Repository.

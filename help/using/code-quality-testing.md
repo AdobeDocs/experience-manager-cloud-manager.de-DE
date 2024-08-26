@@ -5,7 +5,7 @@ exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '2764'
-ht-degree: 91%
+ht-degree: 96%
 
 ---
 
@@ -50,7 +50,7 @@ Es gibt mehr als 100 Regeln, wobei generische Java-Regeln und AEM-spezifische R
 
 >[!TIP]
 >
->Sie können die vollständige Liste der Regeln [über diesen Link ](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
+>Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
 Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
 
@@ -71,7 +71,7 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 
 >[!NOTE]
 >
->Weitere Informationen zu den benutzerspezifischen Regeln für die Codequalität, die von [!UICONTROL Cloud Manager] ausgeführt werden, finden Sie unter [Benutzerspezifische Regeln für die Codequalität](custom-code-quality-rules.md).
+>Weitere Informationen zu den Qualitätsregeln für benutzerspezifischen Code, die von [!UICONTROL Cloud Manager] ausgeführt werden, finden Sie unter [Qualitätsregeln für benutzerspezifischen Code](custom-code-quality-rules.md).
 
 ### Umgang mit falsch-positiven Werten {#dealing-with-false-positives}
 
@@ -172,7 +172,7 @@ Drei Seitensätze wählen die Seiten aus. Cloud Manager verwendet die Zugriffspr
 
 ##### Verteilung des Traffics auf die ausgewählten Seitensätze {#distribution-of-traffic}
 
-Auf der Registerkarte **Tests** Ihrer [Pipeline-Konfiguration](/help/using/production-pipelines.md) können Sie zwischen einem und allen drei Sets wählen. Die Verteilung des Traffics basiert auf der Anzahl der ausgewählten Sets. Das heißt, wenn alle drei ausgewählt sind, werden in jeden Satz 33 % der gesamten Seitenansichten eingefügt. Wenn zwei ausgewählt sind, werden 50 % zu jedem Satz hinzugefügt. Wenn einer ausgewählt ist, werden 100 % des Traffics zu diesem Satz hinzugefügt.
+Sie können auf der Registerkarte **Testen** der [Pipeline-Konfiguration](/help/using/production-pipelines.md) zwischen einem Satz und allen drei Sätzen wählen. Der Traffic wird basiert auf der Anzahl der ausgewählten Sätze verteilt. Das heißt, wenn alle drei ausgewählt sind, werden in jeden Satz 33 % der gesamten Seitenansichten eingefügt. Wenn zwei ausgewählt sind, werden 50 % zu jedem Satz hinzugefügt. Wenn einer ausgewählt ist, werden 100 % des Traffics zu diesem Satz hinzugefügt.
 
 Betrachten wir dieses Beispiel.
 
@@ -188,7 +188,7 @@ Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
 #### Test und Bericht {#testing-reporting}
 
-Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten über einen 30-minütigen Testzeitraum hinweg standardmäßig als nicht authentifizierter Benutzer auf dem Staging-Veröffentlichungs-Server angefordert werden. Sie misst die von virtuellen Benutzern generierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) für jede Seite und verschiedene Metriken auf Systemebene (CPU, Speicher, Netzwerkdaten) für alle Instanzen.
+Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten über einen 30-minütigen Testzeitraum hinweg standardmäßig als nicht authentifizierter Benutzer auf dem Staging-Veröffentlichungs-Server angefordert werden. Es werden die von virtuellen Benutzenden generierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) für jede Seite sowie verschiedene Metriken auf Systemebene (CPU, Arbeitsspeicher, Netzwerkdaten) für alle Instanzen gemessen.
 
 In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix unter Verwendung des dreistufigen Gating-Systems.
 
@@ -250,7 +250,7 @@ Wenn beispielsweise eine Aufspaltung von 70/30 verwendet wird und pro Minute 10 
 
 #### Test und Bericht {#testing-and-reporting}
 
-Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei den Benutzernamen und das Kennwort, die vom CSE festgelegt wurden. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [Open-Source-Bibliothek](https://github.com/adobe/toughday2) geschrieben. Sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene werden über die 30-minütige Testdauer gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
+Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei den Benutzernamen und das Kennwort, die vom CSE festgelegt wurden. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [Open-Source-Bibliothek](https://github.com/adobe/toughday2) geschrieben. Während des 30-minütigen Tests werden sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
 
 >[!TIP]
 >

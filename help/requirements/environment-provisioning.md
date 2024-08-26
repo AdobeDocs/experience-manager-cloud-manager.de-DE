@@ -5,7 +5,7 @@ exl-id: eade4255-89b5-4c65-a498-1c6d4e8c73ff
 source-git-commit: 4c977cdfbef438fdabd90ee104d98887f2467b49
 workflow-type: tm+mt
 source-wordcount: '297'
-ht-degree: 27%
+ht-degree: 36%
 
 ---
 
@@ -20,7 +20,7 @@ Während des Onboarding-Prozesses stellt Adobe automatisch alle von Ihnen erworb
 
 ## Willkommens-E-Mail {#welcome-email}
 
-Nach Abschluss der Umgebungsbereitstellung erhält der vorgesehene Kundenadministrator eine Begrüßungs-E-Mail mit der Bestätigung, dass ihm Zugriff auf Adobe [!UICONTROL Experience Cloud] gewährt wurde. Die Begrüßungs-E-Mail enthält detaillierte Informationen zu den ersten Schritten mit den [!UICONTROL Experience Cloud]-Diensten, den [!UICONTROL AEM Managed Services]-Cloud-Umgebungen und dem [!UICONTROL Cloud Manager]-Self-Service-Portal. Zudem enthält die E-Mail wichtige Informationen wie Kontaktinformationen für Ihren Customer Success Engineer (CSE), Quellen für Support-Ressourcen, Foren, häufig gestellte Fragen und vieles mehr. In der Liste der in der E-Mail bereitgestellten Ressourcen finden Sie auch Details zum Zugriff auf [!UICONTROL Cloud Manager] für Ihre AEM Cloud-Umgebungen.
+Nach Abschluss der Umgebungsbereitstellung erhält der vorgesehene Kundenadministrator eine Begrüßungs-E-Mail mit der Bestätigung, dass ihm Zugriff auf Adobe [!UICONTROL Experience Cloud] gewährt wurde. Die Begrüßungs-E-Mail enthält detaillierte Informationen zu den ersten Schritten mit [!UICONTROL Experience Cloud]-Services, [!UICONTROL AEM Managed Services]-Cloud-Umgebungen und dem [!UICONTROL Cloud Manager]-Self-Service-Portal. Zudem enthält die E-Mail wichtige Informationen wie Kontaktinformationen für Ihren Customer Success Engineer (CSE), Quellen für Support-Ressourcen, Foren, häufig gestellte Fragen und vieles mehr. In der Liste der in der E-Mail bereitgestellten Ressourcen finden Sie auch Details zum Zugriff auf [!UICONTROL Cloud Manager] für Ihre AEM Cloud-Umgebungen.
 
 ## Nächste Schritte {#next-steps}
 

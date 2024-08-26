@@ -5,12 +5,12 @@ exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '293'
-ht-degree: 30%
+ht-degree: 55%
 
 ---
 
 
-# Erstmalige Anmeldung {#first-time-login}
+# Erste Anmeldung {#first-time-login}
 
 Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingerichtet haben, können Sie sie verwenden.
 
@@ -24,15 +24,15 @@ Nachdem Sie die allgemeine Konfiguration für [!UICONTROL Cloud Manager] eingeri
 
    ![Cloud Manager-Konsole](/help/assets/cloud-manager-console.png)
 
-1. Klicken Sie auf die Programmkarte, um zur Cloud Manager-Seite **Überblick** zu navigieren.
+1. Klicken Sie auf die Karte Ihres Programms, um zur Seite **Übersicht** von Cloud Manager zu navigieren.
 
 1. In Cloud Manager wird die Seite **Übersicht** geöffnet.
 
    ![Cloud Manager-Übersichtsseite](/help/assets/program-overview-page.png)
 
-1. Wenn Ihr Programm noch nicht eingerichtet ist, klicken Sie im [Aktionsaufruf](/help/getting-started/navigation.md#cta) auf **Programm einrichten** , um Ihre Programmbeschreibung einzurichten und wichtige Leistungsindikatoren (KPIs) zu definieren. Wenn Ihr Programm bereits eingerichtet ist, kann der Aktionsaufruf weitere Schritte anbieten.
+1. Wenn Ihr Programm noch nicht eingerichtet ist, klicken Sie im [Aktionsaufruf](/help/getting-started/navigation.md#cta) auf **Programm einrichten**, um Ihre Programmbeschreibung festzulegen und Key Performance Indicators (KPIs) zu definieren. Wenn Ihr Programm bereits eingerichtet ist, bietet der Aktionsaufruf möglicherweise weitere Schritte an.
 
-Sie können mit dem Dokument [Programmeinrichtung](/help/getting-started/program-setup.md) fortfahren, um die nächsten Schritte beim Einrichten des Programms zu erfahren.
+Im Dokument [Einrichten von Programmen](/help/getting-started/program-setup.md) werden die nächsten Schritte zur Einrichtung Ihres Programms beschrieben.
 
 ## Cloud Manager-Aktivität {#activity}
 
@@ -44,4 +44,4 @@ Cloud Manager bietet einen konsolidierten Überblick über die Aktivitäten eine
 
 >[!NOTE]
 >
->Standardmäßig hat ein Benutzer mit Zugriff auf eine AEM Umgebung auch die Benutzerrolle Cloud Manager . Diese Rolle reicht nicht aus, um dem Benutzer Zugriff auf die Programmdetailansicht zu gewähren. Ein Benutzer mit nur der Benutzerrolle &quot;Cloud Manager&quot;kann über die Programmmenüoptionen zur AutorenURL der AEM Umgebung navigieren (sofern Umgebungen vorhanden). Diese Benutzer müssen sich an ihren Administrator wenden, wenn sie Zugriff auf Programmebene erhalten möchten.
+>Standardmäßig hat ein Benutzer mit Zugriff auf eine AEM Umgebung auch die Benutzerrolle Cloud Manager . Diese Rolle reicht nicht aus, um dem Benutzer Zugriff auf die Programmdetailansicht zu gewähren. Ein Benutzer mit nur der Benutzerrolle &quot;Cloud Manager&quot;kann über die Programmmenüoptionen zur AutorenURL der AEM Umgebung navigieren (sofern Umgebungen vorhanden). Diese Benutzenden müssen sich an ihre Admins wenden, wenn sie Zugriff auf Programmebene erhalten möchten.

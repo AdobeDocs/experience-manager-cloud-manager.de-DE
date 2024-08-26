@@ -5,7 +5,7 @@ exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 48%
+ht-degree: 52%
 
 ---
 
@@ -24,7 +24,7 @@ Projekte, die von Cloud Manager mit dem integrierten [Assistenten zur Projekters
 
 Wenn Sie eine Bereitstellung in einer Dispatcher-Instanz durchführen, werden die Ordner in der Instanz durch die Ordner aus Ihrem Git-Repository ersetzt. Da Webserver- und Dispatcher-Konfigurationsdateien häufig umgebungsspezifische Details erfordern, müssen Sie mit Ihren Customer Success Engineers (CSE) zusammenarbeiten, um die entsprechenden Umgebungsvariablen in `/etc/sysconfig/httpd` festzulegen, bevor Sie diese Funktion korrekt verwenden.
 
-## Dispatcher-Konfiguration für bestehende Managed Service-Kunden {#steps-for-configuring-dispatcher}
+## Dispatcher-Konfiguration für bestehende Managed Services-Kundschaft {#steps-for-configuring-dispatcher}
 
 Führen Sie die folgenden Schritte aus, um die anfängliche Dispatcher-Konfiguration abzuschließen.
 
@@ -90,7 +90,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
 
    * Wie in Schritt 1 können die artifactId und der Name hier bei Bedarf andere Werte sein. `dispatcher` wird hier nur als Beispiel verwendet.
 
-1. Für das Maven Assembly-Plug-in ist ein `descriptor` erforderlich, um zu definieren, wie die ZIP-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei im Unterverzeichnis `dispatcher` mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
+1. Für das Maven Assembly-Plug-in ist ein `descriptor` erforderlich, mit dem definiert wird, wie die ZIP-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei im Unterverzeichnis `dispatcher` mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"

@@ -5,7 +5,7 @@ exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '281'
-ht-degree: 78%
+ht-degree: 84%
 
 ---
 
@@ -37,7 +37,7 @@ Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung
 
 ## Umgebungen verwalten {#managing-environments-with-cloud-manager}
 
-Klicken Sie auf der Kachel **Umgebungen** auf die Zeile einer Umgebung, um den Bildschirm **Umgebungen** anzuzeigen.
+Klicken Sie auf der Kachel **Umgebungen** auf die Zeile einer beliebigen Umgebung, um den Bildschirm **Umgebungen** anzuzeigen.
 
 Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ihrem Programm an. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle der Knoten in der Umgebung sowie die Größe der CPU, den Speicher, die Region und den Status.
 

@@ -5,7 +5,7 @@ exl-id: 24c6ca97-ea70-41b8-b4c7-b8b0f406a57d
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '145'
-ht-degree: 72%
+ht-degree: 93%
 
 ---
 
@@ -29,7 +29,7 @@ Im Fenster **Repositorys** können Sie ganz einfach zusätzliche von Adobe verwa
 
    ![Dialogfeld „Repository hinzufügen“](assets/add-repository-wizard.png)
 
-Wenn der Assistent geschlossen wird, wird Ihr neues Repository im Fenster **Repositorys** in der Tabelle angezeigt. Sie können jetzt eine [CI/CD-Pipeline](/help/overview/ci-cd-pipelines.md) damit verknüpfen oder sie im Fenster [**Repositorys**](managing-repositories.md) verwalten.
+Wenn der Assistent geschlossen wird, wird Ihr neues Repository im Fenster **Repositorys** in der Tabelle angezeigt. Sie können nun eine [CI/CD-Pipeline](/help/overview/ci-cd-pipelines.md) damit verbinden oder es im Fenster [**Repositorys**](managing-repositories.md) verwalten.
 
 >[!TIP]
 >

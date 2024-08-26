@@ -5,16 +5,16 @@ exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 49%
+ht-degree: 55%
 
 ---
 
 
-# Programmeinrichtung {#program-setup}
+# Einrichten von Programmen {#program-setup}
 
 Nach dem Onboarding richtet der Business Owner das Programm ein, indem er eine Beschreibung hinzufügt und wichtige Leistungsindikatoren (KPIs) definiert. Diese KPIs werden dann für Leistungstests verwendet.
 
-## Programmeinrichtung mit [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
+## Einrichten von Programmen mit [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
 Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu definieren.
 
@@ -50,7 +50,7 @@ Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu
 
 Ihr Programm wird erstellt. Die Bereitstellung von Ressourcen kann mehrere Minuten dauern, bevor das Programm einsatzbereit ist.
 
-## Programm bearbeiten {#editing-program}
+## Bearbeiten eines Programms {#editing-program}
 
 Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schritte aus, um ein Programm zu bearbeiten.
 
@@ -58,7 +58,7 @@ Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schri
 
 1. Gehen Sie zum Programm auf dem Cloud Manager-Startbildschirm.
 
-1. Klicken Sie auf **Programm bearbeiten** , um Ihr Programm auf der Seite **Überblick** zu aktualisieren oder zu ändern.
+1. Klicken Sie auf **Programm bearbeiten**, um Ihr Programm über die Seite **Übersicht** zu aktualisieren oder zu ändern.
 
    ![Option „Programm bearbeiten“](/help/assets/set-up-program/edit-program1.png)
 
@@ -66,13 +66,13 @@ Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schri
 
    ![Dialog „Programm bearbeiten“](/help/assets/set-up-program/edit-program-general.png)
 
-1. Klicken Sie auf **Aktualisieren** , um Ihre Änderungen zu speichern.
+1. Klicken Sie auf **Aktualisieren**, um Ihre Änderungen zu speichern.
 
 Die Änderungen werden sofort in Cloud Manager gespeichert, werden jedoch erst bei der nächsten Pipeline-Ausführung in Ihren Umgebungen übernommen.
 
 Wenn Sie noch keine Pipeline erstellt haben, finden Sie weitere Informationen unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md).
 
-## Zwischen Programmen wechseln {#swithing-programs}
+## Wechseln zwischen Programmen {#swithing-programs}
 
 Wenn Sie an einem Programm arbeiten, können Sie schnell zu einem anderen Programm wechseln, ohne zur Übersichtsseite von Cloud Manager zurückzukehren.
 
@@ -90,6 +90,6 @@ Assets-Leistungstests erfordern das wiederholte Hochladen von Assets über einen
 
 Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFront vor Ihrer Produktionsumgebung vorgeschaltet. Da [!UICONTROL Cloud Manager] direkt gegen die Staging-Umgebung getestet wird, sollten die KPI nur den erwarteten Traffic widerspiegeln, der durch das CDN weitergeleitet wird. Das heißt, der Cache fehlt. In der Regel handelt es sich bei diesem Erlebnis um eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
 
-## Videoübersicht {#video}
+## Videoüberblick {#video}
 
 >[!VIDEO](https://video.tv.adobe.com/v/26313/)

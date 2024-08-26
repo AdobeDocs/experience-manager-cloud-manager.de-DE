@@ -5,7 +5,7 @@ exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '321'
-ht-degree: 28%
+ht-degree: 30%
 
 ---
 
@@ -18,7 +18,7 @@ Führen Sie diese Schritte aus, um mithilfe des Assistenten ein AEM-Projekt zu e
 
 1. Melden Sie sich unter [`https://my.cloudmanager.adobe.com`](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation aus.
 
-1. Falls noch nicht geschehen, erstellen Sie [Ihr Programm](program-setup.md). Wenn das Programm erstellt wird, erkennt Cloud Manager, dass die Repositorys noch nicht eingerichtet sind. Eine spezielle Aktionsaufruffunktion wird dann auf dem Bildschirm **Überblick** angezeigt.
+1. Sofern noch nicht geschehen, [erstellen Sie Ihr Programm](program-setup.md). Wenn das Programm erstellt wird, erkennt Cloud Manager, dass die Repositorys noch nicht eingerichtet sind. Eine spezielle Aktionsaufruffunktion wird dann auf dem Bildschirm **Überblick** angezeigt.
 
    ![Erstellen des Projekt-CTA](/help/assets/image2018-10-3_14-29-44.png)
 

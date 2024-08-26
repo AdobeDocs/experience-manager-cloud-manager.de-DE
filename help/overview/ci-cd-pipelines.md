@@ -5,7 +5,7 @@ exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '562'
-ht-degree: 56%
+ht-degree: 59%
 
 ---
 
@@ -41,7 +41,7 @@ Das folgende Diagramm zeigt, was passiert, wenn eine Veröffentlichung in [!UICO
 
 ### Einrichten einer CI/CD-Pipeline {#how-to-setup-a-ci-cd-pipeline}
 
-Weitere Informationen zur Pipelinekonfiguration finden Sie in den Dokumenten [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md).
+Weitere Informationen zur Pipeline-Konfiguration finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
 
 ## Quality Gates {#quality-gates}
 

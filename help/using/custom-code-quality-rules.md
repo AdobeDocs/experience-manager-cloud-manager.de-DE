@@ -5,14 +5,14 @@ exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '3482'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
 
 # Qualitätsregeln für benutzerspezifischen Code {#custom-code-quality-rules}
 
-Erfahren Sie mehr über die benutzerspezifischen Regeln für die Code-Qualität, die von Cloud Manager im Rahmen von [Code-Qualitätstests](/help/using/code-quality-testing.md) ausgeführt werden, basierend auf Best Practices von AEM Engineering.
+Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager als Teil der [Code-Qualitätsprüfung](/help/using/code-quality-testing.md) ausgeführt werden und auf den Best Practices von AEM Engineering basieren.
 
 >[!NOTE]
 >
@@ -500,7 +500,7 @@ public void doThis(Resource resource) {
 
 Verwenden Sie den Sling-Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Vorgänge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
 
-Weitere Informationen zum Umgang mit Sling-Aufträgen in Clusterumgebungen finden Sie in der [Dokumentation zu Apache Sling Eventing und Job Handling](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html) .
+Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen finden Sie in der Sling-Dokumentation zum Thema [Apache Sling-Ereignisse und -Auftragsverarbeitung](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
 ### APIs, die in AEM als veraltet gelten, sollten nicht verwendet werden {#sonarqube-aem-deprecated}
 
@@ -655,7 +655,7 @@ Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Details zum Konverti
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-In Cloud Service-Implementierungen ist keine Unterstützung für die Rückwärtsreplikation verfügbar, wie unter [Versionshinweise: Entfernung von Replikationsagenten](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes#replication-agents) beschrieben.
+Cloud Service-Bereitstellungen unterstützen keine Rückwärtsreplikation, wie unter [Versionshinweise: Entfernung von Replikationsagenten](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/aem-cloud-changes#replication-agents) beschrieben.
 
 Kunden, die die Rückwärtsreplikation verwenden, sollten sich für alternative Lösungen an Adobe wenden.
 
@@ -666,7 +666,7 @@ Kunden, die die Rückwärtsreplikation verwenden, sollten sich für alternative 
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten enthalten. Wie in der Dokumentation [Verwenden Client-seitiger Bibliotheken](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors) beschrieben, müssen diese statischen Ressourcen bei der Verwendung von geproxidierten Client-Bibliotheken in einem untergeordneten Ordner namens `resources` enthalten sein, damit sie effektiv auf den Veröffentlichungsinstanzen referenziert werden können.
+AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten enthalten. Wie unter [Verwenden Client-seitiger Bibliotheken](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors) beschrieben, müssen diese statischen Ressourcen bei der Verwendung von Proxy-fähigen Client-Bibliotheken in einem untergeordneten Ordner namens `resources` enthalten sein, damit sie in den Veröffentlichungsinstanzen effektiv referenziert werden können.
 
 #### Nicht konformer Code {#non-compliant-proxy-enabled}
 
@@ -708,7 +708,7 @@ Mit dem Migrations-Tool im [GitHub-Repository für AEM Assets as a Cloud Service
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Obwohl die Verwendung von statischen Vorlagen in AEM-Projekten früher sehr verbreitet war, werden bearbeitbare Vorlagen dringend empfohlen, da sie eine größere Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie in der Dokumentation [Seitenvorlagen - Bearbeitbare Elemente](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable) .
+Obwohl die Verwendung von statischen Vorlagen in AEM-Projekten früher sehr verbreitet war, werden bearbeitbare Vorlagen dringend empfohlen, da sie eine größere Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie unter [Bearbeitbare Seitenvorlagen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
 
 Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) weitgehend automatisiert werden.
 
@@ -719,7 +719,7 @@ Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Mo
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Die veralteten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) wurden für mehrere AEM Versionen zugunsten der [Kernkomponenten](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/introduction) nicht mehr unterstützt. Die Verwendung der veralteten Foundation-Komponenten als Grundlage für benutzerdefinierte Komponenten, sei es durch Überlagerung oder Vererbung, wird empfohlen und sollte in die entsprechende Kernkomponente konvertiert werden.
+Die alten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) wurden schon seit mehreren AEM-Versionen nicht mehr verwendet und durch die [Kernkomponenten](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/introduction) ersetzt. Die Verwendung der alten Foundation-Komponenten als Grundlage für benutzerdefinierte Komponenten – sei es durch Überlagerung oder Vererbung – wird nicht empfohlen und sollte in die entsprechende Kernkomponente konvertiert werden. 
 
 [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) können diese Konvertierung erleichtern.
 
@@ -730,7 +730,7 @@ Die veralteten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) direkt untergeordnete Knoten von `/oak:index` sind. Indizes an anderen Speicherorten müssen verschoben werden, um mit AEM Cloud Service kompatibel zu sein. Weitere Informationen zu Suchindizes finden Sie in der Dokumentation zur [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
+AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) direkt untergeordnete Knoten von `/oak:index` sind. Indizes an anderen Speicherorten müssen verschoben werden, um mit AEM Cloud Service kompatibel zu sein. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### Knoten für benutzerdefinierte Suchindex-Definitionen benötigen eine compatVersion von 2 {#oakpal-custom-search-compatVersion}
 
@@ -739,7 +739,7 @@ AEM Cloud Service erfordert, dass benutzerdefinierte Suchindex-Definitionen (d.�
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Cloud Service erfordert, dass die Eigenschaft `compatVersion` für benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) auf `2` festgelegt wird. AEM Cloud Service unterstützt keine anderen Werte. Weitere Informationen zu Suchindizes finden Sie in der Dokumentation zur [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
+AEM Cloud Service erfordert, dass die Eigenschaft `compatVersion` für benutzerdefinierte Suchindex-Definitionen (d. h. Knoten vom Typ `oak:QueryIndexDefinition`) auf `2` festgelegt wird. AEM Cloud Service unterstützt keine anderen Werte. Weitere Informationen zu Suchindizes finden Sie unter [Inhaltssuche und -indizierung](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/operations/indexing).
 
 ### Untergeordnete Knoten von benutzerdefinierten Suchindex-Definitionsknoten müssen dem Typ `nt:unstructured` entsprechen {#oakpal-descendent-nodes}
 
@@ -757,7 +757,7 @@ Es können schwer behebbare Probleme auftreten, wenn ein Knoten für benutzerdef
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Um korrekt definiert zu sein, muss ein benutzerdefinierter Suchindex-Definitionsknoten einen untergeordneten Knoten namens `indexRules` enthalten, der wiederum mindestens einen untergeordneten Knoten haben muss. Weitere Informationen finden Sie in der [Oak-Dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html) .
+Um korrekt definiert zu sein, muss ein benutzerdefinierter Suchindex-Definitionsknoten einen untergeordneten Knoten namens `indexRules` enthalten, der wiederum mindestens einen untergeordneten Knoten haben muss. Weitere Informationen finden Sie in der [Oak-Dokumentation](https://jackrabbit.apache.org/oak/docs/query/lucene.html).
 
 ### Knoten für benutzerdefinierte Suchindex-Definitionen müssen Benennungskonventionen folgen {#oakpal-custom-search-definitions}
 

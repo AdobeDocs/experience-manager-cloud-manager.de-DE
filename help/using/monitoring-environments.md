@@ -1,20 +1,20 @@
 ---
 title: Überwachen von Umgebungen
-description: Informationen zum Überwachen von Umgebungen in Cloud Manager.
+description: Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '910'
-ht-degree: 31%
+ht-degree: 44%
 
 ---
 
 
-# Umgebungen überwachen {#monitoring-environments}
+# Überwachen von Umgebungen {#monitoring-environments}
 
-Informationen zum Überwachen von Umgebungen in Cloud Manager.
+Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 
-## Metrikschwellen {#thresholds}
+## Schwellenwerte für Metriken {#thresholds}
 
 Die Systemüberwachung in [!UICONTROL Cloud Manager] erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz. Jede Metrik hat zwei definierte Schwellenwerte: einen Schwellenwert für *Warnung* und einen Schwellenwert für *Kritisch*.
 
@@ -24,7 +24,7 @@ Wenn eine Metrik ihren kritischen Schwellenwert überschreitet, wird sie als kri
 
 Adobe Managed Services legt die Schwellenwerte fest, die Sie in [!UICONTROL Cloud Manager] anzeigen können. In den meisten Fällen sind die Schwellenwerte zwischen den Kunden konsistent. Es gibt jedoch Fälle, in denen Adobe Managed Services Schwellenwerte bearbeitet, um bestimmten Kundenanforderungen zu entsprechen. Weisen Sie alle Fragen zu den Schwellenwerten an Ihren Customer Success Engineer (CSE) zu.
 
-## Systemüberwachung {#accessing-system-monitoring}
+## Zugreifen auf die Systemüberwachung {#accessing-system-monitoring}
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
@@ -35,7 +35,7 @@ Adobe Managed Services legt die Schwellenwerte fest, die Sie in [!UICONTROL Clou
 
 .
 
-## Systemüberwachung - Übersicht {#system-monitoring-overview}
+## Überblick über die Systemüberwachung {#system-monitoring-overview}
 
 Im Abschnitt **Systemüberwachung** der Seite **Berichte** werden die überwachten Umgebungen im Programm aufgelistet. Sie berichtet über ihre allgemeine Gesundheit in den folgenden vier verschiedenen Kategorien:
 
@@ -54,7 +54,7 @@ Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn 
 
 ## Details zur Systemüberwachung {#system-monitoring-detail}
 
-Um die Details bestimmter Metriken anzuzeigen, klicken Sie auf eine der Kategoriespalten einer bestimmten Instanz oder auf den Kategorientitel im linken Navigationsbereich. Jede Detailseite präsentiert eine Reihe von Diagrammen für die Metriken in dieser Kategorie. Sie können die Metriken entweder für alle Instanzen in einer Umgebung oder für eine bestimmte Instanz anzeigen. Mithilfe der Dropdownfelder oben rechts können Sie zwischen der Umgebung und den Instanzen wechseln.
+Um die Details zu bestimmten Metriken anzuzeigen, klicken Sie auf eine der Kategoriespalten einer bestimmten Instanz oder auf den Kategorietitel im linken Navigationsbereich. Jede Detailseite präsentiert eine Reihe von Diagrammen für die Metriken in dieser Kategorie. Sie können die Metriken entweder für alle Instanzen in einer Umgebung oder für eine bestimmte Instanz anzeigen. Mithilfe der Dropdownfelder oben rechts können Sie zwischen der Umgebung und den Instanzen wechseln.
 
 ![Umgebung auswählen](/help/assets/System_Monitoring1.png)
 
@@ -67,7 +67,7 @@ Ein einzelnes Diagramm zeigt den Status und ein Diagramm der Daten im Zeitverlau
 Einzelne Reihen können in einem Diagramm ausgeblendet werden, indem Sie auf die Reihe in der Legende klicken.
 Wenn Sie beispielsweise auf die Warnungsschwellenreihe klicken, sehen Sie nur den kritischen Schwellenwert.
 
-![Diagramm ändern](/help/assets/Monitoring_Graphs2.png)
+![Graph ändern](/help/assets/Monitoring_Graphs2.png)
 
 ### Metrikdefinitionen {#metric-definitions}
 
@@ -96,7 +96,7 @@ Wenn Sie beispielsweise auf die Warnungsschwellenreihe klicken, sehen Sie nur de
    * Für jeden Replizierungsagenten gibt es verschiedene Metriken.
 * **Dispatcher Flush**: Die Anzahl der Elemente, die sich derzeit in der Dispatcher-Flush-Warteschlange befinden
 
-## SLA Reporting {#sla-reporting}
+## SLA-Berichte {#sla-reporting}
 
 Sie können die Leistung Ihrer AEM-Produktionsumgebung im Vergleich zu Ihrem vertraglich vereinbarten Service Level Agreement (SLA) sehen.
 
@@ -114,12 +114,12 @@ Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Anzahl der Vor
 
 ## SLA-Metriken {#sla-metrics}
 
-* **Autorenvertrag**: Die in Ihrem Vertrag mit Adobe Managed Services definierte SLA für die Autorenstufe.
+* **Vertrag für Autoren**: Dies ist das SLA, das in Ihrem Vertrag mit Adobe Managed Services für die Erstellungsebene definiert ist.
 * **AMS Author SLA**: Die gemessene Produktionszeit der Produktionsautorenstufe, Factoring-Vorfälle, die von Anbietern oder Adobe verursacht wurden.
-* **Autor SLA**: Die gemessene Produktionszeit der Autorenstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
-* **Endbenutzervertrag**: Die in Ihrem Vertrag mit Adobe Managed Services definierte SLA für die Veröffentlichungsstufe.
+* **SLA für Autoren**: Dies ist die gemessene Verfügbarkeit der Erstellungsebene ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
+* **Vertrag für Endbenutzer**: Dies ist das SLA, das in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsebene definiert ist.
 * **AMS-Endbenutzer-SLA**: Die gemessenen Betriebszeiten der Produktionsveröffentlichungsstufe, Factoring-Vorfälle, die von Anbietern oder Adobe verursacht wurden.
-* **Endbenutzer-SLA**: Die gemessene Produktionszeit der Veröffentlichungsstufe ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
+* **SLA für Endbenutzer**: Dies ist die gemessene Verfügbarkeit der Veröffentlichungsebene ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
 
 ## Video-Tutorial {#video-tutorial}
 

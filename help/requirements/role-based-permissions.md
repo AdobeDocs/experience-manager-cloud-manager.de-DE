@@ -5,7 +5,7 @@ exl-id: b66533fb-db93-40e8-919d-581261fdbf24
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '616'
-ht-degree: 54%
+ht-degree: 60%
 
 ---
 
@@ -22,7 +22,7 @@ ht-degree: 54%
 
 ## Benutzerrollen {#user-roles}
 
-Die Rollenverwaltung für [!UICONTROL Cloud Manager] erfolgt über die [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html). Jeder Benutzer von [!UICONTROL Cloud Manager] muss Mitglied der IMS-Organisation des Kunden sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem die Anwendering bzw. der Anwender in der Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+Die Rollen für [!UICONTROL Cloud Manager] werden in [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html) verwaltet. Jede Benutzerin und jeder Benutzer von [!UICONTROL Cloud Manager] muss Mitglied der kundenseitigen IMS-Organisation sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem die Benutzerin bzw. der Benutzer in der Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
 Weitere Informationen zum Einrichten von Rollen finden Sie unter [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md).
 
@@ -68,4 +68,4 @@ Weitere Informationen zum Einrichten von Benutzern finden Sie unter [Einrichten 
 
 >[!TIP]
 >
->Es sind auch benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen verfügbar. Weitere Informationen finden Sie unter [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md) .
+>Es sind auch benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen verfügbar. Weitere Informationen finden Sie unter [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md).

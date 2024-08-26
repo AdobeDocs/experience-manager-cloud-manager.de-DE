@@ -1,26 +1,26 @@
 ---
 title: Das Inhaltskopie-Tool
-description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer bei Bedarf veränderliche Inhalte aus AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
+description: Mit dem Inhaltskopie-Tool von Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
 workflow-type: tm+mt
 source-wordcount: '1144'
-ht-degree: 42%
+ht-degree: 90%
 
 ---
 
 
-# Das Werkzeug zum Kopieren von Inhalten {#content-copy}
+# Das Inhaltskopie-Tool {#content-copy}
 
-Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer bei Bedarf veränderliche Inhalte aus AMS-gehosteten AEM 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
+Mit dem Inhaltskopie-Tool von Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 
 ## Einführung {#introduction}
 
-Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Werkzeug zum Kopieren von Inhalten können Sie Inhalte aus Ihrer Produktions-AMS-gehosteten AEM 6.x-Umgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
+Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Inhaltskopie-Tool können Sie Inhalte aus Ihrer AMS-gehosteten AEM 6.x-Produktionsumgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
 
-Ein Inhaltssatz definiert den zu kopierenden Inhalt. Ein Inhaltssatz enthält eine Liste von JCR-Pfaden mit dem zu kopierenden veränderlichen Inhalt. Der Inhalt wird von einer Quellumgebung in eine Zielumgebung verschoben. Alle Aktionen erfolgen innerhalb desselben Cloud Manager-Programms.
+Ein Content-Set definiert die zu kopierenden Inhalte. Ein Content-Set enthält eine Liste von JCR-Pfaden mit dem zu kopierenden veränderlichen Inhalten. Die Inhalte werden von einer Quellumgebung in eine Zielumgebung verschoben. Alle dies geschieht innerhalb desselben Cloud Manager-Programms.
 
-Die folgenden Pfade sind in einem Inhaltsset zulässig:
+Die folgenden Pfade sind in einem Content-Set zulässig:
 
 ```text
 /content/**
@@ -32,14 +32,14 @@ Die folgenden Pfade sind in einem Inhaltsset zulässig:
 
 Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
-* Wenn Sie Inhalte in der Zielumgebung bearbeiten, überschreibt der Quellinhalt ihn, wenn die Pfade übereinstimmen.
+* Wenn Sie Inhalte in der Zielumgebung bearbeiten, werden diese vom Quellinhalt überschrieben, sofern die Pfade übereinstimmen.
 * Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
 
 ## Berechtigungen {#permissions}
 
-Um das Werkzeug zum Kopieren von Inhalten zu verwenden, muss der Benutzer der Rolle **Bereitstellungsmanager** in der Quell- und Zielumgebung zugewiesen sein.
+Um das Inhaltskopie-Tool verwenden zu können, muss den Benutzenden in der Quell- und Zielumgebung die Rolle **Bereitstellungs-Manager** zugewiesen sein.
 
-## Inhaltssatz erstellen {#create-content-set}
+## Erstellen eines Content-Sets {#create-content-set}
 
 Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach der Definition können Content-Sets zum Kopieren von Inhalten wiederverwendet werden. Gehen Sie wie folgt vor, um ein Content-Set zu erstellen.
 
@@ -47,13 +47,13 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
 1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
 
-1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Inhaltssets** .
+1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Content-Sets**.
 
-1. Klicken Sie oben rechts im Bildschirm auf **Inhaltsset hinzufügen**.
+1. Klicken Sie oben rechts im Bildschirm auf **Content-Set hinzufügen**.
 
    ![Content-Sets](/help/assets/content-sets.png)
 
-1. Geben Sie auf der Registerkarte **Details** des Assistenten einen Namen und eine Beschreibung für den Inhaltssatz ein und klicken Sie auf **Weiter**.
+1. Geben Sie auf der Registerkarte **Details** des Assistenten einen Namen und eine Beschreibung für das Content-Set ein und klicken Sie auf **Weiter**.
 
    ![Content-Set-Details](/help/assets/add-content-set-details.png)
 
@@ -67,21 +67,21 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
 1. Wenn Sie Ihr Content-Set verfeinern oder einschränken möchten, können Sie Unterpfade ausschließen.
 
-   1. Klicken Sie in der Liste der eingeschlossenen Pfade neben dem Pfad, den Sie beschränken müssen, auf das Symbol **Unterpfade zum Ausschließen hinzufügen** .
-   1. Geben Sie den Unterpfad ein, der vom ausgewählten Pfad ausgeschlossen werden soll.
+   1. Klicken Sie in der Liste der eingeschlossenen Pfade auf das Symbol **Ausschluss-Unterpfade hinzufügen** neben dem Pfad, der eingeschränkt werden soll.
+   1. Geben Sie den Unterpfad ein, der von dem ausgewählten Pfad ausgeschlossen werden soll.
    1. Klicken Sie auf **Pfad ausschließen**.
-   1. Klicken Sie erneut auf **Unterpfade zum Ausschließen hinzufügen** , um weitere Pfade hinzuzufügen, die bei Bedarf ausgeschlossen werden sollen.
+   1. Klicken Sie erneut auf **Ausschluss-Unterpfade hinzufügen**, um bei Bedarf weitere auszuschließende Pfade hinzuzufügen.
 
    ![Ausschließen von Pfaden](/help/assets/add-content-set-paths-excluded.png)
 
 1. Sie können die angegebenen Pfade bei Bedarf ändern.
 
-   1. Klicken Sie auf den `X` neben den ausgeschlossenen Unterpfaden, um sie zu löschen.
-   1. Klicken Sie auf die Suchschaltfläche neben den Pfaden, um die Optionen **Bearbeiten** und **Löschen** anzuzeigen.
+   1. Klicken Sie auf das `X` neben den ausgeschlossenen Unterpfaden, um diese zu löschen.
+   1. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben den Pfaden, um die Optionen **Bearbeiten** und **Löschen** anzuzeigen.
 
    ![Bearbeiten der Pfadliste](/help/assets/add-content-set-excluded-paths.png)
 
-1. Klicken Sie auf **Erstellen** , um den Inhaltssatz zu erstellen.
+1. Klicken Sie auf **Erstellen**, um das Content-Set zu erstellen.
 
 Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwendet werden.
 
@@ -90,9 +90,9 @@ Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwend
 >Sie können einem Content-Set bis zu 50 Pfade hinzufügen.
 >Für ausgeschlossene Pfade gibt es keine Beschränkung.
 
-## Bearbeiten eines Inhaltssatzes {#edit-content-set}
+## Bearbeiten eines Content-Sets {#edit-content-set}
 
-Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Wählen Sie statt auf **Inhaltsset hinzufügen** einen vorhandenen Satz aus der Konsole aus und wählen Sie im Suchmenü die Option **Bearbeiten** aus.
+Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Anstatt auf **Content-Set hinzufügen** zu klicken, wählen Sie ein vorhandenes Set in der Konsole und dann die Option **Bearbeiten** aus dem Menü mit den Auslassungspunkten aus.
 
 ![Bearbeiten des Content-Sets](/help/assets/edit-content-set.png)
 
@@ -106,7 +106,7 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
 
-1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Inhaltssets** .
+1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Content-Sets**.
 
 1. Wählen Sie ein Content-Set aus der Konsole aus, und wählen Sie im Menü mit den Auslassungspunkten **Inhalt kopieren**.
 
@@ -122,9 +122,9 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quell- und Zielumgebungen für die Aktion zum Kopieren von Inhalten an.
    * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Untergruppe davon übereinstimmen.
 
-1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination` , um den im Inhaltsset angegebenen Wert `exclude paths` beizubehalten. Wenn das Kontrollkästchen deaktiviert ist, werden Ausschlusspfade in der Zielumgebung gelöscht.
+1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination`, um die im Content-Set angegebenen `exclude paths` beizubehalten. Wenn das Kontrollkästchen deaktiviert bleibt, werden die Ausschlusspfade in der Zielumgebung gelöscht.
 
-1. Sie können den Versionsverlauf der Pfade kopieren, die von der Quell- in die Zielumgebung kopiert werden. Aktivieren Sie das Kontrollkästchen `Copy Versions` , wenn Sie alle Versionsverläufe kopieren möchten.
+1. Sie können den Kopieversionsverlauf der Pfade aus der Quell- in die Zielumgebung kopieren. Aktivieren Sie das Kontrollkästchen `Copy Versions`, wenn alle Versionsverläufe kopiert werden sollen.
 
    ![Kopieren von Inhalten](/help/assets/copying-content.png)
 
@@ -132,19 +132,19 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
 
 Der Kopiervorgang wird gestartet. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 
-## Aktivität &quot;Inhaltskopie&quot; {#copy-activity}
+## Inhaltskopie-Aktivität {#copy-activity}
 
-Sie können den Status der Kopierprozesse auf der Seite **Aktivität „Inhalt kopieren“** überwachen.
+Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopieren von Inhalten** überwachen.
 
-1. Melden Sie sich bei Cloud Manager unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) an und wählen Sie dann das entsprechende Unternehmen und Programm aus.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
 1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
 
-1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Aktivität &quot;Inhalt kopieren&quot;** .
+1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Aktivität zum Kopieren von Inhalten**.
 
-![Aktivität „Inhalt kopieren“](/help/assets/copy-content-activity.png)
+![Aktivität zum Kopieren von Inhalten](/help/assets/copy-content-activity.png)
 
-### Status der Inhaltskopie {#statuses}
+### Inhaltskopie-Status {#statuses}
 
 Sobald das Kopieren von Inhalten beginnt, kann der Prozess einen der folgenden Status haben.
 
@@ -159,18 +159,18 @@ Sobald das Kopieren von Inhalten beginnt, kann der Prozess einen der folgenden S
 Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkungen.
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
-* Die Inhaltskopie kann nur innerhalb derselben Ebene durchgeführt werden. Das heißt, author-author oder publish-publish.
+* Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden. (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
 * Eine programm- und regionenübergreifende Inhaltskopie ist nicht möglich.
-* Die auf dem Cloud-Datenspeicher basierende Topologie kann nur dann kopiert werden, wenn sich die Quell- und Zielumgebung auf demselben Cloud-Anbieter und in derselben Region befinden.
-* Die Ausführung gleichzeitiger Vorgänge zum Kopieren von Inhalten in derselben Umgebung ist nicht möglich.
-* Eine Inhaltskopie kann nicht ausgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. einer CI/CD-Pipeline.
+* Eine Inhaltskopie für eine auf Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung bei demselben Cloud-Anbieter und in derselben Region befinden.
+* Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
+* Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Für ausgeschlossene Pfade gibt es keine Beschränkung.
 * Das Inhaltskopie-Tool sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
 * Eine Inhaltskopie kann nicht angehalten oder abgebrochen werden, nachdem sie initiiert wurde.
-* Das Werkzeug zum Kopieren von Inhalten kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte untere Umgebung. Kopierte Assets müssen dann mithilfe des Workflows [DAM-Prozess-Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der unteren Umgebung erneut verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
+* Das Werkzeug zum Kopieren von Inhalten kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte untere Umgebung. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
 * Der Content Copy-Prozess ist erheblich schneller, wenn der Versionsverlauf nicht kopiert wird.
 * [Dynamic Media-Konfigurationen mit Asset-Größen größer als 2 GB aktiviert](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
-* Wenn der Versionsverlauf nicht kopiert wird, ist der Inhaltskopierprozess wesentlich schneller.
+* Wenn der Versionsverlauf nicht kopiert wird, ist der Prozess zur Erstellung einer Inhaltskopie wesentlich schneller.
 * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Untergruppe davon übereinstimmen.
 
 ## Bekannte Probleme {#known-issues}

@@ -5,7 +5,7 @@ exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
 workflow-type: tm+mt
 source-wordcount: '1256'
-ht-degree: 49%
+ht-degree: 56%
 
 ---
 
@@ -29,7 +29,7 @@ Hier erfahren Sie mehr über Cloud Manager für AMS (Adobe Managed Services) und
 >
 >Auf dieser Dokumentations-Website werden speziell die Funktionen von Cloud Manager beschrieben, die für Kunden von Adobe Managed Services (AMS) relevant sind.
 >
->Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie in der [AEM as a Cloud Service-Dokumentation](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/home).
+>Die entsprechende Dokumentation für AEM as a Cloud Service finden Sie [hier](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/home).
 
 Mit Cloud Manager profitiert Ihr Entwicklungs-Team von den folgenden Funktionen:
 
@@ -75,7 +75,7 @@ Weitere Informationen zur Bereitstellung von Code und Qualitätsprüfungen finde
 
 ## Optionale Funktionen in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager bietet zusätzliche, erweiterte Funktionen, die je nach Umgebungseinrichtung und Anforderungen für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an Ihren Customer Success Engineer (CSE) oder Adobe-Support-Mitarbeiter, um weitere Informationen zu erhalten.
+Cloud Manager bietet zusätzliche, erweiterte Funktionen, die je nach Umgebungseinrichtung und Anforderungen für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an das Customer Success Engineer(CSE)-Team oder an den Adobe-Support, um weitere Informationen zu erhalten.
 
 ### Automatische Skalierung {#autoscaling}
 
@@ -87,7 +87,7 @@ Die Funktion zur automatischen Skalierung gilt für die Dispatcher-/Veröffentli
 
 >[!NOTE]
 >
->Wenn Sie herausfinden möchten, ob die automatische Skalierung für Ihre Anwendung geeignet ist, wenden Sie sich an Ihren CSE oder Adobe-Support-Mitarbeiter.
+>Wenn Sie herausfinden möchten, ob die automatische Skalierung für Ihre Anwendung geeignet ist, wenden Sie sich an Ihr CSE-Team oder an den Adobe-Support.
 
 ### Blau/Grün-Implementierungen {#blue-green}
 
@@ -121,7 +121,7 @@ Wenn die Blau/Grün-Implementierung aktiviert ist, unterscheidet sich der Bereit
 
 Alle AMS-Benutzer, die Cloud Manager für Produktionsbereitstellungen verwenden, können die blaue/grüne Implementierung verwenden. Die Verwendung einer blauen/grünen Implementierung erfordert jedoch eine zusätzliche Validierung Ihrer Umgebungen und die Einrichtung durch einen Adobe CSE.
 
-Wenn Sie an einer blauen/grünen Implementierung interessiert sind, beachten Sie die folgenden Anforderungen und Einschränkungen und kontaktieren Sie Ihren CSE.
+Wenn Sie an einer Blau/Grün-Bereitstellung interessiert sind, beachten Sie die folgenden Anforderungen und Einschränkungen und wenden Sie sich an Ihr CSE-Team.
 
 #### Anforderungen und Einschränkungen {#limitations}
 
@@ -129,5 +129,5 @@ Wenn Sie an einer blauen/grünen Implementierung interessiert sind, beachten Sie
 * Vorschau-Dispatcher-/Veröffentlichungs-Paare sind nicht Teil von Blau/Grün-Bereitstellungen.
 * Jedes Dispatcher/Veröffentlichungspaar ist mit jedem anderen Dispatcher/Publisher-Paar identisch.
 * Blau/Grün ist nur in der Produktionsumgebung verfügbar.
-* Blau/Grün ist in AWS und Azure verfügbar.
+* Blau/Grün ist in AWS sowie in Azure verfügbar.
 * Blau/Grün steht nur Assets-Kunden zur Verfügung.
