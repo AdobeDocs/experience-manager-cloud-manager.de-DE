@@ -2,10 +2,10 @@
 title: Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 84%
+source-wordcount: '273'
+ht-degree: 86%
 
 ---
 
@@ -58,7 +58,7 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 >[!NOTE]
 >
->Wenn Sie Ihre Umgebungsprotokolle benötigen, können diese von Ihrem Customer Success Engineer angefordert werden.
+>Fordern Sie Ihre Umgebungsprotokolle bei Ihrem Customer Success Engineer an.
 
 ## Video-Tutorial {#video-tutorial}
 
