@@ -2,7 +2,7 @@
 title: Verwalten von Umgebungen
 description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
-source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
+source-git-commit: 0b7c926120798e2fdb635752192f4ab2e12c1e24
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 86%
@@ -64,4 +64,6 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-Veröffentlichungs- und Dispatcher-Instanzen bestehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/) (3 Minuten, 1 Sekunde)
+>[!VIDEO](https://video.tv.adobe.com/v/26318/)
+
+*(3 Minuten, 1 Sekunde)*
