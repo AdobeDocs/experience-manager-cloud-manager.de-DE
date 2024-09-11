@@ -1,18 +1,18 @@
 ---
 title: Verwalten von Umgebungen
-description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
+description: Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager erstellen.
 exl-id: 700b0b4c-1e1a-4993-b366-426b14a98f8e
 source-git-commit: 0b7c926120798e2fdb635752192f4ab2e12c1e24
 workflow-type: tm+mt
 source-wordcount: '273'
-ht-degree: 86%
+ht-degree: 95%
 
 ---
 
 
 # Verwalten von Umgebungen {#managing-environments}
 
-Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager verwalten können.
+Erfahren Sie, wie Sie Ihre Umgebungen mit Cloud Manager erstellen.
 
 ## Übersichtsseite {#overview-page}
 
@@ -22,7 +22,7 @@ Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 ![Übersichtsseite](/help/assets/Manage-Environ-Overview.png)
 
-## Umgebungskachel {#environments-tile}
+## Kachel „Umgebungen“ {#environments-tile}
 
 Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Produktions- und Staging-Umgebungen zusammen mit dem Status angezeigt.
 
@@ -35,7 +35,7 @@ Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung
 
 ![Kachel „Umgebungen“](/help/assets/Environments-card-new.png)
 
-## Umgebungen verwalten {#managing-environments-with-cloud-manager}
+## Verwalten von Umgebungen {#managing-environments-with-cloud-manager}
 
 Klicken Sie auf der Kachel **Umgebungen** auf die Zeile einer beliebigen Umgebung, um den Bildschirm **Umgebungen** anzuzeigen.
 
@@ -54,7 +54,7 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 >[!NOTE]
 >
->Umgebungsdetails wie ein Name können nach der Bereitstellung nicht mehr geändert werden.
+>Umgebungsdetails wie der Name können nach der Bereitstellung nicht mehr geändert werden.
 
 >[!NOTE]
 >
@@ -62,7 +62,7 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 ## Video-Tutorial {#video-tutorial}
 
-Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-Veröffentlichungs- und Dispatcher-Instanzen bestehen.
+Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-, -Veröffentlichungs- und -Dispatcher-Instanzen bestehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26318/)
 

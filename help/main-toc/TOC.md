@@ -20,7 +20,7 @@ ht-degree: 100%
 + [Cloud Manager für AMS](/help/introduction.md)
 + Übersicht {#overview}
    + [Wichtige Konzepte](/help/overview/key-concepts.md)
-   + [Anwendertour](/help/overview/user-journey.md)
+   + [User Journey](/help/overview/user-journey.md)
    + [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md)
    + [Sicherheit und Datenschutz](/help/overview/security-and-privacy.md)
    + [Hilfe-Ressourcen](/help/overview/help-resources.md)
@@ -69,7 +69,7 @@ ht-degree: 100%
    + [Integrieren mit Git](/help/managing-code/git-integration.md)
    + [Arbeiten mit mehreren Git-Repositorys](/help/managing-code/multiple-git-repos.md)
 + Assistent für Produktaktualisierungen {#product-update-wizard}
-   + [Übersicht](/help/product-update-wizard/overview.md)
+   + [Überblick](/help/product-update-wizard/overview.md)
    + [Test](/help/product-update-wizard/evaluation.md)
 + Versionshinweise {#release-notes}
    + [Aktuelle Versionshinweise](/help/release-notes/current.md)

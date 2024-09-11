@@ -5,7 +5,7 @@ exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
 workflow-type: tm+mt
 source-wordcount: '932'
-ht-degree: 42%
+ht-degree: 98%
 
 ---
 
@@ -19,28 +19,28 @@ Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedi
 
 ## Überblick {#overview}
 
-Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Das heißt, eine Bereitstellungs-Pipeline wird sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile vorliegen:
+Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Hierbei handelt es sich um eine Bereitstellungs-Pipeline, die sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt wird. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile entstehen:
 
-* Wenn Sie eine Bereitstellung nur für Staging durchführen möchten, lehnen Sie den Schritt **Weiterleiten an Produktion** in der Pipeline ab. Die Ausführung wird jedoch als abgebrochen markiert.
+* Wenn Sie die Bereitstellung nur für die Staging-Umgebung durchführen möchten, lehnen Sie den Schritt **Zur Produktion weiterleiten** in der Pipeline ab. Die Ausführung wird jedoch als abgebrochen markiert.
 * Wenn Sie den neuesten Code in einer Staging-Umgebung für die Produktion bereitstellen möchten, müssen Sie die gesamte Pipeline einschließlich der Staging-Bereitstellung erneut bereitstellen, selbst wenn dort kein Code geändert wurde.
-* Umgebungen können während der Bereitstellung nicht aktualisiert werden. Wenn Sie den Test in der Staging-Umgebung mehrere Tage lang anhalten, bevor Sie die Promotion zur Produktion durchführen, bleibt die Produktionsumgebung gesperrt und kann nicht aktualisiert werden. Dieses Szenario macht nicht-abhängige Aufgaben wie das Aktualisieren von [Umgebungsvariablen](/help/getting-started/build-environment.md#environment-variables) unmöglich.
+* Während einer Bereitstellung können Umgebungen nicht aktualisiert werden. Wenn Sie mehrere Tage in der Staging-Umgebung pausieren und testen möchten, bevor Sie sie zur Produktion weiterleiten, bleibt die Produktionsumgebung gesperrt und kann nicht aktualisiert werden. Dieses Szenario macht nicht abhängige Aufgaben wie die Aktualisierung von [Umgebungsvariablen](/help/getting-started/build-environment.md#environment-variables) unmöglich.
 
 Reine Staging- und Produktions-Pipelines bieten Lösungen für diese Anwendungsfälle, indem sie dedizierte Bereitstellungsoptionen bieten.
 
-* **Bereitstellungs-Pipelines für die Staging-Umgebung:** Wird nur in einer Staging-Umgebung bereitgestellt, während die Ausführung abgeschlossen ist, sobald die Bereitstellung und die Tests abgeschlossen sind. Eine reine Staging-Pipeline verhält sich genauso wie die standardmäßig gekoppelte Full-Stack-Produktions-Pipeline, jedoch ohne die Schritte der Produktionsbereitstellung (Genehmigung, Zeitplan, Bereitstellung).
-* **Produktionsgeschützte Bereitstellungs-Pipelines:** Wird nur für die Produktion bereitgestellt, indem die zuletzt erfolgreiche Staging-Ausführung ausgewählt wird. Bereitstellen der Artefakte dann für die Produktion. Nur-Prod-Pipelines verwenden die Staging-Bereitstellungsartefakte erneut, wobei die Build-Phase umgangen wird.
+* **Bereitstellungs-Pipelines für reine Staging-Umgebungen** stellen nur in einer Staging-Umgebung bereit und beenden ihre Ausführung, sobald die Bereitstellung und die Tests abgeschlossen sind. Eine reine Staging-Pipeline verhält sich genauso wie die standardmäßig gekoppelte Full-Stack-Produktions-Pipeline, jedoch ohne die Schritte der Produktionsbereitstellung (Genehmigung, Zeitplan, Bereitstellung).
+* **Produktionsgeschützte Bereitstellungs-Pipelines:** Wird nur für die Produktion bereitgestellt, indem die zuletzt erfolgreiche Staging-Ausführung ausgewählt wird. Anschließend stellen sie ihre Artefakte für die Produktion bereit. Reine Produktions-Pipelines verwenden die Artefakte aus den Staging-Bereitstellungen erneut und überspringen die Erstellungsphase.
 
-Staging- und reine Produktions-Pipelines werden nicht ausgeführt, während eine Produktions-Pipeline für den vollständigen Stapel ausgeführt wird, und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Nur-Prod-Pipelines starten nicht &quot;**`On Git Changes`**&quot;, da sie nicht direkt mit einem Repository verknüpft sind.
+Reine Staging- und reine Produktions-Pipelines werden nicht ausgeführt, während eine Full-Stack-Produktions-Pipeline ausgeführt wird und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Reine Produktions-Pipelines werden nicht mit **`On Git Changes`** gestartet, da sie nicht direkt mit einem Repository verknüpft sind.
 
-Nur-Prod-Pipelines werden manuell ausgelöst, da sie nicht direkt mit einem Repository für **On-Git-Änderungen** verknüpft sind.
+Reine Produktions-Pipelines werden nicht manuell ausgelöst, da sie nicht direkt mit einem Repository für **Bei Git-Änderungen** verknüpft sind.
 
 Diese dedizierten Pipelines bieten mehr Flexibilität. Beachten Sie jedoch die folgenden Details zum Betrieb und Empfehlungen.
 
 >[!NOTE]
 >
->Nur-Produkt-Pipelines verwenden immer Artefakte aus der schreibgeschützten Pipeline. Dieser Prozess bleibt auch dann wahr, wenn die standardmäßige gekoppelte Produktions-Pipeline in der Zwischenzeit etwas Anderes für die Staging-Umgebung bereitgestellt hat.
+>Reine Produktions-Pipelines verwenden immer die Artefakte aus der reinen Staging-Pipeline. Dieser Prozess wird auch dann eingehalten, wenn die standardmäßige gekoppelte Produktions-Pipeline in der Zwischenzeit etwas Anderes für die Staging-Umgebung bereitgestellt hat.
 >
->* Ein Beispiel hierfür könnte zu unerwünschten Code-Rollbacks führen.
+>* Ein solches Szenario könnte zu unerwünschten Code-Rollbacks führen.
 >* Adobe empfiehlt, die standardmäßig gekoppelte Produktions-Pipeline nicht mehr zu verwenden, wenn Sie mit der Verwendung der reinen Produktions- und Staging-Pipelines beginnen.
 >* Wenn Sie weiterhin die standardmäßigen gekoppelten Pipelines und die reinen Staging-/Produktions-Pipelines ausführen möchten, sollten Sie die Wiederverwendung von Artefakten nicht vergessen, um Code-Rollbacks zu vermeiden.
 
@@ -65,54 +65,54 @@ Die Erstellung von reinen Produktions- und Staging-Pipelines erfolgt auf ähnlic
 
 ### Reine Staging-Pipelines {#stage-only}
 
-1. Nachdem Sie die Option **Nicht-Produktions-Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Nicht-Produktions-Pipeline hinzufügen** geöffnet.
-1. Um eine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Für Ihre Pipeline geeignete Bereitstellungsumgebungen** aus.
+1. Sobald Sie die Option **Produktionsfremde Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Produktionsfremde Pipeline hinzufügen** geöffnet.
+1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus. 
 1. Füllen Sie die übrigen Felder aus.
 1. Klicken Sie auf **Weiter**.
 
    ![Erstellen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only.png)
 
-1. Definieren Sie auf der Registerkarte **Staging-Tests** die Tests, die in der Staging-Umgebung durchgeführt werden sollen.
+1. Definieren Sie auf der Registerkarte **Staging-Tests** die Tests, die in der Staging-Umgebung durchgeführt werden sollen. 
 1. Klicken Sie auf **Speichern**.
 
    ![Testparameter für eine reine Staging-Pipeline](/help/assets/configure-pipelines/stage-only-test.png)
 
 ### Reine Produktions-Pipelines {#prod-only}
 
-1. Nachdem Sie die Option **Nur Produktions-Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Nur Produktions-Pipeline hinzufügen** geöffnet.
-1. Geben Sie im Feld **Pipeline-Name** den gewünschten Namen ein. Die übrigen Optionen und Funktionen des Dialogfelds entsprechen den Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline.
-1. Klicken Sie in der rechten unteren Ecke des Dialogfelds auf **Speichern**.
+1. Sobald Sie die Option **Reine Produktions-Pipeline hinzufügen** gewählt haben, öffnet sich das Dialogfeld **Reine Produktions-Pipeline hinzufügen**.
+1. Geben Sie im Feld **Pipeline-Name** den gewünschten Namen ein. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie die Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. 
+1. Klicken Sie unten rechts im Dialogfeld auf **Speichern**.
 
    ![Erstellen einer reinen Produktions-Pipeline](/help/assets/configure-pipelines/prod-only-pipeline.png)
 
 ## Ausführen von reinen Produktions- und Staging-Pipelines {#running}
 
-Nur-Prod- und Nur-Staging-Pipelines werden größtenteils auf dieselbe Weise ausgeführt wie [alle anderen Pipelines werden ausgeführt](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in dieser Dokumentation . Es gibt jedoch zwei neue Funktionen dieser Pipelines.
+Reine Produktions- und reine Staging-Pipelines werden auf die gleiche Weise ausgeführt wie [alle anderen Pipelines](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in der zugehörigen Dokumentation. Es gibt jedoch zwei neue Funktionen dieser Pipelines.
 
-* Nur-Staging- und reine Produktleitungen bieten einen neuen [Notfallmodus](#emergency-mode), in dem Tests übersprungen werden können.
-* Der reine Prod-Pipelineablauf kann direkt aus den Ausführungsdetails einer [Nur-Staging-Pipeline](#stage-only-run) ausgelöst werden.
+* Reine Staging- und reine Produktions-Pipelines bieten einen neuen [Notfallmodus](#emergency-mode) zum Überspringen von Tests.
+* Die Ausführung einer reinen Produktions-Pipeline kann direkt aus den Ausführungsdetails einer [reinen Staging-Pipeline](#stage-only-run) ausgelöst werden.
 
 ### Notfallmodus {#emergency-mode}
 
-Beim Starten von reine Produktions- und Staging-Online-Pipelines werden Sie aufgefordert, den Start und dessen Start zu bestätigen.
+Beim Starten von reinen Produktions- und reinen Staging-Online-Pipelines werden Sie aufgefordert, den Start sowie die Art des Starts zu bestätigen.
 
-* **Normaler Modus** ist ein Standardablauf und umfasst Schritte zum Testen von Phasen.
-* **Notfallmodus** überspringt die Schritte zum Testen der Bühne.
+* **Normaler Modus** ist ein Standardablauf und umfasst Schritte zum Testen von Staging-Umgebungen.
+* **Notfallmodus** überspringt die Schritte zum Testen der Staging-Umgebung.
 
 ![Notfallmodus](/help/assets/configure-pipelines/emergency-mode.png)
 
 ### Reine Staging-Pipelines {#stage-only-run}
 
-Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäßige gekoppelte Pipeline. Am Ende der Ausführung wird jedoch nach den Testschritten eine Schaltfläche **Build bewerben** angezeigt. Mit dieser Schaltfläche können Sie eine reine Pipelineausführung mit den Artefakten starten, die auf der Bühne bereitgestellt wurden, und sie für die Produktion bereitstellen.
+Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäßige gekoppelte Pipeline. Am Ende des Laufs wird jedoch nach den Testschritten eine Schaltfläche **Build weiterleiten** angezeigt. Mit dieser Schaltfläche können Sie eine reine Produktions-Pipeline-Ausführung starten, die die Artefakte, die während dieses Durchlaufs in der Staging-Umgebung bereitgestellt wurden, verwendet und in der Produktion bereitstellt.
 
 ![Ausführen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Wenn Sie auf **Build bewerben** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen reinen Staging-Pipeline entweder normal oder im [Notfallmodus](#emergency-mode) zu bestätigen.
+Wenn Sie auf **Build weiterleiten** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen reinen Staging-Pipeline entweder normal oder im [Notfallmodus](#emergency-mode) zu bestätigen.
 
-Wenn keine reine Pipeline vorhanden ist, werden Sie aufgefordert, eine zu erstellen.
+Wenn keine reine Produktions-Pipeline existiert, werden Sie dazu aufgefordert, eine zu erstellen.
 
 ### Reine Produktions-Pipelines {#prod-only-run}
 
-Stellen Sie bei reinen Produktions-Pipelines sicher, dass Sie die Quellartefakte identifizieren, die in der Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung** . Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
+Achten Sie bei reinen Produktions-Pipelines darauf, die Quellartefakte zu identifizieren, die für die Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung**. Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
 
 ![Artefaktdetails](/help/assets/configure-pipelines/prod-only-pipeline-run.png)

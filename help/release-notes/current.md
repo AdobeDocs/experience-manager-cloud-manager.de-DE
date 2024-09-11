@@ -5,7 +5,7 @@ feature: Release Information
 source-git-commit: 3671772a1369273d89fde101ba084a6e2f8ce8dc
 workflow-type: tm+mt
 source-wordcount: '184'
-ht-degree: 37%
+ht-degree: 80%
 
 ---
 
@@ -30,14 +30,14 @@ Die nächste Version ist für den Freitag, 3. Oktober 2024 geplant.
 
 ## Early-Adopter-Programm {#early-adoption}
 
-Nehmen Sie am Cloud Manager-Programm teil und haben Sie die Möglichkeit, einige bevorstehende Funktionen zu testen.
+Nehmen Sie am Early-Adopter-Programm von Cloud Manager teil und nutzen Sie die Möglichkeit, einige zukünftige Funktionen zu testen.
 
 
-### Nur-Staging- und reine Produktionslinien {#staging-production-only-pipelines}
+### Reine Staging- und reine Produktions-Pipelines {#staging-production-only-pipelines}
 
-Adobe freut sich, die Einführung der Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) anzukündigen. Mit dieser neuen Funktion können Sie produktionsbezogene Pipelines in kleinere, speziellere Implementierungen unterteilen.
+Adobe freut sich, die Einführung der Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) anzukündigen. Mit dieser neuen Funktion können Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen.
 
-Wenn Sie diese Funktion testen und Feedback geben möchten, senden Sie eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com` und verwenden Sie dabei die E-Mail-Adresse, die Ihrer Adobe ID zugeordnet ist.
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com`.
 
 <!-- ## Bug fixes
 
