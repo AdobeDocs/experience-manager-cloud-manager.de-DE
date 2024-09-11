@@ -3,9 +3,9 @@ title: Einrichten eines Projekts
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1395'
-ht-degree: 94%
+ht-degree: 100%
 
 ---
 
@@ -19,7 +19,7 @@ Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager ver
 Vorhandene AEM-Projekte müssen bestimmte Grundregeln einhalten, damit sie erfolgreich mit Cloud Manager erstellt und bereitgestellt werden können.
 
 * Projekte müssen mit Apache Maven erstellt werden.
-* Im Stammverzeichnis des Git-Repositorys muss eine `pom.xml` -Datei vorhanden sein.
+* Im Stammverzeichnis des Git-Repositorys muss eine Datei `pom.xml` vorhanden sein.
    * Diese `pom.xml`-Datei kann auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen usw.).
    * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren `pom.xml`-Dateien hinzufügen.
    * Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
@@ -116,7 +116,7 @@ Artefakte aus einem kennwortgeschützten Maven-Repository sollten mit Vorsicht v
 >
 >Artefakte aus passwortgeschützten Maven-Repositorys sollten nur in seltenen Fällen und für Code verwendet werden, der nicht an AEM gebunden ist.
 
-Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/getting-started/build-environment.md#pipeline-variables) an und verweisen Sie dann in einer Datei mit dem Namen `.cloudmanager/maven/settings.xml` im Git-Repository auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html).
+Um ein kennwortgeschütztes Maven-Repository aus Cloud Manager zu verwenden, geben Sie das Kennwort (und optional den Benutzernamen) als geheime [Pipeline-Variable](/help/getting-started/build-environment.md#pipeline-variables) an und verweisen Sie dann in einer Datei im Git-Repository mit dem Namen `.cloudmanager/maven/settings.xml` auf dieses Geheimnis. Diese Datei folgt dem Schema der [Maven-Einstellungsdatei](https://maven.apache.org/settings.html).
 
 Wenn der Build-Vorgang von Cloud Manager gestartet wird, wird das Element `<servers>` in dieser Datei mit der von Cloud Manager bereitgestellten Standarddatei `settings.xml` zusammengeführt. Benutzerdefinierte Server sollten keine Server-IDs verwenden, die mit `adobe` und `cloud-manager` beginnen. Solche IDs werden als reserviert betrachtet. Cloud Manager spiegelt nur die Server-IDs wider, die mit einem der angegebenen Präfixe oder der standardmäßigen ID `central` übereinstimmen.
 
@@ -275,7 +275,7 @@ Mit `content-package-maven-plugin` ist es ähnlich:
 
 ## Wiederverwenden von Build-Artefakten {#build-artifact-reuse}
 
-In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn möglich, verhindert Cloud Manager, dass die Codebasis neu erstellt wird, wenn festgestellt wird, dass dasselbe Git-Commit in mehreren Full-Stack-Pipeline-Ausführungen verwendet wird.
+In vielen Fällen wird derselbe Code in mehreren AEM-Umgebungen bereitgestellt. Wenn festgestellt wird, dass derselbe Git-Commit in mehreren Full-Stack-Pipeline-Ausführungen verwendet wird, verhindert Cloud Manager nach Möglichkeit eine Neuerstellung der Code-Basis.
 
 Wenn eine Ausführung gestartet wird, wird der aktuelle HEAD-Commit für die Zweig-Pipeline extrahiert. Der Commit-Hash ist in der Benutzeroberfläche und über die API sichtbar. Wenn der Build-Schritt erfolgreich abgeschlossen wurde, werden die resultierenden Artefakte basierend auf diesem Commit-Hash gespeichert und können in nachfolgenden Pipeline-Ausführungen wiederverwendet werden.
 

@@ -3,9 +3,9 @@ title: Das Inhaltskopie-Tool
 description: Mit dem Inhaltskopie-Tool von Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1144'
-ht-degree: 90%
+ht-degree: 100%
 
 ---
 
@@ -119,8 +119,8 @@ Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten
    >* die Benutzenden nicht über die entsprechenden Berechtigungen verfügen.
    >* in der Umgebung eine laufende Pipeline oder ein Vorgang zum Kopieren von Inhalten in Bearbeitung ist.
 
-1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quell- und Zielumgebungen für die Aktion zum Kopieren von Inhalten an.
-   * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Untergruppe davon übereinstimmen.
+1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quell- und Zielumgebungen für die Inhaltskopie-Aktion an.
+   * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Teilmenge davon übereinstimmen.
 
 1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination`, um die im Content-Set angegebenen `exclude paths` beizubehalten. Wenn das Kontrollkästchen deaktiviert bleibt, werden die Ausschlusspfade in der Zielumgebung gelöscht.
 
@@ -166,12 +166,12 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Für ausgeschlossene Pfade gibt es keine Beschränkung.
 * Das Inhaltskopie-Tool sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
-* Eine Inhaltskopie kann nicht angehalten oder abgebrochen werden, nachdem sie initiiert wurde.
-* Das Werkzeug zum Kopieren von Inhalten kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte untere Umgebung. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
-* Der Content Copy-Prozess ist erheblich schneller, wenn der Versionsverlauf nicht kopiert wird.
-* [Dynamic Media-Konfigurationen mit Asset-Größen größer als 2 GB aktiviert](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
+* Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
+* Das Inhaltskopie-Tool kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
+* Der Vorgang zum Kopieren von Inhalten wird erheblich schneller ausgeführt, wenn der Versionsverlauf nicht kopiert wird.
+* [Dynamic Media-Konfigurationen mit aktivierten Asset-Größen von mehr als 2 GB](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
 * Wenn der Versionsverlauf nicht kopiert wird, ist der Prozess zur Erstellung einer Inhaltskopie wesentlich schneller.
-* Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Untergruppe davon übereinstimmen.
+* Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Teilmenge davon übereinstimmen.
 
 ## Bekannte Probleme {#known-issues}
 

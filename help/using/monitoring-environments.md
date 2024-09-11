@@ -3,9 +3,9 @@ title: Überwachen von Umgebungen
 description: Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '910'
-ht-degree: 44%
+ht-degree: 100%
 
 ---
 
@@ -16,20 +16,20 @@ Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 
 ## Schwellenwerte für Metriken {#thresholds}
 
-Die Systemüberwachung in [!UICONTROL Cloud Manager] erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz. Jede Metrik hat zwei definierte Schwellenwerte: einen Schwellenwert für *Warnung* und einen Schwellenwert für *Kritisch*.
+Die Systemüberwachung in [!UICONTROL Cloud Manager] erfolgt durch Beobachtung der einzelnen Instanzen innerhalb einer Umgebung und Verfolgung verschiedener Metriken für jede Instanz. Jede Metrik hat zwei definierte Schwellenwerte: einen *Warnschwellenwert* und einen *kritischen Schwellenwert*.
 
-Wenn eine Metrik über ihrem Warnschwellenwert liegt (aber unter ihrem kritischen Schwellenwert), wird sie als Warnstatus betrachtet.
+Wenn eine Metrik über ihrem Warnschwellenwert liegt (aber unter ihrem kritischen Schwellenwert), gilt für sie ein Warnstatus.
 
 Wenn eine Metrik ihren kritischen Schwellenwert überschreitet, wird sie als kritisch betrachtet.
 
-Adobe Managed Services legt die Schwellenwerte fest, die Sie in [!UICONTROL Cloud Manager] anzeigen können. In den meisten Fällen sind die Schwellenwerte zwischen den Kunden konsistent. Es gibt jedoch Fälle, in denen Adobe Managed Services Schwellenwerte bearbeitet, um bestimmten Kundenanforderungen zu entsprechen. Weisen Sie alle Fragen zu den Schwellenwerten an Ihren Customer Success Engineer (CSE) zu.
+Adobe Managed Services legt die Schwellenwerte fest, die Sie über [!UICONTROL Cloud Manager] anzeigen können. In den meisten Fällen sind die Schwellenwerte zwischen Kundinnen und Kunden konsistent. Es gibt jedoch Fälle, in denen Adobe Managed Services Schwellenwerte für bestimmte Kundenanforderungen bearbeitet. Wenden Sie sich bei allen Fragen zu den Schwellenwerten an Ihr Customer Success Engineer(CSE)-Team.
 
 ## Zugreifen auf die Systemüberwachung {#accessing-system-monitoring}
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Klicken Sie auf die Suchschaltfläche des Programms, das Sie überwachen möchten.
-1. Klicken Sie im Menü unter der Überschrift **Verwalten** auf **Überwachung anzeigen** , um die Seite **Berichte** zu öffnen, auf der Informationen zur Systemüberwachung angezeigt werden.
+1. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten für das Programm, das überwacht werden soll.
+1. Klicken Sie im Menü unter der Überschrift **Verwalten** auf **Überwachung anzeigen**, um die Seite **Berichte** mit Informationen zur Systemüberwachung zu öffnen.
 
    ![Einstellungen](/help/assets/first-timea1.png)
 
@@ -37,14 +37,14 @@ Adobe Managed Services legt die Schwellenwerte fest, die Sie in [!UICONTROL Clou
 
 ## Überblick über die Systemüberwachung {#system-monitoring-overview}
 
-Im Abschnitt **Systemüberwachung** der Seite **Berichte** werden die überwachten Umgebungen im Programm aufgelistet. Sie berichtet über ihre allgemeine Gesundheit in den folgenden vier verschiedenen Kategorien:
+Im Abschnitt **Systemüberwachung** der Seite **Berichte** werden die überwachten Umgebungen im Programm aufgelistet. Dort finden Sie Angaben zum allgemeinen Zustand in den vier folgenden Kategorien:
 
 * Host
-* Speicherung
+* Speicher
 * Netzwerk
 * Programm
 
-Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn eine Metrik in einer Kategorie den kritischen Status aufweist, befindet sich die gesamte Kategorie in einem kritischen Status für die Zwecke der Übersichtsseite. Dieselbe Zusammenfassung kann auf Umgebungs- und Instanzebene angezeigt werden.
+Der Status in jeder Kategorie ist eine Zusammenfassung einzelner Metriken. Wenn eine Metrik in einer Kategorie einen kritischen Status aufweist, befindet sich auf der Übersichtsseite die gesamte Kategorie in einem kritischen Zustand. Dieselbe Zusammenfassung kann auf Umgebungs- und Instanzebene angezeigt werden.
 
 ![Systemüberwachung – Übersicht](/help/assets/System-Monitoring-Reports.png)
 
@@ -58,14 +58,14 @@ Um die Details zu bestimmten Metriken anzuzeigen, klicken Sie auf eine der Kateg
 
 ![Umgebung auswählen](/help/assets/System_Monitoring1.png)
 
-Die Navigation auf der linken Seite zeigt die verfügbaren Metriken innerhalb der aktuell ausgewählten Kategorie an, für die Daten für die aktuell ausgewählte Umgebung und Instanzen vorhanden sind.
+Im Navigationsbereich auf der linken Seite finden Sie die verfügbaren Metriken innerhalb der aktuell ausgewählten Kategorie, für die Daten für die aktuelle Umgebungs- und Instanzenauswahl vorhanden sind.
 
-Ein einzelnes Diagramm zeigt den Status und ein Diagramm der Daten im Zeitverlauf zusammen mit den Schwellenwerten an. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
+In einem Diagramm werden der Status und ein Graph der Daten im Laufe der Zeit zusammen mit den Schwellenwerten angezeigt. Wenn mehrere Instanzen angezeigt werden, befinden sich die Daten jeder Instanz in einer separaten Reihe.
 
 ![Metrikdiagramm](/help/assets/Monitoring_Graphs1.png)
 
 Einzelne Reihen können in einem Diagramm ausgeblendet werden, indem Sie auf die Reihe in der Legende klicken.
-Wenn Sie beispielsweise auf die Warnungsschwellenreihe klicken, sehen Sie nur den kritischen Schwellenwert.
+Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kritische Schwellenwert angezeigt.
 
 ![Graph ändern](/help/assets/Monitoring_Graphs2.png)
 
@@ -73,28 +73,28 @@ Wenn Sie beispielsweise auf die Warnungsschwellenreihe klicken, sehen Sie nur de
 
 #### Host {#host}
 
-* **Pro Core laden**: Die Anzahl der Prozesse, die die CPU ausführt. Oder die Anzahl der Prozesse in der Warteschlange, die sich in einem Wartezustand befinden, gemittelt über einen Zeitraum von einer (load1), fünf (load5) und fünfzehn (load15) Minuten.
+* **Last pro Kern**: Die Anzahl der Prozesse, die die CPU ausführt. Oder die Anzahl der Prozesse in der Warteschlange, die sich in einem Wartezustand befinden, gemittelt über einen Zeitraum von einer Minute (load1), fünf Minuten (load5) und fünfzehn Minuten (load15).
 * **Prozessanzahl**: Die Anzahl der derzeit geöffneten Prozesse.
-* **Benutzeranzahl**: Die Anzahl der Benutzer mit einer aktiven Shell-Sitzung.
-* **Speichernutzung**: Der Prozentsatz des zurzeit zugewiesenen Systemspeichers.
-* **JVM-Speicher**: Die Größe (in Megabyte) des zugewiesenen Java-Heap.
-* **Alter Generationsspeicher**: Der Prozentsatz des JVM-Speicherplatzes der alten Generation, der derzeit zugewiesen ist.
+* **Benutzeranzahl**: Die Anzahl der Benutzenden mit einer aktiven Shell-Sitzung.
+* **Speicherauslastung**: Der Prozentsatz des aktuell zugewiesenen Systemspeichers.
+* **JVM-Speicher**: Die Größe (in Megabyte) des zugewiesenen Java-Heaps.
+* **Old Generation Space**: Der Prozentsatz des aktuell zugewiesenen JVM Old Generation Space.
 
 #### Netzwerk {#network}
 
-* **CQ-Port-Prüfung**: Die Antwortzeit in Sekunden für den Zugriff auf den AEM- oder Dispatcher-Port. Es gibt verschiedene Metriken für Autor, Veröffentlichung und Dispatcher.
+* **CQ-Port-Prüfung**: Die Reaktionszeit in Sekunden, um auf den AEM- oder Dispatcher-Port zuzugreifen. Es gibt verschiedene Metriken für „author“, „publish“ und „dispatcher“.
 
 #### Speicher {#storage}
 
-* **Festplattenspeicher**: Der für jeden Bereitstellungspunkt auf dem Host verwendete Speicherplatz (in Megabyte). Für jeden Bereitstellungspunkt gibt es verschiedene Metriken. Es gibt mindestens Metriken für `/` und `/mnt`, aber je nach der spezifischen Instanzkonfiguration können zusätzliche Bereitstellungspunkt-Metriken verfügbar sein.
+* **Festplattenspeicher**: Der für jeden einzelnen Bereitstellungspunkt auf dem Host belegte Speicherplatz (in Megabyte). Für jeden Bereitstellungspunkt gibt es verschiedene Metriken. Es werden zumindest Metriken für `/` und `/mnt` angezeigt. Abhängig von der jeweiligen Instanzkonfiguration können jedoch weitere Bereitstellungspunkt-Metriken verfügbar sein.
 * **Ordnergröße**
-* **AEM Segmentspeicher**: Der für den AEM Segmentspeicher verwendete Speicherplatz (in Gigabyte).
+* **AEM-Segmentspeicher**: Der für den AEM-Segmentspeicher belegte Speicherplatz (in Gigabyte).
 
 #### Programm {#application}
 
 * **Replizierungsagent**: Die Zeit (in Sekunden) für eine Testreplikation
    * Für jeden Replizierungsagenten gibt es verschiedene Metriken.
-* **Dispatcher Flush**: Die Anzahl der Elemente, die sich derzeit in der Dispatcher-Flush-Warteschlange befinden
+* **Dispatcher-Leerung**: Die Anzahl der aktuellen Elemente in der Warteschlange für die Dispatcher-Leerung.
 
 ## SLA-Berichte {#sla-reporting}
 
@@ -108,17 +108,17 @@ Wie bei den Systemüberwachungsdiagrammen werden beim Bewegen der Maus über ein
 
 ![Datenpunkt-Rollover](/help/assets/SLA-Reports-two.png)
 
-Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Anzahl der Vorfälle, die im aktuell ausgewählten Jahr für das Programm aufgetreten sind. Für jeden Vorfall werden Zeitraum und Ursache mitsamt Kommentaren angegeben.
+Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Vorfälle, die im aktuell ausgewählten Jahr im Zusammenhang mit dem Programm aufgetreten sind. Für jeden Vorfall werden Zeitraum und Ursache mitsamt Kommentaren angegeben.
 
 ![Ereignisanalyse](/help/assets/sla-reporting3.png)
 
 ## SLA-Metriken {#sla-metrics}
 
 * **Vertrag für Autoren**: Dies ist das SLA, das in Ihrem Vertrag mit Adobe Managed Services für die Erstellungsebene definiert ist.
-* **AMS Author SLA**: Die gemessene Produktionszeit der Produktionsautorenstufe, Factoring-Vorfälle, die von Anbietern oder Adobe verursacht wurden.
+* **SLA für AMS-Autoren**: Dies ist die gemessene Verfügbarkeit der produktionsbezogenen Erstellungsebene unter Berücksichtigung der von Anbietern oder Adobe verursachten Vorfälle.
 * **SLA für Autoren**: Dies ist die gemessene Verfügbarkeit der Erstellungsebene ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
 * **Vertrag für Endbenutzer**: Dies ist das SLA, das in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsebene definiert ist.
-* **AMS-Endbenutzer-SLA**: Die gemessenen Betriebszeiten der Produktionsveröffentlichungsstufe, Factoring-Vorfälle, die von Anbietern oder Adobe verursacht wurden.
+* **SLA für AMS-Endbenutzer**: Dies ist die gemessene Verfügbarkeit der produktionsbezogenen Veröffentlichungsebene unter Berücksichtigung der von Anbietern oder Adobe verursachten Vorfälle.
 * **SLA für Endbenutzer**: Dies ist die gemessene Verfügbarkeit der Veröffentlichungsebene ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
 
 ## Video-Tutorial {#video-tutorial}

@@ -3,9 +3,9 @@ title: Konfigurieren produktionsfremder Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '685'
-ht-degree: 64%
+ht-degree: 100%
 
 ---
 
@@ -13,7 +13,7 @@ ht-degree: 64%
 
 Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Über die Kachel **Pipelines** in [!UICONTROL Cloud Manager] kann der **Bereitstellungs-Manager** zwei verschiedene Arten von Pipelines erstellen.
 
@@ -24,12 +24,12 @@ Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Infor
 
 Es gibt zwei Arten von produktionsfremden Pipelines:
 
-* **Codequalitätspipelines** - Diese führen Code-Qualitätsprüfungen für den Code in einer Git-Verzweigung durch und führen die Schritte zum Erstellen und zur Codequalität aus.
-* **Implementierungs-Pipelines** - Diese Pipelines führen zusammen mit den Build- und Codequalitätsschritten wie den Code-Qualitäts-Pipelines auch den Code in einer Nicht-Produktionsumgebung aus.
+* **Code-Qualitäts-Pipelines**: Diese Pipelines führen Code-Qualitätsprüfungen für den Code in einer Git-Verzweigung durch und die Build- und Code-Qualitätsschritte aus.
+* **Bereitstellungs-Pipelines**: Diese Pipelines führen nicht nur wie die Code-Qualitäts-Pipelines die Build- und Code-Qualitätsschritte aus, sondern stellen den Code auch in einer produktionsfremden Umgebung bereit.
 
 >[!NOTE]
 >
->Eine Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md) .
+>Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md).
 
 ## Hinzufügen einer produktionsfremden Pipeline {#add-non-production-pipeline}
 
@@ -51,23 +51,23 @@ Sobald Sie mit der Benutzeroberfläche von Cloud Manager Ihr Programm eingericht
 
 1. Geben Sie das Repository an, aus dem die Pipeline den Code abrufen soll.
 
-   * **Repository** - Definiert, aus welchem Git-Repository die Pipeline den Code abrufen soll.
-   * **Git-Verzweigung** - Definiert aus welcher Verzweigung in Git, dass die ausgewählte Pipeline den Code abrufen soll.
+   * **Repository**: Diese Option legt fest, aus welchem Git-Repository die Pipeline den Code abrufen soll.
+   * **Git-Verzweigung**: Diese Option legt fest, von welcher Git-Verzweigung in der ausgewählten Pipeline der Code abgerufen werden soll.
 
 1. Definieren Sie die Bereitstellungsoptionen.
 
    1. Definieren Sie unter **Bereitstellungsauslöser**, durch welches Ereignis die Pipeline aktiviert werden soll.
 
-      * **Manuell** - Hiermit können Sie die Pipeline manuell starten.
-      * **Bei Git-Änderungen** - Startet die Pipeline, wenn der konfigurierten Git-Verzweigung Commits hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf weiterhin manuell starten.
+      * **Manuell**: Die Option ermöglicht es Ihnen, die Pipeline manuell zu starten.
+      * **Bei Git-Änderungen**: Diese Option startet die Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Damit können Sie die Pipeline bei Bedarf immer noch manuell starten.
 
    1. Für Bereitstellungs-Pipelines definieren Sie unter **Verhalten bei wichtigen Metrikfehlern** das Verhalten der Pipeline, wenn ein wichtiger Fehler in einem der Quality Gates auftritt.
 
-      * **Jedes Mal fragen** - Die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-      * **Sofort fehlschlagen** - Die Pipeline wird abgebrochen, sobald ein wichtiger Fehler auftritt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler ablehnen.
-      * **Sofort fortfahren** - Die Pipeline wird automatisch fortgesetzt, wenn ein wichtiger Fehler auftritt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler genehmigen.
+      * **Jedes Mal fragen**: Dies ist die Standardeinstellung, die ein manuelles Eingreifen bei jedem bedeutenden Fehler verlangt.
+      * **Sofortiger Ausfall**: Die Pipeline wird bei einem bedeutenden Fehler abgebrochen. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler ablehnen.
+      * **Sofort fortsetzen**: Die Pipeline wird bei einem bedeutenden Fehler automatisch fortgesetzt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler genehmigen.
 
-   1. **Dispatcher-Konfiguration** - Die Rolle **Bereitstellungsmanager** kann eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM Dispatcher-Cache entfernt werden, wenn eine Pipeline ausgeführt wird. Diese Cache-Aktionen werden im Rahmen des Implementierungs-Pipeline-Schritts ausgeführt, unmittelbar nachdem alle Inhaltspakete bereitgestellt wurden. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Konfigurieren:
+   1. **Dispatcher-Konfiguration**: Die Rolle **Bereitstellungs-Manager** kann eine Reihe von Inhaltspfaden konfigurieren, die beim Ausführen einer Pipeline entweder invalidiert oder aus dem AEM Dispatcher-Cache gelöscht werden. Diese Cache-Aktionen werden im Rahmen der Einrichtung der Bereitstellungs-Pipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Konfigurieren:
 
       1. Geben Sie unter **PATH** einen Pfad für den Inhalt an.
       1. Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.

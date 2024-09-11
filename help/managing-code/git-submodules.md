@@ -1,27 +1,27 @@
 ---
 title: Unterstützung von Git-Untermodulen
-description: Erfahren Sie, wie Sie mit Git-Untermodulen den Inhalt mehrerer Verzweigungen zum Zeitpunkt der Erstellung über Git-Repositorys hinweg zusammenführen können.
+description: Erfahren Sie, wie Sie Git-Untermodule dazu verwenden können, den Inhalt mehrerer Verzweigungen zum Build-Zeitpunkt über Git-Repositorys hinweg zusammenzuführen.
 exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '412'
-ht-degree: 20%
+ht-degree: 100%
 
 ---
 
-# Git-Untermodulunterstützung für Adobe-Repositorys {#git-submodule-support}
+# Unterstützung von Git-Untermodulen für Adobe-Repositorys {#git-submodule-support}
 
-Git-Untermodule können verwendet werden, um den Inhalt mehrerer Verzweigungen zum Zeitpunkt der Erstellung über Git-Repositorys hinweg zusammenzuführen.
+Git-Untermodule können verwendet werden, um zum Build-Zeitpunkt den Inhalt mehrerer Verzweigungen über Git-Repositorys hinweg zusammenzuführen.
 
-Wenn der Build-Prozess von Cloud Manager ausgeführt wird, klont er zunächst das Repository der Pipeline und checkt die konfigurierte Verzweigung aus. Wenn die Verzweigung eine `.gitmodules` -Datei im Stammverzeichnis enthält, wird der Befehl ausgeführt.
+Wenn der Build-Prozess von Cloud Manager ausgeführt wird, klont er zunächst das Repository der Pipeline und prüft dann die konfigurierte Verzweigung. Wenn die Verzweigung eine `.gitmodules`-Datei im Stammverzeichnis enthält, wird der Befehl ausgeführt.
 
 ```
 $ git submodule update --init
 ```
 
-Dieser Prozess checkt jedes Untermodul in das entsprechende Verzeichnis aus. Diese Technik ist eine potenzielle Alternative zu [Arbeiten mit mehreren Quell-Git-Repositorys](/help/managing-code/multiple-git-repos.md) für Unternehmen, die mit Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
+Dadurch wird jedes Untermodul im entsprechenden Verzeichnis geprüft. Diese Technik ist eine potenzielle Alternative zur [Arbeit mit mehreren Quell-Git-Repositorys](/help/managing-code/multiple-git-repos.md) für Organisationen, die mit der Verwendung von Git-Untermodulen vertraut sind und keinen externen Zusammenführungsprozess verwalten möchten.
 
-Angenommen, es gibt drei Repositorys, die jeweils eine einzige Verzweigung mit dem Namen `main` enthalten. Im &quot;primären&quot;Repository, d. h. dem in den Pipelines konfigurierten, verfügt die `main` -Verzweigung über eine `pom.xml` -Datei, die die in den anderen beiden Repositorys enthaltenen Projekte deklariert:
+Angenommen, es gibt drei Repositorys, die jeweils eine einzige Verzweigung mit dem Namen `main` enthalten. Im „primären“ Repository, d. h. dem in den Pipelines konfigurierten, verfügt die Verzweigung `main` über eine Datei `pom.xml`, in der die in den beiden anderen Repositorys enthaltenen Projekte deklariert werden.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -68,16 +68,16 @@ Weitere Informationen zu Git-Untermodulen finden Sie im [Git-Referenzhandbuch](h
 
 Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 
-* Die Git-URL muss sich genau in der oben beschriebenen Syntax befinden.
+* Die Git-URL muss sich genau an die oben beschriebene Syntax halten.
 * Betten Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
 * Es werden nur Untermodule im Stammverzeichnis der Verzweigung unterstützt.
-* Git-Untermodulverweise werden für bestimmte Git-Commits gespeichert. Wenn also Änderungen am Submodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden. Verwenden Sie beispielsweise &quot;`git submodule update --remote`&quot;.
-* Sofern nicht anders erforderlich, empfiehlt Adobe, &quot;flache&quot;Untermodule zu verwenden, indem Sie für jedes Untermodul `git config -f .gitmodules submodule.<submodule path>.shallow true` ausführen.
+* Für bestimmte Git-Commits werden Git-Untermodulverweise gespeichert. Wenn also Änderungen am Untermodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden. Zum Beispiel mit `git submodule update --remote`
+* Sofern nicht anders erforderlich, empfiehlt Adobe, „flache“ Untermodule zu verwenden, indem Sie für jedes Untermodul `git config -f .gitmodules submodule.<submodule path>.shallow true` ausführen.
 
 
-## Git-Untermodulunterstützung für private Repositorys {#private-repositories}
+## Unterstützung von Git-Untermodulen für private Repositorys {#private-repositories}
 
-Die Unterstützung für Git-Untermodule bei Verwendung von [privaten Repositorys](private-repositories.md) ist weitgehend identisch mit der Verwendung von Adobe-Repositorys.
+Die Unterstützung für Git-Untermodule bei Verwendung von [privaten Repositorys](private-repositories.md) ist weitgehend dieselbe wie bei Verwendung von Adobe-Repositorys.
 
 Nachdem Sie Ihre Datei `pom.xml` eingerichtet haben und die `git submodule`-Befehle ausgeführt werden, müssen Sie jedoch eine `.gitmodules`-Datei zum Stammverzeichnis des Aggregator-Repositorys hinzufügen, damit Cloud Manager die Einrichtung des Untermoduls erkennt.
 
@@ -89,6 +89,6 @@ Nachdem Sie Ihre Datei `pom.xml` eingerichtet haben und die `git submodule`-Bef
 
 Beachten Sie bei der Verwendung von Git-Untermodulen mit privaten Repositorys die folgenden Einschränkungen.
 
-* Die Git-URLs für die Untermodule können entweder im HTTPS- oder im SSH-Format vorliegen, müssen jedoch mit einem Github.com-Repository verknüpft werden. Das Hinzufügen eines Adobe-Repository-Untermoduls zu einem GitHub-Aggregator-Repository oder umgekehrt funktioniert nicht.
+* Die Git-URLs für die Untermodule können entweder im HTTPS- oder im SSH-Format vorliegen, müssen jedoch mit einem Github.com-Repository verknüpft sein. Das Hinzufügen eines Adobe-Repository-Untermoduls zu einem GitHub-Aggregator-Repository oder umgekehrt funktioniert nicht.
 * Die GitHub-Untermodule müssen für die Adobe-GitHub-App zugänglich sein.
-* [Die Einschränkungen bei der Verwendung von Git-Untermodulen mit von Adobe verwalteten Repositorys](#limitations-recommendations) gelten ebenfalls.
+* [Die Einschränkungen bei der Verwendung von Git-Untermodulen mit von Adobe verwalteten Repositorys](#limitations-recommendations) gelten ebenfalls.

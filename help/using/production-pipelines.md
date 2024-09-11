@@ -3,9 +3,9 @@ title: Konfigurieren von Produktions-Pipelines
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1247'
-ht-degree: 58%
+ht-degree: 100%
 
 ---
 
@@ -14,34 +14,34 @@ ht-degree: 58%
 
 Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Über die Kachel **Pipeline-Einstellungen** in [!UICONTROL Cloud Manager] können Sie zwei verschiedene Arten von Pipelines erstellen.
 
-* **Produktions-Pipelines** - Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die aus einer Reihe aufeinander abgestimmter Schritte besteht, um Quellcode aus Ihrem Git-Repository bis zur Produktion zu übernehmen.
+* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe orchestrierter Schritte umfasst, um Quell-Code aus dem Git-Repository bis in die Produktionsumgebung zu bringen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
 Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zur Konfiguration von produktionsfremden Pipelines finden Sie unter [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
 
 Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline verantwortlich. Die Pipeline-Konfiguration besteht aus folgenden Schritten:
 
-1. Definieren des Triggers, der die Pipeline startet.
+1. Definition des Auslösers, der die Pipeline startet
 1. Definition der Parameter zur Steuerung der Produktionsbereitstellung
 1. Konfiguration der Leistungstestparameter
 
 >[!NOTE]
 >
->Eine Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung aufweist und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
+>Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
 
 ## Hinzufügen einer neuen Produktions-Pipeline {#adding-production-pipeline}
 
-Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichten Ihres Programms verwendet haben und über mindestens eine Umgebung verfügen, können Sie eine Produktions-Pipeline hinzufügen.
+Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm eingerichtet haben und über mindestens eine Umgebung verfügen, können Sie eine Produktions-Pipeline hinzufügen.
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
 1. Gehen Sie von Ihrer Seite **Programmübersicht** aus zur Karte **Pipelines**.
 
-1. Klicken Sie auf **+Hinzufügen** und wählen Sie dann **Produktions-Pipeline hinzufügen** aus.
+1. Klicken Sie auf **+Hinzufügen** und wählen Sie **Produktions-Pipeline hinzufügen** aus.
 
    ![Produktions-Pipeline hinzufügen](/help/assets/configure-pipelines/add-prod1.png)
 
@@ -49,16 +49,16 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
    1. Geben Sie in das Feld **Name der Pipeline** einen beschreibenden Namen für die Pipeline ein.
 
-   1. Im Abschnitt **Source-Code** definieren Sie, wo die Pipeline den von ihr verarbeiteten Code abruft.
+   1. Definieren Sie im Abschnitt **Quell-Code**, wo die Pipeline den Code abruft, den sie verarbeitet.
 
-      * **Repository** - Definiert, welches Git-Repository die Pipeline abrufen soll.
+      * **Repository**: Diese Option legt fest, aus welchem Git-Repository die Pipeline den Code abrufen soll.
 
       >[!TIP]
       >
       >Im Dokument [Einrichten von Programmen](/help/getting-started/program-setup.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
 
-      * **Git-Verzweigung** - Definiert, von welcher Verzweigung in der ausgewählten Pipeline der Code abgerufen werden soll.
-      * **Codeposition** - Definiert den Pfad im Zweig des ausgewählten Repositorys, aus dem die Pipeline den Code abrufen soll.
+      * **Git-Verzweigung**: Diese Option legt fest, von welcher Verzweigung in der ausgewählten Pipeline der Code abgerufen werden soll.
+      * **Code-Verzeichnis**: Diese Option legt Pfad in der Verzweigung des ausgewählten Repositorys fest, aus dem die Pipeline den Code abrufen soll.
 
       ![Repos für die Pipeline definieren](/help/assets/configure-pipelines/add-prod2.png)
 
@@ -68,14 +68,14 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
          * **Bereitstellungsauslöser**: Sie haben die folgenden Optionen, um die Bereitstellungsauslöser für den Start der Pipeline zu definieren.
 
-            * **Manuell** - Starten Sie die Pipeline manuell über die Cloud Manager-Benutzeroberfläche.
-            * **Bei Git-Änderungen** - Starten Sie die CI/CD-Pipeline, sobald der konfigurierten Git-Verzweigung Commits hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
+            * **Manuell**: Diese Option startet die Pipeline manuell über die Cloud Manager-Benutzeroberfläche.
+            * **Bei Git-Änderungen**: Diese Option startet die CI/CD-Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
 
          * **Verhalten bei bedeutenden Metrikfehlern**: Bei der Einrichtung oder Bearbeitung der Pipeline kann der Bereitstellungs-Manager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates ein wichtiger Fehler auftritt. Folgende Optionen sind verfügbar:
 
-            * **Jedes Mal fragen** - Die Standardeinstellung und erfordert manuelles Eingreifen bei einem wichtigen Fehler.
-            * **Sofort fehlschlagen** - Die Pipeline wird abgebrochen, sobald ein wichtiger Fehler auftritt. Es emuliert einen Benutzer, der jeden Fehler manuell ablehnt.
-            * **Sofort fortfahren** - Die Pipeline wird automatisch fortgesetzt, wenn ein wichtiger Fehler auftritt. Es emuliert einen Benutzer, der manuell jeden Fehler genehmigt.
+            * **Jedes Mal fragen**: Dies ist die Standardeinstellung, die ein manuelles Eingreifen bei jedem bedeutenden Fehler verlangt.
+            * **Sofortiger Ausfall**: Die Pipeline wird bei einem bedeutenden Fehler abgebrochen. Damit werden Benutzende simuliert, die manuell jeden Fehler ablehnen.
+            * **Sofort fortsetzen**: Die Pipeline wird bei einem bedeutenden Fehler automatisch fortgesetzt. Damit werden Benutzende simuliert, die manuell jeden Fehler genehmigen.
 
          ![Bereitstellungsauslöser](/help/assets/configure-pipelines/add-prod3.png)
 
@@ -87,7 +87,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
          ![Staging-Bereitstellungsoptionen](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Dispatcher-Konfiguration** - Die Rolle **Bereitstellungsmanager** kann eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM Dispatcher-Cache entfernt werden, wenn eine Pipeline ausgeführt wird. Diese Cache-Aktionen werden im Rahmen des Implementierungs-Pipeline-Schritts ausgeführt, unmittelbar nachdem alle Inhaltspakete bereitgestellt wurden. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Gehen Sie zur Konfiguration wie folgt vor:
+         * **Dispatcher-Konfiguration**: Die Rolle **Bereitstellungs-Manager** kann eine Reihe von Inhaltspfaden konfigurieren, die beim Ausführen einer Pipeline entweder invalidiert oder aus dem AEM Dispatcher-Cache gelöscht werden. Diese Cache-Aktionen werden im Rahmen der Einrichtung der Bereitstellungs-Pipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Gehen Sie zur Konfiguration wie folgt vor:
 
             1. Geben Sie unter **PATH** einen Pfad für den Inhalt an.
             1. Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.
@@ -107,24 +107,24 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
          * **Bereitstellungsoptionen**: Sie können die Parameter zur Steuerung der Produktionsbereitstellung definieren.
 
-            * **GoLive-Genehmigung verwenden** - Ein Benutzer mit der Rolle **Business Owner**, **Project Manager** oder **Deployment Manager** über die Benutzeroberfläche von [!UICONTROL Cloud Manager] muss eine Bereitstellung manuell genehmigen.
-            * **Geplant** - Hält die Pipeline vor der Produktionsbereitstellung, damit sie geplant werden kann. Wenn diese Option aktiviert ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und der Benutzer wird aufgefordert, die Aktion durchzuführen.
-               * **`Now`** - Wird sofort für die Produktion bereitgestellt und schließt die Pipeline effektiv ab.
-               * **Datum** - Hiermit kann der Benutzer einen Zeitpunkt planen, zu dem die Bereitstellung abgeschlossen werden soll.
-               * **Ausführung stoppen** - Bricht die Bereitstellung für die Produktion ab.
+            * **GoLive-Genehmigung verwenden**: Eine Benutzerin oder ein Benutzer mit der Rolle **Geschäftsinhaber**, **Projekt-Manager** oder **Bereitstellungs-Manager** muss eine Bereitstellung über die [!UICONTROL Cloud Manager]-Benutzeroberfläche manuell genehmigen.
+            * **Geplant**: Diese Option hält die Pipeline vor der Produktionsbereitstellung an, sodass sie geplant werden kann. Wenn diese Option ausgewählt ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und die Benutzerin oder der Benutzer wird aufgefordert, die entsprechenden Maßnahmen zu ergreifen.
+               * **`Now`**: Dieser Option sorgt dafür, dass die Bereitstellung in der Produktionsumgebung sofort erfolgt. Die Pipeline wird damit abgeschlossen.
+               * **Datum**: Diese Option ermöglicht es Benutzenden, einen Zeitpunkt festzulegen, zu dem die Bereitstellung abgeschlossen sein soll.
+               * **Ausführung stoppen**: Diese Option bricht die Bereitstellung in der Produktionsumgebung ab.
 
            >[!TIP]
            >
            >Weitere Informationen dazu, wie Sie einen Bereitstellungsplan festlegen oder die Pipeline sofort ausführen können, finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
 
-            * **CSE-Überwachung verwenden** - Wenn diese Option ausgewählt ist, ist ein CSE (Customer Success Engineer) damit beauftragt, die eigentliche Bereitstellung zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Bereitstellungs-Manager** folgende Optionen.
+            * **CSE-Überwachung nutzen**: Bei Auswahl dieser Option wird ein Mitglied des Customer Success Engineer(CSE)-Teams eingeschaltet, um die tatsächliche Bereitstellung zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Bereitstellungs-Manager** folgende Optionen.
 
-               * **Beliebiger CSE** - Ermöglicht jedem verfügbaren CSE, die Bereitstellung zu starten.
-               * **My CSE** - Ermöglicht nur den dem Kunden zugewiesenen CSE, die Bereitstellung zu starten. Diese Option gilt auch für die vorgesehene Sicherung des CSE, wenn der zugewiesene CSE nicht verfügbar ist.
+               * **Beliebiger CSE**: Diese Option ermöglicht es, dass jedes verfügbare Mitglied des CSE-Teams die Bereitstellung starten kann.
+               * **Mein CSE**: Diese Option sorgt dafür, dass nur das der Kundin oder dem Kunden zugewiesene Mitglied des CSE-Teams die Bereitstellung starten kann. Diese Option gilt auch für die vorgesehene CSE-Backup-Person, wenn das zugewiesene Mitglied des CSE-Teams nicht verfügbar ist.
 
            ![Optionen für die Produktionsbereitstellung](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
-         * **Dispatcher-Konfiguration** - Definieren Sie die Dispatcher-Konfiguration für Ihre Produktionsumgebung. Die Optionen entsprechen den Optionen für die Staging-Umgebung.
+         * **Dispatcher-Konfiguration**: Definieren Sie die Dispatcher-Konfiguration für die Produktionsumgebung. Es sind die gleichen Optionen wie für die Staging-Umgebung verfügbar.
 
 1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Dort können Sie abhängig von den von Ihnen lizenzierten Produkten Leistungstests für AEM Sites und AEM Assets konfigurieren.
 
@@ -132,7 +132,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
    >
    >Weitere Informationen zu den verfügbaren Optionen auf der Registerkarte **Staging-Tests** finden Sie unter [Testen der Code-Qualität](/help/using/code-quality-testing.md#performance-testing).
 
-   1. Im Abschnitt **Sites Content Delivery/Distributed Load Weight** konfigurieren Sie die Site-Leistungstests anhand der Gewichtung von Seitenanfragen zwischen drei Seitensätzen. Sie können die Seitensätze nach Bedarf aktivieren oder deaktivieren.
+   1. Im Abschnitt **Site-Inhaltsbereitstellung/verteilte Lastgewichtung** konfigurieren Sie die Site-Leistungstests anhand der Gewichtung von Seitenanfragen zwischen drei Seitensätzen. Sie können die Seitensätze nach Bedarf aktivieren oder deaktivieren.
 
       * **Beliebte Live-Seiten**
       * **Andere Live-Seiten**
@@ -157,7 +157,7 @@ Nachdem Sie die Benutzeroberfläche von [!UICONTROL Cloud Manager] zum Einrichte
 
 ## Die nächsten Schritte {#the-next-steps}
 
-Nachdem Sie die Pipeline konfiguriert haben, stellen Sie Ihren Code bereit. Weitere Informationen finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
+Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code bereitstellen. Weitere Informationen finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
 
 ## Video-Tutorial {#video-tutorial-one}
 

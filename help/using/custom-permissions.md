@@ -3,9 +3,9 @@ title: Benutzerdefinierte Berechtigungen
 description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1416'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -20,7 +20,7 @@ Cloud Manager bietet eine Reihe vordefinierter Rollen, die den Zugriff auf versc
 * Geschäftsinhaber
 * Programm-Manager
 * Bereitstellungs-Manager
-* Entwickler
+* Entwicklerin oder Entwickler
 
 Mit benutzerdefinierten Berechtigungen können Benutzende neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen, um für Cloud Manager-Benutzende den Zugriff auf Programme, Pipelines und Umgebungen zu beschränken.
 
@@ -123,8 +123,8 @@ Zum Erstellen benutzerdefinierter Profile stehen folgende Berechtigungen zur Ver
 | Wichtige Metrikfehler überschreiben/ablehnen | Benutzenden erlauben, wichtige Metrikfehler zu überschreiben/abzulehnen |
 | Produktionsbereitstellungs-Zeitplan | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu planen |
 | Zugriff auf Repository-Informationen | Benutzenden erlauben, auf Repository-Informationen zuzugreifen und ein Kennwort für den Zugriff zu erstellen |
-| Repository erstellen | Benutzern das Erstellen neuer Git-Repositorys ermöglichen |
-| Repository löschen | Löschen von Git-Repositorys durch Benutzer zulassen |
+| Repository erstellen | Benutzenden erlauben, neue Git-Repositorys zu erstellen |
+| Repository löschen | Benutzenden erlauben, Git-Repositorys zu löschen |
 | Repository bearbeiten | Benutzenden erlauben, Git-Repositorys zu bearbeiten |
 | Repository-Code-Generierung | Benutzenden erlauben, Projekte aus einem Archetyp zu generieren |
 | Inhaltskopie verwalten | Benutzenden erlauben, Vorgänge zum Kopieren von Inhalten zu verwalten |
@@ -173,7 +173,7 @@ Beachten Sie bei der Verwendung benutzerdefinierter Berechtigungen die folgenden
 * Geschäftsinhaber
 * Programm-Manager
 * Bereitstellungs-Manager
-* Entwickler
+* Entwicklerin oder Entwickler
 
 Weitere Informationen zu vordefinierten Rollen finden Sie im Dokument [Rollenbasierte Berechtigungen.](/help/requirements/role-based-permissions.md).
 

@@ -1,11 +1,11 @@
 ---
 title: Hinzufügen von Anwendern und Rollen
-description: Erfahren Sie, wie Sie mit der Admin Console Benutzer und Rollen hinzufügen und Profile erstellen können.
+description: Erfahren Sie, wie Sie mit der Admin Console Benutzende und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '758'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
@@ -14,12 +14,12 @@ ht-degree: 65%
 
 Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigungen erforderlich. Beispielsweise dürfen nur bestimmte Anwender die KPIs (Key Performance Indicators) für ein Programm festlegen. Diese Berechtigungen werden logisch in Rollen gruppiert.
 
-[!UICONTROL Cloud Manager] definiert derzeit vier Benutzerrollen, die für die Verfügbarkeit bestimmter Funktionen gelten:
+In [!UICONTROL Cloud Manager] sind derzeit vier Rollen für Benutzende definiert, die die Verfügbarkeit bestimmter Funktionen steuern:
 
 * Geschäftsinhaber
 * Programm-Manager
 * Bereitstellungs-Manager
-* Entwickler
+* Entwicklerin oder Entwickler
 
 >[!NOTE]
 >
@@ -27,16 +27,16 @@ Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigunge
 
 ## Rollendefinitionen {#role-definitions}
 
-Die folgende Tabelle fasst die Rollen in Cloud Manager zusammen.
+In der folgenden Tabelle sind die Rollen in Cloud Manager zusammengefasst. 
 
 | [!UICONTROL Cloud Manager]-Rolle | Beschreibung |
 | --- | --- |
-| Geschäftsinhaber | Verantwortlich für die Definition von KPIs, die Genehmigung von Produktionsbereitstellungen und das Überschreiben wichtiger 3-Tier-Fehler bei Bedarf. |
-| Programm-Manager | Sie verwenden [!UICONTROL Cloud Manager], um Teams einzurichten, den Status zu überprüfen, KPIs anzuzeigen und wichtige 3-Tier-Fehler bei Bedarf zu genehmigen. |
-| Bereitstellungs-Manager | Verwaltet Bereitstellungsvorgänge und verwendet [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen auszuführen, CI/CD-Pipelines zu bearbeiten und bei Bedarf kritische 3-Tier-Fehler zu genehmigen. Sie haben auch Zugriff auf das Git-Repository. |
-| Entwicklerin oder Entwickler | Entwickelt und testet benutzerdefinierten Anwendungscode und verwendet hauptsächlich [!UICONTROL Cloud Manager], um den Bereitstellungsstatus anzuzeigen, und kann auf das Git-Repository für Codecommits zugreifen. |
-| Customer Success Engineer | Der CSE unterstützt im Allgemeinen den Kundenerfolg für AMS-Kunden. Sie interagieren mit [!UICONTROL Cloud Manager] , um Bereitstellungen auszuführen, die von einem CSE überwacht werden müssen. |
-| Inhaltsautorin oder -autor | Sie interagieren im Allgemeinen nicht mit [!UICONTROL Cloud Manager], können jedoch den Programmschalter [!UICONTROL Cloud Manager] verwenden, um auf AEM zuzugreifen. |
+| Geschäftsinhaber | Verantwortlich für die Definition von KPIs, die Genehmigung von Produktionsbereitstellungen und das Überschreiben von gravierenden dreistufigen Fehlern, falls erforderlich. |
+| Programm-Manager | Diese Person nutzt [!UICONTROL Cloud Manager], um die Einrichtung von Teams vorzunehmen, den Status zu überprüfen, KPIs einzusehen und ggf. gravierende dreistufige Fehler zu genehmigen. |
+| Bereitstellungs-Manager | Verwaltet die Bereitstellungsvorgänge mit [!UICONTROL Cloud Manager], um Staging- und Produktionsbereitstellungen durchzuführen, CI/CD-Pipelines zu bearbeiten und bei Bedarf gravierende dreistufige Fehler zu genehmigen. Diese Personen haben außerdem Zugriff auf das Git-Repository. |
+| Entwicklerin oder Entwickler | Entwickelt und testet benutzerdefinierten Anwendungs-Code, verwendet [!UICONTROL Cloud Manager] hauptsächlich zur Anzeige des Bereitstellungsstatus und kann für Code-Commits auf das Git-Repository zugreifen. |
+| Customer Success Engineer | Diese Person unterstützt im Allgemeinen den Erfolg von AMS-Kunden. Sie interagiert mit [!UICONTROL Cloud Manager], um Bereitstellungen auszuführen, die von einer bzw. einem CSE überwacht werden müssen. |
+| Inhaltsautorin oder -autor | Interagiert im Allgemeinen nicht mit [!UICONTROL Cloud Manager], kann aber den[!UICONTROL Cloud Manager]-Programmumschalter verwenden, um auf AEM zuzugreifen. |
 
 >[!NOTE]
 >
@@ -48,18 +48,18 @@ Die folgende Tabelle fasst die Rollen in Cloud Manager zusammen.
 
 Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin Console finden Sie unter [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
-Ein Administrator muss unter dem Produktkontext [!UICONTROL AEM Managed Services] neue Produktprofile erstellen, um rollenbasierte Berechtigungen für Benutzer von [!UICONTROL Cloud Manager] zuzuweisen, die jeder der vier Rollen [!UICONTROL Cloud Manager] entsprechen.
+Admins müssen unter dem Produktkontext [!UICONTROL AEM Managed Services] neue Produktprofile erstellen, um rollenbasierte Berechtigungen für Benutzende von [!UICONTROL Cloud Manager] zuzuweisen, die jeder der vier [!UICONTROL Cloud Manager]-Rollen entsprechen.
 
 * Geschäftsinhaber
 * Bereitstellungs-Manager
-* Entwickler
+* Entwicklerin oder Entwickler
 * Programm-Manager
 
-Mit der Admin Console können Sie Benutzer oder Gruppen für diese Produktprofile erstellen oder hinzufügen.
+Mit der Admin Console können Sie Benutzende oder Gruppen für diese Produktprofile erstellen oder hinzufügen.
 
-1. Melden Sie sich bei Admin Console unter [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
+1. Melden Sie sich bei der Admin Console unter [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
 
-1. Klicken Sie auf die Registerkarte **Übersicht** und dann auf der Karte **Produkte und Dienste** auf das Produkt, das Sie bearbeiten möchten. Wenn es dort nicht aufgeführt ist, verwenden Sie die Registerkarte **Produkte**, um das Produkt zu suchen, und klicken Sie darauf.
+1. Klicken Sie auf der Registerkarte **Überblick** auf das Produkt, das auf der Karte **Produkte und Services** bearbeitet werden soll. Wenn es dort nicht aufgeführt ist, verwenden Sie die Registerkarte **Produkte**, um das Produkt zu suchen, und klicken Sie darauf.
 
    ![Registerkarte Übersicht Admin Console](/help/assets/admin-console-overview.png)
 
@@ -83,7 +83,7 @@ Mit der Admin Console können Sie Benutzer oder Gruppen für diese Produktprofil
    |---|---|---|
    | Geschäftsinhaber | `CM_BUSINESS_OWNER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Geschäftsinhaber“ |
    | Bereitstellungs-Manager | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Bereitstellungs-Manager“ |
-   | Entwickler | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Entwickler“ |
+   | Entwicklerin oder Entwickler | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Entwickler“ |
    | Programm-Manager | `CM_PROGRAM_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Programm-Manager“ |
 
 

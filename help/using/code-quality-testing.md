@@ -3,14 +3,14 @@ title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '2764'
-ht-degree: 96%
+ht-degree: 100%
 
 ---
 
 
-# Tests der Code-Qualität {#code-quality-testing}
+# Testen der Code-Qualität {#code-quality-testing}
 
 Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 
@@ -20,7 +20,7 @@ Während der Pipeline-Ausführung erfasst die Software eine Reihe von Metriken. 
 
 Diese Ergebnisse werden über ein dreistufiges Bewertungssystem gemeldet.
 
-## Dreistufige Ratings {#three-tiered-ratings}
+## Dreistufige Bewertungen {#three-tiered-ratings}
 
 Die Pipeline muss drei Akzeptanztests bestehen:
 
@@ -38,7 +38,7 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 >
 >In einer Pipeline nur für Code-Qualität können Fehler der Kategorie „Wichtig“ des Code-Qualitätstests nicht überschrieben werden, da dieser Test der letzte Schritt in der Pipeline ist.
 
-## Tests der Code-Qualität {#code-quality-testing-step}
+## Testen der Code-Qualität {#code-quality-testing-step}
 
 Dieser Testschritt bewertet die Qualität des Anwendungs-Codes. Dies ist der Hauptzweck einer reinen Code-Qualitäts-Pipeline. Der Testschritt wird unmittelbar nach dem Build-Schritt in allen produktionsfremden und Produktions-Pipelines ausgeführt. Weitere Informationen finden Sie unter [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
@@ -73,7 +73,7 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 >
 >Weitere Informationen zu den Qualitätsregeln für benutzerspezifischen Code, die von [!UICONTROL Cloud Manager] ausgeführt werden, finden Sie unter [Qualitätsregeln für benutzerspezifischen Code](custom-code-quality-rules.md).
 
-### Umgang mit falsch-positiven Werten {#dealing-with-false-positives}
+### Umgang mit falsch positiven Treffern {#dealing-with-false-positives}
 
 Das Verfahren zur Qualitätsprüfung ist nicht perfekt. Mitunter werden fälschlicherweise Probleme identifiziert, die eigentlich nicht problematisch sind. Dieses Szenario ist als falsch positiv bekannt.
 
@@ -145,7 +145,7 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 
 Cloud Manager führt Leistungstests für AEM Sites-Programme aus. Der Leistungstest wird etwa 30 Minuten lang ausgeführt, indem durch virtuelle Benutzer (Container) der Zugriff tatsächlicher Benutzer auf Seiten in der Staging-Umgebung und Traffic simuliert wird. Diese Seiten werden mit einem Crawler gefunden.
 
-#### Virtuelle Benutzer {#virtual-users}
+#### Virtuelle Benutzende {#virtual-users}
 
 Cloud Manager generiert virtuelle Benutzende oder Container basierend auf KPIs (Antwortzeit und Seitenansichten/Min.), die von der Rolle **Geschäftsinhaber** festgelegt wurden. Diese KPIs werden beim [Erstellen oder Bearbeiten des Programms](/help/getting-started/program-setup.md) festgelegt.
 
@@ -170,7 +170,7 @@ Drei Seitensätze wählen die Seiten aus. Cloud Manager verwendet die Zugriffspr
 
 * **Neue Seiten**: Testet neue Seiten, die möglicherweise nur im Staging bereitgestellt wurden und noch nicht zur Produktion gehören, aber getestet werden müssen.
 
-##### Verteilung des Traffics auf die ausgewählten Seitensätze {#distribution-of-traffic}
+##### Verteilung des Traffics auf ausgewählte Seitensätze {#distribution-of-traffic}
 
 Sie können auf der Registerkarte **Testen** der [Pipeline-Konfiguration](/help/using/production-pipelines.md) zwischen einem Satz und allen drei Sätzen wählen. Der Traffic wird basiert auf der Anzahl der ausgewählten Sätze verteilt. Das heißt, wenn alle drei ausgewählt sind, werden in jeden Satz 33 % der gesamten Seitenansichten eingefügt. Wenn zwei ausgewählt sind, werden 50 % zu jedem Satz hinzugefügt. Wenn einer ausgewählt ist, werden 100 % des Traffics zu diesem Satz hinzugefügt.
 
@@ -188,7 +188,7 @@ Für den 30-minütigen Testzeitraum gilt in diesem Fall:
 
 #### Test und Bericht {#testing-reporting}
 
-Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem Seiten über einen 30-minütigen Testzeitraum hinweg standardmäßig als nicht authentifizierter Benutzer auf dem Staging-Veröffentlichungs-Server angefordert werden. Es werden die von virtuellen Benutzenden generierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) für jede Seite sowie verschiedene Metriken auf Systemebene (CPU, Arbeitsspeicher, Netzwerkdaten) für alle Instanzen gemessen.
+Cloud Manager führt Leistungstests für AEM Sites-Programme durch, indem als nicht authentifizierte Benutzende Seiten über einen 30-minütigen Testzeitraum hinweg standardmäßig auf dem Staging-Veröffentlichungs-Server angefordert werden. Es werden die von virtuellen Benutzenden generierten Metriken (Antwortzeit, Fehlerrate, Ansichten pro Minute usw.) für jede Seite sowie verschiedene Metriken auf Systemebene (CPU, Arbeitsspeicher, Netzwerkdaten) für alle Instanzen gemessen.
 
 In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix unter Verwendung des dreistufigen Gating-Systems.
 
@@ -204,7 +204,7 @@ In der folgenden Tabelle finden Sie eine Zusammenfassung der Leistungstestmatrix
 | Netzwerk-Bandbreitenauslastung | Wichtig | >= 90 % |
 | Anforderungen pro Minute | Info | >= 6.000 |
 
-Weitere Informationen zur Verwendung der Standardauthentifizierung für Leistungstests für Sites und Assets finden Sie unter [Authentifizierte Leistungstests](#authenticated-performance-testing) .
+Weitere Informationen zur Verwendung der einfachen Authentifizierung bei Leistungstests von Sites und Assets finden Sie im Abschnitt [Authentifizierte Leistungstests](#authenticated-performance-testing).
 
 >[!NOTE]
 >
@@ -224,7 +224,7 @@ Um diese Variablen mithilfe der Cloud Manager-Befehlszeilenschnittstelle festzu
 $ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
 ```
 
-Informationen zur Verwendung der API finden Sie in der API-Dokumentation unter [Patch user pipeline variables](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables) .
+Informationen zur Verwendung der API finden Sie in der API-Dokumentation [Patchen von Benutzer-Pipeline-Variablen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables).
 
 ### AEM Assets {#aem-assets}
 
@@ -238,11 +238,11 @@ Diese Methode sollte in der Autoreninstanz bleiben und die Berechtigungen sollte
 
 #### Bilder und Assets zum Testen {#assets-for-testing}
 
-Kunden können ihre eigenen Assets zum Testen hochladen. Dieses Verfahren kann bei der **Pipeline-Einrichtung** oder auf dem Bildschirm **Bearbeiten** festgelegt werden. Dabei werden typische Bildformate wie JPEG, PNG, GIF und BMP sowie Photoshop-, Illustrator- und Postscript-Dateien unterstützt.
+Kundinnen und Kunden können ihre eigenen Assets zum Testen hochladen. Dieses Verfahren kann bei der **Pipeline-Einrichtung** oder auf dem Bildschirm **Bearbeiten** festgelegt werden. Dabei werden typische Bildformate wie JPEG, PNG, GIF und BMP sowie Photoshop-, Illustrator- und Postscript-Dateien unterstützt.
 
 Wenn keine Bilder hochgeladen werden, verwendet Cloud Manager zum Testen ein Standardbild und PDF-Dokumente.
 
-#### Assets-Testverteilung {#distribution-of-assets}
+#### Verteilung von Assets für Tests {#distribution-of-assets}
 
 Die Verteilung der Anzahl von Assets jedes Typs, die pro Minute hochgeladen werden, wird bei der **Pipeline-Einrichtung** oder auf dem Bildschirm **Bearbeiten** festgelegt.
 
@@ -254,11 +254,11 @@ Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei 
 
 >[!TIP]
 >
->Weitere Informationen finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) . Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programmeinrichtung](/help/getting-started/program-setup.md).
+>Weitere Informationen finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programmeinrichtung](/help/getting-started/program-setup.md).
 
-### Diagramme für Leistungstests {#performance-testing-results-graphs}
+### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
-Im Dialogfeld **Leistungstest** stehen verschiedene Metriken zur Verfügung.
+Im **Dialogfeld „Leistungstest“** sind eine Reihe von Metriken verfügbar.
 
 ![Liste der Metriken](/help/assets/understand_test-results-screen1.png)
 
@@ -282,9 +282,9 @@ Diese Funktion ist für die folgenden Metriken verfügbar.
 * **Spitzenreaktionszeit**: Ein Diagramm zur Spitzenreaktionszeit pro Minute während des Testzeitraums
 
 * **95. Perzentil der Reaktionszeit**: Ein Diagramm zum 95. Perzentil der Reaktionszeit pro Minute während des Testzeitraums
-   * Eine CSV-Datei mit den Seiten, deren 95. Perzentil der Reaktionszeit die definierte KPI überschritten hat
+   * Eine CSV-Datei mit den Seiten, für die das 95. Perzentil der Reaktionszeit die definierte KPI überschritten hat
 
-## Optimierung der Inhaltspaketsuche {#content-package-scanning-optimization}
+## Optimierung der Inhaltspaketüberprüfung {#content-package-scanning-optimization}
 
 Im Rahmen des Qualitätsanalyseprozesses führt Cloud Manager eine Analyse der vom Maven-Build erzeugten Inhaltspakete durch. Cloud Manager bietet Optimierungen zur Beschleunigung dieses Prozesses an, die wirksam sind, wenn bestimmte Verpackungseinschränkungen beachtet werden.
 

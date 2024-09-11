@@ -1,18 +1,18 @@
 ---
 title: Einrichten von Programmen
-description: Nach dem Onboarding muss der Business Owner einige Ersteinstellungen am Programm vornehmen.
+description: Nach dem Onbarding muss die Geschäftsinhaberin bzw. der Geschäftsinhaber verschiedene Ersteinstellungen am Programm vornehmen.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '564'
-ht-degree: 55%
+ht-degree: 100%
 
 ---
 
 
 # Einrichten von Programmen {#program-setup}
 
-Nach dem Onboarding richtet der Business Owner das Programm ein, indem er eine Beschreibung hinzufügt und wichtige Leistungsindikatoren (KPIs) definiert. Diese KPIs werden dann für Leistungstests verwendet.
+Nach dem Onboarding richtet die Geschäftsinhaber bzw. der Geschäftsinhaber das Programm ein, indem eine Beschreibung hinzufügt und Key Performance Indicators (KPIs) definiert werden. Diese KPIs werden dann für Leistungstests verwendet.
 
 ## Einrichten von Programmen mit [!UICONTROL Cloud Manager] {#program-setup-cloud-manager}
 
@@ -24,7 +24,7 @@ Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu
 
    ![Programm einrichten](/help/assets/set-up-program/setup1.png)
 
-1. Im Dialogfeld **Programm einrichten** können Sie Programminformationen auf drei Registerkarten eingeben:
+1. Im Dialogfeld **Programm einrichten** können Sie auf drei Registerkarten Informationen zum Programm eingeben:
 
    * **Allgemein**
    * **KPI**
@@ -42,7 +42,7 @@ Führen Sie die folgenden Schritte aus, um das Programm einzurichten und KPIs zu
 
 1. Auf der Registerkarte **Bereitstellung** können Sie die bedarfsorientierten Skalierungsoptionen für Ihre Umgebungen festlegen, wenn für Ihr Programm die automatische Skalierung aktiviert ist.
 
-   Die automatische Skalierung gilt nur für die Produktionsumgebung und ist möglicherweise nicht für alle Kundenprogramme verfügbar.
+   Die Funktion zur automatischen Skalierung ist nur auf die Produktionsumgebung anwendbar und steht ggf. nicht für alle Kundenprogramme zur Verfügung.
 
    ![Bereitstellungsoptionen](/help/assets/Setup_Program-Provisioning.png)
 
@@ -68,9 +68,9 @@ Sie können Programme nach ihrer Einrichtung bearbeiten. Führen Sie diese Schri
 
 1. Klicken Sie auf **Aktualisieren**, um Ihre Änderungen zu speichern.
 
-Die Änderungen werden sofort in Cloud Manager gespeichert, werden jedoch erst bei der nächsten Pipeline-Ausführung in Ihren Umgebungen übernommen.
+Die Änderungen werden sofort in Cloud Manager gespeichert, aber erst bei der nächsten Ausführung der Pipeline in Ihre Umgebungen übernommen.
 
-Wenn Sie noch keine Pipeline erstellt haben, finden Sie weitere Informationen unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md).
+Wenn Sie noch keine Pipeline erstellt haben, lesen Sie die Dokumente [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
 
 ## Wechseln zwischen Programmen {#swithing-programs}
 
@@ -82,13 +82,13 @@ Verwenden Sie die Aktionsleiste, um zu einem anderen Programm zu wechseln, das a
 
 ## KPIs {#kpis}
 
-Sites-KPIs werden bei Tests gemessen, die in der Staging-Umgebung ausgeführt werden. Normalerweise werden diese KPIs entsprechend den Kapazitäten der Staging-Umgebung herunterskaliert.
+Die KPIs werden bei Tests gemessen, die in der Staging-Umgebung ausgeführt werden. Normalerweise werden diese KPIs entsprechend den Kapazitäten der Staging-Umgebung herunterskaliert.
 
-Beispiel: Ein Anwender, der von durchschnittlich 1.000 Seitenaufrufen pro Minute in seiner Produktionsumgebung ausgeht und über vier Dispatcher-/Veröffentlichungsserver in der Produktion verfügt, sollte dieses Szenario auf 250 Seitenaufrufe pro Minute skalieren. In diesem Szenario wird davon ausgegangen, dass ihre Staging-Umgebung nur aus einem einzigen Dispatcher-/Veröffentlichungs-Server-Paar besteht.
+Benutzende, die beispielsweise durchschnittlich 1000 Seitenaufrufe pro Minute in ihrer Produktionsumgebung erwarten und über vier Dispatcher/Publishing-Server in der Produktion verfügen, sollten eine Skalierung auf 250 Seitenaufrufe pro Minute vornehmen. In diesem Szenario wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
 
-Assets-Leistungstests erfordern das wiederholte Hochladen von Assets über einen Zeitraum von 30 Minuten. Die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene werden während des Tests gemessen.
+Assets-Leistungstests umfassen das wiederholte Hochladen von Assets über einen Zeitraum von 30 Minuten. Die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene werden während der gesamten Testdauer gemessen.
 
-Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFront vor Ihrer Produktionsumgebung vorgeschaltet. Da [!UICONTROL Cloud Manager] direkt gegen die Staging-Umgebung getestet wird, sollten die KPI nur den erwarteten Traffic widerspiegeln, der durch das CDN weitergeleitet wird. Das heißt, der Cache fehlt. In der Regel handelt es sich bei diesem Erlebnis um eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
+Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFront vor Ihrer Produktionsumgebung vorgeschaltet. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, sollten die KPIs dem erwarteten Traffic entsprechen, der durch das CDN weitergeleitet wird. Das heißt, der Cache fehlt. In der Regel handelt es sich bei diesem Erlebnis um eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
 
 ## Videoüberblick {#video}
 

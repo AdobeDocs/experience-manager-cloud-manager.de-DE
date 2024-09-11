@@ -3,14 +3,14 @@ title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1637'
-ht-degree: 97%
+ht-degree: 100%
 
 ---
 
 
-# Codebereitstellung {#code-deployment}
+# Code-Bereitstellung {#code-deployment}
 
 Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 
@@ -34,7 +34,7 @@ Der Build-Prozess startet den Code-Bereitstellungsprozess einschließlich der fo
 
 Sie können die Schritte verschiedener Bereitstellungsprozesse überprüfen, indem Sie die Protokolle lesen oder die Ergebnisse anhand der Testkriterien durchgehen.
 
-## Implementierungsschritte {#deployment-steps}
+## Bereitstellungsschritte {#deployment-steps}
 
 In jedem Schritt der Bereitstellung werden verschiedene Aktionen ausgeführt, die in diesem Abschnitt beschrieben werden. Unter [Details zum Bereitstellungsprozess](#deployment-process) finden Sie technische Einzelheiten dazu, wie der Code selbst im Hintergrund bereitgestellt wird.
 
@@ -49,7 +49,7 @@ Der Schritt **Staging-Bereitstellung** umfasst die folgenden Aktionen:
 
 ![Staging-Bereitstellung](/help/assets/Stage_Deployment1.png)
 
-### Schritt für Staging-Tests {#stage-testing}
+### Schritt zu Staging-Tests {#stage-testing}
 
 Der Schritt **Staging-Tests** umfasst die folgenden Aktionen:
 
@@ -90,7 +90,7 @@ Die folgenden Schritte führen zu einem Timeout, wenn auf Benutzer-Feedback gewa
 | Planen der Bereitstellung für die Produktion | 14 Tage |
 | Verwaltete Produktionsbereitstellung | 14 Tage |
 
-## Details zum Implementierungsprozess {#deployment-process}
+## Details zum Bereitstellungsprozess {#deployment-process}
 
 Cloud Manager lädt alle beim Build-Prozess generierten target/*.zip-Dateien in einen Speicherort hoch. Diese Artefakte werden in der Pipeline-Bereitstellungsphase von diesem Speicherort abgerufen.
 
@@ -133,7 +133,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    >
    >Sie können Änderungen am Load-Balancer in Entwicklungs- und Staging-Bereitstellungen überspringen. Das bedeutet, Sie können für die Entwicklungsumgebung in produktionsfremden Pipelines und für die Staging-Umgebung in der Produktions-Pipeline Schritte trennen und anfügen.
 
-### Implementierung in die Produktionsphase {#deployment-production-phase}
+### Bereitstellung in der Produktionsphase {#deployment-production-phase}
 
 Der Bereitstellungsvorgang für Produktionstopologien unterscheidet sich geringfügig, um die Auswirkungen auf die Besuchenden von AEM-Websites zu minimieren.
 
@@ -149,7 +149,7 @@ Produktionsbereitstellungen nutzen im Allgemeinen die oben beschriebenen Schritt
 
 Dieser Vorgang wird fortgesetzt, bis die Bereitstellung alle Publisher und Dispatcher in der Topologie erreicht hat.
 
-## Ausführungsmodus der Notfallpipeline {#emergency-pipeline}
+## Notfall-Pipeline-Ausführungsmodus {#emergency-pipeline}
 
 In kritischen Situationen müssen Adobe Managed Services-Kundinnen und -Kunden möglicherweise Code-Änderungen sofort in ihren Staging- und Produktionsumgebungen bereitstellen. Durch diesen Modus können sie den gesamten Cloud Manager-Testzyklus umgehen.
 
@@ -159,7 +159,7 @@ Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline in 
 >
 >Die Funktion für den Notfall-Pipeline-Ausführungsmodus wird programmweise aktiviert. Die Aktivierung erfolgt durch das Customer Success Engineer-Team.
 
-### Verwenden des Ausführungsmodus der Notfallpipeline {#using-emergency-pipeline}
+### Verwenden des Notfall-Pipeline-Ausführungsmodus {#using-emergency-pipeline}
 
 Beim Starten der Ausführung einer Produktions-Pipeline können Sie in einem Dialogfeld zwischen Normalmodus und Notfallmodus wählen. Diese Option ist verfügbar, wenn die Funktion für den Notfall-Pipeline-Ausführungsmodus für das Programm aktiviert ist. Eine Auswahl ist möglich, sobald die Funktion aktiviert wurde.
 
@@ -198,11 +198,11 @@ In solchen Fällen, in denen eine erneute Ausführung möglich ist, bietet die S
 * Wenn die letzte Ausführung vor dem Produktionsbereitstellungsschritt fehlschlug, ist eine erneute Ausführung nicht möglich.
 
 
-### API erneut ausführen {#reexecute-api}
+### Erneutes Ausführen der API {#reexecute-api}
 
 Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [die Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) verwenden, um erneute Ausführungen auszulösen und Ausführungen zu identifizieren, die als erneute Ausführungen ausgelöst wurden.
 
-#### Trigger einer erneuten Ausführung {#triggering}
+#### Auslösen einer erneuten Ausführung {#triggering}
 
 Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an die HAL-Verknüpfung `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Schritts der Produktionsbereitstellung erfolgen.
 
@@ -250,6 +250,6 @@ Die Syntax für den Wert `href` der HAL-Verknüpfung ist nur ein Beispiel, und d
 
 Das Senden einer `PUT`-Anfrage an diesen Endpunkt führt bei Erfolg zu einer `201`-Antwort. Der Antworttext entspricht der Darstellung der neuen Ausführung. Diese Funktionalität ähnelt dem Starten einer regulären Ausführung über die API.
 
-#### Ermitteln einer erneut ausgeführten Ausführung {#identifying}
+#### Identifizieren einer Ausführung mit erneuter Ausführung {#identifying}
 
-Das System identifiziert erneut ausgeführte Ausführungen anhand des Werts `RE_EXECUTE` im Feld „Auslöser“.
+Das System identifiziert erneut ausgeführte Ausführungen anhand des Werts `RE_EXECUTE` im Feld „Trigger“.
