@@ -3,9 +3,9 @@ title: Git-Integration mit Adobe Cloud Manager
 description: In dieser Videoreihe wird die Einrichtung und Integration eines kundenseitig verwalteten (lokalen) Git-Repositorys mit Adobe Cloud Manager beschrieben.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 51bd685a17eb9d68b1ec8245e6167cab02101fc1
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '331'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -56,7 +56,7 @@ Bereiten Sie Code für die Produktionsfreigabe in einem kundenseitig verwalteten
 
 >[!VIDEO](https://video.tv.adobe.com/v/28724/?quality=12)
 
-## Synchronisieren von Release-Tags {#sync-tags}
+## Synchronisieren von Versions-Tags {#sync-tags}
 
 Sie können Versions-Tags aus einem Cloud Manager-Git-Repository in einem kundenseitig verwalteten Git-Repository synchronisieren. Diese Funktion sorgt für Sichtbarkeit des in Staging- und Produktionsumgebungen bereitgestellten Codes.
 

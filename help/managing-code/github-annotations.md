@@ -3,14 +3,14 @@ title: Anmerkungen zur GitHub-Prüfung
 description: Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
 source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '251'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 
-# GitHub-Prüfungsanmerkungen {#github-annotations}
+# Anmerkungen zur GitHub-Prüfung {#github-annotations}
 
 Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
 

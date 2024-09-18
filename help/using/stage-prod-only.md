@@ -3,9 +3,9 @@ title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '932'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -28,7 +28,7 @@ Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäß
 Reine Staging- und Produktions-Pipelines bieten Lösungen für diese Anwendungsfälle, indem sie dedizierte Bereitstellungsoptionen bieten.
 
 * **Bereitstellungs-Pipelines für reine Staging-Umgebungen** stellen nur in einer Staging-Umgebung bereit und beenden ihre Ausführung, sobald die Bereitstellung und die Tests abgeschlossen sind. Eine reine Staging-Pipeline verhält sich genauso wie die standardmäßig gekoppelte Full-Stack-Produktions-Pipeline, jedoch ohne die Schritte der Produktionsbereitstellung (Genehmigung, Zeitplan, Bereitstellung).
-* **Produktionsgeschützte Bereitstellungs-Pipelines:** Wird nur für die Produktion bereitgestellt, indem die zuletzt erfolgreiche Staging-Ausführung ausgewählt wird. Anschließend stellen sie ihre Artefakte für die Produktion bereit. Reine Produktions-Pipelines verwenden die Artefakte aus den Staging-Bereitstellungen erneut und überspringen die Erstellungsphase.
+* **Bereitstellungs-Pipelines für reine Produktionsumgebungen:** Wird nur in einer Produktionsumgebung bereitgestellt, indem die letzte erfolgreiche Staging-Ausführung ausgewählt wird. Anschließend stellen sie ihre Artefakte für die Produktion bereit. Reine Produktions-Pipelines verwenden die Artefakte aus den Staging-Bereitstellungen erneut und überspringen die Erstellungsphase.
 
 Reine Staging- und reine Produktions-Pipelines werden nicht ausgeführt, während eine Full-Stack-Produktions-Pipeline ausgeführt wird und umgekehrt. Wenn sowohl bei der reinen Staging- als auch bei der Full-Stack-Produktions-Pipeline der Trigger **Bei Git-Änderungen** konfiguriert wurde und auf dieselbe Verzweigung und dasselbe Repository verweist, wird nur die reine Staging-Pipeline automatisch gestartet. Reine Produktions-Pipelines werden nicht mit **`On Git Changes`** gestartet, da sie nicht direkt mit einem Repository verknüpft sind.
 

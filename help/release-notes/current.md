@@ -3,9 +3,9 @@ title: Versionshinweise für Cloud Manager 2024.9.0
 description: Dies sind die Versionshinweise für Cloud Manager 2024.9.0.
 feature: Release Information
 source-git-commit: 3671772a1369273d89fde101ba084a6e2f8ce8dc
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '184'
-ht-degree: 80%
+ht-degree: 100%
 
 ---
 
@@ -19,14 +19,14 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] 2024.
 
 ## Veröffentlichungsdatum {#release-date}
 
-Keine nennenswerten Fehler oder Funktionen für die Septemberversion von Cloud Manager.
+Keine wesentlichen Fehler oder Funktionen für die Septemberversion von Cloud Manager.
 
-Die nächste Version ist für den Freitag, 3. Oktober 2024 geplant.
+Die nächste Version ist für den 3. Oktober 2024 geplant.
 
 
 ## Neue Funktionen {#what-is-new}
 
-* Für reine Staging- und reine Produktions-Pipelines (verfügbar als Bestandteil des [frühen Benutzerprogramms](#staging-production-only-pipelines)) können Sie diese nun im [Notmodus](/help/using/stage-prod-only.md#emergency-mode) ausführen und Staging-Tests überspringen.
+* Sie können reine Staging- und reine Produktions-Pipelines (verfügbar als Bestandteil des [Early-Adopter-Programms](#staging-production-only-pipelines)) jetzt im [Notfallmodus](/help/using/stage-prod-only.md#emergency-mode) ausführen und Staging-Tests überspringen.
 
 ## Early-Adopter-Programm {#early-adoption}
 
