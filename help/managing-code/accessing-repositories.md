@@ -2,7 +2,7 @@
 title: Repository-Zugriffsinformationen
 description: Erfahren Sie, wie Sie mithilfe der Self-Service-Git-Kontoverwaltung über Cloud Manager auf Ihre von Adobe verwalteten Git-Repositorys zugreifen und diese verwalten können.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
-source-git-commit: b66eb29ab86b2a6acf3a1d92c217154d07b9cc1e
+source-git-commit: 04fbc4a3fdba8b108055d66a4fdb1a31994cb18e
 workflow-type: tm+mt
 source-wordcount: '381'
 ht-degree: 47%
@@ -24,7 +24,7 @@ Im Dialogfeld **Repository Info** können Sie die folgenden Zugriffsinformatione
 * Die URL zum Git-Repository von Cloud Manager.
 * Vordefinierte Git-Befehle zum schnellen Hinzufügen einer Remote-Verbindung zu Ihrem Git-Repository und Push-Code.
 
-![Fenster „Repository-Informationen“](assets/repository-info.png)
+  ![Fenster „Repository-Informationen“](assets/repository-info.png)
 
 Zugriffsinformationen über [private Repositorys](/help/managing-code/private-repositories.md) sind in Cloud Manager nicht verfügbar.
 

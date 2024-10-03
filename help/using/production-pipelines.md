@@ -1,16 +1,16 @@
 ---
-title: Konfigurieren von Produktions-Pipelines
+title: Hinzufügen einer Produktions-Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1247'
-ht-degree: 100%
+source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
+workflow-type: tm+mt
+source-wordcount: '1249'
+ht-degree: 99%
 
 ---
 
 
-# Konfigurieren von Produktions-Pipelines {#configuring-production-pipelines}
+# Hinzufügen einer Produktions-Pipeline {#configuring-production-pipelines}
 
 Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
 

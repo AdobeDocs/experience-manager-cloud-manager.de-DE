@@ -1,48 +1,72 @@
 ---
-title: Versionshinweise für Cloud Manager 2024.9.0
-description: Dies sind die Versionshinweise für Cloud Manager 2024.9.0.
+title: Versionshinweise für Cloud Manager 2024.10.0
+description: Dies sind die Versionshinweise für Cloud Manager 2024.10.0.
 feature: Release Information
-source-git-commit: 3671772a1369273d89fde101ba084a6e2f8ce8dc
-workflow-type: ht
-source-wordcount: '184'
-ht-degree: 100%
+source-git-commit: 94d5f3487408f9d8908bb15221c48ef768390527
+workflow-type: tm+mt
+source-wordcount: '371'
+ht-degree: 26%
 
 ---
 
-# Versionshinweise für Cloud Manager 2024.9.0 {#release-notes}
+# Versionshinweise für Cloud Manager 2024.10.0 {#release-notes}
 
-Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] 2024.9.0 dokumentiert.
+Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] 2024.10.0 dokumentiert.
 
 >[!NOTE]
 >
 >Die neuesten Versionshinweise für Cloud Manager in AEM as a Cloud Service finden Sie unter [Aktuelle Versionshinweise zu Cloud Manager in AEM as a Cloud Service](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/cloud-manager/current)
 
+
+
 ## Veröffentlichungsdatum {#release-date}
 
-Keine wesentlichen Fehler oder Funktionen für die Septemberversion von Cloud Manager.
+<!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-Die nächste Version ist für den 3. Oktober 2024 geplant.
+Die Version von [!UICONTROL Cloud Manager] 2024.10.0 wurde am 3. Oktober 2024 veröffentlicht.
+
+Die nächste Version ist für den Freitag, 14. November 2024 geplant.
+
 
 
 ## Neue Funktionen {#what-is-new}
 
-* Sie können reine Staging- und reine Produktions-Pipelines (verfügbar als Bestandteil des [Early-Adopter-Programms](#staging-production-only-pipelines)) jetzt im [Notfallmodus](/help/using/stage-prod-only.md#emergency-mode) ausführen und Staging-Tests überspringen.
+* <!-- BOTH CS & AMS --> Die in Cloud Manager verwendete AEM Archetyp-Version wird jetzt auf Version 26 aktualisiert. Siehe [https://github.com/adobe/aem-project-archetype/releases](https://github.com/adobe/aem-project-archetype/releases)
+<!-- (CMGR-59817) -->
+
+
 
 ## Early-Adopter-Programm {#early-adoption}
 
-Nehmen Sie am Early-Adopter-Programm von Cloud Manager teil und nutzen Sie die Möglichkeit, einige zukünftige Funktionen zu testen.
+Nehmen Sie am Cloud Manager-Programm teil und haben Sie die Möglichkeit, bevorstehende Funktionen zu testen.
 
+### Eigenes Git - jetzt mit Unterstützung für GitLab und Bitbucket {#gitlab-bitbucket}
+
+<!-- BOTH CS & AMS -->
+
+Die Funktion **Eigenes Git holen** wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Enterprise-GitHub-Repositorys. Wenn Sie diese neuen Repos hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit einer konstanten Codesynchronisation mit dem Adobe-Repository und bietet die Möglichkeit, Pull-Anforderungen zu validieren, bevor sie in einer Hauptverzweigung zusammengeführt werden.
+
+Siehe [Hinzufügen externer Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
+
+![Dialogfeld &quot;Repository hinzufügen&quot;](/help/release-notes/assets/repositories-add-release-notes.png)
+
+>[!NOTE]
+>
+>Derzeit sind die vordefinierten Qualitätsprüfungen für Pull-Anforderungscode ausschließlich für von GitHub gehostete Repositorys verfügbar. Es wird jedoch ein Update vorgenommen, um diese Funktion auf andere Git-Anbieter zu erweitern.
+
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie eine E-Mail von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse an [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com). Stellen Sie sicher, dass Sie angeben, welche Git-Plattform Sie verwenden möchten und ob Sie sich in einer privaten/öffentlichen oder Enterprise-Repository-Struktur befinden.
 
 ### Reine Staging- und reine Produktions-Pipelines {#staging-production-only-pipelines}
 
-Adobe freut sich, die Einführung der Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) anzukündigen. Mit dieser neuen Funktion können Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen.
+Adobe kündigt die Einführung der Unterstützung für [reine Staging- und reine Produktionslinien](/help/using/stage-prod-only.md) an. Mit dieser neuen Funktion können Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen.
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an `Grp-cloudmanager_splitpipelines@adobe.com`.
+Wenn Sie diese Funktion testen und Feedback geben möchten, senden Sie eine E-Mail an [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com) aus Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse.
 
 <!-- ## Bug fixes
 
 * text
+-->
 
-## Known Issues {#known-issues}
+## Bekannte Probleme {#known-issues}
 
-{{content-copy-known-issues}} LEAVE IN??? -->
+{{content-copy-known-issues}}
