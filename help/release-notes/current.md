@@ -2,10 +2,10 @@
 title: Versionshinweise für Cloud Manager 2024.10.0
 description: Dies sind die Versionshinweise für Cloud Manager 2024.10.0.
 feature: Release Information
-source-git-commit: 94d5f3487408f9d8908bb15221c48ef768390527
+source-git-commit: 74e8f7c0f3896e0e33a02b62c003db322c0d50d8
 workflow-type: tm+mt
-source-wordcount: '371'
-ht-degree: 26%
+source-wordcount: '369'
+ht-degree: 27%
 
 ---
 
@@ -48,7 +48,7 @@ Die Funktion **Eigenes Git holen** wurde erweitert und unterstützt jetzt auch e
 
 Siehe [Hinzufügen externer Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
 
-![Dialogfeld &quot;Repository hinzufügen&quot;](/help/release-notes/assets/repositories-add-release-notes.png)
+![Dialogfeld „Repository hinzufügen“](/help/release-notes/assets/repositories-add-release-notes.png)
 
 >[!NOTE]
 >
@@ -67,6 +67,6 @@ Wenn Sie diese Funktion testen und Feedback geben möchten, senden Sie eine E-Ma
 * text
 -->
 
-## Bekannte Probleme {#known-issues}
+<!-- Known Issues {#known-issues}
 
-{{content-copy-known-issues}}
+ -->
