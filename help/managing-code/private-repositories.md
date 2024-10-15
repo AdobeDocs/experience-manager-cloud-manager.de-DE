@@ -4,9 +4,9 @@ description: Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigen
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '818'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -32,7 +32,7 @@ Die Konfiguration erfolgt in zwei Hauptschritten:
 
 
 
-### Repository hinzufügen {#add-repo}
+### Hinzufügen eines Repositorys {#add-repo}
 
 1. Klicken Sie in Cloud Manager auf der Seite **Programmübersicht** auf die Registerkarte **Repositorys**, um zur Seite **Repositorys** zu wechseln. Klicken Sie dann auf **Repository hinzufügen**.
 
@@ -54,7 +54,7 @@ Die Konfiguration erfolgt in zwei Hauptschritten:
 
 
 
-### Überprüfen des Eigentums an einem privaten Repository {#validate-ownership}
+### Validieren der Eigentümerschaft eines privaten Repositorys {#validate-ownership}
 
 Cloud Manager kennt jetzt Ihr GitHub-Repository, benötigt aber noch den Zugriff darauf. Um Zugriff zu gewähren, müssen Sie die Adobe GitHub-App installieren und sicherstellen, dass Sie Eigentümerin bzw. Eigentümer des angegebenen Repositorys sind.
 
@@ -133,7 +133,7 @@ Validierte private Repositorys können [Full-Stack- und Frontend-Pipelines zugeo
 Bei der Verwendung privater Repositorys mit Cloud Manager gelten bestimmte Einschränkungen.
 
 * Pipelines auf Web-Ebene und Konfigurations-Pipelines werden bei privaten Repositorys nicht unterstützt.
-* Bei Verwendung privater Repositorys in Full-Stack-Produktions-Pipelines wird kein Git-Tag erstellt und gesendet.
+* Bei Verwendung privater Repositorys in Full-Stack-Produktions-Pipelines wird kein Git-Tag erstellt und gepusht.
 * Wenn die Adobe-GitHub-App aus Ihrer GitHub-Organisation entfernt wird, wird dadurch auch die Funktion zur Validierung von Pull-Anfragen für alle Repositorys entfernt.
 * Pipelines, die private Repositorys und den On-Commit-Build-Trigger verwenden, werden nicht automatisch gestartet, wenn ein neues Commit in die ausgewählte Verzweigung verschoben wird.
 * Die [Funktion zur Wiederverwendung von Artefakten](/help/getting-started/project-setup.md#build-artifact-reuse) gilt nicht für private Repositorys.

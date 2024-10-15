@@ -3,9 +3,9 @@ title: Hinzufügen einer Produktions-Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1249'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 

@@ -3,9 +3,9 @@ title: Versionshinweise für Cloud Manager 2024.10.0
 description: Dies sind die Versionshinweise für Cloud Manager 2024.10.0.
 feature: Release Information
 source-git-commit: 74e8f7c0f3896e0e33a02b62c003db322c0d50d8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '369'
-ht-degree: 27%
+ht-degree: 100%
 
 ---
 
@@ -23,44 +23,44 @@ Auf dieser Seite sind die Versionshinweise für [!UICONTROL Cloud Manager] 2024.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-Die Version von [!UICONTROL Cloud Manager] 2024.10.0 wurde am 3. Oktober 2024 veröffentlicht.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] 2024.10.0 ist der 3. Oktober 2024.
 
-Die nächste Version ist für den Freitag, 14. November 2024 geplant.
+Die nächste Version ist für den 14. November 2024 geplant.
 
 
 
 ## Neue Funktionen {#what-is-new}
 
-* <!-- BOTH CS & AMS --> Die in Cloud Manager verwendete AEM Archetyp-Version wird jetzt auf Version 26 aktualisiert. Siehe [https://github.com/adobe/aem-project-archetype/releases](https://github.com/adobe/aem-project-archetype/releases)
+* <!-- BOTH CS & AMS --> Die in Cloud Manager verwendete AEM-Archetyp-Version wird jetzt auf Version 26 aktualisiert. Siehe [https://github.com/adobe/aem-project-archetype/releases](https://github.com/adobe/aem-project-archetype/releases)
 <!-- (CMGR-59817) -->
 
 
 
 ## Early-Adopter-Programm {#early-adoption}
 
-Nehmen Sie am Cloud Manager-Programm teil und haben Sie die Möglichkeit, bevorstehende Funktionen zu testen.
+Nehmen Sie am Early-Adopter-Programm von Cloud Manager teil und nutzen Sie die Möglichkeit, zukünftige Funktionen zu testen.
 
-### Eigenes Git - jetzt mit Unterstützung für GitLab und Bitbucket {#gitlab-bitbucket}
+### Bringen Sie Ihren eigenen Git mit – jetzt mit Unterstützung für GitLab und Bitbucket {#gitlab-bitbucket}
 
 <!-- BOTH CS & AMS -->
 
-Die Funktion **Eigenes Git holen** wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Enterprise-GitHub-Repositorys. Wenn Sie diese neuen Repos hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit einer konstanten Codesynchronisation mit dem Adobe-Repository und bietet die Möglichkeit, Pull-Anforderungen zu validieren, bevor sie in einer Hauptverzweigung zusammengeführt werden.
+Die Funktion **Bringen Sie Ihren eigenen Git mit** wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Unternehmens-GitHub-Repositorys. Wenn Sie diese neuen Repositorys hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit der konstanten Code-Synchronisation mit dem Adobe-Repository. Sie bietet weiterhin die Möglichkeit, Pull-Anfragen zu überprüfen, bevor sie in einer Hauptverzweigung zusammengeführt werden.
 
-Siehe [Hinzufügen externer Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
+Siehe [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
 
 ![Dialogfeld „Repository hinzufügen“](/help/release-notes/assets/repositories-add-release-notes.png)
 
 >[!NOTE]
 >
->Derzeit sind die vordefinierten Qualitätsprüfungen für Pull-Anforderungscode ausschließlich für von GitHub gehostete Repositorys verfügbar. Es wird jedoch ein Update vorgenommen, um diese Funktion auf andere Git-Anbieter zu erweitern.
+>Derzeit sind vorkonfigurierte Code-Qualitätsprüfungen für Pull-Anfragen ausschließlich für von GitHub gehostete Repositorys verfügbar. Es ist jedoch ein Update in Arbeit, um diese Funktionen auf andere Git-Anbieter zu erweitern.
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie eine E-Mail von Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse an [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com). Stellen Sie sicher, dass Sie angeben, welche Git-Plattform Sie verwenden möchten und ob Sie sich in einer privaten/öffentlichen oder Enterprise-Repository-Struktur befinden.
+Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com). Geben Sie unbedingt an, welche Git-Plattform Sie verwenden möchten und ob Sie sich in einer privaten/öffentlichen oder einer Unternehmens-Repository-Struktur befinden.
 
 ### Reine Staging- und reine Produktions-Pipelines {#staging-production-only-pipelines}
 
-Adobe kündigt die Einführung der Unterstützung für [reine Staging- und reine Produktionslinien](/help/using/stage-prod-only.md) an. Mit dieser neuen Funktion können Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen.
+Adobe kündigt die Einführung von Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) an. Mit dieser neuen Funktion können Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen.
 
-Wenn Sie diese Funktion testen und Feedback geben möchten, senden Sie eine E-Mail an [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com) aus Ihrer mit Ihrer Adobe ID verknüpften E-Mail-Adresse.
+Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com).
 
 <!-- ## Bug fixes
 

@@ -8,9 +8,9 @@ feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
 source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '342'
-ht-degree: 73%
+ht-degree: 100%
 
 ---
 
@@ -29,7 +29,7 @@ ht-degree: 73%
    + [Zugriffsrechte](/help/requirements/access-rights.md)
    + [Quell-Code-Repository](/help/requirements/source-code-repository.md)
    + [Rollenbasierte Berechtigungen](/help/requirements/role-based-permissions.md)
-   + [Einrichten von Anwendern und Rollen](/help/requirements/users-and-roles.md)
+   + [Einrichten von Anwendenden und Rollen](/help/requirements/users-and-roles.md)
    + [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md)
    + [Umgebungsbereitstellung](/help/requirements/environment-provisioning.md)
 + Erste Schritte {#getting-started}
@@ -46,7 +46,7 @@ ht-degree: 73%
    + CI/CD-Pipelines {#pipelines}
       + [Konfigurieren einer Produktions-Pipeline](/help/using/production-pipelines.md)
       + [Konfigurieren einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md)
-      + [Geteilte Staging- und Nur-Produktion-Pipelines (früher Adopter)](/help/using/stage-prod-only.md)
+      + [Geteilte Staging- und reine Produktions-Pipelines (Early Adopter)](/help/using/stage-prod-only.md)
       + [Verwalten von Pipelines](/help/using/managing-pipelines.md)
    + [Code-Bereitstellung](/help/using/code-deployment.md)
    + [Testen der Code-Qualität](/help/using/code-quality-testing.md)
@@ -57,12 +57,12 @@ ht-degree: 73%
    + [Benachrichtigungen](/help/using/notifications.md)
    + [Qualitätsregeln für benutzerspezifischen Code](/help/using/custom-code-quality-rules.md)
    + [Inhaltskopie](/help/using/content-copy.md)
-+ Code verwalten {#managing-code}
++ Verwalten von Code {#managing-code}
    + [Verwalten von Repositorys in Cloud Manager](/help/managing-code/managing-repositories.md)
    + [Repository-Zugriffsinformationen](/help/managing-code/accessing-repositories.md)
-   + [Adobe-Repository hinzufügen](/help/managing-code/adobe-repositories.md)
-   + [Privates Repository hinzufügen](/help/managing-code/private-repositories.md)
-   + [Externes Repository hinzufügen (frühe Anwendung)](/help/managing-code/external-repositories.md)
+   + [Hinzufügen eines Adobe-Repositorys](/help/managing-code/adobe-repositories.md)
+   + [Hinzufügen eines privaten Repositorys](/help/managing-code/private-repositories.md)
+   + [Hinzufügen eines externen Repositorys (Early Adopter)](/help/managing-code/external-repositories.md)
    + [Unterstützung von Git-Untermodulen](/help/managing-code/git-submodules.md)
    + [Konfiguration der GitHub-Prüfung](/help/managing-code/github-check-config.md)
    + [Anmerkungen zur GitHub-Prüfung](/help/managing-code/github-annotations.md)

@@ -3,9 +3,9 @@ title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 9d910e1b1a4aad000a8389ddc22ce380bbccd4ef
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '840'
-ht-degree: 89%
+ht-degree: 100%
 
 ---
 
@@ -34,13 +34,13 @@ Am Ende der Pipeline-Liste befinden sich die folgenden allgemeinen Optionen:
 * **Auf Repository-Informationen zugreifen**: Zeigt die Informationen an, die für den Zugriff auf das Cloud Manager-Git-Repository erforderlich sind.
 * **Weitere Infos**: Navigiert zu den Dokumentationsressourcen zur CI/CD-Pipeline.
 
-## Pipelines-Seite {#pipelines}
+## Seite „Pipelines“ {#pipelines}
 
-Auf der Seite **Pipelines** wird eine vollständige Liste aller Pipelines für das ausgewählte Programm angezeigt. Dies ist nützlich, da es umfassendere Informationen enthält als der Abschnitt [Pipeline-Karte](#pipeline-card).
+Die Seite **Pipelines** zeigt eine vollständige Liste aller Pipelines für das ausgewählte Programm an. Dies ist nützlich, da es umfassendere Informationen enthält als der Abschnitt [Pipeline-Karte](#pipeline-card).
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte **Pipelines** , um zur Seite **Pipelines** zu wechseln.
+1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte **Pipelines**, um zur Seite **Pipelines** zu wechseln.
 
 1. Hier können Sie eine Liste aller Pipelines für das Programm sehen und die Ausführung von Pipelines starten und stoppen, wie Sie es in der **Pipelines-Karte** tun würden.
 
@@ -50,13 +50,13 @@ Durch Klicken auf das Symbol `i` erhalten Sie Details über die letzte oder aktu
 
 Klicken Sie auf **Details anzeigen**, um zu den [Details zur Pipeline-Ausführung](#view-details) zu gelangen.
 
-## Aktivitätsseite {#activity}
+## Seite „Aktivität“ {#activity}
 
-Die Seite **Aktivitäten** enthält eine vollständige Liste aller Pipelines, die für das ausgewählte Programm ausgeführt werden.
+Die Seite **Aktivität** zeigt eine vollständige Liste aller Pipeline-Ausführungen für das ausgewählte Programm an.
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte **Aktivität** , um zur Seite **Aktivität** zu wechseln.
+1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte **Aktivität**, um zur Seite **Aktivität** zu wechseln.
 
 1. Hier sehen Sie eine Liste aller Pipeline-Ausführungen für das Programm, einschließlich aktueller und vorheriger Ausführungen.
 
