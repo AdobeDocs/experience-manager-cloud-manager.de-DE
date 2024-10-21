@@ -2,7 +2,7 @@
 title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 682b142f35bc233bad82b0ddfa69bc0f2d5b5fdb
 workflow-type: ht
 source-wordcount: '616'
 ht-degree: 100%
@@ -45,24 +45,26 @@ Jede der Rollen verfügt über bestimmte vorkonfigurierte Berechtigungen. In der
 | --- | --- | --- | --- | --- | --- | --- |
 | Anwendung lesen | Lesen der Programm-KPIs | x | x | x | x | x |
 | Anwendung schreiben | Programm einrichten oder bearbeiten | x | | | | |
-| Programm hinzufügen | Neues Programm hinzufügen | x | | | | |
+| Programm hinzufügen | Neues Programm hinzufügen | x |  |  |  |  |
 | Umgebung lesen | Siehe Umgebungsdetails | x | x | x | x | x |
 | Ausführung erstellen | Starten der Pipeline | x | x | x | | |
 | Ausführung lesen | Siehe Ausführungsstatus | x | x | x | x | x |
 | Ausführung fortsetzen | Möglichkeit der Wiederaufnahme der Ausführung bei Pause | x | x | x | | x |
 | Ausführung, Bereitstellung für die Produktion genehmigen | Go-Live-Genehmigung erteilen | x | x | x | | |
 | Ausführung, Bereitstellung für die Produktion planen | Bereitstellung für die Produktion planen | x | x | x | | x |
-| Ausführung für die Produktion bereitstellen | Anwendung für die Produktion bereitstellen, wenn diese zwecks CSE-Aufsicht angehalten wurde | | | | | x |
-| Ausführung abbrechen | Abbrechen der aktuellen Ausführung | | | x | | |
-| Ausführung, Quality-Gate-Fehler außer Kraft setzen | Bedeutende Quality-Gate-Fehler genehmigen | x | x | x | | |
-| Pipeline erstellen | Pipeline einrichten/bearbeiten | | x | | | |
+| Ausführung für die Produktion bereitstellen | Anwendung für die Produktion bereitstellen, wenn diese zwecks CSE-Aufsicht angehalten wurde |  |  |  |  | x |
+| Ausführung abbrechen | Abbrechen der aktuellen Ausführung |  |  | x |  |  |
+| Ausführung, Quality-Gate-Fehler außer Kraft setzen | Bedeutende Quality-Gate-Fehler genehmigen | x | x | x |  |  |
+| Pipeline erstellen | Pipeline einrichten/bearbeiten |  | x |  |  |  |
 | Pipeline lesen | Siehe Pipeline-Details | x | x | x | x | x |
-| Pipeline schreiben | Pipeline einrichten/bearbeiten | | x | | | |
-| Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Geschäftsinhaber“ | | x | | | |
-| Pipeline ändern, verwaltete Bereitstellung | Berechtigung zum Bearbeiten der Option „CSE-Aufsicht“ | | x | | | |
-| Pipeline löschen | Berechtigung zum Löschen der Pipeline | | x | | | |
+| Pipeline schreiben | Pipeline einrichten/bearbeiten |  | x |  |  |  |
+| Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Geschäftsinhaber“ |  | x |  |  |  |
+| Pipeline ändern, verwaltete Bereitstellung | Berechtigung zum Bearbeiten der Option „CSE-Aufsicht“ |  | x |  |  |  |
+| Pipeline löschen | Berechtigung zum Löschen der Pipeline |  | x |  |  |  |
 | Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“ | x | x | x | x | x |
-| Persönliches Zugriffs-Token erstellen | Zugriff auf Git | | x | | x | |
+| Persönliches Zugriffs-Token erstellen | Zugriff auf Git |  | x |  | x |  |
+
+<!-- CQDOC-22080 | Download log files  |  |  | x |  | x |  | -->
 
 Weitere Informationen zum Einrichten von Benutzenden finden Sie unter [Einrichten von Benutzenden und Rollen](/help/requirements/users-and-roles.md).
 
