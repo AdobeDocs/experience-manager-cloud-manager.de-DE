@@ -1,33 +1,34 @@
 ---
 title: Versionshinweise für Cloud Manager 2024.11.0
-description: Erfahren Sie mehr über die Version von Cloud Manager 2024.11.0.
+description: Erfahren Sie mehr über die Cloud Manager-Version 2024.11.0.
 feature: Release Information
-source-git-commit: 4c22de9fa675edcd743d7acce6c7a1def8efa414
-workflow-type: tm+mt
+exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
+source-git-commit: bea7f2e6e7cab764312a800883d0785ff23fd8bf
+workflow-type: ht
 source-wordcount: '457'
-ht-degree: 65%
+ht-degree: 100%
 
 ---
 
 # Versionshinweise für Cloud Manager 2024.11.0 {#release-notes}
 
-Erfahren Sie mehr über die Version von [!UICONTROL Cloud Manager] 2024.11.0.
+Erfahren Sie mehr über die [!UICONTROL Cloud Manager]-Version 2024.11.0.
 
 >[!NOTE]
 >
->Hier finden Sie die [aktuellen Versionshinweise für Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/release-notes/home).
+>Hier finden Sie die [aktuellen Versionshinweise für Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Veröffentlichungsdaten {#release-date}
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-Die Version von [!UICONTROL Cloud Manager] 2024.11.0 wurde am 7. November 2024 veröffentlicht.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] 2024.11.0 ist der 7. November 2024.
 
-Die nächste geplante Version ist der 5. Dezember 2024.
+Die Veröffentlichung der nächsten Version ist für den 5. Dezember 2024 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* Wenn Seiten während des Leistungstests zu einer anderen Domäne umgeleitet werden, werden die Testergebnisse für diese Seiten ausgeschlossen, da sie die tatsächliche Leistung nicht genau darstellen. <!-- (CMGR-5637) -->
+* Wenn Seiten während eines Leistungstests zu einer anderen Domain umgeleitet werden, werden die Testergebnisse für diese Seiten ausgeschlossen, da sie die tatsächliche Leistung nicht genau darstellen. <!-- (CMGR-5637) -->
 
 ## Early-Adopter-Programm {#early-adoption}
 
@@ -57,7 +58,7 @@ Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie
 
 ## Fehlerbehebungen
 
-* Es wurde ein Fehler in AEM Cloud Manager behoben, der während der Statusaktualisierungen für Vorgänge zum Kopieren von Inhalten den Fehler &quot;403&quot;verursachte. Dieses Problem, das auf eine falsch konfigurierte IP-Adresse für den Eingang zurückzuführen war, verhinderte die Statusübertragung und führte dazu, dass einige Inhaltskopieraktivitäten blockiert und unbegrenzt ausgeführt wurden, was eine manuelle Löschung erforderte. Die Korrektur stellt nun eine ordnungsgemäße Statusberichterstellung und eine reibungslosere Ausführung von Inhaltskopieraufgaben sicher. <!-- (CMGR-62739) -->
+* Ein Fehler in AEM Cloud Manager, der bei Statusaktualisierungen für Vorgänge zur Inhaltskopie einen „403“-Fehler verursachte, ist nun behoben. Dieses Problem, das auf eine falsch konfigurierte Eingangs-IP-Adresse zurückzuführen war, verhinderte die Statusverbreitung und führte dazu, dass einige Aktivitäten zum Kopieren von Inhalten scheinbar stecken blieben und auf unbestimmte Zeit weiterliefen, sodass sie manuell abgebrochen werden mussten. Die Korrektur gewährleistet nun eine ordnungsgemäße Statusberichterstattung und eine reibungslosere Ausführung von Aufgaben zum Kopieren von Inhalten. <!-- (CMGR-62739) -->
 * In einem kürzlich veröffentlichten Update wurde ein Problem in SonarQube behoben, bei dem hartcodierte Kennwörter in bestimmten Fällen nicht erkannt wurden. Die Fehlerbehebung enthält jetzt eine erweiterte Musterprüfung und passt sich an die standardmäßigen Erkennungsstandards in SonarQube an. <!-- CMGR-62682 -->
 
 <!-- Known Issues {#known-issues}
