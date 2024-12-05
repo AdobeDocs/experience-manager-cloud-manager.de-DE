@@ -1,13 +1,13 @@
 ---
 title: Hinzufügen von externen Repositorys in Cloud Manager (Early Adopter)
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub-, GitLab- und Bitbucket-Repositorys.
-source-git-commit: 054c214be3c8c6e8a8bd4691b70ae2098263ef5b
-workflow-type: ht
-source-wordcount: '740'
-ht-degree: 100%
+exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
+source-git-commit: e7e2268f866105970e02d4bc54c46613749e5ac0
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # Hinzufügen von externen Repositorys in Cloud Manager {#external-repositories}
 
@@ -98,5 +98,9 @@ Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipel
 
 ## Einschränkungen
 
-* Externe Repositorys können nicht mit Konfigurations-Pipelines verknüpft werden.
-* Bei Pipelines, die externe Repositorys (ausgenommen GitHub-gehostete Repositorys) und die Option **Bereitstellungsauslöser** [!UICONTROL **Bei Git-Änderungen**] verwenden, werden Auslöser nicht automatisch gestartet. Sie müssen manuell gestartet werden.
+Externe Repositorys können nicht mit Konfigurations-Pipelines verknüpft werden.
+
+<!-- THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY
+
+* Pipelines using external repositories (excluding GitHub-hosted repositories) and the **Deployment Trigger** option [!UICONTROL **On Git Changes**], triggers are not automatically started. They must be manually started. -->
+
