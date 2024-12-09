@@ -2,10 +2,10 @@
 title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: e47047c85f9d428e268d147b2e24354026dda0f8
+source-git-commit: 228006b424504306e916014bbe8543dc41ba43b5
 workflow-type: tm+mt
-source-wordcount: '1351'
-ht-degree: 37%
+source-wordcount: '1312'
+ht-degree: 34%
 
 ---
 
@@ -85,9 +85,7 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
    ![Bearbeiten der Pfadliste](/help/assets/add-content-set-excluded-paths.png)
 
-1. Klicken Sie auf **Erstellen**.
-
-Sie können jetzt den Inhaltssatz verwenden, um Inhalte zwischen Umgebungen zu kopieren.
+1. Klicken Sie auf **Erstellen**. Sie können jetzt den Inhaltssatz verwenden, um Inhalte zwischen Umgebungen zu kopieren.
 
 ## Inhaltsset bearbeiten oder löschen {#edit-content-set}
 
@@ -132,21 +130,23 @@ Eine Umgebung kann nicht ausgewählt werden, wenn eine der folgenden Bedingungen
    * Regionen in einer Zielumgebung müssen eine Teilmenge von Regionen in einer Quellumgebung sein.
    * Kompatibilitätsprobleme werden geprüft, bevor eine Aktion zum Kopieren von Inhalten ausgeführt wird. Wenn Sie die Umgebung **Ziel** auswählen, validiert das System automatisch die Quell- und Zielumgebungen. Wenn die Validierung fehlschlägt, wird der Prozess angehalten und im Dialogfeld wird eine Fehlermeldung angezeigt, in der der Grund für den Fehler erläutert wird.
 
+     ![Kopieren von Inhalten](/help/assets/copying-content.png)
+
 1. (Optional) Führen Sie einen der folgenden Schritte aus:
 
    1. Um die ausgeschlossenen Pfade in der Zielumgebung beizubehalten, aktivieren Sie **`Do not delete exclude paths from destination`**. ** Mit dieser Einstellung bleiben die im Inhaltssatz angegebenen ausgeschlossenen Pfade intakt.
    1. Um *die ausgeschlossenen Pfade in der Zielumgebung zu entfernen, deaktivieren Sie **`Do not delete exclude paths from destination`**.* Mit dieser Einstellung werden die im Inhaltssatz angegebenen ausgeschlossenen Pfade gelöscht.
-   1. Um den Versionsverlauf der Pfade von der Quellumgebung in die Zielumgebung zu kopieren, aktivieren Sie die Option **Versionen kopieren** .
+   1. Um den Versionsverlauf der Pfade von der Quellumgebung in die Zielumgebung zu kopieren, aktivieren Sie die Option **Versionen kopieren** . Der Content Copy-Prozess ist erheblich schneller, wenn der Versionsverlauf *nicht* kopiert wird.
 
-      ![Kopieren von Inhalten](/help/assets/copying-content.png)
+
 
 1. Klicken Sie auf **Kopieren**. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 
-## Überwachen des Status der Aktivität &quot;Inhaltskopie&quot; {#copy-activity}
+## Status &quot;Inhaltskopie&quot;überwachen {#copy-activity}
 
 Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopieren von Inhalten** überwachen.
 
-**So überwachen Sie den Status der Aktivität &quot;Inhaltskopie&quot;:**
+**So überwachen Sie den Status &quot;Inhaltskopie&quot;:**
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
@@ -156,7 +156,7 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
 
    ![Aktivität zum Kopieren von Inhalten](/help/assets/copy-content-activity.png)
 
-   Ein Prozess zum Kopieren von Inhalten kann einen der folgenden Status aufweisen:
+   Ein Content Copy-Prozess kann einen der folgenden Status haben:
 
    | Status | Beschreibung |
    | --- | --- |
@@ -165,9 +165,7 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
    | Fehlgeschlagen | Vorgang zum Kopieren von Inhalten fehlgeschlagen. |
 
 
-## Einschränkungen {#limitations}
-
-Für die Inhaltskopie gelten die folgenden Einschränkungen:
+## Einschränkungen der Inhaltskopie {#limitations}
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
 * Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden. (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
@@ -175,13 +173,10 @@ Für die Inhaltskopie gelten die folgenden Einschränkungen:
 * Eine Inhaltskopie für eine auf Cloud-Datenspeicher basierende Topologie kann nur durchgeführt werden, wenn sich die Quell- und Zielumgebung bei demselben Cloud-Anbieter und in derselben Region befinden.
 * Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
-* Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Für ausgeschlossene Pfade gibt es keine Beschränkung.
 * Die Inhaltskopie sollte nicht als Klonen- oder Spiegelwerkzeug verwendet werden, da sie keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
 * Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
-* Content Copy kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
-* Der Vorgang zum Kopieren von Inhalten wird erheblich schneller ausgeführt, wenn der Versionsverlauf nicht kopiert wird.
+* Beim Kopieren von Inhalten werden Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung dupliziert. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
 * [Dynamic Media-Konfigurationen mit aktivierten Asset-Größen von mehr als 2 GB](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
-* Wenn der Versionsverlauf nicht kopiert wird, ist der Prozess zur Erstellung einer Inhaltskopie wesentlich schneller.
 * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Teilmenge davon übereinstimmen.
 
 ## Bekannte Probleme {#known-issues}
