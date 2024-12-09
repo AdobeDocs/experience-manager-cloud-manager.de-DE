@@ -1,20 +1,20 @@
 ---
 title: Das Inhaltskopie-Tool
-description: Mit dem Inhaltskopie-Tool von Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
+description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1144'
-ht-degree: 100%
+source-git-commit: de9cfaa07dc9ff4a6d1cb200d14c5e776d27767d
+workflow-type: tm+mt
+source-wordcount: '1363'
+ht-degree: 43%
 
 ---
 
 
 # Das Inhaltskopie-Tool {#content-copy}
 
-Mit dem Inhaltskopie-Tool von Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus AMS-gehosteten AEM 6.x-Produktionsumgebungen zu Testzwecken in niedrigere Umgebungen kopieren.
+Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 
-## Einführung {#introduction}
+## Info zum Werkzeug &quot;Inhaltskopie&quot;{#introduction}
 
 Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Inhaltskopie-Tool können Sie Inhalte aus Ihrer AMS-gehosteten AEM 6.x-Produktionsumgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
 
@@ -39,124 +39,135 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
 Um das Inhaltskopie-Tool verwenden zu können, muss den Benutzenden in der Quell- und Zielumgebung die Rolle **Bereitstellungs-Manager** zugewiesen sein.
 
-## Erstellen eines Content-Sets {#create-content-set}
+## Inhaltssatz erstellen {#create-content-set}
 
 Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach der Definition können Content-Sets zum Kopieren von Inhalten wiederverwendet werden. Gehen Sie wie folgt vor, um ein Content-Set zu erstellen.
 
+**So erstellen Sie einen Inhaltssatz:**
+
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
+1. Klicken Sie in der linken oberen Ecke der Seite auf ![Menüsymbol anzeigen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) , um das Menü links zu öffnen.
 
-1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Content-Sets**.
+1. Klicken Sie im Menü auf der linken Seite unter der Seite **Dienste** auf das Symbol ![Kontrollkästchen ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Inhaltssets**.
 
-1. Klicken Sie oben rechts im Bildschirm auf **Content-Set hinzufügen**.
+1. Klicken Sie in der rechten oberen Ecke der Seite auf **Inhaltsset hinzufügen**.
 
    ![Content-Sets](/help/assets/content-sets.png)
 
-1. Geben Sie auf der Registerkarte **Details** des Assistenten einen Namen und eine Beschreibung für das Content-Set ein und klicken Sie auf **Weiter**.
+1. Geben Sie im Dialogfeld **Content Set hinzufügen** auf der Registerkarte **Details** in die Felder **Name** und **Beschreibung** einen Namen und eine optionale Beschreibung für den Inhaltssatz ein und klicken Sie dann auf **Weiter**.
 
    ![Content-Set-Details](/help/assets/add-content-set-details.png)
 
-1. Auf der Registerkarte **Inhaltspfade** des Assistenten geben Sie die Pfade der veränderbaren Inhalte an, die in das Content-Set aufgenommen werden sollen.
+1. Geben Sie auf der Registerkarte **Inhaltspfade** im Textfeld **Pfad** einen Pfad zum Inhalt an, der geändert werden kann und in den Inhaltssatz aufgenommen werden soll.
 
-   1. Geben Sie den Pfad in das Feld **Einschlusspfad hinzufügen** ein.
-   1. Klicken Sie auf **Pfad hinzufügen**, um den Pfad zum Inhaltssatz hinzuzufügen.
-   1. Klicken Sie bei Bedarf erneut auf **Pfad hinzufügen**.
+   Nur Pfade, die mit `/content`, `/conf`, `/etc`, `/var/workflow/models` oder `/var/commerce` beginnen, können einbezogen werden.
+
+1. Klicken Sie auf das Symbol &quot;**![Ordner hinzufügen&quot;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) Pfad hinzufügen**&quot;, um den Pfad zum Inhaltsset hinzuzufügen (oder darin einzuschließen).
+
+1. (Optional) Fügen Sie bei Bedarf weitere Pfade (bis zu 50) hinzu, indem Sie die vorherigen beiden Schritte wiederholen. Fahren Sie andernfalls mit dem nächsten Schritt fort.
 
    ![Hinzufügen von Pfaden zu Content-Sets](/help/assets/add-content-set-paths.png)
 
-1. Wenn Sie Ihr Content-Set verfeinern oder einschränken möchten, können Sie Unterpfade ausschließen.
+1. (Optional) Um Ihren Inhaltssatz einzugrenzen, können Sie optional Unterpfade in einem eingeschlossenen Inhaltspfad angeben, die ausgeschlossen werden sollen.
 
-   1. Klicken Sie in der Liste der eingeschlossenen Pfade auf das Symbol **Ausschluss-Unterpfade hinzufügen** neben dem Pfad, der eingeschränkt werden soll.
-   1. Geben Sie den Unterpfad ein, der von dem ausgewählten Pfad ausgeschlossen werden soll.
-   1. Klicken Sie auf **Pfad ausschließen**.
-   1. Klicken Sie erneut auf **Ausschluss-Unterpfade hinzufügen**, um bei Bedarf weitere auszuschließende Pfade hinzuzufügen.
+   1. Klicken Sie rechts neben einem eingeschlossenen Inhaltspfad, den Sie beschränken möchten, auf das Symbol ![Ordnerlöschung](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg).
+   1. Geben Sie im Textfeld einen relativen Pfad zum im Dialogfeld angezeigten Stammverzeichnis ein.
+   1. Klicken Sie auf das Symbol ![Ordnerlöschung](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg) **Pfad ausschließen**.
+   1. Wiederholen Sie gegebenenfalls die Schritte i bis iii. weiter oben, um weitere Ausschlusspfade hinzuzufügen. Es gibt keine Einschränkung. Fahren Sie andernfalls mit dem nächsten Schritt fort.
 
    ![Ausschließen von Pfaden](/help/assets/add-content-set-paths-excluded.png)
 
-1. Sie können die angegebenen Pfade bei Bedarf ändern.
+1. (Optional) Führen Sie einen der folgenden Schritte aus:
 
-   1. Klicken Sie auf das `X` neben den ausgeschlossenen Unterpfaden, um diese zu löschen.
-   1. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben den Pfaden, um die Optionen **Bearbeiten** und **Löschen** anzuzeigen.
+   1. Klicken Sie rechts neben einem ausgeschlossenen Unterpfad auf das Symbol &quot;![Größe 500 überschreiten&quot;](https://spectrum.adobe.com/static/icons/ui_18/CrossSize500.svg) , um ihn zu löschen.
+   1. Klicken Sie auf das Symbol &quot;![Mehr&quot;](https://spectrum.adobe.com/static/icons/ui_18/More.svg)&quot;rechts neben einem eingeschlossenen Inhaltspfad und klicken Sie dann auf &quot;**Bearbeiten**&quot;oder &quot;**Löschen**&quot;.
 
    ![Bearbeiten der Pfadliste](/help/assets/add-content-set-excluded-paths.png)
 
-1. Klicken Sie auf **Erstellen**, um das Content-Set zu erstellen.
+1. Klicken Sie auf **Erstellen**.
 
-Das Content-Set kann jetzt zum Kopieren von Inhalten zwischen Umgebungen verwendet werden.
+Sie können jetzt den Inhaltssatz verwenden, um Inhalte zwischen Umgebungen zu kopieren.
 
->[!NOTE]
->
->Sie können einem Content-Set bis zu 50 Pfade hinzufügen.
->Für ausgeschlossene Pfade gibt es keine Beschränkung.
+## Inhaltsset bearbeiten oder löschen {#edit-content-set}
 
-## Bearbeiten eines Content-Sets {#edit-content-set}
+Wenn Sie einen Inhaltssatz bearbeiten, müssen Sie möglicherweise die konfigurierten Pfade erweitern, um die ausgeschlossenen Unterpfade anzuzeigen.
 
-Hierbei führen Sie ähnliche Schritte wie beim Erstellen eines Content-Sets aus. Anstatt auf **Content-Set hinzufügen** zu klicken, wählen Sie ein vorhandenes Set in der Konsole und dann die Option **Bearbeiten** aus dem Menü mit den Auslassungspunkten aus.
-
-![Bearbeiten des Content-Sets](/help/assets/edit-content-set.png)
-
-Beim Bearbeiten des Content-Sets müssen Sie möglicherweise die konfigurierten Pfade erweitern, um die ausgeschlossenen Unterpfade anzuzeigen.
-
-## Inhalt kopieren {#copy-content}
-
-Nachdem ein Content-Set erstellt wurde, können Sie es zum Kopieren von Inhalten verwenden. Führen Sie die folgenden Schritte aus, um Inhalte zu kopieren.
+**So bearbeiten oder löschen Sie einen Inhaltsset:**
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
+1. Klicken Sie in der linken oberen Ecke der Seite auf ![Menüsymbol anzeigen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) , um das Menü links zu öffnen.
 
-1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Content-Sets**.
+1. Klicken Sie im Menü auf der linken Seite unter **Dienste** auf das Symbol ![Kontrollkästchen ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Inhaltssets**.
 
-1. Wählen Sie ein Content-Set aus der Konsole aus, und wählen Sie im Menü mit den Auslassungspunkten **Inhalt kopieren**.
+1. Klicken Sie in der Tabelle auf der Seite **Inhaltssets** rechts neben einem eingeschlossenen Inhaltspfad auf das Symbol ![Mehr](https://spectrum.adobe.com/static/icons/ui_18/More.svg) und klicken Sie dann auf **Bearbeiten** oder **Löschen**.
+
+![Bearbeiten des Content-Sets](/help/assets/edit-content-set.png)
+
+
+## Inhalt kopieren {#copy-content}
+
+Nachdem ein Inhaltssatz erstellt wurde, können Sie ihn zum Kopieren von Inhalten verwenden.
+
+Eine Umgebung kann nicht ausgewählt werden, wenn eine der folgenden Bedingungen zutrifft:
+
+* Dem Benutzer fehlen die erforderlichen Berechtigungen.
+* Ein Pipeline- oder Inhaltskopiervorgang wird derzeit in der Umgebung ausgeführt.
+
+**So kopieren Sie Inhalt:**
+
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
+
+1. Klicken Sie in der linken oberen Ecke der Seite auf ![Menüsymbol anzeigen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) , um das Menü links zu öffnen.
+
+1. Klicken Sie im Menü auf der linken Seite unter **Dienste** auf das Symbol ![Kontrollkästchen ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) **Inhaltssets**.
+
+1. Klicken Sie in der Tabelle auf der Seite **Inhaltssets** rechts neben einem eingeschlossenen Inhaltspfad, den Sie kopieren möchten, auf das Symbol &quot;![Mehr&quot;](https://spectrum.adobe.com/static/icons/ui_18/More.svg) und klicken Sie dann auf &quot;**Inhalt kopieren**&quot;.
 
    ![Inhaltskopie](/help/assets/copy-content.png)
 
-   >[!NOTE]
-   >
-   >Eine Umgebung ist unter Umständen nicht auswählbar, wenn:
-   >
-   >* die Benutzenden nicht über die entsprechenden Berechtigungen verfügen.
-   >* in der Umgebung eine laufende Pipeline oder ein Vorgang zum Kopieren von Inhalten in Bearbeitung ist.
+1. Wählen Sie im Dialogfeld &quot;**Inhalt kopieren**&quot;die Umgebung &quot;**Source**&quot;und die Umgebung &quot;**Ziel**&quot;für die Aktion zum Kopieren von Inhalten aus.
 
-1. Geben Sie im Dialogfeld **Inhalt kopieren** die Quell- und Zielumgebungen für die Inhaltskopie-Aktion an.
-   * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Teilmenge davon übereinstimmen.
+   * Regionen in einer Zielumgebung müssen eine Teilmenge von Regionen in einer Quellumgebung sein.
+   * Kompatibilitätsprobleme werden geprüft, bevor eine Aktion zum Kopieren von Inhalten ausgeführt wird. Wenn Sie die Umgebung **Ziel** auswählen, validiert das System automatisch die Quell- und Zielumgebungen. Wenn die Validierung fehlschlägt, wird der Prozess angehalten und im Dialogfeld wird eine Fehlermeldung angezeigt, in der der Grund für den Fehler erläutert wird.
 
-1. Sie können die Ausschlusspfade in der Zielumgebung löschen oder beibehalten. Aktivieren Sie das Kontrollkästchen `Do not delete exclude paths from destination`, um die im Content-Set angegebenen `exclude paths` beizubehalten. Wenn das Kontrollkästchen deaktiviert bleibt, werden die Ausschlusspfade in der Zielumgebung gelöscht.
+1. (Optional) Führen Sie einen der folgenden Schritte aus:
 
-1. Sie können den Kopieversionsverlauf der Pfade aus der Quell- in die Zielumgebung kopieren. Aktivieren Sie das Kontrollkästchen `Copy Versions`, wenn alle Versionsverläufe kopiert werden sollen.
+   1. Um die ausgeschlossenen Pfade in der Zielumgebung beizubehalten, aktivieren Sie **`Do not delete exclude paths from destination`**. ** Mit dieser Einstellung bleiben die im Inhaltssatz angegebenen ausgeschlossenen Pfade intakt.
+   1. Um *die ausgeschlossenen Pfade in der Zielumgebung zu entfernen, deaktivieren Sie **`Do not delete exclude paths from destination`**.* Mit dieser Einstellung werden die im Inhaltssatz angegebenen ausgeschlossenen Pfade gelöscht.
+   1. Um den Versionsverlauf der Pfade von der Quellumgebung in die Zielumgebung zu kopieren, aktivieren Sie die Option **Versionen kopieren** .
 
-   ![Kopieren von Inhalten](/help/assets/copying-content.png)
+      ![Kopieren von Inhalten](/help/assets/copying-content.png)
 
-1. Klicken Sie auf **Kopieren**.
+1. Klicken Sie auf **Kopieren**. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 
-Der Kopiervorgang wird gestartet. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
-
-## Inhaltskopie-Aktivität {#copy-activity}
+## Überwachen des Status der Aktivität &quot;Inhaltskopie&quot; {#copy-activity}
 
 Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopieren von Inhalten** überwachen.
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
+**So überwachen Sie den Status der Aktivität &quot;Inhaltskopie&quot;:**
 
-1. Navigieren Sie auf der Seite **Übersicht** zum Bildschirm **Umgebungen**.
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie auf dem Bildschirm **Umgebungen** zur Seite **Aktivität zum Kopieren von Inhalten**.
+1. Klicken Sie in der linken oberen Ecke der Seite auf ![Menüsymbol anzeigen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) , um das Menü links zu öffnen.
 
-![Aktivität zum Kopieren von Inhalten](/help/assets/copy-content-activity.png)
+1. Klicken Sie im Menü auf der linken Seite unter **Dienste** auf das Symbol ![Verlauf ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_History_18_N.svg) **Aktivität &quot;Inhalt kopieren&quot;**.
 
-### Inhaltskopie-Status {#statuses}
+   ![Aktivität zum Kopieren von Inhalten](/help/assets/copy-content-activity.png)
 
-Sobald das Kopieren von Inhalten beginnt, kann der Prozess einen der folgenden Status haben.
+   Ein Prozess zum Kopieren von Inhalten kann einen der folgenden Status aufweisen:
 
-| Status | Beschreibung |
-|---|---|
-| In Bearbeitung | Die Inhaltskopie wird gerade durchgeführt |
-| Fehlgeschlagen | Die Inhaltskopie ist fehlgeschlagen |
-| Abgeschlossen | Die Inhaltskopie wurde erfolgreich abgeschlossen |
+   | Status | Beschreibung |
+   | --- | --- |
+   | In Bearbeitung | Der Vorgang zum Kopieren von Inhalten ist noch nicht abgeschlossen. |
+   | Abgeschlossen | Der Vorgang zum Kopieren von Inhalten wurde erfolgreich abgeschlossen. |
+   | Fehlgeschlagen | Vorgang zum Kopieren von Inhalten fehlgeschlagen. |
+
 
 ## Einschränkungen {#limitations}
 
-Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkungen.
+Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkungen:
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
 * Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden. (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
