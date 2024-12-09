@@ -1,22 +1,22 @@
 ---
 title: Inhaltskopie für Umgebungskonsistenz
-description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
+description: Mit der Inhaltskopie in Cloud Manager können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 2c96feb62a4db2424430c9c410563a7f61320fd2
+source-git-commit: e47047c85f9d428e268d147b2e24354026dda0f8
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1351'
+ht-degree: 37%
 
 ---
 
 
-# Inhaltskopie für Umgebungskonsistenz {#content-copy}
+# Inhaltskopie zur Konsistenz der Umgebung {#content-copy}
 
-Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
+Mit der Inhaltskopie in Cloud Manager können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 
 ## Über Content Copy {#introduction}
 
-Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Inhaltskopie-Tool können Sie Inhalte aus Ihrer AMS-gehosteten AEM 6.x-Produktionsumgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
+Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit der Inhaltskopie können Sie Inhalte aus Ihrer Produktions-AMS-gehosteten AEM 6.x-Umgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
 
 Ein Content-Set definiert die zu kopierenden Inhalte. Ein Content-Set enthält eine Liste von JCR-Pfaden mit dem zu kopierenden veränderlichen Inhalten. Die Inhalte werden von einer Quellumgebung in eine Zielumgebung verschoben. Alle dies geschieht innerhalb desselben Cloud Manager-Programms.
 
@@ -37,7 +37,7 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
 ## Berechtigungen {#permissions}
 
-Um das Inhaltskopie-Tool verwenden zu können, muss den Benutzenden in der Quell- und Zielumgebung die Rolle **Bereitstellungs-Manager** zugewiesen sein.
+Um die Funktion &quot;Inhaltskopie&quot;verwenden zu können, muss der Benutzer der Rolle **Bereitstellungsmanager** in der Quell- und Zielumgebung zugewiesen sein.
 
 ## Inhaltssatz erstellen {#create-content-set}
 
@@ -55,7 +55,7 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
    ![Content-Sets](/help/assets/content-sets.png)
 
-1. Geben Sie im Dialogfeld **Content Set hinzufügen** auf der Registerkarte **Details** in die Felder **Name** und **Beschreibung** einen Namen und eine optionale Beschreibung für den Inhaltssatz ein und klicken Sie dann auf **Weiter**.
+1. Geben Sie im Dialogfeld **`Add Content Set`** auf der Registerkarte **Details** in den Feldern **Name** und **Beschreibung** einen Namen und eine optionale Beschreibung für den Inhaltssatz ein und klicken Sie dann auf **Weiter**.
 
    ![Content-Set-Details](/help/assets/add-content-set-details.png)
 
@@ -167,7 +167,7 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
 
 ## Einschränkungen {#limitations}
 
-Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkungen:
+Für die Inhaltskopie gelten die folgenden Einschränkungen:
 
 * Eine Inhaltskopie kann nicht von einer niedrigeren Umgebung in eine höhere Umgebung durchgeführt werden.
 * Das Kopieren von Inhalten kann nur innerhalb derselben Ebene durchgeführt werden. (d. h. Autor-Autor oder Veröffentlichung-Veröffentlichung).
@@ -176,9 +176,9 @@ Für das Werkzeug zum Kopieren von Inhalten gelten die folgenden Einschränkunge
 * Die Ausführung gleichzeitiger Inhaltskopievorgänge in derselben Umgebung ist nicht möglich.
 * Eine Inhaltskopie kann nicht durchgeführt werden, wenn ein aktiver Vorgang in der Ziel- oder Quellumgebung ausgeführt wird, z. B. eine CI/CD-Pipeline.
 * Pro Content-Set können bis zu fünfzig Pfade angegeben werden. Für ausgeschlossene Pfade gibt es keine Beschränkung.
-* Das Inhaltskopie-Tool sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da es keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
+* Die Inhaltskopie sollte nicht als Klonen- oder Spiegelwerkzeug verwendet werden, da sie keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgen kann.
 * Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, nachdem sie initiiert wurde.
-* Das Inhaltskopie-Tool kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
+* Content Copy kopiert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des [Workflows zur DAM-Verarbeitung von Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der niedrigeren Umgebung neu verarbeitet werden, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
 * Der Vorgang zum Kopieren von Inhalten wird erheblich schneller ausgeführt, wenn der Versionsverlauf nicht kopiert wird.
 * [Dynamic Media-Konfigurationen mit aktivierten Asset-Größen von mehr als 2 GB](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
 * Wenn der Versionsverlauf nicht kopiert wird, ist der Prozess zur Erstellung einer Inhaltskopie wesentlich schneller.
