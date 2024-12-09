@@ -1,20 +1,20 @@
 ---
-title: Das Inhaltskopie-Tool
+title: Inhaltskopie für Umgebungskonsistenz
 description: Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: de9cfaa07dc9ff4a6d1cb200d14c5e776d27767d
+source-git-commit: 2c96feb62a4db2424430c9c410563a7f61320fd2
 workflow-type: tm+mt
-source-wordcount: '1363'
-ht-degree: 43%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
 
-# Das Inhaltskopie-Tool {#content-copy}
+# Inhaltskopie für Umgebungskonsistenz {#content-copy}
 
 Mit dem Cloud Manager-Werkzeug zum Kopieren von Inhalten können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 
-## Info zum Werkzeug &quot;Inhaltskopie&quot;{#introduction}
+## Über Content Copy {#introduction}
 
 Aktuelle, echte Daten sind für Tests, Validierung und Benutzerakzeptanz nützlich. Mit dem Inhaltskopie-Tool können Sie Inhalte aus Ihrer AMS-gehosteten AEM 6.x-Produktionsumgebung in Staging- oder Entwicklungsumgebungen kopieren. Dieser Workflow unterstützt verschiedene Testszenarien.
 
