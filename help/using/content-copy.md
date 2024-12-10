@@ -2,9 +2,9 @@
 title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 228006b424504306e916014bbe8543dc41ba43b5
+source-git-commit: 16cc1aa0ff45126df9100f337b6259a3f248038f
 workflow-type: tm+mt
-source-wordcount: '1312'
+source-wordcount: '1321'
 ht-degree: 34%
 
 ---
@@ -35,7 +35,7 @@ Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 * Wenn Sie Inhalte in der Zielumgebung bearbeiten, werden diese vom Quellinhalt überschrieben, sofern die Pfade übereinstimmen.
 * Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
 
-## Berechtigungen {#permissions}
+### Berechtigungen {#permissions}
 
 Um die Funktion &quot;Inhaltskopie&quot;verwenden zu können, muss der Benutzer der Rolle **Bereitstellungsmanager** in der Quell- und Zielumgebung zugewiesen sein.
 
@@ -142,11 +142,11 @@ Eine Umgebung kann nicht ausgewählt werden, wenn eine der folgenden Bedingungen
 
 1. Klicken Sie auf **Kopieren**. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 
-## Status &quot;Inhaltskopie&quot;überwachen {#copy-activity}
+## Prüfen des Status einer Inhaltskopie {#copy-activity}
 
 Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopieren von Inhalten** überwachen.
 
-**So überwachen Sie den Status &quot;Inhaltskopie&quot;:**
+**Überprüfen des Status einer Inhaltskopie:**
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
@@ -179,6 +179,6 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
 * [Dynamic Media-Konfigurationen mit aktivierten Asset-Größen von mehr als 2 GB](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) werden nicht unterstützt.
 * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Teilmenge davon übereinstimmen.
 
-## Bekannte Probleme {#known-issues}
+## Bekannte Probleme bei der Inhaltskopie {#known-issues}
 
 {{content-copy-known-issues}}
