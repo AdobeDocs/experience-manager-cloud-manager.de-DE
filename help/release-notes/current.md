@@ -1,20 +1,20 @@
 ---
 title: Versionshinweise für Cloud Manager 2024.12.0
-description: Erfahren Sie mehr über die Version von Cloud Manager 2024.12.0 auf Adobe Managed Services.
+description: Erfahren Sie mehr über die Version Cloud Manager 2024.12.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: e266a4192e2a897f142a6c83ae5766483946320d
 workflow-type: tm+mt
 source-wordcount: '312'
-ht-degree: 72%
+ht-degree: 100%
 
 ---
 
-# Versionshinweise für Cloud Manager 2024.12.0 auf Adobe Managed Services {#release-notes}
+# Versionshinweise für Cloud Manager 2024.12.0 in Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release -->
 
-Erfahren Sie mehr über die Version von [!UICONTROL Cloud Manager] 2024.12.0 auf Adobe Managed Services.
+Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2024.12.0 in Adobe Managed Services.
 
 >[!NOTE]
 >
@@ -24,7 +24,7 @@ Erfahren Sie mehr über die Version von [!UICONTROL Cloud Manager] 2024.12.0 auf
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-Die Version von [!UICONTROL Cloud Manager] 2024.12.0 wurde am 5. Dezember 2024 veröffentlicht.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2024.12.0 ist der 5. Dezember 2024.
 
 Die Veröffentlichung der nächsten Version ist für den Freitag, 23. Januar 2025 geplant.
 
@@ -40,9 +40,9 @@ Nehmen Sie am Early-Adopter-Programm von Cloud Manager teil und nutzen Sie die M
 
 <!-- BOTH CS & AMS -->
 
-Die Funktion **Eigenes Git holen** wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Unternehmens-GitHub-Repositorys. Wenn Sie diese neuen Repositorys hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit der konstanten Code-Synchronisation mit dem Adobe-Repository. Sie bietet weiterhin die Möglichkeit, Pull-Anfragen zu überprüfen, bevor sie in einer Hauptverzweigung zusammengeführt werden.
+Die Funktion zum **Einbringen des eigenen Git** wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Unternehmens-GitHub-Repositorys. Wenn Sie diese neuen Repositorys hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit der konstanten Code-Synchronisation mit dem Adobe-Repository. Sie bietet weiterhin die Möglichkeit, Pull-Anfragen zu überprüfen, bevor sie in einer Hauptverzweigung zusammengeführt werden.
 
-Pipelines, die externe Repositorys verwenden (außer von GitHub gehostete) und der **Bereitstellungs-Trigger** auf **On Git Changes** eingestellt sind, starten jetzt automatisch.
+Pipelines, die externe Repositorys (ausgenommen GitHub-gehostete Repositorys) und die Option **Bereitstellungsauslöser** **Bei Git-Änderungen** verwenden, starten jetzt automatisch.
 
 Siehe [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
 
