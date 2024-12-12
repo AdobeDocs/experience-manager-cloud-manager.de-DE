@@ -2,7 +2,7 @@
 title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzer veränderliche Inhalte On-Demand aus Adobe Managed Services-gehosteten Adobe Experience Manager 6.x-Produktionsumgebungen in niedrigere Testumgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 16cc1aa0ff45126df9100f337b6259a3f248038f
+source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 34%
@@ -32,8 +32,9 @@ Die folgenden Pfade sind in einem Content-Set zulässig:
 
 Beim Kopieren von Inhalten ist die Quellumgebung die Datenquelle.
 
-* Wenn Sie Inhalte in der Zielumgebung bearbeiten, werden diese vom Quellinhalt überschrieben, sofern die Pfade übereinstimmen.
-* Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
+Wenn Sie Inhalte in der Zielumgebung bearbeiten, werden diese vom Quellinhalt überschrieben, sofern die Pfade übereinstimmen.
+
+Wenn die Pfade unterschiedlich sind, wird der Inhalt der Quelle mit dem Inhalt des Ziels zusammengeführt.
 
 ### Berechtigungen {#permissions}
 
@@ -103,7 +104,6 @@ Wenn Sie einen Inhaltssatz bearbeiten, müssen Sie möglicherweise die konfiguri
 
 ![Bearbeiten des Content-Sets](/help/assets/edit-content-set.png)
 
-
 ## Inhalt kopieren {#copy-content}
 
 Nachdem ein Inhaltssatz erstellt wurde, können Sie ihn zum Kopieren von Inhalten verwenden.
@@ -138,8 +138,6 @@ Eine Umgebung kann nicht ausgewählt werden, wenn eine der folgenden Bedingungen
    1. Um *die ausgeschlossenen Pfade in der Zielumgebung zu entfernen, deaktivieren Sie **`Do not delete exclude paths from destination`**.* Mit dieser Einstellung werden die im Inhaltssatz angegebenen ausgeschlossenen Pfade gelöscht.
    1. Um den Versionsverlauf der Pfade von der Quellumgebung in die Zielumgebung zu kopieren, aktivieren Sie die Option **Versionen kopieren** . Der Content Copy-Prozess ist erheblich schneller, wenn der Versionsverlauf *nicht* kopiert wird.
 
-
-
 1. Klicken Sie auf **Kopieren**. Der Status des Kopiervorgangs wird für das ausgewählte Content-Set in der Konsole angezeigt.
 
 ## Prüfen des Status einer Inhaltskopie {#copy-activity}
@@ -156,14 +154,13 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
 
    ![Aktivität zum Kopieren von Inhalten](/help/assets/copy-content-activity.png)
 
-   Ein Content Copy-Prozess kann einen der folgenden Status haben:
+   Ein Inhaltskopierprozess kann einen der folgenden Status aufweisen:
 
    | Status | Beschreibung |
    | --- | --- |
    | In Bearbeitung | Der Vorgang zum Kopieren von Inhalten ist noch nicht abgeschlossen. |
-   | Abgeschlossen | Der Vorgang zum Kopieren von Inhalten wurde erfolgreich abgeschlossen. |
+   | Abgeschlossen | Der Inhaltskopiervorgang wurde erfolgreich abgeschlossen. |
    | Fehlgeschlagen | Vorgang zum Kopieren von Inhalten fehlgeschlagen. |
-
 
 ## Einschränkungen der Inhaltskopie {#limitations}
 
