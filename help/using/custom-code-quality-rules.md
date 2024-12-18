@@ -3,9 +3,9 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 8811ed130b2c7a37a0c811c308b57acf0872e9c8
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3514'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -872,14 +872,14 @@ AEM Cloud Service verbietet die Erstellung von Tokenizern mit falschen Namen in 
 
 AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Eigenschaften mit Leerzeichen enthalten.
 
-### Die Konfiguration der Indexdefinitionen sollte keine Hystack0-Eigenschaft enthalten. {#oakpal-indexing-haystack0-property}
+### Die Konfiguration von Indexdefinitionen darf keine haystack0-Eigenschaft enthalten {#oakpal-indexing-haystack0-property}
 
 * **Schlüssel**: HayStackPropertyCheck
 * **Typ**: Verbesserung
 * **Schweregrad**: Gering
 * **Seit**: Version 2024.12.0
 
-AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Hystack-Eigenschaften enthalten.
+AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Haystack-Eigenschaften enthalten.
 
 ## Dispatcher Optimization Tool {#dispatcher-optimization-tool-rules}
 

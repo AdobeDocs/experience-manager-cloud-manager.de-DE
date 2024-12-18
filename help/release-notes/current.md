@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Version Cloud Manager 2024.12.0 in Adob
 feature: Release Information
 exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: e266a4192e2a897f142a6c83ae5766483946320d
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '312'
 ht-degree: 100%
 
@@ -26,7 +26,7 @@ Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2024.12.0 in Adob
 
 Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2024.12.0 ist der 5. Dezember 2024.
 
-Die Veröffentlichung der nächsten Version ist für den Freitag, 23. Januar 2025 geplant.
+Die Veröffentlichung der nächsten Version ist für den 23. Januar 2025 geplant.
 
 <!-- ## What's new {#what-is-new} -->
 
