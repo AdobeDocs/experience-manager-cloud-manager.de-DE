@@ -3,9 +3,9 @@ title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus Produktionsumgebungen von Adobe Experience Manager 6.x, die von Adobe Managed Services gehostet werden, zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '1321'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
@@ -154,13 +154,13 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
 
    ![Aktivität zum Kopieren von Inhalten](/help/assets/copy-content-activity.png)
 
-   Ein Inhaltskopie-Prozess kann einen der folgenden Status aufweisen:
+   Ein Inhaltskopiervorgang kann einen der folgenden Statuswerte haben:
 
    | Status | Beschreibung |
    | --- | --- |
-   | In Bearbeitung | Der Prozess zum Kopieren von Inhalten läuft. |
-   | Abgeschlossen | Der Inhaltskopieprozess wurde erfolgreich abgeschlossen. |
-   | Fehlgeschlagen | Inhaltskopie-Vorgang fehlgeschlagen. |
+   | In Bearbeitung | Der Inhaltskopiervorgang wird gerade durchgeführt. |
+   | Abgeschlossen | Der Inhaltskopiervorgang wurde erfolgreich abgeschlossen. |
+   | Fehlgeschlagen | Der Inhaltskopiervorgang ist fehlgeschlagen. |
 
 ## Einschränkungen der Inhaltskopie {#limitations}
 
