@@ -3,7 +3,7 @@ title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzende zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1263'
 ht-degree: 100%
 
@@ -165,7 +165,7 @@ In den [OSGi-Konfigurationen](https://experienceleague.adobe.com/de/docs/experie
 
 In einigen Fällen kann der Build-Prozess von bestimmten Konfigurationsvariablen abhängen, die nicht im Git-Repository platziert werden können oder zwischen Pipeline-Ausführungen mit derselben Verzweigung variieren müssen.
 
-Cloud Manager ermöglicht die Konfiguration dieser Variablen über die Cloud Manager-API oder die Cloud Manager-CLI individuell für die Pipelines. Variablen können entweder als reiner Test oder mit Data-at-Rest-Verschlüsselung gespeichert werden. In beiden Fällen werden Variablen innerhalb der Build-Umgebung als Umgebungsvariable bereitgestellt, die dann in der Datei `pom.xml` oder anderen Build-Skripten referenziert werden kann.
+Cloud Manager ermöglicht die Konfiguration dieser Variablen über die Cloud Manager-API oder die Cloud Manager-CLI individuell für die Pipelines. Variablen können entweder als reiner Test oder im Ruhezustand verschlüsselt gespeichert werden. In beiden Fällen werden Variablen innerhalb der Build-Umgebung als Umgebungsvariable bereitgestellt, die dann in der Datei `pom.xml` oder anderen Build-Skripten referenziert werden kann.
 
 Um eine Variable mithilfe der CLI festzulegen, führen Sie einen Befehl ähnlich dem folgenden aus.
 

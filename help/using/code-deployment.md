@@ -3,7 +3,7 @@ title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1637'
 ht-degree: 100%
 

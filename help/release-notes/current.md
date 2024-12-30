@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Version Cloud Manager 2024.12.0 in Adob
 feature: Release Information
 exl-id: 811567af-66c9-4c1f-ae9e-60603b70ef80
 source-git-commit: e266a4192e2a897f142a6c83ae5766483946320d
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 100%
 

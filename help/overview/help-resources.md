@@ -3,7 +3,7 @@ title: Hilfe-Ressourcen
 description: Erfahren Sie mehr über die verfügbaren Ressourcen, die Ihnen bei der Verwendung von Cloud Manager helfen.
 exl-id: 6a4573a6-d9f0-41bc-8ce2-289ba9cc9f47
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 100%
 

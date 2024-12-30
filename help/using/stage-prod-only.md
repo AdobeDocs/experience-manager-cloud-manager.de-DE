@@ -3,7 +3,7 @@ title: Reine Staging- und Produktions-Pipelines
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '932'
 ht-degree: 100%
 
@@ -17,7 +17,7 @@ Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedi
 >
 >Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md#early-adoption) verfügbar.
 
-## Überblick {#overview}
+## Übersicht {#overview}
 
 Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Hierbei handelt es sich um eine Bereitstellungs-Pipeline, die sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt wird. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile entstehen:
 

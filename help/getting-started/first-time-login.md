@@ -3,7 +3,7 @@ title: Erste Anmeldung
 description: Gehen Sie wie auf dieser Seite beschrieben vor, wenn Sie die allgemeine Konfiguration eingerichtet haben und für die erste Verwendung von Cloud Manager bereit sind.
 exl-id: eb043437-8566-4a8d-8c5c-c8cf1d33daeb
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '293'
 ht-degree: 100%
 

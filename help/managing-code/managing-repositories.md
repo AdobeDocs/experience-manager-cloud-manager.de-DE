@@ -3,7 +3,7 @@ title: Verwalten von Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie Ihre Git-Repositorys in Cloud Manager anzeigen, hinzufügen und löschen können.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
 source-git-commit: ee84c682b6bd2b9144b3f75d544dea33a5ad944b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '732'
 ht-degree: 100%
 

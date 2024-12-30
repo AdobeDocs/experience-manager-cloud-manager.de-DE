@@ -3,7 +3,7 @@ title: Sicherheit und Datenschutz
 description: Erfahren Sie mehr über die Sicherheit und den Datenschutz von Code- und Artefakt-Assets in Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '202'
 ht-degree: 100%
 

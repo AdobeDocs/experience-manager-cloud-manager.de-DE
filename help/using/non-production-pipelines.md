@@ -3,9 +3,9 @@ title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
-workflow-type: ht
-source-wordcount: '688'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

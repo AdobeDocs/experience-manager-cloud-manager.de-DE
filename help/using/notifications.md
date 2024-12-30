@@ -3,7 +3,7 @@ title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 100%
 

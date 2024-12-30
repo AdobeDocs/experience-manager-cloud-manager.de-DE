@@ -3,7 +3,7 @@ title: Wichtige Konzepte
 description: Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriffe. Dieses Dokument fasst einige der wichtigsten Informationen für Sie bei den ersten Schritten mit Cloud Manager zusammen.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
 source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 100%
 

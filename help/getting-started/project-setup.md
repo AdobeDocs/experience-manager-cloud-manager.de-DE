@@ -3,7 +3,7 @@ title: Einrichten eines Projekts
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1395'
 ht-degree: 100%
 

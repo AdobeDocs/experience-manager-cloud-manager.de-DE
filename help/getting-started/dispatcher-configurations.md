@@ -3,7 +3,7 @@ title: Dispatcher-Konfigurationen
 description: Weitere Informationen zum Bereitstellen von Dispatcher-Konfigurationsdateien mit Cloud Manager
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '575'
 ht-degree: 100%
 

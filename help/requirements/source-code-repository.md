@@ -3,7 +3,7 @@ title: Quell-Code-Repository
 description: Hier erfahren Sie mehr über das Git-Repository, das für jedes in Cloud Manager enthaltene Programm bereitgestellt wird.
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '245'
 ht-degree: 100%
 

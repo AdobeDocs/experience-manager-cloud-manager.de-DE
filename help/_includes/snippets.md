@@ -5,10 +5,10 @@ source-wordcount: '57'
 ht-degree: 35%
 
 ---
-# Snippets (#snippets)
+# Snippets #snippets
 
-## Bekannte Probleme bei der Inhaltskopie {#content-copy-known-issues}
+## Bekannte Probleme beim Kopieren von Inhalten {#content-copy-known-issues}
 
-Bei Verwendung der Funktion [content copy](/help/using/content-copy.md) kann es bei einer umbenannten Ressource in der Quellumgebung dazu kommen, dass der Vorgang zum Kopieren des Inhalts aufgrund widersprüchlicher UUIDs in der Zielumgebung fehlschlägt.
+Bei Verwendung der Funktion [Inhaltskopie](/help/using/content-copy.md) kann es beim Umbenennen einer Ressource in der Quellumgebung dazu kommen, dass der Vorgang zum Kopieren von Inhalten aufgrund widersprüchlicher UUIDs in der Zielumgebung fehlschlägt.
 
 Um diesen Fehler zu vermeiden, müssen Sie Ressourcen zunächst löschen und dann mit dem gewünschten neuen Ressourcennamen neu erstellen, anstatt sie umzubenennen.

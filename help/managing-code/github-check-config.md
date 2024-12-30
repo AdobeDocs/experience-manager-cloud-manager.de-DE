@@ -3,7 +3,7 @@ title: Konfiguration der GitHub-Prüfung für private Repositorys
 description: Erfahren Sie, wie Sie die automatisch erstellten Pipelines so steuern, dass sie jede Pull-Anfrage an ein privates Repository validieren.
 exl-id: 29c9e487-e196-411a-8cda-6751b0a56066
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '236'
 ht-degree: 100%
 

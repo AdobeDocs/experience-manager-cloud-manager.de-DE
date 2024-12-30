@@ -3,7 +3,7 @@ title: Git-Integration mit Adobe Cloud Manager
 description: In dieser Videoreihe wird die Einrichtung und Integration eines kundenseitig verwalteten (lokalen) Git-Repositorys mit Adobe Cloud Manager beschrieben.
 exl-id: e517f8a4-23f0-4486-8278-91396dba76ec
 source-git-commit: 51bd685a17eb9d68b1ec8245e6167cab02101fc1
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 100%
 
@@ -21,7 +21,7 @@ Adobe Cloud Manager verfügt über ein einzelnes Git-Repository, das der Bereits
 In dieser Videoreihe werden verschiedene Anwendungsfälle für die Integration eines kundenseitig verwalteten Git-Repositorys mit Cloud Manager untersucht.
 
 * [Erstsynchronisierung](#initial-sync)
-* [Standard-Verzweigungsstrategie](#branching-strategy)
+* [Grundlegende Verzweigungsstrategie](#branching-strategy)
 * [Entwicklung von Funktionsverzweigungen](#feature-development)
 * [Produktionsbereitstellung](#production-deployment)
 * [Synchronisieren von Versions-Tags](#sync-tags)

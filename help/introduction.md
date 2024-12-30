@@ -3,7 +3,7 @@ title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '1256'
 ht-degree: 100%
 

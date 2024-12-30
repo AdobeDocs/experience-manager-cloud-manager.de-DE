@@ -3,7 +3,7 @@ title: Überwachen von Umgebungen
 description: Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '910'
 ht-degree: 100%
 

@@ -3,7 +3,7 @@ title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 source-git-commit: 9d910e1b1a4aad000a8389ddc22ce380bbccd4ef
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '840'
 ht-degree: 100%
 

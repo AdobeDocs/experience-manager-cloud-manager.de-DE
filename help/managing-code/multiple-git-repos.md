@@ -3,7 +3,7 @@ title: Arbeiten mit mehreren Git-Repositorys
 description: Erfahren Sie, wie Sie Ihre eigenen Git-Repository oder mehrere Git-Repositorys verwenden können, anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
 source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '738'
 ht-degree: 100%
 

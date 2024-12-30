@@ -3,9 +3,9 @@ title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
-source-wordcount: '1435'
-ht-degree: 100%
+workflow-type: tm+mt
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 

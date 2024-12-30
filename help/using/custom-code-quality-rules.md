@@ -3,7 +3,7 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 8811ed130b2c7a37a0c811c308b57acf0872e9c8
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '3514'
 ht-degree: 100%
 

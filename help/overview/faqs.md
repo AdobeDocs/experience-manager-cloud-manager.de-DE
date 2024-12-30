@@ -3,7 +3,7 @@ title: Häufig gestellte Fragen zu Cloud Manager
 description: Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu Cloud Manager für AMS-Kundinnen und -Kunden.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '748'
 ht-degree: 100%
 

@@ -3,7 +3,7 @@ title: Verwenden des Assistenten für neue Projekte
 description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM-Anwendungsprojekt erstellen.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
 source-git-commit: 7bc874a8dd14544c22201ef2c470faab84d31f8b
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '321'
 ht-degree: 100%
 

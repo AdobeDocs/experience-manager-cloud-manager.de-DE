@@ -4,7 +4,7 @@ description: Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigen
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '818'
 ht-degree: 100%
 

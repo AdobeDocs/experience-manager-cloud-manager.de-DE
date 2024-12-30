@@ -3,7 +3,7 @@ title: Einrichten von Programmen
 description: Nach dem Onbarding muss die Geschäftsinhaberin bzw. der Geschäftsinhaber verschiedene Ersteinstellungen am Programm vornehmen.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
 source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
-workflow-type: ht
+workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 100%
 
