@@ -2,10 +2,10 @@
 title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: dcf2a4727b800f4364fcc7d757d281bde2738a55
 workflow-type: tm+mt
-source-wordcount: '2764'
-ht-degree: 100%
+source-wordcount: '2793'
+ht-degree: 98%
 
 ---
 
@@ -48,14 +48,16 @@ Die Software implementiert ihn durch eine Kombination aus SonarQube-Analyse, Pr�
 
 Es gibt mehr als 100 Regeln, wobei generische Java-Regeln und AEM-spezifische Regeln kombiniert sind. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
->[!TIP]
+>[!IMPORTANT]
 >
->Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
+>Sie können die aktuelle vollständige Liste von Regeln (über [ Link) ](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+>
+>Ab Donnerstag, 13. Februar 2025 (Cloud Manager 2025.2.0), verwendet Cloud Manager Code Quality eine aktualisierte Version SonarQube 9.9 und eine aktualisierte Liste von Regeln, die Sie [ können (hier herunterladen](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
 
 Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
-|--- |--- |--- |--- |
+| --- | --- | --- | --- |
 | Sicherheitsbewertung | A = Keine Schwachstellen <br/>B = mindestens 1 kleinere Schwachstelle <br/>C = mindestens 1 größere Schwachstelle <br/>D = mindestens 1 kritische Schwachstelle <br/>E = mindestens 1 Schwachstelle der Kategorie „Blocker“ | Kritisch | &lt; B |
 | Zuverlässigkeitsbewertung | A = Keine Fehler <br/>B = mindestens 1 kleinerer Fehler <br/>C = mindestens 1 größerer Fehler <br/>D = mindestens 1 kritischer Fehler<br/>E = mindestens 1 Fehler der Kategorie „Blocker“ | Wichtig | &lt; C |
 | Wartbarkeitsbewertung | Definiert durch die ausstehenden Kosten für die Behebung von Code-Fehlern als Prozentsatz der Zeit, die bereits in das Programm investiert wurde<br/><ul><li>A = &lt;=5 %</li><li>B = 6-10 %</li><li>C = 11-20 %</li><li>D = 21-50 %</li><li>E = >50 %</li></ul> | Wichtig | &lt; A |
@@ -67,7 +69,7 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 
 >[!NOTE]
 >
->Weitere Informationen finden Sie in den [Metrikdefinitionen von SonarQube](https://docs.sonarsource.com/sonarqube/latest/user-guide/code-metrics/metrics-definition/).
+>Weitere Informationen finden Sie in den [Metrikdefinitionen von SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/code-metrics/metrics-definition/).
 
 >[!NOTE]
 >
