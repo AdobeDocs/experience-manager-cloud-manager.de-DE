@@ -2,7 +2,7 @@
 title: Testen der Code-Qualität
 description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: dcf2a4727b800f4364fcc7d757d281bde2738a55
+source-git-commit: f5e6ac81c6454730850bb7e884d82be48d2f8525
 workflow-type: tm+mt
 source-wordcount: '2793'
 ht-degree: 98%
@@ -48,9 +48,9 @@ Die Software implementiert ihn durch eine Kombination aus SonarQube-Analyse, Pr�
 
 Es gibt mehr als 100 Regeln, wobei generische Java-Regeln und AEM-spezifische Regeln kombiniert sind. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
+Sie können die aktuelle vollständige Liste von Regeln (über [ Link) ](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+
 >[!IMPORTANT]
->
->Sie können die aktuelle vollständige Liste von Regeln (über [ Link) ](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
 >
 >Ab Donnerstag, 13. Februar 2025 (Cloud Manager 2025.2.0), verwendet Cloud Manager Code Quality eine aktualisierte Version SonarQube 9.9 und eine aktualisierte Liste von Regeln, die Sie [ können (hier herunterladen](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
 
