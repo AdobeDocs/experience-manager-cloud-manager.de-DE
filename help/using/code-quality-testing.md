@@ -1,18 +1,18 @@
 ---
 title: Testen der Code-Qualität
-description: Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
+description: Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 source-git-commit: f5e6ac81c6454730850bb7e884d82be48d2f8525
 workflow-type: tm+mt
 source-wordcount: '2793'
-ht-degree: 98%
+ht-degree: 100%
 
 ---
 
 
 # Testen der Code-Qualität {#code-quality-testing}
 
-Erfahren Sie, wie das Testen der Code-Qualität von Pipelines funktioniert und wie damit die Qualität Ihrer Bereitstellungen verbessert werden kann.
+Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
 
 ## Einführung {#introduction}
 
@@ -42,17 +42,17 @@ Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test
 
 Dieser Testschritt bewertet die Qualität des Anwendungs-Codes. Dies ist der Hauptzweck einer reinen Code-Qualitäts-Pipeline. Der Testschritt wird unmittelbar nach dem Build-Schritt in allen produktionsfremden und Produktions-Pipelines ausgeführt. Weitere Informationen finden Sie unter [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
-Beim Testen der Code-Qualität wird der Quell-Code gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt. 
+Beim Testen der Code-Qualität wird der Quell-Code gescannt, um sicherzustellen, dass er bestimmte Qualitätskriterien erfüllt.
 
 Die Software implementiert ihn durch eine Kombination aus SonarQube-Analyse, Prüfung auf Inhaltspaket-Ebene mit OakPAL und Dispatcher-Validierung mit dem Dispatcher-Optimierungs-Tool.
 
 Es gibt mehr als 100 Regeln, wobei generische Java-Regeln und AEM-spezifische Regeln kombiniert sind. Einige der AEM-spezifischen Regeln werden auf der Grundlage der Best Practices von AEM Engineering erstellt und werden als [benutzerspezifische Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md) bezeichnet.
 
-Sie können die aktuelle vollständige Liste von Regeln (über [ Link) ](/help/assets/CodeQuality-rules-latest-AMS.xlsx).
+Sie können die aktuelle vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen.
 
 >[!IMPORTANT]
 >
->Ab Donnerstag, 13. Februar 2025 (Cloud Manager 2025.2.0), verwendet Cloud Manager Code Quality eine aktualisierte Version SonarQube 9.9 und eine aktualisierte Liste von Regeln, die Sie [ können (hier herunterladen](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx).
+>Ab Donnerstag, 13. Februar 2025 (Cloud Manager 2025.2.0), verwendet Cloud Manager Code Quality eine aktualisierte Version von SonarQube 9.9 und eine aktualisierte Liste von Regeln, die Sie [hier herunterladen](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx) können.
 
 Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
 
@@ -234,7 +234,7 @@ Cloud Manager führt Leistungstests für AEM Assets-Programme durch, indem Asset
 
 #### Onboarding-Anforderungen {#onboarding-requirement}
 
-Bei Assets-Leistungstests erstellt Ihr Customer Success Engineer während des Onboardings der Autorin oder des Autors in der Staging-Umgebung einen `cloudmanager`-Benutzer bzw. eine -Benutzerin (und ein entsprechendes Kennwort). Für die Leistungstestschritte müssen ein Benutzer bzw. eine Benutzerin namens `cloudmanager` und das zugehörige Kennwort vom CSE eingerichtet werden. 
+Bei Assets-Leistungstests erstellt Ihr Customer Success Engineer während des Onboardings der Autorin oder des Autors in der Staging-Umgebung einen `cloudmanager`-Benutzer bzw. eine -Benutzerin (und ein entsprechendes Kennwort). Für die Leistungstestschritte müssen ein Benutzer bzw. eine Benutzerin namens `cloudmanager` und das zugehörige Kennwort vom CSE eingerichtet werden.
 
 Diese Methode sollte in der Autoreninstanz bleiben und die Berechtigungen sollten nicht geändert werden. Das Ändern oder Entfernen dieser Methode kann dazu führen, dass Assets-Leistungstests fehlschlagen.
 
