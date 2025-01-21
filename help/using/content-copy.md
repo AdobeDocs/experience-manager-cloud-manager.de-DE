@@ -2,10 +2,10 @@
 title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus Produktionsumgebungen von Adobe Experience Manager 6.x, die von Adobe Managed Services gehostet werden, zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: e3a656605ac59ca1f95985426932fddf2b53b7c9
+source-git-commit: 84b3366481c2efd497583627eac67046452f6c38
 workflow-type: tm+mt
 source-wordcount: '1321'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -64,7 +64,7 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
 
    Nur Pfade, die mit `/content`, `/conf`, `/etc`, `/var/workflow/models` oder `/var/commerce` beginnen, können aufgenommen werden.
 
-1. Klicken Sie auf das Symbol **![Ordner hinzufügen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) Pfad hinzufügen**, um den Pfad zum Content-Set hinzuzufügen (oder darin einzubeziehen).
+1. Klicken Sie auf ![Ordnersymbol hinzufügen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderAdd_18_N.svg) **Pfad hinzufügen**, um den Pfad zum Content-Set hinzuzufügen (oder einzuschließen).
 
 1. (Optional) Bei Bedarf können Sie weitere Pfade (bis zu 50) hinzufügen, indem Sie die vorherigen beiden Schritte wiederholen. Fahren Sie ansonsten mit dem nächsten Schritt fort.
 
