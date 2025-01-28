@@ -3,9 +3,9 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: 1b7b703f7cba69878bd98aa971844741ebea7dba
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3490'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -496,7 +496,7 @@ public void doThis(Resource resource) {
 ### Der Sling Scheduler sollte nicht verwendet werden {#sonarqube-sling-scheduler}
 
 * **Schlüssel**: CQRules:AMSCORE-554
-* **type**: Kompatibilität mit `Code Smell`/Cloud Service
+* **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
@@ -507,7 +507,7 @@ Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen find
 ### APIs, die in AEM als veraltet gelten, sollten nicht verwendet werden {#sonarqube-aem-deprecated}
 
 * **Schlüssel**: AMSCORE-553
-* **type**: Kompatibilität mit `Code Smell`/Cloud Service
+* **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
@@ -629,7 +629,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 ### Der standardmäßige Authoring-Modus sollte nicht die klassische Benutzeroberfläche verwenden {#oakpal-default-authoring}
 
 * **Schlüssel**: ClassicUIAuthoringMode
-* **type**: Kompatibilität mit `Code Smell`/Cloud Service
+* **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
@@ -638,7 +638,7 @@ Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` def
 ### Komponenten mit Dialogfeldern sollten Dialogfelder für die Touch-Benutzeroberfläche enthalten {#oakpal-components-dialogs}
 
 * **Schlüssel**: ComponentWithOnlyClassicUIDialog
-* **type**: Kompatibilität mit `Code Smell`/Cloud Service
+* **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
@@ -653,7 +653,7 @@ Die Dokumentation zu den AEM-Modernisierungs-Tools enthält Details zum Konverti
 ### Rückwärtsreplikationsagenten sollten nicht verwendet werden {#oakpal-reverse-replication}
 
 * **Schlüssel**: ReverseReplication
-* **type**: Kompatibilität mit `Code Smell`/Cloud Service
+* **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 

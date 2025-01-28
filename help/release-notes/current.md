@@ -3,10 +3,11 @@ title: Versionshinweise für Cloud Manager 2025.1.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.1.0 in Adobe Managed Services.
 feature: Release Information
 exlid: 669b1f2d8fc68526eb091e0f93f70ab93033d193
-source-git-commit: 434740b5ad2dafd5a6c55d0272cf5effdfa6baac
-workflow-type: tm+mt
+exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
+source-git-commit: ca9a07354ff8316f531840a42d6ecdda5c072b9b
+workflow-type: ht
 source-wordcount: '196'
-ht-degree: 39%
+ht-degree: 100%
 
 ---
 
@@ -24,29 +25,29 @@ Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2025.1.0 in Adobe
 
 <!-- SAVE FOR FUTURE POSSIBLE USE No notable bugs or features for the September release of Cloud Manager. -->
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.1.0 ist der Dienstag, 22. Januar 2024.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.1.0 ist Mittwoch, der 22. Januar 2024.
 
-Die Veröffentlichung der nächsten Version ist für den Freitag, 13. Februar 2025 geplant.
+Die Veröffentlichung der nächsten Version ist für Donnerstag, den 13. Februar 2025 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-**Regeln zur Code-Qualität - Sonar-Cube-Upgrade:** Der Schritt &quot;Cloud Manager-Code-Qualität“ wird ab Donnerstag, 13. Februar 2025, mit der Verwendung von SonarQube Server 9.9 mit der Version Cloud Manager 2025.2.0 beginnen.
+**Regeln zur Code-Qualität – Sonar Cube-Upgrade:** Der Schritt „Cloud Manager-Code-Qualität“ wird planmäßig ab Donnerstag, den 13. Februar 2025, den SonarQube-Server 9.9 mit Version 2025.2.0 von Cloud Manager verwenden.
 
-Zur Vorbereitung sind aktualisierte SonarQube-Regeln jetzt verfügbar unter [Code-Qualitätsregeln](/help/using/code-quality-testing.md#code-quality-testing-step).
+Zur Vorbereitung sind die aktualisierten SonarQube-Regeln jetzt unter [Code-Qualitätsregeln](/help/using/code-quality-testing.md#code-quality-testing-step) verfügbar.
 
 Sie können die neuen Regeln frühzeitig überprüfen, indem Sie die folgende Pipeline-Textvariable festlegen (siehe Screenshot unten):
 
 `CM_BUILD_IMAGE_OVERRIDE` = `self-service-build:sonar-99-upgrade-java17or21`
 
-Legen Sie außerdem die folgende Variable fest, um sicherzustellen, dass der Code-Qualitätsschritt für denselben Commit ausgeführt wird (normalerweise für denselben `commitId` übersprungen):
+Legen Sie außerdem die folgende Variable fest, um sicherzustellen, dass der Schritt „Code-Qualität“ für denselben Commit ausgeführt wird (wird normalerweise für dieselbe `commitId` übersprungen):
 
 `CM_DISABLE_BUILD_REUSE` = `true`
 
-![Seite Variablenkonfiguration](/help/release-notes/assets/variables-config.png)
+![Seite mit der Variablenkonfiguration](/help/release-notes/assets/variables-config.png)
 
 >[!NOTE]
 >
->Adobe empfiehlt die Erstellung einer neuen CI/CD-Code-Qualitäts-Pipeline, die auf derselben Verzweigung wie die Haupt-Produktions-Pipeline konfiguriert ist. Legen Sie die entsprechenden Variablen *vor* der Version vom 13. Februar 2025 fest, um zu überprüfen, ob die neuen erzwungenen Regeln keine Blocker einführen.
+>Adobe empfiehlt die Erstellung einer neuen CI/CD-Pipeline für die Code-Qualität, die auf derselben Verzweigung wie die Hauptproduktions-Pipeline konfiguriert ist. Legen Sie die entsprechenden Variablen *vor* der Version vom 13. Februar 2025 fest, um zu überprüfen, ob die neuen erzwungenen Regeln keine Blocker einführen.
 
 <!-- ## Early adoption program {#early-adoption}
 
