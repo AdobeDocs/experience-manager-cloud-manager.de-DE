@@ -2,10 +2,10 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 1b7b703f7cba69878bd98aa971844741ebea7dba
-workflow-type: ht
-source-wordcount: '3490'
-ht-degree: 100%
+source-git-commit: c50eb54b5603b4370f2d7907a2194477dcc3ba21
+workflow-type: tm+mt
+source-wordcount: '3523'
+ht-degree: 99%
 
 ---
 
@@ -18,7 +18,7 @@ Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die
 >
 >Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. In der [Dokumentation zu den Konzepten von SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/) finden sich weitere Informationen zu den zugehörigen Konzepten und Qualitätsregeln.
 
-Vollständige SonarQube-Regeln stehen aufgrund von proprietären Informationen von Adobe nicht zum Download zur Verfügung. Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen. Lesen Sie dieses Dokument weiter, um Beschreibungen und Beispiele für die Regeln zu erhalten.
+Vollständige SonarQube-Regeln stehen aufgrund von proprietären Informationen von Adobe nicht zum Download zur Verfügung. Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen. Lesen Sie dieses Dokument weiter, um Beschreibungen und Beispiele für die Regeln zu sehen.
 
 >[!IMPORTANT]
 >
@@ -882,6 +882,15 @@ AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Eigenschaf
 * **Seit**: Version 2024.12.0
 
 AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Haystack-Eigenschaften enthalten.
+
+### Die Konfiguration der Indexdefinitionen sollte die Eigenschaft async-previous nicht enthalten. {#oakpal-indexing-async-previous-property}
+
+* **Key**: IndexAsyncPreviousCheck
+* **Typ**: Verbesserung
+* **Schweregrad**: Gering
+* **Seit**: Version 2025.2.0
+
+AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die eine asynchrone vorherige Eigenschaft enthalten.
 
 ## Dispatcher Optimization Tool {#dispatcher-optimization-tool-rules}
 
