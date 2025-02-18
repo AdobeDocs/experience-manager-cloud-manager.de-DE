@@ -3,9 +3,9 @@ title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
 source-git-commit: c50eb54b5603b4370f2d7907a2194477dcc3ba21
-workflow-type: tm+mt
+workflow-type: ht
 source-wordcount: '3523'
-ht-degree: 99%
+ht-degree: 100%
 
 ---
 
@@ -883,14 +883,14 @@ AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Eigenschaf
 
 AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Haystack-Eigenschaften enthalten.
 
-### Die Konfiguration der Indexdefinitionen sollte die Eigenschaft async-previous nicht enthalten. {#oakpal-indexing-async-previous-property}
+### Die Konfiguration von Indexdefinitionen sollte die Eigenschaft „async-previous“ nicht enthalten {#oakpal-indexing-async-previous-property}
 
-* **Key**: IndexAsyncPreviousCheck
+* **Schlüssel**: IndexAsyncPreviousCheck
 * **Typ**: Verbesserung
 * **Schweregrad**: Gering
 * **Seit**: Version 2025.2.0
 
-AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die eine asynchrone vorherige Eigenschaft enthalten.
+AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die die async-previous-Eigenschaft enthalten.
 
 ## Dispatcher Optimization Tool {#dispatcher-optimization-tool-rules}
 
