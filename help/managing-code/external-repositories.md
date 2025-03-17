@@ -1,11 +1,11 @@
 ---
-title: Hinzufügen von externen Repositorys in Cloud Manager (Early Adopter)
+title: Hinzufügen externer Repositorys in Cloud Manager - Early Adopter
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub-, GitLab- und Bitbucket-Repositorys.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: e7e2268f866105970e02d4bc54c46613749e5ac0
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
 workflow-type: tm+mt
 source-wordcount: '715'
-ht-degree: 100%
+ht-degree: 98%
 
 ---
 
@@ -63,7 +63,7 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
    | --- | --- |
    | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
    | **Neues Zugriffs-Token hinzufügen** | **Repository-Typ: GitHub**<br>• Geben Sie im Textfeld **Tokenname** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<br>• Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitHub-Dokumentation](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) befolgen.<br>• Erforderliche Berechtigungen:<br>  • `Read access to metadata`.<br>  • `Read and write access to code and pull requests`.<br>• Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
-   |  | **Repository-Typ: GitLab**<br>• Geben Sie im Textfeld **Tokenname** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<br>• Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitLab-Dokumentation](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) befolgen.<br>• Erforderliche Berechtigungen:<br>  • `api`<br>  • `read_api`<br>  • `read_repository`<br>  • `write_repository`<br>• Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+   |  | **Repository-Typ: GitLab**<br>• Geben Sie im Textfeld **Tokenname** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<br>• Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitLab-Dokumentation](https://docs.gitlab.com/user/profile/personal_access_tokens/) befolgen.<br>• Erforderliche Berechtigungen:<br>  • `api`<br>  • `read_api`<br>  • `read_repository`<br>  • `write_repository`<br>• Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
    |  | **Repository-Typ: Bitbucket**<br>• Geben Sie im Textfeld **Tokenname** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<br>• Erstellen Sie ein Repository-Zugriffs-Token mithilfe der [Bitbucket-Dokumentation](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<br>• Erforderliche Berechtigungen:<br>  • `Read and write access to code and pull requests`. |
 
    >[!NOTE]

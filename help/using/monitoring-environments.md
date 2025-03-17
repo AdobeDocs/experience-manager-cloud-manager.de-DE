@@ -2,10 +2,10 @@
 title: Überwachen von Umgebungen
 description: Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
 workflow-type: tm+mt
-source-wordcount: '910'
-ht-degree: 100%
+source-wordcount: '911'
+ht-degree: 98%
 
 ---
 
@@ -28,7 +28,7 @@ Adobe Managed Services legt die Schwellenwerte fest, die Sie über [!UICONTROL C
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten für das Programm, das überwacht werden soll.
+1. Klicken Sie auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungspunkte des Programms, das Sie überwachen möchten.
 1. Klicken Sie im Menü unter der Überschrift **Verwalten** auf **Überwachung anzeigen**, um die Seite **Berichte** mit Informationen zur Systemüberwachung zu öffnen.
 
    ![Einstellungen](/help/assets/first-timea1.png)

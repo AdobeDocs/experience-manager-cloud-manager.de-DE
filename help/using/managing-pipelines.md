@@ -2,10 +2,10 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 9d910e1b1a4aad000a8389ddc22ce380bbccd4ef
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
 workflow-type: tm+mt
-source-wordcount: '840'
-ht-degree: 100%
+source-wordcount: '845'
+ht-degree: 75%
 
 ---
 
@@ -20,7 +20,7 @@ Die Karte **Pipelines** auf der Seite **Programmübersicht** in Cloud Manager bi
 
 ![Pipelines-Karte in Cloud Manager](/help/assets/configure-pipelines/pipelines-card.png)
 
-Wenn Sie auf die Schaltfläche mit den Auslassungspunkten neben den einzelnen Pipelines klicken, können Sie die folgenden Aktionen ausführen:
+Durch Klicken auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungspunkte neben jeder Pipeline können Sie die folgenden Aktionen ausführen:
 
 * [Ausführen der Pipeline](#running-pipelines) 
 * [Bearbeiten der Pipeline](#editing-pipelines)
@@ -70,45 +70,56 @@ Klicken Sie auf **Details anzeigen**, um die [Details zur Pipeline-Ausführung](
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 1. Navigieren Sie von der Seite **Programmübersicht** aus zur Karte **Pipelines**.
-1. Klicken Sie auf die auf die Schaltfläche mit den Auslassungspunkten neben der von Ihnen ausgeführten Pipeline und wählen Sie dann im Menü die Option **Ausführen** aus.
+1. Klicken Sie auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungszeichen neben der Pipeline, die Sie ausführen, und dann auf **Ausführen**.
 
    Die Statusspalte gibt an, wann die Pipeline-Ausführung beginnt.
 
-   Sie können die Details der Ausführung sehen, indem Sie erneut auf die Schaltfläche mit den Auslassungspunkten klicken und **[Details anzeigen](#view-details)** auswählen.
+   Sie können die Details der Ausführung sehen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) und auf **[Details anzeigen](#view-details)** klicken.
 
-   Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, indem Sie erneut auf die Schaltfläche mit den Auslassungspunkten klicken und **Abbrechen** auswählen.
+   Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) und auf **Abbrechen** klicken.
 
 ## Bearbeiten von Pipelines {#editing-pipelines}
 
+Eine Pipeline, die ausgeführt wird, können Sie nicht bearbeiten.
+
+**So bearbeiten Sie Pipelines:**
+
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der Pipeline, die Sie bearbeiten möchten, und wählen Sie dann im Menü die Option **Bearbeiten** aus.
+1. Navigieren Sie auf der **Programmübersicht** zur Karte **Pipelines**.
 
-1. Das Dialogfeld **Produktions-Pipeline bearbeiten** oder **Nicht-Produktions-Pipeline bearbeiten** wird angezeigt. Sie können dieselben Details bearbeiten, die Sie während der Pipeline-Erstellung eingegeben haben.
+1. Klicken Sie auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungszeichen neben der Pipeline, die Sie bearbeiten möchten, und dann auf **Bearbeiten**.
+
+1. Im Dialogfeld **Produktions-Pipeline bearbeiten** oder **Produktionsfremde Pipeline bearbeiten** können Sie die Details bearbeiten, die Sie bei der Pipeline-Erstellung eingegeben haben.
 
    Weitere Informationen zu den Feldern und Konfigurationsoptionen für Pipelines finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
 
-1. Klicken Sie auf **Aktualisieren**, wenn Sie fertig sind.
-
->[!NOTE]
->
->Pipelines, die gerade ausgeführt werden, können nicht bearbeitet werden.
+1. Wenn Sie fertig sind, klicken Sie **Aktualisieren**.
 
 ## Löschen von Pipelines {#deleting-pipelines}
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
+Pipelines, die gerade ausgeführt werden, können nicht gelöscht werden.
 
-1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der von Ihnen ausgeführten Pipeline und wählen Sie dann im Menü die Option **Löschen** aus.
-
->[!NOTE]
->
->Pipelines, die gerade ausgeführt werden, können nicht gelöscht werden.
-
-## Anzeigen von Details {#view-details}
+**So löschen Sie Pipelines:**
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Navigieren Sie von der Seite **Programmübersicht** zur Karte **Pipelines**, klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben der von Ihnen ausgeführten Pipeline und wählen Sie dann im Menü die Option **Anzeigen** aus.
+1. Navigieren Sie auf der **Programmübersicht** zur Karte **Pipelines**.
+
+1. Klicken Sie auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungszeichen neben der Pipeline, die Sie ausführen, und dann auf **Löschen**.
+
+
+## Pipeline-Details anzeigen {#view-details}
+
+Sie können nur Details einer Pipeline anzeigen, die gerade ausgeführt wird oder schon mindestens einmal ausgeführt worden ist.
+
+**So zeigen Sie Pipeline-Details an:**
+
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
+
+1. Navigieren Sie auf der **Programmübersicht** zur Karte **Pipelines**.
+
+1. Klicken Sie auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungszeichen neben der Pipeline, die Sie ausführen, und dann auf **Details anzeigen**.
 
 1. Sie gelangen zur Detailseite der Pipeline, die gerade ausgeführt wird.
 
@@ -126,15 +137,10 @@ Klicken Sie auf den Link **Details anzeigen**, um den Abschnitt **Dauer** anzuze
 
 ![Dauer](/help/assets/configure-pipelines/duration.png)
 
-Wenn Ihre Pipeline den Schritt **Code-Scan** umfasst hat, durch den Probleme aufgetreten sind, können Sie auf die Schaltfläche **Details herunterladen** klicken, um eine Liste von [Code-Qualitätstests](/help/using/code-quality-testing.md) anzuzeigen, die nicht bestanden wurden.
+Wenn Ihre Pipeline einen Schritt **Code-Überprüfung** enthält, der Probleme verursacht hat, können Sie auf **Details herunterladen** klicken, um eine Liste der [Code-Qualitätstests](/help/using/code-quality-testing.md) anzuzeigen, die nicht bestanden wurden.
 
 ![Fehler bei der Code-Qualität](assets/managing-pipelines-code-quality-issues.png)
 
 In der CSV-Datei ist eine Spalte **Speicherort der Projektdatei** verfügbar, die den Speicherort des fehlerhaften Codes angibt. Diese Spalte ist der projektrelative Pfad, während die Spalte **Dateispeicherort** von Maven generiert wird.
 
 ![Details zu Problemen beim Scannen des Projekt-Codes](assets/managing-pipelines-code-quality-details.png)
-
-
->[!NOTE]
->
->Sie können nur Details einer Pipeline anzeigen, die gerade ausgeführt wird oder schon mindestens einmal ausgeführt worden ist.

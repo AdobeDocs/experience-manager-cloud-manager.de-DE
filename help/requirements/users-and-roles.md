@@ -2,10 +2,10 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Benutzende und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
 workflow-type: tm+mt
-source-wordcount: '758'
-ht-degree: 100%
+source-wordcount: '762'
+ht-degree: 90%
 
 ---
 
@@ -101,18 +101,18 @@ Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzerinnen, Benu
 
 1. Klicken Sie im linken Navigationsbereich auf **Benutzer** und dann auf eine Benutzerin oder einen Benutzer, um diese bzw. diesen zu ändern.
 
-1. Klicken Sie im Abschnitt **Produkte** auf die Schaltfläche mit den Auslassungspunkten und wählen Sie **Bearbeiten** aus.
+1. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
 
    ![Benutzer bearbeiten](/help/assets/admin-console-edit-user.png)
 
-1. Klicken Sie im Dialogfeld **Produkte und Benutzergruppen bearbeiten** auf die Schaltfläche mit dem Pluszeichen und wählen Sie die Profile aus, die der Benutzerin bzw. dem Benutzer zugewiesen werden sollen.
+1. Klicken Sie **Dialogfeld „Produkte und Benutzergruppen bearbeiten** auf ![Hinzufügen-Symbol, Pluszeichen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) und wählen Sie die Profile aus, die dem Benutzer zugewiesen werden sollen.
 
-   * Wenn die Benutzerin bzw. der Benutzer den Rollen bereits zugewiesen ist, ist die Schaltfläche mit dem Pluszeichen eine Bearbeitungsschaltfläche (mit einem Stiftsymbol), funktioniert aber auf dieselbe Weise.
+   * Wenn der Benutzer den Rollen bereits zugewiesen ist, ist die Schaltfläche ![Hinzufügen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) eine Bearbeitungsschaltfläche (ein Bleistift), funktioniert jedoch auf dieselbe Weise.
 
    ![Produkte und Benutzergruppen bearbeiten](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Klicken Sie auf **Speichern**, um die Profile der Benutzer zu speichern.
 
-Wiederholen Sie die gleichen Schritte, um Benutzergruppen Profile zuzuweisen, wählen Sie jedoch **Benutzergruppen** über das linke Navigationsfenster auf der Registerkarte **Benutzer**. Klicken Sie auf eine Benutzergruppe, wählen Sie die Registerkarte **Zugewiesene Produktprofile** aus und klicken Sie dann auf **Produktprofil zuweisen**, um Profile zuzuweisen.
+Wiederholen Sie die gleichen Schritte, um Benutzergruppen Profile zuzuweisen, wählen Sie jedoch **Benutzergruppen** über das linke Navigationsfenster auf der Registerkarte **Benutzer**. Klicken Sie auf eine Benutzergruppe und wählen Sie **Zugewiesene Produktprofile** klicken Sie auf **Produktprofil zuweisen**, um Profile zuzuweisen.
 
 ![Profile einer Gruppe zuweisen](/help/assets/admin-console-edit-user-groups.png)

@@ -3,10 +3,10 @@ title: Hinzufügen von privaten Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigenen privaten GitHub-Repositorys einrichten.
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
-source-git-commit: 5090d7ee9a6742d71122acda9901d074bc254305
+source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
 workflow-type: tm+mt
-source-wordcount: '818'
-ht-degree: 100%
+source-wordcount: '815'
+ht-degree: 96%
 
 ---
 
@@ -90,8 +90,7 @@ Bis zur Validierung ist das Repository mit einem roten Symbol gekennzeichnet. Di
 
 Beachten Sie, dass in der Spalte **Typ** die von Adobe bereitgestellten Repositorys (**Adobe**) und Ihre eigenen GitHub-Repositorys (**GitHub**) leicht erkennbar aufgeführt sind.
 
-Um später zum Repository zurückzukehren und die Validierung abzuschließen, gehen Sie zur Seite **Repositorys**. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten neben dem von Ihnen hinzugefügten GitHub-Repository und wählen Sie im Dropdown-Menü die Option **Validierung der Eigentümerschaft** aus.
-
+Um später zum Repository zurückzukehren und die Validierung abzuschließen, gehen Sie zur Seite **Repositorys**. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) neben dem hinzugefügten GitHub-Repository und dann auf **Eigentümervalidierung**.
 
 
 ## Verwenden privater Repositorys mit Cloud Manager {#using}

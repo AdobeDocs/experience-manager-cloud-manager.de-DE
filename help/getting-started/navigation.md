@@ -2,10 +2,10 @@
 title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
 workflow-type: tm+mt
-source-wordcount: '0'
-ht-degree: 0%
+source-wordcount: '1439'
+ht-degree: 96%
 
 ---
 
@@ -52,11 +52,11 @@ Der erste ist die Cloud Manager-Kopfzeile. Die Kopfzeile bleibt beim Navigieren 
 
 ![Die Kopfzeile von Experience Cloud](assets/experience-cloud-header.png)
 
-1. Bei dem Hamburger-Symbol auf der linken Seite der Kopfzeile handelt es sich um ein Dropdown-Menü, das den Zugriff auf Registerkarten für bestimmte Teile eines einzelnen Programms ermöglicht. Je nach Kontext können Sie damit auch zwischen dem Lizenz-Dashboard und der Konsole **[Meine Programme](#my-programs-console)** wechseln.
+1. Das ![Menü anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg)-Symbol auf der linken Seite der Kopfzeile ist ein Dropdown-Menü, das Zugriff auf Registerkarten für bestimmte Teile eines einzelnen Programms bietet. Je nach Kontext können Sie damit auch zwischen dem Lizenz-Dashboard und der Konsole **[Meine Programme](#my-programs-console)** wechseln.
    * Das Lizenz-Dashboard gilt nur für AEM as a Cloud Service-Programme und nicht für AMS-Programme.
    * Informationen zum Ermitteln des Diensttyps Ihres Programms (AMS oder AEMaaCS) finden Sie in diesem Dokument unter [Programmkarten](#program-cards).
 1. Über die Schaltfläche „Cloud Manager“ gelangen Sie zurück zur Konsole „Meine Programme“ von Cloud Manager, unabhängig davon, wo Sie sich in Cloud Manager befinden.
-1. Klicken Sie auf die Schaltfläche „Feedback“, um Adobe Feedback zu Cloud Manager bereitzustellen.
+1. Klicken Sie auf **Feedback**, um Adobe Feedback zu Cloud Manager zu geben.
 1. Der Organisationsauswahl zeigt die Organisation an, bei der Sie derzeit angemeldet sind (in diesem Beispiel „We.Retail-Prod“). Klicken Sie auf diese Option, um zu einer anderen Organisation zu wechseln, wenn Ihre Adobe ID mit mehreren Organisationen verknüpft ist.
 1. Durch Klicken auf den Lösungsumschalter können Sie schnell zu anderen Experience Cloud-Lösungen wechseln.
 1. Das Hilfesymbol bietet Schnellzugriff auf Lern- und Support-Ressourcen.
@@ -123,7 +123,7 @@ Jedes Programm wird durch eine Karte oder eine Zeile in einer Tabelle dargestell
 
 ![Informationen](assets/information-view.png)
 
-Über das Symbol mit den Auslassungspunkten gelangen Sie zu weiteren Aktionen, die Sie im Programm ausführen können.
+Das ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg), bietet Zugriff auf zusätzliche Aktionen, die Sie im Programm ausführen können.
 
 ![Schaltfläche mit Auslassungspunkten für Programme](assets/program-ellipsis.png)
 
@@ -201,7 +201,7 @@ Bei einem Live-Programm den Status Ihrer letzten Bereitstellung mit Links zu Det
 
 Die Karte **Umgebungen** gibt Ihnen einen Überblick über Ihre Umgebungen und stellt Links für Schnellaktionen bereit.
 
-Die Karte **Umgebungen** listet nur drei Umgebungen auf. Klicken Sie auf **Alle anzeigen**, um alle Umgebungen des Programms zu sehen.
+Auf der Karte **Umgebungen** sind nur drei Umgebungen aufgeführt. Klicken Sie auf **Alle anzeigen**, um alle Umgebungen des Programms zu sehen.
 
 Weitere Informationen zur Verwaltung Ihrer Umgebungen finden Sie unter [Verwalten von Umgebungen](/help/using/managing-environments.md).
 

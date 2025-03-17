@@ -1,21 +1,21 @@
 ---
-title: Reine Staging- und Produktions-Pipelines
+title: Reine Staging- und Nur-Produktions-Pipelines - Early Adopter
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 03f7429fd2c4a6dd4c8ae3228eff9c8cdab1ded8
+source-git-commit: 2c6f5692ffa31e02d7338e68063d0c1c03a0c73b
 workflow-type: tm+mt
-source-wordcount: '932'
-ht-degree: 100%
+source-wordcount: '936'
+ht-degree: 98%
 
 ---
 
-# Reine Staging- und Produktions-Pipelines {#stage-prod-only}
+# Reine Staging- und Produktions-Pipelines (Early Adopter) {#stage-prod-only}
 
 Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 
 >[!NOTE]
 >
->Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md#early-adoption) verfügbar.
+>Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/2024/2024-8-0.md) verfügbar.
 
 ## Übersicht {#overview}
 
@@ -116,3 +116,4 @@ Wenn keine reine Produktions-Pipeline existiert, werden Sie dazu aufgefordert, e
 Achten Sie bei reinen Produktions-Pipelines darauf, die Quellartefakte zu identifizieren, die für die Produktion bereitgestellt werden sollen. Diese Details finden Sie im Schritt **Artefaktvorbereitung**. Sie können zu diesen Ausführungen navigieren, um weitere Details und Protokolle zu erhalten.
 
 ![Artefaktdetails](/help/assets/configure-pipelines/prod-only-pipeline-run.png)
+
