@@ -1,7 +1,8 @@
 ---
 title: Service Pack-Aktualisierungen für Entwicklungsumgebungen - Early Adopter
 description: Erfahren Sie, wie Sie jetzt Service Pack-Aktualisierungen für Entwicklungsumgebungen über die Benutzeroberfläche von Cloud Manager initiieren können.
-source-git-commit: 8da0e6cb4587bc7dfc79bec415ff3aeef2d12e3e
+exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
+source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
 workflow-type: tm+mt
 source-wordcount: '453'
 ht-degree: 3%
@@ -14,7 +15,7 @@ Erfahren Sie, wie Sie über die Benutzeroberfläche von Cloud Manager Service Pa
 
 >[!NOTE]
 >
->Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md) verfügbar.
+>Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md#early-adoption) verfügbar.
 
 ## Übersicht {#service-pack-updates-overview}
 
@@ -91,5 +92,3 @@ Nach Abschluss der Installation ist Ihre Genehmigung - oder Ablehnung - erforder
 Die Installation des Service Packs wird abgebrochen, und es werden keine Änderungen angewendet.
 
    ![Ablehnung des Service Packs](/help/using/assets/service-pack-reject.png)
-
-

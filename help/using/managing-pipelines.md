@@ -2,10 +2,10 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 58cdebf819f2737be5d8e129ff5b9783888f3c21
+source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
 workflow-type: tm+mt
-source-wordcount: '845'
-ht-degree: 75%
+source-wordcount: '1054'
+ht-degree: 61%
 
 ---
 
@@ -66,7 +66,7 @@ Durch Klicken auf das Symbol `i` werden Details zur Ausführung des ausgewählte
 
 Klicken Sie auf **Details anzeigen**, um die [Details zur Pipeline-Ausführung](#view-details) zu überprüfen.
 
-## Ausführen von Pipelines {#running-pipelines}
+## Ausführen einer Pipeline {#run-one-pipeline}
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 1. Navigieren Sie von der Seite **Programmübersicht** aus zur Karte **Pipelines**.
@@ -77,6 +77,23 @@ Klicken Sie auf **Details anzeigen**, um die [Details zur Pipeline-Ausführung](
    Sie können die Details der Ausführung sehen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) und auf **[Details anzeigen](#view-details)** klicken.
 
    Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) und auf **Abbrechen** klicken.
+
+## Mehrere Pipelines ausführen {#run-multiple-pipelines}
+
+Mit Cloud Manager können Sie mehrere Pipelines gleichzeitig ausführen, was die Bereitstellungseffizienz für Adobe Managed Services (AMS)-Kunden verbessert. Mit **Funktion „Ausgewählte** ausführen“ können Sie mehrere Pipelines auswählen und Trigger für ihre gleichzeitige Ausführung einrichten. Dies reduziert den manuellen Aufwand, der mit der individuellen Ausführung von Pipelines verbunden ist, und optimiert Build- und Bereitstellungs-Workflows.
+
+**So führen Sie mehrere Pipelines aus:**
+
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
+1. Klicken Sie im Menü links auf ![Workflow-Symbol ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Pipelines ****.
+1. Aktivieren Sie in der Tabelle auf **Seite**Pipeline) die Kontrollkästchen neben den Pipelines, die Sie ausführen möchten.
+Klicken Sie bei Bedarf auf ![Filtersymbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg)**Filter**, um Pipelines nach Umgebung oder bereitgestelltem Code-Typ oder beidem zu sortieren.
+1. Klicken Sie oben rechts auf der Seite auf **Ausgewählte ausführen (x)**.
+1. Klicken **im Dialogfeld „Ausgewählte Pipelines ausführen (x** auf **Ausführen (x)**.
+
+   Die Schaltfläche **Ausführen** gibt die Anzahl der Pipelines an, die fortgesetzt werden können. Sie haben beispielsweise vier Pipelines ausgewählt, von denen jedoch eine bereits ausgeführt wird. Oder es existiert keine mit einer ausgewählten Pipeline verknüpfte Umgebung mehr. In solchen Fällen passt sich das System entsprechend an. Die Schaltfläche wird in „Ausführen (3)“ aktualisiert, um anzugeben, dass drei Pipelines fortgesetzt werden können.
+
+1. Pipelines werden ausgeführt und ihr Status wird in der Liste **Pipelines** aktualisiert.
 
 ## Bearbeiten von Pipelines {#editing-pipelines}
 
