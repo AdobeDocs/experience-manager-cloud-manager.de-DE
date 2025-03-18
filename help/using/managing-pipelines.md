@@ -2,9 +2,9 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 91691878a2c135cc9fe123c06afcf775a962a2e0
+source-git-commit: d4a7d9ab72947b97b0dabb2f822ef268e4972685
 workflow-type: tm+mt
-source-wordcount: '1054'
+source-wordcount: '1060'
 ht-degree: 61%
 
 ---
@@ -87,7 +87,7 @@ Mit Cloud Manager können Sie mehrere Pipelines gleichzeitig ausführen, was die
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 1. Klicken Sie im Menü links auf ![Workflow-Symbol ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Pipelines ****.
 1. Aktivieren Sie in der Tabelle auf **Seite**Pipeline) die Kontrollkästchen neben den Pipelines, die Sie ausführen möchten.
-Klicken Sie bei Bedarf auf ![Filtersymbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg)**Filter**, um Pipelines nach Umgebung oder bereitgestelltem Code-Typ oder beidem zu sortieren.
+Klicken Sie bei Bedarf auf ![Filtersymbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg)**Filter**, um Pipelines nach Name, Umgebung oder bereitgestelltem Code-Typ oder einer Kombination aus allen drei Typen zu sortieren.
 1. Klicken Sie oben rechts auf der Seite auf **Ausgewählte ausführen (x)**.
 1. Klicken **im Dialogfeld „Ausgewählte Pipelines ausführen (x** auf **Ausführen (x)**.
 
