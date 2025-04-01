@@ -6,7 +6,7 @@ exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
 source-git-commit: 81894345cd4e0921f3734f6e09a82c192d20f9dd
 workflow-type: tm+mt
 source-wordcount: '150'
-ht-degree: 52%
+ht-degree: 100%
 
 ---
 
@@ -20,19 +20,19 @@ Hier finden Sie die [aktuellen Versionshinweise für Adobe Experience Manager as
 
 ## Veröffentlichungsdaten {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.3.0 ist Donnerstag, der Freitag, 13. März 2025.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.3.0 ist Donnerstag, der 13. März 2025.
 
-Die Veröffentlichung der nächsten Version ist für Donnerstag, dem Freitag, 10. April 2025 geplant.
+Die Veröffentlichung der nächsten Version ist für Donnerstag, den 10. April 2025 geplant.
 
 ## Neue Funktionen {#what-is-new}
 
-* **Mehrere Pipelines ausführen**
+* **Ausführen mehrerer Pipelines**
 
-  Die Möglichkeit, mehrere Pipelines gleichzeitig auszuführen, wurde auf der Seite Pipelines eingeführt. Benutzer müssen mindestens eine Pipeline, aber nicht mehr als zehn auswählen. Klicken Sie oben rechts auf der Seite Pipelines auf **Ausgewählte ausführen (x)**. Es wird ein modales Dialogfeld angezeigt, in dem alle Pipelines aufgelistet sind, die nicht gestartet werden können. Klicken Sie **Ausführen**, um alle gültigen Pipelines zu starten.
+  Auf der Seite „Pipelines“ wurde die Möglichkeit eingeführt, mehrere Pipelines gleichzeitig auszuführen. Benutzende müssen mindestens eine Pipeline auswählen, es dürfen aber nicht mehr als zehn sein. Klicken Sie oben rechts auf der Seite „Pipelines“ auf **Ausgewählte ausführen (x)**. Daraufhin wird ein modales Dialogfeld angezeigt, in dem alle Pipelines aufgelistet sind, die nicht gestartet werden können. Klicken Sie auf **Ausführen**, um alle gültigen Pipelines zu starten.
 
   ![Dialogfeld „Ausgewählte Pipelines ausführen“](/help/release-notes/assets/run-selected-pipelines.png)
 
-  Siehe auch [Mehrere Pipelines ausführen](/help/using/managing-pipelines.md#run-multiple-pipelines)
+  Siehe auch [Ausführen mehrerer Pipelines](/help/using/managing-pipelines.md#run-multiple-pipelines)
 
 
 

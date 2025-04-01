@@ -76,7 +76,7 @@ ht-degree: 97%
 + Versionshinweise {#release-notes}
    + [Aktuell](/help/release-notes/current.md)
    + 2025 {#rn-2025}
-      + [2 025,2,0](/help/release-notes/2025/2025-2-0.md)
+      + [2025.2.0](/help/release-notes/2025/2025-2-0.md)
       + [2025.1.0](/help/release-notes/2025/2025-1-0.md)
    + 2024 {#rn-2024}
       + [2024.12.0](/help/release-notes/2024/2024-12-0.md)
