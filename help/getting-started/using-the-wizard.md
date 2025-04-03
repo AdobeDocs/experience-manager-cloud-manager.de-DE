@@ -2,17 +2,17 @@
 title: Verwenden des Assistenten für neue Projekte
 description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM-Anwendungsprojekt erstellen.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: 7bc874a8dd14544c22201ef2c470faab84d31f8b
+source-git-commit: f3617eb50147f5af33282cb0f25ada7dc423d434
 workflow-type: tm+mt
-source-wordcount: '321'
-ht-degree: 100%
+source-wordcount: '320'
+ht-degree: 92%
 
 ---
 
 
 # Verwenden des Assistenten für neue Projekte {#using-the-wizard}
 
-Beim Neukunden-Onboarding für Cloud Manager haben Sie ein leeres Git-Repository erhalten. Um Ihnen die ersten Schritte zu erleichtern, bietet Cloud Manger einen Assistenten zum Erstellen eines minimalen AEM-Projekts auf der Grundlage des [AEM-Projektarchetypen](https://github.com/adobe/aem-project-archetype) als Startpunkt.
+Als Sie als Neukunde ein Onboarding für Cloud Manager durchführten, wurde Ihnen ein leeres Git-Repository bereitgestellt. Um Ihnen die ersten Schritte zu erleichtern, bietet Cloud Manger einen Assistenten zum Erstellen eines minimalen AEM-Projekts auf der Grundlage des [AEM-Projektarchetypen](https://github.com/adobe/aem-project-archetype) als Startpunkt.
 
 Führen Sie diese Schritte aus, um mithilfe des Assistenten ein AEM-Projekt zu erstellen.
 
