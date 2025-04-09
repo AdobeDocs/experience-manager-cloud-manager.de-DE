@@ -2,10 +2,10 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: c50eb54b5603b4370f2d7907a2194477dcc3ba21
-workflow-type: ht
-source-wordcount: '3523'
-ht-degree: 100%
+source-git-commit: 8388edb5510ed4583a7bc703f3781af03d976948
+workflow-type: tm+mt
+source-wordcount: '3644'
+ht-degree: 96%
 
 ---
 
@@ -883,14 +883,33 @@ AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Eigenschaf
 
 AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Haystack-Eigenschaften enthalten.
 
-### Die Konfiguration von Indexdefinitionen sollte die Eigenschaft „async-previous“ nicht enthalten {#oakpal-indexing-async-previous-property}
+### Die Konfiguration von Indexdefinitionen sollte die Eigenschaft „async-previous“ nicht enthalten {#oakpal-indexing-unsupported-async-properties}
 
-* **Schlüssel**: IndexAsyncPreviousCheck
+* **key**: IndexUnsupportedAsyncPropertiesCheck
 * **Typ**: Verbesserung
 * **Schweregrad**: Gering
-* **Seit**: Version 2025.2.0
+* **Seit**: Version 2025.3.0
 
-AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die die async-previous-Eigenschaft enthalten.
+AEM Cloud Service verbietet die Erstellung von Indexdefinitionen mit nicht unterstützten asynchronen Eigenschaften.
+
+### Die Konfiguration von Indexdefinitionen sollte nicht dasselbe -Tag in mehreren Indizes haben. {#oakpal-indexing-same-tag-multiple-indexes}
+
+* **key**: SameTagInMultipleIndexes
+* **Typ**: Verbesserung
+* **Schweregrad**: Gering
+* **Seit**: Version 2025.3.0
+
+AEM Cloud Service verbietet die Erstellung von Indizierungsdefinitionen, die dasselbe Tag in mehreren Indizes enthalten.
+
+### Die Konfiguration von Indizierungsdefinitionen sollte keinen Modus zur Ersetzung unzulässiger Pfade enthalten {#oakpal-xml-mode-analysis}
+
+* **Key**: FilterXmlModeAnalysis
+* **Typ**: Verbesserung
+* **Schweregrad**: Hoch
+* **Seit**: Version 2025.4.0
+
+Die Verwendung des Ersetzungsmodus in File Vault ist für Pfade unter /content nicht zulässig; er sollte nicht für Pfade unter /etc und /var verwendet werden.
+Der Modus „replace“ ersetzt alle bereits vorhandenen Inhalte im Repository durch die im Inhaltspaket bereitgestellten Inhalte. Pakete, die diese Aktion auslösen, sollten nicht Teil von Paketen sein, die über Cloud Manager bereitgestellt werden.
 
 ## Dispatcher Optimization Tool {#dispatcher-optimization-tool-rules}
 
