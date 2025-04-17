@@ -2,7 +2,7 @@
 title: Hinzufügen externer Repositorys in Cloud Manager - Early Adopter
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab- und Bitbucket-Repositorys.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: a63d996b283396efa139bf567c40a51e6f46d9bc
+source-git-commit: 5ba12cdfa4a0d790561fd2f3da738bf697133bee
 workflow-type: tm+mt
 source-wordcount: '1866'
 ht-degree: 75%
@@ -39,7 +39,7 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation aus.
 
-1. Wählen Sie in der Konsole **Meine Programme** das Programm aus, mit dem Sie ein externes Repository verknüpfen möchten.
+1. Wählen Sie in der Konsole **[Meine Programme](/help/getting-started/navigation.md#my-programs-console)** das Programm aus, mit dem Sie ein externes Repository verknüpfen möchten.
 
 1. Klicken Sie im Seitenmenü unter **Programm** auf ![Ordnersymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Repositorys**.
 
@@ -121,7 +121,7 @@ Für alle anderen externen Repositorys, die mit einem Zugriffstoken integriert w
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation aus.
 
-1. Wählen Sie in der Konsole **Meine Programme** das Programm aus, mit dem ein Webhook für ein externes Repository konfiguriert werden soll.
+1. Wählen Sie in der Konsole **[Meine Programme](/help/getting-started/navigation.md#my-programs-console)** das Programm aus, mit dem ein Webhook für ein externes Repository konfiguriert werden soll.
 
 1. Klicken Sie oben links auf der Seite auf ![Symbol zur Menüanzeige](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), um das linke Seitenmenü anzuzeigen.
 
