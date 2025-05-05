@@ -87,4 +87,4 @@ Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstelle
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/26316/)
+>[!VIDEO](https://video.tv.adobe.com/v/327615?captions=ger)

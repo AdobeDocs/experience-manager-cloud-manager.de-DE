@@ -64,6 +64,6 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-, -Veröffentlichungs- und -Dispatcher-Instanzen bestehen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26318/)
+>[!VIDEO](https://video.tv.adobe.com/v/34566?captions=ger)
 
 *(3 Minuten, 1 Sekunde)*

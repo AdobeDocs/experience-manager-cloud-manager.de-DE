@@ -163,4 +163,4 @@ Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/26314/)
+>[!VIDEO](https://video.tv.adobe.com/v/327785?captions=ger)
