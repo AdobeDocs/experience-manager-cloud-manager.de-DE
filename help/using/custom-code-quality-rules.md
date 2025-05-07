@@ -2,7 +2,7 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 8388edb5510ed4583a7bc703f3781af03d976948
+source-git-commit: 54987d6ccd8c31dab677d90b40466c458743f936
 workflow-type: tm+mt
 source-wordcount: '3644'
 ht-degree: 96%
@@ -801,7 +801,7 @@ AEM Cloud Service verbietet, benutzerdefinierten Suchindex-Definitionen (d. h. K
 
 * **Schlüssel**: IndexNotUnderUIContent
 * **Typ**: Verbesserung
-* **Schweregrad**: Gering
+* **Schweregrad**: Hoch
 * **Seit**: Version 2024.6.0
 
 AEM Cloud Service verbietet die Bereitstellung benutzerdefinierter Suchindex-Definitionen (Knoten vom Typ `oak:QueryIndexDefinition`) im Inhaltspaket der Benutzeroberfläche.
@@ -814,7 +814,7 @@ AEM Cloud Service verbietet die Bereitstellung benutzerdefinierter Suchindex-Def
 
 * **Schlüssel**: CustomFulltextIndexesOfTheDamAssetCheck
 * **Typ**: Verbesserung
-* **Schweregrad**: Gering
+* **Schweregrad**: Hoch
 * **Seit**: Version 2024.6.0
 
 AEM Cloud Service verbietet es, benutzerdefinierte Volltext-Indexdefinitionen des Typs `damAssetLucene` mit anderen Präfixen als `damAssetLucene` zu versehen.
@@ -827,7 +827,7 @@ AEM Cloud Service verbietet es, benutzerdefinierte Volltext-Indexdefinitionen de
 
 * **Schlüssel**: DuplicateNameProperty
 * **Typ**: Verbesserung
-* **Schweregrad**: Gering
+* **Schweregrad**: Hoch
 * **Seit**: Version 2024.6.0
 
 AEM Cloud Service verbietet es, dass benutzerdefinierte Suchindex-Definitionen (d. h. Knoten des Typs `oak:QueryIndexDefinition`) Eigenschaften mit demselben Namen enthalten.
@@ -840,7 +840,7 @@ AEM Cloud Service verbietet es, dass benutzerdefinierte Suchindex-Definitionen (
 
 * **Schlüssel**: RestrictIndexCustomization
 * **Typ**: Verbesserung
-* **Schweregrad**: Gering
+* **Schweregrad**: Hoch
 * **Seit**: Version 2024.6.0
 
 AEM Cloud Service verbietet unbefugte Änderungen der folgenden vorkonfigurierten Indizes:
