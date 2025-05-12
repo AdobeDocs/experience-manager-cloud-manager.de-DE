@@ -7,10 +7,10 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 4c4ffeb689117620bd810f35d277f5ab20bda8d3
+source-git-commit: ecee095cfdf929e38823ace77f184db3108cab92
 workflow-type: tm+mt
-source-wordcount: '366'
-ht-degree: 97%
+source-wordcount: '368'
+ht-degree: 96%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 97%
 # Dokumentation zu Cloud Manager {#content}
 
 + [Cloud Manager für AMS](/help/introduction.md)
-+ Übersicht {#overview}
++ Überblick {#overview}
    + [Wichtige Konzepte](/help/overview/key-concepts.md)
    + [User Journey](/help/overview/user-journey.md)
    + [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md)
@@ -42,7 +42,7 @@ ht-degree: 97%
       + [Die Build-Umgebung](/help/getting-started/build-environment.md)
    + [Konfigurieren von Verzweigungen](/help/getting-started/configuring-branches.md)
    + [Dispatcher-Konfigurationen](/help/getting-started/dispatcher-configurations.md)
-+ Verwenden {#using}
++ Verwenden Sie {#using}
    + CI/CD-Pipelines {#pipelines}
       + [Konfigurieren einer Produktions-Pipeline](/help/using/production-pipelines.md)
       + [Konfigurieren einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md)
@@ -58,7 +58,7 @@ ht-degree: 97%
    + [Benachrichtigungen](/help/using/notifications.md)
    + [Qualitätsregeln für benutzerspezifischen Code](/help/using/custom-code-quality-rules.md)
    + [Inhaltskopie für Umgebungskonsistenz](/help/using/content-copy.md)
-+ Verwalten von Code {#managing-code}
++ Code verwalten {#managing-code}
    + [Verwalten von Repositorys in Cloud Manager](/help/managing-code/managing-repositories.md)
    + [Repository-Zugriffsinformationen](/help/managing-code/accessing-repositories.md)
    + [Hinzufügen eines Adobe-Repositorys](/help/managing-code/adobe-repositories.md)
@@ -76,6 +76,7 @@ ht-degree: 97%
 + Versionshinweise {#release-notes}
    + [Aktuell](/help/release-notes/current.md)
    + 2025 {#rn-2025}
+      + [2025.4.0](/help/release-notes/2025/2025-4-0.md)
       + [2025.3.0](/help/release-notes/2025/2025-3-0.md)
       + [2025.2.0](/help/release-notes/2025/2025-2-0.md)
       + [2025.1.0](/help/release-notes/2025/2025-1-0.md)
