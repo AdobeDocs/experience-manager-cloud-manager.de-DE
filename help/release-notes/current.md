@@ -3,9 +3,9 @@ title: Versionshinweise für Cloud Manager 2025.6.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.5.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 13e6f33e7ef92f4a27ae30c7550351b20d3e86ed
+source-git-commit: d0acd47ea6011dc5896d20d76ab0fcaa970df6ac
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: '558'
 ht-degree: 67%
 
 ---
@@ -31,7 +31,7 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10
 
 ## Neue Funktionen {#what-is-new}
 
-* **(Benutzeroberfläche) Pipelines, die nur Staging und nur Produktion sind**
+* **Pipelines nur für Staging und Produktion**
 
   Cloud Manager unterstützt jetzt Pipelines, die nur für Staging und Produktion vorgesehen sind. Mit dieser Funktion können Sie Full-Stack-Produktionsbereitstellungen in kleinere, zweckspezifische Pipelines aufteilen. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
 
@@ -39,7 +39,7 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10
 
   Siehe [Staging- und Nur-Produktions-Pipelines](/help/using/stage-prod-only.md).
 
-* **(UI) Pipeline-Favoriten**
+* **Pipeline-Favoriten**
 
   In dieser Version bietet Cloud Manager die Möglichkeit, Favoriten-Pipelines anzuheften, sodass Sie bestimmte Pipelines als Favoriten markieren können, sodass sie oben in der Liste auf der Seite **Pipelines** angezeigt werden. Diese Verbesserung erleichtert das Auffinden und Ausführen häufig verwendeter Pipelines. <!-- CMGR-68293 -->
 
