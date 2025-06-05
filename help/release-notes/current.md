@@ -1,38 +1,51 @@
 ---
-title: Versionshinweise für Cloud Manager 2025.5.0
+title: Versionshinweise für Cloud Manager 2025.6.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.5.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 802844e15dc2b610e658e9fac4f0304f0ec878c6
+source-git-commit: 13e6f33e7ef92f4a27ae30c7550351b20d3e86ed
 workflow-type: tm+mt
-source-wordcount: '389'
-ht-degree: 96%
+source-wordcount: '560'
+ht-degree: 67%
 
 ---
 
-# Versionshinweise für Cloud Manager 2025.5.0 in Adobe Managed Services {#release-notes}
+# Versionshinweise für Cloud Manager 2025.6.0 in Adobe Managed Services {#release-notes}
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.04.0+Release -->
 
-Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2025.5.0 in Adobe Managed Services.
+Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2025.6.0 in Adobe Managed Services.
 
 Hier finden Sie die [aktuellen Versionshinweise für Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Veröffentlichungsdaten {#release-date}
 
-Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.5.0 ist Donnerstag, der Freitag, 8. Mai 2025.
+Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.6.0 ist Donnerstag, der Freitag, 5. Juni 2025.
 
-Es gibt keine wichtigen neuen Funktionen oder Fehlerbehebungen in der Cloud Manager-Version vom Mai.
+<!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 5. Juni 2025 geplant.
+Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10. Juli 2025 geplant.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-<!--
-## What's new {#what-is-new}
 
-* 
--->
+## Neue Funktionen {#what-is-new}
+
+* **(Benutzeroberfläche) Pipelines, die nur Staging und nur Produktion sind**
+
+  Cloud Manager unterstützt jetzt Pipelines, die nur für Staging und Produktion vorgesehen sind. Mit dieser Funktion können Sie Full-Stack-Produktionsbereitstellungen in kleinere, zweckspezifische Pipelines aufteilen. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
+
+  ![Dialogfeld „Produktionsfremde Pipeline hinzufügen“ mit aktiviertem Optionsfeld „Full-Stack-Code“ und ausgewählter Staging-Umgebung](/help/release-notes/assets/add-non-production-pipeline.png)
+
+  Siehe [Staging- und Nur-Produktions-Pipelines](/help/using/stage-prod-only.md).
+
+* **(UI) Pipeline-Favoriten**
+
+  In dieser Version bietet Cloud Manager die Möglichkeit, Favoriten-Pipelines anzuheften, sodass Sie bestimmte Pipelines als Favoriten markieren können, sodass sie oben in der Liste auf der Seite **Pipelines** angezeigt werden. Diese Verbesserung erleichtert das Auffinden und Ausführen häufig verwendeter Pipelines. <!-- CMGR-68293 -->
+
+  ![Pipelines, die als Favoriten markiert sind](/help/release-notes/assets/pipeline-favorites.png) *Zwei Pipelines, die als Favoriten markiert sind.*
+
+  Siehe [Pipeline-Favoriten markieren](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
 ## Early-Adopter-Programm {#early-adoption}
@@ -40,6 +53,16 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 5.
 Nehmen Sie am Early-Adopter-Programm von Cloud Manager teil, um exklusiven Zugriff auf bevorstehende Funktionen vor ihrer regulären Veröffentlichung zu erhalten.
 
 Derzeit stehen die folgenden Möglichkeiten für eine frühzeitige Verwendung zur Verfügung:
+
+
+### Zugriffstoken verwalten{#access-tokens}
+
+Verwenden Sie die Funktion **Zugriffs-Token verwalten** in Cloud Manager, um Zugriffs-Token anzuzeigen, umzubenennen und zu löschen, die mit externen Bring-Your-Own-Git-Repositorys verknüpft sind, z. B. GitHub Enterprise, GitLab, Bitbucket und Azure DevOps.
+
+Siehe [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
+
+Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com). Geben Sie unbedingt an, welche Git-Plattform Sie verwenden möchten und ob Sie sich in einer privaten/öffentlichen oder einer Unternehmens-Repository-Struktur befinden.
+
 
 ### Bringen Sie Ihren eigenen Git mit – jetzt mit Unterstützung für GitLab und Bitbucket {#gitlab-bitbucket}
 
@@ -57,18 +80,12 @@ Siehe [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-cod
 
 Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com). Geben Sie unbedingt an, welche Git-Plattform Sie verwenden möchten und ob Sie sich in einer privaten/öffentlichen oder einer Unternehmens-Repository-Struktur befinden.
 
-### Reine Staging- und reine Produktions-Pipelines {#staging-production-only-pipelines}
 
-Adobe kündigt die Einführung von Unterstützung für [reine Staging- und reine Produktions-Pipelines](/help/using/stage-prod-only.md) an. Mit dieser neuen Funktion können Sie Full-Stack-Produktions-Bereitstellungs-Pipelines in kleinere, spezialisierte Bereitstellungen aufteilen.
+## Fehlerbehebung {#bug-fixes}
 
-Wenn Sie diese neue Funktion testen und Ihr Feedback teilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-cloudmanager_splitpipelines@adobe.com](mailto:Grp-cloudmanager_splitpipelines@adobe.com).
-
+* AEM Cloud Manager ordnet jetzt Maven-Build-Fehler, die durch 409-Fehler (Konflikte) verursacht wurden, beim Abrufen von Kundenartefakten korrekt einem kundenbedingten Fehler zu. Diese Änderung verbessert das Fehlermeldungssystem, indem zwischen internen Fehlern und Problemen im Zusammenhang mit der Einrichtung der Kundenumgebung unterschieden wird. <!-- CMGR-66673 -->
 
 <!--
-## Bug fixes {#bug-fixes}
-
-* A
-
 Known Issues {#known-issues}
 
 * A -->

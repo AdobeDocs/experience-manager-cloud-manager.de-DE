@@ -1,22 +1,17 @@
 ---
-title: Reine Staging- und Produktions-Pipelines
+title: Aufspaltung von Pipelines nur für Staging und Produktion
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
-badge: label="Early Adopter" type="Positive" url="/help/release-notes/current.md
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: b830c30bb6b2b99ef442577325a30de6b9953ec8
+source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
 workflow-type: tm+mt
-source-wordcount: '937'
-ht-degree: 99%
+source-wordcount: '924'
+ht-degree: 98%
 
 ---
 
-# Reine Staging- und Produktions-Pipelines {#stage-prod-only}
+# Aufspaltung von Pipelines nur für Staging und Produktion {#stage-prod-only}
 
 Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
-
->[!NOTE]
->
->Diese Funktion ist nur für das [Early-Adopter-Programm](/help/release-notes/current.md#staging-production-only-pipelines) verfügbar.
 
 ## Übersicht {#overview}
 

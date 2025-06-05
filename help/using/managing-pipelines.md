@@ -2,10 +2,10 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: d4a7d9ab72947b97b0dabb2f822ef268e4972685
+source-git-commit: 91eda02d55134fba167f30830a142a80717e9083
 workflow-type: tm+mt
-source-wordcount: '1060'
-ht-degree: 61%
+source-wordcount: '1170'
+ht-degree: 73%
 
 ---
 
@@ -50,6 +50,18 @@ Durch Klicken auf das Symbol `i` erhalten Sie Details über die letzte oder aktu
 
 Klicken Sie auf **Details anzeigen**, um zu den [Details zur Pipeline-Ausführung](#view-details) zu gelangen.
 
+### Pipeline-Favoriten markieren{#pipeline-favorites}
+
+Sie können bestimmte Pipelines als Favoriten markieren, damit sie oben in der Liste auf der Seite **Pipelines** angezeigt werden. Diese Funktion erleichtert das Auffinden und Ausführen häufig verwendeter Pipelines.
+
+**So markieren Sie Pipeline-Favoriten:**
+
+1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
+1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte ![Registerkarte „Pipelines“ – Workflow Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines**.
+1. Klicken Sie auf der **Pipelines** links neben einem Pipeline-Namen und -Typ auf ![Sternsymbol für nicht bevorzugte Pipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_StarOutline_18_N.svg), um sie Ihrer Favoritenliste hinzuzufügen.
+Klicken Sie alternativ auf ![Sternsymbol für eine Lieblings-Pipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Star_18_N.svg), um die Pipeline aus Ihrer Favoritenliste zu entfernen.
+
+
 ## Seite „Aktivität“ {#activity}
 
 Die Seite **Aktivität** zeigt eine vollständige Liste aller Pipeline-Ausführungen für das ausgewählte Programm an.
@@ -78,22 +90,22 @@ Klicken Sie auf **Details anzeigen**, um die [Details zur Pipeline-Ausführung](
 
    Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) und auf **Abbrechen** klicken.
 
-## Mehrere Pipelines ausführen {#run-multiple-pipelines}
+## Ausführen mehrerer Pipelines {#run-multiple-pipelines}
 
-Mit Cloud Manager können Sie mehrere Pipelines gleichzeitig ausführen, was die Bereitstellungseffizienz für Adobe Managed Services (AMS)-Kunden verbessert. Mit **Funktion „Ausgewählte** ausführen“ können Sie mehrere Pipelines auswählen und Trigger für ihre gleichzeitige Ausführung einrichten. Dies reduziert den manuellen Aufwand, der mit der individuellen Ausführung von Pipelines verbunden ist, und optimiert Build- und Bereitstellungs-Workflows.
+Mit Cloud Manager können Sie mehrere Pipelines gleichzeitig ausführen, was die Bereitstellungseffizienz für Adobe Managed Services (AMS)-Kunden verbessert. Mit der Funktion **Ausgewählte ausführen** können Sie mehrere Pipelines auswählen und die gleichzeitige Ausführung aller Pipelines auslösen. Dies reduziert den manuellen Aufwand, der mit der individuellen Ausführung von Pipelines verbunden ist, und optimiert Build- und Bereitstellungs-Workflows.
 
 **So führen Sie mehrere Pipelines aus:**
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
-1. Klicken Sie im Menü links auf ![Workflow-Symbol ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg)Pipelines **&#x200B;**.
-1. Aktivieren Sie in der Tabelle auf **Seite**&#x200B;Pipeline) die Kontrollkästchen neben den Pipelines, die Sie ausführen möchten.
-Klicken Sie bei Bedarf auf ![Filtersymbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg)**Filter**, um Pipelines nach Name, Umgebung oder bereitgestelltem Code-Typ oder einer Kombination aus allen drei Typen zu sortieren.
+1. Klicken Sie im linken Seitenmenü auf ![Workflow-Symbol ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines**.
+1. Aktivieren Sie in der Tabelle auf der Seite **Pipeline** die Kontrollkästchen neben den Pipelines, die Sie ausführen möchten.
+Klicken Sie bei Bedarf auf ![Filtersymbol, Trichter](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filter**, um Pipelines nach Name, Umgebung und/oder Typ des bereitgestellten Codes zu sortieren.
 1. Klicken Sie oben rechts auf der Seite auf **Ausgewählte ausführen (x)**.
-1. Klicken **im Dialogfeld „Ausgewählte Pipelines ausführen (x** auf **Ausführen (x)**.
+1. Klicken Sie im Dialogfeld **Ausgewählte Pipelines ausführen (x)** auf **Ausführen (x)**.
 
-   Die Schaltfläche **Ausführen** gibt die Anzahl der Pipelines an, die fortgesetzt werden können. Sie haben beispielsweise vier Pipelines ausgewählt, von denen jedoch eine bereits ausgeführt wird. Oder es existiert keine mit einer ausgewählten Pipeline verknüpfte Umgebung mehr. In solchen Fällen passt sich das System entsprechend an. Die Schaltfläche wird in „Ausführen (3)“ aktualisiert, um anzugeben, dass drei Pipelines fortgesetzt werden können.
+   Auf der Schaltfläche **Ausführen** wird die Anzahl der Pipelines angegeben, die sich starten lassen. Sie haben beispielsweise vier Pipelines ausgewählt, von denen eine jedoch bereits ausgeführt wird. Oder eine Umgebung, die mit einer ausgewählten Pipeline verknüpft war, existiert nicht mehr. In solchen Fällen nimmt das System die entsprechenden Anpassungen vor. Die Schaltfläche wird zu „Ausführen (3)“ aktualisiert, um anzugeben, dass drei Pipelines ausgeführt werden können.
 
-1. Pipelines werden ausgeführt und ihr Status wird in der Liste **Pipelines** aktualisiert.
+1. Die Ausführung der Pipelines beginnt und ihr Status wird in der Liste **Pipelines** aktualisiert.
 
 ## Bearbeiten von Pipelines {#editing-pipelines}
 
