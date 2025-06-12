@@ -3,10 +3,10 @@ title: Versionshinweise für Cloud Manager 2025.6.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.5.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: d0acd47ea6011dc5896d20d76ab0fcaa970df6ac
+source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
 workflow-type: tm+mt
 source-wordcount: '558'
-ht-degree: 67%
+ht-degree: 62%
 
 ---
 
@@ -33,7 +33,7 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10
 
 * **Pipelines nur für Staging und Produktion**
 
-  Cloud Manager unterstützt jetzt Pipelines, die nur für Staging und Produktion vorgesehen sind. Mit dieser Funktion können Sie Full-Stack-Produktionsbereitstellungen in kleinere, zweckspezifische Pipelines aufteilen. <!-- This feature went into GA from Early Adopter in the June 5, 2025 CM release -->
+  Cloud Manager unterstützt jetzt Pipelines, die nur für Staging und Produktion vorgesehen sind. Mit dieser Funktion können Sie Full-Stack-Produktionsbereitstellungen in kleinere, zweckspezifische Pipelines aufteilen. <!-- This feature went into GA from Private beta in the June 5, 2025 CM release -->
 
   ![Dialogfeld „Produktionsfremde Pipeline hinzufügen“ mit aktiviertem Optionsfeld „Full-Stack-Code“ und ausgewählter Staging-Umgebung](/help/release-notes/assets/add-non-production-pipeline.png)
 
@@ -48,11 +48,11 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10
   Siehe [Pipeline-Favoriten markieren](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
-## Early-Adopter-Programm {#early-adoption}
+## Privates Beta-Programm {#beta-program}
 
-Nehmen Sie am Early-Adopter-Programm von Cloud Manager teil, um exklusiven Zugriff auf bevorstehende Funktionen vor ihrer regulären Veröffentlichung zu erhalten.
+Nehmen Sie am privaten Beta-Programm von Cloud Manager teil, um exklusiven Zugriff auf bevorstehende Funktionen vor deren allgemeiner Veröffentlichung zu erhalten.
 
-Derzeit stehen die folgenden Möglichkeiten für eine frühzeitige Verwendung zur Verfügung:
+Die folgenden privaten Beta-Gelegenheiten sind derzeit verfügbar:
 
 
 ### Zugriffstoken verwalten{#access-tokens}
