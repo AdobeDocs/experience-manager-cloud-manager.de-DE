@@ -3,9 +3,9 @@ title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab- und Bitbucket-Repositorys.
 badge: label="Private Beta" type="Positive" url="/help/release-notes/current.md
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 073f1024891e1a1d4298c5c593df011f5572e820
+source-git-commit: 523e8ef1c90bf88aa846e067aa1cca9e6ed5d8ce
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2283'
 ht-degree: 95%
 
 ---
@@ -73,8 +73,6 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 | Token-Typ | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
@@ -88,8 +86,6 @@ Siehe [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md)
 
 >[!TAB GitLab]
 
-**GitLab**
-
 | Token-Typ | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
@@ -102,8 +98,6 @@ Siehe [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md)
 >Die Funktion **Neues Zugriffstoken hinzufügen** befindet sich derzeit in der privaten Beta-Phase. Zusätzliche Funktionen sind in Planung. Daher können sich die erforderlichen Berechtigungen für Zugriffs-Token ändern. Darüber hinaus kann die Benutzeroberfläche für die Verwaltung von Token aktualisiert werden, möglicherweise einschließlich Funktionen wie Ablaufdaten von Token. Dazu gehören auch automatisierte Prüfungen, um sicherzustellen, dass mit Repositorys verknüpfte Token gültig bleiben.
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 | Token-Typ | Beschreibung |
 | --- | --- |
@@ -190,8 +184,6 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
 1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
    1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
@@ -207,8 +199,6 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 >[!TAB GitLab]
 
-**GitLab**
-
 1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
 1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
    1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
@@ -223,8 +213,6 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
    | Diese Webhook-Ereignisse ermöglichen es Cloud Manager, Pipelines bei der Push-Übertragung von Code oder beim Senden einer Zusammenführungsanfrage auszulösen. Sie verfolgen außerdem Kommentare im Zusammenhang mit der Validierung von Pull-Anfragen (durch Notizereignisse).<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Push-Ereignisse<li>Zusammenführen von Anfrageereignissen<li>Notizereignisse</li></li></li></ul></ul></ul> |
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
 1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
@@ -251,15 +239,11 @@ Es zeigt sich das folgende Verhalten:
 
 >[!TAB GitHub Enterprise]
 
-**GitHub Enterprise**
-
 Wenn die Prüfung erstellt wird, sieht sie wie der folgende Screenshot aus. Der wesentliche Unterschied zu `GitHub.com` besteht darin, dass `GitHub.com` eine Überprüfungsausführung verwendet, während GitHub Enterprise (unter Verwendung von persönlichen Zugriffs-Token) einen Commit-Status generiert:
 
 ![Commit-Status zur Angabe des PR-Validierungsprozesses in GitHub Enterprise](/help/managing-code/assets/repository-webhook-github-pr-validation.png)
 
 >[!TAB GitLab]
-
-**GitLab**
 
 GitLab-Interaktionen basieren ausschließlich auf Kommentaren. Bei Start der Validierung wird ein Kommentar hinzugefügt. Nach Abschluss der Validierung (ob erfolgreich oder fehlgeschlagen) wird der ursprüngliche Kommentar entfernt und durch einen neuen Kommentar mit Validierungsergebnissen oder Fehlerdetails ersetzt.
 
@@ -280,8 +264,6 @@ Wenn die Validierung der Code-Qualität aufgrund von Kundenproblemen fehlschläg
 ![Wenn die Validierung der Code-Qualität aufgrund von Kundenproblemen fehlschlägt](/help/managing-code/assets/repository-webhook-gitlab4.png)
 
 >[!TAB Bitbucket]
-
-**Bitbucket**
 
 Wenn die Validierung der Code-Qualität ausgeführt wird:
 
