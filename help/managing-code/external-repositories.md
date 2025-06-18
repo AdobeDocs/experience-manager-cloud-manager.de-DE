@@ -3,10 +3,10 @@ title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab- und Bitbucket-Repositorys.
 badge: label="Private Beta" type="Positive" url="/help/release-notes/current.md
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 5bef5a1b8f54a245e1354b1b77c775a06b9b3faa
+source-git-commit: 06fa04f8a459885a20f2b626ccf5d648ccc5fb57
 workflow-type: tm+mt
-source-wordcount: '2141'
-ht-degree: 95%
+source-wordcount: '2150'
+ht-degree: 94%
 
 ---
 
@@ -170,7 +170,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 1. Klicken Sie auf **Schließen**.
 1. Navigieren Sie zu Ihrer Git-Anbieterlösung (GitHub Enterprise, GitLab oder Bitbucket).
 
-   Alle Details zur Webhook-Konfiguration und den für jeden Anbieter erforderlichen Ereignissen finden Sie unter [Hinzufügen eines externen Repositorys](#add-ext-repo). Sehen Sie sich die Tabelle unter Schritt 8 an.
+   Alle Details zur Webhook-Konfiguration und den für jeden Anbieter erforderlichen Ereignissen finden Sie unter [Hinzufügen eines externen Repositorys](#add-ext-repo). Unter Schritt 8 sehen Sie die Tabelle mit Registerkarten.
 
 >[!BEGINTABS]
 
@@ -225,7 +225,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 Wenn Webhooks korrekt konfiguriert sind, löst Cloud Manager Trigger automatisch Pipeline-Ausführungen oder PR-Validierungsprüfungen für Ihr Repository aus.
 
-Es zeigt sich das folgende Verhalten:
+Je nach verwendetem externen Repository gelten die folgenden Verhaltensweisen:
 
 >[!BEGINTABS]
 
