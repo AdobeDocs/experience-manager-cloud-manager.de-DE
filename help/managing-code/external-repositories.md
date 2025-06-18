@@ -3,10 +3,10 @@ title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab- und Bitbucket-Repositorys.
 badge: label="Private Beta" type="Positive" url="/help/release-notes/current.md
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 06fa04f8a459885a20f2b626ccf5d648ccc5fb57
+source-git-commit: bacb4b6e79519e4fef4cf01e04154d492cc888e2
 workflow-type: tm+mt
-source-wordcount: '2150'
-ht-degree: 94%
+source-wordcount: '2035'
+ht-degree: 82%
 
 ---
 
@@ -63,6 +63,8 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
    | **Beschreibung** | Optional. Eine längere Beschreibung des Repositorys. |
 
 1. Wählen Sie **Speichern**, um das Repository hinzuzufügen.
+
+   Geben Sie jetzt ein Zugriffs-Token an, um zu überprüfen, ob Sie Eigentümer des externen Repositorys sind.
 
 1. Geben Sie im Dialogfeld **Validierung des** Repository-Eigentümers) ein Zugriffstoken ein, um den Besitz des externen Repositorys zu überprüfen, sodass Sie darauf zugreifen können, und klicken Sie dann auf **Validieren**.
 
@@ -129,6 +131,7 @@ Siehe auch [Verwalten von Zugriffstoken](/help/managing-code/manage-access-token
 >
 >Weitere Informationen zum Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md).
 
+
 ## Konfigurieren eines Webhooks für externe Repositorys {#configure-webhook}
 
 Mit Cloud Manager können Sie Webhooks für externe Git-Repositorys konfigurieren, die Sie hinzugefügt haben. Siehe [Hinzufügen eines externen Repositorys](#add-ext-repo). Diese Webhooks ermöglichen es Cloud Manager, Ereignisse zu empfangen, die sich auf verschiedene Aktionen in Ihrer Git-Anbieterlösung beziehen.
@@ -172,60 +175,44 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
    Alle Details zur Webhook-Konfiguration und den für jeden Anbieter erforderlichen Ereignissen finden Sie unter [Hinzufügen eines externen Repositorys](#add-ext-repo). Unter Schritt 8 sehen Sie die Tabelle mit Registerkarten.
 
+1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
+1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
+   1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
+
+      Um einen API-Schlüssel zu generieren, müssen Sie ein Integrationsprojekt in Adobe Developer Console erstellen. Ausführliche Informationen finden Sie unter [Erstellen eines API-Integrationsprojekts](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
+
+1. Fügen Sie das zuvor kopierte Webhook-Geheimnis in das Textfeld **Geheimnis** (oder **Geheimer Schlüssel** oder **Geheimes Token**) ein.
+1. Konfigurieren Sie den Webhook so, dass die für Cloud Manager erforderlichen Ereignisse gesendet werden. Verwenden Sie die folgende Tabelle, um die richtigen Ereignisse für Ihren Git-Anbieter zu ermitteln.
+
 >[!BEGINTABS]
 
 >[!TAB GitHub Enterprise]
 
-1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
-1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
-   1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
-
-      Um einen API-Schlüssel zu generieren, müssen Sie ein Integrationsprojekt in Adobe Developer Console erstellen. Ausführliche Informationen finden Sie unter [Erstellen eines API-Integrationsprojekts](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
-
-1. Fügen Sie das zuvor kopierte Webhook-Geheimnis in das Textfeld **Geheimnis** (oder **Geheimer Schlüssel** oder **Geheimes Token**) ein.
-1. Konfigurieren Sie den Webhook so, dass die von Cloud Manager erwarteten erforderlichen Ereignisse gesendet werden.
-
-   | Erforderliche Webhook-Ereignisse |
-   | --- |
-   | Diese Ereignisse ermöglichen es Cloud Manager, auf GitHub-Aktivitäten zu reagieren, z. B. die Validierung von Pull-Anfragen, Push-basierte Trigger für Pipelines oder Edge Delivery Services-Code-Synchronisierungen.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Pull-Anfragen<li>Push-Benachrichtigungen<li>Anmerkungen zu Problemen</li></li></li></ul></ul></ul> |
+    | Erforderliche Webhook-Ereignisse |
+    | — |
+    | Diese Ereignisse ermöglichen es Cloud Manager, auf GitHub-Aktivitäten zu reagieren, z. B. die Validierung von Pull-Anforderungen, Push-basierte Trigger für Pipelines oder Edge Delivery Services-Codesynchronisierung.&lt;br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er für die folgenden erforderlichen Webhook-Ereignisse Trigger aufweist:&lt;ul>&lt;li>Pull-Anfragen&lt;li>Push-Benachrichtigungen&lt;li>Problemkommentare&lt;/li>&lt;/li>&lt;/ul>&lt;/ul> |
 
 >[!TAB GitLab]
 
-1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
-1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
-   1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
-
-      Um einen API-Schlüssel zu generieren, müssen Sie ein Integrationsprojekt in Adobe Developer Console erstellen. Ausführliche Informationen finden Sie unter [Erstellen eines API-Integrationsprojekts](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
-
-1. Fügen Sie das zuvor kopierte Webhook-Geheimnis in das Textfeld **Geheimnis** (oder **Geheimer Schlüssel** oder **Geheimes Token**) ein.
-1. Konfigurieren Sie den Webhook so, dass die von Cloud Manager erwarteten erforderlichen Ereignisse gesendet werden.
-
-   | Erforderliche Webhook-Ereignisse |
-   | --- |
-   | Diese Webhook-Ereignisse ermöglichen es Cloud Manager, Pipelines bei der Push-Übertragung von Code oder beim Senden einer Zusammenführungsanfrage auszulösen. Sie verfolgen außerdem Kommentare im Zusammenhang mit der Validierung von Pull-Anfragen (durch Notizereignisse).<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Push-Ereignisse<li>Zusammenführen von Anfrageereignissen<li>Notizereignisse</li></li></li></ul></ul></ul> |
+    | Erforderliche Webhook-Ereignisse |
+    | — |
+    | Diese Webhook-Ereignisse ermöglichen es Cloud Manager, Pipelines beim Pushen von Trigger oder bei der Übermittlung einer Zusammenführungsanfrage zu konfigurieren. Sie verfolgen außerdem Kommentare im Zusammenhang mit der Validierung von Pull-Anfragen (durch Notizereignisse).&lt;br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er für die folgenden erforderlichen Webhook-Ereignisse einen Trigger aufweist&lt;ul>&lt;li>Push-Ereignisse&lt;li>Merge Request Events&lt;li>Notizereignisse&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul> |
 
 >[!TAB Bitbucket]
 
-1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
-1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
-   1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
-
-      Um einen API-Schlüssel zu generieren, müssen Sie ein Integrationsprojekt in Adobe Developer Console erstellen. Ausführliche Informationen finden Sie unter [Erstellen eines API-Integrationsprojekts](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
-
-1. Fügen Sie das zuvor kopierte Webhook-Geheimnis in das Textfeld **Geheimnis** (oder **Geheimer Schlüssel** oder **Geheimes Token**) ein.
-1. Konfigurieren Sie den Webhook so, dass die von Cloud Manager erwarteten erforderlichen Ereignisse gesendet werden.
-
-   | Erforderliche Webhook-Ereignisse |
-   | --- |
-   | Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anfragen validieren, auf Push-Übertragungen von Code reagieren und mit Kommentaren zur Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Pull-Anfrage: Erstellt<li>Pull-Anfrage: Aktualisiert<li>Pull-Anfragen: Zusammengeführt<li>Pull-Anfrage: Kommentar<li>Repository: Push</li></li></li></ul></ul></ul> |
+    | Erforderliche Webhook-Ereignisse |
+    | — |
+    | Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anforderungen validieren, auf Code-Push-Benachrichtigungen reagieren und mit Kommentaren zur Pipeline-Koordinierung interagieren kann.&lt;br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er für die folgenden erforderlichen Webhook-Ereignisse einen Trigger aufweist&lt;ul>&lt;li>Pull-Anfrage: Erstellt&lt;li>Pull-Anfrage: Aktualisierte&lt;li>Pull-Anfragen: Zusammengeführte&lt;li>Pull-Anfrage: Comment&lt;li>Repository: Push&lt;/li>&lt;/li>&lt;/li>&lt;/ul>&lt;/ul>&lt;/ul> |
 
 >[!ENDTABS]
 
+
 ### Validierung von Pull-Anfragen mit Webhooks
 
-Wenn Webhooks korrekt konfiguriert sind, löst Cloud Manager Trigger automatisch Pipeline-Ausführungen oder PR-Validierungsprüfungen für Ihr Repository aus.
+Wenn Webhooks korrekt konfiguriert sind, führt Cloud Manager Trigger automatisch Pipeline-Ausführungen oder Pull-Request-Validierungsprüfungen für Ihr Repository durch.
 
-Je nach verwendetem externen Repository gelten die folgenden Verhaltensweisen:
+Das Verhalten variiert je nach verwendetem Git-Anbieter, wie unten beschrieben.
+
 
 >[!BEGINTABS]
 
