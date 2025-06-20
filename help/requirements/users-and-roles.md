@@ -2,10 +2,10 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Benutzende und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+source-git-commit: 012359b4ecf872ece036b27b48fededf150493d2
 workflow-type: tm+mt
-source-wordcount: '762'
-ht-degree: 90%
+source-wordcount: '872'
+ht-degree: 76%
 
 ---
 
@@ -42,7 +42,7 @@ In der folgenden Tabelle sind die Rollen in Cloud Manager zusammengefasst.
 >
 >Die Entwicklerrolle in der Admin Console hat nichts mit der Entwicklerrolle in [!UICONTROL Cloud Manager] zu tun.
 
-## Erstellen eines Profils mithilfe der Admin Console {#using-admin-console-to-create-a-profile}
+## Erstellen eines Produktprofils mit der Admin Console {#using-admin-console-to-create-a-profile}
 
 [!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
@@ -55,7 +55,13 @@ Admins müssen unter dem Produktkontext [!UICONTROL AEM Managed Services] neue P
 * Entwicklerin oder Entwickler
 * Programm-Manager
 
-Mit der Admin Console können Sie Benutzende oder Gruppen für diese Produktprofile erstellen oder hinzufügen.
+Erstellen oder fügen Sie diesen Produktprofilen mit der Admin Console Benutzer oder Gruppen hinzu.
+
+>[!IMPORTANT]
+>
+>Aufgrund einer aktuellen Einschränkung in der Admin Console und Cloud Manager können Profile nicht mit &quot;**Berechtigungen“** werden. Der Versuch, dies zu tun, führt zu einem Backend-Fehler. Dieses Verhalten wirkt sich auf die Erstellung von Bereitstellungs-Manager-Profilen aus. Wählen Sie als Problemumgehung beim Erstellen eines neuen Profils mindestens eine Berechtigung aus.
+
+**So erstellen Sie ein Produktprofil mit der Admin Console:**
 
 1. Melden Sie sich bei der Admin Console unter [`https://adminconsole.adobe.com`](https://adminconsole.adobe.com) an.
 
@@ -76,6 +82,10 @@ Mit der Admin Console können Sie Benutzende oder Gruppen für diese Produktprof
    * **Profilname** – Der **Profilname** ist beliebig. Um Missverständnisse zu vermeiden, sollten Sie jedoch die Werte in der Spalte **Empfohlener Profilname** verwenden.
    * **Anzeigename** – Der **Anzeigename** muss dem vom [!UICONTROL Cloud Manager] definierten technischen Wert entsprechen (siehe nachfolgende Tabelle).
    * **Berechtigungsgruppe** – Sie können eine Berechtigungsgruppe für das Profil auswählen (nicht immer verfügbar).
+
+     >[!IMPORTANT]
+     >
+     >Aufgrund einer aktuellen Einschränkung in der Admin Console und Cloud Manager können Profile nicht mit &quot;**Berechtigungen“** werden. Der Versuch, dies zu tun, führt zu einem Backend-Fehler. Dieses Verhalten wirkt sich auf die Erstellung von Bereitstellungs-Manager-Profilen aus. Wählen Sie als Problemumgehung beim Erstellen eines neuen Profils mindestens eine Berechtigung aus.
 
    ![Erstellen eines neuen Profils](/help/assets/screen_shot_2018-05-04at171819.png)
 

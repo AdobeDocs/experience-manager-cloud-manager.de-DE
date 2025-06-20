@@ -7,9 +7,9 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: b2a14280e84bb934053968b0e93e33d30fb6086a
+source-git-commit: 012359b4ecf872ece036b27b48fededf150493d2
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '372'
 ht-degree: 91%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 91%
    + [Zugriffsrechte](/help/requirements/access-rights.md)
    + [Quell-Code-Repository](/help/requirements/source-code-repository.md)
    + [Rollenbasierte Berechtigungen](/help/requirements/role-based-permissions.md)
-   + [Einrichten von Anwendenden und Rollen](/help/requirements/users-and-roles.md)
+   + [Hinzufügen von Anwendern und Rollen](/help/requirements/users-and-roles.md)
    + [Benutzerdefinierte Berechtigungen](/help/using/custom-permissions.md)
    + [Umgebungsbereitstellung](/help/requirements/environment-provisioning.md)
 + Erste Schritte {#getting-started}
@@ -77,7 +77,7 @@ ht-degree: 91%
 + Versionshinweise {#release-notes}
    + [Aktuell](/help/release-notes/current.md)
    + 2025 {#rn-2025}
-      + [2 025,5,0](/help/release-notes/2025/2025-5-0.md)
+      + [2 025.5.0](/help/release-notes/2025/2025-5-0.md)
       + [2025.4.0](/help/release-notes/2025/2025-4-0.md)
       + [2025.3.0](/help/release-notes/2025/2025-3-0.md)
       + [2025.2.0](/help/release-notes/2025/2025-2-0.md)
