@@ -2,10 +2,10 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: 54987d6ccd8c31dab677d90b40466c458743f936
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '3644'
-ht-degree: 96%
+source-wordcount: '3636'
+ht-degree: 95%
 
 ---
 
@@ -227,7 +227,7 @@ public void orDoThis(Session session) throws Exception {
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
 
-Wie in der [Sling-Dokumentation](https://sling.apache.org/documentation/the-sling-engine/servlets.html) beschrieben, sollten Servlets nicht über Pfade verknüpft werden. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
+Wie in der [Sling-Dokumentation](https://sling.apache.org/documentation/the-sling-engine/servlets.html) beschrieben, wird vom Binden von Servlets über Pfade abgeraten. Pfadgebundene Servlets können keine standardmäßigen JCR-Zugriffssteuerungselemente verwenden, sodass besonders strenge Sicherheitsmaßnahmen erforderlich sind. Statt pfadgebundene Servlets zu verwenden, wird empfohlen, Knoten im Repository zu erstellen und Servlets nach Ressourcentyp zu registrieren.
 
 #### Nicht konformer Code {#non-compliant-code-5}
 
@@ -475,7 +475,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Pfade, die mit `/libs` und `/apps` beginnen, sollten im Allgemeinen nicht hartcodiert sein. Diese Pfade werden normalerweise relativ zum Sling-Suchpfad gespeichert, der standardmäßig auf `/libs,/apps` festgelegt ist. Durch die Angabe des absoluten Pfads können geringfügige Fehler entstehen, die erst später im Projektlebenszyklus deutlich werden.
+Pfade, die mit `/libs` und `/apps` beginnen, sollten im Allgemeinen nicht hartcodiert sein. Diese Pfade werden normalerweise relativ zum `Sling` Suchpfad gespeichert, der standardmäßig auf `/libs,/apps` festgelegt ist. Durch die Angabe des absoluten Pfads können geringfügige Fehler entstehen, die erst später im Projektlebenszyklus deutlich werden.
 
 #### Nicht konformer Code {#non-compliant-code-13}
 
@@ -500,7 +500,7 @@ public void doThis(Resource resource) {
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Verwenden Sie den Sling-Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Vorgänge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
+Verwenden Sie den Sling Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Vorgänge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
 
 Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen finden Sie in der Sling-Dokumentation zum Thema [Apache Sling-Ereignisse und -Auftragsverarbeitung](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
@@ -899,7 +899,7 @@ AEM Cloud Service verbietet die Erstellung von Indexdefinitionen mit nicht unter
 * **Schweregrad**: Gering
 * **Seit**: Version 2025.3.0
 
-AEM Cloud Service verbietet die Erstellung von Indizierungsdefinitionen, die dasselbe Tag in mehreren Indizes enthalten.
+AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die dasselbe Tag in mehreren Indizes enthalten.
 
 ### Die Konfiguration von Indizierungsdefinitionen sollte keinen Modus zur Ersetzung unzulässiger Pfade enthalten {#oakpal-xml-mode-analysis}
 
@@ -908,8 +908,7 @@ AEM Cloud Service verbietet die Erstellung von Indizierungsdefinitionen, die das
 * **Schweregrad**: Hoch
 * **Seit**: Version 2025.4.0
 
-Die Verwendung des Ersetzungsmodus in File Vault ist für Pfade unter /content nicht zulässig; er sollte nicht für Pfade unter /etc und /var verwendet werden.
-Der Modus „replace“ ersetzt alle bereits vorhandenen Inhalte im Repository durch die im Inhaltspaket bereitgestellten Inhalte. Pakete, die diese Aktion auslösen, sollten nicht Teil von Paketen sein, die über Cloud Manager bereitgestellt werden.
+Die Verwendung des Modus „Ersatz“ in File Vault ist für Pfade unter `/content` nicht zulässig; er sollte nicht für Pfade unter `/etc` und `/var.` verwendet werden. Der Modus „Ersetzen“ überschreibt den vorhandenen Repository-Inhalt mit Inhalten, die aus dem Paket stammen. Pakete, die Trigger dieser Aktion sind, sollten nicht in diese Pakete aufgenommen werden, die über Cloud Manager bereitgestellt werden.
 
 ## Dispatcher Optimization Tool {#dispatcher-optimization-tool-rules}
 

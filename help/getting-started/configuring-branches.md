@@ -2,10 +2,10 @@
 title: Konfigurieren von Verzweigungen
 description: Erfahren Sie, wie Sie Ihre erste Verzweigung in Git einrichten und wie sie von der CI/CD-Pipeline zum Bereitstellen des Anwendungs-Codes verwendet wird.
 exl-id: ff2ae28f-902e-4fb2-aeb1-3636cb5cd9bb
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '324'
-ht-degree: 100%
+source-wordcount: '323'
+ht-degree: 95%
 
 ---
 
@@ -74,7 +74,7 @@ To <url>
 
 ## Zusätzliche Verzweigungen {#additional-branches}
 
-Eine einzelne `main`-Verzweigung kann für sehr einfache Projekte ausreichend sein. In den meisten Fällen ist jedoch eine komplexere Verzweigungsstrategie erforderlich. Viele Kundinnen und Kunden folgen einem Prozess, bei dem tägliche Entwicklungsaktivitäten in einer Verzweigung mit dem Namen `develop` durchgeführt werden. Die Entwicklungsverzweigung wird dann mit der `main`-Verzweigung zusammengeführt, wenn die Zeit für eine Bereitstellung gekommen ist.
+Eine einzelne `main`-Verzweigung kann für sehr einfache Projekte ausreichend sein. In den meisten Fällen ist jedoch eine komplexere Verzweigungsstrategie erforderlich. Viele Kundinnen und Kunden folgen einem Prozess, bei dem tägliche Entwicklungsaktivitäten in einer Verzweigung mit dem Namen `develop` durchgeführt werden. Die `develop` Verzweigung wird dann mit der `main` zusammengeführt, wenn es Zeit für eine Bereitstellung ist.
 
 >[!TIP]
 >

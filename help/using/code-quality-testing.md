@@ -2,10 +2,10 @@
 title: Testen der Code-Qualität
 description: Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: f5e6ac81c6454730850bb7e884d82be48d2f8525
-workflow-type: ht
-source-wordcount: '2793'
-ht-degree: 100%
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+workflow-type: tm+mt
+source-wordcount: '2783'
+ht-degree: 98%
 
 ---
 
@@ -126,18 +126,18 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Deserialisierungs-Firewall wird geladen. | [Deserialisierungs-Firewall geladen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/mitigating-serialization-issues#security) | Kritisch |
 | `AuthorizableNodeName`-Implementierung des weist keine autorisierbare ID im Knotennamen/Pfad auf. | [Namenserstellung für autorisierbare Knoten](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/security-checklist#security) | Kritisch |
 | Standardkennwörter wurden geändert. | [Standard-Anmeldekonten](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/security#users-and-groups-in-aem) | Kritisch |
-| Sling-Standard-GET-Servlet ist vor DOS-Angriffen geschützt. | Sling Get Servlet | Kritisch |
-| Der Sling-JavaScript-Handler ist entsprechend konfiguriert. | Sling-JavaScript-Handler | Kritisch |
-| Sling JSP Script Handler ist ordnungsgemäß konfiguriert. | Sling JSP Script Handler | Kritisch |
+| `Sling` standardmäßige GET-Servlet ist vor DOS-Angriffen geschützt. | `Sling Get` Servlet | Kritisch |
+| Der `Sling` JavaScript-Handler ist ordnungsgemäß konfiguriert. | `Sling` JavaScript Handler | Kritisch |
+| Der `Sling` JSP-Skript-Handler ist ordnungsgemäß konfiguriert. | `Sling` JSP-Skript-Handler | Kritisch |
 | SSL ist richtig konfiguriert. | SSL-Konfiguration | Kritisch |
 | Es wurden keine offensichtlich unsicheren Benutzerprofil-Richtlinien gefunden. | Standardzugriff auf Benutzerprofil | Kritisch |
-| Der Sling Referrer-Filter ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/security-checklist#security) | Wichtig |
+| Der Filter &quot;`Sling` Referrer“ ist konfiguriert, um CSRF-Angriffe zu verhindern. | [Sling Referrer-Filter](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/security/security-checklist#security) | Wichtig |
 | Adobe Granite HTML Library Manager ist ordnungsgemäß konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Paket ist deaktiviert. | CRXDE-Support | Wichtig |
-| Sling DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
+| `Sling` DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
 | Es ist kein Beispielinhalt installiert. | Pakete mit Beispielinhalt | Wichtig |
 | Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert. | [WCM-Filterkonfiguration](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Wichtig |
-| Sling WebDAV Bundle und Servlet sind angemessen konfiguriert. | WebDAV-Konsistenzprüfung | Wichtig |
+| `Sling` WebDAV-Bundle und -Servlet sind ordnungsgemäß konfiguriert. | WebDAV-Konsistenzprüfung | Wichtig |
 | Der Webserver ist so konfiguriert, dass Clickjacking verhindert wird. | Webserver-Konfiguration | Wichtig |
 | Replikation verwendet nicht den Benutzer `admin`. | Benutzerreplikation und -transport | Info |
 

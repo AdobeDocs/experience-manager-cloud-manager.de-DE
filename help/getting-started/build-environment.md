@@ -2,10 +2,10 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzende zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '1263'
-ht-degree: 100%
+source-wordcount: '1262'
+ht-degree: 97%
 
 ---
 
@@ -33,7 +33,7 @@ Die Build-Umgebungen von Cloud Manager weisen folgende Eigenschaften auf.
    * `graphicsmagick`
 * Andere Pakete können zur Build-Zeit installiert werden, wie im Abschnitt [Installieren zusätzlicher Systempakete](#installing-additional-system-packages) beschrieben.
 * Jeder Build erfolgt in einer unberührten Umgebung. Der Build-Container behält keinen Status zwischen Ausführungen bei.
-* Maven wird immer mit den folgenden drei Befehlen ausgeführt:
+* Maven wird mit diesen drei Befehlen ausgeführt:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
    * `mvn --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent package`
@@ -117,7 +117,7 @@ Die derzeit verfügbaren Anbieter-/Versionskombinationen sind:
 
 Es ist auch möglich, Oracle 8 oder Oracle 11 als JDK für die gesamte Maven-Ausführung auszuwählen. Im Gegensatz zu den Toolchain-Optionen ändert dies das für alle Plug-ins verwendete JDK, es sei denn, die Toolchain-Konfiguration ist ebenfalls festgelegt. In diesem Fall wird die Toolchain-Konfiguration weiterhin für Toolchain-fähige Maven-Plug-ins angewendet. Daher funktioniert hier das Überprüfen und Erzwingen der Java-Version mit dem [Apache Maven Enforcer-Plug-in](https://maven.apache.org/enforcer/maven-enforcer-plugin/).
 
-Erstellen Sie für diesen Vorgang eine Datei mit dem Namen `.cloudmanager/java-version` in der von der Pipeline verwendeten Git-Repository-Verzweigung. Diese Datei kann entweder den Inhalt `11` oder `8` enthalten. Alle anderen Werte werden ignoriert. Wenn `11` angegeben ist, wird Oracle 11 verwendet und die Umgebungsvariable `JAVA_HOME` wird auf `/usr/lib/jvm/jdk-11.0.22` festgelegt. Wenn `8` angegeben ist, wird Oracle 8 verwendet und die Umgebungsvariable `JAVA_HOME` wird auf `/usr/lib/jvm/jdk1.8.0_401` festgelegt.
+Erstellen Sie für diesen Vorgang eine Datei mit dem Namen `.cloudmanager/java-version` in der von der Pipeline verwendeten Git-Repository-Verzweigung. Diese Datei kann entweder den Inhalt `11` oder `8` enthalten. Alle anderen Werte werden ignoriert. Wenn `11` angegeben ist, verwendet das System Oracle 11 und setzt die `JAVA_HOME` Umgebungsvariable auf `/usr/lib/jvm/jdk-11.0.22`. Wenn `8` angegeben ist, verwendet das System Oracle 8 und setzt die `JAVA_HOME` Umgebungsvariable auf `/usr/lib/jvm/jdk1.8.0_401`.
 
 ## Umgebungsvariablen {#environment-variables}
 

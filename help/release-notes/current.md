@@ -3,10 +3,10 @@ title: Versionshinweise für Cloud Manager 2025.6.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.5.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 38d398caf2323b603afd293aa9152308fefd323f
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '560'
-ht-degree: 58%
+source-wordcount: '556'
+ht-degree: 71%
 
 ---
 
@@ -24,7 +24,7 @@ Das Veröffentlichungsdatum von [!UICONTROL Cloud Manager] 2025.6.0 ist Donnerst
 
 <!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10. Juli 2025 geplant.
+Die Veröffentlichung der nächsten Version ist für den 10. Juli 2025 geplant.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
@@ -39,13 +39,13 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 10
 
   Siehe [Staging- und Nur-Produktions-Pipelines](/help/using/stage-prod-only.md).
 
-* **Pipeline-Favoriten**
+* **Favoriten-Pipelines**
 
   In dieser Version bietet Cloud Manager die Möglichkeit, Favoriten-Pipelines anzuheften, sodass Sie bestimmte Pipelines als Favoriten markieren können, sodass sie oben in der Liste auf der Seite **Pipelines** angezeigt werden. Diese Verbesserung erleichtert das Auffinden und Ausführen häufig verwendeter Pipelines. <!-- CMGR-68293 -->
 
   ![Pipelines, die als Favoriten markiert sind](/help/release-notes/assets/pipeline-favorites.png) *Zwei Pipelines, die als Favoriten markiert sind.*
 
-  Siehe [Pipeline-Favoriten markieren](/help/using/managing-pipelines.md#pipeline-favorites).
+  Siehe [Markieren von Pipeline-Favoriten](/help/using/managing-pipelines.md#pipeline-favorites).
 
 
 ## Privates Beta-Programm {#beta-program}
@@ -73,7 +73,7 @@ Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, sen
 
 #### Zugriffstoken verwalten{#access-tokens}
 
-Verwenden Sie die Funktion **Zugriffs-Token verwalten** in Verbindung mit BYOG, um Zugriffs-Token anzuzeigen, umzubenennen und zu löschen, die mit externen Bring Your Own Git-Repositorys verknüpft sind, z. B. GitHub Enterprise, GitLab, Bitbucket und Azure DevOps.
+Verwenden Sie **Zugriffs-Token verwalten** mit BYOG, um Zugriffs-Token anzuzeigen, umzubenennen und zu löschen, die mit externen Bring-Your-Own-Git-Repositorys verknüpft sind, z. B. GitHub Enterprise, GitLab, Bitbucket und Azure DevOps.
 
 Siehe [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
 
@@ -82,7 +82,7 @@ Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, sen
 
 ## Fehlerbehebung {#bug-fixes}
 
-* AEM Cloud Manager ordnet jetzt Maven-Build-Fehler, die durch 409-Fehler (Konflikte) verursacht wurden, beim Abrufen von Kundenartefakten korrekt einem kundenbedingten Fehler zu. Diese Änderung verbessert das Fehlermeldungssystem, indem zwischen internen Fehlern und Problemen im Zusammenhang mit der Einrichtung der Kundenumgebung unterschieden wird. <!-- CMGR-66673 -->
+* AEM Cloud Manager ordnet jetzt Maven-Build-Fehler, die durch 409-Fehler (Konflikte) verursacht wurden, beim Abrufen von Kundenartefakten korrekt einem kundenbedingten Fehler zu. Diese Änderung verbessert das Fehlermeldungssystem, indem jetzt zwischen internen Fehlern und Problemen im Zusammenhang mit der Einrichtung der Kundenumgebung unterschieden wird. <!-- CMGR-66673 -->
 
 <!--
 Known Issues {#known-issues}

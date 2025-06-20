@@ -2,10 +2,10 @@
 title: Benutzerdefinierte Berechtigungen
 description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '1416'
-ht-degree: 100%
+source-wordcount: '1373'
+ht-degree: 99%
 
 ---
 
@@ -111,23 +111,23 @@ Weitere Informationen zum Verwenden der Admin Console finden Sie im Abschnitt **
 Zum Erstellen benutzerdefinierter Profile stehen folgende Berechtigungen zur Verfügung.
 
 | Berechtigung | Beschreibung |
-|---|---|
-| Programmzugriff | Benutzenden den Zugriff auf Programme gewähren |
-| Programmbearbeitung | Benutzenden erlauben, Programme zu bearbeiten |
-| Pipeline erstellen | Benutzenden erlauben, neue Pipelines zu erstellen |
-| Pipeline löschen | Benutzenden erlauben, Pipelines zu löschen |
-| Pipeline-Bearbeitung | Benutzenden erlauben, Pipelines zu bearbeiten |
-| Genehmigung/Ablehnung von Produktionsbereitstellungen | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu genehmigen oder abzulehnen |
-| Pipeline-Ausführungen abbrechen | Benutzenden erlauben, Pipeline-Ausführungen abzubrechen |
-| Pipeline-Ausführungen starten | Benutzenden erlauben, neue Pipeline-Ausführungen zu starten |
-| Wichtige Metrikfehler überschreiben/ablehnen | Benutzenden erlauben, wichtige Metrikfehler zu überschreiben/abzulehnen |
-| Produktionsbereitstellungs-Zeitplan | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu planen |
-| Zugriff auf Repository-Informationen | Benutzenden erlauben, auf Repository-Informationen zuzugreifen und ein Kennwort für den Zugriff zu erstellen |
-| Repository erstellen | Benutzenden erlauben, neue Git-Repositorys zu erstellen |
-| Repository löschen | Benutzenden erlauben, Git-Repositorys zu löschen |
-| Repository bearbeiten | Benutzenden erlauben, Git-Repositorys zu bearbeiten |
-| Repository-Code-Generierung | Benutzenden erlauben, Projekte aus einem Archetyp zu generieren |
-| Inhaltskopie verwalten | Benutzenden erlauben, Vorgänge zum Kopieren von Inhalten zu verwalten |
+| --- | --- |
+| `Program Access` | Benutzenden den Zugriff auf Programme gewähren |
+| `Program Edit` | Benutzenden erlauben, Programme zu bearbeiten |
+| `Pipeline Create` | Benutzenden erlauben, neue Pipelines zu erstellen |
+| `Pipeline Delete` | Benutzenden erlauben, Pipelines zu löschen |
+| `Pipeline Edit` | Benutzenden erlauben, Pipelines zu bearbeiten |
+| `Production Deployments Approve/Reject` | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu genehmigen oder abzulehnen |
+| `Pipeline Executions Cancel` | Benutzenden erlauben, Pipeline-Ausführungen abzubrechen |
+| `Pipeline Executions Start` | Benutzenden erlauben, neue Pipeline-Ausführungen zu starten |
+| `Override/Reject Important Metric Failures` | Benutzenden erlauben, wichtige Metrikfehler zu überschreiben/abzulehnen |
+| `Production Deployments Schedule` | Benutzenden erlauben, einen Produktionsbereitstellungsschritt zu planen |
+| `Repository Info Access` | Benutzenden erlauben, auf Repository-Informationen zuzugreifen und ein Kennwort für den Zugriff zu erstellen |
+| `Repository Create` | Benutzenden erlauben, neue Git-Repositorys zu erstellen |
+| `Repository Delete` | Benutzenden erlauben, Git-Repositorys zu löschen |
+| `Repository Edit` | Benutzenden erlauben, Git-Repositorys zu bearbeiten |
+| `Repository Code Generate` | Benutzenden erlauben, Projekte aus einem Archetyp zu generieren |
+| `Content Copy Manage` | Benutzenden erlauben, Vorgänge zum Kopieren von Inhalten zu verwalten |
 
 ### Berechtigungen auf Unternehmensebene {#organization-level}
 
@@ -142,7 +142,7 @@ Weitere Informationen finden Sie im Dokument [Quell-Code-Repository](/help/requi
 Folgende Begriffe werden beim Erstellen und Verwalten benutzerdefinierter Berechtigungen und vordefinierter Rollen verwendet.
 
 | Begriff | Beschreibung |
-|---|---|
+| --- | --- |
 | Vordefinierte Berechtigungen | Vordefinierte Rollen wie **Geschäftseigentümer** und **Bereitstellungs-Manager**. zur Steuerung verschiedener Cloud Manager-Funktionen. Weitere Informationen zu vordefinierten Rollen finden Sie im Dokument [Rollenbasierte Berechtigungen.](/help/requirements/role-based-permissions.md). |
 | Benutzerdefinierte Berechtigungen | Cloud Manager-Funktionen, mit denen Benutzende Berechtigungsprofile erstellen können, um Rollen zur Verwaltung unterstützter Cloud Manager-Funktionen zu definieren |
 | Berechtigungsprofil | Wird in der Admin Console zur Verwaltung konfigurierbarer Berechtigungen erstellt, die für Benutzende gelten, die Teil des Berechtigungsprofils sind |
@@ -152,11 +152,11 @@ Folgende Begriffe werden beim Erstellen und Verwalten benutzerdefinierter Berech
 Berechtigungselemente beziehen sich auf den Anwendungsumfang der Berechtigungen. In der Regel handelt es sich um Folgendes.
 
 | Berechtigungselementtyp | Beispiel | Beschreibung |
-|---|---|---|
+| --- | --- | --- |
 | Unternehmen | Unternehmen:FirmaA | Alle anwendbaren Ressourcen eines Unternehmens. Eine Ressource kann ein Programm, eine Umgebung oder eine Pipeline sein. Wenn Benutzende ein Unternehmen für eine Berechtigung hinzufügen, erhalten auch alle neuen Ressourcen in diesem Unternehmen diese Berechtigung. |
-| Programm | Programm A | Alle anwendbaren Ressourcen eines Programms |
-| Umgebung | Programm A : Umgebung | Anwendbar in einer bestimmten Umgebung |
-| Pipeline | Programm A : Pipeline | Anwendbar für eine bestimmte Pipeline |
+| Programm | Programm A | Alle anwendbaren Ressourcen eines Programms. |
+| Umgebung | Programm A : Umgebung | In einer bestimmten Umgebung anwendbar. |
+| Pipeline | Programm A : Pipeline | Gilt für eine bestimmte Pipeline. |
 
 ## Einschränkungen {#limitations}
 

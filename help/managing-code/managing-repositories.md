@@ -2,10 +2,10 @@
 title: Verwalten von Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie Ihre Git-Repositorys in Cloud Manager anzeigen, hinzufügen und löschen können.
 exl-id: 384b197d-f7a7-4022-9b16-9d83ab788966
-source-git-commit: ee84c682b6bd2b9144b3f75d544dea33a5ad944b
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '732'
-ht-degree: 100%
+source-wordcount: '730'
+ht-degree: 97%
 
 ---
 
@@ -73,7 +73,7 @@ Das Fenster **Repository-Informationen** mit den Details wird geöffnet. Weitere
 
 ## Verzweigungen überprüfen/Projekt erstellen {#check-branches}
 
-In **AEM Cloud Manager** dient die Aktion **Verzweigungen überprüfen/Projekt erstellen** je nach dem aktuellen Status des Repositorys zwei Zwecken.
+In **AEM Cloud Manager** dient **Verzweigungen überprüfen/Projekt erstellen** je nach aktuellem Status des Repositorys zwei Zwecken.
 
 * Wenn das Repository neu erstellt wurde, generiert die Aktion basierend auf dem [AEM-Projektarchetyp](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/developing/archetype/overview) ein Beispielprojekt.
 * Wenn das Beispielprojekt bereits im Repository erstellt wurde, prüft die Aktion den Status des Repositorys und seiner Verzweigungen und gibt Feedback dazu, ob das Beispielprojekt bereits vorhanden ist.

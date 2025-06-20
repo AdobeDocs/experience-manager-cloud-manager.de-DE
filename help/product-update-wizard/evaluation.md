@@ -3,25 +3,24 @@ title: Testphase
 seo-title: Evaluation Phase
 description: Erfahren Sie, wie die Bewertungsphase des Assistenten für Produktaktualisierungen mithilfe der Mustererkennung die Komplexität des Upgrades bewertet.
 exl-id: 1ffcbc21-dc36-435d-b83b-0209f81a15e7
-source-git-commit: 11a6a53d8cbfb689810a9a8e7d82293a49863084
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '279'
-ht-degree: 100%
+source-wordcount: '257'
+ht-degree: 57%
 
 ---
 
 
 # Auswertungsphase {#evaluation}
 
-Die erste Phase im Assistenten für Produktaktualisierungen ist die **[!UICONTROL Bewertungsphase]**, die mit der Mustererkennung direkt im Assistenten die Komplexität der Aktualisierung bewertet. Nach diesem Schritt haben Sie Zugriff auf den Auswertungsbericht.
+Die erste Phase des Assistenten für Produktaktualisierungen ist die **[!UICONTROL Test]**-Phase. Sie führt die Mustererkennung im Assistenten aus, um die Komplexität des Upgrades zu bewerten. Am Ende dieses Schritts können Sie den Bewertungsbericht anzeigen.
 
-Im generierten Bericht können Sie die Autoreninstanz auf die Berechtigung für ein Upgrade überprüfen. Suchen Sie nach den folgenden Mustern, die:
+Der Bericht überprüft die Autoreninstanz auf die Bereitschaft für ein Upgrade, indem Muster für Folgendes erkannt werden:
 
-* gegen bestimmte Regeln verstoßen, die Bereiche betreffen, die durch das Upgrade beeinträchtigt oder überschrieben werden.
+* Regelverletzungen in Bereichen, die von dem Upgrade betroffen oder überschrieben werden.
+* Sie verwendet AEM 6.x-Funktionen oder -APIs, die nicht abwärtskompatibel sind und nach dem Upgrade beschädigt werden können.
 
-* eine AEM 6.x-Funktion oder eine API verwenden, die mit der neuen Version von AEM nicht abwärtskompatibel ist und nach dem Upgrade möglicherweise beeinträchtigt sein könnte.
-
-Dieser Bericht dient als Bewertungsgrundlage für den erforderlichen Entwicklungsaufwand beim Upgrade auf Adobe Experience Manager (AEM) 6.5.
+Dieser Bericht hilft bei der Schätzung des Entwicklungsaufwands, der für das Upgrade auf Adobe Experience Manager (AEM) 6.5 erforderlich ist.
 
 >[!NOTE]
 >
@@ -45,4 +44,4 @@ Die Mustererkennung kann in einer beliebigen Umgebung ausgeführt werden. Um jed
 
    ![Erstellter Bericht](/help/assets/Evaluation-1.png)
 
-Die aktuelle Version des Assistenten für Produktaktualisierungen in Cloud Manager unterstützt nur die **Auswertungsphase**. Die anderen vier Phasen **Behebung**, **Ausführung**, **Validierung** und **Abschluss** folgen bald.
+Der aktuelle Assistent für Produktaktualisierungen in Cloud Manager unterstützt nur die **Test**-Phase. Die anderen vier Phasen **Behebung**, **Ausführung**, **Validierung** und **Abschluss** folgen bald.

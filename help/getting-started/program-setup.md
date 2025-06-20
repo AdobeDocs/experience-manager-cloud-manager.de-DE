@@ -2,10 +2,10 @@
 title: Einrichten von Programmen
 description: Nach dem Onbarding muss die Geschäftsinhaberin bzw. der Geschäftsinhaber verschiedene Ersteinstellungen am Programm vornehmen.
 exl-id: 795c7112-d564-4fbf-96a1-152a6c286bf2
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
 source-wordcount: '564'
-ht-degree: 100%
+ht-degree: 93%
 
 ---
 
@@ -84,7 +84,7 @@ Verwenden Sie die Aktionsleiste, um zu einem anderen Programm zu wechseln, das a
 
 Die KPIs werden bei Tests gemessen, die in der Staging-Umgebung ausgeführt werden. Normalerweise werden diese KPIs entsprechend den Kapazitäten der Staging-Umgebung herunterskaliert.
 
-Benutzende, die beispielsweise durchschnittlich 1000 Seitenaufrufe pro Minute in ihrer Produktionsumgebung erwarten und über vier Dispatcher/Publishing-Server in der Produktion verfügen, sollten eine Skalierung auf 250 Seitenaufrufe pro Minute vornehmen. In diesem Szenario wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
+Benutzende, die beispielsweise durchschnittlich 1000 Seitenaufrufe pro Minute in ihrer Produktionsumgebung erwarten und über vier Dispatcher/Publishing-Server in der Produktion verfügen, sollten eine Skalierung auf 250 Seitenaufrufe pro Minute vornehmen. Bei diesem Szenario wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
 
 Assets-Leistungstests umfassen das wiederholte Hochladen von Assets über einen Zeitraum von 30 Minuten. Die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene werden während der gesamten Testdauer gemessen.
 
@@ -92,4 +92,4 @@ Vielleicht haben Sie ein Content Delivery Network (CDN) wie Akamai oder CloudFro
 
 ## Videoüberblick {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/34486?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26313/)

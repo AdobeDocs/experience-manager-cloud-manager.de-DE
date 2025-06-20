@@ -2,10 +2,10 @@
 title: Überwachen von Umgebungen
 description: Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: 53fb666ab6caff7a697d7f1942ce25f2bf27a2ce
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '911'
-ht-degree: 98%
+source-wordcount: '865'
+ht-degree: 74%
 
 ---
 
@@ -29,7 +29,7 @@ Adobe Managed Services legt die Schwellenwerte fest, die Sie über [!UICONTROL C
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
 1. Klicken Sie auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungspunkte des Programms, das Sie überwachen möchten.
-1. Klicken Sie im Menü unter der Überschrift **Verwalten** auf **Überwachung anzeigen**, um die Seite **Berichte** mit Informationen zur Systemüberwachung zu öffnen.
+1. Klicken Sie im Menü unter **Verwalten** auf **Überwachung anzeigen**, um die Seite **Berichte** mit Informationen zur Systemüberwachung zu öffnen.
 
    ![Einstellungen](/help/assets/first-timea1.png)
 
@@ -73,28 +73,28 @@ Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kr
 
 #### Host {#host}
 
-* **Last pro Kern**: Die Anzahl der Prozesse, die die CPU ausführt. Oder die Anzahl der Prozesse in der Warteschlange, die sich in einem Wartezustand befinden, gemittelt über einen Zeitraum von einer Minute (load1), fünf Minuten (load5) und fünfzehn Minuten (load15).
-* **Prozessanzahl**: Die Anzahl der derzeit geöffneten Prozesse.
-* **Benutzeranzahl**: Die Anzahl der Benutzenden mit einer aktiven Shell-Sitzung.
-* **Speicherauslastung**: Der Prozentsatz des aktuell zugewiesenen Systemspeichers.
-* **JVM-Speicher**: Die Größe (in Megabyte) des zugewiesenen Java-Heaps.
-* **Old Generation Space**: Der Prozentsatz des aktuell zugewiesenen JVM Old Generation Space.
+* **`Load Per Core`**: Die Anzahl der Prozesse, die von der CPU ausgeführt werden. Oder die Anzahl der Prozesse in der Warteschlange, die sich in einem Wartezustand befinden, gemittelt über einen Zeitraum von einer Minute (load1), fünf Minuten (load5) und fünfzehn Minuten (load15).
+* **P`rocess Count`**: Die Anzahl der derzeit geöffneten Prozesse.
+* **`User Count`**: Die Anzahl der Benutzer mit einer aktiven Shell-Sitzung.
+* **`Memory Usage`**: Der Prozentsatz des aktuell zugewiesenen Systemspeichers.
+* **`JVM Memory`**: Die Größe (in Megabyte) des zugewiesenen Java Heap.
+* **`Old Generation Space`**: Der Prozentsatz des aktuell zugewiesenen JVM-Arbeitsspeichers der alten Generation.
 
 #### Netzwerk {#network}
 
-* **CQ-Port-Prüfung**: Die Reaktionszeit in Sekunden, um auf den AEM- oder Dispatcher-Port zuzugreifen. Es gibt verschiedene Metriken für „author“, „publish“ und „dispatcher“.
+* **`CQ Port Check`**: Die Reaktionszeit in Sekunden, um auf den AEM- oder Dispatcher-Port zuzugreifen. Es gibt verschiedene Metriken für „author“, „publish“ und „dispatcher“.
 
 #### Speicher {#storage}
 
-* **Festplattenspeicher**: Der für jeden einzelnen Bereitstellungspunkt auf dem Host belegte Speicherplatz (in Megabyte). Für jeden Bereitstellungspunkt gibt es verschiedene Metriken. Es werden zumindest Metriken für `/` und `/mnt` angezeigt. Abhängig von der jeweiligen Instanzkonfiguration können jedoch weitere Bereitstellungspunkt-Metriken verfügbar sein.
-* **Ordnergröße**
-* **AEM-Segmentspeicher**: Der für den AEM-Segmentspeicher belegte Speicherplatz (in Gigabyte).
+* **`Disk Space`**: Der für jeden einzelnen Bereitstellungspunkt auf dem Host belegte Speicherplatz (in Megabyte). Für jeden Bereitstellungspunkt gibt es verschiedene Metriken. Es werden zumindest Metriken für `/` und `/mnt` angezeigt. Abhängig von der jeweiligen Instanzkonfiguration können jedoch weitere Bereitstellungspunkt-Metriken verfügbar sein.
+* **`Folder Size`**
+* **`AEM Segment Store`**: Der für den AEM-Segmentspeicher belegte Speicherplatz (in Gigabyte).
 
 #### Programm {#application}
 
-* **Replizierungsagent**: Die Zeit (in Sekunden) für eine Testreplikation
+* **`Replication Agent`**: Die Zeit (in Sekunden) für eine Testreplikation
    * Für jeden Replizierungsagenten gibt es verschiedene Metriken.
-* **Dispatcher-Leerung**: Die Anzahl der aktuellen Elemente in der Warteschlange für die Dispatcher-Leerung.
+* **`Dispatcher Flush`**: Die Anzahl der sich derzeit in der Dispatcher-Leerungswarteschlange befindlichen Elemente
 
 ## SLA-Berichte {#sla-reporting}
 
@@ -114,15 +114,15 @@ Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Vorfälle, die
 
 ## SLA-Metriken {#sla-metrics}
 
-* **Vertrag für Autoren**: Dies ist das SLA, das in Ihrem Vertrag mit Adobe Managed Services für die Erstellungsebene definiert ist.
-* **SLA für AMS-Autoren**: Dies ist die gemessene Verfügbarkeit der produktionsbezogenen Erstellungsebene unter Berücksichtigung der von Anbietern oder Adobe verursachten Vorfälle.
-* **SLA für Autoren**: Dies ist die gemessene Verfügbarkeit der Erstellungsebene ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
-* **Vertrag für Endbenutzer**: Dies ist das SLA, das in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsebene definiert ist.
-* **SLA für AMS-Endbenutzer**: Dies ist die gemessene Verfügbarkeit der produktionsbezogenen Veröffentlichungsebene unter Berücksichtigung der von Anbietern oder Adobe verursachten Vorfälle.
-* **SLA für Endbenutzer**: Dies ist die gemessene Verfügbarkeit der Veröffentlichungsebene ohne Berücksichtigung geplanter Ausfallzeiten wie z. B. Wartungsfenster.
+* **`Author Contract`**: Die SLA, die in Ihrem Vertrag mit Adobe Managed Services für die Autorenebene definiert ist.
+* **`AMS Author SLA`**: Gemessene Betriebszeit der Produktions-Autorenebene, Factoring-Vorfälle, die von Anbietern oder Adobe verursacht wurden.
+* **`Author SLA`**: Die gemessene Betriebszeit in der Autorenebene, wobei geplante Ausfallzeiten wie Wartungsfenster ignoriert werden.
+* **`End User Contract`**: Die SLA, die in Ihrem Vertrag mit Adobe Managed Services für die Veröffentlichungsebene definiert ist.
+* **`AMS End User SLA`**: Gemessene Betriebszeiten in der Produktions-Publishing-Ebene, Factoring-Vorfälle, die von Anbietern oder Adobe verursacht wurden.
+* **`End User SLA`**: Die gemessene Betriebszeit auf der Veröffentlichungsebene, wobei geplante Ausfallzeiten wie Wartungsfenster ignoriert werden.
 
 ## Video-Tutorial {#video-tutorial}
 
 Dieses Video bietet einen Überblick über die Verwendung der von Cloud Manager Reports erstellten Diagramme, die einen Einblick in Ihre Programmumgebungen geben.
 
->[!VIDEO](https://video.tv.adobe.com/v/34567?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26315/)

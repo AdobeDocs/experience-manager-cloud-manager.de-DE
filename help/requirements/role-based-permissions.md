@@ -2,10 +2,10 @@
 title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: 682b142f35bc233bad82b0ddfa69bc0f2d5b5fdb
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '616'
-ht-degree: 100%
+source-wordcount: '560'
+ht-degree: 99%
 
 ---
 
@@ -43,26 +43,26 @@ Jede der Rollen verfügt über bestimmte vorkonfigurierte Berechtigungen. In der
 
 | Berechtigung | Beschreibung | Geschäftsinhaber | Bereitstellungs-Manager | Programm-Manager | Entwicklerin oder Entwickler | CSE |
 | --- | --- | --- | --- | --- | --- | --- |
-| Anwendung lesen | Lesen der Programm-KPIs | x | x | x | x | x |
-| Anwendung schreiben | Programm einrichten oder bearbeiten | x | | | | |
-| Programm hinzufügen | Neues Programm hinzufügen | x |  |  |  |  |
-| Umgebung lesen | Siehe Umgebungsdetails | x | x | x | x | x |
-| Ausführung erstellen | Starten der Pipeline | x | x | x | | |
-| Ausführung lesen | Siehe Ausführungsstatus | x | x | x | x | x |
-| Ausführung fortsetzen | Möglichkeit der Wiederaufnahme der Ausführung bei Pause | x | x | x | | x |
-| Ausführung, Bereitstellung für die Produktion genehmigen | Go-Live-Genehmigung erteilen | x | x | x | | |
-| Ausführung, Bereitstellung für die Produktion planen | Bereitstellung für die Produktion planen | x | x | x | | x |
-| Ausführung für die Produktion bereitstellen | Anwendung für die Produktion bereitstellen, wenn diese zwecks CSE-Aufsicht angehalten wurde |  |  |  |  | x |
-| Ausführung abbrechen | Abbrechen der aktuellen Ausführung |  |  | x |  |  |
-| Ausführung, Quality-Gate-Fehler außer Kraft setzen | Bedeutende Quality-Gate-Fehler genehmigen | x | x | x |  |  |
-| Pipeline erstellen | Pipeline einrichten/bearbeiten |  | x |  |  |  |
-| Pipeline lesen | Siehe Pipeline-Details | x | x | x | x | x |
-| Pipeline schreiben | Pipeline einrichten/bearbeiten |  | x |  |  |  |
-| Pipeline ändern, Genehmigung | Berechtigung zum Bearbeiten der Option „Geschäftsinhaber“ |  | x |  |  |  |
-| Pipeline ändern, verwaltete Bereitstellung | Berechtigung zum Bearbeiten der Option „CSE-Aufsicht“ |  | x |  |  |  |
-| Pipeline löschen | Berechtigung zum Löschen der Pipeline |  | x |  |  |  |
-| Schritt lesen | Siehe Ergebnis des Schritts „Qualitätsmetriken“ | x | x | x | x | x |
-| Persönliches Zugriffs-Token erstellen | Zugriff auf Git |  | x |  | x |  |
+| `Read the Application` | Lesen der Programm-KPIs | x | x | x | x | x |
+| `Write Application` | Programm einrichten oder bearbeiten | x | | | | |
+| `Add Program` | Neues Programm hinzufügen | x |  |  |  |  |
+| `Read Environment` | Siehe Umgebungsdetails | x | x | x | x | x |
+| `Create Execution` | Starten der Pipeline | x | x | x | | |
+| `Read Execution` | Siehe Ausführungsstatus | x | x | x | x | x |
+| `Resume Execution` | Möglichkeit der Wiederaufnahme der Ausführung bei Pause | x | x | x | | x |
+| `Execution Approve Deploy to Production` | Go-Live-Genehmigung erteilen | x | x | x | | |
+| `Execution Schedule Deploy to Production` | Bereitstellung für die Produktion planen | x | x | x | | x |
+| `Execution Deploy to Production` | Anwendung für die Produktion bereitstellen, wenn diese zwecks CSE-Aufsicht angehalten wurde |  |  |  |  | x |
+| `Execution Cancel` | Abbrechen der aktuellen Ausführung |  |  | x |  |  |
+| `Execution Override Quality Gate Failures` | Bedeutende Quality-Gate-Fehler genehmigen | x | x | x |  |  |
+| `Pipeline Create` | Pipeline einrichten/bearbeiten |  | x |  |  |  |
+| `Pipeline Read` | Siehe Pipeline-Details | x | x | x | x | x |
+| `Pipeline Write` | Pipeline einrichten/bearbeiten |  | x |  |  |  |
+| P`ipeline Modify Approval` | Berechtigung zum Bearbeiten der Option „Geschäftsinhaber“ |  | x |  |  |  |
+| `Pipeline Modify Managed Deployment` | Berechtigung zum Bearbeiten der Option „CSE-Aufsicht“ |  | x |  |  |  |
+| `Pipeline Delete` | Berechtigung zum Löschen der Pipeline |  | x |  |  |  |
+| `Step Read` | Siehe Ergebnis des Schritts „Qualitätsmetriken“ | x | x | x | x | x |
+| `Generate Personal Access Token` | Zugriff auf Git |  | x |  | x |  |
 
 <!-- CQDOC-22080 | Download log files  |  |  | x |  | x |  | -->
 

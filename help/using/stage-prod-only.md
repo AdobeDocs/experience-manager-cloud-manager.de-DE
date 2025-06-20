@@ -2,16 +2,16 @@
 title: Aufspaltung von Pipelines nur für Staging und Produktion
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 35845e827b0a3fadfe2a55a2171b5e02100cf3eb
+source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
 workflow-type: tm+mt
-source-wordcount: '924'
-ht-degree: 98%
+source-wordcount: '917'
+ht-degree: 96%
 
 ---
 
 # Aufspaltung von Pipelines nur für Staging und Produktion {#stage-prod-only}
 
-Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
+Sie können Staging- und Produktionsbereitstellungen mithilfe dedizierter Pipelines aufteilen.
 
 ## Übersicht {#overview}
 
@@ -75,7 +75,7 @@ Die Erstellung von reinen Produktions- und Staging-Pipelines erfolgt auf ähnlic
 
 ### Reine Produktions-Pipelines {#prod-only}
 
-1. Sobald Sie die Option **Reine Produktions-Pipeline hinzufügen** gewählt haben, öffnet sich das Dialogfeld **Reine Produktions-Pipeline hinzufügen**.
+1. Nachdem Sie auf **Nur Produktions-Pipeline hinzufügen** geklickt haben, wird das zugehörige Dialogfeld geöffnet.
 1. Geben Sie im Feld **Pipeline-Name** den gewünschten Namen ein. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie die Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. 
 1. Klicken Sie unten rechts im Dialogfeld auf **Speichern**.
 
