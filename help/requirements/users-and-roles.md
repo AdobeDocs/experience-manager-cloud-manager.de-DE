@@ -2,10 +2,10 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Benutzende und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 012359b4ecf872ece036b27b48fededf150493d2
+source-git-commit: 9ad9af206fafea45f8bbf61b02950de0776b5a9f
 workflow-type: tm+mt
-source-wordcount: '872'
-ht-degree: 76%
+source-wordcount: '770'
+ht-degree: 86%
 
 ---
 
@@ -57,9 +57,10 @@ Admins müssen unter dem Produktkontext [!UICONTROL AEM Managed Services] neue P
 
 Erstellen oder fügen Sie diesen Produktprofilen mit der Admin Console Benutzer oder Gruppen hinzu.
 
+<!-- CQDOC-22790
 >[!IMPORTANT]
 >
->Aufgrund einer aktuellen Einschränkung in der Admin Console und Cloud Manager können Profile nicht mit &quot;**Berechtigungen“** werden. Der Versuch, dies zu tun, führt zu einem Backend-Fehler. Dieses Verhalten wirkt sich auf die Erstellung von Bereitstellungs-Manager-Profilen aus. Wählen Sie als Problemumgehung beim Erstellen eines neuen Profils mindestens eine Berechtigung aus.
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
 
 **So erstellen Sie ein Produktprofil mit der Admin Console:**
 
@@ -83,18 +84,19 @@ Erstellen oder fügen Sie diesen Produktprofilen mit der Admin Console Benutzer 
    * **Anzeigename** – Der **Anzeigename** muss dem vom [!UICONTROL Cloud Manager] definierten technischen Wert entsprechen (siehe nachfolgende Tabelle).
    * **Berechtigungsgruppe** – Sie können eine Berechtigungsgruppe für das Profil auswählen (nicht immer verfügbar).
 
-     >[!IMPORTANT]
-     >
-     >Aufgrund einer aktuellen Einschränkung in der Admin Console und Cloud Manager können Profile nicht mit &quot;**Berechtigungen“** werden. Der Versuch, dies zu tun, führt zu einem Backend-Fehler. Dieses Verhalten wirkt sich auf die Erstellung von Bereitstellungs-Manager-Profilen aus. Wählen Sie als Problemumgehung beim Erstellen eines neuen Profils mindestens eine Berechtigung aus.
+<!-- CQDOC-22790
+      >[!IMPORTANT]
+      >
+      >Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
 
-   ![Erstellen eines neuen Profils](/help/assets/screen_shot_2018-05-04at171819.png)
+![Erstellen eines neuen Profils](/help/assets/screen_shot_2018-05-04at171819.png)
 
-   | Rolle | Anzeigename (erforderlich) | Empfohlener Profilname |
-   |---|---|---|
-   | Geschäftsinhaber | `CM_BUSINESS_OWNER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Geschäftsinhaber“ |
-   | Bereitstellungs-Manager | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Bereitstellungs-Manager“ |
-   | Entwicklerin oder Entwickler | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Entwickler“ |
-   | Programm-Manager | `CM_PROGRAM_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Programm-Manager“ |
+| Rolle | Anzeigename (erforderlich) | Empfohlener Profilname |
+|---|---|---|
+| Geschäftsinhaber | `CM_BUSINESS_OWNER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Geschäftsinhaber“ |
+| Bereitstellungs-Manager | `CM_DEPLOYMENT_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Bereitstellungs-Manager“ |
+| Entwicklerin oder Entwickler | `CM_DEVELOPER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Entwickler“ |
+| Programm-Manager | `CM_PROGRAM_MANAGER_ROLE_PROFILE` | [!UICONTROL Cloud Manager] – Rolle „Programm-Manager“ |
 
 
 1. Klicken Sie auf **Fertig**, um das neue Profil zu speichern.
