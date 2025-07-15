@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Cloud Manager
 description: Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu Cloud Manager für AMS-Kundinnen und -Kunden.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: e7e9844b5f06552fc2104584c63935dee7a9fa89
 workflow-type: tm+mt
-source-wordcount: '748'
+source-wordcount: '709'
 ht-degree: 100%
 
 ---
@@ -14,12 +14,13 @@ ht-degree: 100%
 
 Dieses Dokument enthält Antworten für AMS-Kundinnen und -Kunden auf die am häufigsten gestellten Fragen zu Cloud Manager.
 
-## Kann Java 11 mit Cloud Manager-Builds verwendet werden? {#java-11}
+<!-- 
+## Is it possible to use Java 11 with Cloud Manager builds? {#java-11}
 
-Ja. Sie müssen das `maven-toolchains-plugin` mit den richtigen Einstellungen für Java 11 hinzufügen.
+Yes. You need to add the `maven-toolchains-plugin` with the correct settings for Java 11.
 
-* Dieser Vorgang ist [hier](/help/getting-started/using-the-wizard.md) dokumentiert.
-* Ein Beispiel finden Sie im [WKND-Beispielprojekt-Code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75).
+* This process is documented [here](/help/getting-started/using-the-wizard.md).
+* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). -->
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über das maven-scr-plugin fehl. Was kann ich tun? {#maven-src-plugin}
 
