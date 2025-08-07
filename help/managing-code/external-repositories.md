@@ -1,22 +1,17 @@
 ---
 title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab- und Bitbucket-Repositorys.
-badge: label="Private Beta" type="Positive" url="/help/release-notes/current.md
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: c8ded11e36bc68d442a0296a599f40066be73867
+source-git-commit: d6f058c3f6dc010f08a5cb75a0fb152b56111e79
 workflow-type: tm+mt
-source-wordcount: '2003'
-ht-degree: 90%
+source-wordcount: '1968'
+ht-degree: 96%
 
 ---
 
 # Hinzufügen von externen Repositorys in Cloud Manager {#external-repositories}
 
 Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab- und Bitbucket-Repositorys.
-
->[!NOTE]
->
->Die in diesem Artikel beschriebenen Funktionen sind nur über das private Beta-Programm verfügbar. Weitere Informationen und die Anmeldung zur privaten Beta-Version finden Sie unter [Eigenes Git ](/help/release-notes/current.md#gitlab-bitbucket).
 
 ## Konfigurieren eines externen Repositorys
 
@@ -64,12 +59,12 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 
 1. Wählen Sie **Speichern**, um das Repository hinzuzufügen.
 
-   Geben Sie jetzt ein Zugriffs-Token an, um zu überprüfen, ob Sie Eigentümer des externen Repositorys sind.
+   Geben Sie jetzt ein Zugriffs-Token an, um die Eigentümerschaft des externen Repositorys zu validieren.
 
 1. Geben Sie im Dialogfeld **Validierung des** Repository-Eigentümers) ein Zugriffstoken ein, um den Besitz des externen Repositorys zu überprüfen, sodass Sie darauf zugreifen können, und klicken Sie dann auf **Validieren**.
 
    ![Auswählen eines vorhandenen Zugriffs-Tokens für ein Repository](/help/managing-code/assets/repositories-exisiting-access-token.png)
-   *Auswählen eines vorhandenen Zugriffstokens für ein Bitbucket-Repository (nur zur Veranschaulichung).*
+   *Auswählen eines vorhandenen Zugriffs-Tokens für ein Bitbucket-Repository (nur zu Veranschaulichungszwecken).*
 
 >[!BEGINTABS]
 
@@ -77,41 +72,41 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/github -->
 
-| Zugriffstoken-Option | Beschreibung |
+| Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
 | **Neues Zugriffs-Token hinzufügen** | <ul><li> Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitHub-Dokumentation](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) befolgen.<li>Erforderliche Berechtigungen für das persönliche Zugriffs-Token (Personal Access Token, PAT) in GitHub<br>Diese Berechtigungen stellen sicher, dass Cloud Manager Pull-Anfragen validieren, Commit-Statusprüfungen verwalten und auf erforderliche Repository-Details zugreifen kann.<br>Wenn Sie in GitHub das PAT generieren, stellen Sie sicher, dass es die folgenden Repository-Berechtigungen enthält:<ul><li>Pull-Anfrage (Lesen und Schreiben)<li>Commit-Status (Lesen und Schreiben)<li>Repository-Metadaten (schreibgeschützt)</li></li></ul></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
-Siehe auch [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
+Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-tokens.md).
 
 >[!TAB GitLab]
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/gitlab -->
 
-| Zugriffstoken-Option | Beschreibung |
+| Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
 | **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitLab-Dokumentation](https://docs.gitlab.com/user/profile/personal_access_tokens/) befolgen.<li>Erforderliche Berechtigungen für das persönliche Zugriffs-Token (Personal Access Token, PAT) in GitLab<br>Diese Bereiche ermöglichen Cloud Manager den Zugriff auf Repository-Daten und Benutzerinformationen, die für die Validierung und Webhook-Integration erforderlich sind.<br>Stellen Sie beim Erstellen des PAT in GitLab sicher, dass es die folgenden Token-Gültigkeitsbereiche enthält:<ul><li>API<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
-Siehe auch [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
+Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-tokens.md).
 
 
 >[!TAB Bitbucket]
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/bitbucket -->
 
-| Zugriffstoken-Option | Beschreibung |
+| Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
 | **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffs-Token mithilfe der [Bitbucket-Dokumentation](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Erforderliche Berechtigungen für das persönliche Zugriffs-Token (Personal Access Token, PAT) in Bitbucket<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, das Verwalten von Pull-Anfragen und das Konfigurieren von oder Reagieren auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Bitbucket sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Repository (schreibgeschützt)<li>Pull-Anfragen (Lesen und Schreiben)<li>Webhooks (Lesen und Schreiben)</li></li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
-Siehe auch [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
+Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-tokens.md).
 
 >[!ENDTABS]
 
@@ -179,7 +174,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 1. Klicken Sie auf **Schließen**.
 1. Navigieren Sie zu Ihrer Git-Anbieterlösung (GitHub Enterprise, GitLab oder Bitbucket).
 
-   Alle Details zur Webhook-Konfiguration und den für jeden Anbieter erforderlichen Ereignissen finden Sie unter [Hinzufügen eines externen Repositorys](#add-ext-repo). Unter Schritt 8 sehen Sie die Tabelle mit Registerkarten.
+   Alle Details zur Webhook-Konfiguration und den für jeden Anbieter erforderlichen Ereignissen finden Sie unter [Hinzufügen eines externen Repositorys](#add-ext-repo). Sehen Sie sich die Tabelle mit Registerkarten unter Schritt 8 an.
 
 1. Gehen Sie in der Lösung zum Abschnitt mit den **Webhook**-Einstellungen.
 1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
@@ -223,7 +218,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 Wenn Webhooks korrekt konfiguriert sind, führt Cloud Manager Trigger automatisch Pipeline-Ausführungen oder Pull-Request-Validierungsprüfungen für Ihr Repository durch.
 
-Das Verhalten variiert je nach verwendetem Git-Anbieter, wie unten beschrieben.
+Das Verhalten variiert je nach dem verwendeten Git-Anbieter, wie unten beschrieben.
 
 
 >[!BEGINTABS]

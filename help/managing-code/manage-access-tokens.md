@@ -1,12 +1,11 @@
 ---
 title: Verwalten von Zugriffstoken in Cloud Manager
 description: Erfahren Sie, wie Sie Zugriffstoken anzeigen, bearbeiten und löschen können, die für das Übermitteln Ihres eigenen Git-Repositorys in Cloud Manager auf Adobe Managed Services verwendet werden.
-badge: label="Private Beta" type="Positive" url="/help/release-notes/current.md
 exl-id: 873aad0b-d7c6-4bc3-a70d-bbfdc1e02193
-source-git-commit: 254ad0ac77e793657292e34ae4a6bf3baecea8d5
+source-git-commit: d6f058c3f6dc010f08a5cb75a0fb152b56111e79
 workflow-type: tm+mt
-source-wordcount: '398'
-ht-degree: 69%
+source-wordcount: '388'
+ht-degree: 79%
 
 ---
 
@@ -14,13 +13,13 @@ ht-degree: 69%
 
 Cloud Manager verwendet Zugriffs-Token, um auf externen Git-Plattformen gehostete Repositorys zu verwalten. Wenn ein Token abgelaufen war, musste das zugehörige Repository zuvor neu integriert werden, um funktionsfähig zu bleiben.
 
-Mit der Funktion **Zugriffs-Token verwalten** können Sie Token jetzt effizienter verwalten. Sie können Token anzeigen, umbenennen oder entfernen, die mit unterstützten externen Git-Anbietern wie GitHub Enterprise, GitLab, Bitbucket und Azure DevOps verbunden sind.
+Mit **Zugriffs-Token verwalten** können Sie Token jetzt effizienter verwalten. Sie können Token anzeigen, umbenennen oder entfernen, die mit unterstützten externen Git-Anbietern wie GitHub Enterprise, GitLab, Bitbucket und Azure DevOps verbunden sind.
 
 Siehe auch [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
 
 >[!NOTE]
 >
->Die in diesem Artikel beschriebenen Funktionen sind nur über das private Beta-Programm verfügbar. Weitere Informationen und zum Anmelden bei der privaten Beta-Version finden Sie unter [Verwalten von Zugriffstoken](/help/release-notes/current.md#access-tokens).
+>Die in diesem Artikel beschriebenen Funktionen sind nur über das Private Beta-Programm verfügbar. Weitere Informationen und zum Anmelden bei der privaten Beta-Version finden Sie unter [Verwalten von Zugriffstoken](/help/release-notes/current.md#access-tokens).
 
 ## Anzeigen von Zugriffs-Token {#view-access-tokens}
 
@@ -41,9 +40,9 @@ Siehe auch [Hinzufügen von externen Repositorys in Cloud Manager](/help/managin
 ## Bearbeiten eines Zugriffs-Tokens {#edit-access-tokens}
 
 1. Klicken Sie im Dialogfeld **Zugriffs-Token verwalten** rechts neben einem Token-Namen auf ![Bearbeiten-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg).
-1. Aktualisieren Sie **Dialogfeld** Zugriffs-Token bearbeiten“ den **Token-Name** oder den **Zugriffs-Token**-Wert oder beides.
+1. Aktualisieren Sie im Dialogfeld **Zugriffs-Token bearbeiten** den Wert **Token-Name** oder **Zugriffs-Token** oder beide.
 
-   ![Dialogfeld „Zugriffs-Token bearbeiten“](/help/managing-code/assets/access-tokens-edit.png)
+   ![Dialogfeld „Zugriffstoken bearbeiten“](/help/managing-code/assets/access-tokens-edit.png)
 
 1. Wenn das **Zugriffs-Token** derzeit verwendet wird, werden Sie in einer Benachrichtigung darauf hingewiesen, dass alle zugehörigen Repositorys nach der Aktualisierung automatisch erneut validiert werden.
 
@@ -55,4 +54,4 @@ Siehe auch [Hinzufügen von externen Repositorys in Cloud Manager](/help/managin
 
    Das Symbol ist für Token, die derzeit verwendet werden, deaktiviert (![Konturlöschsymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_DeleteOutline_18_N.svg)).
 
-1. Klicken Sie im Dialogfeld **Zugriffs-Token löschen** auf **Löschen**, um das Token dauerhaft zu entfernen.
+1. Klicken **unter „Zugriffs-Token löschen** auf **Löschen**, um das Token dauerhaft zu entfernen.
