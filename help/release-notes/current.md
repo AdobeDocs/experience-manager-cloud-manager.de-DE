@@ -3,10 +3,10 @@ title: Versionshinweise für Cloud Manager 2025.8.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.8.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: d6f058c3f6dc010f08a5cb75a0fb152b56111e79
+source-git-commit: 73a094f47f518e2782ac96357e1adc4e923a0b63
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 62%
+source-wordcount: '625'
+ht-degree: 73%
 
 ---
 
@@ -57,7 +57,37 @@ Nehmen Sie an den Beta-Programmen von Cloud Manager teil, um vor der allgemeinen
 Derzeit stehen die folgenden Möglichkeiten zur Verfügung:
 
 
-### Bringen Sie Ihren eigenen Git mit – jetzt mit Unterstützung für GitLab und Bitbucket {#gitlab-bitbucket}
+### Eigenes Git hinzufügen (BYOG) {#gitlab-bitbucket-azure-vsts}
+
+<!-- BOTH CS & AMS -->
+
+Kundinnen und Kunden können nun ihre Azure DevOps-Git-Repositorys in Cloud Manager integrieren, wobei sowohl moderne Azure DevOps- als auch ältere VSTS(Visual Studio Team Services)-Repositorys unterstützt werden.
+
+* Für Edge Delivery Services-Benutzende kann das integrierte Repository zum Synchronisieren und Bereitstellen von Sitecode verwendet werden.
+* Für Benutzende von AEM as a Cloud Service und Adobe Managed Services (AMS) kann das Repository mit Fullstack- und Frontend-Pipelines verknüpft werden.
+
+Zusätzliche Pipeline-Typen und die Validierung von Pull-Anfragen durch Code-Qualitäts-Pipelines werden demnächst unterstützt.
+
+Siehe [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
+
+![Dialogfeld „Repository hinzufügen“](/help/release-notes/assets/azure-repo.png)
+
+Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com). Geben Sie unbedingt an, welche Git-Plattform Sie verwenden möchten und ob Sie sich in einer privaten/öffentlichen oder einer Unternehmens-Repository-Struktur befinden.
+
+#### Zugriffstoken verwalten{#manage-access-tokens}
+
+Verwenden Sie **Zugriffstoken verwalten** in Cloud Manager, um Zugriffstoken in Verbindung mit externen BYOG-Repositorys wie GitHub Enterprise, GitLab, Bitbucket und Azure DevOps anzuzeigen, umzubenennen und zu löschen.
+
+Siehe [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
+
+Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com).
+
+
+
+
+
+
+
 
 Die Funktion **Bring Your Own Git** (BYOG) wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Unternehmens-GitHub-Repositorys. Wenn Sie diese neuen Repositorys hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit der konstanten Code-Synchronisation mit dem Adobe-Repository. Sie bietet weiterhin die Möglichkeit, Pull-Anfragen zu überprüfen, bevor sie in einer Hauptverzweigung zusammengeführt werden.
 
