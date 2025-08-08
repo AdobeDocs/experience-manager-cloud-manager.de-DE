@@ -3,10 +3,10 @@ title: Versionshinweise für Cloud Manager 2025.8.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.8.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 73a094f47f518e2782ac96357e1adc4e923a0b63
+source-git-commit: cba5f331d2b4093822dce4470147966e2cac15b7
 workflow-type: tm+mt
-source-wordcount: '625'
-ht-degree: 73%
+source-wordcount: '469'
+ht-degree: 69%
 
 ---
 
@@ -81,27 +81,6 @@ Verwenden Sie **Zugriffstoken verwalten** in Cloud Manager, um Zugriffstoken in 
 Siehe [Verwalten von Zugriffstoken](/help/managing-code/manage-access-tokens.md).
 
 Wenn Sie diese neue Funktion testen und uns Ihr Feedback mitteilen möchten, senden Sie über die mit Ihrer Adobe ID verknüpfte E-Mail-Adresse eine E-Mail an [Grp-CloudManager_BYOG@adobe.com](mailto:grp-cloudmanager_byog@adobe.com).
-
-
-
-
-
-
-
-
-Die Funktion **Bring Your Own Git** (BYOG) wurde erweitert und unterstützt jetzt auch externe Repositorys wie GitLab und Bitbucket. Diese neue Unterstützung ergänzt die bereits vorhandene Unterstützung für private und Unternehmens-GitHub-Repositorys. Wenn Sie diese neuen Repositorys hinzufügen, können Sie sie auch direkt mit Ihren Pipelines verknüpfen. Sie können diese Repositorys auf öffentlichen Cloud-Plattformen oder in Ihrer privaten Cloud oder Infrastruktur hosten. Durch diese Integration entfällt auch die Notwendigkeit der konstanten Code-Synchronisation mit dem Adobe-Repository. Sie bietet weiterhin die Möglichkeit, Pull-Anfragen zu überprüfen, bevor sie in einer Hauptverzweigung zusammengeführt werden.
-
-Pipelines, die externe Repositorys (ausgenommen GitHub-gehostete Repositorys) und die Option **Bereitstellungsauslöser** **Bei Git-Änderungen** verwenden, starten jetzt automatisch.
-
-Siehe [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
-
-![Dialogfeld „Repository hinzufügen“](/help/release-notes/assets/repositories-add-release-notes.png)
-
->[!NOTE]
->
->Derzeit sind vorkonfigurierte Code-Qualitätsprüfungen für Pull-Anfragen ausschließlich für von GitHub gehostete Repositorys verfügbar. Es ist jedoch ein Update in Arbeit, um diese Funktionen auf andere Git-Anbieter zu erweitern.
-
-<!-- If you are interested in testing this new feature and sharing your feedback, send an email to [Grp-CloudManager_BYOG@adobe.com](mailto:Grp-CloudManager_BYOG@adobe.com) from your email address associated with your Adobe ID. Be sure to include which Git platform you want to use and whether you are on a private/public or enterprise repository structure. -->
 
 #### Zugriffstoken verwalten{#access-tokens}
 
