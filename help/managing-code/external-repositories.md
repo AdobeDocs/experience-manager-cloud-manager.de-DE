@@ -2,7 +2,7 @@
 title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab-, Bitbucket- und Azure DevOps-Repositorys.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
+source-git-commit: 76a5cb04514bc1961c8f9008e9bea5d1d6fe1c19
 workflow-type: tm+mt
 source-wordcount: '2453'
 ht-degree: 90%
@@ -318,8 +318,6 @@ Für Kommentare und Feedback zu Pull-Anforderungen fügt Cloud Manager der Pull-
 
 ![Azure DevOps-Validierung von Pull-Anfragen mit Webhooks-4](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
 
-
->[!ENDTABS]
 
 >[!ENDTABS]
 
