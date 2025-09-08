@@ -3,10 +3,10 @@ title: Versionshinweise für Cloud Manager 2025.9.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.9.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 68e546c1337122f823d63529ebd68d6966bb132a
+source-git-commit: 24ec1d82f9a700b57cd74c2c83c8d9d00b8bece1
 workflow-type: tm+mt
-source-wordcount: '363'
-ht-degree: 75%
+source-wordcount: '376'
+ht-degree: 72%
 
 ---
 
@@ -31,13 +31,13 @@ Die Veröffentlichung der nächsten Version ist für den Freitag, 2. Oktober 202
 
 ## Neue Funktionen {#what-is-new}
 
-* **Unterstützung für private Azure DevOps-Repositorys wurde hinzugefügt**
+* **Unterstützung für Azure DevOps (private Repositorys) wurde hinzugefügt**
 
   Zu den Aktualisierungen der Dokumentation gehören Konfigurationsschritte für Bring Your Own Git with Azure DevOps und die Validierung von Pull-Anfragen. Siehe [Hinzufügen externer Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
 
-* **Pull-Anforderungsprüfungen für private Repositorys**
+* **Bringen Sie Ihre eigene Git-Unterstützung (BYOG) auf Konfigurations-Pipelines (private Repositorys) erweitert**
 
-  Cloud Manager unterstützt jetzt Konfigurations-Pipelines mit privaten Repositorys in GitHub, Bitbucket, Azure DevOps und GitLab. Siehe ![Pull-Anforderungsprüfungen für private Repositorys](/help/managing-code/github-check-config.md).
+  Cloud Manager unterstützt jetzt Konfigurations-Pipelines mit privaten Repositorys in GitHub, Bitbucket, Azure DevOps und GitLab. Diese Unterstützung beschleunigt den Entwicklungszyklus weiter. Siehe ![Pull-Anforderungsprüfungen für private Repositorys](/help/managing-code/github-check-config.md).
 
 ## Beta-Programme {#beta-program}
 
