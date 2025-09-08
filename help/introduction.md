@@ -2,10 +2,10 @@
 title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
-source-git-commit: 4c4a2688cab8e5c81efa4b7b5e26f3c7b5dc30d6
+source-git-commit: 8f29a06f63b8dc10cb3d28e2f38da1ead84f32f5
 workflow-type: tm+mt
-source-wordcount: '1256'
-ht-degree: 100%
+source-wordcount: '1250'
+ht-degree: 95%
 
 ---
 
@@ -34,26 +34,23 @@ Hier erfahren Sie mehr über Cloud Manager für AMS (Adobe Managed Services) und
 Mit Cloud Manager profitiert Ihr Entwicklungs-Team von den folgenden Funktionen:
 
 * Kontinuierliche Integration/Bereitstellung (CI/CD, Continuous Integration/Continuous Delivery) von Code zur Verkürzung der Markteinführungszeit von Monaten/Wochen auf Tage/Stunden
-
 * Code-Prüfungen, Leistungstests und Sicherheitsprüfungen basierend auf Best Practices, bevor der Code an die Produktion gesendet wird, um Produktionsunterbrechungen zu minimieren.
-
 * API-Konnektivität zur Ergänzung vorhandener DevOps-Prozesse.
-
 * Automatische Skalierungsfunktion zur intelligenten Erkennung eines erhöhten Kapazitätsbedarfs und automatischen Online-Bereitstellung zusätzlicher Dispatcher-/Veröffentlichungssegmente.
 
 ![CI/CD-Fluss](/help/assets/screen_shot_2018-05-12at73843pm.png)Der CI/CD-Prozessfluss, wie er in [!UICONTROL Cloud Manager] verwendet wird.
 
 ## Wichtige Funktionen in [!UICONTROL Cloud Manager] {#key-features-in-cloud-manager}
 
-Im Folgenden werden ausgewählte Funktionen von Cloud Manager genauer erläutert.
+In den folgenden Abschnitten werden wichtige Funktionen von Cloud Manager hervorgehoben.
 
 ### Self-Service-Benutzeroberfläche {#self-service-interface}
 
-Die [!UICONTROL Cloud Manager]-Benutzeroberfläche ermöglicht den einfachen Zugriff und die Verwaltung der Cloud-Umgebung sowie der CI/CD-Pipeline für Adobe Experience Manager-Programme.
+Weitere Informationen zur Benutzeroberfläche von [!UICONTROL Cloud Manager] und zu den ersten Schritten finden Sie unter [Erste Anmeldung](/help/getting-started/first-time-login.md).
+
+Mit der Benutzeroberfläche für [!UICONTROL Cloud Manager] können Sie einfach auf die Cloud-Umgebung zugreifen und sie verwalten und die CI/CD-Pipeline für Ihre Adobe Experience Manager-Programme einfach einrichten.
 
 Sie definieren anwendungsspezifische Key Performance Indicators (KPIs) wie Spitzenwerte für Seitenansichten pro Minute oder erwartete Seitenladereaktionszeiten. Diese KPIs dienen als Grundlage für die Messung des Bereitstellungserfolgs. Rollen und Berechtigungen für verschiedene Team-Mitglieder können einfach definiert werden. Die Self-Service-Oberfläche bietet Ihnen volle Kontrolle. Sie bietet außerdem Links zu Ressourcen für Best Practices und Zugang zu Adobe-Fachleuten, um bei Bedarf Orientierungshilfen zu erhalten.
-
-Weitere Informationen zur Benutzeroberfläche von [!UICONTROL Cloud Manager] und zu den ersten Schritten finden Sie unter [Erste Anmeldung](/help/getting-started/first-time-login.md).
 
 ### CI/CD-Pipeline {#ci-cd-pipeline}
 
@@ -105,14 +102,14 @@ Es ist immer nur eine der Umgebungen aktiv, wobei der gesamte Produktions-Traffi
 Wenn die Blau/Grün-Implementierung aktiviert ist, unterscheidet sich der Bereitstellungsfluss vom standardmäßigen Cloud-Service-Bereitstellungsfluss.
 
 | Schritt | Blau/Grün-Bereitstellung | Standard-Bereitstellung |
-|---|---|---|
+| --- | --- | --- |
 | 1 | Bereitstellung für Autor | Bereitstellung für Autor |
 | 2 | Zum Testen pausieren | - |
 | 3 | Grün-Infrastruktur erstellt | - |
-| 4 | Bereitstellung in grüne Veröffentlichungs-/Dispatcher-Ebenen | Bereitstellung für Veröffentlichung |
+| 4 | Bereitstellung auf grüne Veröffentlichungs-/Dispatcher-Ebenen | Bereitstellung für Veröffentlichung |
 | 5 | Zum Testen pausieren (bis zu 24 Stunden) | - |
-| 6 | Die grüne Infrastruktur wird zum Produktionslastenausgleich hinzugefügt. | - |
-| 7 | Die blaue Infrastruktur wird aus dem Produktionslastenausgleich entfernt. |
+| 6 | Die grüne Infrastruktur wird zum Produktionslastenausgleich hinzugefügt. | – |
+| 7 | Blaue Infrastruktur wird aus dem Produktionslastenausgleich entfernt | – |
 | 8 | Pause für die endgültige Abmeldung (bis zu 24 Stunden) | - |
 | 9 | Blaue Infrastruktur wird automatisch beendet | - |
 | 10 | Pipeline ist abgeschlossen | - |
