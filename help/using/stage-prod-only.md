@@ -2,10 +2,10 @@
 title: Aufspaltung von Pipelines nur für Staging und Produktion
 description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 34c0b39d50dd4998cb75cc032d71d24798dee729
+source-git-commit: 92237ea156e3921b5dc55cea3abdecee9d26b14b
 workflow-type: tm+mt
 source-wordcount: '917'
-ht-degree: 96%
+ht-degree: 94%
 
 ---
 
@@ -103,7 +103,7 @@ Eine reine Staging-Pipeline wird fast genauso ausgeführt wie eine standardmäß
 
 ![Ausführen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only-pipeline-run.png)
 
-Wenn Sie auf **Build weiterleiten** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen reinen Staging-Pipeline entweder normal oder im [Notfallmodus](#emergency-mode) zu bestätigen.
+Wenn Sie auf **Build bewerben** klicken, werden Sie aufgefordert, die Ausführung der zugehörigen Nur-Produktions-Pipeline entweder normal oder im [Notfallmodus](#emergency-mode) zu bestätigen.
 
 Wenn keine reine Produktions-Pipeline existiert, werden Sie dazu aufgefordert, eine zu erstellen.
 
