@@ -90,7 +90,7 @@ Bis zur Validierung ist das Repository mit einem roten Symbol gekennzeichnet. Di
 
 Beachten Sie, dass in der Spalte **Typ** die von Adobe bereitgestellten Repositorys (**Adobe**) und Ihre eigenen GitHub-Repositorys (**GitHub**) leicht erkennbar aufgeführt sind.
 
-Um später zum Repository zurückzukehren und die Validierung abzuschließen, gehen Sie zur Seite **Repositorys**. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) neben dem hinzugefügten GitHub-Repository und dann auf **Eigentümervalidierung**.
+Um später zum Repository zurückzukehren und die Validierung abzuschließen, gehen Sie zur Seite **Repositorys**. Klicken Sie auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) neben dem hinzugefügten GitHub-Repository und dann auf **Eigentümervalidierung**.
 
 
 ## Verwenden privater Repositorys mit Cloud Manager {#using}

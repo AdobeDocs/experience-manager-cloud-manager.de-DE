@@ -30,8 +30,8 @@ Die **Meine Programme** bietet einen Überblick über alle Programme, auf die Si
 |   | Bereich | Beschreibung |
 | --- | --- | --- |
 | 1 | [Symbolleisten](#toolbars-my-programs-toolbars) | Für Organisationsauswahl, Warnhinweise und Kontoeinstellungen verwenden. |
-| 2 | Registerkarte des linken Bedienfelds | Verschiedene Registerkarten, mit denen Sie die aktuelle Ansicht Ihrer Programme umschalten können, darunter die folgenden:<br><ul><li>**Experience Manager** Öffnet die Startseite für Ihre verschiedenen AEM-Lösungen</li><li>**Alle Programme** mit allen verfügbaren Programmen.</li><li>**Lizenz** öffnet das Lizenz-Dashboard. Das Lizenz-Dashboard gilt nur für *AEM as a Cloud Service-* (AEMaaCS), nicht für Adobe Managed Services-Programme wie AEM 6.5 und AEM 6.5 LTS. Informationen zum Festlegen des Service-Typs Ihres Programms (AEMaaCS oder AMS) finden Sie [ Abschnitt &quot;](#program-cards)&quot; in diesem Artikel. Die Registerkarten sind standardmäßig geschlossen und können über das ![Menüsymbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) Dropdown-Menü auf der linken Seite der Kopfzeile [Cloud Manager angezeigt ](#cloud-manager-header).</li></ol> |
-| 3 | [Meine Programme](#my-programs-section) | Listet alle verfügbaren Programme auf, die Sie auswählen können.<br>Einzelheiten zu [ finden Sie unter ](/help/getting-started/program-setup.md) und Programmtypen. |
+| 2 | Registerkarte des linken Bedienfelds | Verschiedene Registerkarten, mit denen Sie die aktuelle Ansicht Ihrer Programme umschalten können, darunter die folgenden:<br><ul><li>**Experience Manager** Öffnet die Startseite für Ihre verschiedenen AEM-Lösungen</li><li>**Alle Programme** mit allen verfügbaren Programmen.</li><li>**Lizenz** öffnet das Lizenz-Dashboard. Das Lizenz-Dashboard gilt nur für *AEM as a Cloud Service-* (AEMaaCS), nicht für Adobe Managed Services-Programme wie AEM 6.5 und AEM 6.5 LTS. Informationen zum Festlegen des Service-Typs Ihres Programms (AEMaaCS oder AMS) finden Sie [&#x200B; Abschnitt &quot;](#program-cards)&quot; in diesem Artikel. Die Registerkarten sind standardmäßig geschlossen und können über das ![Menüsymbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) Dropdown-Menü auf der linken Seite der Kopfzeile [Cloud Manager angezeigt &#x200B;](#cloud-manager-header).</li></ol> |
+| 3 | [Meine Programme](#my-programs-section) | Listet alle verfügbaren Programme auf, die Sie auswählen können.<br>Einzelheiten zu [&#x200B; finden Sie unter &#x200B;](/help/getting-started/program-setup.md) und Programmtypen. |
 | 4 | [Aktionsaufrufe und Statistiken](#cta-statistics) | Gibt einen Überblick über Ihre letzten Aktivitäten. |
 | 5 | [Schnelllinks](#quick-links) | Schneller Zugriff auf zugehörige Ressourcen. |
 
@@ -48,7 +48,7 @@ Der erste ist die Cloud Manager-Kopfzeile. Die Kopfzeile bleibt beim Navigieren 
 
 | Bereich | Beschreibung |
 | --- | --- |
-| ![Menü-Symbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) | Ein Dropdown-Menü, das Zugriff auf Registerkarten für bestimmte Teile eines einzelnen Programms bietet.<br>Informationen zum Festlegen des Service-Typs Ihres Programms (AMS oder AEMaaCS) finden Sie [ Abschnitt &quot;](#program-cards)&quot; in diesem Dokument. |
+| ![Menü-Symbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) | Ein Dropdown-Menü, das Zugriff auf Registerkarten für bestimmte Teile eines einzelnen Programms bietet.<br>Informationen zum Festlegen des Service-Typs Ihres Programms (AMS oder AEMaaCS) finden Sie [&#x200B; Abschnitt &quot;](#program-cards)&quot; in diesem Dokument. |
 | ![Adobe-Symbol in Rot und Weiß](/help/getting-started/assets/AdobeLogoWhiteOnRed.svg) Cloud Manager | Klicken Sie hier, um die **Meine Programme**-Konsole von Cloud Manager zu öffnen, unabhängig davon, wo Sie sich in Cloud Manager befinden. |
 | *`Name of selected organization`* | Der Organisationsselektor zeigt die Organisation an, bei der Sie sich derzeit angemeldet haben (in diesem Beispiel *Foundation Internal*). Klicken Sie auf , um zu einer anderen Organisation zu wechseln, wenn Ihre Adobe ID mit mehreren Organisationen verknüpft ist. |
 | ![Feedback-Symbol](/help/getting-started/assets/AppComment.svg) Feedback | Klicken Sie hier, um Adobe Feedback zu Cloud Manager zu geben. |
@@ -128,7 +128,7 @@ Klicken Sie ![Info-Symbol](/help/getting-started/assets/Info.svg), um schnell au
 
 ![Informations-Popup in Cloud Manager AMS](/help/getting-started/assets/cloud-manager-information-view.png)
 
-Klicken Sie ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)), um Zugriff auf zusätzliche Aktionen zu erhalten, die Sie im Programm ausführen können.
+Klicken Sie ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)), um Zugriff auf zusätzliche Aktionen zu erhalten, die Sie im Programm ausführen können.
 
 ![Schaltfläche mit Auslassungspunkten für Programme](/help/getting-started/assets/cloud-manager-program-ellipsis.png)
 
@@ -162,7 +162,7 @@ Die Symbolleisten für die Programmübersicht ähneln denen der Konsole [Meine P
 
 #### Cloud Manager-Kopfzeile {#cloud-manager-header-2}
 
-Die Cloud Manager-Kopfzeile ![ über ein Dropdown-Menü (Menüsymbol anzeigen, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg)), das automatisch geöffnet wird, um die navigierbaren Registerkarten der Programmübersicht anzuzeigen.
+Die Cloud Manager-Kopfzeile ![&#x200B; über ein Dropdown-Menü (Menüsymbol anzeigen, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg)), das automatisch geöffnet wird, um die navigierbaren Registerkarten der Programmübersicht anzuzeigen.
 
 Klicken Sie ![Menüsymbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), um die Registerkarten auszublenden.
 
@@ -190,7 +190,7 @@ Jedem Programm sind zahlreiche Optionen und Daten zugeordnet. Diese Daten werden
 
 Wenn Sie ein Programm öffnen, gelangen Sie standardmäßig zur Registerkarte **Übersicht**. Die aktuelle Registerkarte ist hervorgehoben. Wählen Sie eine andere Registerkarte aus, um deren Details anzuzeigen.
 
-Verwenden Sie ![Menüsymbol „Hamburger“ ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) der Kopfzeile [Cloud Manager](#cloud-manager-header-2) zum Ausblenden der Registerkarten.
+Verwenden Sie ![Menüsymbol „Hamburger“ &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) der Kopfzeile [Cloud Manager](#cloud-manager-header-2) zum Ausblenden der Registerkarten.
 
 ### Aktionsaufruf {#cta}
 

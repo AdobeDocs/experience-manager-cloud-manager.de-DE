@@ -113,7 +113,7 @@ Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzerinnen, Benu
 
 1. Klicken Sie im linken Navigationsbereich auf **Benutzer** und dann auf eine Benutzerin oder einen Benutzer, um diese bzw. diesen zu ändern.
 
-1. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
+1. Klicken Sie auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
 
    ![Benutzer bearbeiten](/help/assets/admin-console-edit-user.png)
 
