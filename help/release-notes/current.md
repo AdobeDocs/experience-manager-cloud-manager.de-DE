@@ -3,7 +3,7 @@ title: Versionshinweise für Cloud Manager 2025.10.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2025.10.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 8477b55292be4591b679200ff11b976a2da3a7be
+source-git-commit: f62191a1b9dd67ea1e999e2db0bb05de66bf73f2
 workflow-type: tm+mt
 source-wordcount: '581'
 ht-degree: 47%
@@ -41,19 +41,20 @@ Derzeit stehen die folgenden Möglichkeiten zur Verfügung:
 
 ### Erweiterbarkeit und Anpassung von Experience Hub {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub) dient als Einstiegspunkt für AEM, angepasst an die Anforderungen Ihres Unternehmens. Teilen Sie Adobe Ihre bestehenden Erweiterungen der AEM-Benutzeroberfläche mit, damit Sie sie mit minimalem Aufwand in Experience Hub aktivieren können.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) dient als Einstiegspunkt für AEM, angepasst an die Anforderungen Ihres Unternehmens. Teilen Sie Adobe Ihre bestehenden Erweiterungen der AEM-Benutzeroberfläche mit, damit Sie sie mit minimalem Aufwand in Experience Hub aktivieren können.
 
 ![Abbildung des Erweiterbarkeits- und Anpassungs-Workflows von Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
 Betten Sie benutzerdefinierte Erlebnisse in Experience Hub ein, um das Dashboard Ihres Unternehmens zu erweitern und zu personalisieren. Zusätzlich zu den integrierten Widgets von Adobe können Sie Ihre eigenen mit dem [UI Extensibility](https://developer.adobe.com/uix/docs/)-Framework hinzufügen. Erstellen Sie JavaScript-basierte Benutzeroberflächen-Apps und stellen Sie sie Ihren Benutzern zur Verfügung, um geschäftsspezifische Anforderungen und Workflows zu erfüllen.
 
-Sie interessieren sich für die Beta-Version? Senden Sie eine E-[&#x200B; an &#x200B;](mailto:beta_exphubextensibility@adobe.com)beta_exphubextensibility@adobe.commit Ihrer Adobe-OrgID und einer kurzen Beschreibung der Anpassung, die Sie erstellen möchten.
+Sie interessieren sich für die Beta-Version? Senden Sie eine E-[ an ](mailto:beta_exphubextensibility@adobe.com)beta_exphubextensibility@adobe.commit Ihrer Adobe-OrgID und einer kurzen Beschreibung der Anpassung, die Sie erstellen möchten.
 
 ### Schnellere Builds mit Modul-Caching {#quick-build-cm-pipelines}
 
 Ein neues Build-Modell kompiliert nur geänderte Module (und nicht das gesamte Repository) mithilfe des Caching auf Modulebene, um die Erstellungszeiten zu verkürzen. Sie gilt für Pipelines in Code-Qualität, mit vollem Stapel und nur Staging.
 
-![Dialogfeld „Produktionsfremde Pipeline bearbeiten“ mit den beiden Optionen für die Build-Strategie „Vollständiger Build“ und „Intelligenter Build“](/help/release-notes/assets/non-production-pipeline-edit.png) *Dialogfeld „Produktionsfremde Pipeline bearbeiten“ mit den beiden Optionen für die Build-Strategie „Vollständiger Build“ und „Intelligenter Build“.*
+![Dialogfeld „Produktionsfremde Pipeline bearbeiten“ mit den beiden Optionen für die Build-Strategie „Vollständiger Build“ und „Intelligenter Build“](/help/release-notes/assets/non-production-pipeline-edit.png)
+*Dialogfeld „Produktionsfremde Pipeline bearbeiten“ mit den beiden Optionen für die Build-Strategie „Vollständiger Build“ und „Intelligenter Build“.*
 
 Im Dialogfeld **Pipeline hinzufügen/bearbeiten** auf der Registerkarte **Source-Code** können Sie mit dem Abschnitt **Erstellen-Strategie** eine der folgenden Build-Optionen auswählen:
 
@@ -62,7 +63,7 @@ Im Dialogfeld **Pipeline hinzufügen/bearbeiten** auf der Registerkarte **Source
 
 Sie steuern, welche Pipelines „Smart **Build“**. Während der Beta-Phase wird diese Option nur für Pipelines **Code-Qualität** und **Bereitstellung durch Entwicklung** angezeigt.
 
-Interessiert? Senden Sie eine E-Mail an [0&rbrace;beta_quickbuild_cmpipelines@adobe.com&quot; mit Ihrer Adobe-OrgID und Programm-ID.](mailto:beta_quickbuild_cmpipelines@adobe.com)
+Interessiert? Senden Sie eine E-Mail an [0}beta_quickbuild_cmpipelines@adobe.com&quot; mit Ihrer Adobe-OrgID und Programm-ID.](mailto:beta_quickbuild_cmpipelines@adobe.com)
 
 <!-- You can deactivate incremental builds at the pipeline level by setting the property `CM_BUILD_DISABLE_MODULE_CACHING` to `true` (effective during the `BUILD` step). For how to add pipeline variables, see [Pipeline variables](/help/getting-started/build-environment.md#pipeline-variables). -->
 
