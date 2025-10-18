@@ -2,17 +2,17 @@
 title: Verwenden des Assistenten für neue Projekte
 description: Auf dieser Seite erfahren Sie, wie Sie mit dem Assistenten ein AEM-Anwendungsprojekt erstellen.
 exl-id: 9d7c6f4c-9379-471c-8dad-772a7099da54
-source-git-commit: f3617eb50147f5af33282cb0f25ada7dc423d434
+source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
 workflow-type: tm+mt
-source-wordcount: '320'
-ht-degree: 92%
+source-wordcount: '322'
+ht-degree: 82%
 
 ---
 
 
 # Verwenden des Assistenten für neue Projekte {#using-the-wizard}
 
-Als Sie als Neukunde ein Onboarding für Cloud Manager durchführten, wurde Ihnen ein leeres Git-Repository bereitgestellt. Um Ihnen die ersten Schritte zu erleichtern, bietet Cloud Manger einen Assistenten zum Erstellen eines minimalen AEM-Projekts auf der Grundlage des [AEM-Projektarchetypen](https://github.com/adobe/aem-project-archetype) als Startpunkt.
+Wenn Sie als Neukunde ein Onboarding für Cloud Manager durchführen, erhalten Sie ein leeres Git-Repository. Um Ihnen die ersten Schritte zu erleichtern, bietet Cloud Manger einen Assistenten zum Erstellen eines minimalen AEM-Projekts auf der Grundlage des [AEM-Projektarchetypen](https://github.com/adobe/aem-project-archetype) als Startpunkt.
 
 Führen Sie diese Schritte aus, um mithilfe des Assistenten ein AEM-Projekt zu erstellen.
 
@@ -39,6 +39,6 @@ Sie verfügen nun über ein Basisprojekt. Jetzt ist es an Zeit, Ihre Pipelines e
 
 ## Bestehende oder migrierende Kundinnen und Kunden {#existing-migrating}
 
-Aktuelle Kundinnen oder Kunden von Adobe Managed Services (AMS) oder von AEM On-Premise, die zu AMS migrieren, haben wahrscheinlich bereits Projekt-Code in Git oder einem anderen Versionskontrollsystem.
+Wenn Sie aktuell Adobe Managed Services (AMS)-Kunde oder On-Premise-Kunde von AEM sind und migrieren, befindet sich der Projekt-Code wahrscheinlich bereits in Git oder einem anderen Versionskontrollsystem.
 
 In solchen Fällen ist es möglich, das Projekt in das Git-Repository von Cloud Manager zu importieren.

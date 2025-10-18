@@ -2,10 +2,10 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
 workflow-type: tm+mt
-source-wordcount: '1637'
-ht-degree: 100%
+source-wordcount: '1636'
+ht-degree: 98%
 
 ---
 
@@ -107,9 +107,9 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    >
    >Es wird erwartet, dass 1-1-1-Kundschaft diese Funktion verwendet.
 
-1. Jedes AEM-Artefakt wird über Package Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
+1. Jedes AEM-Artefakt wird über den Paket-Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
 
-   * Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie unter [Package Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+   * Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie unter [Paket-Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
    >[!NOTE]
    >
@@ -120,7 +120,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
    1. Aktuelle Konfigurationen werden gesichert und in einen temporären Speicherort kopiert.
    1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Informationen finden Sie unter [Dispatcher-Konfigurationen](/help/getting-started/dispatcher-configurations.md). Durch diese Vorgehensweise werden die Verzeichnisse gelöscht, damit keine verwaisten Dateien zurückbleiben.
    1. Das Artefakt wird in das `httpd`-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
-   1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Service neu geladen. Falls ein Fehler auftritt, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Service wird neu geladen und der Fehler wird an Cloud Manager gemeldet.
+   1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Service neu geladen. Wenn Fehler gefunden werden, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Dienst wird neu geladen und der Fehler wird an Cloud Manager zurückgemeldet.
    1. Jeder in der Pipeline-Konfiguration angegebene Pfad wird invalidiert oder aus dem Dispatcher-Cache entfernt.
 
    >[!NOTE]
@@ -207,7 +207,7 @@ Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [die Cloud
 Um eine erneute Ausführung auszulösen, muss eine `PUT`-Anfrage an die HAL-Verknüpfung `http://ns.adobe.com/adobecloud/rel/pipeline/reExecute` im Status des Schritts der Produktionsbereitstellung erfolgen.
 
 * Wenn diese Verknüpfung vorhanden ist, kann die Ausführung von diesem Schritt aus neu gestartet werden.
-* Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt an nicht erneut gestartet werden.
+* Wenn dies nicht der Fall ist, kann die Ausführung von diesem Schritt an nicht neu gestartet werden.
 
 Diese Verknüpfung ist immer nur für den Schritt der Produktionsbereitstellung verfügbar.
 
