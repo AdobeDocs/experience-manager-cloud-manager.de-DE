@@ -1,13 +1,13 @@
 ---
-source-git-commit: 200366e5db92b7ffc79b7a47ce8e7825b29b7969
+source-git-commit: 23930ee54667561b5f3983056af4406301f28da2
 workflow-type: tm+mt
-source-wordcount: '498'
-ht-degree: 100%
+source-wordcount: '500'
+ht-degree: 92%
 
 ---
-# Beitragen zur Adobe Experience Manager Screens-Dokumentation
+# Beiträge zur Dokumentation zu Adobe Experience Manager Cloud Manager
 
-Vielen Dank, dass Sie sich entschieden haben, zur Adobe Experience Manager Screens-Dokumentation beizutragen! Adobe begrüßt Inhaltsbeiträge der gesamten Leser-Community und von Adobe-Mitarbeitenden.
+Vielen Dank, dass Sie zur Dokumentation zu Adobe Experience Manager Cloud Manager beitragen möchten. Adobe begrüßt Inhaltsbeiträge der gesamten Leser-Community und von Adobe-Mitarbeitenden.
 
 In dieser Datei wird beschrieben, wie Sie Beiträge beisteuern können und welche Richtlinien zu befolgen sind, wenn Sie Ihre Beiträge vornehmen.
 
@@ -44,7 +44,7 @@ Wenn Sie ein Problem sehen und genau wissen, wie Sie es beheben können, sollten
 
 Für Pull-Anfragen muss eine [Lizenzvereinbarung für Mitwirkende (CLA)](https://opensource.adobe.com/cla.html) unterzeichnet werden. Dadurch erhält Adobe die Erlaubnis, Ihre Beiträge im Rahmen des Projekts zu veröffentlichen. Sie müssen nur einmal eine Adobe-CLA übermitteln. Wenn Sie also bereits eine übermittelt haben, können Sie sofort loslegen!
 
-### Kurze Videoeinführung
+### Schnelle Videoeinführung
 
 Im folgenden Video erhalten Sie einen schnellen Überblick darüber, wie Probleme und Pull-Anfragen erstellt werden.
 
@@ -56,6 +56,6 @@ Wenn Sie Adobe-Mitarbeitende sind und einen Beitrag einreichen möchten, verwend
 
 Adobe freut sich über alle Beiträge und überprüft diese, wenn sie im öffentlichen Repository gelistet werden. Pull-Anfragen von Adobe-Beschäftigten sind jedoch einfacher zu verarbeiten und können schneller im Unternehmens-Repository genehmigt werden. Stellen Sie sicher, dass geschützte Informationen nur im Repository des Unternehmens diskutiert werden.
 
-## Weiterführende Informationen
+## Weitere Informationen
 
-Weitere Informationen zur Verwendung der GitHub-Autoren-Plattform finden Sie im [Handbuch für Mitwirkende an Adobe Docs](https://experienceleague.adobe.com/de/docs/contributor/contributor-guide/introduction).
+Weitere Informationen zur Verwendung der GitHub-Authoring-Plattform finden Sie im [Handbuch für Adobe Docs-Mitwirkende](https://experienceleague.adobe.com/de/docs/contributor/contributor-guide/introduction).
