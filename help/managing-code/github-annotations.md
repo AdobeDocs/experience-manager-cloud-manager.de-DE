@@ -2,10 +2,10 @@
 title: Anmerkungen zur GitHub-Prüfung
 description: Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkungen prüft, um Ihnen hilfreiches Feedback zu geben.
 exl-id: 15178de8-8a8a-4300-8510-88875ad0fc8c
-source-git-commit: 6f5d51ef59aef831574bd55cee6b12a29e3d70d2
+source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
 workflow-type: tm+mt
-source-wordcount: '251'
-ht-degree: 100%
+source-wordcount: '250'
+ht-degree: 92%
 
 ---
 
@@ -16,7 +16,7 @@ Erfahren Sie, wie GitHub Pull-Anfragen an Ihre privaten Repositorys mit Anmerkun
 
 ## Überblick {#overview}
 
-Wenn Sie [private Repositorys](private-repositories.md) für Ihr Cloud Manager-Programm verwenden, werden Prüfungen in GitHub automatisch bei jeder Pull-Anfrage ausgeführt. Diese Prüfungen werden mit nützlichen Informationen kommentiert, die Ihnen helfen, Probleme mit Ihrem Code so schnell wie möglich zu verstehen.
+Wenn Sie [private Repositorys](private-repositories.md) für Ihr Cloud Manager-Programm verwenden, werden bei jeder Pull-Anfrage automatisch Prüfungen in GitHub ausgeführt. Diese Prüfungen werden mit nützlichen Informationen kommentiert, die Ihnen helfen, Probleme mit Ihrem Code so schnell wie möglich zu verstehen.
 
 ![Beispiel für Anmerkungen zur GitHub-Prüfung](assets/github-check-annotations.png)
 

@@ -2,10 +2,10 @@
 title: Wichtige Konzepte
 description: Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriffe. Dieses Dokument fasst einige der wichtigsten Informationen für Sie bei den ersten Schritten mit Cloud Manager zusammen.
 exl-id: 86dfc976-f3da-479a-9faa-08f40ca909e0
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+source-git-commit: 75baacd1fd6f36ca1d6ea5c1993516569ab6ef47
 workflow-type: tm+mt
 source-wordcount: '414'
-ht-degree: 100%
+ht-degree: 95%
 
 ---
 
@@ -42,7 +42,7 @@ Eine Instanz ist ein bestimmter virtueller Server, auf dem die [AEM-Lösung](#so
 
 ## Organisation {#organization}
 
-Eine Organisation ist ein Adobe-Konstrukt, das einen Unternehmenskunden repräsentiert. Ein Unternehmen kann mehrere Organisationen umfassen, je nachdem, wie diese im Identity-Management-System (IMS) von Adobe bereitgestellt wurden.
+Eine Organisation ist ein Adobe-Konstrukt, das einen Unternehmenskunden repräsentiert. Ein Unternehmen kann über mehrere Organisationen verfügen, je nachdem, wie sie im Identity Management System (IMS) von Adobe bereitgestellt werden.
 
 ## Pipeline {#pipeline}
 
