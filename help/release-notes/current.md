@@ -3,7 +3,7 @@ title: Versionshinweise für Cloud Manager 2026.1.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2026.1.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 19b8efeab20b07bdb71595fbff979ea11d8801c0
+source-git-commit: 6279792f05ec04c82634d255dad7264f6d0cef64
 workflow-type: tm+mt
 source-wordcount: '660'
 ht-degree: 64%
@@ -37,7 +37,7 @@ Die Veröffentlichung der nächsten Version ist für Donnerstag, den Freitag, 5.
   ![Option „Variablen anzeigen/bearbeiten“ im Dropdown-Menü für eine ausgewählte Pipeline](/help/release-notes/assets/view-edit-variables-option.png)
   *Option „Variablen anzeigen/bearbeiten“ im Dropdown-Menü für eine ausgewählte Pipeline.*
 
-  ![Dialogfeld „Variablenkonfiguration](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogfeld „Variablenkonfiguration“.
+  ![Dialogfeld „Variablenkonfiguration ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogfeld „Variablenkonfiguration“.*
 
 * **Verbesserte Stabilität, Leistung und Zuverlässigkeit**
 
@@ -52,7 +52,7 @@ Derzeit stehen die folgenden Möglichkeiten zur Verfügung:
 
 ### Erweiterbarkeit und Anpassung von Experience Hub {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub) dient als Einstiegspunkt für AEM und ist an die Anforderungen Ihres Unternehmens angepasst. Teilen Sie Adobe Ihre bestehenden Erweiterungen der AEM-Benutzeroberfläche mit, damit Sie sie mit minimalem Aufwand in Experience Hub aktivieren können.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) dient als Einstiegspunkt für AEM und ist an die Anforderungen Ihres Unternehmens angepasst. Teilen Sie Adobe Ihre bestehenden Erweiterungen der AEM-Benutzeroberfläche mit, damit Sie sie mit minimalem Aufwand in Experience Hub aktivieren können.
 
 ![Diagramm des Erweiterbarkeits- und Anpassungs-Workflows von Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
