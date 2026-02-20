@@ -7,10 +7,10 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 19b8efeab20b07bdb71595fbff979ea11d8801c0
+source-git-commit: 28841719e820e47577b411a4034ebc7a8e1bb556
 workflow-type: tm+mt
-source-wordcount: '392'
-ht-degree: 89%
+source-wordcount: '390'
+ht-degree: 90%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 89%
 # Dokumentation zu Cloud Manager {#content}
 
 + [Cloud Manager für AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Überblick {#overview}
    + [Wichtige Konzepte](/help/overview/key-concepts.md)
    + [User Journey](/help/overview/user-journey.md)
@@ -64,7 +64,7 @@ ht-degree: 89%
    + [Repository-Zugriffsinformationen](/help/managing-code/accessing-repositories.md)
    + [Hinzufügen eines Adobe-Repositorys](/help/managing-code/adobe-repositories.md)
    + [Hinzufügen eines privaten Repositorys](/help/managing-code/private-repositories.md)
-   + [Externes Repository hinzufügen (private Betaversion)](/help/managing-code/external-repositories.md)
+   + [Hinzufügen eines externen Repositorys](/help/managing-code/external-repositories.md)
    + [Verwalten von Zugriffstoken (private Betaversion)](/help/managing-code/manage-access-tokens.md)
    + [Unterstützung von Git-Untermodulen](/help/managing-code/git-submodules.md)
    + [Pull-Request-Prüfungen für private Repositorys](/help/managing-code/github-check-config.md)
