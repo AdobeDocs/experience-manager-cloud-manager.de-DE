@@ -2,10 +2,10 @@
 title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab-, Bitbucket- und Azure DevOps-Repositorys.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 76a5cb04514bc1961c8f9008e9bea5d1d6fe1c19
+source-git-commit: 651d9fc9964d599cb51556f7b6ba255fe8092d7f
 workflow-type: tm+mt
 source-wordcount: '2453'
-ht-degree: 90%
+ht-degree: 96%
 
 ---
 
@@ -20,10 +20,7 @@ Kundinnen und Kunden können nun auch ihre Azure DevOps-Git-Repositorys in Cloud
 * Für Edge Delivery Services-Benutzende kann das integrierte Repository zum Synchronisieren und Bereitstellen von Sitecode verwendet werden.
 * Für Benutzende von AEM as a Cloud Service und Adobe Managed Services (AMS) kann das Repository mit Fullstack- und Frontend-Pipelines verknüpft werden.
 
-<!--
->[!NOTE]
->
->The support added for Azure DevOps described in this article is available only through the private beta program. For more details and to sign up for the beta, see [Bring Your Own Git](/help/release-notes/current.md). -->
+
 
 ## Konfigurieren eines externen Repositorys
 
@@ -127,7 +124,7 @@ Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-toke
 | Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
-| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffstoken ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffstoken mithilfe der [Azure DevOps-Dokumentation](https://learn.microsoft.com/de-de/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Erforderliche Berechtigungen für das persönliche Zugrifftoken (Personal Access Token, PAT) in Azure DevOps.<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, das Verwalten von Pull-Anfragen und das Konfigurieren von oder Reagieren auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Azure DevOps sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Code (lesen)</li><li>Code (Status)</li><li>Pull-Anforderung Threads (Lesen und Schreiben)</li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffstoken ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffstoken mithilfe der [Azure DevOps-Dokumentation](https://learn.microsoft.com/de-de/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Erforderliche Berechtigungen für das persönliche Zugrifftoken (Personal Access Token, PAT) in Azure DevOps.<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, das Verwalten von Pull-Anfragen und das Konfigurieren von oder Reagieren auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Azure DevOps sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Code (Lesen)</li><li>Code (Status)</li><li>Pull-Request-Threads (Lesen und Schreiben)</li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
@@ -242,7 +239,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 | Erforderliche Webhook-Ereignisse und Authentifizierung |
 | --- |
-| Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anfragen validieren, auf Push-Übertragungen von Code reagieren und mit Kommentaren zur Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Code gesendet</li><li>Pull-Anforderung kommentierte</li><li>Pull-Anforderung erstellt</li><li>Pull-Anfrage aktualisiert</li></ul>Festlegen der Authentifizierung:<br>1. Geben Sie in das Feld **Benutzername für Standardauthentifizierung** `cloudmanager` ein.<br>2. Geben Sie in das Feld **Kennwort für die Standardauthentifizierung** das in der Benutzeroberfläche von Cloud Manager generierte Webhook-Geheimnis ein. |
+| Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anfragen validieren, auf Push-Übertragungen von Code reagieren und mit Kommentaren zur Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Code übermittelt</li><li>Pull-Request mit Kommentaren</li><li>Pull-Abfrage erstellt</li><li>Pull-Request aktualisiert</li></ul>Festlegen der Authentifizierung:<br>1. Geben Sie in das Feld **Benutzername für Standardauthentifizierung** `cloudmanager` ein.<br>2. Geben Sie in das Feld **Kennwort für die Standardauthentifizierung** das in der Benutzeroberfläche von Cloud Manager generierte Webhook-Geheimnis ein. |
 
 >[!ENDTABS]
 
@@ -300,23 +297,23 @@ Verwendet den Commit-Status zum Tracking des PR-Validierungsfortschritts. Im fol
 
 >[!TAB Azure DevOps]
 
-Azure DevOps verfolgt die Validierung von Pull-Anfragen mithilfe von Statusprüfungen. Wenn Cloud Manager die Validierung von Pull-Anfragen ausführt, werden Statusprüfungen hinzugefügt, die in der Benutzeroberfläche der Azure DevOps-Pull-Anfrage angezeigt werden.
+Azure DevOps verfolgt die Validierung von Pull-Requests mithilfe von Statusprüfungen. Wenn Cloud Manager die Validierung von Pull-Requests ausführt, werden Statusprüfungen hinzugefügt, die in der Benutzeroberfläche des Azure DevOps-Pull-Request angezeigt werden.
 
 Während der Validierung der Code-Qualität wird durch eine Statusprüfung angezeigt, dass der Vorgang ausgeführt wird:
 
-![Azure DevOps-Validierung von Pull-Anfragen mit Webhooks-1](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-1.png)
+![Azure DevOps-Validierung von Pull-Requests mit Webhooks-1](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-1.png)
 
 Wenn die Validierung der Code-Qualität abgeschlossen ist, wird die Statusprüfung aktualisiert und zeigt die Ergebnisse an:
 
-![Azure DevOps-Validierung von Pull-Anfragen mit Webhooks-2](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-2.png)
+![Azure DevOps-Validierung von Pull-Requests mit Webhooks-2](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-2.png)
 
 Wenn die Validierung fehlschlägt, werden detaillierte Fehlerinformationen in den Details zur Statusprüfung angegeben. Sie können auf die Statusprüfung klicken, um die vollständigen Validierungsergebnisse in Cloud Manager anzuzeigen.
 
-![Azure DevOps-Validierung von Pull-Anfragen mit Webhooks-3](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-3.png)
+![Azure DevOps-Validierung von Pull-Requests mit Webhooks-3](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-3.png)
 
-Für Kommentare und Feedback zu Pull-Anforderungen fügt Cloud Manager der Pull-Anforderung in Azure DevOps direkt Kommentare mit Validierungsdetails und allen erforderlichen Aktionen hinzu.
+Für Kommentare und Feedback zu Pull-Requests fügt Cloud Manager dem Pull-Request in Azure DevOps direkt Kommentare mit Validierungsdetails und allen erforderlichen Aktionen hinzu.
 
-![Azure DevOps-Validierung von Pull-Anfragen mit Webhooks-4](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
+![Azure DevOps-Validierung von Pull-Requests mit Webhooks-4](/help/managing-code/assets/azure-devops-validation-of-pull-requests-with-webhooks-4.png)
 
 
 >[!ENDTABS]

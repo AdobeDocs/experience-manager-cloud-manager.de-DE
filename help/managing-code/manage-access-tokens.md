@@ -2,7 +2,7 @@
 title: Verwalten von Zugriffstoken in Cloud Manager
 description: Erfahren Sie, wie Sie Zugriffstoken anzeigen, bearbeiten und löschen können, die für das Übermitteln Ihres eigenen Git-Repositorys in Cloud Manager auf Adobe Managed Services verwendet werden.
 exl-id: 873aad0b-d7c6-4bc3-a70d-bbfdc1e02193
-source-git-commit: 28841719e820e47577b411a4034ebc7a8e1bb556
+source-git-commit: 651d9fc9964d599cb51556f7b6ba255fe8092d7f
 workflow-type: tm+mt
 source-wordcount: '359'
 ht-degree: 81%
@@ -16,12 +16,6 @@ Cloud Manager verwendet Zugriffs-Token, um auf externen Git-Plattformen gehostet
 Mit **Zugriffs-Token verwalten** können Sie Token jetzt effizienter verwalten. Sie können Token anzeigen, umbenennen oder entfernen, die mit unterstützten externen Git-Anbietern wie GitHub Enterprise, GitLab, Bitbucket und Azure DevOps verbunden sind.
 
 Siehe auch [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
-
-<!--
->[!NOTE]
->
->The features described in this article are only available through the private beta program. For more details and to sign up for  the private beta, see [Manage Access Tokens](/help/release-notes/current.md#access-tokens).
--->
 
 ## Anzeigen von Zugriffs-Token {#view-access-tokens}
 
