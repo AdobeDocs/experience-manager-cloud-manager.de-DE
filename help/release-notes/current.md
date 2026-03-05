@@ -41,7 +41,7 @@ Die Unterstützung für Benutzeroberflächenerweiterungen in [AEM Experience Hub
   ![Option „Variablen anzeigen/bearbeiten“ im Dropdown-Menü für eine ausgewählte Pipeline](/help/release-notes/assets/view-edit-variables-option.png)
   *Option „Variablen anzeigen/bearbeiten“ im Dropdown-Menü für eine ausgewählte Pipeline.*
 
-  ![Dialogfeld „Variablenkonfiguration ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogfeld „Variablenkonfiguration“.*
+  ![Dialogfeld „Variablenkonfiguration &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogfeld „Variablenkonfiguration“.*
 
 * **Verbesserte Stabilität, Leistung und Zuverlässigkeit**
 
