@@ -7,10 +7,10 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 8ceaefebdddefb508a4c296c00f053e6b4dfb248
+source-git-commit: 77f5000f0a237dc82e183eb074eddb23e3a2eb44
 workflow-type: tm+mt
-source-wordcount: '388'
-ht-degree: 91%
+source-wordcount: '334'
+ht-degree: 87%
 
 ---
 
@@ -18,7 +18,7 @@ ht-degree: 91%
 # Dokumentation zu Cloud Manager {#content}
 
 + [Cloud Manager für AMS](/help/introduction.md)
-+ [Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub)
++ [Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub)
 + Überblick {#overview}
    + [Wichtige Konzepte](/help/overview/key-concepts.md)
    + [User Journey](/help/overview/user-journey.md)
@@ -55,7 +55,7 @@ ht-degree: 91%
    + [Überwachen von Umgebungen](/help/using/monitoring-environments.md)
    + [Service Pack-Aktualisierungen für Entwicklungsumgebungen (private Betaversion)](/help/using/service-packs-environments.md)
    + [Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/)
-   + [Cloud Manager-CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
+   + [CLOUD MANAGER CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
    + [Benachrichtigungen](/help/using/notifications.md)
    + [Qualitätsregeln für benutzerspezifischen Code](/help/using/custom-code-quality-rules.md)
    + [Inhaltskopie für Umgebungskonsistenz](/help/using/content-copy.md)
@@ -77,10 +77,13 @@ ht-degree: 91%
    + [Test](/help/product-update-wizard/evaluation.md)
 + Versionshinweise {#release-notes}
    + [Aktuell](/help/release-notes/current.md)
+   + 2026 {#rn-2026}
+      + [2026.2.0](/help/release-notes/2026/2026-2-0.md)
+      + [2026.1.0](/help/release-notes/2026/2026-1-0.md)
    + 2025 {#rn-2025}
-      + [2 025,12,0](/help/release-notes/2025/2025-12-0.md)
-      + [2 025,11,0](/help/release-notes/2025/2025-11-0.md)
-      + [2 025,10,0](/help/release-notes/2025/2025-10-0.md)
+      + [2025.12.0](/help/release-notes/2025/2025-12-0.md)
+      + [2025.11.0](/help/release-notes/2025/2025-11-0.md)
+      + [2025.10.0](/help/release-notes/2025/2025-10-0.md)
       + [2025.9.0](/help/release-notes/2025/2025-9-0.md)
       + [2025.8.0](/help/release-notes/2025/2025-8-0.md)
       + [2025.7.0](/help/release-notes/2025/2025-7-0.md)
