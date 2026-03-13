@@ -2,10 +2,10 @@
 title: Benutzerdefinierte Berechtigungen
 description: Erfahren Sie, wie Sie mit benutzerdefinierten Berechtigungen neue benutzerdefinierte Berechtigungsprofile mit konfigurierbaren Berechtigungen erstellen können, um den Zugriff auf Programme, Pipelines und Umgebungen für Cloud Manager-Benutzende zu beschränken.
 exl-id: a81eda9f-aa89-40ea-8e4c-52367a0a6aba
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '1373'
-ht-degree: 99%
+source-wordcount: '1391'
+ht-degree: 97%
 
 ---
 
@@ -153,7 +153,7 @@ Berechtigungselemente beziehen sich auf den Anwendungsumfang der Berechtigungen.
 
 | Berechtigungselementtyp | Beispiel | Beschreibung |
 | --- | --- | --- |
-| Unternehmen | Unternehmen:FirmaA | Alle anwendbaren Ressourcen eines Unternehmens. Eine Ressource kann ein Programm, eine Umgebung oder eine Pipeline sein. Wenn Benutzende ein Unternehmen für eine Berechtigung hinzufügen, erhalten auch alle neuen Ressourcen in diesem Unternehmen diese Berechtigung. |
+| Unternehmen | Unternehmen:companyA | Alle anwendbaren Ressourcen eines Unternehmens. Eine Ressource kann ein Programm, eine Umgebung oder eine Pipeline sein. Wenn Benutzende ein Unternehmen für eine Berechtigung hinzufügen, erhalten auch alle neuen Ressourcen in diesem Unternehmen diese Berechtigung. |
 | Programm | Programm A | Alle anwendbaren Ressourcen eines Programms. |
 | Umgebung | Programm A : Umgebung | In einer bestimmten Umgebung anwendbar. |
 | Pipeline | Programm A : Pipeline | Gilt für eine bestimmte Pipeline. |
@@ -163,7 +163,7 @@ Berechtigungselemente beziehen sich auf den Anwendungsumfang der Berechtigungen.
 Beachten Sie bei der Verwendung benutzerdefinierter Berechtigungen die folgenden Einschränkungen:
 
 * Zur Erstellung benutzerdefinierter Profile ist ein [begrenzter Satz an Berechtigungen verfügbar](#configurable-permissions).
-* Bei Ressourcen wie Programm, Umgebung, Pipeline usw., die in Cloud Manager erstellt wurden, kann es bis zu zwei Minuten dauern, bis die Admin Console zur Berechtigungskonfiguration angezeigt wird.
+* Es kann zwei Minuten dauern, bis in Cloud Manager erstellte Ressourcen wie Programm, Umgebung, Pipeline usw. zur Konfiguration von Berechtigungen in Admin Console angezeigt werden.
 * In seltenen Fällen, in denen ein benutzerdefinierter Berechtigungsdienst nicht reagiert, sind vordefinierte Profile weiterhin verfügbar und Benutzende in vordefinierten Profilen haben weiterhin darauf Zugriff.
 
 ## Häufig gestellte Fragen {#faq}

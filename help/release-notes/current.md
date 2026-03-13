@@ -3,7 +3,7 @@ title: Versionshinweise für Cloud Manager 2026.3.0
 description: Erfahren Sie mehr über die Version Cloud Manager 2026.3.0 auf Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
-source-git-commit: 9ce8a2ca2117992421052b76b0f5c7c9c5a6195b
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 19%
@@ -30,7 +30,7 @@ Die nächste geplante Version ist Donnerstag, der 2. April 2026.
 ## Neue Funktionen {#what-is-new}
 
 * **Unterstützung der Erweiterbarkeit der Benutzeroberfläche in AEM Experience Hub**
-Die Unterstützung für Benutzeroberflächenerweiterungen in [AEM Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub) ist jetzt aktiviert, sodass Entwicklerinnen und Entwickler die Benutzeroberfläche mit benutzerdefinierten Funktionen und Widgets erweitern können, die mit Adobe App Builder erstellt wurden.
+Die Unterstützung für Benutzeroberflächenerweiterungen in [AEM Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) ist jetzt aktiviert, sodass Entwicklerinnen und Entwickler die Benutzeroberfläche mit benutzerdefinierten Funktionen und Widgets erweitern können, die mit Adobe App Builder erstellt wurden.
 
   Weitere Informationen finden Sie unter [AEM Experience Hub](https://developer.adobe.com/uix/docs/services/aem-experience-hub/).
 
@@ -41,7 +41,7 @@ Die Unterstützung für Benutzeroberflächenerweiterungen in [AEM Experience Hub
   ![Option „Variablen anzeigen/bearbeiten“ im Dropdown-Menü für eine ausgewählte Pipeline](/help/release-notes/assets/view-edit-variables-option.png)
   *Option „Variablen anzeigen/bearbeiten“ im Dropdown-Menü für eine ausgewählte Pipeline.*
 
-  ![Dialogfeld „Variablenkonfiguration &#x200B;](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogfeld „Variablenkonfiguration“.*
+  ![Dialogfeld „Variablenkonfiguration ](/help/release-notes/assets/view-edit-variables-variablesconfig-dialogbox.png)*Dialogfeld „Variablenkonfiguration“.*
 
 * **Verbesserte Stabilität, Leistung und Zuverlässigkeit**
 
@@ -57,7 +57,7 @@ Derzeit stehen die folgenden Möglichkeiten zur Verfügung:
 <!--
 ### Experience Hub Extensibility and Customization {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
+[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) serves as your entry point to AEM, customized for your organization's needs. Tell Adobe about your existing AEM UI extensions so they can help you enable them in Experience Hub with minimal effort.
 
 ![Diagram of Experience Hub extensibility and customization workflow](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
@@ -91,4 +91,5 @@ Es gibt keine signifikanten Fehlerbehebungen in der Cloud Manager on AMS-Version
 <!--
 Known Issues {#known-issues}
 
-* A -->
+* A 
+-->

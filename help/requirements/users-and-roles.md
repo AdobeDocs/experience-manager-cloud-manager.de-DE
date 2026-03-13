@@ -2,9 +2,9 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Benutzende und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: 9ad9af206fafea45f8bbf61b02950de0776b5a9f
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '770'
+source-wordcount: '796'
 ht-degree: 86%
 
 ---
@@ -27,7 +27,7 @@ In [!UICONTROL Cloud Manager] sind derzeit vier Rollen für Benutzende definiert
 
 ## Rollendefinitionen {#role-definitions}
 
-In der folgenden Tabelle sind die Rollen in Cloud Manager zusammengefasst. 
+In der folgenden Tabelle sind die Rollen in Cloud Manager zusammengefasst.
 
 | [!UICONTROL Cloud Manager]-Rolle | Beschreibung |
 | --- | --- |
@@ -44,7 +44,7 @@ In der folgenden Tabelle sind die Rollen in Cloud Manager zusammengefasst.
 
 ## Erstellen eines Produktprofils mit der Admin Console {#using-admin-console-to-create-a-profile}
 
-[!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+[!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenzugehörigkeiten werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
 Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin Console finden Sie unter [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
 
@@ -57,10 +57,12 @@ Admins müssen unter dem Produktkontext [!UICONTROL AEM Managed Services] neue P
 
 Erstellen oder fügen Sie diesen Produktprofilen mit der Admin Console Benutzer oder Gruppen hinzu.
 
-<!-- CQDOC-22790
+<!-- 
+CQDOC-22790
 >[!IMPORTANT]
 >
->Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. 
+-->
 
 **So erstellen Sie ein Produktprofil mit der Admin Console:**
 
@@ -84,10 +86,13 @@ Erstellen oder fügen Sie diesen Produktprofilen mit der Admin Console Benutzer 
    * **Anzeigename** – Der **Anzeigename** muss dem vom [!UICONTROL Cloud Manager] definierten technischen Wert entsprechen (siehe nachfolgende Tabelle).
    * **Berechtigungsgruppe** – Sie können eine Berechtigungsgruppe für das Profil auswählen (nicht immer verfügbar).
 
-<!-- CQDOC-22790
-      >[!IMPORTANT]
-      >
-      >Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile. -->
+<!-- 
+CQDOC-22790
+
+>[!IMPORTANT]
+>
+>Due to a current limitation in the Admin Console and Cloud Manager, profiles cannot be saved with **No permissions** selected. Attempting to do so results in a backend error. This behavior affects the creation of Deployment Manager profiles. As a workaround, select at least one permission when creating a new profile.
+-->
 
 ![Erstellen eines neuen Profils](/help/assets/screen_shot_2018-05-04at171819.png)
 
@@ -113,7 +118,7 @@ Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzerinnen, Benu
 
 1. Klicken Sie im linken Navigationsbereich auf **Benutzer** und dann auf eine Benutzerin oder einen Benutzer, um diese bzw. diesen zu ändern.
 
-1. Klicken Sie auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
+1. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
 
    ![Benutzer bearbeiten](/help/assets/admin-console-edit-user.png)
 

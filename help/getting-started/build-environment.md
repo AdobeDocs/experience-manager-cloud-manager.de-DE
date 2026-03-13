@@ -2,10 +2,10 @@
 title: Die Build-Umgebung
 description: Erfahren Sie mehr über die spezielle Build-Umgebung, die Cloud Manager-Benutzende zum Erstellen und Testen Ihres Codes verwenden.
 exl-id: b3543320-66d4-4358-8aba-e9bdde00d976
-source-git-commit: e9f3ac70735a95a15b1f63cf40496672162de777
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '1161'
-ht-degree: 83%
+source-wordcount: '1243'
+ht-degree: 81%
 
 ---
 
@@ -57,7 +57,7 @@ Die Build-Umgebungen von Cloud Manager weisen folgende Eigenschaften auf.
 
 ## HTTPS-Maven-Repositorys {#https-maven}
 
-Mit Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) hat eine rollierende Aktualisierung der Build-Umgebung gestartet (mit Version 2023.12.0 abgeschlossen), die eine Aktualisierung auf Maven 3.8.8 enthielt. Eine wesentliche Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitserweiterung zur Minimierung potenzieller Schwachstellen. Insbesondere deaktiviert Maven nun alle unsicheren `http://*`-Spiegelungen standardmäßig, wie in den [Maven-Versionshinweisen](https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291) beschrieben.
+Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) begann mit einem rollierenden Update der Build-Umgebung (abgeschlossen mit Version 2023.12.0), das ein Update auf Maven 3.8.8 enthielt. Eine wichtige Änderung, die in Maven 3.8.1 eingeführt wurde, war eine Sicherheitsverbesserung, die darauf abzielte, potenzielle Schwachstellen zu beheben. Insbesondere deaktiviert Maven nun alle unsicheren `http://*`-Spiegelungen standardmäßig, wie in den [Maven-Versionshinweisen](https://maven.apache.org/docs/3.8.1/release-notes.html#cve-2021-26291) beschrieben.
 
 Aufgrund dieser Sicherheitsverbesserung können bei einzelnen Benutzenden während des Build-Schritts Probleme auftreten, insbesondere beim Herunterladen von Artefakten aus Maven-Repositorys, die unsichere HTTP-Verbindungen verwenden.
 
@@ -78,7 +78,8 @@ Standardmäßig werden Projekte vom Cloud Manager-Build-Prozess mit dem Oracle 8
 >1. Adobe empfiehlt, den Cloud Manager-Build-Cache zu löschen oder eine neue Pipeline-Ausführung auszulösen.
 >
 
-<!--DEPRECATED 
+<!--
+DEPRECATED 
 ### Maven Toolchains {#maven-toolchains}
 
 The [Maven Toolchains plug-in](https://maven.apache.org/plugins/maven-toolchains-plugin/) lets projects select a specific JDK (or toolchain) to use in the context of toolchains-aware Maven plug-ins. This process is done in the project's `pom.xml` file by specifying a vendor and version value. A sample section in the `pom.xml` file is the following:
@@ -124,7 +125,8 @@ The currently available vendor/version combinations are:
 
 >[!NOTE]
 >
->Starting April 2022, Oracle JDK is going to be the default JDK for the development and operation of AEM applications. Cloud Manager's build process automatically switches to using Oracle JDK, even if an alternative option is explicitly selected in the Maven toolchain. See the [April release notes](/help/release-notes/2022/2022-4-0.md) for more details. -->
+>Starting April 2022, Oracle JDK is going to be the default JDK for the development and operation of AEM applications. Cloud Manager's build process automatically switches to using Oracle JDK, even if an alternative option is explicitly selected in the Maven toolchain. See the [April release notes](/help/release-notes/2022/2022-4-0.md) for more details.
+-->
 
 ### Alternative JDK-Version für die Maven-Ausführung {#alternate-maven}
 

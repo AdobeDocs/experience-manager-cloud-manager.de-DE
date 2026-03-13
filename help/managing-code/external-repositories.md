@@ -2,10 +2,10 @@
 title: Hinzufügen von externen Repositorys in Cloud Manager
 description: Erfahren Sie, wie Sie in Cloud Manager ein externes Repository hinzufügen. Cloud Manager unterstützt die Integration mit GitHub Enterprise-, GitLab-, Bitbucket- und Azure DevOps-Repositorys.
 exl-id: 4500cacc-5e27-4bbb-b8f6-5144dac7e6da
-source-git-commit: 651d9fc9964d599cb51556f7b6ba255fe8092d7f
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '2453'
-ht-degree: 96%
+source-wordcount: '2560'
+ht-degree: 82%
 
 ---
 
@@ -28,8 +28,10 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 
 1. Fügen Sie einem ausgewählten Programm [ein externes Repository hinzu](#add-external-repo).
 1. [Verknüpfen eines validierten externen Repositorys mit einer Pipeline](#validate-ext-repo).
-<!-- 1. Provide an access token to the external repository.
-1. Validate ownership of the private GitHub repository. -->
+<!--
+1. Provide an access token to the external repository.
+1. Validate ownership of the private GitHub repository.
+-->
 1. [Konfigurieren Sie einen Webhook](#configure-webhook) für ein externes Repository.
 
 
@@ -39,8 +41,10 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 >
 >Externe Repositorys können nicht mit Konfigurations-Pipelines verknüpft werden.
 
-<!-- THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY>
-* Pipelines using external repositories (excluding GitHub-hosted repositories) and the **Deployment Trigger** option [!UICONTROL **On Git Changes**], triggers are not automatically started. They must be manually started. -->
+<!--
+THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2024.12.0+Release. THEY CAN NOW START AUTOMATICALLY>
+* Pipelines using external repositories (excluding GitHub-hosted repositories) and the **Deployment Trigger** option [!UICONTROL **On Git Changes**], triggers are not automatically started. They must be manually started.
+-->
 
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation aus.
@@ -62,7 +66,7 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
    | Feld | Beschreibung |
    | --- | --- |
    | **Repository-Name** | Erforderlich. Ein aussagekräftiger Name für Ihr neues Repository. |
-   | **Repository-URL** | Erforderlich. Die URL des Repositorys.<br><br>Wenn Sie ein von GitHub gehostetes Repository verwenden, muss der Pfad mit `.git` enden.<br>Beispiel: *`https://github.com/org-name/repo-name.git`* (URL-Pfad dient nur zur Veranschaulichung).<br><br>Wenn Sie ein externes Repository verwenden, muss es das folgende URL-Pfadformat verwenden:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> oder <br>`https://self-hosted-domain/org-name/repo-name.git`<br>. Außerdem muss es mit Ihrem Git-Anbieter übereinstimmen. |
+   | **Repository-URL** | Erforderlich. Die URL des Repositorys.<br><br>Wenn Sie ein von GitHub gehostetes Repository verwenden, muss der Pfad auf `.git` enden.<br>Beispiel: *`https://github.com/org-name/repo-name.git`* (der URL-Pfad dient nur zur Veranschaulichung).<br><br>Wenn Sie ein externes Repository verwenden, muss das folgende URL-Pfadformat verwendet werden:<br>`https://git-vendor-name.com/org-name/repo-name.git`<br> oder<br>`https://self-hosted-domain/org-name/repo-name.git`<br>Und muss mit Ihrem Git-Anbieter übereinstimmen. |
    | **Repository-Typ auswählen** | Erforderlich. Wählen Sie den verwendeten Repository-Typ aus:<ul><li>**GitHub** (GitHub Enterprise und die selbst gehostete GitHub-Version)</li><li>**GitLab** (sowohl `gitlab.com` als auch die selbst gehostete GitLab-Version) </li><li>**Bitbucket** (nur `bitbucket.org` (Cloud-Version) wird unterstützt. Die selbst gehostete Version von Bitbucket wird seit dem 15. Februar 2024 nicht mehr unterstützt.)</li><li>**Azure DevOps** (`dev.azure.com`)</ul>Wenn der obige Repository-URL-Pfad den Namen des Git-Anbieters enthält, z. B. GitLab oder Bitbucket, ist der Repository-Typ bereits für Sie vorausgewählt.</li> </ul> |
    | **Beschreibung** | Optional. Eine längere Beschreibung des Repositorys. |
 
@@ -79,12 +83,14 @@ Die Konfiguration eines externen Repositorys in Cloud Manager erfolgt in drei Sc
 
 >[!TAB GitHub Enterprise]
 
-<!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/github -->
+<!--
+https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/github 
+-->
 
 | Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
-| **Neues Zugriffs-Token hinzufügen** | <ul><li> Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitHub-Dokumentation](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) befolgen.<li>Erforderliche Berechtigungen für das persönliche Zugriffs-Token (Personal Access Token, PAT) in GitHub<br>Diese Berechtigungen stellen sicher, dass Cloud Manager Pull-Anfragen validieren, Commit-Statusprüfungen verwalten und auf erforderliche Repository-Details zugreifen kann.<br>Wenn Sie in GitHub das PAT generieren, stellen Sie sicher, dass es die folgenden Repository-Berechtigungen enthält:<ul><li>Pull-Anfrage (Lesen und Schreiben)<li>Commit-Status (Lesen und Schreiben)<li>Repository-Metadaten (schreibgeschützt)</li></li></ul></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+| **Neues Zugriffs-Token hinzufügen** | <ul><li> Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitHub-Dokumentation](https://docs.github.com/en/enterprise-server@3.14/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) befolgen.<li>Erforderliche Berechtigungen für das GitHub Enterprise Personal Access Token (PAT)<br>Diese Berechtigungen stellen sicher, dass Cloud Manager Pull-Anforderungen validieren, Commit-Statusprüfungen verwalten und auf die erforderlichen Repository-Details zugreifen kann.<br>Wenn Sie den PAT in GitHub Enterprise generieren, stellen Sie sicher, dass er die folgenden Repository-Berechtigungen enthält:<ul><li>Pull-Anfrage (Lesen und Schreiben)<li>Commit-Status (Lesen und Schreiben)<li>Repository-Metadaten (schreibgeschützt)</li></li></ul></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
@@ -92,12 +98,14 @@ Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-toke
 
 >[!TAB GitLab]
 
-<!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/gitlab -->
+<!--
+https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/gitlab 
+-->
 
 | Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
-| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitLab-Dokumentation](https://docs.gitlab.com/user/profile/personal_access_tokens/) befolgen.<li>Erforderliche Berechtigungen für das persönliche Zugriffs-Token (Personal Access Token, PAT) in GitLab<br>Diese Bereiche ermöglichen Cloud Manager den Zugriff auf Repository-Daten und Benutzerinformationen, die für die Validierung und Webhook-Integration erforderlich sind.<br>Stellen Sie beim Erstellen des PAT in GitLab sicher, dass es die folgenden Token-Gültigkeitsbereiche enthält:<ul><li>API<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein persönliches Zugriffs-Token, indem Sie die Anweisungen in der [GitLab-Dokumentation](https://docs.gitlab.com/user/profile/personal_access_tokens/) befolgen.<li>Erforderliche Berechtigungen für das GitLab Personal Access Token (PAT)<br>Diese Bereiche ermöglichen Cloud Manager den Zugriff auf Repository-Daten und Benutzerinformationen, die für die Validierung und Webhook-Integration erforderlich sind.<br>Wenn Sie den PAT in GitLab generieren, stellen Sie sicher, dass er die folgenden Token-Bereiche enthält:<ul><li>API<li>read_user</li></li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
@@ -106,12 +114,14 @@ Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-toke
 
 >[!TAB Bitbucket]
 
-<!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/bitbucket -->
+<!--
+https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/bitbucket 
+-->
 
 | Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
-| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffs-Token mithilfe der [Bitbucket-Dokumentation](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Erforderliche Berechtigungen für das persönliche Zugriffs-Token (Personal Access Token, PAT) in Bitbucket<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, das Verwalten von Pull-Anfragen und das Konfigurieren von oder Reagieren auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Bitbucket sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Repository (schreibgeschützt)<li>Pull-Anfragen (Lesen und Schreiben)<li>Webhooks (Lesen und Schreiben)</li></li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffs-Token mithilfe der [Bitbucket-Dokumentation](https://support.atlassian.com/bitbucket-cloud/docs/create-a-repository-access-token/).<li>Erforderliche Berechtigungen für das Bitbucket Personal Access Token (PAT)<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, die Verwaltung von Pull-Anforderungen und die Konfiguration oder Reaktion auf Webhook-Ereignisse.<br>Wenn Sie das App-Kennwort in Bitbucket erstellen, stellen Sie sicher, dass es die folgenden erforderlichen App-Kennwortberechtigungen enthält:<ul><li>Repository (schreibgeschützt)<li>Pull-Anfragen (Lesen und Schreiben)<li>Webhooks (Lesen und Schreiben)</li></li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
@@ -119,12 +129,14 @@ Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-toke
 
 >[!TAB Azure DevOps]
 
-<!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/azure_devops -->
+<!--
+https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/azure_devops
+-->
 
 | Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
-| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffstoken ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffstoken mithilfe der [Azure DevOps-Dokumentation](https://learn.microsoft.com/de-de/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Erforderliche Berechtigungen für das persönliche Zugrifftoken (Personal Access Token, PAT) in Azure DevOps.<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, das Verwalten von Pull-Anfragen und das Konfigurieren von oder Reagieren auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Azure DevOps sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Code (Lesen)</li><li>Code (Status)</li><li>Pull-Request-Threads (Lesen und Schreiben)</li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffstoken mithilfe der [Azure DevOps-Dokumentation](https://learn.microsoft.com/de-de/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Erforderliche Berechtigungen für das Azure DevOps Personal Access Token (PAT).<br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, die Verwaltung von Pull-Anfragen und die Konfiguration oder Reaktion auf Webhook-Ereignisse.<br>Wenn Sie das App-Kennwort in Azure DevOps erstellen, stellen Sie sicher, dass es die folgenden erforderlichen App-Kennwortberechtigungen enthält:<ul><li>Code (Lesen)</li><li>Code (Status)</li><li>Pull-Request-Threads (Lesen und Schreiben)</li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
@@ -215,7 +227,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 | Erforderliche Webhook-Ereignisse |
 | --- |
-| Diese Ereignisse ermöglichen es Cloud Manager, auf GitHub-Aktivitäten zu reagieren, z. B. die Validierung von Pull-Anfragen, Push-basierte Trigger für Pipelines oder Edge Delivery Services-Code-Synchronisierungen.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Pull-Anfragen<li>Push-Benachrichtigungen<li>Anmerkungen zu Problemen</li></li></li></ul></ul></ul> |
+| Diese Ereignisse ermöglichen es Cloud Manager, auf GitHub-Aktivitäten wie die Validierung von Pull-Anforderungen, Push-basierte Trigger für Pipelines oder Edge Delivery Services-Codesynchronisierung zu reagieren.<br>Stellen Sie sicher, dass der Webhook für die folgenden erforderlichen Webhook-Ereignisse auf Trigger eingerichtet ist:<ul><li>Pull-Anfragen<li>Push-Benachrichtigungen<li>Anmerkungen zu Problemen</li></li></li></ul></ul></ul> |
 
 >[!TAB GitLab]
 
@@ -223,7 +235,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 | Erforderliche Webhook-Ereignisse |
 | --- |
-| Diese Webhook-Ereignisse ermöglichen es Cloud Manager, Pipelines bei der Push-Übertragung von Code oder beim Senden einer Zusammenführungsanfrage auszulösen. Sie verfolgen außerdem Kommentare im Zusammenhang mit der Validierung von Pull-Anfragen (durch Notizereignisse).<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Push-Ereignisse<li>Zusammenführen von Anfrageereignissen<li>Notizereignisse</li></li></li></ul></ul></ul> |
+| Diese Webhook-Ereignisse ermöglichen es Cloud Manager, Pipelines bei der Push-Übertragung von Code oder beim Senden einer Zusammenführungsanfrage auszulösen. Sie verfolgen auch Kommentare im Zusammenhang mit der Validierung von Pull-Anforderungen (durch Notizereignisse). <br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er für die folgenden erforderlichen Webhook-Ereignisse Trigger aufweist<ul><li>Push-Ereignisse<li>Zusammenführen von Anfrageereignissen<li>Notizereignisse</li></li></li></ul></ul></ul> |
 
 >[!TAB Bitbucket]
 
@@ -231,7 +243,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 | Erforderliche Webhook-Ereignisse |
 | --- |
-| Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anfragen validieren, auf Push-Übertragungen von Code reagieren und mit Kommentaren zur Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Pull-Anfrage: Erstellt<li>Pull-Anfrage: Aktualisiert<li>Pull-Anfragen: Zusammengeführt<li>Pull-Anfrage: Kommentar<li>Repository: Push</li></li></li></ul></ul></ul> |
+| Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anforderungen validieren, auf Code-Push-Benachrichtigungen reagieren und mit Kommentaren für die Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er für die folgenden erforderlichen Webhook-Ereignisse Trigger erzeugt<ul><li>Pull-Anfrage: Erstellt<li>Pull-Anfrage: Aktualisiert<li>Pull-Anfragen: Zusammengeführt<li>Pull-Anfrage: Kommentar<li>Repository: Push</li></li></li></ul></ul></ul> |
 
 >[!TAB Azure DevOps]
 
@@ -239,7 +251,7 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 
 | Erforderliche Webhook-Ereignisse und Authentifizierung |
 | --- |
-| Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anfragen validieren, auf Push-Übertragungen von Code reagieren und mit Kommentaren zur Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er bei den folgenden erforderlichen Webhook-Ereignissen ausgelöst wird:<ul><li>Code übermittelt</li><li>Pull-Request mit Kommentaren</li><li>Pull-Abfrage erstellt</li><li>Pull-Request aktualisiert</li></ul>Festlegen der Authentifizierung:<br>1. Geben Sie in das Feld **Benutzername für Standardauthentifizierung** `cloudmanager` ein.<br>2. Geben Sie in das Feld **Kennwort für die Standardauthentifizierung** das in der Benutzeroberfläche von Cloud Manager generierte Webhook-Geheimnis ein. |
+| Diese Ereignisse stellen sicher, dass Cloud Manager Pull-Anforderungen validieren, auf Code-Push-Benachrichtigungen reagieren und mit Kommentaren für die Pipeline-Koordination interagieren kann.<br>Stellen Sie sicher, dass der Webhook so eingerichtet ist, dass er für die folgenden erforderlichen Webhook-Ereignisse Trigger erzeugt<ul><li>Code übermittelt</li><li>Pull-Request mit Kommentaren</li><li>Pull-Abfrage erstellt</li><li>Pull-Request aktualisiert</li></ul>Festlegen der Authentifizierung:<br>1. Geben Sie im Feld **Benutzername für** Authentifizierung“ `cloudmanager`.<br>2 ein. Geben Sie in das Feld **Kennwort für die Standardauthentifizierung** das in der Benutzeroberfläche von Cloud Manager generierte Webhook-Geheimnis ein. |
 
 >[!ENDTABS]
 

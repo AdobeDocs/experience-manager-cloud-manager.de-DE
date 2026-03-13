@@ -2,9 +2,9 @@
 title: Häufig gestellte Fragen zu Cloud Manager
 description: Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu Cloud Manager für AMS-Kundinnen und -Kunden.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
-source-git-commit: e7e9844b5f06552fc2104584c63935dee7a9fa89
+source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '762'
 ht-degree: 100%
 
 ---
@@ -20,7 +20,8 @@ Dieses Dokument enthält Antworten für AMS-Kundinnen und -Kunden auf die am hä
 Yes. You need to add the `maven-toolchains-plugin` with the correct settings for Java 11.
 
 * This process is documented [here](/help/getting-started/using-the-wizard.md).
-* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). -->
+* For an example, see the [WKND sample project code](https://github.com/adobe/aem-guides-wknd/commit/6cb5238cb6b932735dcf91b21b0d835ae3a7fe75). 
+-->
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über das maven-scr-plugin fehl. Was kann ich tun? {#maven-src-plugin}
 
@@ -79,11 +80,11 @@ Für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstell
 
 Cloud Manager fügt zu Staging- und Produktions-Builds automatisch eine eigene Version hinzu und erstellt eine Git-Verzweigung. Es ist keine spezielle Konfiguration notwendig. Wenn Sie keine Maven-Version wie zuvor beschrieben festlegen, ist die Bereitstellung trotzdem erfolgreich und eine Version wird automatisch festgelegt.
 
-## Mein Maven-Build schlägt bei Cloud Manager-Bereitstellungen fehl, lokal wird er jedoch ohne Fehler erstellt. Was ist los? {#maven-build-fail}
+## Mein Maven-Build schlägt bei Cloud Manager-Bereitstellungen fehl, lokal wird er jedoch ohne Fehler erstellt. Was läuft da schief? {#maven-build-fail}
 
 Weitere Informationen finden Sie in dieser [Git-Ressource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
-## Ich bin nicht in der Lage, eine Variable mit einem aio-Befehl zu setzen. Was kann ich tun? {#set-variable}
+## Ich kann eine Variable nicht mit einem aio-Befehl festlegen. Was kann ich tun? {#set-variable}
 
 Möglicherweise erhalten Sie eine 403-Fehlermeldung wie die folgende, wenn Sie versuchen, Pipeline-Variablen über `aio`-Befehle aufzulisten oder zu setzen.
 
