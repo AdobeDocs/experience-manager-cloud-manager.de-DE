@@ -30,7 +30,7 @@ Führen Sie die folgenden Schritte aus, um die anfängliche Dispatcher-Konfigura
 
 1. Beziehen Sie die aktuellen Produktionskonfigurationsdateien von Ihrem CSE.
 1. Entfernen Sie hartcodierte umgebungsspezifische Daten wie beispielsweise die Publish-Renderer-IP-Adresse und ersetzen Sie sie durch Variablen.
-1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem [Variablen](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars))-Ordner hinzu.
+1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem [Variablen](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=de#variables-files-(.vars))-Ordner hinzu.
 1. Testen Sie die aktualisierten Konfigurationen in Ihrer Staging-Umgebung.
 1. Bitten Sie nach dem Test Ihren CSE, diese für die Produktion bereitzustellen.
 1. Übertragen Sie die Dateien in das Git-Repository.
