@@ -2,10 +2,10 @@
 title: Dispatcher-Konfigurationen
 description: Weitere Informationen zum Bereitstellen von Dispatcher-Konfigurationsdateien mit Cloud Manager
 exl-id: ffc2b60e-bde7-48ca-b268-dea0f8fd4e30
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+source-git-commit: 037a296c21adde6f7fa731c71ee4a75cea042780
 workflow-type: tm+mt
-source-wordcount: '575'
-ht-degree: 100%
+source-wordcount: '595'
+ht-degree: 89%
 
 ---
 
@@ -30,7 +30,7 @@ Führen Sie die folgenden Schritte aus, um die anfängliche Dispatcher-Konfigura
 
 1. Beziehen Sie die aktuellen Produktionskonfigurationsdateien von Ihrem CSE.
 1. Entfernen Sie hartcodierte umgebungsspezifische Daten wie beispielsweise die Publish-Renderer-IP-Adresse und ersetzen Sie sie durch Variablen.
-1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jeden Ziel-Dispatcher und bitten Sie Ihren CSE, diese in jeder Instanz zu `/etc/sysconfig/httpd` hinzuzufügen.
+1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem [Variablen](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=en#variables-files-(.vars))-Ordner hinzu.
 1. Testen Sie die aktualisierten Konfigurationen in Ihrer Staging-Umgebung.
 1. Bitten Sie nach dem Test Ihren CSE, diese für die Produktion bereitzustellen.
 1. Übertragen Sie die Dateien in das Git-Repository.
