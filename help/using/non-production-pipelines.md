@@ -2,7 +2,7 @@
 title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: eaf3db69bd3cc0a06aafd1b415c5bdb467019c1b
+source-git-commit: 2a022c10ce64bb42d4bffd63bea01de25af0bd41
 workflow-type: tm+mt
 source-wordcount: '1992'
 ht-degree: 27%
@@ -139,7 +139,7 @@ Der Leistungsgewinn durch die Verwendung von Smart Build hängt von mehreren Fak
 * Häufigkeit und Umfang von Code-Änderungen.
 * Die Verteilung von Abhängigkeiten über Module hinweg.
 
-Im Allgemeinen weisen Projekte mit vielen unabhängigen Modulen die größten Verbesserungen auf.
+Im Allgemeinen können Projekte mit vielen unabhängigen Modulen die größte Verbesserung verzeichnen.
 
 ### Opt-out aus dem Cache pro Modul{#smart-build-cache-optout}
 
@@ -226,4 +226,4 @@ Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstelle
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327615?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
