@@ -2,7 +2,7 @@
 title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 57de7b00b382e4fb65ad3e03948960022ec02de1
+source-git-commit: eaf3db69bd3cc0a06aafd1b415c5bdb467019c1b
 workflow-type: tm+mt
 source-wordcount: '1992'
 ht-degree: 27%
@@ -33,7 +33,7 @@ Es gibt zwei Arten von produktionsfremden Pipelines:
 
 ## Hinzufügen einer neuen produktionsfremden Pipeline {#add-non-production-pipeline}
 
-Nachdem Sie ein Programm eingerichtet haben und über die Cloud Manager-Benutzeroberfläche mindestens eine Umgebung verfügen, können Sie produktionsfremde Pipelines hinzufügen, um die Qualität Ihres Codes zu testen, bevor Sie ihn in Produktionsumgebungen bereitstellen.
+Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benutzeroberfläche eingerichtet haben, können Sie produktionsfremde Pipelines hinzufügen. Verwenden Sie diese Pipelines, um Ihre Code-Qualität zu testen, bevor Sie sie in Produktionsumgebungen bereitstellen.
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
@@ -226,4 +226,4 @@ Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstelle
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327615?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
