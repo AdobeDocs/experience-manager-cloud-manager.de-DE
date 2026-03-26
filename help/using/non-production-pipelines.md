@@ -2,10 +2,10 @@
 title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ee409c97269a70aa9cf4ee4a39c425e62bc156e0
+source-git-commit: ddbffd1310e0af646c071c81d560fb50abeb01c1
 workflow-type: tm+mt
-source-wordcount: '1992'
-ht-degree: 27%
+source-wordcount: '1994'
+ht-degree: 23%
 
 ---
 
@@ -29,7 +29,7 @@ Es gibt zwei Arten von produktionsfremden Pipelines:
 
 >[!NOTE]
 >
->Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md).
+>Sie können eine Pipeline erst einrichten, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und [Programm-Setup](/help/getting-started/program-setup.md) abgeschlossen ist. Informationen zum Hinzufügen und Verwalten von Repositorys in Cloud Manager finden Sie unter [Cloud Manager-Repositorys](/help/managing-code/managing-repositories.md).
 
 ## Hinzufügen einer neuen produktionsfremden Pipeline {#add-non-production-pipeline}
 
@@ -37,7 +37,7 @@ Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benut
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com) bei Cloud Manager an und wählen Sie die entsprechende Organisation und das entsprechende Programm aus.
 
-1. Rufen Sie die Karte „Pipelines“ über den Startbildschirm von Cloud Manager auf. Klicken Sie auf **Hinzufügen** und wählen Sie **Produktionsfremde Pipeline hinzufügen** aus.
+1. Öffnen Sie im Cloud Manager-Startbildschirm die Karte Pipelines und klicken Sie auf **Hinzufügen** und wählen Sie dann **Produktionsfremde Pipeline hinzufügen** aus.
 
    ![Produktionsfremde Pipeline hinzufügen](/help/assets/configure-pipelines/nonprod-pipeline-add1.png)
 
@@ -54,7 +54,7 @@ Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benut
 
 | Abschnitt | Option | Beschreibung |
 | --- | --- | --- |
-| **Pipeline-Konfiguration** | **Name der produktionsfremden Pipeline** | Geben Sie im Feld **Name der produktionsfremden Pipeline** eine Beschreibung für die Pipeline an. |
+| **Pipeline-Konfiguration** | **Name der produktionsfremden Pipeline** | Geben Sie im Feld **Name der produktionsfremden Pipeline** eine Beschreibung für die Pipeline ein. |
 |  | **Testen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Die Benutzeroberfläche zeigt die Testkategorien an, die die Pipeline im Rahmen der Validierung der Code-Qualität ausführt.<ul><li>**Statische Code-**: Analysiert den Code auf Qualitäts- und Korrektheitsprobleme.<li>**Belastungs-/Leistungstests** : Evaluiert leistungsbezogenes Verhalten im Rahmen von Pipeline-Tests.<li>**Sicherheitstests**: Überprüft den Code und die Pipeline-Ausgabe auf sicherheitsbezogene Probleme. |
 | **Bereitstellungsoptionen** | **Bereitstellungs-Trigger** | <ul><li>**Manuell**: Die Option ermöglicht es Ihnen, die Pipeline manuell zu starten.<li>**Bei Git-Änderungen**: Diese Option startet die Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Damit können Sie die Pipeline bei Bedarf immer noch manuell starten. |
 |  | **Verhalten bei bedeutenden Metrikfehlern** | <ul><li>**Jedes Mal fragen**: Dieses Verhalten ist die Standardeinstellung und erfordert ein manuelles Eingreifen bei einem bedeutenden Fehler.<li>**Sofort fehlschlagen** - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Im Wesentlichen wird damit ein Benutzer simuliert, der manuell jeden Fehler ablehnt.<li>**Sofort fortfahren** - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Im Wesentlichen wird damit eine Benutzerin oder ein Benutzer simuliert, die bzw. der manuell jeden Fehler genehmigt.</li></ul> |
@@ -64,14 +64,14 @@ Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benut
 
 | Abschnitt | Option | Beschreibung |
 | --- | --- | --- |
-| **Pipeline-Konfiguration** | **Name der produktionsfremden Pipeline** | Geben Sie im Feld **Name der produktionsfremden Pipeline** eine Beschreibung für die Pipeline an. |
+| **Pipeline-Konfiguration** | **Name der produktionsfremden Pipeline** | Geben Sie im Feld **Name der produktionsfremden Pipeline** eine Beschreibung für die Pipeline ein. |
 |   | **Mögliche Bereitstellungsumgebung** | Wenn es sich bei Ihrer Pipeline um eine Bereitstellungs-Pipeline handelt, müssen Sie auswählen, in welchen Umgebungen Cloud Manager den Code bereitstellt. |
 |   | **Testen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Die Benutzeroberfläche zeigt die Testkategorien an, die die Pipeline im Rahmen der Validierung der Code-Qualität ausführt.<ul><li>**Statische Code-**: Analysiert den Code auf Qualitäts- und Korrektheitsprobleme.<li>**Belastungs-/Leistungstests** : Evaluiert leistungsbezogenes Verhalten im Rahmen von Pipeline-Tests.<li>**Sicherheitstests**: Überprüft den Code und die Pipeline-Ausgabe auf sicherheitsbezogene Probleme.</li></ul> |
 | **Bereitstellungsoptionen** | **Bereitstellungs-Trigger** | <ul><li>**Manuell**: Die Option ermöglicht es Ihnen, die Pipeline manuell zu starten.<li>**Bei Git-Änderungen**: Diese Option startet die Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Damit können Sie die Pipeline bei Bedarf immer noch manuell starten. |
 |   | **Verhalten bei bedeutenden Metrikfehlern** | <ul><li>**Jedes Mal fragen** - Die Standardeinstellung, bei der der Benutzer aufgefordert wird, zu entscheiden, wie er vorgehen soll, wenn eine wichtige Metrik fehlschlägt.<li>**Sofort fehlschlagen**: Die Pipeline wird abgebrochen, wenn eine wichtige Metrik fehlschlägt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler ablehnen.<li>**Sofort fortfahren**: Die Pipeline wird automatisch fortgesetzt, wenn eine wichtige Metrik fehlschlägt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler genehmigen.</li></ul> |
 |  | Kontrollkästchen **Nach Staging-Bereitstellung genehmigen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Wählen Sie diese Option, um nach der Bereitstellung in der Staging-Umgebung eine Genehmigung einzuholen, bevor die Pipeline fortgesetzt werden kann. Wenn diese Option nicht ausgewählt ist, wird die Pipeline basierend auf dem konfigurierten Verhalten fortgesetzt. |
 |  | Kontrollkästchen **Änderungen am Load-Balancer**&#x200B;überspringen) | Wählen Sie diese Option aus, um zu verhindern, dass die Pipeline während der Bereitstellung Änderungen am Lastenausgleich vornimmt. |
-|  | **Dispatcher-Konfiguration** | Die **Bereitstellungs-Manager**-Rolle kann eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM Dispatcher-Cache gelöscht werden, wenn eine Pipeline ausgeführt wird. Diese Cache-Aktionen werden im Rahmen der Einrichtung der Bereitstellungs-Pipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Gehen Sie wie folgt vor, um `Dispatcher` zu konfigurieren:<ul><li>Geben **unter** einen Inhaltspfad an, den die Pipeline leeren oder ungültig machen soll.<li>Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.<ul><li>**Flush**: Löschen des Cache-Inhalts unter dem angegebenen Pfad.</li><li>**Invalidieren**: Eine Cache-Invalidierung durchführen, ähnlich wie bei der Aktivierung von Inhalten von einer Autoreninstanz auf einer Veröffentlichungsinstanz.</li><li>Klicken Sie auf **Pfad hinzufügen**, um den angegebenen Pfad hinzuzufügen. Sie können bis zu 100 Pfade pro Umgebung hinzufügen.</li></ul> |
+|  | **Dispatcher-Konfiguration** | Die **Bereitstellungs-Manager**-Rolle kann eine Reihe von Inhaltspfaden konfigurieren, die entweder ungültig gemacht oder aus dem AEM Dispatcher-Cache gelöscht werden, wenn eine Pipeline ausgeführt wird. Cloud Manager führt diese Cache-Aktionen als Teil des Bereitstellungs-Pipeline-Schritts aus, unmittelbar nachdem alle Inhaltspakete bereitgestellt wurden. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Gehen Sie wie folgt vor, um `Dispatcher` zu konfigurieren:<ul><li>Geben **unter** einen Inhaltspfad an, den die Pipeline leeren oder ungültig machen soll.<li>Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.<ul><li>**Flush**: Löschen des Cache-Inhalts unter dem angegebenen Pfad.</li><li>**Invalidieren**: Eine Cache-Invalidierung durchführen, ähnlich wie bei der Aktivierung von Inhalten von einer Autoreninstanz auf einer Veröffentlichungsinstanz.</li><li>Klicken Sie auf **Pfad hinzufügen**, um den angegebenen Pfad hinzuzufügen. Sie können bis zu 100 Pfade pro Umgebung hinzufügen.</li></ul> |
 | **Pipeline** | **Experience Audit**-Kontrollkästchen | Wählen Sie diese Option aus, um einen Experience Audit-Schritt in die Pipeline aufzunehmen. Nach der Aktivierung umfasst die Pipeline den Experience Audit-Schritt nach der Registerkarte &quot;Source-Code“. |
 
 >[!ENDTABS]
@@ -187,10 +187,10 @@ Siehe [Hinzufügen einer produktionsfremden Pipeline](#add-non-production-pipeli
 <!-- 
 1. If you chose to add a **Deployment Pipeline**, select the target deployment environment from the **Eligible Deployment Environments** dropdown.
 
-1. Provide the repository where the pipeline should retrieve the code.
+1. Enter the repository where the pipeline should retrieve the code.
 
-   * **Repository** - Defines from which Git repo that the pipeline should retrieve the code.
-   * **Git Branch** - Defines from which branch in Git that the selected pipeline should retrieve the code.
+   * **Repository** - Select the Git repository that the pipeline retrieves code from.
+   * **Git Branch** - Select the branch in the Git repository that the selected pipeline retrieves code from.
 
 1. Define your deployment options.
 
@@ -202,10 +202,10 @@ Siehe [Hinzufügen einer produktionsfremden Pipeline](#add-non-production-pipeli
    1. For deployment pipelines, under **Important Metric Failures Behavior**, define the behavior of the pipeline when an important failure is encountered in any of the quality gates.
 
        * **Ask every time** - The default setting and requires manual intervention on any important failure.
-       * **Fail Immediately** - The pipeline is canceled whenever an important failure occurs. It is essentially emulating a user manually rejecting each failure.
+       * **Fail Immediately** - Cloud Manager cancels the pipeline whenever an important failure occurs. It is essentially emulating a user manually rejecting each failure.
        * **Continue Immediately** - The pipeline proceeds automatically whenever an important failure occurs. It is essentially emulating a user manually approving each failure.
 
-   1. **Dispatcher Configuration** - The **Deployment Manager** role can configure a set of content paths that are either invalidated or flushed from the AEM Dispatcher cache when a pipeline is run. These cache actions are performed as part of the deployment pipeline step, just after any content packages are deployed. These settings use standard AEM Dispatcher behavior. To configure:
+   1. **Dispatcher Configuration** - The **Deployment Manager** role can configure a set of content paths that Cloud Manager invalidates or flushes from the AEM Dispatcher cache when a pipeline is run. These cache actions are performed as part of the deployment pipeline step, just after any content packages are deployed. These settings use standard AEM Dispatcher behavior. To configure:
 
       1. Under **PATH** provide a content path.
       1. Under **TYPE**, select the action to be taken on that path.
