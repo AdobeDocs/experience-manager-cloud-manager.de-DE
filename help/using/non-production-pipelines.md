@@ -2,10 +2,10 @@
 title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: ddbffd1310e0af646c071c81d560fb50abeb01c1
+source-git-commit: 261c4334a514ee2101444e83a559d300bba3d507
 workflow-type: tm+mt
 source-wordcount: '1994'
-ht-degree: 23%
+ht-degree: 22%
 
 ---
 
@@ -17,7 +17,7 @@ Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen un
 
 Über die Kachel **Pipelines** in [!UICONTROL Cloud Manager] kann der **Bereitstellungs-Manager** zwei verschiedene Arten von Pipelines erstellen.
 
-* **Produktions-Pipelines**: Eine Produktions-Pipelines ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
+* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
 Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Informationen zur Konfiguration von Produktions-Pipelines finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md).
@@ -226,4 +226,4 @@ Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstelle
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327615?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
