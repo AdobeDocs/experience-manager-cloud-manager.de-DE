@@ -4,8 +4,8 @@ description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Servi
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 source-git-commit: 8f29a06f63b8dc10cb3d28e2f38da1ead84f32f5
 workflow-type: tm+mt
-source-wordcount: '1250'
-ht-degree: 95%
+source-wordcount: '1299'
+ht-degree: 96%
 
 ---
 
