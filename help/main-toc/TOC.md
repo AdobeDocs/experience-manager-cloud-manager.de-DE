@@ -7,7 +7,7 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 96700ba34a6c09289bbb8134d76a3aeca808ccc3
+source-git-commit: 4a012c762d6cb334e31e18c6f5305bdf322fd480
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 87%
@@ -78,7 +78,7 @@ ht-degree: 87%
 + Versionshinweise {#release-notes}
    + [Aktuell](/help/release-notes/current.md)
    + 2026 {#rn-2026}
-      + [2026.3.0](/help/release-notes/2026/2020-3-0.md)
+      + [2026.3.0](/help/release-notes/2026/2026-3-0.md)
       + [2026.2.0](/help/release-notes/2026/2026-2-0.md)
       + [2026.1.0](/help/release-notes/2026/2026-1-0.md)
    + 2025 {#rn-2025}
