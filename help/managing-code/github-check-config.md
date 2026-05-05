@@ -1,15 +1,21 @@
 ---
-title: Pull-Anforderungsprüfungen für private Repositorys
+title: Pull-Request-Prüfungen für private Repositorys
 description: Erfahren Sie, wie Sie die automatisch erstellten Pipelines so steuern, dass sie jede Pull-Anfrage an ein privates Repository validieren.
 exl-id: 29c9e487-e196-411a-8cda-6751b0a56066
-source-git-commit: 1ae6792f8bc628c3530a63004c3d38f215c72778
+TQID: https://experienceleague.adobe.com/duceoXUt2SqWI0ZXzyuqZtszLfJkWr53G5O5ze4nxTY
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '237'
-ht-degree: 92%
+source-wordcount: 237
+ht-degree: 100%
 
 ---
 
-# Pull-Anforderungsprüfungen für private Repositorys {#github-check-config}
+# Pull-Request-Prüfungen für private Repositorys {#github-check-config}
 
 <!--OLD TITLE THAT I THOUGHT WAS BETTER Check configuration for private repositories -->
 
@@ -35,7 +41,7 @@ pipelines:
 
 | Parameter | Mögliche Werte | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `shouldDeletePreviousComment` | `true` oder `false` | `false` | Ob bei dieser GitHub-Pull-Anfrage nur der letzte Kommentar oder alle Kommentare mit den Ergebnissen der Code-Scans beibehalten werden sollen. |
+| `shouldDeletePreviousComment` | `true` oder `false` | `false` | Legt fest, ob bei dieser GitHub-Pull-Anfrage nur der letzte Kommentar oder alle Kommentare mit den Ergebnissen der Codescans beibehalten werden sollen. |
 | `type` | `CI_CD` | Nicht zutreffend | Definiert das Verhalten einer CI/CD-Pipeline. |
 | `template.programID` | Ganzzahl | Es werden keine Pipeline-Variablen wiederverwendet | Sie können die [Pipeline-Variablen](/help/getting-started/build-environment.md#pipeline-variables) wiederverwenden, die auf einer vorhandenen Pipeline festgelegt sind, die jede Pull-Anfrage automatisch erstellt. |
 | `template.pipelineID` | Ganzzahl | Es werden keine Pipeline-Variablen wiederverwendet | Sie können die [Pipeline-Variablen](/help/getting-started/build-environment.md#pipeline-variables) wiederverwenden, die auf einer vorhandenen Pipeline festgelegt sind, die jede Pull-Anfrage automatisch erstellt. |

@@ -2,13 +2,18 @@
 title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+TQID: https://experienceleague.adobe.com/WBAHeIAH1XL6oVy342wLaUAoAHkUoN1AbcAl2Erkte4
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: 564
 ht-degree: 100%
 
 ---
-
 
 # Benachrichtigungen {#notifications}
 
@@ -16,7 +21,7 @@ Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt
 
 ## Benachrichtigungen in Cloud Manager {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] sendet Ihnen zu Beginn einer Produktionsimplementierung beim Start und beim Abschluss der Produktions-Pipeline (erfolgreich oder nicht erfolgreich) Benachrichtigungen. Und wenn die Schritte **Genehmigung einer Live-Schaltung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+[!UICONTROL Cloud Manager] sendet Ihnen zu Beginn einer Produktionsbereitstellung beim Start und beim Abschluss der Produktions-Pipeline (erfolgreich oder nicht erfolgreich) Benachrichtigungen. Und wenn die Schritte **Genehmigung einer Live-Schaltung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >

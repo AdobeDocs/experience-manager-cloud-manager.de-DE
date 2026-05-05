@@ -2,9 +2,15 @@
 title: Arbeiten mit mehreren Git-Repositorys
 description: Erfahren Sie, wie Sie Ihre eigenen Git-Repository oder mehrere Git-Repositorys verwenden können, anstatt direkt mit dem Git-Repository von Cloud Manager zu arbeiten.
 exl-id: 53bf78bb-489a-4a83-8459-c361f532d54a
-source-git-commit: f855fa91656e4b3806a617d61ea313a51fae13b4
+TQID: https://experienceleague.adobe.com/xKzqOfbi12A0POy-C7Gm7-n649DEBX9JP3LfXA5UC3Y
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: 743
 ht-degree: 100%
 
 ---
@@ -123,7 +129,7 @@ Wie oben gezeigt, sind GitHub-Aktionen flexibel einsetzbar. Es können beliebige
 
 ## Jenkins-Beispielauftrag {#sample-jenkins-job}
 
-Bei dem Beispiel handelt es sich um ein Skript, das in einem Jenkins-Aufrag o. Ä. verwendet werden kann. Eine Änderung in einem Git-Repository ist hierfür der Auslöser. Der Jenkins-Auftrag überprüft den neuesten Status des Projekts oder der Verzweigung und löst dann dieses Skript aus.
+Bei dem Beispiel handelt es sich um ein Skript, das in einem Jenkins-Auftrag o. Ä. verwendet werden kann. Eine Änderung in einem Git-Repository ist hierfür der Auslöser. Der Jenkins-Auftrag überprüft den neuesten Status des Projekts oder der Verzweigung und löst dann dieses Skript aus.
 
 Dieses Skript überprüft wiederum das Git-Repository von Cloud Manager und übergibt den Projekt-Code an ein Unterverzeichnis.
 

@@ -2,13 +2,21 @@
 title: Sicherheit und Datenschutz
 description: Erfahren Sie mehr über die Sicherheit und den Datenschutz von Code- und Artefakt-Assets in Cloud Manager.
 exl-id: 67df1987-8db7-40bd-9717-1bf194e957f7
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+TQID: https://experienceleague.adobe.com/mtWOzJnzV8k403LlyD9Fn9WSE5XTgjHzyVuA4j62MMg
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: 202
 ht-degree: 100%
 
 ---
-
 
 # Sicherheit und Datenschutz {#security-and-privacy}
 

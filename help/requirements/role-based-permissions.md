@@ -2,13 +2,20 @@
 title: Rollenbasierte Berechtigungen
 description: Erfahren Sie mehr über die vorkonfigurierten rollenbasierten Berechtigungen von Cloud Manager für die Verwaltung des Zugriffs auf Ihre Cloud-Ressourcen.
 exl-id: b66533fb-db93-40e8-919d-581261fdbf24
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/JXI9QGaexNJga8o80oLNo7allavc1x021DWmef-AkTc
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '560'
+source-wordcount: 592
 ht-degree: 99%
 
 ---
-
 
 # Rollenbasierte Berechtigungen {#role-based-permissions}
 
@@ -22,7 +29,7 @@ ht-degree: 99%
 
 ## Benutzerrollen {#user-roles}
 
-Die Rollen für [!UICONTROL Cloud Manager] werden in [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html) verwaltet. Jede Benutzerin und jeder Benutzer von [!UICONTROL Cloud Manager] muss Mitglied der kundenseitigen IMS-Organisation sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenmitgliedschaften werden bereitgestellt, indem die Benutzerin bzw. der Benutzer in der Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+Die Rollen für [!UICONTROL Cloud Manager] werden in [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html) verwaltet. Jede Benutzerin und jeder Benutzer von [!UICONTROL Cloud Manager] muss Mitglied der kundenseitigen IMS-Organisation sein und über den Adobe Managed Services-Produktkontext verfügen. Bestimmte Rollenzugehörigkeiten werden bereitgestellt, indem die Benutzerin bzw. der Benutzer in der Admin Console einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
 
 Weitere Informationen zum Einrichten von Rollen finden Sie unter [Einrichten von Benutzenden und Rollen](/help/requirements/users-and-roles.md).
 
@@ -41,7 +48,7 @@ In der folgenden Tabelle sind die Rollen aufgeführt, die Sie in Admin Console z
 
 Jede der Rollen verfügt über bestimmte vorkonfigurierte Berechtigungen. In der folgenden Tabelle sind die verfügbaren Berechtigungen sowie die Rollen, die diese ausführen können, aufgeführt.
 
-| Berechtigung | Beschreibung | Geschäftsinhaber | Bereitstellungs-Manager | Programm-Manager | Entwicklerin oder Entwickler | CSE |
+| Berechtigung | Beschreibung | Geschäftsinhaber | Bereitstellungs-Manager | Programm-Manager | Entwickler | CSE |
 | --- | --- | --- | --- | --- | --- | --- |
 | `Read the Application` | Lesen der Programm-KPIs | x | x | x | x | x |
 | `Write Application` | Programm einrichten oder bearbeiten | x | | | | |

@@ -2,13 +2,22 @@
 title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus Produktionsumgebungen von Adobe Experience Manager 6.x, die von Adobe Managed Services gehostet werden, zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
-source-git-commit: 84b3366481c2efd497583627eac67046452f6c38
-workflow-type: ht
-source-wordcount: '1321'
-ht-degree: 100%
+TQID: https://experienceleague.adobe.com/ffcf9UNSOp7oIpDZdtLcoFWp-Ww-A1XV3kCDmKqJLSw
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+workflow-type: tm+mt
+source-wordcount: 1452
+ht-degree: 99%
 
 ---
-
 
 # Inhaltskopie für Umgebungskonsistenz {#content-copy}
 
@@ -75,7 +84,7 @@ Bevor Inhalt kopiert werden kann, muss ein Content-Set definiert werden. Nach de
    1. Klicken Sie rechts neben einem einbezogenen Inhaltspfad, den Sie ausschließen möchten, auf das Symbol ![Ordner löschen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg).
    1. Geben Sie im Textfeld einen relativen Pfad zum im Dialogfeld angezeigten Stammpfad ein.
    1. Klicken Sie auf das Symbol ![Ordner löschen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderDelete_18_N.svg) **Pfad ausschließen**.
-   1. Wiederholen Sie gegebenenfalls die Schritte i. bis iii. oben, um weitere Pfade auszuschließen. Es gibt keine Beschränkung. Fahren Sie ansonsten mit dem nächsten Schritt fort.
+   1. Wiederholen Sie bei Bedarf die Schritte i. bis III. oben, um weitere Pfade auszuschließen. Es gibt keine Beschränkung. Fahren Sie ansonsten mit dem nächsten Schritt fort.
 
    ![Ausschließen von Pfaden](/help/assets/add-content-set-paths-excluded.png)
 
@@ -127,7 +136,7 @@ Eine Umgebung kann nicht ausgewählt werden, wenn eine der folgenden Bedingungen
 
 1. Geben Sie im Dialogfeld **Inhalt kopieren** die **Quelle** und das **Ziel** der jeweiligen Umgebungen für die Inhaltskopie-Aktion an.
 
-   * Regionen in einer Zielumgebung müssen eine Untergruppe von Regionen in der Quellumgebung sein.
+   * Regionen in einer Zielumgebung müssen eine Teilmenge von Regionen in der Quellumgebung sein.
    * Bevor eine Aktion zum Kopieren von Inhalten ausgeführt wird, werden diese auf Kompatibilitätsprobleme geprüft. Wenn Sie eine Umgebung als **Ziel** auswählen, validiert das System automatisch die Quell- und Zielumgebung. Wenn die Validierung fehlschlägt, wird der Prozess angehalten und im Dialogfeld eine Fehlermeldung angezeigt, in der der Grund für den Fehler erläutert wird.
 
      ![Kopieren von Inhalten](/help/assets/copying-content.png)

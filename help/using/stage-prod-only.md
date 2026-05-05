@@ -1,19 +1,27 @@
 ---
-title: Aufspaltung von Pipelines nur für Staging und Produktion
-description: Erfahren Sie, wie Sie Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufteilen können.
+title: Aufspalten in reine Staging- und reine Produktions-Pipelines
+description: Erfahren Sie, wie Sie mithilfe von dedizierten Pipelines in Staging- und Produktionsbereitstellungen aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
-source-git-commit: 92237ea156e3921b5dc55cea3abdecee9d26b14b
+TQID: https://experienceleague.adobe.com/whq-Hkwp3mjTr0iftoKZHKdsi0xaKtVXazXjUENoaLk
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 94%
+source-wordcount: 980
+ht-degree: 96%
 
 ---
 
-# Aufspaltung von Pipelines nur für Staging und Produktion {#stage-prod-only}
+# Aufspalten in reine Staging- und reine Produktions-Pipelines {#stage-prod-only}
 
-Sie können Staging- und Produktionsbereitstellungen mithilfe dedizierter Pipelines aufteilen.
+Sie können Staging- und Produktionsbereitstellungen mithilfe von dedizierten Pipelines aufspalten.
 
-## Übersicht {#overview}
+## Überblick {#overview}
 
 Staging- und Produktionsumgebungen sind eng miteinander verbunden. Standardmäßig sind die damit verknüpften Bereitstellungen mit einer einzelnen Pipeline verknüpft. Hierbei handelt es sich um eine Bereitstellungs-Pipeline, die sowohl für die Staging- als auch für die Produktionsumgebung in diesem Programm bereitgestellt wird. Diese Kopplung ist zwar in der Regel geeignet, es gibt jedoch einige Anwendungsfälle, in denen Nachteile entstehen:
 
@@ -62,13 +70,13 @@ Die Erstellung von reinen Produktions- und Staging-Pipelines erfolgt auf ähnlic
 ### Reine Staging-Pipelines {#stage-only}
 
 1. Sobald Sie die Option **Produktionsfremde Pipeline hinzufügen** ausgewählt haben, wird das Dialogfeld **Produktionsfremde Pipeline hinzufügen** geöffnet.
-1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus. 
+1. Um eine reine Staging-Pipeline zu erstellen, wählen Sie die Staging-Umgebung im Feld **Zulässige Bereitstellungsumgebungen** für Ihre Pipeline aus.
 1. Füllen Sie die übrigen Felder aus.
 1. Klicken Sie auf **Weiter**.
 
    ![Erstellen einer reinen Staging-Pipeline](/help/assets/configure-pipelines/stage-only.png)
 
-1. Definieren Sie auf der Registerkarte **Staging-Tests** die Tests, die in der Staging-Umgebung durchgeführt werden sollen. 
+1. Definieren Sie auf der Registerkarte **Staging-Tests** die Tests, die in der Staging-Umgebung durchgeführt werden sollen.
 1. Klicken Sie auf **Speichern**.
 
    ![Testparameter für eine reine Staging-Pipeline](/help/assets/configure-pipelines/stage-only-test.png)
@@ -76,7 +84,7 @@ Die Erstellung von reinen Produktions- und Staging-Pipelines erfolgt auf ähnlic
 ### Reine Produktions-Pipelines {#prod-only}
 
 1. Nachdem Sie auf **Nur Produktions-Pipeline hinzufügen** geklickt haben, wird das zugehörige Dialogfeld geöffnet.
-1. Geben Sie im Feld **Pipeline-Name** den gewünschten Namen ein. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie die Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline. 
+1. Geben Sie im Feld **Pipeline-Name** den gewünschten Namen ein. Die verbleibenden Optionen und Funktionen des Dialogfelds funktionieren genauso wie die Optionen im Dialogfeld zur Erstellung der standardmäßig gekoppelten Pipeline.
 1. Klicken Sie unten rechts im Dialogfeld auf **Speichern**.
 
    ![Erstellen einer reinen Produktions-Pipeline](/help/assets/configure-pipelines/prod-only-pipeline.png)

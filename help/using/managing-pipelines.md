@@ -2,13 +2,18 @@
 title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
-source-git-commit: 91eda02d55134fba167f30830a142a80717e9083
+TQID: https://experienceleague.adobe.com/5SdiydpBmjwCLtzujtle4gW1JyRRvR2qNFN3fdN5A0w
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1170'
-ht-degree: 73%
+source-wordcount: 1244
+ht-degree: 79%
 
 ---
-
 
 # Verwalten von Pipelines {#managing-pipelines}
 
@@ -22,7 +27,7 @@ Die Karte **Pipelines** auf der Seite **Programmübersicht** in Cloud Manager bi
 
 Durch Klicken auf ![Mehr-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) Auslassungspunkte neben jeder Pipeline können Sie die folgenden Aktionen ausführen:
 
-* [Ausführen der Pipeline](#running-pipelines) 
+* [Ausführen der Pipeline](#running-pipelines)
 * [Bearbeiten der Pipeline](#editing-pipelines)
 * [Löschen der Pipeline](#deleting-pipelines)
 * [Anzeigen von Details](#view-details)
@@ -50,7 +55,7 @@ Durch Klicken auf das Symbol `i` erhalten Sie Details über die letzte oder aktu
 
 Klicken Sie auf **Details anzeigen**, um zu den [Details zur Pipeline-Ausführung](#view-details) zu gelangen.
 
-### Pipeline-Favoriten markieren{#pipeline-favorites}
+### Markieren von Pipeline-Favoriten{#pipeline-favorites}
 
 Sie können bestimmte Pipelines als Favoriten markieren, damit sie oben in der Liste auf der Seite **Pipelines** angezeigt werden. Diese Funktion erleichtert das Auffinden und Ausführen häufig verwendeter Pipelines.
 
@@ -59,7 +64,7 @@ Sie können bestimmte Pipelines als Favoriten markieren, damit sie oben in der L
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 1. Klicken Sie auf der Seite **Programmübersicht** auf die Registerkarte ![Registerkarte „Pipelines“ – Workflow Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines**.
 1. Klicken Sie auf der **Pipelines** links neben einem Pipeline-Namen und -Typ auf ![Sternsymbol für nicht bevorzugte Pipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_StarOutline_18_N.svg), um sie Ihrer Favoritenliste hinzuzufügen.
-Klicken Sie alternativ auf ![Sternsymbol für eine Lieblings-Pipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Star_18_N.svg), um die Pipeline aus Ihrer Favoritenliste zu entfernen.
+Klicken Sie alternativ auf ![Sternsymbol für eine favorisierte Pipeline](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Star_18_N.svg), um die Pipeline aus Ihrer Favoritenliste zu entfernen.
 
 
 ## Seite „Aktivität“ {#activity}

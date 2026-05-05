@@ -2,9 +2,15 @@
 title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
-source-git-commit: 261c4334a514ee2101444e83a559d300bba3d507
+TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1994'
+source-wordcount: 1999
 ht-degree: 22%
 
 ---
@@ -55,7 +61,7 @@ Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benut
 | Abschnitt | Option | Beschreibung |
 | --- | --- | --- |
 | **Pipeline-Konfiguration** | **Name der produktionsfremden Pipeline** | Geben Sie im Feld **Name der produktionsfremden Pipeline** eine Beschreibung für die Pipeline ein. |
-|  | **Testen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Die Benutzeroberfläche zeigt die Testkategorien an, die die Pipeline im Rahmen der Validierung der Code-Qualität ausführt.<ul><li>**Statische Code-**: Analysiert den Code auf Qualitäts- und Korrektheitsprobleme.<li>**Belastungs-/Leistungstests** : Evaluiert leistungsbezogenes Verhalten im Rahmen von Pipeline-Tests.<li>**Sicherheitstests**: Überprüft den Code und die Pipeline-Ausgabe auf sicherheitsbezogene Probleme. |
+|  | **Testen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Die Benutzeroberfläche zeigt die Testkategorien, die die Pipeline im Rahmen der Validierung der Code-Qualität ausführt.<ul><li>**Statische Code-**: Analysiert den Code auf Qualitäts- und Korrektheitsprobleme.<li>**Belastungs-/Leistungstests** : Evaluiert leistungsbezogenes Verhalten im Rahmen von Pipeline-Tests.<li>**Sicherheitstests**: Überprüft den Code und die Pipeline-Ausgabe auf sicherheitsbezogene Probleme. |
 | **Bereitstellungsoptionen** | **Bereitstellungs-Trigger** | <ul><li>**Manuell**: Die Option ermöglicht es Ihnen, die Pipeline manuell zu starten.<li>**Bei Git-Änderungen**: Diese Option startet die Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Damit können Sie die Pipeline bei Bedarf immer noch manuell starten. |
 |  | **Verhalten bei bedeutenden Metrikfehlern** | <ul><li>**Jedes Mal fragen**: Dieses Verhalten ist die Standardeinstellung und erfordert ein manuelles Eingreifen bei einem bedeutenden Fehler.<li>**Sofort fehlschlagen** - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem gravierenden Fehler abgebrochen. Im Wesentlichen wird damit ein Benutzer simuliert, der manuell jeden Fehler ablehnt.<li>**Sofort fortfahren** - Wenn diese Option ausgewählt ist, wird die Pipeline bei einem wichtigen Fehler automatisch fortgesetzt. Im Wesentlichen wird damit eine Benutzerin oder ein Benutzer simuliert, die bzw. der manuell jeden Fehler genehmigt.</li></ul> |
 |  | Kontrollkästchen **Nach Staging-Bereitstellung genehmigen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Wählen Sie diese Option, um nach der Bereitstellung in der Staging-Umgebung eine Genehmigung einzuholen, bevor die Pipeline fortgesetzt werden kann. Wenn diese Option nicht ausgewählt ist, wird die Pipeline basierend auf dem konfigurierten Verhalten fortgesetzt. |
@@ -66,7 +72,7 @@ Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benut
 | --- | --- | --- |
 | **Pipeline-Konfiguration** | **Name der produktionsfremden Pipeline** | Geben Sie im Feld **Name der produktionsfremden Pipeline** eine Beschreibung für die Pipeline ein. |
 |   | **Mögliche Bereitstellungsumgebung** | Wenn es sich bei Ihrer Pipeline um eine Bereitstellungs-Pipeline handelt, müssen Sie auswählen, in welchen Umgebungen Cloud Manager den Code bereitstellt. |
-|   | **Testen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Die Benutzeroberfläche zeigt die Testkategorien an, die die Pipeline im Rahmen der Validierung der Code-Qualität ausführt.<ul><li>**Statische Code-**: Analysiert den Code auf Qualitäts- und Korrektheitsprobleme.<li>**Belastungs-/Leistungstests** : Evaluiert leistungsbezogenes Verhalten im Rahmen von Pipeline-Tests.<li>**Sicherheitstests**: Überprüft den Code und die Pipeline-Ausgabe auf sicherheitsbezogene Probleme.</li></ul> |
+|   | **Testen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Die Benutzeroberfläche zeigt die Testkategorien, die die Pipeline im Rahmen der Validierung der Code-Qualität ausführt.<ul><li>**Statische Code-**: Analysiert den Code auf Qualitäts- und Korrektheitsprobleme.<li>**Belastungs-/Leistungstests** : Evaluiert leistungsbezogenes Verhalten im Rahmen von Pipeline-Tests.<li>**Sicherheitstests**: Überprüft den Code und die Pipeline-Ausgabe auf sicherheitsbezogene Probleme.</li></ul> |
 | **Bereitstellungsoptionen** | **Bereitstellungs-Trigger** | <ul><li>**Manuell**: Die Option ermöglicht es Ihnen, die Pipeline manuell zu starten.<li>**Bei Git-Änderungen**: Diese Option startet die Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Damit können Sie die Pipeline bei Bedarf immer noch manuell starten. |
 |   | **Verhalten bei bedeutenden Metrikfehlern** | <ul><li>**Jedes Mal fragen** - Die Standardeinstellung, bei der der Benutzer aufgefordert wird, zu entscheiden, wie er vorgehen soll, wenn eine wichtige Metrik fehlschlägt.<li>**Sofort fehlschlagen**: Die Pipeline wird abgebrochen, wenn eine wichtige Metrik fehlschlägt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler ablehnen.<li>**Sofort fortfahren**: Die Pipeline wird automatisch fortgesetzt, wenn eine wichtige Metrik fehlschlägt. Damit werden im Grunde Benutzende simuliert, die manuell jeden Fehler genehmigen.</li></ul> |
 |  | Kontrollkästchen **Nach Staging-Bereitstellung genehmigen** | Nur beim Bearbeiten einer produktionsfremden Pipeline sichtbar.<br>Wählen Sie diese Option, um nach der Bereitstellung in der Staging-Umgebung eine Genehmigung einzuholen, bevor die Pipeline fortgesetzt werden kann. Wenn diese Option nicht ausgewählt ist, wird die Pipeline basierend auf dem konfigurierten Verhalten fortgesetzt. |
@@ -89,7 +95,7 @@ Stellt die gesamte AEM-Anwendung bereit, einschließlich Anwendungs-Code und sta
 | --- | --- | --- |
 | **Source-Code** | **Repository** | Wählen Sie aus der Dropdown-Liste das Git-Repository aus, das die Pipeline als Quelle verwendet. Cloud Manager erstellt Code aus dem Repository, das Sie hier auswählen. |
 |   | **Git-Verzweigung** | Wählen Sie aus der Dropdown-Liste die Verzweigung im ausgewählten Repository aus, aus der die Pipeline erstellen soll. Der Standardwert lautet `main`. Die Pipeline verwendet die ausgewählte Verzweigung als Quelle für die Erstellung und Bereitstellung. Klicken Sie bei Bedarf auf **Aktualisieren**, um die Liste der verfügbaren Verzweigungen für das ausgewählte Repository zu aktualisieren. Verwenden Sie diese Option, wenn eine kürzlich erstellte Verzweigung nicht in der Liste angezeigt wird. |
-|   | **Strategie erstellen** | <ul><li>**Vollständiger Build**: Erstellt jedes Mal alle Module im Repository.<li>BETA **Smart Build** - Erstellt nur Module, die sich seit dem letzten Commit geändert haben.<br>Weitere Informationen [Verwenden von Smart Build in einer produktionsfremden Pipeline](#about-smart-build).</li></ol>**Wichtig**: Smarter Build ist nur für Code-Qualitäts-Pipelines und Bereitstellungs-Pipelines für Entwicklungs-Full-Stack-Code verfügbar. |
+|   | **Strategie erstellen** | <ul><li>**Vollständiger Build**: Erstellt jedes Mal alle Module im Repository.<li>BETA **Smart Build** - Erstellt nur Module, die seit dem letzten Commit geändert wurden.<br>Weitere Informationen über [Verwendung von Smart Build in einer produktionsfremden Pipeline](#about-smart-build).</li></ol>**Wichtig**: Smarter Build ist nur für Code-Qualitäts-Pipelines und Bereitstellungs-Pipelines für Entwicklungs-Full-Stack-Code verfügbar. |
 |   | Kontrollkästchen **Konfiguration der Web-Stufe** ignorieren) | Wählen Sie diese Option, um die Bereitstellung der Web-Stufen-Konfiguration in einer Full-Stack-Code-Pipeline zu überspringen. Lassen Sie die Option deaktiviert, um die Web-Stufen-Konfiguration zusammen mit dem Code der Pipeline bereitzustellen. |
 | **Pipeline** | **Experience Audit**-Kontrollkästchen | Wählen Sie diese Option aus, um einen Experience Audit-Schritt in die Pipeline aufzunehmen. Nach der Aktivierung umfasst die Pipeline den Experience Audit-Schritt nach der Registerkarte &quot;Source-Code“. |
 
