@@ -3,8 +3,11 @@ title: Verwalten von Pipelines
 description: Erfahren Sie, wie Sie Ihre vorhandenen Pipelines verwalten, einschließlich Ausführen, Bearbeiten und Löschen.
 exl-id: e36420d2-57c5-4375-99fb-dd47c1c8bffd
 TQID: https://experienceleague.adobe.com/5SdiydpBmjwCLtzujtle4gW1JyRRvR2qNFN3fdN5A0w
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
 source-wordcount: 1244
@@ -88,9 +91,9 @@ Klicken Sie auf **Details anzeigen**, um die [Details zur Pipeline-Ausführung](
 
    Die Statusspalte gibt an, wann die Pipeline-Ausführung beginnt.
 
-   Sie können die Details der Ausführung sehen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) und auf **[Details anzeigen](#view-details)** klicken.
+   Sie können die Details der Ausführung sehen, indem Sie erneut auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) und auf **[Details anzeigen](#view-details)** klicken.
 
-   Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, indem Sie erneut auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) und auf **Abbrechen** klicken.
+   Je nach Pipeline-Typ können Sie die Ausführung möglicherweise abbrechen, indem Sie erneut auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) und auf **Abbrechen** klicken.
 
 ## Ausführen mehrerer Pipelines {#run-multiple-pipelines}
 
@@ -99,7 +102,7 @@ Mit Cloud Manager können Sie mehrere Pipelines gleichzeitig ausführen, was die
 **So führen Sie mehrere Pipelines aus:**
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
-1. Klicken Sie im linken Seitenmenü auf ![Workflow-Symbol ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines**.
+1. Klicken Sie im linken Seitenmenü auf ![Workflow-Symbol &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Workflow_18_N.svg) **Pipelines**.
 1. Aktivieren Sie in der Tabelle auf der Seite **Pipeline** die Kontrollkästchen neben den Pipelines, die Sie ausführen möchten.
 Klicken Sie bei Bedarf auf ![Filtersymbol, Trichter](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Filter_18_N.svg) **Filter**, um Pipelines nach Name, Umgebung und/oder Typ des bereitgestellten Codes zu sortieren.
 1. Klicken Sie oben rechts auf der Seite auf **Ausgewählte ausführen (x)**.

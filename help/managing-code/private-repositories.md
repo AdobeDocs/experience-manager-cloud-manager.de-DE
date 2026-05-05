@@ -4,9 +4,13 @@ description: Erfahren Sie, wie Sie Cloud Manager für die Arbeit mit Ihren eigen
 feature: Release Information
 exl-id: e0d103c9-c147-4040-bf53-835e93d78a0b
 TQID: https://experienceleague.adobe.com/YQUazTRNh7C31piqZwe-1zAkRWIqt9fVY6jTD5T3ZpI
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
 source-wordcount: 835
@@ -93,7 +97,7 @@ Bis zur Validierung ist das Repository mit einem roten Symbol gekennzeichnet. Di
 
 Beachten Sie, dass in der Spalte **Typ** die von Adobe bereitgestellten Repositorys (**Adobe**) und Ihre eigenen GitHub-Repositorys (**GitHub**) leicht erkennbar aufgeführt sind.
 
-Um später zum Repository zurückzukehren und die Validierung abzuschließen, gehen Sie zur Seite **Repositorys**. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) neben dem hinzugefügten GitHub-Repository und dann auf **Eigentümervalidierung**.
+Um später zum Repository zurückzukehren und die Validierung abzuschließen, gehen Sie zur Seite **Repositorys**. Klicken Sie auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) neben dem hinzugefügten GitHub-Repository und dann auf **Eigentümervalidierung**.
 
 
 ## Verwenden privater Repositorys mit Cloud Manager {#using}
