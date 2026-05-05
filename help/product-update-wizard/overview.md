@@ -2,13 +2,16 @@
 title: Assistent für Produktaktualisierungen
 description: Erfahren Sie, wie der Assistent für Produktaktualisierungen den AEM-End-to-End-Aktualisierungsprozess in Cloud Manager optimiert.
 exl-id: 8134e956-bfcf-41b8-a408-fa4375058c6a
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+TQID: https://experienceleague.adobe.com/1xLX5-Q3m0NRcAs0OrGyNbR0d2vP4VDl9iF2IzYpt7Y
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: 215
 ht-degree: 100%
 
 ---
-
 
 # Assistent für Produktaktualisierungen {#product-update-wizard}
 
@@ -28,7 +31,7 @@ Cloud Manager-Kunden, die eine Berechtigung zum Upgrade auf AEM 6.5 haben, kön
 
 1. Wenn AEM 6.5 für Ihr Programm verfügbar ist, erhalten Sie eine Push-Benachrichtigung über Cloud Manager.
 
-1. Auf dem Übersichtsbildschirm von [!UICONTROL Cloud Manager] wird dann die Karte **[!UICONTROL AEM 6.5-Aktualisierung]** angezeigt. Anhand dieser Karte können Sie sehen, in welcher Phase des Aktualisierungsprozesses Sie sich gerade befinden und welcher der nächste Schritt ist. 
+1. Auf dem Übersichtsbildschirm von [!UICONTROL Cloud Manager] wird dann die Karte **[!UICONTROL AEM 6.5-Aktualisierung]** angezeigt. Anhand dieser Karte können Sie sehen, in welcher Phase des Aktualisierungsprozesses Sie sich gerade befinden und welcher der nächste Schritt ist.
 
    ![Karte zum Assistenten für Aktualisierungen](/help/assets/Start-Update.png)
 

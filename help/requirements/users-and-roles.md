@@ -2,13 +2,16 @@
 title: Hinzufügen von Anwendern und Rollen
 description: Erfahren Sie, wie Sie mit der Admin Console Benutzende und Rollen hinzufügen und Profile erstellen können.
 exl-id: 40086cf0-a1c4-4dde-9dbf-84ea5fa53b84
-source-git-commit: ee49b0732fdb870c4f768764aa75b240fd101b59
+TQID: https://experienceleague.adobe.com/95vfyk6-SMg7GFaCVWkiaaGObo603DJqvExEgPFrwqw
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '796'
+source-wordcount: 796
 ht-degree: 86%
 
 ---
-
 
 # Hinzufügen von Benutzenden und Rollen {#add-users-and-roles}
 
@@ -118,7 +121,7 @@ Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzerinnen, Benu
 
 1. Klicken Sie im linken Navigationsbereich auf **Benutzer** und dann auf eine Benutzerin oder einen Benutzer, um diese bzw. diesen zu ändern.
 
-1. Klicken Sie auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
+1. Klicken Sie auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) im Abschnitt **Produkte** und klicken Sie auf **Bearbeiten**.
 
    ![Benutzer bearbeiten](/help/assets/admin-console-edit-user.png)
 

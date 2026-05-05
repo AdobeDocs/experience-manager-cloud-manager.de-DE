@@ -2,13 +2,17 @@
 title: Testen der Code-Qualität
 description: Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/gAO8BdTx9-Sq8evIuI3hIaHIUixk-IulQagCI-Jssrc
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '2783'
-ht-degree: 98%
+source-wordcount: 2911
+ht-degree: 97%
 
 ---
-
 
 # Testen der Code-Qualität {#code-quality-testing}
 
@@ -64,7 +68,7 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 | Abdeckung | Definiert durch eine Mischung aus Zeilenabdeckung der Einheitstests und Bedingungsabdeckung nach der Formel: <br/>`Coverage = (CT + CF + LC) / (2 * B + EL)`  <ul><li>`CT` = Bedingungen wurden mindestens einmal während der Ausführung der Einheitentests zu `true` ausgewertet</li><li>`CF` = Bedingungen wurden mindestens einmal während der Ausführung der Einheitentests zu `false` ausgewertet</li><li>`LC` = abgedeckte Zeilen = lines_to_cover - uncovered_lines</li><li>`B` = Gesamtzahl der Bedingungen</li><li>`EL` = Gesamtzahl der ausführbaren Zeilen (lines_to_cover)</li></ul> | Wichtig | &lt; 50 % |
 | Übersprungene Einheitentests | Anzahl der übersprungenen Einheitentests | Info | > 1 |
 | Offene Probleme | Allgemeine Problemtypen – Schwachstellen (Vulnerability), Fehler (Bug) und Code-Smells (Code Smell) | Info | > 0 |
-| Duplizierte Zeilen | Definiert als die Anzahl der Zeilen, die in doppelten Blöcken enthalten sind. Ein Code-Block gilt unter den folgenden Bedingungen als dupliziert.<br>Nicht-Java-Projekte:<ul><li>Es sollten mindestens 100 aufeinanderfolgende und duplizierte Token vorhanden sein.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li></ul>Java-Projekte:<ul></li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplikaten ignoriert. | Info | > 1 % |
+| Duplizierte Zeilen | Definiert als die Anzahl der Zeilen, die in doppelten Blöcken enthalten sind. Ein Codeblock wird unter den folgenden Bedingungen als dupliziert betrachtet<br>Nicht-Java-Projekte:<ul><li>Es sollten mindestens 100 aufeinanderfolgende und duplizierte Token vorhanden sein.</li><li>Diese Token sollten sich mindestens wie folgt verteilen: </li><li>30 Codezeilen für COBOL </li><li>20 Codezeilen für ABAP </li><li>10 Codezeilen für andere Sprachen</li></ul>Java-Projekte:<ul></li><li> Unabhängig von der Anzahl der Token und Zeilen sollte es mindestens 10 aufeinanderfolgende und duplizierte Anweisungen geben.</li></ul>Unterschiede bei Einzügen sowie Zeichenfolgenliteralen werden beim Erkennen von Duplikaten ignoriert. | Info | > 1 % |
 | Kompatibilität mit Cloud Service | Anzahl der festgestellten Kompatibilitätsprobleme mit Cloud Service | Info | > 0 |
 
 >[!NOTE]
@@ -135,7 +139,7 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 | Adobe Granite HTML Library Manager ist ordnungsgemäß konfiguriert. | Konfiguration des CQ-HTML-Bibliotheksmanagers | Wichtig |
 | CRXDE-Support-Paket ist deaktiviert. | CRXDE-Support | Wichtig |
 | `Sling` DavEx-Paket und -Servlet sind deaktiviert. | DavEx-Konsistenzprüfung | Wichtig |
-| Es ist kein Beispielinhalt installiert. | Pakete mit Beispielinhalt | Wichtig |
+| Es ist kein Beispielinhalt installiert. | Inhaltspakete mit Beispielinhalt | Wichtig |
 | Sowohl der WCM-Anfrage-Filter als auch der WCM-Debug-Filter sind deaktiviert. | [WCM-Filterkonfiguration](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/configuring/osgi-configuration-settings#configuring) | Wichtig |
 | `Sling` WebDAV-Bundle und -Servlet sind ordnungsgemäß konfiguriert. | WebDAV-Konsistenzprüfung | Wichtig |
 | Der Webserver ist so konfiguriert, dass Clickjacking verhindert wird. | Webserver-Konfiguration | Wichtig |
@@ -160,7 +164,7 @@ Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Stag
 * Dieser Crawling-Vorgang ist standardmäßig auf maximal 5.000 Seiten beschränkt.
 * Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die [Pipeline-Variable](/help/getting-started/build-environment.md#pipeline-variables) festlegen`CM_PERF_TEST_CRAWLER_MAX_PAGES`.
    * Zulässige Werte sind `2000`–`7000`.
-* Für Anfragen des Crawlers gilt ein festes Zeitlimit von 10 Sekunden.
+* Für Anfragen des Crawlers gilt ein fester Timeout von 10 Sekunden.
 
 #### Seitensätze zum Testen {#page-sets}
 

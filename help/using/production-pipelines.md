@@ -2,13 +2,16 @@
 title: Hinzufügen einer Produktions-Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
-source-git-commit: 1209faf71edbd74cd87acfe24ec438b98ddd4a3a
+TQID: https://experienceleague.adobe.com/WH6W8bZNCWo0BAGLwnMOPpB3bk5P6Fd7c5b-dRT5Vc0
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1249'
+source-wordcount: 1256
 ht-degree: 100%
 
 ---
-
 
 # Hinzufügen einer Produktions-Pipeline {#configuring-production-pipelines}
 
@@ -39,7 +42,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
 1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation sowie das entsprechende Programm aus.
 
-1. Gehen Sie von Ihrer Seite **Programmübersicht** aus zur Karte **Pipelines**.
+1. Navigieren Sie von der Seite **Programmübersicht** aus zur Karte **Pipelines**.
 
 1. Klicken Sie auf **+Hinzufügen** und wählen Sie **Produktions-Pipeline hinzufügen** aus.
 
@@ -163,4 +166,4 @@ Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327785?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)

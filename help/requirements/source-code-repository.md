@@ -2,13 +2,15 @@
 title: Quell-Code-Repository
 description: Hier erfahren Sie mehr über das Git-Repository, das für jedes in Cloud Manager enthaltene Programm bereitgestellt wird.
 exl-id: af551e33-3623-4fcd-8d25-4362d8871411
-source-git-commit: 984269e5fe70913644d26e759fa21ccea0536bf4
+TQID: https://experienceleague.adobe.com/hdEpqKW0NluPs-w37SeLzpd-EHJNqb2nfSAMQ35man8
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: 254
 ht-degree: 100%
 
 ---
-
 
 # Quell-Code-Repository {#source-code-repository}
 

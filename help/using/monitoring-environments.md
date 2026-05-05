@@ -2,13 +2,17 @@
 title: Überwachen von Umgebungen
 description: Erfahren Sie, wie Sie mit Cloud Manager Ihre Umgebungen überwachen.
 exl-id: 32886133-d6c0-4aed-8bb0-81b84f63e825
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/1WlZ7i3267CTPVQrvLi9FlzJuTjzSzpghePEMlSygjY
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '865'
+source-wordcount: 873
 ht-degree: 74%
 
 ---
-
 
 # Überwachen von Umgebungen {#monitoring-environments}
 
@@ -93,7 +97,7 @@ Wenn Sie beispielsweise auf die Warnschwellenwert-Reihe klicken, wird nur der kr
 #### Programm {#application}
 
 * **`Replication Agent`**: Die Zeit (in Sekunden) für eine Testreplikation
-   * Für jeden Replizierungsagenten gibt es verschiedene Metriken.
+   * Für jeden Replikationsagenten gibt es verschiedene Metriken.
 * **`Dispatcher Flush`**: Die Anzahl der sich derzeit in der Dispatcher-Leerungswarteschlange befindlichen Elemente
 
 ## SLA-Berichte {#sla-reporting}
@@ -125,4 +129,4 @@ Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Vorfälle, die
 
 Dieses Video bietet einen Überblick über die Verwendung der von Cloud Manager Reports erstellten Diagramme, die einen Einblick in Ihre Programmumgebungen geben.
 
->[!VIDEO](https://video.tv.adobe.com/v/34567?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26315/)

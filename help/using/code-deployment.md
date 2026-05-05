@@ -2,13 +2,17 @@
 title: Code-Bereitstellung
 description: Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert.
 exl-id: 3d6610e5-24c2-4431-ad54-903d37f4cdb6
-source-git-commit: b98e1711f1f98f52977dd6cb4cd2bc834d81a360
+TQID: https://experienceleague.adobe.com/IrL3c1lGfny74kN4ZUxcNjEtHh4GJOrgH36hzbTKJI4
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '1636'
-ht-degree: 98%
+source-wordcount: 1699
+ht-degree: 96%
 
 ---
-
 
 # Code-Bereitstellung {#code-deployment}
 
@@ -125,7 +129,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
    >[!NOTE]
    >
-   >Cloud Manager geht davon aus, dass das Dispatcher-Artefakt alle Dateien enthält.  Alle Dispatcher-Konfigurationsdateien müssen im Git-Repository vorhanden sein. Fehlende Dateien oder Ordner führen zu Bereitstellungsfehlern.
+   >Cloud Manager geht davon aus, dass das Dispatcher-Artefakt alle Dateien enthält. Alle Dispatcher-Konfigurationsdateien müssen im Git-Repository vorhanden sein. Fehlende Dateien oder Ordner führen zu Bereitstellungsfehlern.
 
 1. Nach der erfolgreichen Bereitstellung aller AEM- und Dispatcher-Pakete in allen Knoten werden die Dispatcher wieder zum Load-Balancer hinzugefügt und die Bereitstellung wird abgeschlossen.
 

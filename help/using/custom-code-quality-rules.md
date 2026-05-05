@@ -2,13 +2,17 @@
 title: Qualitätsregeln für benutzerspezifischen Code
 description: Erfahren Sie mehr über die Besonderheiten der Qualitätsregeln für benutzerspezifischen Code, die von Cloud Manager während des Tests der Code-Qualität ausgeführt werden. Diese Regeln basieren auf Best Practices von AEM Engineering.
 exl-id: 7d118225-5826-434e-8869-01ee186e0754
-source-git-commit: fb3c2b3450cfbbd402e9e0635b7ae1bd71ce0501
+TQID: https://experienceleague.adobe.com/Iee3iEbblEV7TDJxtYpBH8F6oomtD9EJMPX1SSRGIGA
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: a01bfd36-4ab8-4bf8-9dc0-5b45b890552eid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
 workflow-type: tm+mt
-source-wordcount: '3636'
-ht-degree: 95%
+source-wordcount: 4156
+ht-degree: 91%
 
 ---
-
 
 # Qualitätsregeln für benutzerspezifischen Code {#custom-code-quality-rules}
 
@@ -30,7 +34,7 @@ Im folgenden Abschnitt werden die SonarQube-Regeln beschrieben, die von Cloud Ma
 
 ### Verwenden Sie keine potenziell gefährlichen Funktionen {#do-not-use-potentially-dangerous-functions}
 
-* **Schlüssel**: CQRules:CWE-676
+* **key**: CQRules:CWE-676
 * **Typ**: Sicherheitslücke
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
@@ -86,7 +90,7 @@ public class DoThis implements Runnable {
 
 ### Verwenden Sie keine Formatzeichenfolgen, die extern gesteuert werden können {#do-not-use-format-strings-which-may-be-externally-controlled}
 
-* **Schlüssel**: CQRules:CWE-134
+* **key**: CQRules:CWE-134
 * **Typ**: Sicherheitslücke
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
@@ -105,7 +109,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 
 ### HTTP-Anfragen sollten immer Zeitüberschreitungswerte für Sockets und Verbindungen enthalten {#http-requests-should-always-have-socket-and-connect-timeouts}
 
-* **Schlüssel**: CQRules:ConnectionTimeoutMechanism
+* **key**: CQRules:ConnectionTimeoutMechanism
 * **Typ**: Fehler
 * **Schweregrad**: Kritisch
 * **Seit**: Version 2018.6.0
@@ -180,7 +184,7 @@ public void orDoThis() {
 
 ### Die `ResourceResolver`-Objekte sollten immer geschlossen sein {#resourceresolver-objects-should-always-be-closed}
 
-* **Schlüssel**: CQRules:CQBP-72
+* **key**: CQRules:CQBP-72
 * **Typ**: `Code Smell`
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
@@ -222,7 +226,7 @@ public void orDoThis(Session session) throws Exception {
 
 ### Verwenden Sie keine Sling-Servlet-Pfade zum Registrieren von Servlets {#do-not-use-sling-servlet-paths-to-register-servlets}
 
-* **Schlüssel**: CQRules:CQBP-75
+* **key**: CQRules:CQBP-75
 * **Typ**: `Code Smell`
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
@@ -242,7 +246,7 @@ public class DontDoThis extends SlingAllMethodsServlet {
 
 ### Erfasste Ausnahmen sollten entweder protokolliert oder ausgelöst werden, aber nicht beides {#caught-exceptions-should-be-logged-or-thrown-but-not-both}
 
-* **Schlüssel**: CQRules:CQBP-44---CatchAndEitherLogOrThrow
+* **key**: CQRules:CQBP-44---CatchAndEitherLogOrThrow
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -284,7 +288,7 @@ public void orDoThis() throws MyCustomException {
 
 ### Throw-Anweisungen sollten möglichst nicht unmittelbar auf Log-Anweisungen folgen {#avoid-having-a-log-statement-immediately-followed-by-a-throw-statement}
 
-* **Schlüssel**: CQRules:CQBP-44---ConsecutivelyLogAndThrow
+* **key**: CQRules:CQBP-44---ConsecutivelyLogAndThrow
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -310,7 +314,7 @@ public void doThis() throws Exception {
 
 ### Vermeiden Sie beim Verarbeiten von GET- oder HEAD-Anfragen die Protokollierung bei INFO {#avoid-logging-at-info-when-handling-get-or-head-requests}
 
-* **Schlüssel**: CQRules:CQBP-44---LogInfoInGetOrHeadRequests
+* **key**: CQRules:CQBP-44---LogInfoInGetOrHeadRequests
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 
@@ -338,7 +342,7 @@ public void doGet() throws Exception {
 
 ### Verwenden Sie nicht `Exception.getMessage()` als ersten Parameter einer Protokollanweisung {#do-not-use-exception-getmessage-as-the-first-parameter-of-a-logging-statement}
 
-* **Schlüssel**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
+* **key**: CQRules:CQBP-44---ExceptionGetMessageIsFirstLogParam
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -371,7 +375,7 @@ public void doThis() {
 
 ### Die Protokollierung in Catch-Blöcken sollte auf WARN- oder ERROR-Ebene erfolgen {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
-* **Schlüssel**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
+* **key**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -404,7 +408,7 @@ public void doThis() {
 
 ### Drucken Sie keine Stacktraces in der Konsole {#do-not-print-stack-traces-to-the-console}
 
-* **Schlüssel**: CQRules:CQBP-44---ExceptionPrintStackTrace
+* **key**: CQRules:CQBP-44---ExceptionPrintStackTrace
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -437,7 +441,7 @@ public void doThis() {
 
 ### Nicht an Standardausgabe oder Standardfehler ausgeben {#do-not-output-to-standard-output-or-standard-error}
 
-* **Schlüssel**: CQRules:CQBP-44—LogLevelConsolePrinters
+* **Key**: CQRules:CQBP-44—LogLevelConsolePrinters
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -470,7 +474,7 @@ public void doThis() {
 
 ### Vermeiden Sie hartcodierte `/apps`- und `/libs`-Pfade {#avoid-hardcoded-apps-and-libs-paths}
 
-* **Schlüssel**: CQRules:CQBP-71
+* **key**: CQRules:CQBP-71
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
@@ -495,12 +499,12 @@ public void doThis(Resource resource) {
 
 ### Der Sling Scheduler sollte nicht verwendet werden {#sonarqube-sling-scheduler}
 
-* **Schlüssel**: CQRules:AMSCORE-554
+* **key**: CQRules:AMSCORE-554
 * **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Verwenden Sie den Sling Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Vorgänge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
+Verwenden Sie den Sling Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Aufträge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
 
 Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen finden Sie in der Sling-Dokumentation zum Thema [Apache Sling-Ereignisse und -Auftragsverarbeitung](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
@@ -721,7 +725,7 @@ Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Mo
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Die alten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) wurden schon seit mehreren AEM-Versionen nicht mehr verwendet und durch die [Kernkomponenten](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/introduction) ersetzt. Die Verwendung der alten Foundation-Komponenten als Grundlage für benutzerdefinierte Komponenten – sei es durch Überlagerung oder Vererbung – wird nicht empfohlen und sollte in die entsprechende Kernkomponente konvertiert werden. 
+Die alten Foundation-Komponenten (d. h. Komponenten unter `/libs/foundation`) wurden schon seit mehreren AEM-Versionen nicht mehr verwendet und durch die [Kernkomponenten](https://experienceleague.adobe.com/de/docs/experience-manager-core-components/using/introduction) ersetzt. Die Verwendung der alten Foundation-Komponenten als Grundlage für benutzerdefinierte Komponenten – sei es durch Überlagerung oder Vererbung – wird nicht empfohlen und sollte in die entsprechende Kernkomponente konvertiert werden.
 
 [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) können diese Konvertierung erleichtern.
 
@@ -865,25 +869,25 @@ AEM Cloud Service verbietet unbefugte Änderungen der folgenden vorkonfigurierte
 
 AEM Cloud Service verbietet die Erstellung von Tokenizern mit falschen Namen in Analyzern. Tokenizer sollten immer als `tokenizer` definiert werden.
 
-### Die Konfiguration von Indexdefinitionen darf keine Leerzeichen enthalten {#oakpal-indexing-definitions-spaces}
+### Die Konfiguration von Indizierungsdefinitionen darf keine Leerzeichen enthalten {#oakpal-indexing-definitions-spaces}
 
 * **Schlüssel**: PathSpacesCheck
 * **Typ**: Verbesserung
 * **Schweregrad**: Gering
 * **Seit**: Version 2024.7.0
 
-AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Eigenschaften mit Leerzeichen enthalten.
+AEM Cloud Service verbietet die Erstellung von Indizierungsdefinitionen, die Eigenschaften mit Leerzeichen enthalten.
 
-### Die Konfiguration von Indexdefinitionen darf keine haystack0-Eigenschaft enthalten {#oakpal-indexing-haystack0-property}
+### Die Konfiguration von Indizierungsdefinitionen darf keine haystack0-Eigenschaft enthalten {#oakpal-indexing-haystack0-property}
 
 * **Schlüssel**: HayStackPropertyCheck
 * **Typ**: Verbesserung
 * **Schweregrad**: Gering
 * **Seit**: Version 2024.12.0
 
-AEM Cloud Service verbietet die Erstellung von Indexdefinitionen, die Haystack-Eigenschaften enthalten.
+AEM Cloud Service verbietet die Erstellung von Indizierungsdefinitionen, die Haystack-Eigenschaften enthalten.
 
-### Die Konfiguration von Indexdefinitionen sollte die Eigenschaft „async-previous“ nicht enthalten {#oakpal-indexing-unsupported-async-properties}
+### Die Konfiguration von Indizierungsdefinitionen sollte die Eigenschaft „async-previous“ nicht enthalten {#oakpal-indexing-unsupported-async-properties}
 
 * **key**: IndexUnsupportedAsyncPropertiesCheck
 * **Typ**: Verbesserung
@@ -916,36 +920,36 @@ Im folgenden Abschnitt werden die von Cloud Manager durchgeführten Prüfungen d
 
 * [Unerwartete Token in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unexpected-tokens)
 
-* [Nicht passendes Anführungszeichen in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unmatched-quote)
+* [Nicht zugeordnetes Zitat in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-unmatched-quote)
 
 * [Fehlende Klammer in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-brace)
 
 * [Zusätzliche Klammer in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-extra-brace)
 
-* [Fehlende erforderliche Eigenschaft in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
+* [Fehlende obligatorische Eigenschaft in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-missing-mandatory-property)
 
 * [Veraltete Eigenschaft in Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-deprecated-property)
 
 * [Dispatcher-Konfiguration nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-not-found)
 
-* [Httpd configuration includes: Datei nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---httpd-configuration-include-file-not-found)
+* [Httpd-Konfiguration enthält Datei nicht gefunden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---httpd-configuration-include-file-not-found)
 
 * [Allgemeine Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
 
-* [Für den Cache der Dispatcher-Veröffentlichungs-Farm sollte `serveStaleOnError` aktiviert sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
+* [Der Cache der Dispatcher-Veröffentlichungs-Farm sollte aktiviert `serveStaleOnError`](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die standardmäßigen Ablehnungsregeln aus Version 6.x.x des AEM-Archetyps enthalten](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
+* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die standardmäßigen Ablehnungsregeln aus Version 6.x.x des AEM-Archetyps enthalten](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
 
-* [Die Eigenschaft `statfileslevel` des Caches der Dispatcher-Veröffentlichungs-Farm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
+* [Die `statfileslevel`-Eigenschaft des Cache der Dispatcher-Veröffentlichungs-Farm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
 
-* [Die Eigenschaft `gracePeriod` der Dispatcher-Veröffentlichungs-Farm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
+* [Die `gracePeriod` der Dispatcher-Veröffentlichungsfarm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
 
 * [Jede Dispatcher-Farm muss einen eindeutigen Namen haben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [Die `ignoreUrlParams`-Regeln für den Cache der Dispatcher-Veröffentlichungs-Farm sollten als Zulassungsliste konfiguriert werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [Die `ignoreUrlParams` Regeln für den Cache der Dispatcher-Veröffentlichungs-Farm sollten auf eine auf die Zulassungsliste setze Weise konfiguriert werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Selektoren als Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Selektoren auf auf die Zulassungsliste setze Weise angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Suffix-Muster als Zulassungsliste angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Suffix-Muster auf auf die Zulassungsliste setze Weise angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
-* [Verwenden Sie die Anweisung „Require all granted“ nicht in einem VirtualHost-Directory-Abschnitt mit einem Stammverzeichnis-Pfad](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
+* [Verwenden Sie die Anweisung „Require all granted“ nicht in einem VirtualHost Directory-Abschnitt mit einem Stammverzeichnis-Pfad](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
