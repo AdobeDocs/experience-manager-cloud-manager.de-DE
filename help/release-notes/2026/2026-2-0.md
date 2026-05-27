@@ -52,7 +52,7 @@ Derzeit stehen die folgenden Möglichkeiten zur Verfügung:
 
 ### Erweiterbarkeit und Anpassung von Experience Hub {#exp-hub-extensibility}
 
-[Experience Hub](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/experience-hub/experience-hub) dient als Einstiegspunkt für AEM und ist an die Anforderungen Ihres Unternehmens angepasst. Teilen Sie Adobe Ihre bestehenden Erweiterungen der AEM-Benutzeroberfläche mit, damit Sie sie mit minimalem Aufwand in Experience Hub aktivieren können.
+[Experience Hub](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/experience-hub/experience-hub) dient als Einstiegspunkt für AEM und ist an die Anforderungen Ihres Unternehmens angepasst. Teilen Sie Adobe Ihre bestehenden Erweiterungen der AEM-Benutzeroberfläche mit, damit Sie sie mit minimalem Aufwand in Experience Hub aktivieren können.
 
 ![Diagramm des Erweiterbarkeits- und Anpassungs-Workflows von Experience Hub](/help/release-notes/assets/experience-hub-extensibility-customization.png)
 
