@@ -4,13 +4,9 @@ description: Erfahren Sie mehr über die Version Cloud Manager 2026.5.0 in Adobe
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
 TQID: https://experienceleague.adobe.com/4zfTpSYuFwrJZ-oeL1SObT14v2Rd--Z1hKn5JllHAro
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
 source-git-commit: 0c2a9a946df6d5e1b0e4d5edb2715d8db98e9974
 workflow-type: tm+mt
 source-wordcount: 512
@@ -74,7 +70,7 @@ Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production
 
 Sie steuern, welche Pipelines &quot;**Build“**. Während der Beta-Phase wird diese Option nur für Pipelines für **Code-Qualität** und **Bereitstellung von Full-Stack-Code** angezeigt.
 
-Um sich der Beta anzuschließen, senden Sie eine E-Mail an [&#128279;](mailto:beta_quickbuild_cmpipelines@adobe.com)beta_quickbuild_cmpipelines@adobe.com) mit Ihrer Adobe Organisations-ID und Programm-ID.
+Um sich der Beta anzuschließen, senden Sie eine E-Mail an [](mailto:beta_quickbuild_cmpipelines@adobe.com)beta_quickbuild_cmpipelines@adobe.com) mit Ihrer Adobe Organisations-ID und Programm-ID.
 
 <!-- You can deactivate incremental builds at the pipeline level by setting the property `CM_BUILD_DISABLE_MODULE_CACHING` to `true` (effective during the `BUILD` step). For how to add pipeline variables, see [Pipeline variables](/help/getting-started/build-environment.md#pipeline-variables). -->
 
