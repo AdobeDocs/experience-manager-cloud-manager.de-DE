@@ -3,9 +3,13 @@ title: Hinzufügen einer Produktions-Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 TQID: https://experienceleague.adobe.com/WH6W8bZNCWo0BAGLwnMOPpB3bk5P6Fd7c5b-dRT5Vc0
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
 source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
 source-wordcount: 1665
@@ -123,7 +127,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
       * **[Full-Stack-Code](#full-stack-code)** - Code für Ihre gesamte AEM-Anwendung.
       * **[Web-Stufen-](#web-tier-config)**: Dispatcher-Eigenschaften zum Speichern, Verarbeiten und Bereitstellen von Web-Seiten für den Client.
 
-      Weitere [ zu diesen Bereitstellungstypen finden ](/help/overview/ci-cd-pipelines.md#code-sources) unter CI/CD-Pipelines . Die restlichen Schritte zum Abschließen der Pipeline-Konfiguration hängen vom ausgewählten Typ ab. Folgen Sie den obigen Links, um zum entsprechenden Abschnitt dieses Dokuments zu springen.
+      Weitere [&#x200B; zu diesen Bereitstellungstypen finden &#x200B;](/help/overview/ci-cd-pipelines.md#code-sources) unter CI/CD-Pipelines . Die restlichen Schritte zum Abschließen der Pipeline-Konfiguration hängen vom ausgewählten Typ ab. Folgen Sie den obigen Links, um zum entsprechenden Abschnitt dieses Dokuments zu springen.
 
 1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Dort können Sie abhängig von den von Ihnen lizenzierten Produkten Leistungstests für AEM Sites und AEM Assets konfigurieren. {#stage-testing}
 
@@ -177,11 +181,11 @@ Eine Pipeline mit Full-Stack-Code stellt Backend- und Frontend-Code-Builds zusam
 
    ![Full-Stack-Code-Quelle](/help/assets/configure-pipelines/add-prod-fullstack-source.png)
 
-1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [ unter ](#stage-testing) .
+1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
 
 ### Web-Stufen-Konfiguration {#web-tier-config}
 
-Eine Web-Stufen-Konfigurations-Pipeline stellt nur die HTTPD-/Dispatcher-Konfiguration bereit. Weitere [ zu diesem Pipeline-Typ finden ](/help/overview/ci-cd-pipelines.md#deployment-types) unter CI/CD-Pipelines .
+Eine Web-Stufen-Konfigurations-Pipeline stellt nur die HTTPD-/Dispatcher-Konfiguration bereit. Weitere [&#x200B; zu diesem Pipeline-Typ finden &#x200B;](/help/overview/ci-cd-pipelines.md#deployment-types) unter CI/CD-Pipelines .
 
 >[!NOTE]
 >
@@ -203,7 +207,7 @@ Wenn Sie eine Konfigurations-Pipeline auf Web-Ebene für eine Umgebung mit einer
 
    ![Web-Stufen-Konfigurationsquelle](/help/assets/configure-pipelines/add-prod-webtier-source.png)
 
-1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [ unter ](#stage-testing) .
+1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
 
 ## Die nächsten Schritte {#the-next-steps}
 
