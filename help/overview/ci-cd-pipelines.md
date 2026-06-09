@@ -3,23 +3,15 @@ title: CI/CD-Pipelines
 description: Erfahren Sie mehr über CI/CD-Pipelines und wie sie Bereitstellungen in Staging- und Produktionsumgebungen in Cloud Manager handhaben.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 TQID: https://experienceleague.adobe.com/BwkZH2MIbXrzSxf0yk9yeDZZIpw7-Ldue-OPQPkWrdg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
-subfeature_v2:
-  - id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+subfeature_v2: id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 639
-ht-degree: 81%
+source-wordcount: 1091
+ht-degree: 70%
 
 ---
 
@@ -51,6 +43,63 @@ Das folgende Diagramm zeigt, was passiert, wenn eine Release-Veröffentlichung u
 | &#x200B;8. Bereitstellung von Produktions-Trigger | Sobald die automatisierten Tests abgeschlossen sind, startet [!UICONTROL Cloud Manager] die Bereitstellung in der Produktionsumgebung. |
 | &#x200B;9. [!UICONTROL Cloud Manager] ruft Artefakte zur Bereitstellung ab | [!UICONTROL Cloud Manager] ruft die gespeicherten Release-Artefakte ab. |
 | &#x200B;10. Bereitstellen von Artefakten für die Produktion | Die Release-Artefakte werden in der Produktionsumgebung bereitgestellt. |
+
+### Code-Quellen {#code-sources}
+
+Pipelines können sich zusätzlich zu Produktions- und Nicht-Produktions-Pipelines auch nach dem Typ des bereitgestellten Codes unterscheiden.
+
+* **[Full-Stack-Pipelines](#full-stack-pipeline)**: Stellen Sie den vollständigen AEM-Anwendungs-Code zusammen mit HTTPD-/Dispatcher-Konfigurationen bereit.
+* **[Web-Stufen-Konfigurations-Pipelines](#web-tier-config-pipelines)** - Nur HTTPD-/Dispatcher-Konfigurationen bereitstellen.
+
+### Full-Stack-Pipelines {#full-stack-pipeline}
+
+Full-Stack-Pipelines stellen den vollständigen AEM-Anwendungs-Code für die AEM-Laufzeit bereit und stellen standardmäßig auch Web-Stufen-Konfigurationen bereit.
+
+Folgende Einschränkungen gelten.
+
+* Ein Benutzer muss mit der Rolle „Bereitstellungs **Manager“ angemeldet sein** um Pipelines konfigurieren oder ausführen zu können.
+* Es kann immer nur eine Full-Stack-Pipeline pro Umgebung geben.
+
+Im Folgenden wird beschrieben, wie die Full-Stack-Pipeline mit einer [Web-Stufen-Konfigurations-Pipeline](#web-tier-config-pipelines) interagiert.
+
+* Die Full-Stack-Pipeline für eine Umgebung ignoriert die Dispatcher-Konfiguration, wenn die entsprechende Web-Stufen-Konfigurations-Pipeline vorhanden ist.
+* Wenn die entsprechende Web-Stufen-Konfigurations-Pipeline für die Umgebung nicht vorhanden ist, kann die Benutzerin bzw. der Benutzer die Full-Stack-Pipeline so konfigurieren, dass sie die Dispatcher-Konfiguration berücksichtigt oder ignoriert.
+
+Full-Stack-Pipelines können Pipelines zur Code-Qualitätsprüfung oder für die Bereitstellung sein.
+
+#### Konfigurieren von Full-Stack-Pipelines {#configure-full-stack}
+
+Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#full-stack-code).
+Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+
+### Web-Stufen-Konfigurations-Pipelines {#web-tier-config-pipelines}
+
+Web-Stufen-Konfigurations-Pipelines ermöglichen die exklusive Bereitstellung der HTTPD-/Dispatcher-Konfiguration zur AEM-Runtime, indem sie sie von anderen Code-Änderungen entkoppeln. Es handelt sich um eine optimierte Pipeline, die Benutzenden, die nur Änderungen an der Dispatcher-Konfiguration bereitstellen möchten, eine beschleunigte Möglichkeit bietet, dies innerhalb weniger Minuten zu tun.
+
+>[!TIP]
+>
+>Mit Web-Stufen-Konfigurations-Pipelines können Sie Ihre Web-Konfiguration an demselben oder einem anderen Quellspeicherort wie die Full-Stack-Pipeline speichern, je nachdem, was für Ihre Projektstruktur am besten ist.
+
+Folgende Einschränkungen gelten.
+
+* Ein Benutzer muss mit der Rolle „Bereitstellungs **Manager“ angemeldet sein** um Pipelines konfigurieren oder ausführen zu können.
+* Es kann immer nur eine Web-Ebenen-Konfigurations-Pipeline pro Umgebung geben.
+* Benutzende können eine Web-Ebenen-Konfigurations-Pipeline nicht konfigurieren, wenn die entsprechende Full-Stack-Pipeline ausgeführt wird.
+
+Im folgenden Beispiel wird beschrieben, wie die Web-Stufen-Konfigurations-Pipeline mit der [Full-Stack-Pipeline](#full-stack-pipeline) interagiert.
+
+* Wenn für eine Umgebung keine Web-Stufen-Konfigurations-Pipeline eingerichtet ist, kann die Benutzerin oder der Benutzer beim Konfigurieren der Full-Stack-Pipeline wählen, ob die Dispatcher-Konfiguration einbezogen oder ignoriert werden soll.
+* Sobald eine Web-Stufen-Konfigurations-Pipeline für eine Umgebung konfiguriert wurde, ignoriert die entsprechende Full-Stack-Pipeline (sofern vorhanden) die Dispatcher-Konfiguration während der Ausführung und Bereitstellung.
+* Nachdem eine Web-Stufen-Konfigurations-Pipeline gelöscht wurde, wird die zugehörige Full-Stack-Pipeline (sofern vorhanden) zurückgesetzt, um während der Ausführung Dispatcher-Konfigurationen bereitzustellen.
+
+>[!NOTE]
+>
+>Bei AMS-Programmen mit aktivierter Blau/Grün-Bereitstellung verwenden Web-Stufen-Updates standardmäßig eine rollierende Bereitstellung. Verwenden Sie eine Full-Stack-Pipeline, wenn Sie eine Blau/Grün-Bereitstellung für Web-Stufen-Änderungen benötigen.
+
+#### Konfigurieren von Web-Stufen-Pipelines {#configure-web-tier}
+
+Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#web-tier-config).
+Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Schnellere Builds mit Smart Build {#use=smart-build}
 

@@ -3,14 +3,11 @@ title: Hinzufügen einer produktionsfremden Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 1999
+source-wordcount: 2096
 ht-degree: 22%
 
 ---
@@ -91,6 +88,10 @@ Nachdem Sie ein Programm und mindestens eine Umgebung in der Cloud Manager-Benut
 
 Stellt die gesamte AEM-Anwendung bereit, einschließlich Anwendungs-Code und standardmäßig der Web-Stufen-Konfiguration.
 
+>[!NOTE]
+>
+>Wenn für die ausgewählte Umgebung bereits eine Pipeline mit Full-Stack-Code vorhanden ist, wird diese Auswahl deaktiviert.
+
 | Abschnitt | Option | Beschreibung |
 | --- | --- | --- |
 | **Source-Code** | **Repository** | Wählen Sie aus der Dropdown-Liste das Git-Repository aus, das die Pipeline als Quelle verwendet. Cloud Manager erstellt Code aus dem Repository, das Sie hier auswählen. |
@@ -105,11 +106,19 @@ Stellt nur Web-Stufen-Konfigurationen bereit, z. B. Dispatcher-Eigenschaften, di
 
 Wenn bereits eine Full-Stack-Pipeline vorhanden ist, zeigt Cloud Manager einen Hinweis an, dass die vorhandene Full-Stack-Pipeline durch das Erstellen einer Web-Stufen-Konfigurations-Pipeline die Web-Stufen-Konfiguration ignoriert. Nachdem Sie die Web-Stufen-Konfigurations-Pipeline erstellt haben, verwaltet Cloud Manager Web-Stufen-Konfigurationsbereitstellungen über diese Pipeline anstelle der Full-Stack-Pipeline.
 
+>[!NOTE]
+>
+>Wenn für die ausgewählte Umgebung bereits eine Web-Stufen-Konfigurations-Pipeline vorhanden ist, wird diese Auswahl deaktiviert. Es kann immer nur eine Web-Ebenen-Konfigurations-Pipeline pro Umgebung geben.
+
 | Abschnitt | Option | Beschreibung |
 | --- | --- | --- |
 | **Source-Code** | **Repository** | Wählen Sie aus der Dropdown-Liste das Git-Repository aus, das die Web-Stufen-Konfiguration enthält. |
 |   | **Git-Verzweigung** | Wählen Sie die Verzweigung im ausgewählten Repository aus, die Cloud Manager für die Bereitstellung verwendet. Klicken Sie bei Bedarf auf **Aktualisieren**, um die Liste der verfügbaren Verzweigungen für das ausgewählte Repository zu aktualisieren. Verwenden Sie diese Option, wenn eine kürzlich erstellte Verzweigung nicht in der Liste angezeigt wird. |
 |   | **Code-Speicherort** | Geben Sie den Pfad in das ausgewählte Repository ein, das die bereitzustellende Web-Stufen-Konfiguration enthält. Der Standardspeicherort ist der Repository-Stamm (`/`). |
+
+>[!NOTE]
+>
+>Wenn der Code-Speicherort nicht auf den Dispatcher-Code-Speicherort verweist, kann zusätzlicher Anwendungs-Code in das Artefaktpaket gezogen und im Dispatcher bereitgestellt werden, was dazu führt, dass Apache beim Neustart fehlschlägt und die Pipeline fehlschlägt. Stellen Sie sicher, dass Sie den richtigen Pfad zu den Dispatcher-Dateien im Repository festlegen.
 
 >[!ENDTABS]
 
@@ -232,4 +241,4 @@ Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstelle
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327615?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
