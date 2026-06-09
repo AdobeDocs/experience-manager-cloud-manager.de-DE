@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
 workflow-type: tm+mt
-source-wordcount: 1256
-ht-degree: 100%
+source-wordcount: 1665
+ht-degree: 76%
 
 ---
 
@@ -50,24 +50,11 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
 1. Klicken Sie auf **+Hinzufügen** und wählen Sie **Produktions-Pipeline hinzufügen** aus.
 
-   ![Produktions-Pipeline hinzufügen](/help/assets/configure-pipelines/add-prod1.png)
+   ![Produktions-Pipeline hinzufügen](/help/assets/configure-pipelines/add-prod7.png)
 
 1. Das Dialogfeld **Produktions-Pipeline hinzufügen** wird geöffnet, wobei die Registerkarte **Konfiguration** geöffnet ist, auf eine einige Optionen für die Pipeline festgelegt werden müssen. Diese Optionen sind in ausklappbaren Abschnitten gruppiert und werden in den folgenden Schritten beschrieben.
 
    1. Geben Sie in das Feld **Name der Pipeline** einen beschreibenden Namen für die Pipeline ein.
-
-   1. Definieren Sie im Abschnitt **Quell-Code**, wo die Pipeline den Code abruft, den sie verarbeitet.
-
-      * **Repository**: Diese Option legt fest, aus welchem Git-Repository die Pipeline den Code abrufen soll.
-
-      >[!TIP]
-      >
-      >Im Dokument [Einrichten von Programmen](/help/getting-started/program-setup.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
-
-      * **Git-Verzweigung**: Diese Option legt fest, von welcher Verzweigung in der ausgewählten Pipeline der Code abgerufen werden soll.
-      * **Code-Verzeichnis**: Diese Option legt Pfad in der Verzweigung des ausgewählten Repositorys fest, aus dem die Pipeline den Code abrufen soll.
-
-      ![Repos für die Pipeline definieren](/help/assets/configure-pipelines/add-prod2.png)
 
    1. Im Abschnitt **Umgebungen** legen Sie fest, wodurch eine Bereitstellung ausgelöst wird und wie sie in den einzelnen Umgebungen ausgeführt werden soll.
 
@@ -133,7 +120,16 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
          * **Dispatcher-Konfiguration**: Definieren Sie die Dispatcher-Konfiguration für die Produktionsumgebung. Es sind die gleichen Optionen wie für die Staging-Umgebung verfügbar.
 
-1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Dort können Sie abhängig von den von Ihnen lizenzierten Produkten Leistungstests für AEM Sites und AEM Assets konfigurieren.
+1. Klicken Sie **Weiter**, um zur Registerkarte **Source-Code** zu gelangen, auf der Sie den Code-Typ auswählen, der bereitgestellt und das Quell-Repository konfiguriert werden soll.
+
+   1. Wählen **unter „Code für Bereitstellung**&quot; den Bereitstellungstyp aus:
+
+      * **[Full-Stack-Code](#full-stack-code)** - Code für Ihre gesamte AEM-Anwendung.
+      * **[Web-Stufen-](#web-tier-config)**: Dispatcher-Eigenschaften zum Speichern, Verarbeiten und Bereitstellen von Web-Seiten für den Client.
+
+      Weitere [&#x200B; zu diesen Bereitstellungstypen finden &#x200B;](/help/overview/ci-cd-pipelines.md#code-sources) unter CI/CD-Pipelines . Die restlichen Schritte zum Abschließen der Pipeline-Konfiguration hängen vom ausgewählten Typ ab. Folgen Sie den obigen Links, um zum entsprechenden Abschnitt dieses Dokuments zu springen.
+
+1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Dort können Sie abhängig von den von Ihnen lizenzierten Produkten Leistungstests für AEM Sites und AEM Assets konfigurieren. {#stage-testing}
 
    >[!TIP]
    >
@@ -145,7 +141,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
       * **Andere Live-Seiten**
       * **Neue Seiten**
 
-      ![Sites-Lastgewichtung](/help/assets/configure-pipelines/add-prod5.png)
+      ![Sites-Lastgewichtung](/help/assets/configure-pipelines/add-prod8.png)
 
    1. Im Abschnitt **Asset-Leistungstestverteilung** definieren Sie sowohl die Testverteilung von Bildern und PDFs als auch eigene Test-Assets.
 
@@ -161,6 +157,57 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
       ![Assets-Testverteilung](/help/assets/configure-pipelines/add-prod6.png)
 
 1. Klicken Sie auf **Speichern**, um das Hinzufügen der Produktions-Pipeline abzuschließen.
+
+### Full-Stack-Code {#full-stack-code}
+
+Eine Pipeline mit Full-Stack-Code stellt Backend- und Frontend-Code-Builds zusammen mit der HTTPD/Dispatcher-Konfiguration bereit.
+
+>[!NOTE]
+>
+>Wenn bereits eine Produktions-Pipeline mit vollem Stapel vorhanden ist, ist diese Auswahl deaktiviert.
+
+**So konfigurieren Sie eine Produktions-Pipeline mit Full-Stack-Code:**
+
+1. Definieren Sie auf der Registerkarte **Quell-Code** die folgenden Optionen:
+
+   * **Repository**: Diese Option legt fest, aus welchem Git-Repository die Pipeline den Code abrufen soll.
+
+   >[!TIP]
+   >
+   >Im Dokument [Einrichten von Programmen](/help/getting-started/program-setup.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
+
+   * **Git-Verzweigung** - Definiert, aus welcher Verzweigung die Pipeline den Code abrufen soll.
+   * **Konfiguration der Web-Stufe ignorieren**: Wenn diese Option aktiviert ist, stellt die Pipeline Ihre Web-Stufenkonfiguration nicht bereit. Wenn für dieselbe Umgebung bereits eine Web-Stufen-Konfigurations-Pipeline vorhanden ist, wird dieses Kontrollkästchen automatisch aktiviert und deaktiviert, da die Web-Stufen-Konfiguration stattdessen von dieser Pipeline verwaltet wird. Wenn keine Web-Stufen-Konfigurations-Pipeline vorhanden ist, können Sie diese Option aktivieren oder deaktivieren, um zu steuern, ob die Full-Stack-Pipeline die Dispatcher-Konfiguration bereitstellt.
+
+   ![Full-Stack-Code-Quelle](/help/assets/configure-pipelines/add-prod-fullstack-source.png)
+
+1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
+
+### Web-Stufen-Konfiguration {#web-tier-config}
+
+Eine Web-Stufen-Konfigurations-Pipeline stellt nur die HTTPD-/Dispatcher-Konfiguration bereit. Weitere [&#x200B; zu diesem Pipeline-Typ finden &#x200B;](/help/overview/ci-cd-pipelines.md#deployment-types) unter CI/CD-Pipelines .
+
+>[!NOTE]
+>
+>Wenn bereits eine Web-Stufen-Konfigurations-Produktions-Pipeline vorhanden ist, ist diese Auswahl deaktiviert.
+
+Wenn Sie eine Konfigurations-Pipeline auf Web-Ebene für eine Umgebung mit einer vorhandenen Full-Stack-Pipeline erstellen, wird die Konfiguration auf Web-Ebene in der Full-Stack-Pipeline ignoriert. Diese Änderung betrifft nur die Web-Stufen-Konfiguration in dieser Umgebung.
+
+**So konfigurieren Sie eine Web-Stufen-Konfigurations-Produktions-Pipeline:**
+
+1. Definieren Sie auf der Registerkarte **Quell-Code** die folgenden Optionen:
+
+   * **Repository** - Wählen Sie in der Dropdown-Liste das Git-Repository aus, das die Web-Stufen-Konfiguration enthält.
+   * **Git-Verzweigung** - Wählen Sie die Verzweigung im ausgewählten Repository aus, die Cloud Manager für die Bereitstellung verwendet.
+   * **Code-Speicherort** - Geben Sie den Pfad in das ausgewählte Repository ein, das die bereitzustellende Web-Stufen-Konfiguration enthält. Der Standardspeicherort ist der Repository-Stamm (`/`).
+
+   >[!NOTE]
+   >
+   >Wenn der Code-Speicherort nicht auf den Dispatcher-Code-Speicherort verweist, kann zusätzlicher Anwendungs-Code in das Artefaktpaket gezogen und im Dispatcher bereitgestellt werden, was dazu führt, dass Apache beim Neustart fehlschlägt und die Pipeline fehlschlägt. Stellen Sie sicher, dass Sie den richtigen Pfad zu den Dispatcher-Dateien im Repository festlegen.
+
+   ![Web-Stufen-Konfigurationsquelle](/help/assets/configure-pipelines/add-prod-webtier-source.png)
+
+1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
 
 ## Die nächsten Schritte {#the-next-steps}
 
