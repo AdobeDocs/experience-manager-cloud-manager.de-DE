@@ -3,17 +3,13 @@ title: Hinzufügen einer Produktions-Pipeline
 description: Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen.
 exl-id: d489fa3c-df1e-480b-82d0-ac8cce78a710
 TQID: https://experienceleague.adobe.com/WH6W8bZNCWo0BAGLwnMOPpB3bk5P6Fd7c5b-dRT5Vc0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
 workflow-type: tm+mt
-source-wordcount: 1665
-ht-degree: 76%
+source-wordcount: 2101
+ht-degree: 60%
 
 ---
 
@@ -40,7 +36,7 @@ Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline vera
 >
 >Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
 
-## Hinzufügen einer neuen Produktions-Pipeline {#adding-production-pipeline}
+## Hinzufügen einer Produktions-Pipeline {#adding-production-pipeline}
 
 Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm eingerichtet haben und über mindestens eine Umgebung verfügen, können Sie eine Produktions-Pipeline hinzufügen.
 
@@ -127,7 +123,7 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
       * **[Full-Stack-Code](#full-stack-code)** - Code für Ihre gesamte AEM-Anwendung.
       * **[Web-Stufen-](#web-tier-config)**: Dispatcher-Eigenschaften zum Speichern, Verarbeiten und Bereitstellen von Web-Seiten für den Client.
 
-      Weitere [&#x200B; zu diesen Bereitstellungstypen finden &#x200B;](/help/overview/ci-cd-pipelines.md#code-sources) unter CI/CD-Pipelines . Die restlichen Schritte zum Abschließen der Pipeline-Konfiguration hängen vom ausgewählten Typ ab. Folgen Sie den obigen Links, um zum entsprechenden Abschnitt dieses Dokuments zu springen.
+      Weitere [ zu diesen Bereitstellungstypen finden ](/help/overview/ci-cd-pipelines.md#code-sources) unter CI/CD-Pipelines . Die restlichen Schritte zum Abschließen der Pipeline-Konfiguration hängen vom ausgewählten Typ ab. Folgen Sie den obigen Links, um zum entsprechenden Abschnitt dieses Dokuments zu springen.
 
 1. Klicken Sie auf **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Dort können Sie abhängig von den von Ihnen lizenzierten Produkten Leistungstests für AEM Sites und AEM Assets konfigurieren. {#stage-testing}
 
@@ -181,11 +177,11 @@ Eine Pipeline mit Full-Stack-Code stellt Backend- und Frontend-Code-Builds zusam
 
    ![Full-Stack-Code-Quelle](/help/assets/configure-pipelines/add-prod-fullstack-source.png)
 
-1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
+1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [ unter ](#stage-testing) .
 
 ### Web-Stufen-Konfiguration {#web-tier-config}
 
-Eine Web-Stufen-Konfigurations-Pipeline stellt nur die HTTPD-/Dispatcher-Konfiguration bereit. Weitere [&#x200B; zu diesem Pipeline-Typ finden &#x200B;](/help/overview/ci-cd-pipelines.md#deployment-types) unter CI/CD-Pipelines .
+Eine Web-Stufen-Konfigurations-Pipeline stellt nur die HTTPD-/Dispatcher-Konfiguration bereit. Weitere [ zu diesem Pipeline-Typ finden ](/help/overview/ci-cd-pipelines.md#deployment-types) unter CI/CD-Pipelines .
 
 >[!NOTE]
 >
@@ -207,7 +203,84 @@ Wenn Sie eine Konfigurations-Pipeline auf Web-Ebene für eine Umgebung mit einer
 
    ![Web-Stufen-Konfigurationsquelle](/help/assets/configure-pipelines/add-prod-webtier-source.png)
 
-1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
+1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [ unter ](#stage-testing) .
+
+
+## Über die Verwendung von Smart Build in einer Produktions-Pipeline{#about-smart-build}
+
+**Smart Build** in Cloud Manager ist eine optimierte Build-Strategie für Produktions-Pipelines. Smartes Erstellen reduziert Build-Zeiten, indem Module zwischengespeichert und nur die Module neu erstellt werden, die seit der letzten erfolgreichen Ausführung geändert wurden. Unveränderte Module werden aus dem Cache wiederverwendet, während nur geänderte Module und ihre Abhängigkeiten neu erstellt werden, was die Effizienz für Workflows für die iterative Entwicklung verbessert.
+
+Smart Build ist derzeit für Folgendes verfügbar:
+
+* Code-Qualitäts-Pipelines
+* Implementierungs-Pipelines für Entwicklung, Staging und Produktion mit Full-Stack.
+
+>[!NOTE]
+>
+>Die erste Ausführung nach der Aktivierung von Smart Build verhält sich wie ein vollständiger Build, da der Cache leer ist.
+
+Smartes Erstellen wird empfohlen, wenn Folgendes zutrifft:
+
+* Sie entwickeln aktiv und nehmen häufige inkrementelle Änderungen vor.
+* Ihr Projekt enthält mehrere Maven-Module.
+* Vollständige Builds beanspruchen viel Zeit.
+
+Smartes Erstellen ist nicht immer ideal, wenn Folgendes zutrifft:
+
+* Ihr Build beruht in hohem Maße auf Plug-ins, die Vorgänge außerhalb des Abhängigkeitsdiagramms von Maven durchführen.
+* Sie benötigen bei jeder Ausführung eine vollständige Neuaufbauvalidierung.
+
+### Grundlegendes zur Build-Leistung{#smart-build-performance}
+
+Der Leistungsgewinn durch die Verwendung von Smart Build hängt von mehreren Faktoren ab, darunter den folgenden:
+
+* Die Anzahl der Module im Projekt.
+* Häufigkeit und Umfang von Code-Änderungen.
+* Die Verteilung von Abhängigkeiten über Module hinweg.
+
+Im Allgemeinen können Projekte mit vielen unabhängigen Modulen die größte Verbesserung verzeichnen.
+
+### Opt-out aus dem Cache pro Modul{#smart-build-cache-optout}
+
+Smart Build bietet eine differenzierte Steuerung, mit der Sie das Caching für bestimmte Module deaktivieren können. Diese Funktion ist nützlich, wenn bestimmte Module:
+
+* Verwenden Sie Plug-ins wie `exec-maven-plugin` oder `maven-antrun-plugin`.
+* Führen Sie Dateivorgänge aus, die nicht von Maven-Abhängigkeiten verfolgt werden.
+* Erzeugt im Cache inkonsistente Ergebnisse.
+
+### Deaktivieren der Zwischenspeicherung für ein Modul{#smart-build-disable-caching}
+
+Sie können die folgende Eigenschaft zum `pom.xml` des betroffenen Moduls hinzufügen:
+
+```xml
+<properties>
+  <maven.build.cache.enabled>false</maven.build.cache.enabled>
+</properties>
+```
+
+Diese Syntax zwingt das Modul bei jeder Pipeline-Ausführung neu zu erstellen, während andere Module weiterhin vom Caching profitieren.
+
+### Einschränkungen und Überlegungen bei der Verwendung von Smart Build{#smart-build-limitations}
+
+Beachten Sie bei der Verwendung von Smart Build Folgendes:
+
+* Smarter Build beruht auf Maven-Abhängigkeitsanalyse.
+* Bei Änderungen außerhalb des Abhängigkeitsdiagramms werden Trigger-Neuaufbauten möglicherweise nicht unterstützt.
+* Einige Plug-ins sind möglicherweise nicht vollständig mit der Zwischenspeicherung kompatibel.
+* Sie können jederzeit wieder zu **Vollständiger Build** wechseln, indem Sie die produktionsfremde Pipeline bearbeiten.
+
+Wenn Sie auf unerwartetes Build-Verhalten stoßen, sollten Sie das Caching für bestimmte Module deaktivieren oder Ihre Build-Strategie vorübergehend auf **Vollständiger Build** umstellen.
+
+### Fehlerbehebung bei Problemen mit Smart Build{#smart-build-troubleshoot}
+
+| Problem | Lösungsvorschläge |
+| --- | --- |
+| Buildergebnisse sind inkonsistent | ・ Deaktivierung der Zwischenspeicherung für betroffene Module.<br>・ Überprüfen des Plug-in-Verhaltens (insbesondere `exec`/`antrun`-Plug-ins). |
+| Keine Leistungsverbesserung | ・ Stellen Sie sicher, dass mehrere Durchgänge stattgefunden haben (Aufwärmen des Cache).<br>・ Prüfen Sie, ob die meisten Module häufig wechseln. |
+| Unerwartete Artefakte oder fehlende Änderungen | ・ Überprüfen, ob Änderungen außerhalb des Maven-Abhängigkeits-Trackings liegen<br>・ Verwenden Sie **Vollständiger Build** zur Überprüfung. |
+
+Siehe [Hinzufügen einer Produktions-Pipeline](#adding-production-pipeline) Aktivieren des Smart Builds.
+
 
 ## Die nächsten Schritte {#the-next-steps}
 
@@ -217,4 +290,4 @@ Nachdem die Konfiguration der Pipeline abgeschlossen ist, müssen Sie Ihren Code
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327785?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26314/)
