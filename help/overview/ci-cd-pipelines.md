@@ -16,10 +16,10 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: badb64b816e83ca08a39b2b39eda13335f6a3c1d
+source-git-commit: 694d3e8dad6e2ba86186a4bf6fdda3739e1041da
 workflow-type: tm+mt
-source-wordcount: 1091
-ht-degree: 70%
+source-wordcount: 1122
+ht-degree: 72%
 
 ---
 
@@ -77,8 +77,7 @@ Full-Stack-Pipelines können Pipelines zur Code-Qualitätsprüfung oder für die
 
 #### Konfigurieren von Full-Stack-Pipelines {#configure-full-stack}
 
-Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#full-stack-code).
-Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#full-stack-code).Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Web-Stufen-Konfigurations-Pipelines {#web-tier-config-pipelines}
 
@@ -106,14 +105,13 @@ Im folgenden Beispiel wird beschrieben, wie die Web-Stufen-Konfigurations-Pipeli
 
 #### Konfigurieren von Web-Stufen-Pipelines {#configure-web-tier}
 
-Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#web-tier-config).
-Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#web-tier-config).Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Schnellere Builds mit Smart Build {#use=smart-build}
 
 Cloud Manager verwendet jetzt eine optimierte Build-Strategie namens **Smart Build**, die Caching auf Modulebene verwendet, um den Build-Prozess zu beschleunigen. Bei jedem Build werden nur geänderte Module neu erstellt, während unveränderte Module aus dem Cache wiederverwendet werden.
 
-Smarter Build ist nur für Code-Qualitäts- und Entwicklungs-Full-Stack-Bereitstellungs-Pipelines verfügbar.
+Smarter Build ist für Pipelines für Code-Qualität und Full-Stack-Bereitstellung (Entwicklung, Staging, Produktion) verfügbar.
 
 Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline) und [Informationen zur Verwendung von Smart Build in einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#about-smart-build).
 
