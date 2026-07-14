@@ -3,8 +3,11 @@ title: Einrichten eines Projekts
 description: Erfahren Sie, wie Sie Ihr Projekt einrichten, damit Sie es mit Cloud Manager verwalten und bereitstellen können.
 exl-id: ed994daf-0195-485a-a8b1-87796bc013fa
 TQID: https://experienceleague.adobe.com/OhaZ2-x6p1b6aF0xHwr2G-RNTYPd15pqHVxKVwv-GDM
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
 source-wordcount: 1411
@@ -30,13 +33,13 @@ Vorhandene AEM-Projekte müssen bestimmte Grundregeln einhalten, damit sie erfol
 * Cloud Manager erkennt bereitstellbare Dispatcher-Artefakte, indem es nach `zip`-Dateien sucht, die in Unterverzeichnissen von `target` namens `conf` und `conf.d` enthalten sind.
 * Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketbereitstellungen nicht garantiert.
    * Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden.
-* Pakete können bei [ Bereitstellung ](#skipping-content-packages) werden.
+* Pakete können bei [&#x200B; Bereitstellung &#x200B;](#skipping-content-packages) werden.
 
 ## Aktivieren von Maven-Profilen in Cloud Manager {#activating-maven-profiles-in-cloud-manager}
 
 In einigen wenigen Fällen können Sie den Build-Prozess beim Ausführen in Cloud Manager geringfügig ändern. Dies unterscheidet sich von der Ausführung auf Entwickler-Workstations. In diesen Fällen definieren [Maven-Profile](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) wie sich der Build in verschiedenen Umgebungen, einschließlich Cloud Manager, unterscheidet.
 
-Die Aktivierung eines Maven-Profils innerhalb der Cloud Manager-Build-Umgebung sollte durch die Suche nach der `CM_BUILD`Umgebungsvariable[ erfolgen](/help/getting-started/build-environment.md#environment-variables). Umgekehrt sollte ein Profil, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, aktiviert werden, indem darauf geachtet wird, dass diese Variable nicht vorhanden ist.
+Die Aktivierung eines Maven-Profils innerhalb der Cloud Manager-Build-Umgebung sollte durch die Suche nach der `CM_BUILD`Umgebungsvariable[&#x200B; erfolgen](/help/getting-started/build-environment.md#environment-variables). Umgekehrt sollte ein Profil, das nur außerhalb der Cloud Manager-Build-Umgebung verwendet werden soll, aktiviert werden, indem darauf geachtet wird, dass diese Variable nicht vorhanden ist.
 
 Wenn Sie beispielsweise eine einfache Meldung nur dann ausgeben möchten, wenn der Build in Cloud Manager ausgeführt wird, führen Sie die folgenden Schritte aus:
 
