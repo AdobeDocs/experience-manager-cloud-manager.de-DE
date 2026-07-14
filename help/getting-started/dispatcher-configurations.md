@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
 workflow-type: tm+mt
-source-wordcount: 595
-ht-degree: 92%
+source-wordcount: 557
+ht-degree: 44%
 
 ---
 
@@ -23,39 +23,39 @@ Weitere Informationen zum Bereitstellen von Dispatcher-Konfigurationsdateien mit
 
 ## Bereitstellen von Dispatcher-Konfigurationen mit Cloud Manager {#deploying-dispatcher-configurations}
 
-Cloud Manager kann Webserver- und Dispatcher-Konfigurationsdateien bereitstellen, sofern diese nicht nur in den normalen AEM-Inhaltspaketen, sondern auch im Git-Repository gespeichert sind.
+Cloud Manager kann Webserver- und Dispatcher-Konfigurationsdateien bereitstellen, wenn diese mit standardmäßigen AEM-Inhaltspaketen im Git-Repository gespeichert sind.
 
-Um diese Funktion nutzen zu können, sollte der Maven-Build eine .zip-Datei erstellen, die mindestens zwei Verzeichnisse enthält – `conf` und `conf.d`. Diese .zip-Datei kann mit dem `maven-assembly-plugin` erstellt werden.
+Um diese Funktion zu verwenden, erstellt der Maven-Build eine ZIP-Datei, die mindestens zwei Verzeichnisse enthält: `conf` und `conf.d`. Diese .zip-Datei kann mit dem `maven-assembly-plugin` erstellt werden.
 
-Projekte, die von Cloud Manager mit dem integrierten [Assistenten zur Projekterstellung](/help/getting-started/using-the-wizard.md) erstellt werden, haben automatisch die richtige Maven-Projektstruktur. Dies ist der empfohlene Pfad, wenn Sie neu bei Adobe Managed Services (AMS) sind.
+Projekte, die von Cloud Manager mit dem integrierten [Assistenten zur Projekterstellung](/help/getting-started/using-the-wizard.md) erstellt werden, haben automatisch die richtige Maven-Projektstruktur. Dieser Ansatz wird empfohlen, wenn Sie neu bei Adobe Managed Services (AMS) sind.
 
-Wenn Sie eine Bereitstellung in einer Dispatcher-Instanz durchführen, werden die Verzeichnisse in der Instanz durch die Verzeichnisse aus Ihrem Git-Repository ersetzt. Da Webserver- und Dispatcher-Konfigurationsdateien häufig umgebungsspezifische Details erfordern, müssen Sie mit Ihren Customer Success Engineers (CSE) zusammenarbeiten, um die entsprechenden Umgebungsvariablen in `/etc/sysconfig/httpd` festzulegen, bevor Sie diese Funktion korrekt verwenden können.
+Wenn Sie eine Bereitstellung in einer Dispatcher-Instanz durchführen, werden die Verzeichnisse in der Instanz durch die Verzeichnisse aus Ihrem Git-Repository ersetzt. Um die entsprechenden Umgebungsvariablen in `/etc/sysconfig/httpd` korrekt festzulegen, arbeiten Sie mit Ihrem Customer Success-Team zusammen, da Webserver- und Dispatcher-Konfigurationsdateien häufig umgebungsspezifische Details erfordern.
 
 ## Dispatcher-Konfiguration für bestehende Managed Services-Kundschaft {#steps-for-configuring-dispatcher}
 
-Führen Sie die folgenden Schritte aus, um die anfängliche Dispatcher-Konfiguration abzuschließen.
+Gehen Sie wie folgt vor, um die anfängliche Konfiguration von Dispatcher abzuschließen:
 
-1. Beziehen Sie die aktuellen Produktionskonfigurationsdateien von Ihrem CSE.
-1. Entfernen Sie hartcodierte umgebungsspezifische Daten wie beispielsweise die Publish-Renderer-IP-Adresse und ersetzen Sie sie durch Variablen.
-1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem [Variablen](https://experienceleague.adobe.com/docs/experience-manager-learn/ams/dispatcher/variables.html?lang=de#variables-files-(.vars))-Ordner hinzu.
+1. Rufen Sie die aktuellen Produktionskonfigurationsdateien von Ihrem Customer Success-Team ab.
+1. Entfernen Sie umgebungsspezifische Daten, z. B. Veröffentlichungs-Renderer-IPs, und ersetzen Sie sie durch Variablen.
+1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem Ordner [Variablen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/ams/dispatcher/variables) hinzu.
 1. Testen Sie die aktualisierten Konfigurationen in Ihrer Staging-Umgebung.
-1. Bitten Sie nach dem Test Ihren CSE, diese für die Produktion bereitzustellen.
+1. Bitten Sie nach dem Test Ihr Customer Success-Team, für die Produktion bereitzustellen.
 1. Übertragen Sie die Dateien in das Git-Repository.
 1. Führen Sie eine Bereitstellung über Cloud Manager durch.
 
 >[!NOTE]
 >
->Die Migration der Dispatcher- und Webserver-Konfigurationen in das Git-Repository kann beim Cloud Manager-Onboarding, aber auch zu einem späteren Zeitpunkt durchgeführt werden.
+>Die Migration der Dispatcher- und Webserverkonfigurationen in Ihr Git-Repository erfolgt beim Cloud Manager-Onboarding, kann aber auch später durchgeführt werden.
 
 ### Beispiel {#example}
 
-Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifischen Vorgaben Ihres Projekts variieren. Dieses Beispiel soll jedoch als konkrete Anleitung für die Strukturierung Ihres Projekts und die Einbeziehung der Apache- und Dispatcher-Konfigurationen dienen.
+Die spezifische Datei- und Verzeichnisstruktur variiert je nach den spezifischen Vorgaben Ihres Projekts. Dieses Beispiel bietet jedoch eine klare Erklärung dafür, wie Sie Ihr Projekt strukturieren und Apache- und Dispatcher-Konfigurationen einschließen können.
 
 1. Erstellen Sie ein Unterverzeichnis mit dem Namen `dispatcher`.
 
-   Sie können hier beliebige Namen verwenden, aber der in diesem Schritt erstellte Verzeichnisname muss mit dem in Schritt 6 verwendeten Namen übereinstimmen.
+   Verwenden Sie hier einen beliebigen Namen, aber der in diesem Schritt erstellte Verzeichnisname muss mit dem in Schritt 1 verwendeten Namen übereinstimmen.
 
-1. Dieses Unterverzeichnis enthält ein Maven-Modul, das die Dispatcher-ZIP-Datei mit dem Maven Assembly-Plug-in erstellt. Erstellen Sie im Verzeichnis `dispatcher` eine Datei `pom.xml` mit diesem Inhalt, indem Sie den `parent`-Verweis, die `artifactId` und den `name` nach Bedarf ändern.
+1. Dieses Unterverzeichnis enthält ein Maven-Modul, das die ZIP-Datei des Dispatchers mit dem `maven-assembly-plugin` erstellt. Erstellen Sie im Verzeichnis `dispatcher` eine Datei `pom.xml` mit diesem Inhalt, indem Sie den `parent`-Verweis, die `artifactId` und den `name` nach Bedarf ändern.
 
    ```xml
    <?xml version="1.0" encoding="UTF-8"?>
@@ -95,9 +95,9 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
    </project>
    ```
 
-   * Wie in Schritt 1 können die artifactId und der Name hier bei Bedarf andere Werte sein. `dispatcher` wird hier nur als Beispiel verwendet.
+   * Wie in Schritt 1 können die artifactId und der Name andere Werte sein. `dispatcher` wird hier als Beispiel verwendet.
 
-1. Für das Maven Assembly-Plug-in ist ein `descriptor` erforderlich, mit dem definiert wird, wie die ZIP-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei im Unterverzeichnis `dispatcher` mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
+1. Für die `maven-assembly-plugin` ist ein `descriptor` erforderlich, um zu definieren, wie die ZIP-Datei erstellt wird. Erstellen Sie zum Erstellen dieses Deskriptors eine Datei im Unterverzeichnis `dispatcher` mit dem Namen `assembly.xml`, die diesen Inhalt enthält. Beachten Sie, dass in der Datei `pom.xml` oben in Zeile 26 auf diesen Dateinamen verwiesen wird.
 
    ```xml
    <assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
@@ -197,7 +197,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
            └── 02-dispatcher.conf
    ```
 
-1. Fügen Sie abschließend die Datei `pom.xml` in das Stammverzeichnis Ihres Projekts ein und fügen Sie das Element `<module>` hinzu, um das Dispatcher-Modul einzuschließen.
+1. Fügen Sie abschließend in der `pom.xml`-Datei im Stammverzeichnis Ihres Projekts ein `<module>` hinzu, um das Dispatcher-Modul einzuschließen.
 
    Wenn Ihre vorhandene Modulliste beispielsweise wie folgt aussieht:
 
@@ -222,7 +222,7 @@ Die spezifische Datei- und Verzeichnisstruktur kann abhängig von den spezifisch
 
    * Wie in Schritt 1 erwähnt, muss der Wert des Elements `<module>` mit dem erstellten Verzeichnisnamen übereinstimmen.
 
-1. Führen Sie zum Testen das `mvn clean package` im Stammverzeichnis des Projekts aus. In der Ausgabe sollten Zeilen wie die folgende angezeigt werden.
+1. Führen Sie zum Testen das `mvn clean package` im Stammverzeichnis des Projekts aus. In der Ausgabe sehen Sie Zeilen wie diese.
 
    ```
    [INFO] --- maven-assembly-plugin:3.1.0:single (default) @ dispatcher ---
