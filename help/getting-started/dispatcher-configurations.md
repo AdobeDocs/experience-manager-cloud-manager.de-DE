@@ -37,7 +37,7 @@ Gehen Sie wie folgt vor, um die anfängliche Konfiguration von Dispatcher abzusc
 
 1. Rufen Sie die aktuellen Produktionskonfigurationsdateien von Ihrem Customer Success-Team ab.
 1. Entfernen Sie umgebungsspezifische Daten, z. B. Veröffentlichungs-Renderer-IPs, und ersetzen Sie sie durch Variablen.
-1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem Ordner [Variablen](https://experienceleague.adobe.com/en/docs/experience-manager-learn/ams/dispatcher/variables) hinzu.
+1. Definieren Sie erforderliche Variablen in Schlüssel/Wert-Paaren für jede Ziel-Dispatcher und fügen Sie sie in jeder Instanz dem Ordner [Variablen](https://experienceleague.adobe.com/de/docs/experience-manager-learn/ams/dispatcher/variables) hinzu.
 1. Testen Sie die aktualisierten Konfigurationen in Ihrer Staging-Umgebung.
 1. Bitten Sie nach dem Test Ihr Customer Success-Team, für die Produktion bereitzustellen.
 1. Übertragen Sie die Dateien in das Git-Repository.
