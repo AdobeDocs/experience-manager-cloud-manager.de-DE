@@ -15,7 +15,7 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
+source-git-commit: fa6be369b979682cebf68852603725d8754605ab
 workflow-type: tm+mt
 source-wordcount: 1205
 ht-degree: 50%
@@ -44,7 +44,7 @@ Die Build-Umgebungen von Cloud Manager weisen folgende Eigenschaften auf.
    * `imagemagick`
    * `graphicsmagick`
 * Andere Pakete werden zur Build-Zeit installiert, wie im Abschnitt [Installieren zusätzlicher Systempakete“ &#x200B;](#installing-additional-system-packages).
-* Jeder Build wird in einer neuen Umgebung erstellt. Der Build-Container speichert Daten zwischen Ausführungen nicht.
+* Jeder Build wird in einer neuen Umgebung erstellt. Der Build-Container speichert keine Daten zwischen Ausführungen.
 * Maven wird mit diesen drei Befehlen ausgeführt:
    * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
    * `mvn --batch-mode org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean -Dmaven.clean.failOnError=false`
@@ -73,7 +73,7 @@ Cloud Manager [2023.10.0](/help/release-notes/2023/2023-10-0.md) begann mit eine
 
 Einige Benutzende stoßen während des Build-Schritts auf Probleme beim Herunterladen von Artefakten aus Maven-Repositorys, die unsichere HTTP-Verbindungen verwenden.
 
-Um ein reibungsloses Erlebnis mit der aktualisierten Version zu gewährleisten, empfiehlt Adobe, dass Benutzende ihre Maven-Repositorys so aktualisieren, dass sie HTTPS anstelle von HTTP verwenden. Diese Anpassung unterstützt den Übergang der Branche zu sicheren Kommunikationsprotokollen und sorgt für einen sicheren und zuverlässigen Build-Prozess.
+Um ein reibungsloses Erlebnis mit der aktualisierten Version zu gewährleisten, empfiehlt Adobe, dass Benutzende ihre Maven-Repositorys so aktualisieren, dass sie HTTPS anstelle von HTTP verwenden. Diese Anpassung unterstützt die Umstellung der Branche auf sichere Kommunikationsprotokolle und sorgt für einen sicheren und zuverlässigen Build-Prozess.
 
 ## Verwenden einer bestimmten Java-Version {#using-java-version}
 
