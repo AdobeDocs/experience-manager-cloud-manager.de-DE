@@ -3,15 +3,12 @@ title: Repository-Zugriffsinformationen
 description: Erfahren Sie, wie Sie mithilfe der Self-Service-Verwaltung der Git-Repositorys über Cloud Manager auf Ihre von Adobe verwalteten Git-Repositorys zugreifen und diese verwalten können.
 exl-id: 1cc88c82-67c7-4553-a1b8-d2ab22be466c
 TQID: https://experienceleague.adobe.com/S3oIN4DvfYCvKQLGQmFtWlqHcN5Mv9xvoNKjaMnNlm0
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: c1c7a8a36bd770401393fe7e2c62b306c1a2573d
 workflow-type: tm+mt
-source-wordcount: 403
-ht-degree: 100%
+source-wordcount: 400
+ht-degree: 72%
 
 ---
 
@@ -21,14 +18,14 @@ Erfahren Sie, wie Sie mithilfe der Self-Service-Git-Kontoverwaltung in Cloud Man
 
 ## Zugriff auf Repository-Informationen von der Übersichtsseite aus {#overview-page}
 
-Cloud Manager macht es Ihnen leicht, Ihre Repository-Zugriffsinformationen für von Adobe verwaltete Repositorys abzurufen, indem Sie auf der Karte **Pipelines** die Option **Auf Repository-Informationen zugreifen** verwenden.
+Mit Cloud Manager können Sie Ihre Repository-Zugriffsinformationen für von Adobe verwaltete Repositorys über **Auf Repository-Informationen zugreifen** von der Karte **Pipelines** abrufen.
 
 Das Dialogfeld **Repository-Informationen** zeigt Ihnen die folgenden Zugriffsinformationen für von Adobe verwaltete Repositorys:
 
 * Den Git-Benutzernamen.
 * Das Git-Kennwort.
 * Die URL zum Git-Repository von Cloud Manager.
-* Vordefinierte Git-Befehle zum schnellen Hinzufügen einer Remote-Verbindung zu Ihrem Git-Repository und Push-Code.
+* Vordefinierte Git-Befehle zum Hinzufügen einer Remote-Instanz zu Ihrem Git-Repository und Push-Code.
 
   ![Fenster „Repository-Informationen“](assets/repository-info.png)
 
@@ -44,7 +41,7 @@ Die Funktion **Auf Repository-Informationen zugreifen** ist für Benutzende mit 
 
    ![„Auf Repository-Informationen zugreifen“ auf der Karte „Pipelines“](/help/managing-code/assets/pipelines-card2.png)
 
-1. Um auf das Kennwort zugreifen zu können, muss ein neues Kennwort generiert werden. Wählen Sie im Dialogfeld **Repository-Informationen** die Option **Kennwort generieren**.
+1. Um auf das Kennwort zuzugreifen, müssen Sie ein neues Kennwort generieren. Wählen Sie im Dialogfeld **Repository-Informationen** die Option **Kennwort generieren**.
 
 1. Klicken Sie im Bestätigungsdialogfeld auf **Kennwort generieren**.
 
@@ -52,11 +49,11 @@ Die Funktion **Auf Repository-Informationen zugreifen** ist für Benutzende mit 
 
    * Durch das Generieren eines Kennworts wird das vorherige Kennwort ungültig.
    * Cloud Manager speichert das Kennwort nicht. Es liegt in Ihrer Verantwortung, das Kennwort sicher zu speichern.
-   * Da Cloud Manager das Kennwort nicht speichert, müssen Sie ein neues Kennwort generieren, wenn Sie Ihr Kennwort verlieren.
+   * Da Cloud Manager das Kennwort nicht speichert, müssen Sie ein neues generieren, wenn Sie das Kennwort verlieren.
 
    ![Kennwort im Dialogfeld „Repository-Informationen“ kopieren](/help/managing-code/assets/repository-copy-password.png)
 
-Mithilfe dieser Anmeldeinformationen können Sie eine lokale Kopie des Repositorys klonen, Änderungen an diesem lokalen Repository vornehmen und etwaige Code-Änderungen wieder in das Remote-Code-Repository in Cloud Manager übertragen.
+Mithilfe dieser Anmeldeinformationen können Sie eine lokale Kopie des Repositorys klonen, Änderungen an diesem lokalen Repository vornehmen und etwaige Code-Änderungen, wenn sie bereit sind, zurück an das Remote-Code-Repository in Cloud Manager senden.
 
 ## Zugreifen auf Repository-Informationen über das Fenster „Repositorys“ {#repositories-window}
 
@@ -66,4 +63,4 @@ Die Funktion **Auf Repository-Informationen zugreifen** ist auch von der Seite [
 
 Sie können jederzeit ein Zugangskennwort sperren lassen.
 
-[Erstellen Sie hierzu für diese Anfrage ein entsprechendes Support-Ticket](https://experienceleague.adobe.com/de?lang=de&support-solution=Experience+Manager&support-tab=home#support). Das Ticket wird mit hoher Priorität behandelt und die Sperrung erfolgt normalerweise innerhalb eines Tages.
+[Erstellen Sie hierzu für diese Anfrage ein entsprechendes Support-Ticket](https://experienceleague.adobe.com/?lang=de&support-solution=Experience+Manager&support-tab=home#support). Das Ticket hat eine hohe Priorität und wird in der Regel innerhalb eines Tages aufgelöst.
