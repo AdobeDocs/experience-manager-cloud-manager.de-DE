@@ -3,17 +3,13 @@ title: Unterstützung von Git-Untermodulen
 description: Erfahren Sie, wie Sie Git-Untermodule dazu verwenden können, den Inhalt mehrerer Verzweigungen zum Build-Zeitpunkt über Git-Repositorys hinweg zusammenzuführen.
 exl-id: f946d7e7-114a-4e33-bb82-2625d37bba2f
 TQID: https://experienceleague.adobe.com/W9-oYHPdxHPJgwKxguEEkRgf3JDo8iHQRnnsSPYbHCI
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: c2a6d2f87cf9f9c98f2af818f73b1fb2793c2e46
 workflow-type: tm+mt
-source-wordcount: 421
-ht-degree: 100%
+source-wordcount: 420
+ht-degree: 82%
 
 ---
 
@@ -21,7 +17,7 @@ ht-degree: 100%
 
 Git-Untermodule können verwendet werden, um zum Build-Zeitpunkt den Inhalt mehrerer Verzweigungen über Git-Repositorys hinweg zusammenzuführen.
 
-Wenn der Build-Prozess von Cloud Manager ausgeführt wird, klont er zunächst das Repository der Pipeline und prüft dann die konfigurierte Verzweigung. Wenn die Verzweigung eine `.gitmodules`-Datei im Stammverzeichnis enthält, wird der Befehl ausgeführt.
+Wenn der Build-Prozess von Cloud Manager ausgeführt wird, klont er zunächst das Repository der Pipeline und prüft dann die konfigurierte Verzweigung. Wenn die Verzweigung eine `.gitmodules` im Stammverzeichnis enthält, wird der Befehl ausgeführt.
 
 ```
 $ git submodule update --init
@@ -77,9 +73,9 @@ Weitere Informationen zu Git-Untermodulen finden Sie im [Git-Referenzhandbuch](h
 Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 
 * Die Git-URL muss sich genau an die oben beschriebene Syntax halten.
-* Betten Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
+* Schließen Sie aus Sicherheitsgründen keine Anmeldeinformationen in diese URLs ein.
 * Es werden nur Untermodule im Stammverzeichnis der Verzweigung unterstützt.
-* Für bestimmte Git-Commits werden Git-Untermodulverweise gespeichert. Wenn also Änderungen am Untermodul-Repository vorgenommen werden, muss der referenzierte Commit aktualisiert werden. Zum Beispiel mit `git submodule update --remote`
+* Für bestimmte Git-Commits werden Git-Untermodulverweise gespeichert. Wenn also Änderungen am Untermodul-Repository vorgenommen werden, müssen Sie den referenzierten Commit aktualisieren. Zum Beispiel mit `git submodule update --remote`
 * Sofern nicht anders erforderlich, empfiehlt Adobe, „flache“ Untermodule zu verwenden, indem Sie für jedes Untermodul `git config -f .gitmodules submodule.<submodule path>.shallow true` ausführen.
 
 
@@ -87,7 +83,7 @@ Beachten Sie bei der Verwendung von Git-Untermodulen Folgendes:
 
 Die Unterstützung für Git-Untermodule bei Verwendung von [privaten Repositorys](private-repositories.md) ist weitgehend dieselbe wie bei Verwendung von Adobe-Repositorys.
 
-Nachdem Sie Ihre Datei `pom.xml` eingerichtet haben und die `git submodule`-Befehle ausgeführt werden, müssen Sie jedoch eine `.gitmodules`-Datei zum Stammverzeichnis des Aggregator-Repositorys hinzufügen, damit Cloud Manager die Einrichtung des Untermoduls erkennt.
+Damit Cloud Manager die Untermoduleinrichtung erkennt, müssen Sie jedoch eine `.gitmodules`-Datei zum Stammverzeichnis des Aggregator-Repositorys hinzufügen, nachdem Sie Ihre `pom.xml` eingerichtet und die `git submodule`-Befehle ausgeführt haben.
 
 ![.gitmodules-Datei](assets/gitmodules.png)
 
