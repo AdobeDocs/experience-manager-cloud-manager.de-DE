@@ -66,4 +66,4 @@ Die Funktion **Auf Repository-Informationen zugreifen** ist auch von der Seite [
 
 Sie können jederzeit ein Zugangskennwort sperren lassen.
 
-[Erstellen Sie hierzu für diese Anfrage ein entsprechendes Support-Ticket](https://experienceleague.adobe.com/?lang=de&support-solution=Experience+Manager&support-tab=home#support). Das Ticket hat eine hohe Priorität und wird in der Regel innerhalb eines Tages aufgelöst.
+[Erstellen Sie hierzu für diese Anfrage ein entsprechendes Support-Ticket](https://experienceleague.adobe.com/de?lang=de&support-solution=Experience+Manager&support-tab=home#support). Das Ticket hat eine hohe Priorität und wird in der Regel innerhalb eines Tages aufgelöst.
