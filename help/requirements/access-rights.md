@@ -23,7 +23,7 @@ Erfahren Sie mehr über Ihre Adobe ID und darüber, wie Sie mit ihr auf Experie
 
 Im Rahmen des Onboarding-Prozesses erstellt Adobe eine Organisationskennung für Ihr Unternehmen im Adobe Identity Management System (IMS). In IMS können alle Ihre Benutzenden sowie deren Berechtigungen verwaltet werden. Jeder Benutzer, der Mitglied dieser Organisation sein muss und Zugriff auf alle Services von [!UICONTROL Experience Cloud] erhält, muss über eine Adobe ID verfügen.
 
-Weitere Informationen zu einer Adobe ID finden Sie [Verwalten von Adobe](https://helpx.adobe.com/business/enterprise/set-up-your-organization/identity.html)Identitätstypen). Dort finden Sie eine detaillierte Anleitung, wie Sie eine Adobe ID mit einem der verfügbaren Identitätstypen erhalten.
+Weitere Informationen zu einer Adobe ID finden Sie [Verwalten von Adobe](https://helpx.adobe.com/de/business/enterprise/set-up-your-organization/identity.html)Identitätstypen). Dort finden Sie eine detaillierte Anleitung, wie Sie eine Adobe ID mit einem der verfügbaren Identitätstypen erhalten.
 
 ### Benutzende und Rollen {#users-and-roles}
 
