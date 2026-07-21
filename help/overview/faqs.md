@@ -3,17 +3,13 @@ title: Häufig gestellte Fragen zu Cloud Manager
 description: Hier finden Sie Antworten auf die am häufigsten gestellten Fragen zu Cloud Manager für AMS-Kundinnen und -Kunden.
 exl-id: 52c1ca23-5b42-4eae-b63a-4b22ef1a5aee
 TQID: https://experienceleague.adobe.com/aBIiazPCm-krE6rew6k-HSl-Uvc79eagMzM7uYciWdc
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 4dcc367f82c51626ca449ff389a9c9574a562ff7
 workflow-type: tm+mt
-source-wordcount: 762
-ht-degree: 100%
+source-wordcount: 764
+ht-degree: 69%
 
 ---
 
@@ -32,7 +28,7 @@ Yes. You need to add the `maven-toolchains-plugin` with the correct settings for
 
 ## Nach dem Wechsel von Java 8 zu Java 11 schlägt mein Build mit einer Fehlermeldung über das maven-scr-plugin fehl. Was kann ich tun? {#maven-src-plugin}
 
-Ihr AEM Cloud Manager-Build schlägt fehl beim Versuch, den Build von Java 8 auf 11 umzuschalten. Wenn der unten stehende Fehler auftritt, müssen Sie das `maven-scr-plugin` entfernen und alle OSGi-Anmerkungen in OSGi R6-Anmerkungen konvertieren.
+Ihr AEM Cloud Manager-Build schlägt fehl beim Versuch, von Java 8 zu Java 11 zu wechseln. Wenn der unten stehende Fehler auftritt, müssen Sie das `maven-scr-plugin` entfernen und alle OSGi-Anmerkungen in OSGi R6-Anmerkungen konvertieren.
 
 ```text
 [main] [ERROR] Failed to execute goal org.apache.felix:maven-scr-plugin:1.26.4:scr (generate-scr-scrdescriptor) on project helloworld.core: /build_root/build/testsite/src/main/java/com/adobe/HelloWorldServiceImpl.java : Unable to load compiled class: com.adobe.HelloWorldServiceImpl: com/adobe/HelloWorldServiceImpl has been compiled by a more recent version of the Java Runtime (class file version 55.0), this version of the Java Runtime only recognizes class file versions up to 52.0 -> [Help 1]
@@ -48,9 +44,9 @@ Bei Cloud Manager-Builds kann das `maven-enforcer-plugin` mit diesem Fehler fehl
 [main] [WARNING] Rule 1: org.apache.maven.plugins.enforcer.RequireJavaVersion
 ```
 
-Dieses bekannte Problem ist darauf zurückzuführen, dass Cloud Manager eine andere Java-Version verwendet, um den Maven-Befehl auszuführen, als den Code zu kompilieren. Lassen Sie `requireJavaVersion` in Ihren `maven-enforcer-plugin`-Konfigurationen weg.
+Dieses Problem tritt auf, weil Cloud Manager eine andere Java-Version verwendet, um den Maven-Befehl auszuführen. Diese Version unterscheidet sich von der, die zum Kompilieren von Code verwendet wird. Lassen Sie `requireJavaVersion` in Ihren `maven-enforcer-plugin`-Konfigurationen weg.
 
-## Die Code-Qualitätsprüfung ist fehlgeschlagen und unsere Bereitstellung ist blockiert. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
+## Die Code-Qualitätsprüfung ist fehlgeschlagen und die Bereitstellung wird jetzt angehalten. Gibt es eine Möglichkeit, diese Überprüfung zu umgehen? {#deployment-stuck}
 
 Ja. Alle Fehler bei der Überprüfung der Code-Qualität mit Ausnahme der Sicherheitseinstufung sind nicht kritische Metriken. Daher können sie als Teil einer Implementierungs-Pipeline übersprungen werden. indem die Elemente in der Ergebnis-Benutzeroberfläche erweitert werden.
 
@@ -58,12 +54,12 @@ Benutzende mit der Rolle [Bereitstellungs-Manager, Projekt-Manager oder Geschäf
 
 Weitere Informationen finden Sie unter [Code-Qualitätstests von Pipelines](/help/using/code-quality-testing.md#three-tier-gates-while-running-a-pipeline) und [Konfigurieren von Nicht-Produktions-Pipelines](/help/using/non-production-pipelines.md#understanding-the-flow).
 
-## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie lässt sich dieses Problem debuggen, um kritische Metriken zu erfüllen? {#debug-critical-metrics}
+## Cloud Manager-Bereitstellungen schlagen beim Leistungstest in Adobe Managed Services-Umgebung fehl. Wie kann dieses Problem behoben werden, um kritische Metriken zu erfüllen? {#debug-critical-metrics}
 
-Auf diese Frage gibt es keine einzelne Antwort. Die folgenden Punkte zum Schritt „Leistungstest“ können jedoch hilfreich sein:
+Auf diese Frage gibt es keine endgültige Antwort. Die folgenden Punkte zum Leistungstest sind jedoch hilfreich:
 
-* Dieser Schritt ist ein Schritt zur Web-Leistung. Das heißt, es ist etwa zu der Zeit, die Seite mit einem Web-Browser zu laden.
-* Die in der. CSV-Ergebnisdatei aufgelisteten URLs werden während des Tests im Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
+* Dieser Schritt ist ein Schritt zur Web-Leistung. Das heißt, es ist ungefähr die Zeit, die zum Laden einer Seite in einem Webbrowser benötigt wird.
+* Die in der CSV-Ergebnisdatei aufgelisteten URLs werden während des Tests in einem Chrome-Browser in der Cloud Manager-Infrastruktur geladen.
 * Eine häufig fehlgeschlagene Metrik ist die Fehlerquote. Damit also eine URL den Test besteht, muss die Haupt-URL mit dem Status `200` und in weniger als `20` Sekunden geladen werden. Wenn das Laden einer Seite `20` Sekunden überschreitet, wird sie als `504`-Fehler markiert.
 * Wenn für Ihre Website eine Benutzerauthentifizierung erforderlich ist, finden Sie unter [Wissenswertes zu Testergebnissen](/help/using/code-quality-testing.md#authenticated-performance-testing) weitere Informationen dazu, wie Sie den Test zur Authentifizierung Ihrer Website konfigurieren.
 
@@ -73,7 +69,7 @@ Weitere Informationen zu Qualitätsprüfungen finden Sie unter [Grundlegendes zu
 
 Ja. Bei Entwicklerbereitstellungen müssen die `pom.xml`-Dateien der Git-Verzweigung am Ende des `<version>`-Werts `-SNAPSHOT` enthalten.
 
-Dadurch können die nachfolgenden Bereitstellungen weiterhin installiert werden, wenn sich die Version nicht geändert hat. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
+Dadurch können nachfolgende Bereitstellungen installiert werden, wenn sich die Version nicht geändert hat. In Entwicklerbereitstellungen wird keine automatische Version für den Maven-Build hinzugefügt oder generiert.
 
 Sie können die Version für Staging- und Produktions-Builds oder -Bereitstellungen auch auf `-SNAPSHOT` setzen. Cloud Manager legt automatisch eine geeignete Versionsnummer fest und erstellt ein Tag für Sie in Git. Falls erforderlich, kann auf dieses Tag später verwiesen werden.
 
@@ -85,15 +81,15 @@ Bei Staging- und Produktionsbereitstellungen wird, wie [hier beschrieben](/help/
 
 Für die benutzerdefinierte Versionierung in Staging- und Produktionsbereitstellungen legen Sie eine korrekte dreiteilige Maven-Version wie `1.0.0` fest. Erhöhen Sie die Version jedes Mal, wenn Sie sie in der Produktion bereitstellen.
 
-Cloud Manager fügt zu Staging- und Produktions-Builds automatisch eine eigene Version hinzu und erstellt eine Git-Verzweigung. Es ist keine spezielle Konfiguration notwendig. Wenn Sie keine Maven-Version wie zuvor beschrieben festlegen, ist die Bereitstellung trotzdem erfolgreich und eine Version wird automatisch festgelegt.
+Cloud Manager fügt zu Staging- und Produktions-Builds automatisch eine eigene Version hinzu und erstellt eine Git-Verzweigung. Es ist keine spezielle Konfiguration notwendig. Wenn Sie keine Maven-Version wie zuvor beschrieben festlegen, ist die Bereitstellung dennoch erfolgreich und eine Version wird automatisch festgelegt.
 
-## Mein Maven-Build schlägt bei Cloud Manager-Bereitstellungen fehl, lokal wird er jedoch ohne Fehler erstellt. Was läuft da schief? {#maven-build-fail}
+## Mein Maven-Build schlägt für Cloud Manager-Bereitstellungen fehl, lokal wird er jedoch ohne Fehler erstellt. Was ist die Ursache? {#maven-build-fail}
 
 Weitere Informationen finden Sie in dieser [Git-Ressource](https://github.com/cqsupport/cloud-manager/blob/main/cm-build-step-fails.md).
 
 ## Ich kann eine Variable nicht mit einem aio-Befehl festlegen. Was kann ich tun? {#set-variable}
 
-Möglicherweise erhalten Sie eine 403-Fehlermeldung wie die folgende, wenn Sie versuchen, Pipeline-Variablen über `aio`-Befehle aufzulisten oder zu setzen.
+Sie erhalten eine 403-Fehlermeldung wie die folgende, wenn Sie versuchen, Pipeline-Variablen über `aio`-Befehle aufzulisten oder zu setzen.
 
 ```shell
 $ aio cloudmanager:list-pipeline-variables 222
@@ -113,4 +109,4 @@ Cannot set variables: https://cloudmanager.adobe.io/api/program/111/environment/
 
 In diesem Fall muss der Benutzer, der diese Befehle ausführt, in der Admin Console zur Rolle des **Bereitstellungs-Managers** hinzugefügt werden.
 
-Weitere Informationen finden Sie unter [API-Berechtigungen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions/).
+Weitere Informationen finden Sie unter [API-Berechtigungen](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/permissions).
