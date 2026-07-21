@@ -21,6 +21,6 @@ ht-degree: 64%
 
 Wenden Sie sich an Ihren Adobe Managed Services Customer Success Engineer (CSE), um Hilfe zu [!UICONTROL Cloud Manager] zu erhalten. Er kann Sie darüber informieren, ob er Ihr Problem beheben kann oder ob Sie ein Support-Ticket an die Adobe-Kundenunterstützung senden müssen.
 
-Diese Support-Tickets können Sie über den [Enterprise Support](https://experienceleague.adobe.com/?support-tab=home&lang=de#support) erstellen.
+Diese Support-Tickets können Sie über den [Enterprise Support](https://experienceleague.adobe.com/de?support-tab=home&lang=de#support) erstellen.
 
-Weitere Informationen zum Erstellen von Support-Tickets bei der AEM-Kundenunterstützung finden Sie unter [Zugriff auf das AEM-Support-Portal](https://helpx.adobe.com/business/enterprise/get-help/support-and-expert-services.html).
+Weitere Informationen zum Erstellen von Support-Tickets bei der AEM-Kundenunterstützung finden Sie unter [Zugriff auf das AEM-Support-Portal](https://helpx.adobe.com/de/business/enterprise/get-help/support-and-expert-services.html).
