@@ -3,25 +3,15 @@ title: Einführung in Cloud Manager für AMS
 description: Hier erfahren Sie mehr über Cloud Manager für Adobe Managed Services (AMS) und darüber, wie Unternehmen Adobe Experience Manager in der Cloud selbst verwalten können.
 exl-id: 58344d8a-b869-4177-a9cf-6a8b7dfe9588
 TQID: https://experienceleague.adobe.com/VR-H6ubMFgVrkfzDvY4JWYlUtM-Dkztdewr5LiSZK1w
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
-subfeature_v2:
-  - id: a4d14782-c381-4db2-89e3-8cf3f31b103c
-  - id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+subfeature_v2: id: a4d14782-c381-4db2-89e3-8cf3f31b103cid: c14b2f98-ee16-4c49-b87b-919c91b01d9d
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: ee4f497a8bb5fb2d37fd8283721ebc9891f9053a
 workflow-type: tm+mt
-source-wordcount: 1299
-ht-degree: 96%
+source-wordcount: 1266
+ht-degree: 69%
 
 ---
 
@@ -32,13 +22,13 @@ Hier erfahren Sie mehr über Cloud Manager für AMS (Adobe Managed Services) und
 >[!CONTEXTUALHELP]
 >id="aemcloud_cloudmanager_introduction"
 >title="Einführung in Cloud Manager für AMS"
->abstract="Ermöglicht Organisationen die Selbstverwaltung von Adobe Experience Manager in der Cloud. Das umfasst ein Framework für die fortlaufende Integration und Bereitstellung (CI/CD), mit dem IT-Teams und Implementierungspartner die Bereitstellung von Anpassungen oder Aktualisierungen beschleunigen können, ohne die Leistung oder Sicherheit zu beeinträchtigen."
+>abstract="Dadurch können Unternehmen Adobe Experience Manager in der Cloud mithilfe eines CI/CD-Frameworks selbst verwalten. Dieses Framework hilft Teams dabei, Anpassungen oder Aktualisierungen zu beschleunigen, ohne die Leistung oder Sicherheit zu beeinträchtigen."
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/cloud-manager/programs#cloud-manager" text="Erstellen von Programmen"
 >additional-url="https://experienceleague.adobe.com/de/docs/experience-manager-learn/cloud-service/cloud-manager/environments#cloud-manager" text="Umgebungen erstellen"
 
 ## Einführung {#introduction}
 
-[!UICONTROL Cloud Manager] für Adobe Experience Manager bietet Entwicklern die Möglichkeit, durch optimierte Workflows, die auf Best Practices von Adobe Experience Manager basieren, überzeugende Kundenerlebnisse zu erstellen. Für Adobe Experience Manager optimierte CI/CD-Pipelines ermöglichen es Ihnen, Entwicklungs-Workflows einfach zusammenzuführen, indem Sie Ihren Code einchecken und bis zur Produktionsbereitschaft führen. Während der Build-Phase werden Ihre benutzerdefinierten Code-Updates gründlich anhand von Best Practices getestet, sodass Sie zuverlässige Programme für Ihre Kunden bereitstellen. Cloud Manager arbeitet mit offenen APIs und ermöglicht Ihnen die Integration mit Ihren Systemen, ohne bestehende Prozesse und Tools zu stören.
+[!UICONTROL Cloud Manager] für Adobe Experience Manager bietet Entwicklern die Möglichkeit, durch optimierte Workflows, die auf Best Practices von Adobe Experience Manager basieren, überzeugende Kundenerlebnisse zu erstellen. Für Adobe Experience Manager optimierte CI/CD-Pipelines ermöglichen es Ihnen, Entwicklungs-Workflows zusammenzuführen, indem Sie Ihren Code einchecken und ihn dann produktionsbereit machen. Während der Build-Phase werden Ihre benutzerdefinierten Code-Updates gründlich anhand von Best Practices getestet, sodass Sie zuverlässige Programme für Ihre Kunden bereitstellen. Cloud Manager arbeitet mit offenen APIs und ermöglicht Ihnen die Integration mit Ihren Systemen, ohne bestehende Prozesse und Tools zu stören.
 
 >[!NOTE]
 >
@@ -48,10 +38,10 @@ Hier erfahren Sie mehr über Cloud Manager für AMS (Adobe Managed Services) und
 
 Mit Cloud Manager profitiert Ihr Entwicklungs-Team von den folgenden Funktionen:
 
-* Kontinuierliche Integration/Bereitstellung (CI/CD, Continuous Integration/Continuous Delivery) von Code zur Verkürzung der Markteinführungszeit von Monaten/Wochen auf Tage/Stunden
+* Kontinuierliche Integration/Bereitstellung (CI/CD) von Code, um Entwicklungszyklen von Monaten/Wochen auf Tage/Stunden zu reduzieren.
 * Code-Prüfungen, Leistungstests und Sicherheitsprüfungen basierend auf Best Practices, bevor der Code an die Produktion gesendet wird, um Produktionsunterbrechungen zu minimieren.
 * API-Konnektivität zur Ergänzung vorhandener DevOps-Prozesse.
-* Automatische Skalierungsfunktion zur intelligenten Erkennung eines erhöhten Kapazitätsbedarfs und automatischen Online-Bereitstellung zusätzlicher Dispatcher-/Veröffentlichungssegmente.
+* Automatische Skalierung, die den Bedarf an erhöhter Kapazität erkennt und automatisch zusätzliche Dispatcher-/Publishing-Segmente bereitstellt.
 
 ![CI/CD-Fluss](/help/assets/screen_shot_2018-05-12at73843pm.png)Der CI/CD-Prozessfluss, wie er in [!UICONTROL Cloud Manager] verwendet wird.
 
@@ -63,17 +53,17 @@ In den folgenden Abschnitten werden wichtige Funktionen von Cloud Manager hervor
 
 Weitere Informationen zur Benutzeroberfläche von [!UICONTROL Cloud Manager] und zu den ersten Schritten finden Sie unter [Erste Anmeldung](/help/getting-started/first-time-login.md).
 
-Mit der Benutzeroberfläche für [!UICONTROL Cloud Manager] können Sie einfach auf die Cloud-Umgebung zugreifen und sie verwalten und die CI/CD-Pipeline für Ihre Adobe Experience Manager-Programme einfach einrichten.
+Mit der Benutzeroberfläche für [!UICONTROL Cloud Manager] können Sie für Ihre Adobe Experience Manager-Programme einfach auf die Cloud-Umgebung und die CI/CD-Pipeline zugreifen und sie verwalten.
 
 Sie definieren anwendungsspezifische Key Performance Indicators (KPIs) wie Spitzenwerte für Seitenansichten pro Minute oder erwartete Seitenladereaktionszeiten. Diese KPIs dienen als Grundlage für die Messung des Bereitstellungserfolgs. Rollen und Berechtigungen für verschiedene Team-Mitglieder können einfach definiert werden. Die Self-Service-Oberfläche bietet Ihnen volle Kontrolle. Sie bietet außerdem Links zu Ressourcen für Best Practices und Zugang zu Adobe-Fachleuten, um bei Bedarf Orientierungshilfen zu erhalten.
 
 ### CI/CD-Pipeline {#ci-cd-pipeline}
 
-Eine der Hauptfunktionen von [!UICONTROL Cloud Manager] ist die Möglichkeit, eine optimierte CI/CD-Pipeline einzurichten, um die Bereitstellung von benutzerspezifischem Code oder Aktualisierungen (z. B. hinzugefügte neue Website-Komponenten) zu beschleunigen.
+Eine der Hauptfunktionen von [!UICONTROL Cloud Manager] ist die Möglichkeit, eine optimierte CI/CD-Pipeline zu verwenden, um die Bereitstellung von benutzerdefiniertem Code oder Aktualisierungen (z. B. hinzugefügte neue Website-Komponenten) zu beschleunigen.
 
 Über die [!UICONTROL Cloud Manager]-Benutzeroberfläche können Sie CI/CD-Pipelines konfigurieren und starten. Im Rahmen dieser Pipeline wird ein gründlicher Codescan durchgeführt, um sicherzustellen, dass nur hochwertige Programme in die Produktionsumgebung übertragen werden.
 
-Weitere Informationen zum Konfigurieren der Pipeline in der Benutzeroberfläche von [!UICONTROL Cloud Manager] finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
+Weitere Informationen zum Konfigurieren von Pipelines über die Benutzeroberfläche von [!UICONTROL Cloud Manager ] Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
 ### Flexible Bereitstellungsmodi {#flexible-deployment-modes}
 
@@ -81,19 +71,19 @@ Weitere Informationen zum Konfigurieren der Pipeline in der Benutzeroberfläche 
 
 Im automatischen Auslösermodus wird der Code basierend auf bestimmten Ereignissen (z. B. einem Code-Commit) automatisch in einer Umgebung bereitgestellt. Sie können Code-Breitstellungen auch innerhalb bestimmter Zeitrahmen (auch außerhalb der Geschäftszeiten) planen.
 
-Unabhängig vom Bereitstellungsauslöser werden bei einer CI/CD-Pipeline-Ausführung immer Qualitätsprüfungen durchgeführt. Das gilt für jede ausgelöste Bereitstellung. Zu den Qualitätsprüfungen gehören vorkonfigurierte Code-Prüfungen, Sicherheitstests und Leistungstests, die ohne Aufwand von Ihnen oder Ihren Partnern genutzt werden können.
+Unabhängig vom Bereitstellungsauslöser werden bei einer CI/CD-Pipeline-Ausführung immer Qualitätsprüfungen durchgeführt. Das gilt für jede ausgelöste Bereitstellung. Zu den Qualitätsprüfungen gehören Code-Prüfungen, Sicherheitstests und Leistungstests, die alle als Standardfunktionen bereitgestellt werden, ohne dass Sie oder Ihre Partner dafür Aufwand betreiben müssen.
 
 Weitere Informationen zum Bereitstellen von Code und zu Qualitätsprüfungen finden Sie unter [Bereitstellen von Code](/help/using/code-deployment.md).
 
 ## Optionale Funktionen in Cloud Manager {#optional-features-in-cloud-manager}
 
-Cloud Manager bietet zusätzliche erweiterte Funktionen, die je nach Einrichtung und Anforderungen Ihrer Umgebung für Ihr Projekt von Vorteil sein können. Wenn diese Funktionen für Sie von Interesse sind, wenden Sie sich an das Customer Success Engineer(CSE)-Team oder an den Adobe-Support, um weitere Informationen zu erhalten.
+Cloud Manager bietet zusätzliche erweiterte Funktionen, die Ihr Projekt je nach Einrichtung und Anforderungen Ihrer Umgebung unterstützen. Wenden Sie sich zur weiteren Diskussion an Ihren Customer Success Engineer (CSE) oder den Adobe-Support, wenn diese Funktionen für Sie von Interesse sind.
 
 ### Automatische Skalierung {#autoscaling}
 
-Wenn die Produktionsumgebung ungewöhnlich stark ausgelastet ist, erkennt [!UICONTROL Cloud Manager] den Bedarf an zusätzlicher Kapazität und stellt mit seiner Funktion zur automatischen Skalierung automatisch zusätzliche Kapazität online bereit.
+Wenn die Produktionsumgebung ungewöhnlich stark ausgelastet ist, erkennt [!UICONTROL Cloud Manager] den Bedarf an zusätzlicher Kapazität und stellt mit seiner Funktion zur automatischen Skalierung automatisch zusätzliche Kapazität bereit.
 
-In einem solchen Fall löst [!UICONTROL Cloud Manager] automatisch die Skalierung aus, sendet eine Benachrichtigung über die automatische Skalierung und macht die zusätzliche Kapazität innerhalb von Minuten online verfügbar. Die zusätzliche Kapazität wird in der Produktionsumgebung bereitgestellt, und zwar in denselben Regionen und mit denselben Systemspezifikationen wie in laufenden Dispatcher-/Veröffentlichungsknoten.
+In einem solchen Fall Trigger [!UICONTROL Cloud Manager] automatisch die Skalierung, sendet eine Benachrichtigung über die automatische Skalierung und stellt innerhalb von Minuten zusätzliche Kapazität bereit. Die zusätzliche Kapazität wird in der Produktionsumgebung und denselben Regionen bereitgestellt und entspricht den Systemspezifikationen der ausgeführten Dispatcher-/Veröffentlichungsknoten.
 
 Die Funktion zur automatischen Skalierung gilt für die Dispatcher-/Veröffentlichungsebene und verwendet eine horizontale Skalierung zum Hinzufügen von ein bis zehn Segmenten von Dispatcher-/Veröffentlichungspaaren. Jede zusätzlich bereitgestellte Kapazität wird innerhalb von zehn Arbeitstagen, wie vom Adobe CSE (Customer Success Engineer) festgelegt, manuell skaliert.
 
@@ -109,7 +99,7 @@ Es ist immer nur eine der Umgebungen aktiv, wobei der gesamte Produktions-Traffi
 
 * Eine Blau/Grün-Implementierung ist ein Add-on zu CI/CD-Pipelines von Cloud Manager, bei der ein zweiter Satz an Publishing- und Dispatcher-Instanzen (grün) erstellt und für Bereitstellungen verwendet wird. Die grünen Instanzen werden dann an den Produktionslastenausgleich angehängt und die alten Instanzen (blau) werden entfernt und beendet.
 * Diese Blau/Grün-Implementierung behandelt Instanzen als transient und jede Iteration einer Blau/Grün-Pipeline erstellt einen neuen Satz von Publishing- und Dispatcher-Servern.
-* Im Rahmen der Einrichtung wird ein grüner Lastenausgleich erstellt. Dieser Lastenausgleich ändert sich nie und sollte auf Ihre grüne „Test“-URL verweisen.
+* Im Rahmen der Einrichtung wird ein grüner Lastenausgleich erstellt. Dieser Lastenausgleich ändert sich nie und ist das Ziel für Ihre grüne oder „Test“-URL.
 * Bei einer Blau/Grün-Implementierung wird eine exakte Replikation der vorhandenen Dispatcher-/Veröffentlichungsebenen erstellt.
 
 #### Blau/Grün-Implementierungsfluss {#flow}
