@@ -3,23 +3,15 @@ title: CI/CD-Pipelines
 description: Erfahren Sie mehr über CI/CD-Pipelines und wie sie Bereitstellungen in Staging- und Produktionsumgebungen in Cloud Manager handhaben.
 exl-id: 7130e5b7-6986-48c8-900c-90f3e4187f91
 TQID: https://experienceleague.adobe.com/BwkZH2MIbXrzSxf0yk9yeDZZIpw7-Ldue-OPQPkWrdg
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
-subfeature_v2:
-  - id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 694d3e8dad6e2ba86186a4bf6fdda3739e1041da
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+subfeature_v2: id: c14b2f98-ee16-4c49-b87b-919c91b01d9d
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: f83ddaa74a656abd2328cd3969ff0cc10b79d729
 workflow-type: tm+mt
-source-wordcount: 1122
-ht-degree: 72%
+source-wordcount: 1085
+ht-degree: 64%
 
 ---
 
@@ -54,7 +46,7 @@ Das folgende Diagramm zeigt, was passiert, wenn eine Release-Veröffentlichung u
 
 ### Code-Quellen {#code-sources}
 
-Pipelines können sich zusätzlich zu Produktions- und Nicht-Produktions-Pipelines auch nach dem Typ des bereitgestellten Codes unterscheiden.
+Pipelines können sich neben der Produktion und produktionsfremden auch nach dem Typ des bereitgestellten Codes unterscheiden.
 
 * **[Full-Stack-Pipelines](#full-stack-pipeline)**: Stellen Sie den vollständigen AEM-Anwendungs-Code zusammen mit HTTPD-/Dispatcher-Konfigurationen bereit.
 * **[Web-Stufen-Konfigurations-Pipelines](#web-tier-config-pipelines)** - Nur HTTPD-/Dispatcher-Konfigurationen bereitstellen.
@@ -71,17 +63,18 @@ Folgende Einschränkungen gelten.
 Im Folgenden wird beschrieben, wie die Full-Stack-Pipeline mit einer [Web-Stufen-Konfigurations-Pipeline](#web-tier-config-pipelines) interagiert.
 
 * Die Full-Stack-Pipeline für eine Umgebung ignoriert die Dispatcher-Konfiguration, wenn die entsprechende Web-Stufen-Konfigurations-Pipeline vorhanden ist.
-* Wenn die entsprechende Web-Stufen-Konfigurations-Pipeline für die Umgebung nicht vorhanden ist, kann die Benutzerin bzw. der Benutzer die Full-Stack-Pipeline so konfigurieren, dass sie die Dispatcher-Konfiguration berücksichtigt oder ignoriert.
+* Wenn die entsprechende Web-Stufen-Konfigurations-Pipeline für die Umgebung nicht vorhanden ist, kann der Benutzer die Dispatcher-Konfiguration beim Konfigurieren der Full-Stack-Pipeline einbeziehen oder ignorieren.
 
 Full-Stack-Pipelines können Pipelines zur Code-Qualitätsprüfung oder für die Bereitstellung sein.
 
 #### Konfigurieren von Full-Stack-Pipelines {#configure-full-stack}
 
-Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#full-stack-code).Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#full-stack-code).
+Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Web-Stufen-Konfigurations-Pipelines {#web-tier-config-pipelines}
 
-Web-Stufen-Konfigurations-Pipelines ermöglichen die exklusive Bereitstellung der HTTPD-/Dispatcher-Konfiguration zur AEM-Runtime, indem sie sie von anderen Code-Änderungen entkoppeln. Es handelt sich um eine optimierte Pipeline, die Benutzenden, die nur Änderungen an der Dispatcher-Konfiguration bereitstellen möchten, eine beschleunigte Möglichkeit bietet, dies innerhalb weniger Minuten zu tun.
+Web-Stufen-Konfigurations-Pipelines ermöglichen die exklusive Bereitstellung der HTTPD-/Dispatcher-Konfiguration zur AEM-Runtime, indem sie sie von anderen Code-Änderungen entkoppeln. Es handelt sich dabei um eine optimierte Pipeline, die Benutzenden, die nur Dispatcher-Konfigurationsänderungen bereitstellen möchten, eine effiziente Möglichkeit bietet, dies schnell zu tun.
 
 >[!TIP]
 >
@@ -105,7 +98,8 @@ Im folgenden Beispiel wird beschrieben, wie die Web-Stufen-Konfigurations-Pipeli
 
 #### Konfigurieren von Web-Stufen-Pipelines {#configure-web-tier}
 
-Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#web-tier-config).Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+Siehe [Hinzufügen einer Produktions-Pipeline](/help/using/production-pipelines.md#web-tier-config).
+Siehe [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ### Schnellere Builds mit Smart Build {#use=smart-build}
 
@@ -131,7 +125,7 @@ Die CI/CD-Pipeline bietet Quality Gates (bzw. Akzeptanzkriterien), die erfüllt 
 Für jeden dieser Akzeptanztests sind drei Stufen von Problemen definiert:
 
 * **Kritisch:** Beim Test festgestellte ausschlaggebende Probleme, die ein sofortiges Fehlschlagen der Pipeline verursachen.
-* **Wichtig:** Beim Test festgestellte wichtige Probleme, durch die die Pipeline angehalten wird. Bereitstellungs-Managerinnen bzw. -Manager, Projekt-Managerinnen bzw. -Manager oder Geschäftsinhaberinnen bzw. -inhaber können die Probleme übergehen, sodass die Pipeline fortgesetzt werden kann. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird.
+* **Wichtig:** Beim Test festgestellte wichtige Probleme, durch die die Pipeline angehalten wird. Bereitstellungs-Manager, Projekt-Manager oder Business Lead können die Probleme außer Kraft setzen, sodass die Pipeline fortgesetzt werden kann. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird.
 * **Information:** Beim Test festgestellte Probleme informativer Natur, die ausschließlich zu Informationszwecken genannt werden und keine Auswirkungen auf die Pipeline-Ausführung haben.
 
 Dies ist ein Beispiel für einen Codescan mit festgestellten Problemen:
