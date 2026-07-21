@@ -8,16 +8,16 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 2011f63c513689f571d21772752348388c2f342a
 workflow-type: tm+mt
-source-wordcount: 367
-ht-degree: 95%
+source-wordcount: 356
+ht-degree: 76%
 
 ---
 
 # Git-Integration mit Adobe Cloud Manager
 
-Adobe Cloud Manager verfügt über ein einzelnes Git-Repository, das der Bereitstellung von Code unter Verwendung der CI/CD-Pipelines von Cloud Manager dient. Sie können das vorkonfigurierte Git-Repository von Cloud Manager verwenden, oder Sie haben die Möglichkeit, ein lokales oder kundenseitig verwaltetes Git-Repository in Cloud Manager zu integrieren.
+Adobe Cloud Manager verfügt über ein einzelnes Git-Repository, das der Bereitstellung von Code unter Verwendung der CI/CD-Pipelines von Cloud Manager dient. Sie können das Git-Repository von Cloud Manager wie bereitgestellt verwenden oder ein lokales oder vom Kunden verwaltetes Git-Repository mit Cloud Manager integrieren.
 
 ## Überblick über die Git-Integration
 
@@ -31,9 +31,9 @@ In dieser Videoreihe werden verschiedene Anwendungsfälle für die Integration e
 * [Produktionsbereitstellung](#production-deployment)
 * [Synchronisieren von Versions-Tags](#sync-tags)
 
-Diese Videoreihe setzt Grundkenntnisse über Git und die Verwaltung von Quellenkontrollen voraus. Weitere Informationen zu Git finden Sie in den [folgenden zusätzlichen Ressourcen](#additional-resources).
+Diese Videoreihe erfordert grundlegende Kenntnisse der Git- und Quell-Code-Verwaltung. Weitere Informationen zu Git finden Sie in den [folgenden zusätzlichen Ressourcen](#additional-resources).
 
-Die Schritte und Benennungskonventionen in dieser Videoreihe präsentieren mehrere Best Practices für die Arbeit mit einem kundenseitig verwalteten Git-Repository und Cloud Manager. Es wird erwartet, dass die dargelegten Konventionen und Workflows für einzelne Entwicklungsteams angepasst werden.
+Die Schritte und Benennungskonventionen in dieser Videoreihe präsentieren mehrere Best Practices für die Arbeit mit einem kundenseitig verwalteten Git-Repository und Cloud Manager. Die gezeigten Konventionen und Workflows sind für einzelne Entwicklungsteams angepasst.
 
 Einen vollständigen Überblick über Cloud Manager liefert Ihnen die [Einführung in Cloud Manager](/help/introduction.md).
 
@@ -45,7 +45,7 @@ Erste Schritte zum Synchronisieren eines kundenverwalteten Git-Repository mit de
 
 ## Standard-Verzweigungsstrategie {#branching-strategy}
 
-Richten Sie eine grundlegende Verzweigungsstrategie ein, um sowohl die [Produktions-Pipelines](/help/using/production-pipelines.md) als auch die [produktionsfremden Pipelines](/help/using/non-production-pipelines.md) von Cloud Manager zu nutzen.
+Konfigurieren Sie eine grundlegende Verzweigungsstrategie für die Verwendung [&#x200B; Cloud Manager-Pipelines &#x200B;](/help/using/production-pipelines.md)Produktion[&#x200B; und produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
 >[!VIDEO](https://video.tv.adobe.com/v/33716/?captions=ger&quality=12)
 

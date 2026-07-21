@@ -10,10 +10,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: a7e83374a2282e4d63efb409d40722ebe9b4697e
 workflow-type: tm+mt
-source-wordcount: 2568
-ht-degree: 92%
+source-wordcount: 2528
+ht-degree: 89%
 
 ---
 
@@ -80,11 +80,11 @@ THIS BULLET REMOVED AS PER https://wiki.corp.adobe.com/display/DMSArchitecture/C
 
 1. Wählen Sie **Speichern**, um das Repository hinzuzufügen.
 
-   Geben Sie jetzt ein Zugriffs-Token an, um die Eigentümerschaft des externen Repositorys zu validieren.
+   Um die Eigentümerschaft des externen Repositorys zu überprüfen, geben Sie ein Zugriffs-Token an.
 
-1. Geben Sie im Dialogfeld **Validierung des** Repository-Eigentümers) ein Zugriffstoken ein, um den Besitz des externen Repositorys zu überprüfen, sodass Sie darauf zugreifen können, und klicken Sie dann auf **Validieren**.
+1. Um den Besitz des externen Repositorys zu überprüfen, damit Sie darauf zugreifen können, geben Sie ein Zugriffstoken im Dialogfeld **Validierung des privaten Repository-**&quot; an und klicken Sie auf **Validieren**.
 
-   ![Auswählen eines vorhandenen Zugriffstokens für ein Repository](/help/managing-code/assets/repositories-exisiting-access-token.png)
+   ![Auswählen eines vorhandenen Zugriffs-Tokens für ein Repository](/help/managing-code/assets/repositories-exisiting-access-token.png)
    *Auswählen eines vorhandenen Zugriffs-Tokens für ein Bitbucket-Repository (nur zu Veranschaulichungszwecken).*
 
 >[!BEGINTABS]
@@ -144,7 +144,7 @@ https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-se
 | Zugriffs-Token-Option | Beschreibung |
 | --- | --- |
 | **Vorhandenes Zugriffs-Token verwenden** | Wenn Sie bereits ein Repository-Zugriffs-Token für Ihre Organisation bereitgestellt haben und Zugriff auf mehrere Repositorys haben, können Sie ein vorhandenes Token auswählen. Verwenden Sie die Dropdown-Liste **Tokenname**, um das Token auszuwählen, das Sie auf das Repository anwenden möchten. Fügen Sie andernfalls ein neues Zugriffs-Token hinzu. |
-| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffs-Token ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffstoken mithilfe der [Azure DevOps-Dokumentation](https://learn.microsoft.com/de-de/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Erforderliche Berechtigungen für das Azure DevOps Personal Access Token (PAT). <br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, die Verwaltung von Pull-Anfragen und die Konfiguration von oder Reaktion auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Azure DevOps sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Code (Lesen)</li><li>Code (Status)</li><li>Pull-Request-Threads (Lesen und Schreiben)</li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
+| **Neues Zugriffs-Token hinzufügen** | <ul><li>Geben Sie im Textfeld **Token-Name** einen Namen für das Zugriffstoken ein, das Sie erstellen.<li>Erstellen Sie ein Repository-Zugriffstoken mithilfe der [Azure DevOps-Dokumentation](https://learn.microsoft.com/de-de/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows).<li>Erforderliche Berechtigungen für das Azure DevOps Personal Access Token (PAT). <br>Diese Berechtigungen ermöglichen Cloud Manager den Zugriff auf Repository-Inhalte, die Verwaltung von Pull-Anfragen und die Konfiguration von oder Reaktion auf Webhook-Ereignisse.<br>Stellen Sie beim Erstellen des App-Passworts in Azure DevOps sicher, dass es die folgenden erforderlichen App-Passwortberechtigungen enthält:<ul><li>Code (Lesen)</li><li>Code (Status)</li><li>Pull-Request-Threads (Lesen und Schreiben)</li></ul></li></li></ul></ul></ul><ul><li>Fügen Sie im Feld **Zugriffs-Token** das soeben erstellte Token ein. |
 
 Nach der Überprüfung kann das externe Repository verwendet und mit einer Pipeline verknüpft werden.
 
@@ -160,7 +160,7 @@ Siehe auch [Verwalten von Zugriffs-Token](/help/managing-code/manage-access-toke
    * [Hinzufügen einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#add-non-production-pipeline)
    * [Bearbeiten einer Pipeline](/help/using/managing-pipelines.md#editing-pipelines)
 
-   ![Quellcode-Repository der Pipeline und Git-Verzweigung](/help/managing-code/assets/pipeline-repo-gitbranch.png)
+   ![Quell-Code-Repository der Pipeline und Git-Verzweigung](/help/managing-code/assets/pipeline-repo-gitbranch.png)
    *Dialogfeld „Produktionsfremde Pipeline hinzufügen“ mit ausgewähltem Repository und Git-Verzweigung*
 
 1. Wählen Sie beim Hinzufügen oder Bearbeiten einer Pipeline zum Angeben des **Quell-Code**-Speicherorts für die neue oder vorhandene Pipeline das zu verwendende externe Repository aus der Dropdown-Liste **Repository** aus.
@@ -195,7 +195,7 @@ Für alle anderen externen Repositorys, die mit einem Zugriffs-Token integriert 
 
 1. Wählen Sie in der Konsole **[Meine Programme](/help/getting-started/navigation.md#my-programs-console)** das Programm aus, mit dem ein Webhook für ein externes Repository konfiguriert werden soll.
 
-1. Klicken Sie oben links auf der Seite auf ![Symbol zur Menüanzeige](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg), um das linke Seitenmenü anzuzeigen.
+1. Klicken Sie oben links auf der Seite auf ![Menüsymbol anzeigen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) um das linke Menü anzuzeigen.
 
 1. Klicken Sie im linken Seitenmenü unter der Überschrift **Programm** auf ![Ordnersymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Repositorys**.
 
@@ -209,10 +209,10 @@ Für alle anderen externen Repositorys, die mit einem Zugriffs-Token integriert 
 
 1. Gehen Sie im Dialogfeld **Webhook konfigurieren** wie folgt vor:
 
-   1. Klicken Sie neben dem Feld **Webhook-URL** auf ![Kopieren-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Fügen Sie die URL in eine einfache Textdatei ein. Die kopierte URL ist für die Webhook-Einstellungen Ihres Git-Anbieters erforderlich.
-   1. Klicken Sie neben dem Feld **Webhook-Geheimnis** auf **Generieren** und dann auf ![Kopieren-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
-Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis ist für die Webhook-Einstellungen Ihres Git-Anbieters erforderlich.
+   1. Klicken Sie neben dem Feld **Webhook** URL) auf ![Symbol „Kopieren](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
+      Fügen Sie die URL in eine Textdatei ein. Die kopierte URL ist für die Webhook-Einstellungen Ihres Git-Anbieters erforderlich.
+   1. Klicken Sie neben dem Feld **Webhook** Geheimnis) auf **Generieren** und dann auf ![Symbol „Kopieren](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg).
+      Fügen Sie die geheimen Daten in eine Textdatei ein. Das kopierte Geheimnis ist für die Webhook-Einstellungen Ihres Git-Anbieters erforderlich.
 1. Klicken Sie auf **Schließen**.
 1. Navigieren Sie zu Ihrer Git-Anbieterlösung (GitHub Enterprise, GitLab, Bitbucket oder Azure DevOps).
 
@@ -222,10 +222,10 @@ Fügen Sie das Geheimnis in eine einfache Textdatei ein. Das kopierte Geheimnis 
 1. Fügen Sie die zuvor kopierte Webhook-URL in das URL-Textfeld ein.
    1. Ersetzen Sie den Abfrageparameter `api_key` in der Webhook-URL durch Ihren eigenen echten API-Schlüssel.
 
-      Um einen API-Schlüssel zu generieren, müssen Sie ein Integrationsprojekt in Adobe Developer Console erstellen. Ausführliche Informationen finden Sie unter [Erstellen eines API-Integrationsprojekts](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration/).
+      Um einen API-Schlüssel zu generieren, müssen Sie ein Integrationsprojekt in Adobe Developer Console erstellen. Ausführliche Informationen finden Sie unter [Erstellen eines API-Integrationsprojekts](https://developer.adobe.com/experience-cloud/cloud-manager/guides/getting-started/create-api-integration).
 
 1. Fügen Sie das zuvor kopierte Webhook-Geheimnis in das Textfeld **Geheimnis** (oder **Geheimer Schlüssel** oder **Geheimes Token**) ein.
-1. Konfigurieren Sie den Webhook so, dass die für Cloud Manager erforderlichen Ereignisse gesendet werden. Verwenden Sie die folgende Tabelle, um die richtigen Ereignisse für Ihren Git-Anbieter zu ermitteln.
+1. Um die Ereignisse zu senden, die für Cloud Manager erforderlich sind, konfigurieren Sie den Webhook. Verwenden Sie die folgende Tabelle, um die richtigen Ereignisse für Ihren Git-Anbieter zu ermitteln.
 
 >[!BEGINTABS]
 
@@ -285,7 +285,7 @@ Wenn die Prüfung erstellt wird, sieht sie wie der folgende Screenshot aus. Der 
 
 <!-- https://git.corp.adobe.com/pages/experience-platform/cloud-manager-repository-service/#/./git-vendors/gitlab -->
 
-GitLab-Interaktionen basieren ausschließlich auf Kommentaren. Bei Start der Validierung wird ein Kommentar hinzugefügt. Nach Abschluss der Validierung (ob erfolgreich oder fehlgeschlagen) wird der ursprüngliche Kommentar entfernt und durch einen neuen Kommentar mit Validierungsergebnissen oder Fehlerdetails ersetzt.
+GitLab-Interaktionen basieren allein auf Kommentaren. Bei Start der Validierung wird ein Kommentar hinzugefügt. Nach Abschluss der Validierung (ob erfolgreich oder fehlgeschlagen) wird der ursprüngliche Kommentar entfernt und durch einen neuen Kommentar mit Validierungsergebnissen oder Fehlerdetails ersetzt.
 
 Wenn die Validierung der Code-Qualität ausgeführt wird:
 
@@ -293,7 +293,7 @@ Wenn die Validierung der Code-Qualität ausgeführt wird:
 
 Wenn die Validierung der Code-Qualität abgeschlossen ist:
 
-![Wenn die Validierung der Code-Qualität abgeschlossen ist](/help/managing-code/assets/repository-webhook-gitlab2.png)
+![Wenn die Überprüfung der Code-Qualität abgeschlossen ist](/help/managing-code/assets/repository-webhook-gitlab2.png)
 
 Wenn die Validierung der Code-Qualität mit einem Fehler fehlschlägt:
 

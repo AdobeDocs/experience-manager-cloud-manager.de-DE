@@ -8,10 +8,10 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: b52942282fe5f825181123b3839ef155753c5e23
 workflow-type: tm+mt
 source-wordcount: 237
-ht-degree: 100%
+ht-degree: 96%
 
 ---
 
@@ -23,7 +23,7 @@ Erfahren Sie, wie Sie die automatisch erstellten Pipelines so steuern, dass sie 
 
 ## Konfiguration der Prüfungen des privaten Repositorys {#configuration}
 
-Bei der Verwendung von [privaten Repositorys](private-repositories.md#using) wird automatisch eine [Full-Stack-Code-Qualitäts-Pipeline](/help/overview/ci-cd-pipelines.md) erstellt. Diese Pipeline wird bei jeder Aktualisierung einer Pull-Anfrage gestartet.
+Bei der Verwendung von [privaten Repositorys](private-repositories.md#using) wird automatisch eine [Full-Stack-Code-Qualitäts-Pipeline](/help/overview/ci-cd-pipelines.md) erstellt. Diese Pipeline wird bei jeder Pull-Anfrage-Aktualisierung gestartet.
 
 Sie können diese Prüfungen steuern, indem Sie eine Datei namens `.cloudmanager/pr_pipelines.yml` in der Standardverzweigung des privaten Repositorys erstellen.
 
@@ -41,7 +41,7 @@ pipelines:
 
 | Parameter | Mögliche Werte | Standard | Beschreibung |
 | --- | --- | --- | --- |
-| `shouldDeletePreviousComment` | `true` oder `false` | `false` | Legt fest, ob bei dieser GitHub-Pull-Anfrage nur der letzte Kommentar oder alle Kommentare mit den Ergebnissen der Codescans beibehalten werden sollen. |
+| `shouldDeletePreviousComment` | `true` oder `false` | `false` | Ob bei dieser GitHub-Pull-Anfrage nur der letzte Kommentar oder alle Kommentare mit den Ergebnissen der Code-Scans beibehalten werden sollen. |
 | `type` | `CI_CD` | Nicht zutreffend | Definiert das Verhalten einer CI/CD-Pipeline. |
 | `template.programID` | Ganzzahl | Es werden keine Pipeline-Variablen wiederverwendet | Sie können die [Pipeline-Variablen](/help/getting-started/build-environment.md#pipeline-variables) wiederverwenden, die auf einer vorhandenen Pipeline festgelegt sind, die jede Pull-Anfrage automatisch erstellt. |
 | `template.pipelineID` | Ganzzahl | Es werden keine Pipeline-Variablen wiederverwendet | Sie können die [Pipeline-Variablen](/help/getting-started/build-environment.md#pipeline-variables) wiederverwenden, die auf einer vorhandenen Pipeline festgelegt sind, die jede Pull-Anfrage automatisch erstellt. |

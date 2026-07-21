@@ -8,10 +8,10 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: b52942282fe5f825181123b3839ef155753c5e23
 workflow-type: tm+mt
-source-wordcount: 387
-ht-degree: 82%
+source-wordcount: 382
+ht-degree: 75%
 
 ---
 
@@ -19,13 +19,13 @@ ht-degree: 82%
 
 Cloud Manager verwendet Zugriffs-Token, um auf externen Git-Plattformen gehostete Repositorys zu verwalten. Wenn ein Token abgelaufen war, musste das zugehörige Repository zuvor neu integriert werden, um funktionsfähig zu bleiben.
 
-Mit **Zugriffs-Token verwalten** können Sie Token jetzt effizienter verwalten. Sie können Token anzeigen, umbenennen oder entfernen, die mit unterstützten externen Git-Anbietern wie GitHub Enterprise, GitLab, Bitbucket und Azure DevOps verbunden sind.
+Mit **Zugriffs-Token verwalten** können Sie Token jetzt effizienter verwalten. Sie können Token für unterstützte Git-Anbieter verwalten: GitHub Enterprise, GitLab, Bitbucket und Azure DevOps.
 
 Siehe auch [Hinzufügen von externen Repositorys in Cloud Manager](/help/managing-code/external-repositories.md).
 
 ## Anzeigen von Zugriffs-Token {#view-access-tokens}
 
-1. Melden Sie sich unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) bei Cloud Manager an und wählen Sie die entsprechende Organisation aus.
+1. Melden Sie sich bei Cloud Manager unter [my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com/) an und wählen Sie das entsprechende Unternehmen aus.
 1. Wählen Sie in der Konsole **[Meine Programme](/help/getting-started/navigation.md#my-programs-console)** das Programm aus, dessen Zugriffs-Token für „Bring Your Own Git“ Sie verwalten möchten.
 1. Klicken Sie im Seitenmenü unter **Programm** auf ![Ordnersymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_FolderOutline_18_N.svg) **Repositorys**.
 1. Klicken Sie oben rechts auf der Seite auf **Zugriffs-Token verwalten**.
