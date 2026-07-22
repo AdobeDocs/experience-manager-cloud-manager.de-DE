@@ -135,4 +135,4 @@ Der Abschnitt **Ereignisanalyse** unter diesem Diagramm zeigt die Vorfälle, die
 
 Dieses Video bietet einen Überblick über die Verwendung der von Cloud Manager Reports erstellten Diagramme zur Überwachung Ihrer Programmumgebungen.
 
->[!VIDEO](https://video.tv.adobe.com/v/26315/)
+>[!VIDEO](https://video.tv.adobe.com/v/34567?captions=ger)
