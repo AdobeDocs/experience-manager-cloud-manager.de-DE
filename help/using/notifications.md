@@ -3,15 +3,12 @@ title: Benachrichtigungen
 description: Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt werden.
 exl-id: cfd5655f-2d2c-4304-b25c-6cdffe7ff64c
 TQID: https://experienceleague.adobe.com/WBAHeIAH1XL6oVy342wLaUAoAHkUoN1AbcAl2Erkte4
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: 65b260abe417925f26d647fb9857d32c30455f9b
 workflow-type: tm+mt
-source-wordcount: 564
-ht-degree: 100%
+source-wordcount: 562
+ht-degree: 56%
 
 ---
 
@@ -21,7 +18,7 @@ Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt
 
 ## Benachrichtigungen in Cloud Manager {#cloud-manager-notifications}
 
-[!UICONTROL Cloud Manager] sendet Ihnen zu Beginn einer Produktionsbereitstellung beim Start und beim Abschluss der Produktions-Pipeline (erfolgreich oder nicht erfolgreich) Benachrichtigungen. Und wenn die Schritte **Genehmigung einer Live-Schaltung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
+Benachrichtigungen werden gesendet, wenn eine Produktions-Pipeline gestartet und während einer Produktionsbereitstellung (erfolgreich oder nicht erfolgreich) abgeschlossen wird. Und wenn die Schritte **Genehmigung einer Live-Schaltung** und **Geplant** erreicht sind. Diese Benachrichtigungen werden über das [!UICONTROL Experience Cloud]-Benachrichtigungssystem gesendet.
 
 >[!NOTE]
 >
@@ -29,7 +26,7 @@ Erfahren Sie, wie Sie von Cloud Manager über wichtige Ereignisse benachrichtigt
 
 Die Benachrichtigungen werden in einer Seitenleiste der [!UICONTROL Cloud Manager]-Benutzeroberfläche und überall in Adobe [!UICONTROL Experience Cloud] angezeigt.
 
-Das Glockensymbol in der Kopfzeile zeigt ein Badge, wenn es neue Benachrichtigungen für Sie gibt.
+Das Glockensymbol in der Kopfzeile zeigt einen Indikator an, wenn Sie neue Benachrichtigungen haben.
 
 ![Benachrichtigungssymbol](/help/assets/notifications-bell-badged.png)
 
@@ -37,15 +34,15 @@ Klicken Sie auf das Glockensymbol, um die Seitenleiste zu öffnen und die Benach
 
 ![Benachrichtigungsseitenleiste](/help/assets/notifications-activities.png)
 
-Die Registerkarte **Ankündigungen** enthält Ankündigungen zu Adobe-Produkten. Ankündigungen beziehen sich auf das Produkt.
+Die Registerkarte **Ankündigungen** enthält Ankündigungen zu Adobe-Produkten. Ankündigungen enthalten Informationen zum Produkt.
 
 ![Benachrichtigungsseitenleiste](/help/assets/notificaitons-announcements.png)
 
-Klicken Sie auf eine Benachrichtigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Bereitstellungen verknüpft sind, führen Sie zu den Details dieser Aktivität, beispielsweise dem Pipeline-Ausführungsfenster.
+Klicken Sie auf eine Benachrichtigung oder Mitteilung, um deren Details anzuzeigen. Benachrichtigungen, die mit Aktivitäten wie Pipeline-Bereitstellungen verknüpft sind, führen Sie zu den Details dieser Aktivität, z. B. zum Pipeline-Ausführungsfenster.
 
-Klicken Sie unten im Bedienfeld auf die Option **Alle anzeigen**, um alle Mitteilungen in Ihrem Posteingang anzuzeigen.
+Klicken Sie auf die Option **Alles anzeigen** am Ende des Bedienfelds, um alle Benachrichtigungen in Ihrem Posteingang anzuzeigen.
 
-Klicken Sie unten im Bedienfeld auf die Option **Alle als gelesen markieren**, um alle ungelesenen Benachrichtigungen als gelesen zu markieren und das aktivierte Glockensymbol zurückzusetzen.
+Klicken Sie auf **Option Alle als gelesen markieren** unten im Bedienfeld, um alle ungelesenen Benachrichtigungen als gelesen zu markieren und das Badge vom Glockensymbol zu entfernen.
 
 ## Konfiguration von Benachrichtigungen {#configuration}
 
@@ -55,45 +52,45 @@ Klicken Sie auf das Zahnradsymbol oben in der Benachrichtigungsseitenleiste.
 
 ![Symbol für Benachrichtigungseinstellungen](/help/assets/notifications-configuration.png)
 
-Das Fenster **Experience Cloud-Einstellungen**, in dem Sie Benachrichtigungsabonnements auswählen und festlegen können, wie Sie Benachrichtigungen erhalten, wird geöffnet.
+Das Fenster **Experience Cloud** Einstellungen“ wird geöffnet. Darin können Sie Ihre Benachrichtigungsabonnements und den Empfang Ihrer Benachrichtigungen definieren.
 
 ### Abonnements {#subscriptions}
 
-Mit den Abonnements legen Sie fest, welche Benachrichtigungen Sie für welche Produkte erhalten.
+Abonnements definieren, für welche Produkte Sie Benachrichtigungen erhalten und welche Benachrichtigungen Sie erhalten.
 
 ![Abonnements für Benachrichtigungen](/help/assets/notifications-subscriptions.png)
 
-Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken Sie neben einem Produkt auf **Anpassen**, um festzulegen, welche Arten von Benachrichtigungen Sie für dieses Produkt erhalten möchten.
+Standardmäßig erhalten Sie alle Benachrichtigungen für alle Produkte. Klicken Sie zum Definieren der Benachrichtigungstypen, die Sie für ein Produkt erhalten **neben** auf „Anpassen“.
 
 ![Anpassung des Benachrichtigungsabonnements](/help/assets/notifications-subscriptions-customize.png)
 
 ### Priorität {#priority}
 
-Prioritätswarnungen werden mit einem **HOCH**-Tag gekennzeichnet. Sie können sie so konfigurieren, dass sie ausschließlich als Warnungen empfangen werden. Im Abschnitt **Priorität** können Sie festlegen, welche Kategorien als Prioritätsbenachrichtigungen eingestuft werden.
+Prioritätswarnungen werden mit einem **HOCH**-Tag gekennzeichnet. Sie können sie so konfigurieren, dass sie ausschließlich als Benachrichtigungen gesendet werden. Im Abschnitt **Priorität** können Sie festlegen, welche Kategorien als Prioritätsbenachrichtigungen eingestuft werden.
 
 ![Benachrichtigungspriorität](/help/assets/notifications-priority.png)
 
-Verwenden Sie die Dropdown-Liste, um die Liste der Kategorien zu erweitern, die als prioritär eingestuft werden. Klicken Sie auf das `X` neben den Kategorienamen, um sie zu entfernen.
+Verwenden Sie die Dropdown-Liste, um die Liste der Kategorien zu erweitern, die als prioritär eingestuft werden. Klicken Sie auf das Löschsymbol neben den Kategorienamen, um sie zu löschen.
 
 ### Warnhinweise {#alerts}
 
-Warnhinweise werden für einige Sekunden in der oberen rechten Ecke des Fensters angezeigt. Im Abschnitt **Warnhinweise** können Sie festlegen, für welche Benachrichtigungen Sie Warnhinweise erhalten möchten.
+Warnhinweise werden für einige Sekunden in der oberen rechten Ecke des Fensters angezeigt. Definieren Sie im **Warnhinweise**, für welche Benachrichtigungen Sie Warnhinweise erhalten möchten.
 
 ![Benachrichtigungs-Warnhinweise](/help/assets/notifications-alerts.png)
 
 Sie können das Verhalten der Warnhinweise definieren.
 
-* **Warnhinweise anzeigen für**: Definiert die Arten von Benachrichtigungen, die Warnhinweise auslösen.
-* **Warnhinweise sollen am Bildschirm angezeigt werden, bis ich sie schließe**: Legt fest, ob die Warnhinweise bestehen bleiben sollen, bis Sie sie aktiv deaktivieren.
-* **Dauer**: Legt fest, wie lange ein Warnhinweis auf dem Bildschirm eingeblendet werden soll, außer Sie haben ausgewählt, dass ein Warnhinweis auf dem Bildschirm verbleiben soll.
+* **Warnhinweise anzeigen für** - Definiert die Arten von Benachrichtigungen, bei denen ein Trigger Warnhinweise ausgibt.
+* **Warnhinweise bleiben auf dem Bildschirm, bis Sie sie schließen** - Legt fest, ob die Warnhinweise bestehen bleiben, bis Sie sie aktiv deaktivieren.
+* **Dauer** - Legt fest, wie lange der Warnhinweis auf dem Bildschirm eingeblendet wird, außer Sie haben ausgewählt, dass er auf dem Bildschirm verbleibt.
 
 ### E-Mails {#emails}
 
-Benachrichtigungen sind in der Web-Benutzeroberfläche aller Adobe [!UICONTROL Experience Cloud]-Lösungen verfügbar. Sie können auch im Abschnitt **E-Mails** festlegen, dass diese Benachrichtigungen per E-Mai gesendet werden sollen.
+Benachrichtigungen sind in der Web-Benutzeroberfläche aller Adobe [!UICONTROL Experience Cloud]-Lösungen verfügbar. Um diese Benachrichtigungen per E-Mail zu erhalten, melden Sie sich im Abschnitt **E-Mails** an.
 
 ![Benachrichtigungs-E-Mails](/help/assets/notifications-emails.png)
 
-Standardmäßig werden keine E-Mails versendet. Sie haben für den E-Mail-Empfang folgende Wahlmöglichkeiten:
+Standardmäßig werden keine E-Mails gesendet. Sie können E-Mails wie folgt empfangen:
 
 * Sofort
 * Täglich
