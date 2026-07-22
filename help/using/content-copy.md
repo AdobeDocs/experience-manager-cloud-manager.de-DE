@@ -3,10 +3,15 @@ title: Inhaltskopie für Umgebungskonsistenz
 description: Mit der Inhaltskopie in Cloud Manager können Benutzende veränderliche Inhalte bei Bedarf aus Produktionsumgebungen von Adobe Experience Manager 6.x, die von Adobe Managed Services gehostet werden, zu Testzwecken in niedrigere Umgebungen kopieren.
 exl-id: 97915e58-a1d3-453f-b5ce-cad55ed73262
 TQID: https://experienceleague.adobe.com/ffcf9UNSOp7oIpDZdtLcoFWp-Ww-A1XV3kCDmKqJLSw
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 845c182685d59844a2349c90d176d3e7c8a594cf
 workflow-type: tm+mt
 source-wordcount: 1435
@@ -177,7 +182,7 @@ Sie können den Status der Kopierprozesse auf der Seite **Aktivität zum Kopiere
 * Die Inhaltskopie sollte nicht als Klon- oder Spiegelwerkzeug verwendet werden, da damit keine verschobenen oder gelöschten Inhalte auf der Quelle verfolgt werden können.
 * Eine Inhaltskopie kann nicht pausiert oder abgebrochen werden, wenn sie einmal initiiert wurde.
 * Die Inhaltskopie dupliziert Assets und Dynamic Media-Metadaten aus der höheren Umgebung in die ausgewählte niedrigere Umgebung. Kopierte Assets müssen dann mithilfe des Workflows [DAM-Prozess-Assets](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/using/assets-workflow) in der unteren Umgebung erneut verarbeitet werden. Diese erneute Verarbeitung ist erforderlich, um die entsprechende Dynamic Media-Konfiguration zu verwenden.
-* [Dynamic Media-Konfigurationen mit Asset-Größen von mehr als 2 GB ](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) nicht unterstützt.
+* [Dynamic Media-Konfigurationen mit Asset-Größen von mehr als 2 GB &#x200B;](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/assets/dynamic/config-dms7#optional-config-dms7-assets-larger-than-2gb) nicht unterstützt.
 * Die Regionen der Zielumgebung müssen mit den Regionen der Quellumgebung oder einer Teilmenge davon übereinstimmen.
 
 ## Bekannte Probleme der Inhaltskopie {#known-issues}
