@@ -3,9 +3,13 @@ title: Aufspalten in reine Staging- und reine Produktions-Pipelines
 description: Erfahren Sie, wie Sie mithilfe von dedizierten Pipelines in Staging- und Produktionsbereitstellungen aufteilen können.
 exl-id: b7dd0021-d346-464a-a49e-72864b01cce3
 TQID: https://experienceleague.adobe.com/whq-Hkwp3mjTr0iftoKZHKdsi0xaKtVXazXjUENoaLk
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 source-git-commit: 6b0075d2405e89dce1c883a2b5fc0bd952a3fddd
 workflow-type: tm+mt
 source-wordcount: 975
@@ -90,7 +94,7 @@ Reine Produktions- und Staging-Pipelines werden auf ähnliche Weise wie die stan
 Reine Produktions- und reine Staging-Pipelines werden auf die gleiche Weise ausgeführt wie [alle anderen Pipelines](/help/using/managing-pipelines.md#running-pipelines). Weitere Informationen finden Sie in der zugehörigen Dokumentation. Es gibt jedoch zwei neue Funktionen dieser Pipelines.
 
 * Reine Staging- und reine Produktions-Pipelines bieten einen neuen [Notfallmodus](#emergency-mode) zum Überspringen von Tests.
-* Eine schreibgeschützte Pipeline-Ausführung kann direkt über die Ausführungsdetails einer (Nur-Staging[-Pipeline ausgelöst ](#stage-only-run).
+* Eine schreibgeschützte Pipeline-Ausführung kann direkt über die Ausführungsdetails einer (Nur-Staging[-Pipeline ausgelöst &#x200B;](#stage-only-run).
 
 ### Notfallmodus {#emergency-mode}
 
