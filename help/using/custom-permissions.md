@@ -118,7 +118,7 @@ Sie können dem neuen Produktprofil, das Sie mit benutzerdefinierten Berechtigun
 
 1. Klicken Sie auf die Schaltfläche **Benutzer hinzufügen** aus und weisen Sie Ihrem neuen Produktprofil Benutzende mit benutzerdefinierten Berechtigungen zu.
 
-Weitere Informationen zum Verwenden der Admin Console finden Sie im Abschnitt **Hinzufügen von Benutzenden und Benutzergruppen zu einem Produktprofil** des Dokuments [Verwalten von Produktprofilen für Unternehmensbenutzende](https://helpx.adobe.com/business/enterprise/manage-products-and-entitlements/manage-products-and-product-profiles/manage-product-profiles.html).
+Weitere Informationen zum Verwenden der Admin Console finden Sie im Abschnitt **Hinzufügen von Benutzenden und Benutzergruppen zu einem Produktprofil** des Dokuments [Verwalten von Produktprofilen für Unternehmensbenutzende](https://helpx.adobe.com/de/business/enterprise/manage-products-and-entitlements/manage-products-and-product-profiles/manage-product-profiles.html).
 
 ## Konfigurierbare Berechtigungen {#configurable-permissions}
 
