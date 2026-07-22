@@ -4,10 +4,17 @@ description: Erfahren Sie, wie Sie jetzt Service Pack-Aktualisierungen für Entw
 hide: true
 exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
 TQID: https://experienceleague.adobe.com/jdKXZuiGX-MZMKrsWCM6BzZ2hGfZLnvwMh2XTstMmZs
-product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+product_v2:
+  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2:
+  - id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: b4846046c6c410642d3e23f2cc2c002a6d53b3b7
 workflow-type: tm+mt
 source-wordcount: 455
@@ -21,7 +28,7 @@ Erfahren Sie, wie Sie über die Benutzeroberfläche von Cloud Manager Service Pa
 
 >[!NOTE]
 >
->Diese Funktion ist nur im [privaten Beta-Programm) ](/help/release-notes/current.md#beta-program).
+>Diese Funktion ist nur im [privaten Beta-Programm) &#x200B;](/help/release-notes/current.md#beta-program).
 
 ## Überblick {#service-pack-updates-overview}
 
