@@ -10,26 +10,26 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 628eceafe63153d64151937df85937135bdc8e7b
 workflow-type: tm+mt
-source-wordcount: 431
-ht-degree: 95%
+source-wordcount: 421
+ht-degree: 60%
 
 ---
 
 # Wichtige Konzepte {#key-concepts}
 
-Wie alle leistungsstarken Tools umfasst Cloud Manager viele Konzepte und Begriffe. Dieses Dokument fasst einige der wichtigsten Informationen für Sie bei den ersten Schritten mit Cloud Manager zusammen.
+Cloud Manager umfasst viele Konzepte und Begriffe. Dieser Artikel fasst einige der wichtigsten Konzepte für Sie zusammen, wenn Sie mit der Arbeit mit Cloud Manager beginnen.
 
 ## Programm {#application}
 
-Eine Anwendung ist eine Reihe von Anpassungen und Konfigurationen, die von Kundinnen und Kunden erstellt werden, um die zugrundeliegende [Lösung](#solution) (z. B. AEM Sites oder AEM Assets) an ihre spezifischen Anwendungsfälle und individuellen Bedürfnisse anzupassen. Eine Anwendung ist eine logische Einheit, die aus mehreren [Artefakten](#artifact) bestehen kann.
+Eine Anwendung ist eine Reihe von Anpassungen und Konfigurationen, die von Kundinnen und Kunden erstellt werden, um die zugrundeliegende [Lösung](#solution) (z. B. AEM Sites oder AEM Assets) an ihre spezifischen Anwendungsfälle und individuellen Bedürfnisse anzupassen. Ein Programm ist eine logische Einheit, die aus mehreren [Artefakten“ &#x200B;](#artifact).
 
 Eine Beispielanwendung ist die fiktive [WKND-Lifestyle-Anwendung](https://experienceleague.adobe.com/de/docs/experience-manager-learn/getting-started-wknd-tutorial-develop/overview).
 
 ## Artefakt {#artifact}
 
-Ein Artefakt ist eine bereitstellbare Einheit und das Ergebnis eines Build-Prozesses, der den Quell-Code in eine einzige Einheit verwandelt, z. B. eine ZIP-Datei mit dem Quell-Code.
+Ein Artefakt ist eine bereitstellbare Einheit und das Ergebnis eines Build-Prozesses, der den Quell-Code in eine einzige Einheit umwandelt. z. B. eine ZIP-Datei mit dem Quell-Code.
 
 ## Artefakt-Repository {#artifact-repository}
 
@@ -57,11 +57,11 @@ Eine Pipeline ist ein Satz von Bereitstellungsschritten, die nacheinander ausgef
 
 ## Produkt {#product}
 
-Ein Produkt ist ein bestimmter Funktionssatz innerhalb einer von einer Organisation lizenzierten [Lösung](#solution). Verschiedene [Programme](#program) innerhalb einer Organisation können Berechtigungen für verschiedene Produktgruppen haben, z. B. AEM Sites, AEM Assets oder AEM Forms.
+Ein Produkt ist ein bestimmter Funktionssatz innerhalb einer von einer Organisation lizenzierten [Lösung](#solution). Verschiedene [Programme](#program) innerhalb einer Organisation haben Anspruch auf verschiedene Produktgruppen, z. B. AEM Sites, AEM Assets oder AEM Forms.
 
 ## Programm {#program}
 
-Ein Programm ist ein Satz von Umgebungen, die eine logische Gruppierung von Kundeninitiativen unterstützen. Im Normalfall erfolgt dies gemäß dem erworbenen Service-Level-Agreement (SLA). Jedes Programm hat genau eine Produktionsumgebung und kann zahlreiche Nicht-Produktionsumgebungen aufweisen.
+Bei einem Programm handelt es sich um eine Reihe von Umgebungen, die eine logische Gruppierung von Kundeninitiativen unterstützen. Diese entsprechen in der Regel einer erworbenen service level agreement (SLA). Jedes Programm verfügt über genau eine Produktionsumgebung und viele produktionsfremde Umgebungen.
 
 ## Lösung {#solution}
 
@@ -69,4 +69,4 @@ Eine Lösung ist eine der Adobe [!UICONTROL Experience Cloud]-Lösungen, z. B. 
 
 ## Schritt {#step}
 
-Ein Schritt ist eine konfigurierte Anweisung für bestimmte Arbeitseinheiten, z. B. ein Baustein einer [Pipeline](#pipeline).
+Ein Schritt ist eine konfigurierte Anweisung für bestimmte Arbeitseinheiten, z. B. eine Komponente einer [Pipeline](#pipeline).

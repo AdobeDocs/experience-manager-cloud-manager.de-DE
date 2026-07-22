@@ -8,10 +8,10 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 908623687cda88dd34c8c46c7bad3546a222fb8d
 workflow-type: tm+mt
 source-wordcount: 238
-ht-degree: 100%
+ht-degree: 34%
 
 ---
 
@@ -21,12 +21,12 @@ Erfahren Sie mehr über Ihre Adobe ID und darüber, wie Sie mit ihr auf Experie
 
 ## Benutzeridentitätstypen {#user-identity-types}
 
-Im Rahmen des Onboarding-Prozesses erstellt Adobe eine Organisationskennung für Ihr Unternehmen in Adobe Identity Management System (IMS). In IMS können alle Ihre Benutzenden sowie deren Berechtigungen verwaltet werden. Sämtliche Benutzenden, die Mitglieder dieser Organisation sein müssen und Zugriff auf alle [!UICONTROL Experience Cloud]-Services erhalten, müssen über eine eigene Adobe ID verfügen.
+Im Rahmen des Onboarding-Prozesses erstellt Adobe eine Organisationskennung für Ihr Unternehmen im Adobe Identity Management System (IMS). In IMS können alle Ihre Benutzenden sowie deren Berechtigungen verwaltet werden. Jeder Benutzer, der Mitglied dieser Organisation sein muss und Zugriff auf alle Services von [!UICONTROL Experience Cloud] erhält, muss über eine Adobe ID verfügen.
 
-Zur Verwendung der Adobe ID rufen Sie zunächst den Artikel [Verwalten von Adobe-Identitätstypen](https://helpx.adobe.com/de/enterprise/using/identity.html) auf. Dort finden Sie ausführliche Informationen zum Bezug einer Adobe ID mit einem der verfügbaren Identitätstypen.
+Weitere Informationen zu einer Adobe ID finden Sie [Verwalten von Adobe](https://helpx.adobe.com/de/business/enterprise/set-up-your-organization/identity.html)Identitätstypen). Dort finden Sie eine detaillierte Anleitung, wie Sie eine Adobe ID mit einem der verfügbaren Identitätstypen erhalten.
 
 ### Benutzende und Rollen {#users-and-roles}
 
-Nachdem Adobe eine Organisation für Ihr Unternehmen erstellt hat, wird die bzw. der Systemadmin als erstes Mitglied dieser Organisation hinzugefügt. Standardmäßig erhält die bzw. der Systemadmin Administratorberechtigungen. Dieser Person werden außerdem das Produkt [!UICONTROL AEM Managed Services] und mindestens ein Produktprofil für [!UICONTROL Cloud Manager] zugewiesen. Weitere Informationen zum Konfigurieren und Verwalten der Benutzenden Ihres Teams mit der Admin Console finden Sie unter [Hinzufügen von Benutzenden und Rollen](/help/requirements/users-and-roles.md).
+Nachdem Adobe eine Organisation für Ihr Unternehmen erstellt hat, wird die bzw. der Systemadmin als erstes Mitglied dieser Organisation hinzugefügt. Standardmäßig erhält die bzw. der Systemadmin Administratorberechtigungen. Dem Systemadministrator werden außerdem das Produkt [!UICONTROL AEM Managed Services] und mindestens ein Produktprofil [!UICONTROL Cloud Manager] zugewiesen. Informationen [&#x200B; Konfigurieren und Verwalten Ihres Teams mit der &#x200B;](/help/requirements/users-and-roles.md) finden Sie unter „Hinzufügen von Anwendern und Rollen“.
 
-Mit diesen Rechten können Ihre Admins nun per Single Sign-on mit der Adobe ID auf die [!UICONTROL Experience Cloud]-Services zugreifen, sich bei Ihren AEM-Cloud-Umgebungen anmelden und [!UICONTROL Cloud Manager] verwenden.
+Mit diesen Rechten kann Ihr Administrator nun über eine Adobe ID für die einmalige Anmeldung konfiguriert werden, um auf die [!UICONTROL Experience Cloud]-Services zuzugreifen, sich bei Ihren AEM-Cloud-Umgebungen anzumelden und [!UICONTROL Cloud Manager] zu verwenden.

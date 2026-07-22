@@ -14,10 +14,10 @@ role_v2:
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: a3594b07bd6eec6f6ff7e9636f35ae83449357f3
 workflow-type: tm+mt
-source-wordcount: 1699
-ht-degree: 96%
+source-wordcount: 1684
+ht-degree: 81%
 
 ---
 
@@ -29,11 +29,11 @@ Erfahren Sie, wie Sie Code bereitstellen und was dabei in Cloud Manager passiert
 
 Sobald die Produktions-Pipeline einschließlich des erforderlichen Repositorys und der erforderlichen Umgebungen konfiguriert ist, kann der Code bereitgestellt werden.
 
-1. Klicken Sie in Cloud Manager auf **Bereitstellen**, um den Bereitstellungsprozess zu starten.
+1. Um den Bereitstellungsprozess zu starten, klicken Sie auf **Bereitstellen**.
 
    ![Schaltfläche „Bereitstellen“](/help/assets/Deploy1.png)
 
-1. Der Bildschirm **Pipeline-Ausführung** wird angezeigt. Klicken Sie auf **Build**, um den Prozess zu starten.
+1. Der Bildschirm **Pipeline-Ausführung** wird angezeigt. Klicken Sie auf **Erstellen**, um den Erstellungsprozess zu starten.
 
    ![Schaltfläche „Erstellen“](/help/assets/Deploy2.png)
 
@@ -47,7 +47,7 @@ Sie können die Schritte verschiedener Bereitstellungsprozesse überprüfen, ind
 
 ## Bereitstellungsschritte {#deployment-steps}
 
-In jedem Schritt der Bereitstellung werden verschiedene Aktionen ausgeführt, die in diesem Abschnitt beschrieben werden. Unter [Details zum Bereitstellungsprozess](#deployment-process) finden Sie technische Einzelheiten dazu, wie der Code selbst im Hintergrund bereitgestellt wird.
+Bei jedem Schritt der Bereitstellung werden verschiedene Aktionen ausgeführt, die in diesem Abschnitt beschrieben werden. Technische [&#x200B; zur Bereitstellung des &#x200B;](#deployment-process) selbst finden Sie unter „Details zum Bereitstellungsprozess“.
 
 ### Schritt zur Staging-Bereitstellung {#stage-deployment}
 
@@ -65,19 +65,19 @@ Der Schritt **Staging-Bereitstellung** umfasst die folgenden Aktionen:
 Der Schritt **Staging-Tests** umfasst die folgenden Aktionen:
 
 * **Sicherheitstests**: Dieser Schritt bewertet die Auswirkungen des Programm-Codes auf die Sicherheit der AEM-Umgebung. Einzelheiten zum Testverfahren finden Sie im Dokument [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
-   * **Leistungstests**: Dieser Schritt bewertet die Leistung des Codes. Weitere Informationen zum Testverfahren finden Sie in unter [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
+  * **Leistungstests**: Dieser Schritt bewertet die Leistung des Codes. Weitere Informationen zum Testverfahren finden Sie in unter [Grundlegendes zu Testergebnissen](/help/using/code-quality-testing.md).
 
 ### Schritt zur Produktionsbereitstellung {#production-deployment}
 
 Der Schritt **Produktionsbereitstellung** umfasst die folgenden Aktionen:
 
 * **Genehmigungsantrag**
-   * Diese Option ist beim Konfigurieren der Pipeline aktiviert.
-   * Mit dieser Option können Sie die Produktionsbereitstellung planen. Oder klicken Sie auf **Jetzt**, um die Produktionsbereitstellung sofort auszuführen.
+  * Diese Option ist beim Konfigurieren der Pipeline aktiviert.
+  * Mit dieser Option können Sie die Produktionsbereitstellung planen. Oder klicken Sie auf **Jetzt**, um die Produktionsbereitstellung sofort auszuführen.
 * **Planen der Bereitstellung für die Produktion**
-   * Diese Option ist beim Konfigurieren der Pipeline aktiviert.
-   * Datum und Uhrzeit für den Zeitplan beziehen sich auf die Zeitzone der Benutzerin bzw. des Benutzers.
-     ![Bereitstellung planen](/help/assets/Production_Deployment1.png)
+  * Diese Option ist beim Konfigurieren der Pipeline aktiviert.
+  * Datum und Uhrzeit für den Zeitplan beziehen sich auf die Zeitzone der Benutzerin bzw. des Benutzers.
+    ![Bereitstellung planen](/help/assets/Production_Deployment1.png)
 * **CSE-Unterstützung** (sofern aktiviert)
 * **Bereitstellung für Produktion**
 
@@ -103,14 +103,14 @@ Die folgenden Schritte führen zu einem Timeout, wenn auf Benutzer-Feedback gewa
 
 ## Details zum Bereitstellungsprozess {#deployment-process}
 
-Cloud Manager lädt alle beim Build-Prozess generierten target/*.zip-Dateien in einen Speicherort hoch. Diese Artefakte werden in der Pipeline-Bereitstellungsphase von diesem Speicherort abgerufen.
+Cloud Manager lädt alle beim Build-Prozess erstellten `target/*.zip` in einen Speicherort hoch. Diese Artefakte werden in der Pipeline-Bereitstellungsphase von diesem Speicherort abgerufen.
 
-Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht das Ziel darin, die Bereitstellung so schnell wie möglich abzuschließen. Daher werden die Artefakte wie folgt auf allen Knoten gleichzeitig bereitgestellt:
+Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht das Ziel darin, die Bereitstellung so effizient wie möglich abzuschließen. Daher werden die Artefakte wie folgt auf allen Knoten gleichzeitig bereitgestellt:
 
 1. Cloud Manager bestimmt für jedes Artefakt, ob es sich um ein AEM- oder Dispatcher-Paket handelt.
 1. Cloud Manager entfernt alle Dispatcher aus dem Lastenausgleich, um die Umgebung während der Bereitstellung zu isolieren.
 
-   * Sofern nicht anderweitig konfiguriert, können Sie Änderungen am Load-Balancer in Entwicklungs- und Staging-Bereitstellungen überspringen. Das bedeutet, Sie können für die Entwicklungsumgebung in produktionsfremden Pipelines und für die Staging-Umgebung in der Produktions-Pipeline Schritte trennen und anfügen.
+   * Sofern nicht anderweitig konfiguriert, können Sie Änderungen am Load-Balancer in Entwicklungs- und Staging-Bereitstellungen überspringen. Das heißt, für die Entwicklungsumgebung trennen Sie die Schritte in beiden produktionsfremden Pipelines und für die Staging-Umgebung die Produktions-Pipeline-Schritte.
 
    ![Lastenausgleich überspringen](/help/assets/load_balancer.png)
 
@@ -120,7 +120,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
 1. Jedes AEM-Artefakt wird über den Paket-Manager-APIs in jeder AEM-Instanz bereitgestellt, wobei Paketabhängigkeiten die Bereitstellungsreihenfolge bestimmen.
 
-   * Weitere Informationen dazu, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können, finden Sie unter [Paket-Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
+   * Erfahren Sie mehr darüber, wie Sie mit Paketen neue Funktionen installieren, Inhalte zwischen Instanzen übertragen und Repository-Inhalte sichern können. finden Sie unter [Paket-Manager](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/developer-tools/package-manager).
 
    >[!NOTE]
    >
@@ -129,8 +129,8 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 1. Das Dispatcher-Artefakt wird wie folgt für jeden Dispatcher bereitgestellt:
 
    1. Aktuelle Konfigurationen werden gesichert und in einen temporären Speicherort kopiert.
-   1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Informationen finden Sie unter [Dispatcher-Konfigurationen](/help/getting-started/dispatcher-configurations.md). Durch diese Vorgehensweise werden die Verzeichnisse gelöscht, damit keine verwaisten Dateien zurückbleiben.
-   1. Das Artefakt wird in das `httpd`-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien bilden den Kern des AMS Dispatcher-Frameworks und können nicht geändert werden.
+   1. Alle Konfigurationen (mit Ausnahme der unveränderlichen Dateien) werden gelöscht. Weitere Informationen finden Sie unter [Dispatcher-Konfigurationen](/help/getting-started/dispatcher-configurations.md). Dieser Ansatz löscht die Verzeichnisse, um sicherzustellen, dass keine verwaisten Dateien verbleiben.
+   1. Das Artefakt wird in das `httpd`-Verzeichnis extrahiert. Unveränderliche Dateien werden nicht überschrieben. Alle Änderungen an unveränderlichen Dateien in Ihrem Git-Repository werden bei der Bereitstellung ignoriert. Diese Dateien sind für das AMS Dispatcher-Framework von wesentlicher Bedeutung und können nicht geändert werden.
    1. Apache führt einen Konfigurationstest durch. Wenn keine Fehler gefunden werden, wird der Service neu geladen. Wenn Fehler gefunden werden, werden die Konfigurationen aus der Sicherung wiederhergestellt, der Dienst wird neu geladen und der Fehler wird an Cloud Manager zurückgemeldet.
    1. Jeder in der Pipeline-Konfiguration angegebene Pfad wird invalidiert oder aus dem Dispatcher-Cache entfernt.
 
@@ -148,7 +148,7 @@ Wenn Cloud Manager in produktionsfremden Topologien bereitgestellt wird, besteht
 
 Der Bereitstellungsvorgang für Produktionstopologien unterscheidet sich geringfügig, um die Auswirkungen auf die Besuchenden von AEM-Websites zu minimieren.
 
-Produktionsbereitstellungen nutzen im Allgemeinen die oben beschriebenen Schritte, aber auf rollierende Weise:
+Produktionsbereitstellungen führen dieselben Schritte wie oben aus, jedoch auf rollierende Weise:
 
 1. AEM-Pakete werden für den Autor bereitgestellt
 1. dispatcher1 wird aus dem Lastenausgleich gelöst
@@ -162,13 +162,13 @@ Dieser Vorgang wird fortgesetzt, bis die Bereitstellung alle Publisher und Dispa
 
 ## Notfall-Pipeline-Ausführungsmodus {#emergency-pipeline}
 
-In kritischen Situationen müssen Adobe Managed Services-Kundinnen und -Kunden möglicherweise Code-Änderungen sofort in ihren Staging- und Produktionsumgebungen bereitstellen. Durch diesen Modus können sie den gesamten Cloud Manager-Testzyklus umgehen.
+In dringenden Fällen müssen Adobe Managed Services-Kunden Code-Änderungen sofort in ihrer Staging- und Produktionsumgebung bereitstellen. Dadurch können sie den vollständigen Cloud Manager-Testzyklus umgehen.
 
-Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline in einem Notfall-Modus ausgeführt werden. Wenn dieser Modus verwendet wird, werden die Sicherheits- und Leistungstestschritte nicht ausgeführt. Alle anderen Schritte, einschließlich aller konfigurierten Genehmigungsschritte, werden wie im normalen Pipeline-Ausführungsmodus ausgeführt.
+Um diese Situationen zu beheben, kann die Cloud Manager-Produktions-Pipeline in einem Notfallmodus ausgeführt werden. Wenn dieser Modus verwendet wird, werden die Sicherheits- und Leistungstestschritte nicht ausgeführt. Alle anderen Schritte, einschließlich aller konfigurierten Genehmigungsschritte, werden wie im normalen Pipeline-Ausführungsmodus ausgeführt.
 
 >[!NOTE]
 >
->Die Funktion für den Notfall-Pipeline-Ausführungsmodus wird programmweise aktiviert. Die Aktivierung erfolgt durch das Customer Success Engineer-Team.
+>Die Funktion für den Notfall-Pipeline-Ausführungsmodus wird programmweise aktiviert. Customer Success Engineers führen die Aktivierung durch.
 
 ### Verwenden des Notfall-Pipeline-Ausführungsmodus {#using-emergency-pipeline}
 
@@ -188,10 +188,10 @@ $ aio cloudmanager:pipeline:create-execution PIPELINE_ID --emergency
 
 ## Erneutes Ausführen einer Produktionsbereitstellung {#reexecute-deployment}
 
-In seltenen Fällen kann es vorkommen, dass Schritte der Produktionsbereitstellung aus vorübergehenden Gründen fehlschlagen. In diesen Fällen können Sie den Schritt zur Produktionsbereitstellung erneut ausführen, sofern er abgeschlossen wurde (unabhängig davon, ob erfolgreich, abgebrochen oder fehlgeschlagen). Die erneute Ausführung wird unterstützt, indem dieselbe Pipeline verwendet wird, die die drei folgenden Schritte umfasst:
+In seltenen Fällen können Produktionsbereitstellungsschritte aus vorübergehenden Gründen fehlschlagen. In diesen Fällen können Sie den Schritt zur Produktionsbereitstellung erneut ausführen, sofern er abgeschlossen wurde (unabhängig davon, ob erfolgreich, abgebrochen oder fehlgeschlagen). Die erneute Ausführung wird unterstützt, indem dieselbe Pipeline verwendet wird, die die drei folgenden Schritte umfasst:
 
 1. **Validierungsschritt** – Dieser Schritt führt dieselbe Validierung wie bei einer normalen Pipeline-Ausführung durch.
-1. **Der Build-Schritt** – Im Rahmen einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen wirklich neuen Build-Prozess aus.
+1. **Der Build-Schritt** - Im Kontext einer erneuten Ausführung kopiert der Build-Schritt Artefakte und führt keinen neuen Build-Prozess aus.
 1. **Produktionsbereitstellungsschritt** – Dieser Schritt verwendet dieselbe Konfiguration und dieselben Optionen wie der Produktionsbereitstellungsschritt bei einer normalen Pipeline-Ausführung.
 
 In solchen Fällen, in denen eine erneute Ausführung möglich ist, bietet die Statusseite der Produktions-Pipeline neben der üblichen Option **Build-Protokoll herunterladen** auch die Option **Erneut ausführen**.
@@ -211,7 +211,7 @@ In solchen Fällen, in denen eine erneute Ausführung möglich ist, bietet die S
 
 ### Erneutes Ausführen der API {#reexecute-api}
 
-Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [die Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#tag/Pipeline-Execution) verwenden, um erneute Ausführungen auszulösen und Ausführungen zu identifizieren, die als erneute Ausführungen ausgelöst wurden.
+Zusätzlich zur Verfügbarkeit in der Benutzeroberfläche können Sie [die Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api#tag/Pipeline-Execution) verwenden, um erneute Ausführungen auszulösen und Ausführungen zu identifizieren, die als erneute Ausführungen ausgelöst wurden.
 
 #### Auslösen einer erneuten Ausführung {#triggering}
 

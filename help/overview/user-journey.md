@@ -1,5 +1,5 @@
 ---
-title: User Journey
+title: Onboarding von Benutzern
 description: Lernen Sie die verschiedenen Onboarding-Szenarien und die ersten Schritte mit Cloud Manager kennen.
 exl-id: deb3429c-dfcf-4e52-9aba-d9368aa240e6
 TQID: https://experienceleague.adobe.com/EnNaMZzu5bLUD3Jjsp6ovqFvoFM30ju4FOQJfmySLEk
@@ -10,22 +10,22 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 2cd89edca1c1dfac7f1b7b68eccdf1416efb4724
 workflow-type: tm+mt
-source-wordcount: 560
-ht-degree: 100%
+source-wordcount: 567
+ht-degree: 62%
 
 ---
 
-# User Journey {#user-journey}
+# Onboarding von Benutzern {#user-journey}
 
-Wenn Sie AEM (Adobe Experience Manager) verwenden, trifft auf Sie wahrscheinlich eines der folgenden Szenarien zu:
+Als AEM (Adobe Experience Manager)-Anwender können Sie eines der folgenden Szenarien einhalten:
 
 * Sie verwenden AEM zum ersten Mal.
 * Sie verwenden derzeit AEM 6.x.
 * Sie müssen auf AEM 6.5 aktualisieren, um [!UICONTROL Cloud Manager] verwenden zu können.
 
-In diesem Dokument werden diese drei Szenarien erläutert und Ihre Journey für die ersten Schritte mit [!UICONTROL Cloud Manager] erklärt.
+In diesem Dokument werden diese drei Szenarien beschrieben und der Prozess für die ersten Schritte mit [!UICONTROL Cloud Manager] erläutert.
 
 >[!NOTE]
 >
@@ -37,13 +37,13 @@ Der Onboarding-Prozess unterscheidet sich, je nachdem, ob Sie neu bei AMS sind o
 
 ### Neu bei Adobe Managed Services {#new-to-ams}
 
-Als Neukundin oder Neukunde erfolgt Ihr Onboarding für [!UICONTROL Cloud Manager] im Rahmen des Onboardings für Adobe Managed Services.
+Als Neukunde erhalten Sie eine Einführung in [!UICONTROL Cloud Manager] im Rahmen des Onboardings für Adobe Managed Services.
 
 Im Zuge dieses Onboarding-Prozesses erhalten Sie eine Begrüßungs-E-Mail mit folgenden Informationen:
 
 * URL für den Zugriff auf [!UICONTROL Cloud Manager]
 * Anleitung zur Anmeldung bei [!UICONTROL Experience Cloud]
-* Anweisungen zur Verwendung der Admin Console für die Verwaltung Ihrer Benutzenden und der entsprechenden Berechtigungen, damit sie, falls erforderlich, auf [!UICONTROL Cloud Manager] zugreifen können.
+* Anleitung zur Verwendung der Admin Console für die Verwaltung Ihrer Benutzenden und der entsprechenden Berechtigungen, damit sie bei Bedarf auf Cloud Manager zugreifen können.
 
 ### Aktuelle Adobe Managed Services-Kundschaft {#existing-customer}
 
@@ -51,15 +51,15 @@ Als AMS-Bestandskundin oder -Bestandskunde müssen Sie zunächst Ihre vorhandene
 
 Während des Upgrades erfolgt Ihr Cloud Manager-Onboarding und Sie erhalten die URL für den Zugriff auf [!UICONTROL Cloud Manager]. Außerdem müssen Sie für die Benutzenden, die auf [!UICONTROL Cloud Manager] zugreifen müssen, die Admin Console verwenden, um sie und ihre jeweiligen Berechtigungen zu verwalten.
 
-Auch vorhandene AEM-Projekte müssen den empfohlenen Best Practices entsprechen, weil Sie mit [!UICONTROL Cloud Manager] neue Code-Änderungen in Ihren AEM-Umgebungen bereitstellen.
+Auch Ihr bestehendes AEM-Projekt muss den empfohlenen Vorgehensweisen entsprechen, da Sie mit der Verwendung von [!UICONTROL Cloud Manager] beginnen, um neue Code-Änderungen in Ihren AEM-Umgebungen bereitzustellen.
 
 Weitere Informationen zu den Vorteilen der Aktualisierung auf AEM 6.5 finden Sie unter [Upgrade auf AEM 6.5](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/deploying/upgrading/upgrade).
 
 ## Zugreifen auf [!UICONTROL Cloud Manager] {#accessing-cloud-manager}
 
-Melden Sie sich mit Ihren Adobe Identity Management-Anmeldedaten bei der Landingpage von [!UICONTROL Experience Cloud] an. Wählen Sie dort AEM aus der Lösungsauswahl aus, um auf [!UICONTROL Cloud Manager] und Ihre AEM-Umgebungen zuzugreifen.
+Melden Sie sich mit Ihren Adobe Identity Management-Anmeldedaten bei der Landingpage von [!UICONTROL Experience Cloud] an. Wählen Sie aus dem Lösungsschalter die Option AEM aus, um auf [!UICONTROL Cloud Manager] und Ihre AEM-Umgebungen zuzugreifen.
 
-Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. Jetzt sind Sie bereit, alle Möglichkeiten von [!UICONTROL Cloud Manager] zu erkunden und Ihre erste Code-Verzweigung vorzubereiten, um sie in Ihren Staging- und Produktionsumgebungen bereitzustellen.
+Nach der erstmaligen Anmeldung bei [!UICONTROL Cloud Manager] können Sie direkt über die [!UICONTROL Cloud Manager]-Benutzeroberfläche auf Ihre AEM-Umgebungen zugreifen. Jetzt können Sie alle Funktionen von [!UICONTROL Cloud Manager] verwenden und Ihre erste Codeverzweigung vorbereiten, um sie in Ihren Staging- und Produktionsumgebungen bereitzustellen.
 
 Die ersten Schritte mit [!UICONTROL Cloud Manager] werden unter [Erste Anmeldung](/help/getting-started/first-time-login.md) beschrieben.
 
@@ -72,11 +72,11 @@ Sobald Sie bei [!UICONTROL Cloud Manager] angemeldet sind, können Sie mit Ihrem
 1. Richten Sie Ihre Code-Repository-Umgebung ein.
 1. Richten Sie Ihr Team und die zugehörigen Rollen ein. Rollenzugehörigkeiten werden zugewiesen, indem die Benutzenden über die Admin Console zu einem [!UICONTROL Cloud Manager]-Profil hinzugefügt werden.
 1. Richten Sie Ihre Quell-Code-Verzweigungen im Git-Repository ein.
-1. Definieren Sie Ihre Ziele in Bezug auf Last- und Performance-KPIs (Key Performance Indicators).
+1. Definieren Sie Ihre Last- und Leistungs-KPIs (Key Performance Indicators).
 1. Definieren Sie Testszenarien, um Ihren Code erfolgreich in Ihren Staging- und Produktionsumgebungen bereitzustellen, nachdem alle Qualitätsprüfungen bestanden wurden.
 
-## End-to-End-Journey {#end-to-end-journey}
+## Prozessübersicht {#end-to-end-journey}
 
-Dieses Diagramm veranschaulicht die Customer Journey auf allgemeiner Ebene, wenn Sie die [!UICONTROL Cloud Manager]-CI/CD-Pipeline zur Bereitstellung Ihrer Code-Änderungen in Ihren Staging- und Produktionsumgebungen verwenden.
+Im folgenden Diagramm wird der Prozess bei Verwendung der [!UICONTROL Cloud Manager] CI/CD-Pipeline für die Bereitstellung Ihrer Codeänderungen in Ihren Staging- und Produktionsumgebungen zusammengefasst.
 
-![End-to-End-Journey](/help/assets/screen_shot_2018-05-15at124004pm.png)
+![Kunden-Journey zum Onboarding in Cloud Manager, auf der der Pfad für neue und bestehende Kunden durch Umgebungsbereitstellung oder -upgrades, Benutzer- und Rollenverwaltung, Projektimplementierung und die CI/CD-Pipeline angezeigt wird.](/help/assets/screen_shot_2018-05-15at124004pm.png)

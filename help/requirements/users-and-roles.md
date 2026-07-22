@@ -10,18 +10,18 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 130406286e65ad0e0651451766ca740f3458a9c1
 workflow-type: tm+mt
-source-wordcount: 796
-ht-degree: 86%
+source-wordcount: 797
+ht-degree: 76%
 
 ---
 
 # Hinzufügen von Benutzenden und Rollen {#add-users-and-roles}
 
-Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigungen erforderlich. Beispielsweise dürfen nur bestimmte Anwender die KPIs (Key Performance Indicators) für ein Programm festlegen. Diese Berechtigungen werden logisch in Rollen gruppiert.
+Für viele Funktionen in [!UICONTROL Cloud Manager] sind spezielle Berechtigungen erforderlich. Beispielsweise dürfen nur autorisierte Benutzerinnen und Benutzer die KPIs (Key Performance Indicators) für ein Programm festlegen. Diese Berechtigungen werden logisch in Rollen gruppiert.
 
-In [!UICONTROL Cloud Manager] sind derzeit vier Rollen für Benutzende definiert, die die Verfügbarkeit bestimmter Funktionen steuern:
+[!UICONTROL Cloud Manager] definiert vier Rollen für Benutzer, die die Verfügbarkeit bestimmter Funktionen steuern:
 
 * Geschäftsinhaber
 * Programm-Manager
@@ -51,9 +51,9 @@ In der folgenden Tabelle sind die Rollen in Cloud Manager zusammengefasst.
 
 ## Erstellen eines Produktprofils mit der Admin Console {#using-admin-console-to-create-a-profile}
 
-[!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Bestimmte Rollenzugehörigkeiten werden bereitgestellt, indem der Anwender einem [!UICONTROL Cloud Manager]-Produktprofil hinzugefügt wird.
+[!UICONTROL Cloud Manager]-Rollen werden über die Admin Console verwaltet. Durch das Hinzufügen des Benutzers zu einem [!UICONTROL Cloud Manager]-Produktprofil werden bestimmte Rollenmitgliedschaften bereitgestellt.
 
-Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin Console finden Sie unter [Admin Console](https://helpx.adobe.com/de/enterprise/using/admin-console.html).
+Die Admin Console ermöglicht eine zentrale Verwaltung Ihrer Adobe-Berechtigungen in der gesamten Organisation. Weitere Informationen zur Adobe Admin Console finden Sie unter [Admin Console](https://helpx.adobe.com/de/business/enterprise/plan-your-deployment/basic-concepts/admin-console.html).
 
 Admins müssen unter dem Produktkontext [!UICONTROL AEM Managed Services] neue Produktprofile erstellen, um rollenbasierte Berechtigungen für Benutzende von [!UICONTROL Cloud Manager] zuzuweisen, die jeder der vier [!UICONTROL Cloud Manager]-Rollen entsprechen.
 
@@ -87,11 +87,11 @@ CQDOC-22790
 
    ![Neues Profil](/help/assets/admin-console-product-profiles.png)
 
-1. Tragen Sie die Informationen ein, um eine neue Rolle für [!UICONTROL Cloud Manager] einzurichten.
+1. Um eine neue Rolle für [!UICONTROL Cloud Manager] einzurichten, geben Sie die folgenden Informationen ein.
 
    * **Profilname** – Der **Profilname** ist beliebig. Um Missverständnisse zu vermeiden, sollten Sie jedoch die Werte in der Spalte **Empfohlener Profilname** verwenden.
    * **Anzeigename** – Der **Anzeigename** muss dem vom [!UICONTROL Cloud Manager] definierten technischen Wert entsprechen (siehe nachfolgende Tabelle).
-   * **Berechtigungsgruppe** – Sie können eine Berechtigungsgruppe für das Profil auswählen (nicht immer verfügbar).
+   * **Berechtigungsgruppe** - Wählen Sie eine Berechtigungsgruppe für das Profil aus (nicht immer verfügbar).
 
 <!-- 
 CQDOC-22790
@@ -131,12 +131,12 @@ Nachdem Sie Produktprofile erstellt haben, können Sie ihnen Benutzerinnen, Benu
 
 1. Klicken Sie **Dialogfeld „Produkte und Benutzergruppen bearbeiten** auf ![Hinzufügen-Symbol, Pluszeichen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) und wählen Sie die Profile aus, die dem Benutzer zugewiesen werden sollen.
 
-   * Wenn der Benutzer den Rollen bereits zugewiesen ist, ist die Schaltfläche ![Hinzufügen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) eine Bearbeitungsschaltfläche (ein Bleistift), funktioniert jedoch auf dieselbe Weise.
+   * Wenn der Benutzer den Rollen bereits zugewiesen ist, ist die Schaltfläche ![Hinzufügen](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Add_18_N.svg) eine Bearbeitungsschaltfläche (ein Bleistift), funktioniert aber auf die gleiche Weise.
 
    ![Produkte und Benutzergruppen bearbeiten](/help/assets/admin-console-edit-products-and-user-groups.png)
 
 1. Klicken Sie auf **Speichern**, um die Profile der Benutzer zu speichern.
 
-Wiederholen Sie die gleichen Schritte, um Benutzergruppen Profile zuzuweisen, wählen Sie jedoch **Benutzergruppen** über das linke Navigationsfenster auf der Registerkarte **Benutzer**. Klicken Sie auf eine Benutzergruppe und wählen Sie **Zugewiesene Produktprofile** klicken Sie auf **Produktprofil zuweisen**, um Profile zuzuweisen.
+Wiederholen Sie die gleichen Schritte, um Benutzergruppen Profile zuzuweisen, wählen Sie jedoch **Benutzergruppen** über das linke Navigationsfenster auf der Registerkarte **Benutzer**. Klicken Sie auf eine Benutzergruppe und wählen Sie **Zugewiesene Produktprofile** und klicken Sie dann auf **Produktprofil zuweisen**, um Profile zuzuweisen.
 
 ![Profile einer Gruppe zuweisen](/help/assets/admin-console-edit-user-groups.png)

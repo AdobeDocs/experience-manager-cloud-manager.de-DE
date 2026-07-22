@@ -11,10 +11,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: acd33650c938d49bac5c319f8c938202fe543bbd
+source-git-commit: 3b9ef92a96dab9c1f4b93466d8a2d15185b5864f
 workflow-type: tm+mt
-source-wordcount: 391
-ht-degree: 14%
+source-wordcount: 390
+ht-degree: 10%
 
 ---
 
@@ -47,16 +47,16 @@ Ein neues Build-Modell kompiliert nur geänderte Module (und nicht das gesamte R
 
   Weitere Informationen finden Sie in den folgenden Themen:
 
-   * [Über die Verwendung von Smart Build in einer Produktions](/help/using/production-pipelines.md#about-smart-build)Pipeline und [Über die Verwendung von Smart Build in einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#about-smart-build)
-   * [Produktions-Pipeline hinzufügen](/help/using/production-pipelines.md##adding-production-pipeline) und [produktionsfremde Pipeline hinzufügen](/help/using/non-production-pipelines.md#add-non-production-pipeline).
+  * [Über die Verwendung von Smart Build in einer Produktions](/help/using/production-pipelines.md#about-smart-build)Pipeline und [Über die Verwendung von Smart Build in einer produktionsfremden Pipeline](/help/using/non-production-pipelines.md#about-smart-build)
+  * [Produktions-Pipeline hinzufügen](/help/using/production-pipelines.md#adding-production-pipeline) und [produktionsfremde Pipeline hinzufügen](/help/using/non-production-pipelines.md#add-non-production-pipeline).
 
 ## Beta-Programme {#beta-program}
 
-Nehmen Sie am Beta-Programm von Cloud Manager teil, um exklusiven Zugriff auf bevorstehende Funktionen vor ihrer regulären Veröffentlichung zu erhalten.
+Um vor der allgemeinen Veröffentlichung exklusiven Zugriff auf kommende Funktionen zu erhalten, nehmen Sie an den Beta-Programmen von Cloud Manager teil.
 
 >[!IMPORTANT]
 >
->Beta-Versionen enthalten Mängel und werden ohne Mängelgewähr und ohne Gewährleistung jeglicher Art bereitgestellt. Adobe ist nicht verpflichtet, die Beta-Versionen zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen (durch Adobe Support Services oder anderweitig). Kundinnen und Kunden verwenden Beta-Versionen auf eigenes Risiko und sollten sich nicht auf die korrekte Funktionsweise oder Leistung von Beta-Versionen oder auf begleitende Dokumentationen oder Materialien verlassen. Funktionen und APIs in der Beta-Version können ohne Vorankündigung geändert werden. Jede Nutzung der Beta-Versionen erfolgt ausschließlich auf eigene Gefahr des Kunden.
+>Beta-Versionen enthalten Mängel und werden ohne Mängelgewähr und ohne Gewährleistung jeglicher Art bereitgestellt. Adobe ist nicht verpflichtet, die Beta-Versionen zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen (durch Adobe Support Services oder anderweitig). Kunden verwenden Beta-Versionen auf eigenes Risiko. Verlassen Sie sich nicht auf die korrekte Funktionsweise oder Leistung von Beta-Versionen oder auf begleitende Dokumentationen oder Materialien. Funktionen und APIs in der Beta-Version können ohne Vorankündigung geändert werden. Jede Nutzung der Beta-Versionen erfolgt ausschließlich auf eigene Gefahr des Kunden.
 
 Die folgenden Möglichkeiten des Beta-Programms sind derzeit verfügbar:
 
