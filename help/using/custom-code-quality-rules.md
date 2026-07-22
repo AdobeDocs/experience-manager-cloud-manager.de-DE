@@ -16,10 +16,10 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 3ecc950f1fc53c4c7bf4a079c08c33f6dd34fe23
 workflow-type: tm+mt
-source-wordcount: 4156
-ht-degree: 91%
+source-wordcount: 4096
+ht-degree: 80%
 
 ---
 
@@ -29,7 +29,7 @@ Erfahren Sie mehr über die Qualitätsregeln für benutzerspezifischen Code, die
 
 >[!NOTE]
 >
->Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. In der [Dokumentation zu den Konzepten von SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/) finden sich weitere Informationen zu den zugehörigen Konzepten und Qualitätsregeln.
+>Die hier bereitgestellten Code-Beispiele dienen nur Veranschaulichungszwecken. Weitere Informationen zu den zugehörigen Konzepten und Qualitätsregeln finden Sie in der [Dokumentation zu den Konzepten von SonarQube](https://docs.sonarsource.com/sonarqube-server).
 
 Vollständige SonarQube-Regeln stehen aufgrund von proprietären Informationen von Adobe nicht zum Download zur Verfügung. Sie können die vollständige Liste von Regeln [über diesen Link](/help/assets/CodeQuality-rules-latest-AMS.xlsx) herunterladen. Lesen Sie dieses Dokument weiter, um Beschreibungen und Beispiele für die Regeln zu sehen.
 
@@ -97,14 +97,14 @@ public class DoThis implements Runnable {
 }
 ```
 
-### Verwenden Sie keine Formatzeichenfolgen, die extern gesteuert werden können {#do-not-use-format-strings-which-may-be-externally-controlled}
+### Verwenden Sie keine extern gesteuerten Formatzeichenfolgen {#do-not-use-format-strings-which-may-be-externally-controlled}
 
 * **key**: CQRules:CWE-134
 * **Typ**: Sicherheitslücke
 * **Schweregrad**: Hoch
 * **Seit**: Version 2018.4.0
 
-Durch die Verwendung einer Formatzeichenfolge aus einer externen Quelle (z. B. einem Abfrageparameter oder nutzergenerierten Inhalten) kann ein Programm für Denial-of-Service-Angriffe anfällig werden. Es gibt Fälle, in denen eine Formatzeichenfolge von außen gesteuert werden kann, jedoch nur aus vertrauenswürdigen Quellen zulässig ist.
+Durch die Verwendung einer Formatzeichenfolge aus einer externen Quelle (z. B. einem Abfrageparameter oder nutzergenerierten Inhalten) kann ein Programm für Denial-of-Service-Angriffe anfällig werden. Es gibt Fälle, in denen eine Formatzeichenfolge von außen gesteuert wird, jedoch nur aus vertrauenswürdigen Quellen zulässig ist.
 
 #### Nicht konformer Code {#non-compliant-code-1}
 
@@ -123,7 +123,7 @@ protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse 
 * **Schweregrad**: Kritisch
 * **Seit**: Version 2018.6.0
 
-Beim Ausführen von HTTP-Anfragen von einer AEM-Anwendung aus muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert sind, um unnötige Thread-Nutzung zu vermeiden. Leider verfügen weder der standardmäßige HTTP-Client von Java™, `java.net.HttpUrlConnection`, noch der häufig verwendete Apache-HTTP-Komponenten-Client über ein standardmäßiges Timeout. Daher müssen Timeouts explizit konfiguriert werden. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
+Beim Ausführen von HTTP-Anfragen von einer AEM-Anwendung aus muss unbedingt sichergestellt sein, dass korrekte Zeitüberschreitungswerte konfiguriert sind, um unnötige Thread-Nutzung zu vermeiden. Leider verfügen weder der standardmäßige HTTP-Client von Java™, `java.net.HttpUrlConnection`, noch der häufig verwendete Apache-HTTP-Komponenten-Client über ein standardmäßiges Timeout. Daher müssen Timeouts explizit konfiguriert werden. Als Best Practice gilt, diese Zeitüberschreitungen bei maximal 60 Sekunden zu definieren.
 
 #### Nicht konformer Code {#non-compliant-code-2}
 
@@ -302,7 +302,7 @@ public void orDoThis() throws MyCustomException {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Ein weiteres gängiges Muster, das vermieden werden sollte, ist die Protokollierung einer Nachricht, direkt gefolgt von der Auslösung einer Ausnahme. Dies bedeutet meist, dass die Ausnahmemeldung in Protokolldateien doppelt aufgeführt wird.
+Ein weiteres gängiges Muster, das vermieden werden sollte, ist die Protokollierung einer Nachricht, direkt gefolgt von der Auslösung einer Ausnahme. Dieses Problem weist darauf hin, dass die Ausnahmemeldung in Protokolldateien dupliziert wird.
 
 #### Nicht konformer Code {#non-compliant-code-7}
 
@@ -327,7 +327,7 @@ public void doThis() throws Exception {
 * **Typ**: `Code Smell`
 * **Schweregrad**: Gering
 
-Im Allgemeinen sollten mit der Protokollierungsstufe INFO wichtige Aktionen abgegrenzt werden. Standardmäßig ist AEM so konfiguriert, dass auf der INFO-Ebene oder höher protokolliert wird. GET- und HEAD-Methoden sollten nur schreibgeschützte Vorgänge sein und stellen daher keine wichtigen Aktionen dar. Eine Protokollierung auf INFO-Ebene als Antwort auf GET- oder HEAD-Anfragen füllt das Protokoll wahrscheinlich mit erheblichen Mengen überflüssiger Informationen, sodass es schwieriger wird, nützliche Informationen in Protokolldateien zu finden. Bei der Verarbeitung von GET- oder HEAD-Anfragen sollte die Protokollierung auf WARN- oder ERROR-Ebene erfolgen, wenn etwas schiefgelaufen ist. Damit detailliertere Informationen zur Fehlerbehebung verfügbar werden, sollte die Protokollierung auf DEBUG- oder TRACE-Ebene erfolgen.
+Im Allgemeinen sollten mit der Protokollierungsstufe INFO wichtige Aktionen abgegrenzt werden. Standardmäßig ist AEM so konfiguriert, dass auf der INFO-Ebene oder höher protokolliert wird. GET- und HEAD-Methoden sollten nur schreibgeschützte Vorgänge sein und stellen daher keine wichtigen Aktionen dar. Die Protokollierung auf INFO-Ebene als Reaktion auf GET- oder HEAD-Anfragen verursacht ein erhebliches Protokollrauschen, das die Identifizierung nützlicher Informationen in Protokolldateien erschwert. Bei der Verarbeitung von GET- oder HEAD-Anfragen sollte die Protokollierung auf WARN- oder ERROR-Ebene erfolgen, wenn etwas schiefgelaufen ist. Ausführlichere Informationen zur Fehlerbehebung finden Sie bei der Protokollierung auf DEBUG- oder TRACE-Ebene.
 
 >[!NOTE]
 >
@@ -356,7 +356,7 @@ public void doGet() throws Exception {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Programmausnahme aufgetreten ist. Obwohl der Kontext auch mit Stacktraces bestimmt werden kann, ist die Protokollmeldung meist besser lesbar und verständlicher. Daher ist es bei der Protokollierung einer Ausnahme nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. In der Ausnahmemeldung sollte detailliert beschrieben werden, was schiefgelaufen ist. Die Protokollmeldung sollte hingegen darüber informieren, was die Anwendung gerade tat, als die Ausnahme auftrat. Die Ausnahmemeldung wird dennoch protokolliert. Durch die Spezifizierung Ihrer eigenen Nachricht sind die Protokolle leichter verständlich.
+Als Best Practice sollten Protokollmeldungen kontextbezogene Informationen darüber enthalten, wo eine Programmausnahme aufgetreten ist. Während Sie den Kontext mithilfe von Stacktraces bestimmen, ist die Protokollmeldung im Allgemeinen leichter zu lesen und zu verstehen. Daher ist es bei der Protokollierung einer Ausnahme nicht empfehlenswert, die Ausnahmemeldung als Protokollmeldung zu verwenden. Die Ausnahmemeldung beschreibt, was schiefgelaufen ist. Im Gegensatz dazu informiert die Protokollmeldung den Leser darüber, was die Anwendung getan hat, als die Ausnahme aufgetreten ist. Die Ausnahmemeldung wird dennoch protokolliert. Durch die Spezifizierung Ihrer eigenen Nachricht sind die Protokolle leichter verständlich.
 
 #### Nicht konformer Code {#non-compliant-code-9}
 
@@ -382,7 +382,7 @@ public void doThis() {
 }
 ```
 
-### Die Protokollierung in Catch-Blöcken sollte auf WARN- oder ERROR-Ebene erfolgen {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
+### Die Protokollierung in Catch-Blöcken erfolgt auf WARN- oder ERROR-Ebene {#logging-in-catch-blocks-should-be-at-the-warn-or-error-level}
 
 * **key**: CQRules:CQBP-44---WrongLogLevelInCatchBlock
 * **Typ**: `Code Smell`
@@ -422,7 +422,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Kontext ist zum Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von `Exception.printStackTrace()` wird nur der Stacktrace an den Standardfehler-Stream ausgegeben, während der gesamte Kontext verloren geht. Bei einer Multi-Thread-Anwendung wie AEM kann es beim parallelen Drucken mehrerer Ausnahmen mit dieser Methode zu einer Überlappung der Stacktraces kommen, was erhebliche Verwirrung verursacht. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
+Kontext ist zum Verständnis von Protokollmeldungen äußerst wichtig. Durch Verwendung von `Exception.printStackTrace()` wird nur der Stacktrace an den Standardfehler-Stream ausgegeben, wobei der gesamte Kontext weggelassen wird. In einer Multithreadanwendung wie AEM verursacht die Ausgabe von parallelen Stacktraces außerdem Probleme. Ausnahmen sollten daher nur über das Protokollierungs-Framework protokolliert werden.
 
 #### Nicht konformer Code {#non-compliant-code-11}
 
@@ -455,7 +455,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Die Protokollierung in AEM sollte immer über das Protokollierungs-Framework (SLF4J) erfolgen. Durch die direkte Ausgabe an Standardausgabe- oder Standardfehler-Streams gehen strukturelle und kontextbezogene Informationen verloren, die vom Protokollierungs-Framework bereitgestellt werden. Diese Vorgehensweise kann in einigen Fällen zu Leistungseinbußen führen.
+Die Protokollierung in AEM sollte immer über das Protokollierungs-Framework (SLF4J) erfolgen. Bei der direkten Ausgabe an die Standardausgabe oder den Standardfehler-Stream gehen die vom Protokollierungs-Framework bereitgestellten Struktur- und Kontextinformationen verloren und es treten manchmal Leistungsprobleme auf.
 
 #### Nicht konformer Code {#non-compliant-code-12}
 
@@ -488,7 +488,7 @@ public void doThis() {
 * **Schweregrad**: Gering
 * **Seit**: Version 2018.4.0
 
-Pfade, die mit `/libs` und `/apps` beginnen, sollten im Allgemeinen nicht hartcodiert sein. Diese Pfade werden normalerweise relativ zum `Sling` Suchpfad gespeichert, der standardmäßig auf `/libs,/apps` festgelegt ist. Durch die Angabe des absoluten Pfads können geringfügige Fehler entstehen, die erst später im Projektlebenszyklus deutlich werden.
+Pfade, die mit `/libs` und `/apps` beginnen, sind nicht hartcodiert. Diese Pfade werden normalerweise relativ zum `Sling` Suchpfad gespeichert, der standardmäßig auf `/libs,/apps` festgelegt ist. Die Verwendung des absoluten Pfads führt zu geringfügigen Mängeln, die erst später im Projektlebenszyklus auftreten.
 
 #### Nicht konformer Code {#non-compliant-code-13}
 
@@ -513,11 +513,11 @@ public void doThis(Resource resource) {
 * **Schweregrad**: Gering
 * **Seit**: Version 2020.5.0
 
-Verwenden Sie den Sling Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Über Sling geplante Aufträge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
+Verwenden Sie den Sling Scheduler nicht für Aufgaben, die eine garantierte Ausführung erfordern. Geplante Sling-Aufträge garantieren die Ausführung und eignen sich besser für Umgebungen mit und ohne Cluster.
 
-Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen finden Sie in der Sling-Dokumentation zum Thema [Apache Sling-Ereignisse und -Auftragsverarbeitung](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
+Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen finden Sie unter [Apache Sling Eventing and Job Handling-Dokumentation](https://sling.apache.org/documentation/bundles/apache-sling-eventing-and-job-handling.html).
 
-### APIs, die in AEM als veraltet gelten, sollten nicht verwendet werden {#sonarqube-aem-deprecated}
+### Keine veralteten AEM-APIs verwenden {#sonarqube-aem-deprecated}
 
 * **Schlüssel**: AMSCORE-553
 * **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
@@ -526,9 +526,9 @@ Weitere Informationen zum Umgang mit Sling-Aufträgen in Cluster-Umgebungen find
 
 Die AEM-API-Oberfläche wird ständig überarbeitet, um APIs zu identifizieren, von deren Verwendung abgeraten wird und die daher als veraltet gelten.
 
-In vielen Fällen werden diese APIs unter Verwendung der standardmäßigen Java™-Annotation *@Deprecated* als veraltet eingestuft und durch `squid:CallToDeprecatedMethod` entsprechend gekennzeichnet.
+In vielen Fällen sind diese APIs unter Verwendung der standardmäßigen Java™-*@Deprecated veraltet* Anmerkung kennzeichnet dies als `squid:CallToDeprecatedMethod`.
 
-Es gibt jedoch Fälle, in denen eine API im Kontext von AEM veraltet ist, aber in anderen Kontexten nicht. Diese Regel identifiziert diese zweite Gruppe.
+Es gibt jedoch Fälle, in denen eine API im Kontext von AEM veraltet ist, in anderen Kontexten jedoch nicht. Diese Regel identifiziert diese zweite Gruppe.
 
 ## Inhaltsregeln für OakPAL {#oakpal-rules}
 
@@ -536,9 +536,9 @@ Im folgenden Abschnitt werden die von Cloud Manager durchgeführten OakPAL-Prüf
 
 >[!NOTE]
 >
->OakPAL ist ein Framework, das Inhaltspakete mit einem eigenständigen Oak-Repository validiert. Es wurde von einem AEM-Partner entwickelt, der mit dem 2019 AEM Rockstar North America Award ausgezeichnet wurde.
+>OakPAL ist ein Framework, das Inhaltspakete mit einem eigenständigen Oak-Repository validiert. Ein AEM-Partner und Gewinner des &quot;AEM Rock Star North America“ Awards 2019 hat es entwickelt.
 
-### Kundinnen und Kunden sollten keine mit @ProviderType kommentierten Produkt-APIs implementieren oder erweitern {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
+### Implementieren oder erweitern Sie keine Produkt-APIs, die mit Anmerkungen versehen sind@ProviderType {#product-apis-annotated-with-providertype-should-not-be-implemented-or-extended-by-customers}
 
 * **Schlüssel**: CQBP-84
 * **Typ**: Fehler
@@ -561,14 +561,14 @@ public class DontDoThis implements Page {
 }
 ```
 
-### Kundenpakete sollten keine Knoten unter `/libs` erstellen oder ändern {#oakpal-customer-package}
+### Erstellen oder bearbeiten Sie keine Knoten unter `/libs` in Kundenpaketen {#oakpal-customer-package}
 
 * **Schlüssel**: BannedPath
 * **Typ**: Fehler
 * **Schweregrad**: Blocker
 * **Seit**: Version 2019.6.0
 
-Es ist eine lange bestehende Best Practice, dass die Inhaltsstruktur `/libs` im AEM-Inhalts-Repository von Kunden als schreibgeschützt betrachtet werden sollte. Das Ändern von Knoten und Eigenschaften unter `/libs` ist mit erheblichen Risiken für umfassende und kleinere Aktualisierungen verbunden. Änderungen an `/libs` werden nur über offizielle Kanäle durch Adobe vorgenommen.
+Es ist eine lange bestehende Best Practice, dass die Inhaltsstruktur `/libs` im AEM-Inhalts-Repository von Kunden als schreibgeschützt betrachtet werden sollte. Das Ändern von Knoten und Eigenschaften unter `/libs` ist mit erheblichen Risiken für umfassende und kleinere Aktualisierungen verbunden. Adobe bearbeitet `/libs` nur über offizielle Kanäle.
 
 ### Pakete sollten keine doppelten OSGi-Konfigurationen enthalten {#oakpal-package-osgi}
 
@@ -630,16 +630,16 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
       + rtePlugins [nt:unstructured]
 ```
 
-### Pakete sollten sich nicht überlappen {#oakpal-no-overlap}
+### Pakete dürfen sich nicht überlappen {#oakpal-no-overlap}
 
 * **Schlüssel**: PackageOverlaps
 * **Typ**: Fehler
 * **Schweregrad**: Hoch
 * **Seit**: Version 2019.6.0
 
-Ähnlich wie bei der Regel [Pakete dürfen keine doppelten OSGi-Konfigurationen enthalten](#oakpal-package-osgi) ist dies ein häufiges Problem bei komplexen Projekten, bei denen mehrere separate Inhaltspakete in denselben Knotenpfad schreiben. Die Verwendung von Abhängigkeiten zwischen Inhaltspaketen kann zwar ein konsistentes Ergebnis gewährleisten, doch ist es besser, Überschneidungen ganz zu vermeiden.
+Ähnlich wie bei der Regel [Pakete sollten keine doppelten OSGi-Konfigurationen enthalten](#oakpal-package-osgi) ist dieses Problem ein häufiges Problem bei komplexen Projekten, bei denen mehrere separate Inhaltspakete in denselben Knotenpfad schreiben. Die Verwendung von Abhängigkeiten zwischen Inhaltspaketen kann zwar ein konsistentes Ergebnis gewährleisten, doch ist es besser, Überschneidungen ganz zu vermeiden.
 
-### Der standardmäßige Authoring-Modus sollte nicht die klassische Benutzeroberfläche verwenden {#oakpal-default-authoring}
+### Der standardmäßige Authoring-Modus ist nicht die klassische Benutzeroberfläche {#oakpal-default-authoring}
 
 * **Schlüssel**: ClassicUIAuthoringMode
 * **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
@@ -648,7 +648,7 @@ Ein häufig auftretendes Problem ist die Verwendung von Knoten mit der Bezeichnu
 
 Die OSGi-Konfiguration `com.day.cq.wcm.core.impl.AuthoringUIModeServiceImpl` definiert den standardmäßigen Authoring-Modus in AEM. Da die klassische Benutzeroberfläche seit AEM 6.4 nicht mehr unterstützt wird, tritt jetzt ein Problem auf, wenn als standardmäßiger Authoring-Modus die klassische Benutzeroberfläche konfiguriert ist.
 
-### Komponenten mit Dialogfeldern sollten Dialogfelder für die Touch-Benutzeroberfläche enthalten {#oakpal-components-dialogs}
+### Komponenten mit Dialogfeldern erfordern Dialogfelder für die Touch-Benutzeroberfläche {#oakpal-components-dialogs}
 
 * **Schlüssel**: ComponentWithOnlyClassicUIDialog
 * **Typ**: `Code Smell` / Cloud-Service-Kompatibilität
@@ -674,14 +674,14 @@ Cloud Service-Bereitstellungen unterstützen keine Rückwärtsreplikation, wie u
 
 Kunden, die die Rückwärtsreplikation verwenden, sollten sich für alternative Lösungen an Adobe wenden.
 
-### In Proxy-fähigen Client-Bibliotheken enthaltene Ressourcen sollten sich in einem Ordner mit dem Namen „resources“ befinden {#oakpal-resources-proxy}
+### In Proxy-fähigen Client-Bibliotheken enthaltene Ressourcen befinden sich in einem Ordner namens „resources“ {#oakpal-resources-proxy}
 
 * **Schlüssel**: ClientlibProxyResource
 * **Typ**: Fehler
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-AEM Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten enthalten. Wie unter [Verwenden Client-seitiger Bibliotheken](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors) beschrieben, müssen diese statischen Ressourcen bei der Verwendung von Proxy-fähigen Client-Bibliotheken in einem untergeordneten Ordner namens `resources` enthalten sein, damit sie in den Veröffentlichungsinstanzen effektiv referenziert werden können.
+AEM-Client-Bibliotheken können statische Ressourcen wie Bilder und Schriftarten enthalten. Wie unter [Verwenden Client-seitiger Bibliotheken](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/introduction/clientlibs#using-preprocessors) beschrieben, müssen diese statischen Ressourcen bei der Verwendung von Proxy-fähigen Client-Bibliotheken in einem untergeordneten Ordner namens `resources` enthalten sein, damit sie in den Veröffentlichungsinstanzen effektiv referenziert werden können.
 
 #### Nicht konformer Code {#non-compliant-proxy-enabled}
 
@@ -723,7 +723,7 @@ Mit dem Migrations-Tool im [GitHub-Repository für AEM Assets as a Cloud Service
 * **Schweregrad**: Gering
 * **Seit**: Version 2021.2.0
 
-Obwohl die Verwendung von statischen Vorlagen in AEM-Projekten früher sehr verbreitet war, werden bearbeitbare Vorlagen dringend empfohlen, da sie eine größere Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie unter [Bearbeitbare Seitenvorlagen](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
+Obwohl die Verwendung von statischen Vorlagen in AEM-Projekten früher sehr verbreitet war, werden bearbeitbare Vorlagen dringend empfohlen, da sie eine größere Flexibilität bieten und zusätzliche Funktionen unterstützen, die in statischen Vorlagen nicht vorhanden sind. Weitere Informationen finden Sie unter [Seitenvorlagen - Bearbeitbare Dokumentation](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/implementing/developing/platform/templates/page-templates-editable).
 
 Die Migration von statischen zu bearbeitbaren Vorlagen kann mithilfe der [AEM-Modernisierungs-Tools](https://opensource.adobe.com/aem-modernize-tools/) weitgehend automatisiert werden.
 
@@ -849,14 +849,14 @@ AEM Cloud Service verbietet es, dass benutzerdefinierte Suchindex-Definitionen (
 >
 >Sie werden dringend aufgefordert, sich dieses Problems so bald wie möglich anzunehmen, da Pipelines hierdurch evtl. ab der [Cloud Manager-Version August 2024](/help/release-notes/current.md) fehlschlagen.
 
-### Das Anpassen bestimmter vorkonfigurierter Indexdefinitionen ist verboten {#oakpal-customizing-ootb-index}
+### Das Anpassen bestimmter Standardindexdefinitionen ist verboten {#oakpal-customizing-ootb-index}
 
 * **Schlüssel**: RestrictIndexCustomization
 * **Typ**: Verbesserung
 * **Schweregrad**: Hoch
 * **Seit**: Version 2024.6.0
 
-AEM Cloud Service verbietet unbefugte Änderungen der folgenden vorkonfigurierten Indizes:
+AEM Cloud Service verbietet nicht autorisierte Änderungen der folgenden Standardindizes:
 
 * `nodetypeLucene`
 * `slingResourceResolver`
@@ -945,20 +945,20 @@ Im folgenden Abschnitt werden die von Cloud Manager durchgeführten Prüfungen d
 
 * [Allgemeine Dispatcher-Konfiguration](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---parsing-violation---dispatcher-configuration-general)
 
-* [Der Cache der Dispatcher-Veröffentlichungs-Farm sollte aktiviert `serveStaleOnError`](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
+* [Der Cache der Dispatcher-Veröffentlichungs-Farm `serveStaleOnError` aktiviert](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-servestaleonerror-enabled)
 
 * [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die standardmäßigen Ablehnungsregeln aus Version 6.x.x des AEM-Archetyps enthalten](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-contain-the-default-deny-rules-from-the-6xx-version-of-the-aem-archetype)
 
-* [Die `statfileslevel`-Eigenschaft des Cache der Dispatcher-Veröffentlichungs-Farm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
+* [Die `statfileslevel`-Eigenschaft des Cache der Dispatcher-Veröffentlichungs-Farm ist >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-statfileslevel-property-should-be--2)
 
-* [Die `gracePeriod` der Dispatcher-Veröffentlichungsfarm muss >= 2 sein](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
+* [Die `gracePeriod` der Dispatcher-Veröffentlichungsfarm ist >= 2](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-graceperiod-property-should-be--2)
 
-* [Jede Dispatcher-Farm muss einen eindeutigen Namen haben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
+* [Jede Dispatcher-Farm hat einen eindeutigen Namen](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---each-dispatcher-farm-should-have-a-unique-name)
 
-* [Die `ignoreUrlParams` Regeln für den Cache der Dispatcher-Veröffentlichungs-Farm sollten auf eine auf die Zulassungsliste setze Weise konfiguriert werden](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
+* [Die `ignoreUrlParams` Regeln für den Cache der Dispatcher-Veröffentlichungs-Farm werden auf eine auf die Zulassungsliste setze Weise konfiguriert](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-cache-should-have-its-ignoreurlparams-rules-configured-in-an-allow-list-manner)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Selektoren auf auf die Zulassungsliste setze Weise angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
+* [Die Filter der Dispatcher-Veröffentlichungs-Farm geben die zulässigen Sling-Selektoren auf auf die Zulassungsliste setze Weise an](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-selectors-in-an-allow-list-manner)
 
-* [Die Filter der Dispatcher-Veröffentlichungs-Farm sollten die zulässigen Sling-Suffix-Muster auf auf die Zulassungsliste setze Weise angeben](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
+* [Die Filter der Dispatcher-Veröffentlichungs-Farm geben die zulässigen Sling-Suffix-Muster als Zulassungsliste an](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-dispatcher-publish-farm-filters-should-specify-the-allowed-sling-suffix-patterns-in-an-allow-list-manner)
 
 * [Verwenden Sie die Anweisung „Require all granted“ nicht in einem VirtualHost Directory-Abschnitt mit einem Stammverzeichnis-Pfad](https://github.com/adobe/aem-dispatcher-optimizer-tool/blob/main/docs/Rules.md#dot---the-require-all-granted-directive-should-not-be-used-in-a-virtualhost-directory-section-with-a-root-directory-path)
