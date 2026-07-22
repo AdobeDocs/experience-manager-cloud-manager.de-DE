@@ -4,20 +4,13 @@ description: Erfahren Sie, wie Sie jetzt Service Pack-Aktualisierungen für Entw
 hide: true
 exl-id: 996a8eee-843f-45a6-8f7a-31ea405c2b32
 TQID: https://experienceleague.adobe.com/jdKXZuiGX-MZMKrsWCM6BzZ2hGfZLnvwMh2XTstMmZs
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 8964aad406d3e7fc5b911b98f928ad0427511230
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: b4846046c6c410642d3e23f2cc2c002a6d53b3b7
 workflow-type: tm+mt
-source-wordcount: 468
+source-wordcount: 455
 ht-degree: 2%
 
 ---
@@ -28,7 +21,7 @@ Erfahren Sie, wie Sie über die Benutzeroberfläche von Cloud Manager Service Pa
 
 >[!NOTE]
 >
->Diese Funktion ist nur für [das private Beta-Programm](/help/release-notes/current.md#beta-program) verfügbar.
+>Diese Funktion ist nur im [privaten Beta-Programm) ](/help/release-notes/current.md#beta-program).
 
 ## Überblick {#service-pack-updates-overview}
 
@@ -71,7 +64,7 @@ Nach Initiierung des Updates können Sie den Fortschritt auf der Aktivitätsseit
 **So verfolgen Sie die Aktualisierung des Service Packs:**
 
 1. Navigieren Sie vom Cloud Manager-Dashboard zur Aktivitätsseite .
-1. Suchen Sie nach dem Eintrag Service Pack-Installation .
+1. Suchen Sie den Eintrag Service Pack-Installation .
 
    ![Service Pack-Installationen](/help/using/assets/service-pack-installation.png)
 
@@ -95,13 +88,13 @@ Nach Abschluss der Installation ist Ihre Genehmigung - oder Ablehnung - erforder
 
    ![Die Aktualisierung des Service Packs ablehnen oder genehmigen](/help/using/assets/service-pack-reject-approve.png)
 
-1. Führen Sie eine der folgenden Aktionen aus:
+1. Führen Sie einen der folgenden Schritte aus:
 
    * Um die Aktualisierung abzuschließen, klicken Sie auf **Genehmigen**.
 
    ![Genehmigung des Service Packs](/help/using/assets/service-pack-approve.png)
 
    * Um die Aktualisierung abzubrechen, klicken Sie auf **Ablehnen**.
-Die Installation des Service Packs wird abgebrochen, und es werden keine Änderungen angewendet.
+     Die Installation des Service Packs wird abgebrochen, und es werden keine Änderungen angewendet.
 
    ![Ablehnung des Service Packs](/help/using/assets/service-pack-reject.png)
