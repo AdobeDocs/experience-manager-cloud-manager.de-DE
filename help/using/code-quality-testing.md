@@ -3,28 +3,18 @@ title: Testen der Code-Qualität
 description: Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
 exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 TQID: https://experienceleague.adobe.com/gAO8BdTx9-Sq8evIuI3hIaHIUixk-IulQagCI-Jssrc
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-  - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754bid: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 7cd0317c081cdfdefb61b1c953fca179cd25eb1a
 workflow-type: tm+mt
-source-wordcount: 2911
-ht-degree: 97%
+source-wordcount: 2880
+ht-degree: 82%
 
 ---
 
-# Testen der Code-Qualität {#code-quality-testing}
+# Code-Qualitätstests {#code-quality-testing}
 
 Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
 
@@ -45,14 +35,14 @@ Die Pipeline muss drei Akzeptanztests bestehen:
 Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test identifizierte Probleme.
 
 * **Kritisch**: Probleme, die zu einem sofortigen Pipeline-Fehler führen.
-* **Wichtig**: Probleme, durch die die Pipeline angehalten wird. Bereitstellungs-Manager, Projekt-Manager oder Geschäftsinhaber bzw. Geschäftsinhaberinnen können die Probleme übergehen. Ist dies der Fall, wird die Pipeline wie vorgesehen fortgesetzt. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird. Das Übergehen wichtiger Fehler unterliegt einem [Timeout](/help/using/code-deployment.md#timeouts).
+* **Wichtig**: Probleme, durch die die Pipeline angehalten wird. Ein Bereitstellungs-Lead, Projekt-Lead oder Geschäftsinhaber kann die Probleme außer Kraft setzen. Ist dies der Fall, wird die Pipeline wie vorgesehen fortgesetzt. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird. Überschreibungen wichtiger Fehler unterliegen einem &quot;[&quot; ](/help/using/code-deployment.md#timeouts).
 * **Info**: Probleme, die ausschließlich zu Informationszwecken angegeben werden und keine Auswirkungen auf die Pipeline-Ausführung haben.
 
 >[!NOTE]
 >
 >In einer Pipeline nur für Code-Qualität können Fehler der Kategorie „Wichtig“ des Code-Qualitätstests nicht überschrieben werden, da dieser Test der letzte Schritt in der Pipeline ist.
 
-## Testen der Code-Qualität {#code-quality-testing-step}
+## Code-Qualitätstests {#code-quality-testing-step}
 
 Dieser Testschritt bewertet die Qualität des Anwendungs-Codes. Dies ist der Hauptzweck einer reinen Code-Qualitäts-Pipeline. Der Testschritt wird unmittelbar nach dem Build-Schritt in allen produktionsfremden und Produktions-Pipelines ausgeführt. Weitere Informationen finden Sie unter [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
@@ -68,7 +58,7 @@ Sie können die aktuelle vollständige Liste von Regeln [über diesen Link](/hel
 >
 >Ab Donnerstag, 13. Februar 2025 (Cloud Manager 2025.2.0), verwendet Cloud Manager Code Quality eine aktualisierte Version von SonarQube 9.9 und eine aktualisierte Liste von Regeln, die Sie [hier herunterladen](/help/assets/CodeQuality-rules-latest-AMS-2024-12-0.xlsx) können.
 
-Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie in dieser Tabelle zusammengefasst.
+Die Ergebnisse der Code-Qualitätstests werden als Bewertung bereitgestellt, wie in der folgenden Tabelle zusammengefasst:
 
 | Name | Definition | Kategorie | Fehlerschwellenwert |
 | --- | --- | --- | --- |
@@ -83,7 +73,7 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 
 >[!NOTE]
 >
->Weitere Informationen finden Sie in den [Metrikdefinitionen von SonarQube](https://docs.sonarsource.com/sonarqube-server/latest/user-guide/code-metrics/metrics-definition/).
+>Weitere Informationen finden Sie in den [Metrikdefinitionen von SonarQube](https://docs.sonarsource.com/sonarqube-server/user-guide/code-metrics/metrics-definition).
 
 >[!NOTE]
 >
@@ -91,9 +81,9 @@ Die Ergebnisse des Code-Qualitätstests werden als Bewertung bereitgestellt, wie
 
 ### Umgang mit falsch positiven Treffern {#dealing-with-false-positives}
 
-Das Verfahren zur Qualitätsprüfung ist nicht perfekt. Mitunter werden fälschlicherweise Probleme identifiziert, die eigentlich nicht problematisch sind. Dieses Szenario ist als falsch positiv bekannt.
+Der Prozess zur Qualitätsprüfung ist nicht perfekt und kennzeichnet fälschlicherweise Probleme, die nicht problematisch sind. Dieses Szenario ist als falsch positiv bekannt.
 
-In diesen Fällen kann der Quell-Code mit der standardmäßigen `@SuppressWarnings`-Java-Anmerkung kommentiert werden. Dabei wird die Regel-ID als Anmerkungsattribut angegeben. Ein häufiges Problem besteht etwa darin, dass die SonarQube-Regel zur Erkennung hartcodierter Kennwörter in Bezug auf die Identifizierung eines hartcodierten Kennworts „aggressiv“ sein kann.
+In diesen Fällen kann der Quell-Code mit der standardmäßigen `@SuppressWarnings`-Java-Anmerkung kommentiert werden. Dabei wird die Regel-ID als Anmerkungsattribut angegeben. Ein häufiges Problem besteht beispielsweise darin, dass die SonarQube-Regel zur Erkennung hartcodierter Kennwörter zu empfindlich darauf reagiert, wie ein hartcodiertes Kennwort erkannt wird.
 
 Der folgende Code ist in einem AEM-Projekt, das eine Verbindung zu einem externen Service herstellen soll, relativ häufig.
 
@@ -110,7 +100,7 @@ SonarQube weist dann auf eine Schwachstelle der Kategorie „Blocker“ hin. Nac
 private static final String PROP_SERVICE_PASSWORD = "password";
 ```
 
-Wenn der Code allerdings tatsächlich wie folgt lautete:
+Wenn der Code jedoch der folgende war:
 
 ```java
 @Property(label = "Service Password", value = "mysecretpassword")
@@ -129,7 +119,7 @@ Dann bestünde die richtige Lösung darin, das hartcodierte Kennwort zu entferne
 
 Dieselben Konsistenzprüfungen können jederzeit über die Web-Konsole oder das Vorgangs-Dashboard ausgeführt werden.
 
-Wenn eine der Instanzen einen Fehler bei einer bestimmten Konsistenzprüfung meldet, schlägt die Konsistenzprüfung für die gesamte Umgebung fehl. Wie Code-Qualitäts- und Leistungstests sind diese Konsistenzprüfungen in Kategorien unterteilt und die zugehörigen Berichte werden über das dreistufige Gating-System erstellt. Der einzige Unterschied besteht darin, dass bei Sicherheitstests keine Schwellenwerte vorhanden sind. Alle Konsistenzprüfungen werden entweder bestanden oder schlagen fehl.
+Wenn eine der Instanzen einen Fehler bei einer bestimmten Konsistenzprüfung meldet, schlägt diese Konsistenzprüfung für die gesamte Umgebung fehl. Wie Code-Qualitäts- und Leistungstests sind diese Konsistenzprüfungen in Kategorien unterteilt und die zugehörigen Berichte werden über das dreistufige Gating-System erstellt. Der einzige Unterschied besteht darin, dass es keinen Schwellenwert für Sicherheitstests gibt. Alle Konsistenzprüfungen werden entweder bestanden oder schlagen fehl.
 
 In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 
@@ -159,13 +149,13 @@ In der folgenden Tabelle sind die Konsistenzprüfungen aufgeführt.
 
 ### AEM Sites {#aem-sites}
 
-Cloud Manager führt Leistungstests für AEM Sites-Programme aus. Der Leistungstest wird etwa 30 Minuten lang ausgeführt, indem durch virtuelle Benutzer (Container) der Zugriff tatsächlicher Benutzer auf Seiten in der Staging-Umgebung und Traffic simuliert wird. Diese Seiten werden mit einem Crawler gefunden.
+Cloud Manager führt Leistungstests für AEM Sites-Programme aus. Der Leistungstest wird 30 Minuten lang ausgeführt, indem virtuelle Benutzer (Container) erstellt werden, die den Zugriff tatsächlicher Benutzer auf Seiten in Staging-Umgebungen simulieren, um Traffic zu simulieren. Diese Seiten werden mit einem Crawler gefunden.
 
 #### Virtuelle Benutzende {#virtual-users}
 
-Cloud Manager generiert virtuelle Benutzende oder Container basierend auf KPIs (Antwortzeit und Seitenansichten/Min.), die von der Rolle **Geschäftsinhaber** festgelegt wurden. Diese KPIs werden beim [Erstellen oder Bearbeiten des Programms](/help/getting-started/program-setup.md) festgelegt.
+Cloud Manager erstellt virtuelle Benutzer oder Container basierend auf KPIs (Antwortzeit und Seitenansichten/Min.), die von der Rolle **Geschäftsinhaber“ festgelegt**. Diese KPIs werden beim [Erstellen oder Bearbeiten des Programms](/help/getting-started/program-setup.md) festgelegt.
 
-Je nach definierten KPIs werden bis zu 10 Container generiert, die die tatsächlichen Benutzenden simulieren. Die für Tests ausgewählten Seiten werden aufgeteilt und jedem virtuellen Benutzer zugewiesen.
+Je nach definierten KPIs werden bis zu zehn Container erstellt, die die tatsächlichen Benutzer simulieren. Die für Tests ausgewählten Seiten werden aufgeteilt und jedem virtuellen Benutzer zugewiesen.
 
 #### Crawler {#crawler}
 
@@ -173,7 +163,7 @@ Vor dem Beginn des 30-minütigen Testzeitraums durchsucht Cloud Manager die Stag
 
 * Dieser Crawling-Vorgang ist standardmäßig auf maximal 5.000 Seiten beschränkt.
 * Die maximale Anzahl der zu testenden Seiten kann überschrieben werden, indem Sie die [Pipeline-Variable](/help/getting-started/build-environment.md#pipeline-variables) festlegen`CM_PERF_TEST_CRAWLER_MAX_PAGES`.
-   * Zulässige Werte sind `2000`–`7000`.
+  * Zulässige Werte sind `2000`–`7000`.
 * Für Anfragen des Crawlers gilt ein fester Timeout von 10 Sekunden.
 
 #### Seitensätze zum Testen {#page-sets}
@@ -182,9 +172,9 @@ Drei Seitensätze wählen die Seiten aus. Cloud Manager verwendet die Zugriffspr
 
 * **Beliebte Live-Seiten**: Stellt sicher, dass die von Live-Kundinnen und -Kunden bevorzugt aufgerufenen Seiten getestet werden. Cloud Manager liest das Zugriffsprotokoll und ermittelt die 25 am häufigsten aufgerufenen Seiten von Live-Kundinnen und -Kunden, um eine Liste von `Popular Live Pages` zu generieren. Die Schnittmenge dieser Seiten, die auch in der Staging-Umgebung vorhanden sind, wird dann in der Staging-Umgebung durchsucht.
 
-* **Andere Live-Seiten**: Stellt sicher, dass Seiten, die nicht zu den 25 beliebtesten Live-Seiten gehören und vielleicht nicht besonders beliebt sind, aber getestet werden sollten, tatsächlich getestet werden. Ähnlich wie „Beliebte Live-Seiten“ werden sie aus dem Zugriffsprotokoll extrahiert und müssen auch in der Staging-Umgebung vorhanden sein.
+* **Andere Live-Seiten** - Stellt sicher, dass Seiten, die nicht zu den 25 beliebtesten Live-Seiten gehören und nicht besonders beliebt sind, aber unbedingt getestet werden sollten, getestet werden. Ähnlich wie „Beliebte Live-Seiten“ werden sie aus dem Zugriffsprotokoll extrahiert und müssen auch in der Staging-Umgebung vorhanden sein.
 
-* **Neue Seiten**: Testet neue Seiten, die möglicherweise nur im Staging bereitgestellt wurden und noch nicht zur Produktion gehören, aber getestet werden müssen.
+* **Neue Seiten** - Testet neue Seiten, die nur im Staging bereitgestellt wurden und noch nicht zur Produktion gehören, aber getestet werden müssen.
 
 ##### Verteilung des Traffics auf ausgewählte Seitensätze {#distribution-of-traffic}
 
@@ -240,7 +230,7 @@ Um diese Variablen mithilfe der Cloud Manager-Befehlszeilenschnittstelle festzu
 $ aio cloudmanager:set-pipeline-variables <pipeline id> --variable CM_PERF_TEST_BASIC_USERNAME <username> --secret CM_PERF_TEST_BASIC_PASSWORD <password>
 ```
 
-Informationen zur Verwendung der API finden Sie in der API-Dokumentation [Patchen von Benutzer-Pipeline-Variablen](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api/#operation/patchPipelineVariables).
+Informationen zur Verwendung der API finden Sie in der API[Dokumentation unter Patchen von Benutzer](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api#operation/patchPipelineVariables)Pipeline-Variablen .
 
 ### AEM Assets {#aem-assets}
 
@@ -250,11 +240,11 @@ Cloud Manager führt Leistungstests für AEM Assets-Programme durch, indem Asset
 
 Bei Assets-Leistungstests erstellt Ihr Customer Success Engineer während des Onboardings der Autorin oder des Autors in der Staging-Umgebung einen `cloudmanager`-Benutzer bzw. eine -Benutzerin (und ein entsprechendes Kennwort). Für die Leistungstestschritte müssen ein Benutzer bzw. eine Benutzerin namens `cloudmanager` und das zugehörige Kennwort vom CSE eingerichtet werden.
 
-Diese Methode sollte in der Autoreninstanz bleiben und die Berechtigungen sollten nicht geändert werden. Das Ändern oder Entfernen dieser Methode kann dazu führen, dass Assets-Leistungstests fehlschlagen.
+Diese Methode verbleibt in der Autoreninstanz und die Berechtigungen bleiben unverändert. Das Ändern oder Entfernen dieser Methode kann dazu führen, dass Assets-Leistungstests fehlschlagen.
 
 #### Bilder und Assets zum Testen {#assets-for-testing}
 
-Kundinnen und Kunden können ihre eigenen Assets zum Testen hochladen. Dieses Verfahren kann bei der **Pipeline-Einrichtung** oder auf dem Bildschirm **Bearbeiten** festgelegt werden. Dabei werden typische Bildformate wie JPEG, PNG, GIF und BMP sowie Photoshop-, Illustrator- und Postscript-Dateien unterstützt.
+Kundinnen und Kunden können ihre eigenen Assets zum Testen hochladen. Dieses Verfahren kann bei der **Pipeline-Einrichtung** oder auf dem Bildschirm **Bearbeiten** festgelegt werden. Gängige Bildformate wie JPEG, PNG, GIF, BMP und Adobe werden unterstützt.
 
 Wenn keine Bilder hochgeladen werden, verwendet Cloud Manager zum Testen ein Standardbild und PDF-Dokumente.
 
@@ -262,15 +252,15 @@ Wenn keine Bilder hochgeladen werden, verwendet Cloud Manager zum Testen ein Sta
 
 Die Verteilung der Anzahl von Assets jedes Typs, die pro Minute hochgeladen werden, wird bei der **Pipeline-Einrichtung** oder auf dem Bildschirm **Bearbeiten** festgelegt.
 
-Wenn beispielsweise eine Aufspaltung von 70/30 verwendet wird und pro Minute 10 Assets hochgeladen werden, werden pro Minute 7 Bilder und 3 Dokumente hochgeladen.
+Bei einer Aufteilung von 70/30 und 10 Assets pro Minute werden beispielsweise 7 Bilder und 3 Dokumente hochgeladen.
 
 #### Test und Bericht {#testing-and-reporting}
 
-Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei den Benutzernamen und das Kennwort, die vom CSE festgelegt wurden. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [Open-Source-Bibliothek](https://github.com/adobe/toughday2) geschrieben. Während des 30-minütigen Tests werden sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
+Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei den Benutzernamen und das Kennwort, die vom CSE eingerichtet wurden. Die Assets werden dann unter Verwendung einer Open-Source-Bibliothek hochgeladen. Die vom Assets-Testschritt ausgeführten Tests werden mit einer [Open-Source-Bibliothek](https://github.com/adobe/toughday2) geschrieben. Während des 30-minütigen Tests werden sowohl die Verarbeitungszeit für jedes Asset als auch verschiedene Metriken auf Systemebene gemessen. Mit dieser Funktion können sowohl Bilder als auch PDF-Dokumente hochgeladen werden.
 
 >[!TIP]
 >
->Weitere Informationen finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programmeinrichtung](/help/getting-started/program-setup.md).
+>Weitere Informationen finden Sie unter [ von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programm einrichten](/help/getting-started/program-setup.md).
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
@@ -289,7 +279,7 @@ Diese Funktion ist für die folgenden Metriken verfügbar.
 * **Festplatten-E/A-Wartezeit**: Ein Diagramm zur Festplatten-E/A-Wartezeit während des Testzeitraums
 
 * **Fehlerrate für die Seite**: Ein Diagramm zu den Seitenfehlern pro Minute während des Testzeitraums
-   * Eine CSV-Datei mit den Seiten, die während des Tests einen Fehler verursacht haben.
+  * Eine CSV-Datei mit den Seiten, die während des Tests einen Fehler verursacht haben.
 
 * **Festplatten-Bandbreitenauslastung**: Ein Diagramm zur Bandbreitenauslastung der Festplatte während des Testzeitraums
 
@@ -298,23 +288,23 @@ Diese Funktion ist für die folgenden Metriken verfügbar.
 * **Spitzenreaktionszeit**: Ein Diagramm zur Spitzenreaktionszeit pro Minute während des Testzeitraums
 
 * **95. Perzentil der Reaktionszeit**: Ein Diagramm zum 95. Perzentil der Reaktionszeit pro Minute während des Testzeitraums
-   * Eine CSV-Datei mit den Seiten, für die das 95. Perzentil der Reaktionszeit die definierte KPI überschritten hat
+  * Eine CSV-Datei mit den Seiten, für die das 95. Perzentil der Reaktionszeit die definierte KPI überschritten hat
 
 ## Optimierung der Inhaltspaketüberprüfung {#content-package-scanning-optimization}
 
 Im Rahmen des Qualitätsanalyseprozesses führt Cloud Manager eine Analyse der vom Maven-Build erzeugten Inhaltspakete durch. Cloud Manager bietet Optimierungen zur Beschleunigung dieses Prozesses an, die wirksam sind, wenn bestimmte Verpackungseinschränkungen beachtet werden.
 
-Die wichtigste Optimierung ist für Projekte, die ein einzelnes „all“-Paket ausgeben, das andere Inhaltspakete enthält, die durch den Build erzeugt und als übersprungen markiert wurden. Wenn Cloud Manager dieses Szenario erkennt, wird nicht das gesamte Paket entpackt, sondern die einzelnen Inhaltspakete werden direkt gescannt und auf der Grundlage von Abhängigkeiten sortiert. Betrachten Sie zum Beispiel die folgende Build-Ausgabe.
+Die Schlüsseloptimierung ist für Projekte bestimmt, die ein einzelnes „all“-Paket ausgeben. Dieses Paket enthält andere vom Build erzeugte Inhaltspakete, die als übersprungen markiert sind. Wenn Cloud Manager dieses Szenario erkennt, wird nicht das gesamte Paket entpackt, sondern die einzelnen Inhaltspakete werden direkt gescannt und auf der Grundlage von Abhängigkeiten sortiert. Betrachten Sie zum Beispiel die folgende Build-Ausgabe.
 
 * `all/myco-all-1.0.0-SNAPSHOT.zip` (Inhaltspaket)
 * `ui.apps/myco-ui.apps-1.0.0-SNAPSHOT.zip` (übersprungenes Inhaltspaket)
 * `ui.content/myco-ui.content-1.0.0-SNAPSHOT.zip` (übersprungenes Inhaltspaket)
 
-Wenn die beiden übersprungenen Inhaltspakete die einzigen Elemente innerhalb von `myco-all-1.0.0-SNAPSHOT.zip` sind, werden die beiden eingebetteten Pakete anstelle des gesamten Inhaltspakets („all“) gescannt.
+Wenn die beiden übersprungenen Inhaltspakete die einzigen Elemente innerhalb von `myco-all-1.0.0-SNAPSHOT.zip` sind, werden die beiden eingebetteten Pakete anstelle des gesamten Inhaltspakets (all) gescannt.
 
-Bei Projekten, die Dutzende von eingebetteten Paketen produzieren, kann diese Optimierung nachweislich bis zu 10 Minuten pro Pipeline-Ausführung einsparen.
+Bei Projekten, die Dutzende von eingebetteten Paketen produzieren, spart diese Optimierung nachweislich mehr als 10 Minuten pro Pipeline-Ausführung.
 
-Ein Sonderfall kann eintreten, wenn das Inhaltspaket „all“ eine Kombination aus übersprungenen Inhaltspaketen und OSGi-Bundles enthält. Wenn `myco-all-1.0.0-SNAPSHOT.zip` beispielsweise die beiden zuvor erwähnten eingebetteten Pakete und ein oder mehrere OSGi-Bundles enthält, wird ein neues, minimales Inhaltspaket nur mit den OSGi-Bundles erstellt. Dieses Paket hat immer die Bezeichnung `cloudmanager-synthetic-jar-package` und die darin enthaltenen Bundles werden in `/apps/cloudmanager-synthetic-installer/install` abgelegt.
+Ein Sonderfall kann eintreten, wenn das Inhaltspaket „all“ eine Kombination aus übersprungenen Inhaltspaketen und OSGi-Bundles enthält. Wenn `myco-all-1.0.0-SNAPSHOT.zip` beispielsweise die beiden eingebetteten Pakete und OSGi-Bundles enthält, wird ein neues, minimales Inhaltspaket nur mit den OSGi-Bundles erstellt. Dieses Paket hat immer die Bezeichnung `cloudmanager-synthetic-jar-package` und die darin enthaltenen Bundles werden in `/apps/cloudmanager-synthetic-installer/install` abgelegt.
 
 >[!NOTE]
 >
