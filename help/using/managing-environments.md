@@ -12,10 +12,10 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 50eb58593d7f78492fd384c99c3727c5f731c989
+source-git-commit: 0dde660205ad28bc5924a5cc14404c48a0533ceb
 workflow-type: tm+mt
-source-wordcount: 275
-ht-degree: 100%
+source-wordcount: 261
+ht-degree: 57%
 
 ---
 
@@ -35,11 +35,11 @@ Jede Umgebung wird mit ihrem zugehörigen Status angezeigt.
 
 Auf der Kachel **Umgebungen** werden die in Ihrem Programm bereitgestellten Produktions- und Staging-Umgebungen zusammen mit dem Status angezeigt.
 
-Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung, in der folgenden Prioritätsreihenfolge.
+Der Status ist der aggregierte Leistungsstatus über alle Umgebungsknoten in der richtigen Reihenfolge.
 
 * Grün: Alle Knoten werden ausgeführt
-* Rot: Ein oder mehrere Knoten sind angehalten.
-* Blau: Ein oder mehrere Knoten sind im Entstehen.
+* Rot: Ein oder mehrere Knoten wurden angehalten.
+* Blau: Ein oder mehrere Knoten werden gestartet.
 * Gelb: Ein oder mehrere Knoten verfügen über keinen Leistungsstatus.
 
 ![Kachel „Umgebungen“](/help/assets/Environments-card-new.png)
@@ -48,7 +48,7 @@ Der Status ist der aggregierte Leistungsstatus über alle Knoten in der Umgebung
 
 Klicken Sie auf der Kachel **Umgebungen** auf die Zeile einer beliebigen Umgebung, um den Bildschirm **Umgebungen** anzuzeigen.
 
-Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ihrem Programm an. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle der Knoten in der Umgebung sowie die Größe der CPU, den Speicher, die Region und den Status.
+Der **Umgebungen** zeigt alle Produktions- und Staging-Umgebungen in Ihrem Programm an. Der Name der Umgebung wird über jeder Karte angezeigt. Die Karte enthält eine Tabelle mit den Knoten in der Umgebung sowie die Größe von CPU, Speicher, Region und Status.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 * Grün: Wird ausgeführt
 * Rot: Angehalten
-* Blau: Anstehend
+* Blau: Start
 * Gelb: Nicht verfügbar
 
 ![Registerkarte „Umgebungen“](/help/assets/Environments-tab.png)
@@ -67,11 +67,11 @@ Der Bildschirm **Umgebungen** zeigt jede Produktions- und Staging-Umgebung in Ih
 
 >[!NOTE]
 >
->Fordern Sie Ihre Umgebungsprotokolle bei Ihrem Customer Success Engineer an.
+>Fordern Sie Ihre Umgebungsprotokolle über Ihren Customer Success-Mitarbeiter an.
 
 ## Video-Tutorial {#video-tutorial}
 
-Dieses Video bietet einen Überblick über Cloud Manager-Umgebungen, die aus AEM-Autoren-, -Veröffentlichungs- und -Dispatcher-Instanzen bestehen.
+In diesem Video erhalten Sie eine Einführung in Cloud Manager-Umgebungen, die aus Authoring-, Publishing- und Dispatcher-Instanzen von AEM bestehen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/34566?captions=ger)
 

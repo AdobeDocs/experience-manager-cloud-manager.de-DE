@@ -15,9 +15,9 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 8964aad406d3e7fc5b911b98f928ad0427511230
+source-git-commit: b4846046c6c410642d3e23f2cc2c002a6d53b3b7
 workflow-type: tm+mt
-source-wordcount: 468
+source-wordcount: 455
 ht-degree: 2%
 
 ---
@@ -28,7 +28,7 @@ Erfahren Sie, wie Sie über die Benutzeroberfläche von Cloud Manager Service Pa
 
 >[!NOTE]
 >
->Diese Funktion ist nur für [das private Beta-Programm](/help/release-notes/current.md#beta-program) verfügbar.
+>Diese Funktion ist nur im [privaten Beta-Programm) &#x200B;](/help/release-notes/current.md#beta-program).
 
 ## Überblick {#service-pack-updates-overview}
 
@@ -71,7 +71,7 @@ Nach Initiierung des Updates können Sie den Fortschritt auf der Aktivitätsseit
 **So verfolgen Sie die Aktualisierung des Service Packs:**
 
 1. Navigieren Sie vom Cloud Manager-Dashboard zur Aktivitätsseite .
-1. Suchen Sie nach dem Eintrag Service Pack-Installation .
+1. Suchen Sie den Eintrag Service Pack-Installation .
 
    ![Service Pack-Installationen](/help/using/assets/service-pack-installation.png)
 
@@ -95,13 +95,13 @@ Nach Abschluss der Installation ist Ihre Genehmigung - oder Ablehnung - erforder
 
    ![Die Aktualisierung des Service Packs ablehnen oder genehmigen](/help/using/assets/service-pack-reject-approve.png)
 
-1. Führen Sie eine der folgenden Aktionen aus:
+1. Führen Sie einen der folgenden Schritte aus:
 
    * Um die Aktualisierung abzuschließen, klicken Sie auf **Genehmigen**.
 
    ![Genehmigung des Service Packs](/help/using/assets/service-pack-approve.png)
 
    * Um die Aktualisierung abzubrechen, klicken Sie auf **Ablehnen**.
-Die Installation des Service Packs wird abgebrochen, und es werden keine Änderungen angewendet.
+     Die Installation des Service Packs wird abgebrochen, und es werden keine Änderungen angewendet.
 
    ![Ablehnung des Service Packs](/help/using/assets/service-pack-reject.png)

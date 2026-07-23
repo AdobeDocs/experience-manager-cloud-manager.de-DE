@@ -8,29 +8,29 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
+source-git-commit: 38a0aa1ab543c976c8e7526ac2ba78d06c9b06d6
 workflow-type: tm+mt
-source-wordcount: 2080
-ht-degree: 22%
+source-wordcount: 2070
+ht-degree: 20%
 
 ---
 
 # Hinzufügen einer produktionsfremden Pipeline {#configuring-non-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
+Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
 ## Überblick {#overview}
 
 Über die Kachel **Pipelines** in [!UICONTROL Cloud Manager] kann der **Bereitstellungs-Manager** zwei verschiedene Arten von Pipelines erstellen.
 
-* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code vollständig in die Produktion zu übernehmen.
+* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code in der Produktion bereitzustellen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
 Dieses Dokument konzentriert sich auf produktionsfremde Pipelines. Weitere Informationen zur Konfiguration von Produktions-Pipelines finden Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md).
 
 Es gibt zwei Arten von produktionsfremden Pipelines:
 
-* **Code-Qualitäts-Pipelines**: Diese Pipelines führen Code-Qualitätsprüfungen für den Code in einer Git-Verzweigung durch und die Build- und Code-Qualitätsschritte aus.
+* **Code-Qualitäts-Pipelines**: Diese Pipelines führen Code-Qualitätsprüfungen für den Code in einer Git-Verzweigung durch und sie führen die Build- und Code-Qualitätsschritte aus.
 * **Bereitstellungs-Pipelines**: Diese Pipelines führen nicht nur wie die Code-Qualitäts-Pipelines die Build- und Code-Qualitätsschritte aus, sondern stellen den Code auch in einer produktionsfremden Umgebung bereit.
 
 >[!NOTE]
@@ -127,7 +127,7 @@ Wenn bereits eine Full-Stack-Pipeline vorhanden ist, zeigt Cloud Manager einen H
 
 1. Klicken Sie auf **Speichern**.
 
-## Über die Verwendung von Smart Build in Ihrer produktionsfremden Pipeline{#about-smart-build}
+## Verwenden von Smart Build in Ihrer produktionsfremden Pipeline{#about-smart-build}
 
 **Smart Build** in Cloud Manager ist eine optimierte Build-Strategie für produktionsfremde Pipelines. Smartes Erstellen reduziert Build-Zeiten, indem Module zwischengespeichert und nur die Module neu erstellt werden, die seit der letzten erfolgreichen Ausführung geändert wurden. Unveränderte Module werden aus dem Cache wiederverwendet, während nur geänderte Module und ihre Abhängigkeiten neu erstellt werden, was die Effizienz für Workflows für die iterative Entwicklung verbessert.
 
@@ -160,7 +160,7 @@ Der Leistungsgewinn durch die Verwendung von Smart Build hängt von mehreren Fak
 * Häufigkeit und Umfang von Code-Änderungen.
 * Die Verteilung von Abhängigkeiten über Module hinweg.
 
-Im Allgemeinen können Projekte mit vielen unabhängigen Modulen die größte Verbesserung verzeichnen.
+Die größte Verbesserung können Projekte mit vielen unabhängigen Modulen verzeichnen.
 
 ### Opt-out aus dem Cache pro Modul{#smart-build-cache-optout}
 
@@ -187,13 +187,13 @@ Diese Syntax zwingt das Modul bei jeder Pipeline-Ausführung neu zu erstellen, w
 Beachten Sie bei der Verwendung von Smart Build Folgendes:
 
 * Smarter Build beruht auf Maven-Abhängigkeitsanalyse.
-* Bei Änderungen außerhalb des Abhängigkeitsdiagramms werden Trigger-Neuaufbauten möglicherweise nicht unterstützt.
-* Einige Plug-ins sind möglicherweise nicht vollständig mit der Zwischenspeicherung kompatibel.
+* Bei Änderungen außerhalb des Abhängigkeitsdiagramms werden Trigger-Neuaufbauten nicht unterstützt.
+* Einige Plug-ins sind nicht vollständig mit der Zwischenspeicherung kompatibel.
 * Sie können jederzeit wieder zu **Vollständiger Build** wechseln, indem Sie die produktionsfremde Pipeline bearbeiten.
 
 Wenn Sie auf unerwartetes Build-Verhalten stoßen, sollten Sie das Caching für bestimmte Module deaktivieren oder Ihre Build-Strategie vorübergehend auf **Vollständiger Build** umstellen.
 
-### Fehlerbehebung bei Problemen mit Smart Build{#smart-build-troubleshoot}
+### Beheben von Problemen mit der intelligenten Erstellung{#smart-build-troubleshoot}
 
 | Problem | Lösungsvorschläge |
 | --- | --- |
@@ -201,7 +201,7 @@ Wenn Sie auf unerwartetes Build-Verhalten stoßen, sollten Sie das Caching für 
 | Keine Leistungsverbesserung | ・ Stellen Sie sicher, dass mehrere Durchgänge stattgefunden haben (Aufwärmen des Cache).<br>・ Prüfen Sie, ob die meisten Module häufig wechseln. |
 | Unerwartete Artefakte oder fehlende Änderungen | ・ Überprüfen, ob Änderungen außerhalb des Maven-Abhängigkeits-Trackings liegen<br>・ Verwenden Sie **Vollständiger Build** zur Überprüfung. |
 
-Siehe [Hinzufügen einer produktionsfremden Pipeline](#add-non-production-pipeline) Aktivieren von Smart Build.
+Siehe [Hinzufügen einer produktionsfremden Pipeline](#add-non-production-pipeline) um die intelligente Erstellung zu aktivieren.
 
 
 

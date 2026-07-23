@@ -10,22 +10,22 @@ role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 4c73ab16ff7eab406c31a6d26cdd09360a94b3ea
+source-git-commit: b44ffa027df5c60b1e5b2b81ec0702bb60c7078c
 workflow-type: tm+mt
-source-wordcount: 2101
-ht-degree: 60%
+source-wordcount: 2085
+ht-degree: 56%
 
 ---
 
 # Hinzufügen einer Produktions-Pipeline {#configuring-production-pipelines}
 
-Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Wenn Sie sich zunächst einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager verschaffen möchten, finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md) entsprechende Informationen.
+Erfahren Sie, wie Sie mit Cloud Manager Produktions-Pipelines erstellen und konfigurieren, um Code bereitzustellen. Einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
 
 ## Überblick {#overview}
 
 Über die Kachel **Pipeline-Einstellungen** in [!UICONTROL Cloud Manager] können Sie zwei verschiedene Arten von Pipelines erstellen.
 
-* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe orchestrierter Schritte umfasst, um Quell-Code aus dem Git-Repository bis in die Produktionsumgebung zu bringen.
+* **Produktions-Pipelines**: Eine Produktions-Pipeline ist eine speziell entwickelte Pipeline, die eine Reihe aufeinander abgestimmter Schritte umfasst, um Quell-Code aus dem Git-Repository in die Produktion zu übernehmen.
 * **Produktionsfremde Pipelines**: Eine produktionsfremde Pipeline dient dazu, Code-Qualitätsprüfungen durchzuführen oder Quell-Code in einer Entwicklungsumgebung bereitzustellen.
 
 Dieses Dokument konzentriert sich auf Produktions-Pipelines. Weitere Informationen zur Konfiguration von produktionsfremden Pipelines finden Sie unter [Konfigurieren produktionsfremder Pipelines](/help/using/non-production-pipelines.md).
@@ -40,7 +40,7 @@ Die Rolle **Bereitstellungs-Manager** ist für die Einrichtung der Pipeline vera
 >
 >Die Pipeline kann erst eingerichtet werden, wenn das zugehörige Git-Repository mindestens eine Verzweigung hat und die [Programmeinrichtung](/help/getting-started/program-setup.md) abgeschlossen ist.
 
-## Hinzufügen einer Produktions-Pipeline {#adding-production-pipeline}
+## Hinzufügen einer Produktions-Pipeline {#add-a-production-pipeline}
 
 Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm eingerichtet haben und über mindestens eine Umgebung verfügen, können Sie eine Produktions-Pipeline hinzufügen.
 
@@ -62,34 +62,34 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
          * **Bereitstellungsauslöser**: Sie haben die folgenden Optionen, um die Bereitstellungsauslöser für den Start der Pipeline zu definieren.
 
-            * **Manuell**: Diese Option startet die Pipeline manuell über die Cloud Manager-Benutzeroberfläche.
-            * **Bei Git-Änderungen**: Diese Option startet die CI/CD-Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
+           * **Manuell**: Diese Option startet die Pipeline manuell über die Cloud Manager-Benutzeroberfläche.
+           * **Bei Git-Änderungen**: Diese Option startet die CI/CD-Pipeline, wenn zur konfigurierten Git-Verzweigung bestätigte Änderungen hinzugefügt werden. Mit dieser Option können Sie die Pipeline bei Bedarf immer noch manuell starten.
 
          * **Verhalten bei bedeutenden Metrikfehlern**: Bei der Einrichtung oder Bearbeitung der Pipeline kann der Bereitstellungs-Manager festlegen, wie sich die Pipeline verhält, wenn bei einem der Quality Gates ein wichtiger Fehler auftritt. Folgende Optionen sind verfügbar:
 
-            * **Jedes Mal fragen**: Dies ist die Standardeinstellung, die ein manuelles Eingreifen bei jedem bedeutenden Fehler verlangt.
-            * **Sofortiger Ausfall**: Die Pipeline wird bei einem bedeutenden Fehler abgebrochen. Damit werden Benutzende simuliert, die manuell jeden Fehler ablehnen.
-            * **Sofort fortsetzen**: Die Pipeline wird bei einem bedeutenden Fehler automatisch fortgesetzt. Damit werden Benutzende simuliert, die manuell jeden Fehler genehmigen.
+           * **Jedes Mal fragen**: Dies ist die Standardeinstellung, die ein manuelles Eingreifen bei jedem bedeutenden Fehler verlangt.
+           * **Sofortiger Ausfall**: Die Pipeline wird bei einem bedeutenden Fehler abgebrochen. Damit werden Benutzende simuliert, die manuell jeden Fehler ablehnen.
+           * **Sofort fortsetzen**: Die Pipeline wird bei einem bedeutenden Fehler automatisch fortgesetzt. Damit werden Benutzende simuliert, die manuell jeden Fehler genehmigen.
 
          ![Bereitstellungsauslöser](/help/assets/configure-pipelines/add-prod3.png)
 
          * **Bereitstellungsoptionen**: Sie können bestimmte Bereitstellungsaufgaben beschleunigen.
 
-            * **Nach Staging-Bereitstellung genehmigen**: Diese Genehmigung erfolgt nach der Bereitstellung in der Staging-Umgebung, bevor irgendwelche Tests durchgeführt werden. Andernfalls erfolgt die Genehmigung vor der Produktionsbereitstellung, die nach Abschluss aller Tests erfolgt.
+           * **Nach Staging-Bereitstellung genehmigen**: Diese Genehmigung erfolgt nach der Bereitstellung in der Staging-Umgebung, bevor irgendwelche Tests durchgeführt werden. Andernfalls erfolgt die Genehmigung vor der Produktionsbereitstellung, die nach Abschluss aller Tests erfolgt.
 
-            * **Änderungen am Load-Balancer überspringen**: Änderungen am Load-Balancer werden nicht vorgenommen.
+           * **Änderungen am Load-Balancer überspringen**: Änderungen am Load-Balancer werden nicht vorgenommen.
 
          ![Staging-Bereitstellungsoptionen](/help/assets/configure-pipelines/add-prod4.png)
 
-         * **Dispatcher-Konfiguration**: Die Rolle **Bereitstellungs-Manager** kann eine Reihe von Inhaltspfaden konfigurieren, die beim Ausführen einer Pipeline entweder invalidiert oder aus dem AEM Dispatcher-Cache gelöscht werden. Diese Cache-Aktionen werden im Rahmen der Einrichtung der Bereitstellungs-Pipeline direkt nach der Bereitstellung etwaiger Inhaltspakete durchgeführt. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Gehen Sie zur Konfiguration wie folgt vor:
+         * **Dispatcher-Konfiguration**: Die Rolle **Bereitstellungs-Manager** kann eine Reihe von Inhaltspfaden konfigurieren, die beim Ausführen einer Pipeline entweder invalidiert oder aus dem AEM Dispatcher-Cache gelöscht werden. Diese Cache-Aktionen werden als Teil des Bereitstellungs-Pipeline-Schritts ausgeführt, nachdem alle Inhaltspakete bereitgestellt wurden. Diese Einstellungen verwenden das Standardverhalten von AEM Dispatcher. Gehen Sie zur Konfiguration wie folgt vor:
 
-            1. Geben Sie unter **PATH** einen Pfad für den Inhalt an.
-            1. Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.
+           1. Geben Sie unter **PATH** einen Pfad für den Inhalt an.
+           1. Wählen Sie unter **TYPE** die Aktion aus, die mit dem Pfad durchgeführt werden soll.
 
-               * **Leeren**: Löschen des Cache-Inhalts.
-               * **Invalidieren**: Eine Cache-Invalidierung durchführen, ähnlich wie bei der Aktivierung von Inhalten von einer Autoreninstanz auf einer Veröffentlichungsinstanz.
+              * **Leeren**: Löschen des Cache-Inhalts.
+              * **Invalidieren**: Eine Cache-Invalidierung durchführen, ähnlich wie bei der Aktivierung von Inhalten von einer Autoreninstanz auf einer Veröffentlichungsinstanz.
 
-            1. Klicken Sie auf **Pfad hinzufügen**, um den angegebenen Pfad hinzuzufügen. Sie können bis zu 100 Pfade pro Umgebung hinzufügen.
+           1. Klicken Sie auf **Pfad hinzufügen**, um den angegebenen Pfad hinzuzufügen. Sie können bis zu 100 Pfade pro Umgebung hinzufügen.
 
          ![Dispatcherkonfiguration](/help/assets/configure-pipelines/dispatcher-stage.png)
 
@@ -101,20 +101,20 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
          * **Bereitstellungsoptionen**: Sie können die Parameter zur Steuerung der Produktionsbereitstellung definieren.
 
-            * **GoLive-Genehmigung verwenden**: Eine Benutzerin oder ein Benutzer mit der Rolle **Geschäftsinhaber**, **Projekt-Manager** oder **Bereitstellungs-Manager** muss eine Bereitstellung über die [!UICONTROL Cloud Manager]-Benutzeroberfläche manuell genehmigen.
-            * **Geplant**: Diese Option hält die Pipeline vor der Produktionsbereitstellung an, sodass sie geplant werden kann. Wenn diese Option ausgewählt ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und die Benutzerin oder der Benutzer wird aufgefordert, die entsprechenden Maßnahmen zu ergreifen.
-               * **`Now`**: Dieser Option sorgt dafür, dass die Bereitstellung in der Produktionsumgebung sofort erfolgt. Die Pipeline wird damit abgeschlossen.
-               * **Datum**: Diese Option ermöglicht es Benutzenden, einen Zeitpunkt festzulegen, zu dem die Bereitstellung abgeschlossen sein soll.
-               * **Ausführung stoppen**: Diese Option bricht die Bereitstellung in der Produktionsumgebung ab.
+           * **GoLive-Genehmigung verwenden**: Eine Benutzerin oder ein Benutzer mit der Rolle **Geschäftsinhaber**, **Projekt-Manager** oder **Bereitstellungs-Manager** muss eine Bereitstellung über die [!UICONTROL Cloud Manager]-Benutzeroberfläche manuell genehmigen.
+           * **Geplant**: Diese Option hält die Pipeline vor der Produktionsbereitstellung an, sodass sie geplant werden kann. Wenn diese Option ausgewählt ist, wird die Pipeline nach der Bereitstellung in der Staging-Umgebung angehalten und die Benutzerin oder der Benutzer wird aufgefordert, die entsprechenden Maßnahmen zu ergreifen.
+             * **`Now`**: Dieser Option sorgt dafür, dass die Bereitstellung in der Produktionsumgebung sofort erfolgt. Die Pipeline wird damit abgeschlossen.
+             * **Datum**: Diese Option ermöglicht es Benutzenden, einen Zeitpunkt festzulegen, zu dem die Bereitstellung abgeschlossen sein soll.
+             * **Ausführung stoppen**: Diese Option bricht die Bereitstellung in der Produktionsumgebung ab.
 
            >[!TIP]
            >
            >Weitere Informationen dazu, wie Sie einen Bereitstellungsplan festlegen oder die Pipeline sofort ausführen können, finden Sie unter [Bereitstellung von Code](/help/using/code-deployment.md).
 
-            * **CSE-Überwachung nutzen**: Bei Auswahl dieser Option wird ein Mitglied des Customer Success Engineer(CSE)-Teams eingeschaltet, um die tatsächliche Bereitstellung zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Bereitstellungs-Manager** folgende Optionen.
+           * **CSE-Überwachung nutzen**: Bei Auswahl dieser Option wird ein Mitglied des Customer Success Engineer(CSE)-Teams eingeschaltet, um die tatsächliche Bereitstellung zu starten. Wenn diese Option aktiviert ist, während eine Pipeline erstellt oder bearbeitet wird, hat die Rolle **Bereitstellungs-Manager** folgende Optionen.
 
-               * **Beliebiger CSE**: Diese Option ermöglicht es, dass jedes verfügbare Mitglied des CSE-Teams die Bereitstellung starten kann.
-               * **Mein CSE**: Diese Option sorgt dafür, dass nur das der Kundin oder dem Kunden zugewiesene Mitglied des CSE-Teams die Bereitstellung starten kann. Diese Option gilt auch für die vorgesehene CSE-Backup-Person, wenn das zugewiesene Mitglied des CSE-Teams nicht verfügbar ist.
+             * **Beliebiger CSE**: Diese Option ermöglicht es, dass jedes verfügbare Mitglied des CSE-Teams die Bereitstellung starten kann.
+             * **Mein CSE**: Diese Option sorgt dafür, dass nur das der Kundin oder dem Kunden zugewiesene Mitglied des CSE-Teams die Bereitstellung starten kann. Diese Option gilt auch für die vorgesehene CSE-Backup-Person, wenn das zugewiesene Mitglied des CSE-Teams nicht verfügbar ist.
 
            ![Optionen für die Produktionsbereitstellung](/help/assets/configure-pipelines/prod-deploymentoptions.png)
 
@@ -150,9 +150,9 @@ Sobald Sie mit der [!UICONTROL Cloud Manager]-Benutzeroberfläche Ihr Programm e
 
       * Definieren Sie eigene benutzerdefinierte Assets, indem Sie sie hochladen.
 
-         1. **FORMAT**: Wählen Sie aus, ob das benutzerdefinierte Asset eine PDF-Datei eines Bilds ist.
-         1. **DATEINAME**: Verwenden Sie die Schaltfläche „Datei-Browser“, um ein Bild auf Ihrem lokalen Computer auszuwählen.
-         1. **Testdatei hinzufügen**: Klicken Sie darauf, um das ausgewählte Asset hochzuladen.
+        1. **FORMAT** - Wählen Sie aus, ob das benutzerdefinierte Asset eine PDF oder ein Bild ist.
+        1. **DATEINAME**: Verwenden Sie die Schaltfläche „Datei-Browser“, um ein Bild auf Ihrem lokalen Computer auszuwählen.
+        1. **Testdatei hinzufügen**: Klicken Sie darauf, um das ausgewählte Asset hochzuladen.
 
       ![Assets-Testverteilung](/help/assets/configure-pipelines/add-prod6.png)
 
@@ -170,14 +170,14 @@ Eine Pipeline mit Full-Stack-Code stellt Backend- und Frontend-Code-Builds zusam
 
 1. Definieren Sie auf der Registerkarte **Quell-Code** die folgenden Optionen:
 
-   * **Repository**: Diese Option legt fest, aus welchem Git-Repository die Pipeline den Code abrufen soll.
+   * **Repository** - Definiert, aus welchem Git-Repository die Pipeline den Code abruft.
 
    >[!TIP]
    >
    >Im Dokument [Einrichten von Programmen](/help/getting-started/program-setup.md) erfahren Sie, wie Sie Repositorys in Cloud Manager hinzufügen und verwalten können.
 
-   * **Git-Verzweigung** - Definiert, aus welcher Verzweigung die Pipeline den Code abrufen soll.
-   * **Konfiguration der Web-Stufe ignorieren**: Wenn diese Option aktiviert ist, stellt die Pipeline Ihre Web-Stufenkonfiguration nicht bereit. Wenn für dieselbe Umgebung bereits eine Web-Stufen-Konfigurations-Pipeline vorhanden ist, wird dieses Kontrollkästchen automatisch aktiviert und deaktiviert, da die Web-Stufen-Konfiguration stattdessen von dieser Pipeline verwaltet wird. Wenn keine Web-Stufen-Konfigurations-Pipeline vorhanden ist, können Sie diese Option aktivieren oder deaktivieren, um zu steuern, ob die Full-Stack-Pipeline die Dispatcher-Konfiguration bereitstellt.
+   * **Git-Verzweigung** - Legt fest, von welcher Verzweigung die Pipeline den Code abruft.
+   * **Konfiguration der Web-Stufe ignorieren**: Wenn diese Option aktiviert ist, stellt die Pipeline Ihre Web-Stufenkonfiguration nicht bereit. Wenn für dieselbe Umgebung bereits eine Web-Stufen-Konfigurations-Pipeline vorhanden ist, wird dieses Kontrollkästchen automatisch aktiviert und deaktiviert, da diese Pipeline stattdessen die Web-Stufen-Konfiguration verwaltet. Wenn keine Web-Stufen-Konfigurations-Pipeline vorhanden ist, können Sie diese Option aktivieren oder deaktivieren, um zu steuern, ob die Full-Stack-Pipeline die Dispatcher-Konfiguration bereitstellt.
 
    ![Full-Stack-Code-Quelle](/help/assets/configure-pipelines/add-prod-fullstack-source.png)
 
@@ -210,7 +210,7 @@ Wenn Sie eine Konfigurations-Pipeline auf Web-Ebene für eine Umgebung mit einer
 1. Klicken Sie **Weiter**, um zur Registerkarte **Staging-Tests** zu gelangen. Weitere Informationen finden [&#x200B; unter &#x200B;](#stage-testing) .
 
 
-## Über die Verwendung von Smart Build in einer Produktions-Pipeline{#about-smart-build}
+## Verwenden von Smart Build in einer Produktions-Pipeline{#about-smart-build}
 
 **Smart Build** in Cloud Manager ist eine optimierte Build-Strategie für Produktions-Pipelines. Smartes Erstellen reduziert Build-Zeiten, indem Module zwischengespeichert und nur die Module neu erstellt werden, die seit der letzten erfolgreichen Ausführung geändert wurden. Unveränderte Module werden aus dem Cache wiederverwendet, während nur geänderte Module und ihre Abhängigkeiten neu erstellt werden, was die Effizienz für Workflows für die iterative Entwicklung verbessert.
 
@@ -242,7 +242,7 @@ Der Leistungsgewinn durch die Verwendung von Smart Build hängt von mehreren Fak
 * Häufigkeit und Umfang von Code-Änderungen.
 * Die Verteilung von Abhängigkeiten über Module hinweg.
 
-Im Allgemeinen können Projekte mit vielen unabhängigen Modulen die größte Verbesserung verzeichnen.
+Die größte Verbesserung können Projekte mit vielen unabhängigen Modulen verzeichnen.
 
 ### Opt-out aus dem Cache pro Modul{#smart-build-cache-optout}
 
@@ -269,13 +269,13 @@ Diese Syntax zwingt das Modul bei jeder Pipeline-Ausführung neu zu erstellen, w
 Beachten Sie bei der Verwendung von Smart Build Folgendes:
 
 * Smarter Build beruht auf Maven-Abhängigkeitsanalyse.
-* Bei Änderungen außerhalb des Abhängigkeitsdiagramms werden Trigger-Neuaufbauten möglicherweise nicht unterstützt.
-* Einige Plug-ins sind möglicherweise nicht vollständig mit der Zwischenspeicherung kompatibel.
-* Sie können jederzeit wieder zu **Vollständiger Build** wechseln, indem Sie die produktionsfremde Pipeline bearbeiten.
+* Bei Änderungen außerhalb des Abhängigkeitsdiagramms werden Trigger-Neuaufbauten nicht unterstützt.
+* Einige Plug-ins sind nicht vollständig mit der Zwischenspeicherung kompatibel.
+* Sie können jederzeit wieder zu **Vollständiger Build** wechseln, indem Sie die Produktions-Pipeline bearbeiten.
 
 Wenn Sie auf unerwartetes Build-Verhalten stoßen, sollten Sie das Caching für bestimmte Module deaktivieren oder Ihre Build-Strategie vorübergehend auf **Vollständiger Build** umstellen.
 
-### Fehlerbehebung bei Problemen mit Smart Build{#smart-build-troubleshoot}
+### Beheben von Problemen mit der intelligenten Erstellung{#smart-build-troubleshoot}
 
 | Problem | Lösungsvorschläge |
 | --- | --- |
@@ -283,7 +283,7 @@ Wenn Sie auf unerwartetes Build-Verhalten stoßen, sollten Sie das Caching für 
 | Keine Leistungsverbesserung | ・ Stellen Sie sicher, dass mehrere Durchgänge stattgefunden haben (Aufwärmen des Cache).<br>・ Prüfen Sie, ob die meisten Module häufig wechseln. |
 | Unerwartete Artefakte oder fehlende Änderungen | ・ Überprüfen, ob Änderungen außerhalb des Maven-Abhängigkeits-Trackings liegen<br>・ Verwenden Sie **Vollständiger Build** zur Überprüfung. |
 
-Siehe [Hinzufügen einer Produktions-Pipeline](#adding-production-pipeline) Aktivieren des Smart Builds.
+Informationen zum Aktivieren von Smart Build [&#x200B; Sie unter „Hinzufügen einer Produktions-Pipeline](#add-a-production-pipeline).
 
 
 ## Die nächsten Schritte {#the-next-steps}
