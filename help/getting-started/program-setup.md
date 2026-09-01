@@ -99,4 +99,4 @@ Sie haben ein Content Delivery Network (CDN) wie Akamai oder CloudFront für Ihr
 
 ## Videoüberblick {#video}
 
->[!VIDEO](https://video.tv.adobe.com/v/26313/)
+>[!VIDEO](https://video.tv.adobe.com/v/34486?captions=ger)
