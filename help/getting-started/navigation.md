@@ -3,16 +3,12 @@ title: Navigation durch die Cloud Manager-Benutzeroberfläche
 description: Erfahren Sie, wie die Benutzeroberfläche von Cloud Manager aufgebaut ist und wie Sie Ihre Programme und Umgebungen verwalten.
 exl-id: 9c1545ce-1c6d-417f-a6f4-fe53caef3433
 TQID: https://experienceleague.adobe.com/qTv4G7eSJahDusX68iNXzcw64Aq8xxP6SRAtn-SB0t4
-product_v2:
-  - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
-  - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
-feature_v2:
-  - id: cd2426f1-5719-4006-b8c2-738e5969754b
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+product_v2: id: c68cd75e-5bca-4bc3-a60e-9e183f816441id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+feature_v2: id: cd2426f1-5719-4006-b8c2-738e5969754b
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
-source-wordcount: 1641
+source-wordcount: 1640
 ht-degree: 37%
 
 ---
@@ -37,8 +33,8 @@ Die **Meine Programme** bietet einen Überblick über alle Programme, auf die Si
 |   | Bereich | Beschreibung |
 | --- | --- | --- |
 | 1 | [Symbolleisten](#toolbars-my-programs-toolbars) | Für Organisationsauswahl, Warnhinweise und Kontoeinstellungen verwenden. |
-| 2 | Registerkarte des linken Bedienfelds | Verschiedene Registerkarten, mit denen Sie die aktuelle Ansicht Ihrer Programme umschalten können, darunter die folgenden:<br><ul><li>**Experience Manager** Öffnet die Startseite für Ihre verschiedenen AEM-Lösungen</li><li>**Alle Programme** die alle verfügbaren Programme anzeigen.</li><li>**Lizenz** öffnet das Lizenz-Dashboard. Das Lizenz-Dashboard gilt nur für *AEM as a Cloud Service-* (AEMaaCS), nicht für Adobe Managed Services-Programme wie AEM 6.5 und AEM 6.5 LTS. Informationen zum Festlegen des Service-Typs Ihres Programms (AEMaaCS oder AMS) finden Sie [&#x200B; Abschnitt &quot;](#program-cards)&quot; in diesem Artikel. Die Registerkarten sind standardmäßig geschlossen und können über das ![Menüsymbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) Dropdown-Menü auf der linken Seite der Kopfzeile [Cloud Manager angezeigt &#x200B;](#cloud-manager-header).</li></ol> |
-| 3 | [Meine Programme](#my-programs-section) | Listet alle verfügbaren Programme auf, die Sie auswählen können.<br>Einzelheiten zu [&#x200B; finden Sie unter &#x200B;](/help/getting-started/program-setup.md) und Programmtypen. |
+| 2 | Registerkarte des linken Bedienfelds | Verschiedene Registerkarten, mit denen Sie die aktuelle Ansicht Ihrer Programme umschalten können, darunter die folgenden:<br><ul><li>**Experience Manager** Öffnet die Startseite für Ihre verschiedenen AEM-Lösungen</li><li>**Alle Programme** die alle verfügbaren Programme anzeigen.</li><li>**Lizenz** öffnet das Lizenz-Dashboard. Das Lizenz-Dashboard gilt nur für *AEM as a Cloud Service-* (AEMaaCS), nicht für Adobe Managed Services-Programme wie AEM 6.5 und AEM 6.5 LTS. Informationen zum Festlegen des Service-Typs Ihres Programms (AEMaaCS oder AMS) finden Sie [ Abschnitt &quot;](#program-cards)&quot; in diesem Artikel. Die Registerkarten sind standardmäßig geschlossen und können über das ![Menüsymbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) Dropdown-Menü auf der linken Seite der Kopfzeile [Cloud Manager angezeigt ](#cloud-manager-header).</li></ol> |
+| 3 | [Meine Programme](#my-programs-section) | Listet alle verfügbaren Programme auf, die Sie auswählen können.<br>Einzelheiten zu [ finden Sie unter ](/help/getting-started/program-setup.md) und Programmtypen. |
 | 4 | [Aktionsaufrufe und Statistiken](#cta-statistics) | Gibt einen Überblick über Ihre letzten Aktivitäten. |
 | 5 | [Schnelllinks](#quick-links) | Schneller Zugriff auf zugehörige Ressourcen. |
 
@@ -55,11 +51,11 @@ Der erste ist die Cloud Manager-Kopfzeile. Die Kopfzeile ist bei Verwendung von 
 
 | Bereich | Beschreibung |
 | --- | --- |
-| ![Menü-Symbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) | Ein Dropdown-Menü, das Zugriff auf Registerkarten für bestimmte Teile eines einzelnen Programms bietet.<br>Informationen zum Festlegen des Service-Typs Ihres Programms (AMS oder AEMaaCS) finden Sie [&#x200B; Abschnitt &quot;](#program-cards)&quot; in diesem Dokument. |
+| ![Menü-Symbol anzeigen, Hamburger](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ShowMenu_18_N.svg) | Ein Dropdown-Menü, das Zugriff auf Registerkarten für bestimmte Teile eines einzelnen Programms bietet.<br>Informationen zum Festlegen des Service-Typs Ihres Programms (AMS oder AEMaaCS) finden Sie [ Abschnitt &quot;](#program-cards)&quot; in diesem Dokument. |
 | ![Adobe-Symbol in Rot und Weiß](/help/getting-started/assets/AdobeLogoWhiteOnRed.svg) Cloud Manager | Klicken Sie hier, um die **Meine Programme**-Konsole von Cloud Manager zu öffnen, unabhängig davon, wo Sie sich in Cloud Manager befinden. |
 | *`Name of selected organization`* | Der Organisationsselektor zeigt die Organisation an, bei der Sie sich derzeit angemeldet haben (in diesem Beispiel *Foundation Internal*). Klicken Sie auf , um zu einer anderen Organisation zu wechseln, wenn Ihre Adobe ID mit mehreren Organisationen verknüpft ist. |
 | ![Feedback-Symbol](/help/getting-started/assets/AppComment.svg) Feedback | Klicken Sie hier, um Adobe Feedback zu Cloud Manager zu geben. |
-| ![KI-Assistenten-Symbol](/help/getting-started/assets/AIChat.svg) | Der KI-Assistent bietet eine Gesprächsoberfläche, mit der Sie Antworten auf Ihre AEM-bezogenen Abfragen finden können. Siehe [KI-Assistent](https://experienceleague.adobe.com/de/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
+| ![KI-Assistenten-Symbol](/help/getting-started/assets/AIChat.svg) | Der KI-Assistent bietet eine Gesprächsoberfläche, mit der Sie Antworten auf Ihre AEM-bezogenen Abfragen finden können. Siehe [KI-Assistent](https://experienceleague.adobe.com/en/docs/experience-manager-65/content/ai-in-aem/ai-assistant/ai-assistant-in-aem#) |
 | ![Hilfesymbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_HelpOutline_18_N.svg) | Klicken Sie hier, um schnellen Zugriff auf Lern- und Support-Ressourcen zu ermöglichen. |
 | ![Weißes Glockensymbol](/help/getting-started/assets/Bell.svg) | Klicken, um die Anzahl der aktuell zugewiesenen unvollständigen [Benachrichtigungen](/help/using/notifications.md) anzuzeigen |
 | ![Apps-Symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) | Klicken Sie hier, um schnell zwischen der AEM-Startseite und AEM-Lösungen zu wechseln |
@@ -104,16 +100,16 @@ Wenn Sie mit der Einrichtung Ihrer Organisation beginnen, finden Sie Anleitungen
 
 Der Hauptinhalt der Konsole „Meine Programme“ ist der Abschnitt **Meine Programme**, in dem Ihre Programme als einzelne Karten aufgeführt sind. Klicken Sie auf eine Karte, um die Seite **Programmübersicht** des Programms aufzurufen, auf der Sie Details zum Programm finden.
 
-Je nach Ihren Berechtigungen können Sie möglicherweise bestimmte Programme nicht auswählen.
+Je nach Ihren Berechtigungen können Sie bestimmte Programme nicht auswählen.
 
 Sie können die folgenden Sortieroptionen verwenden, um das gewünschte Programm schnell zu finden:
 
 ![Sortieroptionen](/help/getting-started/assets/cloud-manager-my-programs-sorting.png)
 
 * Sortieren nach:
-   * Erstellungsdatum
-   * Programmname
-   * Status
+  * Erstellungsdatum
+  * Programmname
+  * Status
 * ![Symbol für Sortierung nach unten](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Symbol für Sortierung nach oben](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Sortieren von Programmen nach oben bzw. nach unten.
 * ![Symbol für klassische Rasteransicht](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) / ![Symbol oder Liste mit Aufzählungszeichen für Text](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TextBulleted_18_N.svg) Zeigen Sie Programme in Rasterform oder Listenform an.
 
@@ -126,8 +122,8 @@ Eine Karte oder Zeile in einer Tabelle stellt jedes Programm dar und bietet eine
 * Programmbild (falls konfiguriert)
 * Programmname (im obigen Beispiel *WKND-Magazin*)
 * Diensttyp:
-   * **Experience Manager** für AMS-Programme
-   * **Experience Manager Cloud** für [AEM as a Cloud Service-Programme](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/home)
+  * **Experience Manager** für AMS-Programme
+  * **Experience Manager Cloud** für [AEM as a Cloud Service-Programme](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/home)
 * Status (im obigen Beispiel *Bereit*)
 * Konfigurierte Lösungen
 * Erstellungsdatum
@@ -136,7 +132,7 @@ Klicken Sie ![Info-Symbol](/help/getting-started/assets/Info.svg), um schnell au
 
 ![Informations-Popup in Cloud Manager AMS](/help/getting-started/assets/cloud-manager-information-view.png)
 
-Durch Klicken auf ![Mehr-Symbol, &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) erhalten Sie Zugriff auf zusätzliche Aktionen, die Sie im Programm ausführen können.
+Durch Klicken auf ![Mehr-Symbol, ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg)) erhalten Sie Zugriff auf zusätzliche Aktionen, die Sie im Programm ausführen können.
 
 ![Schaltfläche mit Auslassungspunkten für Programme](/help/getting-started/assets/cloud-manager-program-ellipsis.png)
 
@@ -202,7 +198,7 @@ Um die Registerkarten auszublenden, verwenden Sie ![Menüsymbol anzeigen](https:
 
 ### Aktionsaufruf {#cta}
 
-Der Abschnitt mit dem Aktionsaufruf stellt Ihnen je nach Status Ihres Programms hilfreiche Informationen zur Verfügung. Für ein neues Programm sehen Sie die angebotenen nächsten Schritte und eine Erinnerung an einen Tag der Live-Schaltung ([&#x200B; bei der Programmerstellung festgelegt](/help/getting-started/program-setup.md).
+Der Abschnitt mit dem Aktionsaufruf stellt Ihnen je nach Status Ihres Programms hilfreiche Informationen zur Verfügung. Für ein neues Programm sehen Sie die angebotenen nächsten Schritte und eine Erinnerung an einen Tag der Live-Schaltung ([ bei der Programmerstellung festgelegt](/help/getting-started/program-setup.md).
 
 Bei einem Live-Programm wird der Status der letzten Bereitstellung mit Links zu Details und zum Starten einer neuen Bereitstellung angezeigt.
 
