@@ -8,7 +8,7 @@ product_v2:
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+source-git-commit: 4381c51e54aaf1286b69c149dbf57c77bcd9a8bd
 workflow-type: tm+mt
 source-wordcount: 1411
 ht-degree: 66%
@@ -25,14 +25,14 @@ Vorhandene AEM-Projekte müssen bestimmte Grundregeln einhalten, damit sie erfol
 
 * Projekte müssen mit Apache Maven erstellt werden.
 * Im Stammverzeichnis des Git-Repositorys muss eine Datei `pom.xml` vorhanden sein.
-   * Diese `pom.xml` kann auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen).
-   * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren `pom.xml`-Dateien hinzufügen.
-   * Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
+  * Diese `pom.xml` kann auf beliebig viele Untermodule verweisen (die wiederum weitere Untermodule umfassen).
+  * Sie können Verweise auf weitere Maven-Artefakt-Repositorys in Ihren `pom.xml`-Dateien hinzufügen.
+  * Der Zugriff auf [kennwortgeschützte Artefakt-Repositorys](#password-protected-maven-repositories) wird bei entsprechender Konfiguration unterstützt. Allerdings wird der Zugriff auf netzwerkgeschützte Artefakte nicht unterstützt.
 * Cloud Manager erkennt bereitstellbare Inhaltspakete, indem es nach Inhaltspaketen im .zip-Format sucht, die in einem Verzeichnis mit dem Namen `target` enthalten sind.
-   * Eine beliebige Anzahl von Untermodulen erzeugt Inhaltspakete.
+  * Eine beliebige Anzahl von Untermodulen erzeugt Inhaltspakete.
 * Cloud Manager erkennt bereitstellbare Dispatcher-Artefakte, indem es nach `zip`-Dateien sucht, die in Unterverzeichnissen von `target` namens `conf` und `conf.d` enthalten sind.
 * Wenn mehrere Inhaltspakete vorhanden sind, ist die Reihenfolge der Paketbereitstellungen nicht garantiert.
-   * Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden.
+  * Wenn eine bestimmte Reihenfolge benötigt wird, können die Abhängigkeiten des Inhaltspakets zum Definieren der Reihenfolge verwendet werden.
 * Pakete können bei [&#x200B; Bereitstellung &#x200B;](#skipping-content-packages) werden.
 
 ## Aktivieren von Maven-Profilen in Cloud Manager {#activating-maven-profiles-in-cloud-manager}

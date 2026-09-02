@@ -10,9 +10,9 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
-source-wordcount: 1641
+source-wordcount: 1640
 ht-degree: 37%
 
 ---
@@ -104,16 +104,16 @@ Wenn Sie mit der Einrichtung Ihrer Organisation beginnen, finden Sie Anleitungen
 
 Der Hauptinhalt der Konsole „Meine Programme“ ist der Abschnitt **Meine Programme**, in dem Ihre Programme als einzelne Karten aufgeführt sind. Klicken Sie auf eine Karte, um die Seite **Programmübersicht** des Programms aufzurufen, auf der Sie Details zum Programm finden.
 
-Je nach Ihren Berechtigungen können Sie möglicherweise bestimmte Programme nicht auswählen.
+Je nach Ihren Berechtigungen können Sie bestimmte Programme nicht auswählen.
 
 Sie können die folgenden Sortieroptionen verwenden, um das gewünschte Programm schnell zu finden:
 
 ![Sortieroptionen](/help/getting-started/assets/cloud-manager-my-programs-sorting.png)
 
 * Sortieren nach:
-   * Erstellungsdatum
-   * Programmname
-   * Status
+  * Erstellungsdatum
+  * Programmname
+  * Status
 * ![Symbol für Sortierung nach unten](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderDown_18_N.svg) / ![Symbol für Sortierung nach oben](https://spectrum.adobe.com/static/icons/workflow_18/Smock_SortOrderUp_18_N.svg) Sortieren von Programmen nach oben bzw. nach unten.
 * ![Symbol für klassische Rasteransicht](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ClassicGridView_18_N.svg) / ![Symbol oder Liste mit Aufzählungszeichen für Text](https://spectrum.adobe.com/static/icons/workflow_18/Smock_TextBulleted_18_N.svg) Zeigen Sie Programme in Rasterform oder Listenform an.
 
@@ -126,8 +126,8 @@ Eine Karte oder Zeile in einer Tabelle stellt jedes Programm dar und bietet eine
 * Programmbild (falls konfiguriert)
 * Programmname (im obigen Beispiel *WKND-Magazin*)
 * Diensttyp:
-   * **Experience Manager** für AMS-Programme
-   * **Experience Manager Cloud** für [AEM as a Cloud Service-Programme](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/home)
+  * **Experience Manager** für AMS-Programme
+  * **Experience Manager Cloud** für [AEM as a Cloud Service-Programme](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/implementing/home)
 * Status (im obigen Beispiel *Bereit*)
 * Konfigurierte Lösungen
 * Erstellungsdatum

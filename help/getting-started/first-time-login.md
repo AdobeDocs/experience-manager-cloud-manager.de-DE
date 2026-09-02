@@ -10,7 +10,7 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 1692390e24f8fa7d719bd8293a99586ec4ec36d4
+source-git-commit: dac18093bc590afbd33e358582b3f1c703ce23e1
 workflow-type: tm+mt
 source-wordcount: 294
 ht-degree: 30%
@@ -59,4 +59,4 @@ Cloud Manager bietet einen konsolidierten Überblick über die Aktivitäten eine
 
 >[!NOTE]
 >
->Standardmäßig haben Benutzende mit Zugriff auf eine AEM-Umgebung auch eine Cloud Manager-Benutzerrolle. Diese Rolle gewährt dem Benutzer keinen Zugriff auf die Ansicht „Programmdetails“. Benutzende, die nur über die Cloud Manager-Benutzerrolle verfügen, können über die Menüoptionen des Programms zur Autoren-URL der AEM-Umgebung navigieren (sofern Umgebungen vorhanden sind). Diese Benutzenden müssen sich an ihre Admins wenden, wenn sie Zugriff auf Programmebene erhalten möchten.
+>Standardmäßig haben Benutzende mit Zugriff auf eine AEM-Umgebung auch eine Cloud Manager-Benutzerrolle. Diese Rolle bietet Benutzenden keinen Zugriff auf die Ansicht „Programmdetails“. Benutzende, die nur über die Cloud Manager-Benutzerrolle verfügen, können über die Menüoptionen des Programms zur Autoren-URL der AEM-Umgebung navigieren (sofern Umgebungen vorhanden sind). Diese Benutzenden müssen sich an ihre Admins wenden, wenn sie Zugriff auf Programmebene erhalten möchten.

@@ -10,10 +10,10 @@ feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: fa6be369b979682cebf68852603725d8754605ab
+source-git-commit: 4381c51e54aaf1286b69c149dbf57c77bcd9a8bd
 workflow-type: tm+mt
-source-wordcount: 549
-ht-degree: 65%
+source-wordcount: 548
+ht-degree: 61%
 
 ---
 
@@ -81,7 +81,7 @@ Wenn Sie noch keine Pipeline erstellt haben, lesen Sie die Dokumente [Konfigurie
 
 ## Wechseln zwischen Programmen {#swithing-programs}
 
-Wenn Sie an einem Programm arbeiten, können Sie schnell zu einem anderen Programm wechseln, ohne zur Übersichtsseite von Cloud Manager zurückzukehren.
+Wenn Sie an einem Programm arbeiten, können Sie zu einem anderen Programm wechseln, ohne zur Cloud Manager-Übersichtsseite zurückzukehren.
 
 Verwenden Sie die Aktionsleiste, um zu einem anderen Programm zu wechseln, das aktuelle Programm zu bearbeiten oder ein neues Programm hinzuzufügen.
 
@@ -91,11 +91,11 @@ Verwenden Sie die Aktionsleiste, um zu einem anderen Programm zu wechseln, das a
 
 Die KPIs werden bei Tests gemessen, die in der Staging-Umgebung ausgeführt werden. Normalerweise werden diese KPIs an die Funktionen der Staging-Umgebung angepasst.
 
-Ein Anwender, der beispielsweise durchschnittlich 1.000 Seitenansichten pro Minute in seiner Produktionsumgebung erwartet und der vier Dispatcher-/Veröffentlichungs-Server in der Produktion hat, reduziert dieses Szenario auf 250 Seitenansichten pro Minute. Bei diesem Szenario wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
+Beispielsweise kann ein Team, das in seiner Produktionsumgebung durchschnittlich 1.000 Seitenaufrufe pro Minute erwartet und das vier Dispatcher-/Veröffentlichungs-Server in der Produktionsumgebung hat, dieses Szenario auf 250 Seitenaufrufe pro Minute skalieren. Bei diesem Szenario wird davon ausgegangen, dass die Staging-Umgebung nur aus einem einzigen Paar aus Dispatcher- und Veröffentlichungs-Server besteht.
 
 Assets-Leistungstests umfassen das wiederholte Hochladen von Assets über einen Zeitraum von 30 Minuten. Die Verarbeitungszeit für jedes Asset und verschiedene Metriken auf Systemebene werden während der gesamten Testdauer gemessen.
 
-Sie haben ein Content Delivery Network (CDN) wie Akamai oder CloudFront für Ihre Produktionsumgebung konfiguriert. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, spiegelt der KPI nur den Traffic wider, der voraussichtlich durch das CDN weitergeleitet wird. Das heißt, der Cache fehlt. Normalerweise ist dieser Traffic eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
+Sie haben ein Content Delivery Network (CDN) wie Akamai oder CloudFront für Ihre Produktionsumgebung konfiguriert. Da [!UICONTROL Cloud Manager] direkt in Bezug zur Staging-Umgebung getestet wird, spiegelt der KPI nur den Traffic wider, der voraussichtlich durch das CDN weitergeleitet wird. Dies bezieht sich auf Cache-Fehler. Normalerweise ist dieser Traffic eine relativ kleine Teilmenge des gesamten Produktions-Traffics.
 
 ## Videoüberblick {#video}
 
