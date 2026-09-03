@@ -7,9 +7,9 @@ user-guide-description: Erfahren Sie, wie Sie Cloud Manager nutzen können, um A
 feature-set: Experience Manager Cloud Manager, Experience Manager
 feature: Cloud Manager
 role: Admin
-source-git-commit: 40d52d486e16f247b2edd249c9afaae2d91c0643
+source-git-commit: e10c3c15c01c28f6bad0a9cf0464288937402cb7
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: '340'
 ht-degree: 85%
 
 ---
@@ -57,7 +57,7 @@ ht-degree: 85%
   + [Cloud Manager-API](https://developer.adobe.com/experience-cloud/cloud-manager/reference/api)
   + [CLOUD MANAGER CLI](https://github.com/adobe/aio-cli-plugin-cloudmanager/blob/main/README.md)
   + [Benachrichtigungen](/help/using/notifications.md)
-  + [Qualitätsregeln für benutzerspezifischen Code](/help/using/custom-code-quality-rules.md)
+  + [Benutzerdefinierte Code-Qualitätsregeln](/help/using/custom-code-quality-rules.md)
   + [Inhaltskopie für Umgebungskonsistenz](/help/using/content-copy.md)
 + Code verwalten {#managing-code}
   + [Verwalten von Repositorys in Cloud Manager](/help/managing-code/managing-repositories.md)
@@ -78,6 +78,7 @@ ht-degree: 85%
 + Versionshinweise {#release-notes}
   + [Aktuell](/help/release-notes/current.md)
   + 2026 {#rn-2026}
+    + [2026.8.0](/help/release-notes/2026/2026-8-0.md)
     + [2026.7.0](/help/release-notes/2026/2026-7-0.md)
     + [2026.6.0](/help/release-notes/2026/2026-6-0.md)
     + [2026.5.0](/help/release-notes/2026/2026-5-0.md)
