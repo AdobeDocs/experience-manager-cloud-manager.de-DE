@@ -53,7 +53,7 @@ Die Pipeline muss drei Akzeptanztests bestehen:
 Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test identifizierte Probleme.
 
 * **Kritisch**: Probleme, die zu einem sofortigen Pipeline-Fehler führen.
-* **Wichtig**: Probleme, durch die die Pipeline angehalten wird. Ein Bereitstellungs-Lead, Projekt-Lead oder Geschäftsinhaber kann die Probleme außer Kraft setzen. Ist dies der Fall, wird die Pipeline wie vorgesehen fortgesetzt. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird. Überschreibungen wichtiger Fehler unterliegen einem &quot;[&quot; ](/help/using/code-deployment.md#timeouts).
+* **Wichtig**: Probleme, durch die die Pipeline angehalten wird. Ein Bereitstellungs-Lead, Projekt-Lead oder Geschäftsinhaber kann die Probleme außer Kraft setzen. Ist dies der Fall, wird die Pipeline wie vorgesehen fortgesetzt. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird. Überschreibungen wichtiger Fehler unterliegen einem &quot;[&quot; &#x200B;](/help/using/code-deployment.md#timeouts).
 * **Info**: Probleme, die ausschließlich zu Informationszwecken angegeben werden und keine Auswirkungen auf die Pipeline-Ausführung haben.
 
 >[!NOTE]
@@ -278,7 +278,7 @@ Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei 
 
 >[!TIP]
 >
->Weitere Informationen finden Sie unter [ von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programm einrichten](/help/getting-started/program-setup.md).
+>Weitere Informationen finden Sie unter [&#x200B; von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programm einrichten](/help/getting-started/program-setup.md).
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
