@@ -5,25 +5,33 @@ exl-id: 6a574858-a30e-4768-bafc-8fe79f928294
 TQID: https://experienceleague.adobe.com/gAO8BdTx9-Sq8evIuI3hIaHIUixk-IulQagCI-Jssrc
 product_v2:
   - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+    internal-label: Experience Manager Cloud Manager
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 feature_v2:
   - id: cd2426f1-5719-4006-b8c2-738e5969754b
+    internal-label: Environments
   - id: ff09c71c-26a9-449a-85f8-2aeb8ce96100
+    internal-label: Implementation
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
 source-git-commit: 7cd0317c081cdfdefb61b1c953fca179cd25eb1a
 workflow-type: tm+mt
-source-wordcount: 2880
+source-wordcount: '2880'
 ht-degree: 82%
-
 ---
-
 # Code-Qualitätstests {#code-quality-testing}
 
 Hier finden Sie Informationen dazu, wie das Testen der Code-Qualität von Pipelines funktioniert und wie sich damit die Qualität Ihrer Bereitstellungen verbessern lässt.
@@ -45,7 +53,7 @@ Die Pipeline muss drei Akzeptanztests bestehen:
 Für jeden dieser Akzeptanztests gibt es eine dreistufige Struktur für vom Test identifizierte Probleme.
 
 * **Kritisch**: Probleme, die zu einem sofortigen Pipeline-Fehler führen.
-* **Wichtig**: Probleme, durch die die Pipeline angehalten wird. Ein Bereitstellungs-Lead, Projekt-Lead oder Geschäftsinhaber kann die Probleme außer Kraft setzen. Ist dies der Fall, wird die Pipeline wie vorgesehen fortgesetzt. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird. Überschreibungen wichtiger Fehler unterliegen einem &quot;[&quot; &#x200B;](/help/using/code-deployment.md#timeouts).
+* **Wichtig**: Probleme, durch die die Pipeline angehalten wird. Ein Bereitstellungs-Lead, Projekt-Lead oder Geschäftsinhaber kann die Probleme außer Kraft setzen. Ist dies der Fall, wird die Pipeline wie vorgesehen fortgesetzt. Alternativ können sie die Probleme akzeptieren, wodurch die Pipeline mit einem Fehler angehalten wird. Überschreibungen wichtiger Fehler unterliegen einem &quot;[&quot; ](/help/using/code-deployment.md#timeouts).
 * **Info**: Probleme, die ausschließlich zu Informationszwecken angegeben werden und keine Auswirkungen auf die Pipeline-Ausführung haben.
 
 >[!NOTE]
@@ -270,7 +278,7 @@ Cloud Manager erstellt einen Ordner in der Autoreninstanz und verwendet hierbei 
 
 >[!TIP]
 >
->Weitere Informationen finden Sie unter [&#x200B; von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programm einrichten](/help/getting-started/program-setup.md).
+>Weitere Informationen finden Sie unter [ von Produktions-Pipelines](/help/using/production-pipelines.md). Informationen zum Einrichten des Programms und Definieren der KPIs finden Sie unter [Programm einrichten](/help/getting-started/program-setup.md).
 
 ### Diagramme mit Leistungstestergebnissen {#performance-testing-results-graphs}
 
