@@ -81,7 +81,7 @@ Eine der Hauptfunktionen von [!UICONTROL Cloud Manager] ist die Möglichkeit, ei
 
 Über die [!UICONTROL Cloud Manager]-Benutzeroberfläche können Sie CI/CD-Pipelines konfigurieren und starten. Im Rahmen dieser Pipeline wird ein gründlicher Codescan durchgeführt, um sicherzustellen, dass nur hochwertige Programme in die Produktionsumgebung übertragen werden.
 
-Weitere Informationen zum Konfigurieren von Pipelines über die Benutzeroberfläche von [!UICONTROL Cloud Manager ] Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
+Weitere Informationen zum Konfigurieren von Pipelines über die Benutzeroberfläche von [!UICONTROL Cloud Manager &#x200B;] Sie unter [Konfigurieren von Produktions-Pipelines](/help/using/production-pipelines.md) und [Konfigurieren von produktionsfremden Pipelines](/help/using/non-production-pipelines.md).
 
 ### Flexible Bereitstellungsmodi {#flexible-deployment-modes}
 
