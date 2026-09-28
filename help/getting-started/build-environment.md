@@ -52,14 +52,14 @@ Die Build-Umgebungen von Cloud Manager weisen folgende Eigenschaften auf.
 * Die installierten Java-Versionen sind Oracle JDK 8u401 und Oracle JDK 11.0.22.
   * `/usr/lib/jvm/jdk1.8.0_401`
   * `/usr/lib/jvm/jdk-11.0.22`
-* Standardmäßig wird die Umgebungsvariable `JAVA_HOME` auf `/usr/lib/jvm/jdk1.8.0_401` festgelegt, was Oracle JDK 8u401 enthält. Weitere Einzelheiten finden Sie [ Abschnitt Alternative JDK-Version ](#alternate-maven) Maven-Ausführung .
+* Standardmäßig wird die Umgebungsvariable `JAVA_HOME` auf `/usr/lib/jvm/jdk1.8.0_401` festgelegt, was Oracle JDK 8u401 enthält. Weitere Einzelheiten finden Sie [&#x200B; Abschnitt Alternative JDK-Version &#x200B;](#alternate-maven) Maven-Ausführung .
 * Zusätzliche erforderliche Systempakete werden installiert.
   * `bzip2`
   * `unzip`
   * `libpng`
   * `imagemagick`
   * `graphicsmagick`
-* Andere Pakete werden zur Build-Zeit installiert, wie im Abschnitt [Installieren zusätzlicher Systempakete“ ](#installing-additional-system-packages).
+* Andere Pakete werden zur Build-Zeit installiert, wie im Abschnitt [Installieren zusätzlicher Systempakete“ &#x200B;](#installing-additional-system-packages).
 * Jeder Build wird in einer neuen Umgebung erstellt. Der Build-Container speichert keine Daten zwischen Ausführungen.
 * Maven wird mit diesen drei Befehlen ausgeführt:
   * `mvn --batch-mode org.apache.maven.plugins:maven-dependency-plugin:3.1.2:resolve-plugins`
