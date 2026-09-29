@@ -5,16 +5,17 @@ exl-id: ccf4b4a2-6e29-4ede-821c-36318b568e5c
 TQID: https://experienceleague.adobe.com/Dj7SjKdao6RU-cIS7D1AQxg5qpKrJMTcYQJBfiqc-Gg
 product_v2:
   - id: c68cd75e-5bca-4bc3-a60e-9e183f816441
+    internal-label: Experience Manager Cloud Manager
   - id: fd1f54a9-f50c-467d-8956-cebbaf4f3eb8
+    internal-label: Experience Manager
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-source-git-commit: 38a0aa1ab543c976c8e7526ac2ba78d06c9b06d6
+    internal-label: Admin
+source-git-commit: caa4dcd788a1d80a5957a8ecc7c6e4c99a881aee
 workflow-type: tm+mt
-source-wordcount: 2070
+source-wordcount: '2070'
 ht-degree: 20%
-
 ---
-
 # Hinzufügen einer produktionsfremden Pipeline {#configuring-non-production-pipelines}
 
 Erfahren Sie, wie Sie mit Cloud Manager produktionsfremde Pipelines erstellen und konfigurieren, um Code bereitzustellen. Einen konzeptionellen Überblick über die Funktionsweise von Pipelines in Cloud Manager finden Sie unter [CI/CD-Pipelines](/help/overview/ci-cd-pipelines.md).
@@ -247,4 +248,4 @@ Nachdem Sie die Pipeline konfiguriert haben, können Sie Ihren Code bereitstelle
 
 In diesem Video erhalten Sie einen Überblick über den Pipeline-Erstellungsprozess, der in diesem Dokument beschrieben wird.
 
->[!VIDEO](https://video.tv.adobe.com/v/327615?captions=ger)
+>[!VIDEO](https://video.tv.adobe.com/v/26316/)
