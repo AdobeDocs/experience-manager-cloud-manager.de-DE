@@ -1,6 +1,6 @@
 ---
-title: Versionshinweise für Cloud Manager 2026.10.0
-description: Erfahren Sie mehr über die Version Cloud Manager 2026.10.0 in Adobe Managed Services.
+title: Versionshinweise für Cloud Manager 2026.11.0
+description: Erfahren Sie mehr über die Version Cloud Manager 2026.11.0 in Adobe Managed Services.
 feature: Release Information
 exl-id: cc1dc94b-129d-4de7-8e57-8fc5dcba7d9f
 TQID: 'https://experienceleague.adobe.com/4zfTpSYuFwrJZ-oeL1SObT14v2Rd--Z1hKn5JllHAro'
@@ -21,56 +21,64 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
     internal-label: Optimization
-source-git-commit: 14893646d1f46cf53a9b5e40123a28613fdb9f6d
+source-git-commit: b48085c8209c0802f6f2d321865bd1a1ee786139
 workflow-type: tm+mt
-source-wordcount: '358'
-ht-degree: 9%
+source-wordcount: '324'
+ht-degree: 10%
 ---
 
-# Versionshinweise für Cloud Manager 2026.10.0 in Adobe Managed Services {#release-notes}
+# Versionshinweise für Cloud Manager 2026.11.0 in Adobe Managed Services {#release-notes}
 
 <!-- add "hold: true" to metadata above to be able to commit/merge to Main WITHOUT Publishig -->
 
 <!-- RELEASE WIKI  https://wiki.corp.adobe.com/display/DMSArchitecture/Cloud+Manager+2025.04.0+Release -->
 
-Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2026.10.0 in Adobe Managed Services.
+Erfahren Sie mehr über die Version [!UICONTROL Cloud Manager] 2026.11.0 in Adobe Managed Services.
 
 Hier finden Sie die [aktuellen Versionshinweise für Adobe Experience Manager as a Cloud Service](https://experienceleague.adobe.com/de/docs/experience-manager-cloud-service/content/release-notes/home).
 
 ## Veröffentlichungsdaten {#release-date}
 
-Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] 2026.10.0 ist Donnerstag, der 1. Oktober 2026.
+Das Veröffentlichungsdatum für [!UICONTROL Cloud Manager] 2026.11.0 ist Donnerstag, der 5. November 2026.
 <!-- There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
-Die nächste geplante Version ist Donnerstag, der 5. November 2026.
+Die nächste geplante Version ist Donnerstag, der 3. Dezember 2026.
 
 <!-- SAVE FOR FUTURE POSSIBLE USE There are no significant new features or bug fixes in the May Cloud Manager release. -->
 
 ## Neue Funktionen {#new-features}
 
-In der Cloud Manager on AMS-Version vom Oktober 2026 gibt es keine wesentlichen neuen Funktionen.
+### Web-Stufen-Pipelines für AEM Managed Services {#web-tier-pipelines}
 
+Cloud Manager unterstützt jetzt dedizierte Web-Stufen-Pipelines für AMS-Programme, sodass Teams Dispatcher- und Web-Stufen-Konfigurationen unabhängig von Full-Stack-Bereitstellungen bereitstellen können. Dies ermöglicht eine schnellere Iteration bei Änderungen der Web-Stufe und reduziert gleichzeitig unnötige vollständige Pipeline-Ausführungen.
+
+Wenn eine Web-Stufen-Pipeline konfiguriert ist, überspringen Full-Stack-Pipelines automatisch die Web-Stufen-Bereitstellung für diese Umgebung, um Bereitstellungskonflikte zu vermeiden. Durch Entfernen der Web-Stufen-Pipeline wird das standardmäßige Bereitstellungsverhalten automatisch wiederhergestellt. <!-- CMGR-27553 -->
+
+Siehe [Web-Stufen-Konfigurations-Pipelines](/help/overview/ci-cd-pipelines.md#web-tier-config-pipelines).
 
 ## Beta-Programme {#beta-program}
 
-Um vor der allgemeinen Veröffentlichung exklusiven Zugriff auf kommende Funktionen zu erhalten, nehmen Sie an den Beta-Programmen von Cloud Manager teil.
+Es sind derzeit keine Gelegenheiten für das Beta-Programm verfügbar.
+
+<!--
+To get exclusive access to upcoming features before their general release, participate in Cloud Manager's beta programs.
 
 >[!IMPORTANT]
 >
->Beta-Versionen enthalten Probleme und werden ohne Gewährleistung jeglicher Art bereitgestellt. Adobe ist nicht verpflichtet, die Beta-Versionen zu pflegen, zu korrigieren, zu aktualisieren, zu ändern oder anderweitig zu unterstützen (durch Adobe Support Services oder anderweitig). Kunden verwenden Beta-Versionen auf eigenes Risiko. Verlassen Sie sich nicht auf die korrekte Funktionsweise oder Leistung von Beta-Versionen oder auf begleitende Dokumentationen oder Materialien. Funktionen und APIs in der Beta-Version können ohne Vorankündigung geändert werden. Jede Nutzung der Beta-Versionen erfolgt ausschließlich auf eigene Gefahr des Kunden.
+>Beta releases contain issues and are provided without warranty of any kind. Adobe has no obligation to maintain, correct, update, change, modify or otherwise support (through Adobe Support Services or otherwise) the beta releases. Customers use beta releases at their own risk. Do not rely on the correct functioning or performance of beta releases, or on any accompanying documentation or materials. Features and APIs in beta are subject to change without notice. Any use of the beta releases is entirely at the customer's own risk.
 
-Die folgende Beta-Programm-Gelegenheit ist derzeit verfügbar:
-
-### Web-Stufen-Pipelines für AEM Managed Services {#web-tier-pipelines}
-
-Cloud Manager unterstützt jetzt dedizierte Web-Stufen-Pipelines für AMS-Programme, sodass Teams Dispatcher- und Web-Stufen-Konfigurationen unabhängig von Full-Stack-Bereitstellungen bereitstellen können. Dies ermöglicht eine schnellere Iteration bei Änderungen der Web-Stufe und reduziert gleichzeitig unnötige vollständige Pipeline-Ausführungen. Wenn eine Web-Stufen-Pipeline konfiguriert ist, überspringen Full-Stack-Pipelines automatisch die Web-Stufen-Bereitstellung für diese Umgebung, um Bereitstellungskonflikte zu vermeiden. Durch Entfernen der Web-Stufen-Pipeline wird das standardmäßige Bereitstellungsverhalten automatisch wiederhergestellt.
-
-Um an der Beta teilzunehmen, wenden Sie sich an Ihren Customer Success Engineer für Adobe, um mehr zu erfahren.
-
+The following beta program opportunity is currently available:
+-->
 
 ## Fehlerbehebungen {#bug-fixes}
 
-* Der Sicherheitstest nach der Bereitstellung schlägt gelegentlich fehl. Bei Adobe Managed Services-Programmen schlägt die SSL-Konfigurationsprüfung des Sicherheitstests nach der Bereitstellung gelegentlich in vielen Programmen fehl und wird dann bei einem erneuten Versuch weitergeleitet, was zu unnötigen Pipeline-Fehlern führt. Die Prüfung wurde stabilisiert, sodass sie nicht mehr unerwartet fehlschlägt. (CMGR-79870)
+
+* Die Überprüfung der Code-Qualität schlägt bei großen Projekten fehl. Die Überprüfung der Code-Qualität (SonarQube) generiert Multi-Gigabyte-Debug-Protokolle und wird beim Überprüfen bestimmter gebündelter Bibliotheken abgebrochen, wodurch der Build fehlschlägt. Die Überprüfung wurde korrigiert, sodass sie bei den betroffenen Projekten normal abgeschlossen wird. (CMGR-80025)
+
+* Beim CSV-Export der Sites-Nutzung wurden die Monatskennzeichnungen um einen Monat verschoben. Auf der Seite Lizenz > Sites-Nutzungsdetails zeigt der CSV-Export Monatsbezeichnungen, die für Benutzer in Zeitzonen hinter UTC einen Monat früher verschoben wurden. Der Export zeigt nun die richtigen Monatsbezeichnungen unabhängig von der Zeitzone des Benutzers an. (CMGR-80903)
+
+* Durch die Wiederverwendung eines Zugriffstoken-Namens wird das vorhandene Token nicht mehr überschrieben. Durch die Wiederverwendung eines vorhandenen Zugriffstoken-Namens innerhalb eines Programms wird das freigegebene Token überschrieben und es werden doppelte Zugriffsgeheimnisse erstellt. Cloud Manager verarbeitet jetzt die korrekte Wiederverwendung von Token-Namen, um versehentliches Überschreiben und Duplikate zu verhindern. (CMGR-81236)
+
 
 <!--
 Known Issues {#known-issues}
